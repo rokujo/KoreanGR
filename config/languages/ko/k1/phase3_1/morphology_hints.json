@@ -1,0 +1,10 @@
+{
+  "phase": "3.1",
+  "policy": "Segmentation/inflection evidence only. No new lemma, sense, alias or temporal permission. Core/Expansion DB unchanged.",
+  "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=29667",
+  "entries": [
+    {"vocab_id":"ko_k1_0186", "lemma":"걷다", "pos":"verb", "sense":"walk", "morphology_class":"d_irregular", "forms":["걸어요","걸었어요","걸어서","걸으면","걸을까요"], "resolution":"Require full registered identity, valid form, licensed location marker, human companion, no direct object, locomotion scene and matching generated intent. Otherwise REVIEW."},
+    {"vocab_id":"ko_k1_0175", "lemma":"듣다", "pos":"verb", "sense":"hear_listen", "morphology_class":"d_irregular", "forms":["들어요","들었어요","들어서","들으면"], "resolution":"Audit native analyzer first. No unconditional 들- alias; potential hold/listen ambiguity requires its own local semantic evidence."},
+    {"vocab_id":"ko_k1_0225", "lemma":"도와주다", "pos":"verb", "sense":"help", "morphology_class":"b_irregular_registered_compound", "forms":["도와줘요","도와주고"], "resolution":"Only the raw 돕+어+주 prefix of the exact registered compound may be grouped. Retain later grammar morphemes; do not license standalone 돕다."}
+  ]
+}

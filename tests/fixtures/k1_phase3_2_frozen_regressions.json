@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {"source":"pilot/ko/k1/phase2_3/texts/K1-040.json","text":"수건은 의자 위에 있어요.","lemma":"수건"},
+    {"source":"pilot/ko/k1/phase2_3/texts/K1-085.json","text":"친구가 저에게 물어봐요.","lemma":"물어보다"},
+    {"source":"pilot/ko/k1/phase2_3/texts/K1-110.json","text":"저는 친구를 도와줘요.","lemma":"도와주다"},
+    {"source":"pilot/ko/k1/phase2_3/texts/K1-127.json","text":"저는 펜으로 이름을 다시 써요.","lemma":"쓰다","sense":"write"},
+    {"source":"pilot/ko/k1/phase2_3/texts/K1-284.json","text":"저는 상자를 다시 닫아 봐요.","lemma":"닫다","grammar":"ko_k1_g18"},
+    {"source":"pilot/ko/k1/phase2_3/texts/K1-255.json","text":"집에서 휴대폰을 충전하고 기다려요.","lemma":"충전하다"},
+    {"source":"pilot/ko/k1/phase2_3/texts/K1-299.json","text":"친구는 저에게 공을 던져요.","lemma":"던지다"},
+    {"source":"pilot/ko/k1/phase2_3/texts/K1-299.json","text":"나무 아래에는 풀이 조금 있어요.","lemma":"풀","sense":"grass"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "3.4",
+  "registered_identity": {"id": "ko_k1_0004", "lemma": "우리", "pos": "pronoun", "sense": "we"},
+  "modifier_heads": [
+    {"id": "ko_k1_0042", "lemma": "집", "pos": "noun", "sense": "home"},
+    {"id": "ko_k1_0043", "lemma": "학교", "pos": "noun", "sense": "school"},
+    {"id": "ko_k1_0023", "lemma": "가족", "pos": "noun", "sense": "family"}
+  ],
+  "speaker_anchor_forms": ["나", "저", "우리"],
+  "discourse_lookback_chars": 400,
+  "ambiguous_spatial_heads": ["안", "밖"],
+  "noun_location_particles": ["에", "에서", "로", "으로", "까지", "부터"],
+  "notes": "既存Coreのidentityを証拠付きで復元するoverlay。新sense・語彙許可を追加しない。NNG復元には先行する生のNP speaker anchorも要求する。単文でこの根拠がなければREVIEWを許容。동네はE2であり、교실も今回の限定復元headへ追加しない。"
+}

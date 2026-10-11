@@ -1,0 +1,30 @@
+{
+  "phase": "3.6c",
+  "status": "STRUCTURAL_FAIL",
+  "stop_text": 1,
+  "committed_count": 0,
+  "new_layer_scope": "General exact-span/current-snapshot/nominal-evidence engine for unique_safe nouns, classification of all 800 identities, existing specialized high-risk resolvers plus new evidence rule for particle-bearing 우리. Other context_required identities remain deliberately unsupported by autonomous recovery.",
+  "structural_blocker": {
+    "surface": "저는",
+    "locations": [176, 219],
+    "sentences": ["\"저는 일을 하고 갈 거예요.\"", "\"저는 시간이 있어서 기다릴 거예요.\""],
+    "sentence_identity": "ko_k1_0002 / 저 / pronoun / i_humble",
+    "paragraph_full_identity": "ko_k1_0446 / 저 / determiner / that_over_there",
+    "full_raw": ["저/MM + 는/ETM at 176", "저/MM + 는/JX at 219"],
+    "decision": "Unresolved registered-versus-registered scope identity mismatch; structural STOP",
+    "recovery_not_attempted": "저 is context_required; neither unique_safe noun matching nor the evidence rule for 우리 authorizes its conversion. Current snapshot contains only the Core pronoun, but uniqueness of an allowed identity alone cannot establish sense.",
+    "next_step_report_only": "Extend context_required dispatch with explicitly tested pronoun/topic constructions and independent scope evidence. Include 저 pronoun vs distant determiner contrasts and both particle-tag variants. Do not add a blanket MM-to-NP alias, assume all allowed-singleton identities are correct, or edit raw morphology. A separate authorized run is needed; no production code was changed after STOP."
+  },
+  "future_contamination_interpretation": {
+    "formal_candidate_flagged_occurrences": 2,
+    "formal_candidate_flagged_candidates": 1,
+    "cause": "Both flags are the analyzer's wrong distant-determiner identity for ordinary pronoun 저는. They are not evidence that the author intentionally used the distant determiner.",
+    "preflight_actual_future_occurrences": 1,
+    "preflight_actual_future_lemma": "전",
+    "preflight_repair": "The sentence with 점심 전에 was replaced with a concrete getting-up action using Core 앞. Initial draft remains in pairs-01; submitted repaired draft is pairs-02. Preflight also found 제 and quoted 세요 ambiguity, repaired before formal submission.",
+    "permission_policy": "All unresolved/future identities remained hard rejects. No candidate or preflight findings received state credit."
+  },
+  "known_007_fixture_result": "Exact 우리 span recovered to ko_k1_0004 with independent short NP identity, speaker anchors and human-group predicate. Raw NNG preserved; sentence/paragraph/full identities converge. This fixture is not production exposure.",
+  "quality_assessment": "No mechanical PASS candidate reached author post-validation review. Committed language quality, recurrence, scene diversity and review/debt operation cannot be evaluated from zero committed texts.",
+  "timing_assessment": "One failed text's wall time is retained. No sec/committed-text throughput, mean/median/p90 production-text statistics, 300-text estimate or comparison claim is made from zero commits. Planning and drafting were separate calls in this run."
+}

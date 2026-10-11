@@ -1,0 +1,83 @@
+{
+  "committed_issues": [
+    {
+      "text": "K1-048",
+      "category": "naturalness_issue",
+      "surface": "저는 의자에 앉고 책을 열어요.",
+      "reason": "紙の本を開く標準的な表現は펴다。追跡中の不足を열다で代用した表現が残った。restricted registry外の自然さ問題であり、語義ゲートのfalse acceptanceと混同しない。",
+      "suggested_revision": "저는 의자에 앉고 책을 읽어요.",
+      "action": "report_only; committed text unchanged"
+    }
+  ],
+  "preformal_issues": [
+    {
+      "text": "K1-039",
+      "categories": [
+        "verb_argument_frame",
+        "scene_plausibility"
+      ],
+      "evidence_file": "pilot/ko/k1/phase3_8/drafts/K1-039-review.json",
+      "before": "자전거를 닫아요 / 持参の果物をカフェ店内で食べる",
+      "resolution": "自転車を降りる。持参食は公園で食べる。"
+    },
+    {
+      "text": "K1-047",
+      "categories": [
+        "unnatural_substitution"
+      ],
+      "evidence_file": "pilot/ko/k1/phase3_8/drafts/K1-047-review.json",
+      "before": "친구도 자기 집에서 가방을 만들어요.",
+      "resolution": "친구도 자기 옷을 가방에 넣어요."
+    }
+  ],
+  "formal_author_repairs": [
+    {
+      "text": 1,
+      "attempt": 1,
+      "evidence": {
+        "naturalness": "REPAIR",
+        "translation_fidelity": "REPAIR",
+        "review_word_integration": "PASS",
+        "reason": "先生が弟へ名前を言う文は誰の名前か曖昧で、訳だけ『自分の名前』と補っていた。学校の説明へ簡略化し、韓国語と訳のreferentを一致させる。機械warning数の削減を目的とする修正ではない。"
+      }
+    },
+    {
+      "text": 12,
+      "attempt": 1,
+      "evidence": {
+        "naturalness": "REPAIR",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "『병원에는 아픈 사람이 있어요』の直後の그 사람は病人へ参照が移る可能性がある。勤務主体を의사と再提示し、終盤の勉強話は語り手の自分の学習へ絞って人物を不必要に切り替えない。warning数の削減ではなく、referentの具体的な修正。"
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "lemma": "펴다",
+      "texts": [
+        7,
+        48
+      ],
+      "status": "tracked_existing_gap",
+      "resolution": "007は行為省略、048には代用が残りreport-only修正候補。"
+    },
+    {
+      "lemma": "입히다",
+      "texts": [
+        11
+      ],
+      "status": "omitted",
+      "resolution": "着せる行為を省略。입다へ代用しない。"
+    },
+    {
+      "lemma": "지우다",
+      "texts": [
+        27
+      ],
+      "status": "omitted",
+      "resolution": "消去動作を省略し、書き直す。닦다へ代用しない。"
+    }
+  ],
+  "exhaustive_corpus_gold_review": false
+}

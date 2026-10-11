@@ -1,0 +1,77 @@
+{
+  "status": "candidate_ledger_only",
+  "counted_in_K1_budget": false,
+  "notes": "K1から退役した7語の候補台帳のみ。K2の語彙・Tier・教材計画は設計しない。",
+  "entries": [
+    {
+      "former_id": "ko_k1_0773",
+      "lemma": "함께",
+      "pos": "adverb",
+      "sense": "together",
+      "gloss_ja": "一緒に",
+      "status": "K2_candidate_only",
+      "reason": "Core 같이とほぼ同義。",
+      "replacement_id": "ko_k1_0801"
+    },
+    {
+      "former_id": "ko_k1_0702",
+      "lemma": "조부모",
+      "pos": "noun",
+      "sense": "grandparents",
+      "gloss_ja": "祖父母",
+      "status": "K2_candidate_only",
+      "reason": "E1 할머니/할아버지で表現できる。",
+      "replacement_id": "ko_k1_0802"
+    },
+    {
+      "former_id": "ko_k1_0797",
+      "lemma": "기차역",
+      "pos": "noun",
+      "sense": "train_station",
+      "gloss_ja": "鉄道の駅",
+      "status": "K2_candidate_only",
+      "reason": "Core 역との差が小さい。",
+      "replacement_id": "ko_k1_0803"
+    },
+    {
+      "former_id": "ko_k1_0757",
+      "lemma": "찍히다",
+      "pos": "verb",
+      "sense": "be_photographed",
+      "gloss_ja": "写真に写る",
+      "status": "K2_candidate_only",
+      "reason": "受動の負荷に対して場面が限定される。",
+      "replacement_id": "ko_k1_0804"
+    },
+    {
+      "former_id": "ko_k1_0710",
+      "lemma": "관계",
+      "pos": "noun",
+      "sense": "relationship",
+      "gloss_ja": "人と人の関係",
+      "status": "K2_candidate_only",
+      "reason": "抽象的で、具体的な人物関係は既存語で表現できる。",
+      "replacement_id": "ko_k1_0805"
+    },
+    {
+      "former_id": "ko_k1_0800",
+      "lemma": "정보",
+      "pos": "noun",
+      "sense": "information",
+      "gloss_ja": "情報",
+      "status": "K2_candidate_only",
+      "reason": "住所・時刻等の具体語で代替できる。",
+      "replacement_id": "ko_k1_0806"
+    },
+    {
+      "former_id": "ko_k1_0647",
+      "lemma": "가장",
+      "pos": "adverb",
+      "sense": "most",
+      "gloss_ja": "最も",
+      "status": "K2_candidate_only",
+      "reason": "제일をK1の最上級として優先し、重複を減らす。",
+      "replacement_id": "ko_k1_0807"
+    }
+  ]
+}

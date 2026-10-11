@@ -1,0 +1,28 @@
+{
+  "version": "phase3_8",
+  "authority": "Explicit Phase 3.8 human approval; overlay supersedes only the old meal exclusions of these two IDs.",
+  "entries": [
+    {
+      "vocab_id": "ko_k1_0072",
+      "lemma": "아침",
+      "registered_sense": "morning",
+      "allowed_functions": [
+        "morning_time",
+        "breakfast_meal"
+      ],
+      "gloss_ja": "朝・朝食",
+      "new_id": false
+    },
+    {
+      "vocab_id": "ko_k1_0074",
+      "lemma": "저녁",
+      "registered_sense": "evening",
+      "allowed_functions": [
+        "evening_time",
+        "dinner_meal"
+      ],
+      "gloss_ja": "夕方・晩・夕食",
+      "new_id": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status":"frozen_reproducer_not_a_fix",
+  "analyzer_version":"phase3_2",
+  "text_number":2,
+  "cases":[
+    {"text":"아니요, 책이 너무 비싸요.","expected_identity":"ko_k1_0443","observed_identity":"ko_k1_0443","unresolved":false},
+    {"text":"\"아니요, 책이 너무 비싸요.\"","expected_identity":"ko_k1_0443","observed_identity":"ko_k1_0041","unresolved":true,"raw_boundary":"아니/VCN + 요/EC"},
+    {"text":"한국어 책이 있어요?","expected_identity":"ko_k1_0169","observed_identity":"ko_k1_0169","unresolved":false},
+    {"text":"\"한국어 책이 있어요?\"","expected_identity":"ko_k1_0169","observed_identity":null,"unresolved":true,"raw_boundary":"한/MM + 국어/NNG"}
+  ],
+  "policy":"Do not turn expected identities into unconditional aliases. Require registered exact span, POS and local context evidence in a future separate analyzer version. Diagnostics carry no learner exposure."
+}

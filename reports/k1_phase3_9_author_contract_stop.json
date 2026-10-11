@@ -1,0 +1,34 @@
+{
+  "classification": "operator_author_callback_contract_error",
+  "text_number": 13,
+  "cause": "Author self-check file used incorrect key names; required fields absent. Not a Korean analyzer defect. Wrapper raised StructuralStop and ended the run before candidate submission.",
+  "required_keys": [
+    "allowed_contract_read",
+    "content_membership_checked",
+    "title_checked",
+    "planned_new_checked",
+    "known_gaps_checked",
+    "references_checked"
+  ],
+  "submitted_selfcheck": {
+    "future_vocab_checked": true,
+    "unknown_vocab_checked": true,
+    "title_vocab_checked": true,
+    "planned_new_presence_checked": true,
+    "known_gap_checked": true,
+    "reference_clarity_checked": true,
+    "notes": "Self-check found unintroduced 물어보다 and third-person -고 싶다; replace before returned draft. Also remove gratuitous self-identification of husband and use spouse reference within family narration. Only two new tokens, adult count belongs to seating request."
+  },
+  "run_control_before_finalization": {
+    "status": "running",
+    "max_attempts": 5,
+    "max_text": 100,
+    "stop": null
+  },
+  "committed_count": 12,
+  "formal_candidate_013_count": 0,
+  "ledger_sha256_before": "ae63af3eb64a3a0538025eb99279ea5ea0ff0c15d3fdd9af208f1d98981a0fdb",
+  "resolution": "Preserve failed author artifact and stop history. No resume or code modification. Finalize run control as stopped without changing exposure state. Future run should use exact callback contract.",
+  "ledger_sha256_after": "ae63af3eb64a3a0538025eb99279ea5ea0ff0c15d3fdd9af208f1d98981a0fdb",
+  "ledger_unchanged": true
+}

@@ -1,0 +1,30 @@
+# Local generated pilot bodies, analysis attempts and actual run ledgers.
+# Keep these files locally; they are not part of the lightweight GitHub checkout.
+/pilot/
+/state/
+
+# Python/runtime caches and local environments.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local credentials and editor/OS state.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Optional local artifact backups; never upload with normal source commits.
+/artifacts/
+/local-backups/

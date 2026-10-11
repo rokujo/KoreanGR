@@ -1,0 +1,277 @@
+{
+  "phase": "3.1",
+  "pass_": true,
+  "decision": "A",
+  "errors": [],
+  "phase3_failure_unchanged": true,
+  "candidate_attempts": [
+    {
+      "attempt": 1,
+      "status": "REJECTED",
+      "eojeol": 119,
+      "hard_error_codes": [
+        "coverage_or_token_policy",
+        "future_expansion",
+        "length"
+      ],
+      "coverage": {
+        "denominator_N": 115,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 0.991304347826087,
+        "previous_vocab_coverage": 0.9739130434782609,
+        "target_99_met": false
+      },
+      "invalid_usage_ids": [
+        {
+          "vocab_id": "ko_k1_0386",
+          "lemma": "들어오다",
+          "surface": "들어오",
+          "start": 180,
+          "reason": "future_expansion"
+        }
+      ],
+      "unresolved_tokens": 0,
+      "state_unchanged": true,
+      "sentence_precheck_failures": [
+        12
+      ],
+      "resolver_decisions": [
+        {
+          "status": "RESOLVED",
+          "evidence": {
+            "registered_identity": true,
+            "valid_inflection": true,
+            "generated_intent_matches": true,
+            "locomotion_scene": true,
+            "licensed_location_marker": true,
+            "human_companion": true,
+            "no_direct_object": true
+          },
+          "vocab_id": "ko_k1_0186",
+          "lemma": "걷다",
+          "pos": "verb",
+          "sense": "walk",
+          "scope": "Conservative local-context inference; not native speaker approval",
+          "type": "walk_hang_context",
+          "surface": "걸어요",
+          "sentence": "공원까지 친구하고 걸어요.",
+          "start": 407,
+          "end": 411,
+          "original_annotation": {
+            "surface": "걸",
+            "lemma": "걸다",
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "unresolved",
+            "start": 407,
+            "end": 408,
+            "morph_indices": [
+              228
+            ],
+            "grammar_id": null
+          },
+          "requires_candidate_review": false
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "status": "REJECTED",
+      "eojeol": 119,
+      "hard_error_codes": [
+        "length"
+      ],
+      "coverage": {
+        "denominator_N": 115,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9826086956521739,
+        "target_99_met": false
+      },
+      "invalid_usage_ids": [],
+      "unresolved_tokens": 0,
+      "state_unchanged": true,
+      "sentence_precheck_failures": [],
+      "resolver_decisions": [
+        {
+          "status": "RESOLVED",
+          "evidence": {
+            "registered_identity": true,
+            "valid_inflection": true,
+            "generated_intent_matches": true,
+            "locomotion_scene": true,
+            "licensed_location_marker": true,
+            "human_companion": true,
+            "no_direct_object": true
+          },
+          "vocab_id": "ko_k1_0186",
+          "lemma": "걷다",
+          "pos": "verb",
+          "sense": "walk",
+          "scope": "Conservative local-context inference; not native speaker approval",
+          "type": "walk_hang_context",
+          "surface": "걸어요",
+          "sentence": "공원까지 친구하고 걸어요.",
+          "start": 406,
+          "end": 410,
+          "original_annotation": {
+            "surface": "걸",
+            "lemma": "걸다",
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "unresolved",
+            "start": 406,
+            "end": 407,
+            "morph_indices": [
+              228
+            ],
+            "grammar_id": null
+          },
+          "requires_candidate_review": false
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "status": "PASS_PENDING_COMMIT",
+      "eojeol": 135,
+      "hard_error_codes": [],
+      "coverage": {
+        "denominator_N": 131,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9847328244274809,
+        "target_99_met": false
+      },
+      "invalid_usage_ids": [],
+      "unresolved_tokens": 0,
+      "state_unchanged": true,
+      "sentence_precheck_failures": [],
+      "resolver_decisions": [
+        {
+          "status": "RESOLVED",
+          "evidence": {
+            "registered_identity": true,
+            "valid_inflection": true,
+            "generated_intent_matches": true,
+            "locomotion_scene": true,
+            "licensed_location_marker": true,
+            "human_companion": true,
+            "no_direct_object": true
+          },
+          "vocab_id": "ko_k1_0186",
+          "lemma": "걷다",
+          "pos": "verb",
+          "sense": "walk",
+          "scope": "Conservative local-context inference; not native speaker approval",
+          "type": "walk_hang_context",
+          "surface": "걸어요",
+          "sentence": "공원까지 친구하고 걸어요.",
+          "start": 426,
+          "end": 430,
+          "original_annotation": {
+            "surface": "걸",
+            "lemma": "걸다",
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "unresolved",
+            "start": 426,
+            "end": 427,
+            "morph_indices": [
+              240
+            ],
+            "grammar_id": null
+          },
+          "requires_candidate_review": false
+        }
+      ]
+    }
+  ],
+  "committed_count": 1,
+  "generated_text_numbers": [
+    1
+  ],
+  "not_generated": "K1-002 and later",
+  "hard_result": {
+    "eojeol": 135,
+    "max_sentence_eojeol": 6,
+    "coverage": {
+      "denominator_N": 131,
+      "new_tokens_U": 2,
+      "controlled_vocab_coverage": 1.0,
+      "previous_vocab_coverage": 0.9847328244274809,
+      "target_99_met": false
+    },
+    "unresolved_content_words": 0,
+    "invalid_usages": 0,
+    "future_vocab": 0,
+    "grammar_violations": 0,
+    "planned_new_vocab_ids": [
+      "ko_k1_0373",
+      "ko_k1_0413"
+    ],
+    "actual_new_vocab_ids": [
+      "ko_k1_0373",
+      "ko_k1_0413"
+    ]
+  },
+  "ledger": {
+    "epoch": 1,
+    "actual_entry_text_pairs": 2,
+    "introduced_count": 2,
+    "exposure_distribution": {
+      "0": 498,
+      "1": 2
+    },
+    "genre_history_count": 1,
+    "scene_history_count": 1,
+    "review_debt": []
+  },
+  "morphology_audit": {
+    "probes": 28,
+    "failed": 0,
+    "stem_inventory_count": 101,
+    "standalone_help_active": false
+  },
+  "naturalness": {
+    "lint_warnings": 0,
+    "semantic_flags": [],
+    "human_approved": false
+  },
+  "limitations": "Controlled authored regression smoke. Semantic inference remains conditional; does not demonstrate arbitrary LLM retries or sequential review feasibility.",
+  "tests": {
+    "full": {
+      "command": "python -B scripts/run_k1_phase3_1_tests.py",
+      "tests_run": 134,
+      "failures": 0,
+      "errors": 0,
+      "ok": true,
+      "seconds": 262.486,
+      "initial_candidate_tests": {
+        "tests": 30,
+        "failures": 1,
+        "errors": 15,
+        "cause": "Duplicate grammar_used output keyword and VV-I prefix handling bug in new code; fixed implementation, no rule relaxation.",
+        "corrected_before_smoke": {
+          "tests": 30,
+          "failures": 0,
+          "errors": 0,
+          "seconds": 44.199
+        }
+      },
+      "log": "reports/k1_phase3_1_test_log.txt"
+    },
+    "final_focused": {
+      "command": "python -B -m unittest discover -s tests -p test_k1_candidate_gate.py -v",
+      "tests_run": 34,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 26.658,
+      "ok": true,
+      "scope": "Final resolver conservative REVIEW gate and candidate/state transaction implementation"
+    }
+  }
+}

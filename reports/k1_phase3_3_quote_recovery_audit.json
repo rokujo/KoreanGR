@@ -1,0 +1,3657 @@
+{
+  "cases": [
+    {
+      "kind": "parity",
+      "text": "아니요.",
+      "identities": [
+        [
+          "아니요",
+          "interjection",
+          "no_polite",
+          "ko_k1_0443"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "아니요",
+          "tag": "IC",
+          "start": 0,
+          "length": 3
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 3,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니요"
+          ],
+          "raw_tags": [
+            "IC"
+          ],
+          "raw_indices": [
+            0
+          ],
+          "start": 0,
+          "end": 3,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": false,
+            "open_offset": null,
+            "close_offset": null,
+            "opening": null,
+            "closing": null,
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": false,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": true,
+            "response_clause_boundary": true,
+            "negative_response_position": true,
+            "balanced_or_independent": true
+          },
+          "decision": "ALREADY_REGISTERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission"
+        }
+      ],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "parity",
+      "text": "\"아니요.\"",
+      "identities": [
+        [
+          "아니요",
+          "interjection",
+          "no_polite",
+          "ko_k1_0443"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "아니",
+          "tag": "VCN",
+          "start": 1,
+          "length": 2
+        },
+        {
+          "form": "요",
+          "tag": "EF",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 5,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니",
+            "요"
+          ],
+          "raw_tags": [
+            "VCN",
+            "EF"
+          ],
+          "raw_indices": [
+            1,
+            2
+          ],
+          "start": 1,
+          "end": 4,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 0,
+            "close_offset": 5,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": true,
+            "response_clause_boundary": true,
+            "negative_response_position": true,
+            "balanced_or_independent": true
+          },
+          "decision": "RECOVERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission",
+          "replaced_annotations": [
+            {
+              "surface": "아니",
+              "lemma": "아니다",
+              "pos": "adjective",
+              "sense": "not_be",
+              "vocab_id": "ko_k1_0041",
+              "role": "core",
+              "start": 1,
+              "end": 3,
+              "morph_indices": [
+                1
+              ],
+              "grammar_id": null
+            },
+            {
+              "surface": "요",
+              "lemma": "요",
+              "pos": null,
+              "sense": null,
+              "vocab_id": null,
+              "role": "unresolved",
+              "start": 3,
+              "end": 4,
+              "morph_indices": [
+                2
+              ],
+              "grammar_id": null
+            }
+          ],
+          "restored_annotation": {
+            "surface": "아니요",
+            "lemma": "아니요",
+            "pos": "interjection",
+            "sense": "no_polite",
+            "vocab_id": "ko_k1_0443",
+            "role": "current_new_expansion",
+            "start": 1,
+            "end": 4,
+            "morph_indices": [
+              1,
+              2
+            ],
+            "grammar_id": null
+          }
+        }
+      ],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "parity",
+      "text": "아니요, 책이 너무 비싸요.",
+      "identities": [
+        [
+          "아니요",
+          "interjection",
+          "no_polite",
+          "ko_k1_0443"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "너무",
+          "adverb",
+          "too",
+          "ko_k1_0264"
+        ],
+        [
+          "비싸다",
+          "adjective",
+          "expensive",
+          "ko_k1_0249"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "아니요",
+          "tag": "IC",
+          "start": 0,
+          "length": 3
+        },
+        {
+          "form": ",",
+          "tag": "SP",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "너무",
+          "tag": "MAG",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": "비싸",
+          "tag": "VA",
+          "start": 11,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 12,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 14,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니요"
+          ],
+          "raw_tags": [
+            "IC"
+          ],
+          "raw_indices": [
+            0
+          ],
+          "start": 0,
+          "end": 3,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": false,
+            "open_offset": null,
+            "close_offset": null,
+            "opening": null,
+            "closing": null,
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": false,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": true,
+            "response_clause_boundary": true,
+            "negative_response_position": true,
+            "balanced_or_independent": true
+          },
+          "decision": "ALREADY_REGISTERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission"
+        }
+      ],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "parity",
+      "text": "\"아니요, 책이 너무 비싸요.\"",
+      "identities": [
+        [
+          "아니요",
+          "interjection",
+          "no_polite",
+          "ko_k1_0443"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "너무",
+          "adverb",
+          "too",
+          "ko_k1_0264"
+        ],
+        [
+          "비싸다",
+          "adjective",
+          "expensive",
+          "ko_k1_0249"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "아니",
+          "tag": "VCN",
+          "start": 1,
+          "length": 2
+        },
+        {
+          "form": "요",
+          "tag": "EC",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": ",",
+          "tag": "SP",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "너무",
+          "tag": "MAG",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": "비싸",
+          "tag": "VA",
+          "start": 12,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 13,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 15,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 16,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니",
+            "요"
+          ],
+          "raw_tags": [
+            "VCN",
+            "EC"
+          ],
+          "raw_indices": [
+            1,
+            2
+          ],
+          "start": 1,
+          "end": 4,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 0,
+            "close_offset": 16,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": true,
+            "response_clause_boundary": true,
+            "negative_response_position": true,
+            "balanced_or_independent": true
+          },
+          "decision": "RECOVERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission",
+          "replaced_annotations": [
+            {
+              "surface": "아니",
+              "lemma": "아니다",
+              "pos": "adjective",
+              "sense": "not_be",
+              "vocab_id": "ko_k1_0041",
+              "role": "core",
+              "start": 1,
+              "end": 3,
+              "morph_indices": [
+                1
+              ],
+              "grammar_id": null
+            },
+            {
+              "surface": "요",
+              "lemma": "요",
+              "pos": null,
+              "sense": null,
+              "vocab_id": null,
+              "role": "unresolved",
+              "start": 3,
+              "end": 4,
+              "morph_indices": [
+                2
+              ],
+              "grammar_id": null
+            }
+          ],
+          "restored_annotation": {
+            "surface": "아니요",
+            "lemma": "아니요",
+            "pos": "interjection",
+            "sense": "no_polite",
+            "vocab_id": "ko_k1_0443",
+            "role": "current_new_expansion",
+            "start": 1,
+            "end": 4,
+            "morph_indices": [
+              1,
+              2
+            ],
+            "grammar_id": null
+          }
+        }
+      ],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "parity",
+      "text": "한국어 책이 있어요?",
+      "identities": [
+        [
+          "한국어",
+          "noun",
+          "korean_language",
+          "ko_k1_0169"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "한국어",
+          "tag": "NNP",
+          "start": 0,
+          "length": 3
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "있",
+          "tag": "VA",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": "?",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "한국어",
+          "original_substring": "한국어",
+          "raw_parts": [
+            "한국어"
+          ],
+          "raw_tags": [
+            "NNP"
+          ],
+          "raw_indices": [
+            0
+          ],
+          "start": 0,
+          "end": 3,
+          "registered_vocab_id": "ko_k1_0169",
+          "registered_pos": "noun",
+          "registered_sense": "korean_language",
+          "quotation_context": {
+            "inside_balanced": false,
+            "open_offset": null,
+            "close_offset": null,
+            "opening": null,
+            "closing": null,
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": false,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "nominal_position": true,
+            "right_word_or_particle_boundary": true,
+            "balanced_or_independent": true
+          },
+          "decision": "ALREADY_REGISTERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission"
+        }
+      ],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "parity",
+      "text": "\"한국어 책이 있어요?\"",
+      "identities": [
+        [
+          "한국어",
+          "noun",
+          "korean_language",
+          "ko_k1_0169"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "한",
+          "tag": "MM",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "국어",
+          "tag": "NNG",
+          "start": 2,
+          "length": 2
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "있",
+          "tag": "VV",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": "?",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 12,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "한국어",
+          "original_substring": "한국어",
+          "raw_parts": [
+            "한",
+            "국어"
+          ],
+          "raw_tags": [
+            "MM",
+            "NNG"
+          ],
+          "raw_indices": [
+            1,
+            2
+          ],
+          "start": 1,
+          "end": 4,
+          "registered_vocab_id": "ko_k1_0169",
+          "registered_pos": "noun",
+          "registered_sense": "korean_language",
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 0,
+            "close_offset": 12,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "nominal_position": true,
+            "right_word_or_particle_boundary": true,
+            "balanced_or_independent": true
+          },
+          "decision": "RECOVERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission",
+          "replaced_annotations": [
+            {
+              "surface": "한",
+              "lemma": "하나",
+              "pos": "numeral",
+              "sense": "one_native",
+              "vocab_id": "ko_k1_0281",
+              "role": "core",
+              "start": 1,
+              "end": 2,
+              "morph_indices": [
+                1
+              ],
+              "grammar_id": null
+            },
+            {
+              "surface": "국어",
+              "lemma": "국어",
+              "pos": null,
+              "sense": null,
+              "vocab_id": null,
+              "role": "unresolved",
+              "start": 2,
+              "end": 4,
+              "morph_indices": [
+                2
+              ],
+              "grammar_id": null
+            }
+          ],
+          "restored_annotation": {
+            "surface": "한국어",
+            "lemma": "한국어",
+            "pos": "noun",
+            "sense": "korean_language",
+            "vocab_id": "ko_k1_0169",
+            "role": "core",
+            "start": 1,
+            "end": 4,
+            "morph_indices": [
+              1,
+              2
+            ],
+            "grammar_id": null
+          }
+        }
+      ],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "parity",
+      "text": "네.",
+      "identities": [
+        [
+          "네",
+          "interjection",
+          "yes",
+          "ko_k1_0442"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "네",
+          "tag": "IC",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 1,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "parity",
+      "text": "\"네.\"",
+      "identities": [
+        [
+          "네",
+          "interjection",
+          "yes",
+          "ko_k1_0442"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "네",
+          "tag": "IC",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 3,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "parity",
+      "text": "네, 여기 있어요.",
+      "identities": [
+        [
+          "네",
+          "interjection",
+          "yes",
+          "ko_k1_0442"
+        ],
+        [
+          "여기",
+          "pronoun",
+          "here",
+          "ko_k1_0005"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "네",
+          "tag": "IC",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": ",",
+          "tag": "SP",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "여기",
+          "tag": "NP",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "있",
+          "tag": "VA",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 9,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "parity",
+      "text": "\"네, 여기 있어요.\"",
+      "identities": [
+        [
+          "네",
+          "interjection",
+          "yes",
+          "ko_k1_0442"
+        ],
+        [
+          "여기",
+          "pronoun",
+          "here",
+          "ko_k1_0005"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "네",
+          "tag": "IC",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": ",",
+          "tag": "SP",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "여기",
+          "tag": "NP",
+          "start": 4,
+          "length": 2
+        },
+        {
+          "form": "있",
+          "tag": "VV",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 11,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": [],
+      "expected_identity_present": true
+    },
+    {
+      "kind": "paragraphs",
+      "text": "친구가 말해요. \"아니요, 책이 너무 비싸요.\" 저는 책을 봐요.",
+      "identities": [
+        [
+          "친구",
+          "noun",
+          "friend",
+          "ko_k1_0022"
+        ],
+        [
+          "말하다",
+          "verb",
+          "speak",
+          "ko_k1_0176"
+        ],
+        [
+          "아니요",
+          "interjection",
+          "no_polite",
+          "ko_k1_0443"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "너무",
+          "adverb",
+          "too",
+          "ko_k1_0264"
+        ],
+        [
+          "비싸다",
+          "adjective",
+          "expensive",
+          "ko_k1_0249"
+        ],
+        [
+          "저",
+          "pronoun",
+          "i_humble",
+          "ko_k1_0002"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "보다",
+          "verb",
+          "see_watch",
+          "ko_k1_0174"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "가",
+          "tag": "JKS",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "말",
+          "tag": "NNG",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 5,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "아니",
+          "tag": "VCN",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": "요",
+          "tag": "EC",
+          "start": 12,
+          "length": 1
+        },
+        {
+          "form": ",",
+          "tag": "SP",
+          "start": 13,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 15,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 16,
+          "length": 1
+        },
+        {
+          "form": "너무",
+          "tag": "MAG",
+          "start": 18,
+          "length": 2
+        },
+        {
+          "form": "비싸",
+          "tag": "VA",
+          "start": 21,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 22,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 24,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 25,
+          "length": 1
+        },
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 27,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 28,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 30,
+          "length": 1
+        },
+        {
+          "form": "을",
+          "tag": "JKO",
+          "start": 31,
+          "length": 1
+        },
+        {
+          "form": "보",
+          "tag": "VV",
+          "start": 33,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 33,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 35,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니",
+            "요"
+          ],
+          "raw_tags": [
+            "VCN",
+            "EC"
+          ],
+          "raw_indices": [
+            7,
+            8
+          ],
+          "start": 10,
+          "end": 13,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 9,
+            "close_offset": 25,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": true,
+            "response_clause_boundary": true,
+            "negative_response_position": true,
+            "balanced_or_independent": true
+          },
+          "decision": "RECOVERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission",
+          "replaced_annotations": [
+            {
+              "surface": "아니",
+              "lemma": "아니다",
+              "pos": "adjective",
+              "sense": "not_be",
+              "vocab_id": "ko_k1_0041",
+              "role": "core",
+              "start": 10,
+              "end": 12,
+              "morph_indices": [
+                7
+              ],
+              "grammar_id": null
+            },
+            {
+              "surface": "요",
+              "lemma": "요",
+              "pos": null,
+              "sense": null,
+              "vocab_id": null,
+              "role": "unresolved",
+              "start": 12,
+              "end": 13,
+              "morph_indices": [
+                8
+              ],
+              "grammar_id": null
+            }
+          ],
+          "restored_annotation": {
+            "surface": "아니요",
+            "lemma": "아니요",
+            "pos": "interjection",
+            "sense": "no_polite",
+            "vocab_id": "ko_k1_0443",
+            "role": "current_new_expansion",
+            "start": 10,
+            "end": 13,
+            "morph_indices": [
+              7,
+              8
+            ],
+            "grammar_id": null
+          }
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "kind": "paragraphs",
+      "text": "저는 친구에게 말해요. \"한국어 책이 있어요?\" 친구가 말해요. \"네, 여기 있어요.\" 저는 말해요. \"아니요, 책이 너무 비싸요.\"",
+      "identities": [
+        [
+          "저",
+          "pronoun",
+          "i_humble",
+          "ko_k1_0002"
+        ],
+        [
+          "친구",
+          "noun",
+          "friend",
+          "ko_k1_0022"
+        ],
+        [
+          "말하다",
+          "verb",
+          "speak",
+          "ko_k1_0176"
+        ],
+        [
+          "한국어",
+          "noun",
+          "korean_language",
+          "ko_k1_0169"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ],
+        [
+          "친구",
+          "noun",
+          "friend",
+          "ko_k1_0022"
+        ],
+        [
+          "말하다",
+          "verb",
+          "speak",
+          "ko_k1_0176"
+        ],
+        [
+          "네",
+          "interjection",
+          "yes",
+          "ko_k1_0442"
+        ],
+        [
+          "여기",
+          "pronoun",
+          "here",
+          "ko_k1_0005"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ],
+        [
+          "저",
+          "pronoun",
+          "i_humble",
+          "ko_k1_0002"
+        ],
+        [
+          "말하다",
+          "verb",
+          "speak",
+          "ko_k1_0176"
+        ],
+        [
+          "아니요",
+          "interjection",
+          "no_polite",
+          "ko_k1_0443"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "너무",
+          "adverb",
+          "too",
+          "ko_k1_0264"
+        ],
+        [
+          "비싸다",
+          "adjective",
+          "expensive",
+          "ko_k1_0249"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "에게",
+          "tag": "JKB",
+          "start": 5,
+          "length": 2
+        },
+        {
+          "form": "말",
+          "tag": "NNG",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 13,
+          "length": 1
+        },
+        {
+          "form": "한",
+          "tag": "MM",
+          "start": 14,
+          "length": 1
+        },
+        {
+          "form": "국어",
+          "tag": "NNG",
+          "start": 15,
+          "length": 2
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 18,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 19,
+          "length": 1
+        },
+        {
+          "form": "있",
+          "tag": "VV",
+          "start": 21,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 22,
+          "length": 2
+        },
+        {
+          "form": "?",
+          "tag": "SF",
+          "start": 24,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 25,
+          "length": 1
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 27,
+          "length": 2
+        },
+        {
+          "form": "가",
+          "tag": "JKS",
+          "start": 29,
+          "length": 1
+        },
+        {
+          "form": "말",
+          "tag": "NNG",
+          "start": 31,
+          "length": 1
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 32,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 32,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 34,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 36,
+          "length": 1
+        },
+        {
+          "form": "네",
+          "tag": "IC",
+          "start": 37,
+          "length": 1
+        },
+        {
+          "form": ",",
+          "tag": "SP",
+          "start": 38,
+          "length": 1
+        },
+        {
+          "form": "여기",
+          "tag": "NP",
+          "start": 40,
+          "length": 2
+        },
+        {
+          "form": "있",
+          "tag": "VV",
+          "start": 43,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 44,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 46,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 47,
+          "length": 1
+        },
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 49,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 50,
+          "length": 1
+        },
+        {
+          "form": "말",
+          "tag": "NNG",
+          "start": 52,
+          "length": 1
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 53,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 53,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 55,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 57,
+          "length": 1
+        },
+        {
+          "form": "아니",
+          "tag": "VCN",
+          "start": 58,
+          "length": 2
+        },
+        {
+          "form": "요",
+          "tag": "EC",
+          "start": 60,
+          "length": 1
+        },
+        {
+          "form": ",",
+          "tag": "SP",
+          "start": 61,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 63,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 64,
+          "length": 1
+        },
+        {
+          "form": "너무",
+          "tag": "MAG",
+          "start": 66,
+          "length": 2
+        },
+        {
+          "form": "비싸",
+          "tag": "VA",
+          "start": 69,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 70,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 72,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 73,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "한국어",
+          "original_substring": "한국어",
+          "raw_parts": [
+            "한",
+            "국어"
+          ],
+          "raw_tags": [
+            "MM",
+            "NNG"
+          ],
+          "raw_indices": [
+            9,
+            10
+          ],
+          "start": 14,
+          "end": 17,
+          "registered_vocab_id": "ko_k1_0169",
+          "registered_pos": "noun",
+          "registered_sense": "korean_language",
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 13,
+            "close_offset": 25,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "nominal_position": true,
+            "right_word_or_particle_boundary": true,
+            "balanced_or_independent": true
+          },
+          "decision": "RECOVERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission",
+          "replaced_annotations": [
+            {
+              "surface": "한",
+              "lemma": "하나",
+              "pos": "numeral",
+              "sense": "one_native",
+              "vocab_id": "ko_k1_0281",
+              "role": "core",
+              "start": 14,
+              "end": 15,
+              "morph_indices": [
+                9
+              ],
+              "grammar_id": null
+            },
+            {
+              "surface": "국어",
+              "lemma": "국어",
+              "pos": null,
+              "sense": null,
+              "vocab_id": null,
+              "role": "unresolved",
+              "start": 15,
+              "end": 17,
+              "morph_indices": [
+                10
+              ],
+              "grammar_id": null
+            }
+          ],
+          "restored_annotation": {
+            "surface": "한국어",
+            "lemma": "한국어",
+            "pos": "noun",
+            "sense": "korean_language",
+            "vocab_id": "ko_k1_0169",
+            "role": "core",
+            "start": 14,
+            "end": 17,
+            "morph_indices": [
+              9,
+              10
+            ],
+            "grammar_id": null
+          }
+        },
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니",
+            "요"
+          ],
+          "raw_tags": [
+            "VCN",
+            "EC"
+          ],
+          "raw_indices": [
+            38,
+            39
+          ],
+          "start": 58,
+          "end": 61,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 57,
+            "close_offset": 73,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": true,
+            "response_clause_boundary": true,
+            "negative_response_position": true,
+            "balanced_or_independent": true
+          },
+          "decision": "RECOVERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission",
+          "replaced_annotations": [
+            {
+              "surface": "아니",
+              "lemma": "아니다",
+              "pos": "adjective",
+              "sense": "not_be",
+              "vocab_id": "ko_k1_0041",
+              "role": "core",
+              "start": 58,
+              "end": 60,
+              "morph_indices": [
+                38
+              ],
+              "grammar_id": null
+            },
+            {
+              "surface": "요",
+              "lemma": "요",
+              "pos": null,
+              "sense": null,
+              "vocab_id": null,
+              "role": "unresolved",
+              "start": 60,
+              "end": 61,
+              "morph_indices": [
+                39
+              ],
+              "grammar_id": null
+            }
+          ],
+          "restored_annotation": {
+            "surface": "아니요",
+            "lemma": "아니요",
+            "pos": "interjection",
+            "sense": "no_polite",
+            "vocab_id": "ko_k1_0443",
+            "role": "current_new_expansion",
+            "start": 58,
+            "end": 61,
+            "morph_indices": [
+              38,
+              39
+            ],
+            "grammar_id": null
+          }
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "kind": "paragraphs",
+      "text": "친구가 말해요! \"아니요.\" 저는 말해요. \"한국어 책이 있어요?\"",
+      "identities": [
+        [
+          "친구",
+          "noun",
+          "friend",
+          "ko_k1_0022"
+        ],
+        [
+          "말하다",
+          "verb",
+          "speak",
+          "ko_k1_0176"
+        ],
+        [
+          "아니요",
+          "interjection",
+          "no_polite",
+          "ko_k1_0443"
+        ],
+        [
+          "저",
+          "pronoun",
+          "i_humble",
+          "ko_k1_0002"
+        ],
+        [
+          "말하다",
+          "verb",
+          "speak",
+          "ko_k1_0176"
+        ],
+        [
+          "한국어",
+          "noun",
+          "korean_language",
+          "ko_k1_0169"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "가",
+          "tag": "JKS",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "말",
+          "tag": "NNG",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 5,
+          "length": 2
+        },
+        {
+          "form": "!",
+          "tag": "SF",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "아니",
+          "tag": "VCN",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": "요",
+          "tag": "EF",
+          "start": 12,
+          "length": 1
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 13,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 14,
+          "length": 1
+        },
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 16,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 17,
+          "length": 1
+        },
+        {
+          "form": "말",
+          "tag": "NNG",
+          "start": 19,
+          "length": 1
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 20,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 20,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 22,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 24,
+          "length": 1
+        },
+        {
+          "form": "한",
+          "tag": "MM",
+          "start": 25,
+          "length": 1
+        },
+        {
+          "form": "국어",
+          "tag": "NNG",
+          "start": 26,
+          "length": 2
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 29,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 30,
+          "length": 1
+        },
+        {
+          "form": "있",
+          "tag": "VV",
+          "start": 32,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 33,
+          "length": 2
+        },
+        {
+          "form": "?",
+          "tag": "SF",
+          "start": 35,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 36,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니",
+            "요"
+          ],
+          "raw_tags": [
+            "VCN",
+            "EF"
+          ],
+          "raw_indices": [
+            7,
+            8
+          ],
+          "start": 10,
+          "end": 13,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 9,
+            "close_offset": 14,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": true,
+            "response_clause_boundary": true,
+            "negative_response_position": true,
+            "balanced_or_independent": true
+          },
+          "decision": "RECOVERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission",
+          "replaced_annotations": [
+            {
+              "surface": "아니",
+              "lemma": "아니다",
+              "pos": "adjective",
+              "sense": "not_be",
+              "vocab_id": "ko_k1_0041",
+              "role": "core",
+              "start": 10,
+              "end": 12,
+              "morph_indices": [
+                7
+              ],
+              "grammar_id": null
+            },
+            {
+              "surface": "요",
+              "lemma": "요",
+              "pos": null,
+              "sense": null,
+              "vocab_id": null,
+              "role": "unresolved",
+              "start": 12,
+              "end": 13,
+              "morph_indices": [
+                8
+              ],
+              "grammar_id": null
+            }
+          ],
+          "restored_annotation": {
+            "surface": "아니요",
+            "lemma": "아니요",
+            "pos": "interjection",
+            "sense": "no_polite",
+            "vocab_id": "ko_k1_0443",
+            "role": "current_new_expansion",
+            "start": 10,
+            "end": 13,
+            "morph_indices": [
+              7,
+              8
+            ],
+            "grammar_id": null
+          }
+        },
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "한국어",
+          "original_substring": "한국어",
+          "raw_parts": [
+            "한",
+            "국어"
+          ],
+          "raw_tags": [
+            "MM",
+            "NNG"
+          ],
+          "raw_indices": [
+            18,
+            19
+          ],
+          "start": 25,
+          "end": 28,
+          "registered_vocab_id": "ko_k1_0169",
+          "registered_pos": "noun",
+          "registered_sense": "korean_language",
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 24,
+            "close_offset": 36,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "nominal_position": true,
+            "right_word_or_particle_boundary": true,
+            "balanced_or_independent": true
+          },
+          "decision": "RECOVERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission",
+          "replaced_annotations": [
+            {
+              "surface": "한",
+              "lemma": "하나",
+              "pos": "numeral",
+              "sense": "one_native",
+              "vocab_id": "ko_k1_0281",
+              "role": "core",
+              "start": 25,
+              "end": 26,
+              "morph_indices": [
+                18
+              ],
+              "grammar_id": null
+            },
+            {
+              "surface": "국어",
+              "lemma": "국어",
+              "pos": null,
+              "sense": null,
+              "vocab_id": null,
+              "role": "unresolved",
+              "start": 26,
+              "end": 28,
+              "morph_indices": [
+                19
+              ],
+              "grammar_id": null
+            }
+          ],
+          "restored_annotation": {
+            "surface": "한국어",
+            "lemma": "한국어",
+            "pos": "noun",
+            "sense": "korean_language",
+            "vocab_id": "ko_k1_0169",
+            "role": "core",
+            "start": 25,
+            "end": 28,
+            "morph_indices": [
+              18,
+              19
+            ],
+            "grammar_id": null
+          }
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "kind": "no_recovery",
+      "text": "아니요가 있어요.",
+      "identities": [
+        [
+          "아니요",
+          "interjection",
+          "no_polite",
+          "ko_k1_0443"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "아니요",
+          "tag": "IC",
+          "start": 0,
+          "length": 3
+        },
+        {
+          "form": "가",
+          "tag": "JKS",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": "있",
+          "tag": "VA",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 6,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 8,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니요"
+          ],
+          "raw_tags": [
+            "IC"
+          ],
+          "raw_indices": [
+            0
+          ],
+          "start": 0,
+          "end": 3,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": false,
+            "open_offset": null,
+            "close_offset": null,
+            "opening": null,
+            "closing": null,
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": false,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": true,
+            "response_clause_boundary": false,
+            "negative_response_position": false,
+            "balanced_or_independent": true
+          },
+          "decision": "ALREADY_REGISTERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "kind": "no_recovery",
+      "text": "답은 아니요예요.",
+      "identities": [
+        [
+          "답",
+          "noun",
+          "answer",
+          "ko_k1_0132"
+        ],
+        [
+          "아니다",
+          "adjective",
+          "not_be",
+          "ko_k1_0041"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "답",
+          "tag": "NNG",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "은",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "아니",
+          "tag": "VCN",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "요",
+          "tag": "EC",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "VCP",
+          "start": 6,
+          "length": 0
+        },
+        {
+          "form": "예요",
+          "tag": "EF",
+          "start": 6,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 8,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니",
+            "요"
+          ],
+          "raw_tags": [
+            "VCN",
+            "EC"
+          ],
+          "raw_indices": [
+            2,
+            3
+          ],
+          "start": 3,
+          "end": 6,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": false,
+            "open_offset": null,
+            "close_offset": null,
+            "opening": null,
+            "closing": null,
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": false,
+            "response_clause_boundary": false,
+            "negative_response_position": false,
+            "balanced_or_independent": true
+          },
+          "decision": "DECLINED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission"
+        }
+      ],
+      "unresolved": [
+        {
+          "surface": "요",
+          "lemma": "요",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 5,
+          "end": 6,
+          "morph_indices": [
+            3
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "kind": "no_recovery",
+      "text": "저는 아니요, 책을 읽어요.",
+      "identities": [
+        [
+          "저",
+          "pronoun",
+          "i_humble",
+          "ko_k1_0002"
+        ],
+        [
+          "아니요",
+          "interjection",
+          "no_polite",
+          "ko_k1_0443"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "읽다",
+          "verb",
+          "read",
+          "ko_k1_0177"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "아니요",
+          "tag": "IC",
+          "start": 3,
+          "length": 3
+        },
+        {
+          "form": ",",
+          "tag": "SP",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "을",
+          "tag": "JKO",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "읽",
+          "tag": "VV",
+          "start": 11,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 12,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 14,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니요"
+          ],
+          "raw_tags": [
+            "IC"
+          ],
+          "raw_indices": [
+            2
+          ],
+          "start": 3,
+          "end": 6,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": false,
+            "open_offset": null,
+            "close_offset": null,
+            "opening": null,
+            "closing": null,
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": false,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": false,
+            "response_clause_boundary": true,
+            "negative_response_position": false,
+            "balanced_or_independent": true
+          },
+          "decision": "ALREADY_REGISTERED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "kind": "no_recovery",
+      "text": "\"한 국어 책이 있어요?\"",
+      "identities": [
+        [
+          "하나",
+          "numeral",
+          "one_native",
+          "ko_k1_0281"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "한",
+          "tag": "MM",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "국어",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "있",
+          "tag": "VV",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": "?",
+          "tag": "SF",
+          "start": 12,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 13,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": [
+        {
+          "surface": "국어",
+          "lemma": "국어",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 3,
+          "end": 5,
+          "morph_indices": [
+            2
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "kind": "no_recovery",
+      "text": "아니\"요",
+      "identities": [],
+      "raw_morphology": [
+        {
+          "form": "아니",
+          "tag": "IC",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "요",
+          "tag": "MM",
+          "start": 3,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": [
+        {
+          "surface": "아니",
+          "lemma": "아니",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 0,
+          "end": 2,
+          "morph_indices": [
+            0
+          ],
+          "grammar_id": null
+        },
+        {
+          "surface": "요",
+          "lemma": "요",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 3,
+          "end": 4,
+          "morph_indices": [
+            2
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "kind": "no_recovery",
+      "text": "아니 요.",
+      "identities": [],
+      "raw_morphology": [
+        {
+          "form": "아니",
+          "tag": "IC",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "요",
+          "tag": "JX",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 4,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": [
+        {
+          "surface": "아니",
+          "lemma": "아니",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 0,
+          "end": 2,
+          "morph_indices": [
+            0
+          ],
+          "grammar_id": null
+        },
+        {
+          "surface": "요",
+          "lemma": "요",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 3,
+          "end": 4,
+          "morph_indices": [
+            1
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "kind": "no_recovery",
+      "text": "한국 어 책이 있어요?",
+      "identities": [
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "한국",
+          "tag": "NNP",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "어",
+          "tag": "NNG",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "있",
+          "tag": "VA",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": "?",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": [
+        {
+          "surface": "어",
+          "lemma": "어",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 3,
+          "end": 4,
+          "morph_indices": [
+            1
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "kind": "no_recovery",
+      "text": "\"한국어책이 있어요?\"",
+      "identities": [
+        [
+          "하나",
+          "numeral",
+          "one_native",
+          "ko_k1_0281"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "한",
+          "tag": "MM",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "국어",
+          "tag": "NNG",
+          "start": 2,
+          "length": 2
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "있",
+          "tag": "VV",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": "?",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 11,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "한국어",
+          "original_substring": "한국어",
+          "raw_parts": [
+            "한",
+            "국어"
+          ],
+          "raw_tags": [
+            "MM",
+            "NNG"
+          ],
+          "raw_indices": [
+            1,
+            2
+          ],
+          "start": 1,
+          "end": 4,
+          "registered_vocab_id": "ko_k1_0169",
+          "registered_pos": "noun",
+          "registered_sense": "korean_language",
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 0,
+            "close_offset": 11,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "nominal_position": false,
+            "right_word_or_particle_boundary": false,
+            "balanced_or_independent": true
+          },
+          "decision": "DECLINED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission"
+        }
+      ],
+      "unresolved": [
+        {
+          "surface": "국어",
+          "lemma": "국어",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 2,
+          "end": 4,
+          "morph_indices": [
+            2
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "kind": "no_recovery",
+      "text": "\"아니요, 책이 비싸요.",
+      "identities": [
+        [
+          "아니다",
+          "adjective",
+          "not_be",
+          "ko_k1_0041"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "비싸다",
+          "adjective",
+          "expensive",
+          "ko_k1_0249"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "아니",
+          "tag": "VCN",
+          "start": 1,
+          "length": 2
+        },
+        {
+          "form": "요",
+          "tag": "EC",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": ",",
+          "tag": "SP",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "비싸",
+          "tag": "VA",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 12,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "아니요",
+          "original_substring": "아니요",
+          "raw_parts": [
+            "아니",
+            "요"
+          ],
+          "raw_tags": [
+            "VCN",
+            "EC"
+          ],
+          "raw_indices": [
+            1,
+            2
+          ],
+          "start": 1,
+          "end": 4,
+          "registered_vocab_id": "ko_k1_0443",
+          "registered_pos": "interjection",
+          "registered_sense": "no_polite",
+          "quotation_context": {
+            "inside_balanced": false,
+            "open_offset": null,
+            "close_offset": null,
+            "opening": null,
+            "closing": null,
+            "inside_unmatched": true
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "utterance_initial": false,
+            "response_clause_boundary": true,
+            "negative_response_position": false,
+            "balanced_or_independent": false
+          },
+          "decision": "DECLINED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission"
+        }
+      ],
+      "unresolved": [
+        {
+          "surface": "요",
+          "lemma": "요",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 3,
+          "end": 4,
+          "morph_indices": [
+            2
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "kind": "no_recovery",
+      "text": "\"한국어 책이 있어요?",
+      "identities": [
+        [
+          "하나",
+          "numeral",
+          "one_native",
+          "ko_k1_0281"
+        ],
+        [
+          "책",
+          "noun",
+          "book",
+          "ko_k1_0101"
+        ],
+        [
+          "있다",
+          "adjective",
+          "exist",
+          "ko_k1_0180"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "한",
+          "tag": "MM",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "국어",
+          "tag": "NNG",
+          "start": 2,
+          "length": 2
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "있",
+          "tag": "VA",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": "?",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [
+        {
+          "type": "exact_registered_surface_recovery",
+          "surface": "한국어",
+          "original_substring": "한국어",
+          "raw_parts": [
+            "한",
+            "국어"
+          ],
+          "raw_tags": [
+            "MM",
+            "NNG"
+          ],
+          "raw_indices": [
+            1,
+            2
+          ],
+          "start": 1,
+          "end": 4,
+          "registered_vocab_id": "ko_k1_0169",
+          "registered_pos": "noun",
+          "registered_sense": "korean_language",
+          "quotation_context": {
+            "inside_balanced": false,
+            "open_offset": null,
+            "close_offset": null,
+            "opening": null,
+            "closing": null,
+            "inside_unmatched": true
+          },
+          "evidence": {
+            "exact_original_substring": true,
+            "unique_registered_identity": true,
+            "raw_indices_consecutive": true,
+            "exact_raw_character_partition": true,
+            "no_internal_whitespace": true,
+            "no_internal_punctuation": true,
+            "explicit_raw_pos_signature": true,
+            "original_parts_concatenate": true,
+            "annotation_group_exclusive": true,
+            "raw_indices_accounted_once": true,
+            "left_word_boundary": true,
+            "nominal_position": true,
+            "right_word_or_particle_boundary": true,
+            "balanced_or_independent": false
+          },
+          "decision": "DECLINED",
+          "permission_granted": false,
+          "scope": "Two explicit identities only; candidate gate checks actual permission"
+        }
+      ],
+      "unresolved": [
+        {
+          "surface": "국어",
+          "lemma": "국어",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 2,
+          "end": 4,
+          "morph_indices": [
+            2
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "kind": "unchanged_anida",
+      "text": "저는 학생이 아니에요.",
+      "identities": [
+        [
+          "저",
+          "pronoun",
+          "i_humble",
+          "ko_k1_0002"
+        ],
+        [
+          "학생",
+          "noun",
+          "student",
+          "ko_k1_0036"
+        ],
+        [
+          "아니다",
+          "adjective",
+          "not_be",
+          "ko_k1_0041"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "학생",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "이",
+          "tag": "JKC",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "아니",
+          "tag": "VCN",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": "에요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": []
+    },
+    {
+      "kind": "unchanged_anida",
+      "text": "\"저는 학생이 아니에요.\"",
+      "identities": [
+        [
+          "저",
+          "pronoun",
+          "i_humble",
+          "ko_k1_0002"
+        ],
+        [
+          "학생",
+          "noun",
+          "student",
+          "ko_k1_0036"
+        ],
+        [
+          "아니다",
+          "adjective",
+          "not_be",
+          "ko_k1_0041"
+        ]
+      ],
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "학생",
+          "tag": "NNG",
+          "start": 4,
+          "length": 2
+        },
+        {
+          "form": "이",
+          "tag": "JKC",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "아니",
+          "tag": "VCN",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": "에요",
+          "tag": "EF",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 12,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 13,
+          "length": 1
+        }
+      ],
+      "raw_unchanged": true,
+      "audit": [],
+      "unresolved": []
+    }
+  ],
+  "parity": [
+    {
+      "content": "아니요.",
+      "expected_id": "ko_k1_0443",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    },
+    {
+      "content": "아니요, 책이 너무 비싸요.",
+      "expected_id": "ko_k1_0443",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    },
+    {
+      "content": "한국어 책이 있어요?",
+      "expected_id": "ko_k1_0169",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    },
+    {
+      "content": "네.",
+      "expected_id": "ko_k1_0442",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    },
+    {
+      "content": "네, 여기 있어요.",
+      "expected_id": "ko_k1_0442",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    }
+  ],
+  "scope": "Diagnostics only; not materials or learner exposure"
+}

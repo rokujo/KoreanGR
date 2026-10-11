@@ -1,0 +1,467 @@
+{
+  "status": "pilot_selected_from_frozen_data",
+  "text_numbers": [
+    1,
+    40,
+    85,
+    103,
+    150,
+    170,
+    180,
+    184,
+    189,
+    190,
+    193,
+    234,
+    242,
+    246,
+    252,
+    254,
+    255,
+    276,
+    284,
+    299
+  ],
+  "selection_keys": {
+    "replacement:가만히": 242,
+    "replacement:아저씨": 180,
+    "replacement:시간표": 254,
+    "replacement:충전하다": 234,
+    "replacement:동갑": 184,
+    "replacement:충전기": 255,
+    "replacement:방금": 193,
+    "medium:아저씨": 180,
+    "medium:미술관": 189,
+    "medium:박물관": 190,
+    "medium:결국": 246,
+    "medium:관심": 252,
+    "first_e1": 1,
+    "first_e2": 103,
+    "first_single": 40,
+    "first_zero": 85,
+    "midpoint": 150,
+    "mid_zero": 170,
+    "fast_first": 276,
+    "fast_replacements": 284,
+    "fast_late": 299
+  },
+  "rows": [
+    {
+      "text_number": 1,
+      "reasons": [
+        "first_e1"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0373",
+        "ko_k1_0413"
+      ],
+      "scheduled_review_vocab_ids": []
+    },
+    {
+      "text_number": 40,
+      "reasons": [
+        "first_single"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0363"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0335",
+        "ko_k1_0344",
+        "ko_k1_0355",
+        "ko_k1_0356",
+        "ko_k1_0358",
+        "ko_k1_0446"
+      ]
+    },
+    {
+      "text_number": 85,
+      "reasons": [
+        "first_zero"
+      ],
+      "scheduled_new_vocab_ids": [],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0363",
+        "ko_k1_0365",
+        "ko_k1_0385",
+        "ko_k1_0425",
+        "ko_k1_0426",
+        "ko_k1_0455",
+        "ko_k1_0456",
+        "ko_k1_0457"
+      ]
+    },
+    {
+      "text_number": 103,
+      "reasons": [
+        "first_e2"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0501",
+        "ko_k1_0502"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0338",
+        "ko_k1_0400",
+        "ko_k1_0401",
+        "ko_k1_0470",
+        "ko_k1_0471",
+        "ko_k1_0493",
+        "ko_k1_0494"
+      ]
+    },
+    {
+      "text_number": 150,
+      "reasons": [
+        "midpoint"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0594",
+        "ko_k1_0595"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0363",
+        "ko_k1_0366",
+        "ko_k1_0505",
+        "ko_k1_0513",
+        "ko_k1_0563",
+        "ko_k1_0569",
+        "ko_k1_0586",
+        "ko_k1_0589"
+      ]
+    },
+    {
+      "text_number": 170,
+      "reasons": [
+        "mid_zero"
+      ],
+      "scheduled_new_vocab_ids": [],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0325",
+        "ko_k1_0326",
+        "ko_k1_0404",
+        "ko_k1_0407",
+        "ko_k1_0545",
+        "ko_k1_0546",
+        "ko_k1_0560",
+        "ko_k1_0603",
+        "ko_k1_0604",
+        "ko_k1_0624",
+        "ko_k1_0625",
+        "ko_k1_0626"
+      ]
+    },
+    {
+      "text_number": 180,
+      "reasons": [
+        "replacement:아저씨",
+        "medium:아저씨"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0701",
+        "ko_k1_0802"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0345",
+        "ko_k1_0425",
+        "ko_k1_0434",
+        "ko_k1_0563",
+        "ko_k1_0583",
+        "ko_k1_0622",
+        "ko_k1_0623",
+        "ko_k1_0642",
+        "ko_k1_0643",
+        "ko_k1_0739"
+      ]
+    },
+    {
+      "text_number": 184,
+      "reasons": [
+        "replacement:동갑"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0709",
+        "ko_k1_0805"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0351",
+        "ko_k1_0433",
+        "ko_k1_0450",
+        "ko_k1_0576",
+        "ko_k1_0601",
+        "ko_k1_0612",
+        "ko_k1_0630",
+        "ko_k1_0631",
+        "ko_k1_0701",
+        "ko_k1_0802"
+      ]
+    },
+    {
+      "text_number": 189,
+      "reasons": [
+        "medium:미술관"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0719",
+        "ko_k1_0720"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0452",
+        "ko_k1_0462",
+        "ko_k1_0531",
+        "ko_k1_0582",
+        "ko_k1_0611",
+        "ko_k1_0621",
+        "ko_k1_0638",
+        "ko_k1_0643",
+        "ko_k1_0711",
+        "ko_k1_0712"
+      ]
+    },
+    {
+      "text_number": 190,
+      "reasons": [
+        "medium:박물관"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0721",
+        "ko_k1_0722"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0454",
+        "ko_k1_0466",
+        "ko_k1_0530",
+        "ko_k1_0584",
+        "ko_k1_0613",
+        "ko_k1_0623",
+        "ko_k1_0640",
+        "ko_k1_0645",
+        "ko_k1_0713",
+        "ko_k1_0714"
+      ]
+    },
+    {
+      "text_number": 193,
+      "reasons": [
+        "replacement:방금"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0564",
+        "ko_k1_0807"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0459",
+        "ko_k1_0486",
+        "ko_k1_0527",
+        "ko_k1_0590",
+        "ko_k1_0618",
+        "ko_k1_0619",
+        "ko_k1_0629",
+        "ko_k1_0646",
+        "ko_k1_0719",
+        "ko_k1_0720"
+      ]
+    },
+    {
+      "text_number": 234,
+      "reasons": [
+        "replacement:충전하다"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0756",
+        "ko_k1_0804"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0387",
+        "ko_k1_0543",
+        "ko_k1_0642",
+        "ko_k1_0670",
+        "ko_k1_0678",
+        "ko_k1_0690",
+        "ko_k1_0691",
+        "ko_k1_0731",
+        "ko_k1_0736",
+        "ko_k1_0748",
+        "ko_k1_0749"
+      ]
+    },
+    {
+      "text_number": 242,
+      "reasons": [
+        "replacement:가만히"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0772",
+        "ko_k1_0801"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0397",
+        "ko_k1_0557",
+        "ko_k1_0686",
+        "ko_k1_0693",
+        "ko_k1_0713",
+        "ko_k1_0731",
+        "ko_k1_0732",
+        "ko_k1_0748",
+        "ko_k1_0753",
+        "ko_k1_0764",
+        "ko_k1_0767"
+      ]
+    },
+    {
+      "text_number": 246,
+      "reasons": [
+        "medium:결국"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0781",
+        "ko_k1_0782"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0403",
+        "ko_k1_0566",
+        "ko_k1_0694",
+        "ko_k1_0718",
+        "ko_k1_0726",
+        "ko_k1_0740",
+        "ko_k1_0741",
+        "ko_k1_0756",
+        "ko_k1_0761",
+        "ko_k1_0772",
+        "ko_k1_0775"
+      ]
+    },
+    {
+      "text_number": 252,
+      "reasons": [
+        "medium:관심"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0793",
+        "ko_k1_0794"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0409",
+        "ko_k1_0506",
+        "ko_k1_0578",
+        "ko_k1_0807",
+        "ko_k1_0731",
+        "ko_k1_0752",
+        "ko_k1_0753",
+        "ko_k1_0768",
+        "ko_k1_0801",
+        "ko_k1_0785",
+        "ko_k1_0788"
+      ]
+    },
+    {
+      "text_number": 254,
+      "reasons": [
+        "replacement:시간표"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0803",
+        "ko_k1_0798"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0410",
+        "ko_k1_0582",
+        "ko_k1_0651",
+        "ko_k1_0654",
+        "ko_k1_0735",
+        "ko_k1_0736",
+        "ko_k1_0756",
+        "ko_k1_0804",
+        "ko_k1_0772",
+        "ko_k1_0789",
+        "ko_k1_0792"
+      ]
+    },
+    {
+      "text_number": 255,
+      "reasons": [
+        "replacement:충전기"
+      ],
+      "scheduled_new_vocab_ids": [
+        "ko_k1_0799",
+        "ko_k1_0806"
+      ],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0414",
+        "ko_k1_0584",
+        "ko_k1_0585",
+        "ko_k1_0653",
+        "ko_k1_0737",
+        "ko_k1_0738",
+        "ko_k1_0758",
+        "ko_k1_0759",
+        "ko_k1_0774",
+        "ko_k1_0775",
+        "ko_k1_0791"
+      ]
+    },
+    {
+      "text_number": 276,
+      "reasons": [
+        "fast_first"
+      ],
+      "scheduled_new_vocab_ids": [],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0434",
+        "ko_k1_0464",
+        "ko_k1_0506",
+        "ko_k1_0535",
+        "ko_k1_0547",
+        "ko_k1_0548",
+        "ko_k1_0674",
+        "ko_k1_0675",
+        "ko_k1_0802",
+        "ko_k1_0719",
+        "ko_k1_0781",
+        "ko_k1_0782"
+      ]
+    },
+    {
+      "text_number": 284,
+      "reasons": [
+        "fast_replacements"
+      ],
+      "scheduled_new_vocab_ids": [],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0430",
+        "ko_k1_0484",
+        "ko_k1_0561",
+        "ko_k1_0562",
+        "ko_k1_0622",
+        "ko_k1_0661",
+        "ko_k1_0673",
+        "ko_k1_0711",
+        "ko_k1_0743",
+        "ko_k1_0804",
+        "ko_k1_0803",
+        "ko_k1_0798"
+      ]
+    },
+    {
+      "text_number": 299,
+      "reasons": [
+        "fast_late"
+      ],
+      "scheduled_new_vocab_ids": [],
+      "scheduled_review_vocab_ids": [
+        "ko_k1_0417",
+        "ko_k1_0474",
+        "ko_k1_0495",
+        "ko_k1_0516",
+        "ko_k1_0592",
+        "ko_k1_0593",
+        "ko_k1_0618",
+        "ko_k1_0667",
+        "ko_k1_0732",
+        "ko_k1_0758",
+        "ko_k1_0801",
+        "ko_k1_0788"
+      ]
+    }
+  ]
+}

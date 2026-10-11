@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "language",
+    "level",
+    "phase",
+    "status",
+    "notes",
+    "recent_window_texts",
+    "entries",
+    "texts",
+    "statistics"
+  ],
+  "properties": {
+    "language": {
+      "const": "ko"
+    },
+    "level": {
+      "const": "K1"
+    },
+    "phase": {
+      "const": "1.2"
+    },
+    "status": {
+      "const": "planned_not_observed"
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recent_window_texts": {
+      "const": 20
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 500,
+      "maxItems": 500,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "vocab_id",
+          "first_introduction_text",
+          "review_texts"
+        ],
+        "properties": {
+          "vocab_id": {
+            "type": "string",
+            "pattern": "^ko_k1_[0-9]{4}$"
+          },
+          "first_introduction_text": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 275
+          },
+          "review_texts": {
+            "type": "array",
+            "minItems": 5,
+            "uniqueItems": true,
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 300
+            }
+          }
+        }
+      }
+    },
+    "texts": {
+      "type": "array",
+      "minItems": 300,
+      "maxItems": 300,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "new_vocab_ids",
+          "review_vocab_ids",
+          "new_vocab_count",
+          "review_vocab_count",
+          "recently_introduced_vocab_count",
+          "recently_introduced_E3_count",
+          "total_scheduled_expansion_count",
+          "tier_counts"
+        ],
+        "properties": {
+          "text": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 300
+          },
+          "new_vocab_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^ko_k1_[0-9]{4}$"
+            },
+            "maxItems": 2,
+            "uniqueItems": true
+          },
+          "review_vocab_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^ko_k1_[0-9]{4}$"
+            },
+            "uniqueItems": true
+          },
+          "new_vocab_count": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 500
+          },
+          "review_vocab_count": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 500
+          },
+          "recently_introduced_vocab_count": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 500
+          },
+          "recently_introduced_E3_count": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 500
+          },
+          "total_scheduled_expansion_count": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 500
+          },
+          "tier_counts": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "E1",
+              "E2",
+              "E3"
+            ],
+            "properties": {
+              "E1": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 500
+              },
+              "E2": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 500
+              },
+              "E3": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 500
+              }
+            }
+          }
+        }
+      }
+    },
+    "statistics": {
+      "type": "object"
+    }
+  }
+}

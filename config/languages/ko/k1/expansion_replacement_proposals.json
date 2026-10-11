@@ -1,0 +1,249 @@
+{
+  "phase": "2.1A",
+  "status": "accepted",
+  "applied": true,
+  "counted_in_vocab_budget": false,
+  "entries": [
+    {
+      "source_id": "ko_k1_0773",
+      "source_lemma": "함께",
+      "source_pos": "adverb",
+      "source_sense": "together",
+      "action": "retire_from_K1",
+      "removal_reason": "Core 같이とほぼ同義。",
+      "candidate": {
+        "lemma": "가만히",
+        "pos": "adverb",
+        "sense": "without_moving",
+        "gloss_ja": "動かずに",
+        "category": "adverbs_connectors",
+        "tier": "E3",
+        "notes": "副詞義のみ。-아/어 있다等の未許可構文を足さずに使える用例を確認する。"
+      },
+      "replacement_reason": "静止した状態で待つ・座る等の具体動作を補い、静かな音量の조용히とは区別できる。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0801"
+    },
+    {
+      "source_id": "ko_k1_0702",
+      "source_lemma": "조부모",
+      "source_pos": "noun",
+      "source_sense": "grandparents",
+      "action": "retire_from_K1",
+      "removal_reason": "E1 할머니/할아버지で表現できる。",
+      "candidate": {
+        "lemma": "아저씨",
+        "pos": "noun",
+        "sense": "adult_man_address",
+        "gloss_ja": "おじさん（成人男性の呼称）",
+        "category": "people_social",
+        "tier": "E3",
+        "notes": "実際の呼びかけは人物関係と丁寧さを母語話者が確認する。"
+      },
+      "replacement_reason": "近所・店・交通の人物描写に再利用しやすい具体的呼称。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0802"
+    },
+    {
+      "source_id": "ko_k1_0797",
+      "source_lemma": "기차역",
+      "source_pos": "noun",
+      "source_sense": "train_station",
+      "action": "retire_from_K1",
+      "removal_reason": "Core 역との差が小さい。",
+      "candidate": {
+        "lemma": "시간표",
+        "pos": "noun",
+        "sense": "timetable",
+        "gloss_ja": "時間割・時刻表",
+        "category": "school_work_transport_info",
+        "tier": "E3",
+        "notes": "時間の一覧という共通中心義。ジャンル別の用例と意味の範囲を確認する。"
+      },
+      "replacement_reason": "学校・交通・仕事の予定で使う具体物を補い、既存語の言い換えにならない。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0803"
+    },
+    {
+      "source_id": "ko_k1_0757",
+      "source_lemma": "찍히다",
+      "source_pos": "verb",
+      "source_sense": "be_photographed",
+      "action": "retire_from_K1",
+      "removal_reason": "受動の負荷に対して場面が限定される。",
+      "candidate": {
+        "lemma": "충전하다",
+        "pos": "verb",
+        "sense": "charge_battery",
+        "gloss_ja": "充電する",
+        "category": "verbs",
+        "tier": "E3",
+        "notes": "電気機器の充電のみ。補助構文や専門的な電気説明へ拡張しない。"
+      },
+      "replacement_reason": "携帯電話・コンピューターを使う家・学校・仕事・旅行で、単純な能動文を作れる。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0804"
+    },
+    {
+      "source_id": "ko_k1_0710",
+      "source_lemma": "관계",
+      "source_pos": "noun",
+      "source_sense": "relationship",
+      "action": "retire_from_K1",
+      "removal_reason": "抽象的で、具体的な人物関係は既存語で表現できる。",
+      "candidate": {
+        "lemma": "동갑",
+        "pos": "noun",
+        "sense": "same_age",
+        "gloss_ja": "同い年",
+        "category": "people_social",
+        "tier": "E3",
+        "notes": "同じ年齢の人物という中心義に限定し、比較보다は使用しない。"
+      },
+      "replacement_reason": "年齢・家族・学校・新しい友達をつなぐ具体的属性。이다/하고で表現できる。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0805"
+    },
+    {
+      "source_id": "ko_k1_0800",
+      "source_lemma": "정보",
+      "source_pos": "noun",
+      "source_sense": "information",
+      "action": "retire_from_K1",
+      "removal_reason": "住所・時刻等の具体語で代替できる。",
+      "candidate": {
+        "lemma": "충전기",
+        "pos": "noun",
+        "sense": "charger",
+        "gloss_ja": "充電器",
+        "category": "school_work_transport_info",
+        "tier": "E3",
+        "notes": "携帯電話等の充電器。충전하다と同根だが物と動作で役割が異なる。"
+      },
+      "replacement_reason": "持ち物・貸し借り・忘れ物・旅行に使える具体的な機器。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0806"
+    },
+    {
+      "source_id": "ko_k1_0647",
+      "source_lemma": "가장",
+      "source_pos": "adverb",
+      "source_sense": "most",
+      "action": "retire_from_K1",
+      "removal_reason": "제일をK1の最上級として優先し、重複を減らす。",
+      "candidate": {
+        "lemma": "방금",
+        "pos": "adverb",
+        "sense": "just_now",
+        "gloss_ja": "たった今",
+        "category": "adverbs_connectors",
+        "tier": "E3",
+        "notes": "副詞の直前過去義のみ。副詞/名詞の多品詞用法を一括許可しない。"
+      },
+      "replacement_reason": "直前の出来事を過去形で示せる。곧の近い未来、지금の現在とは時間義が異なる。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0807"
+    },
+    {
+      "source_id": "ko_k1_0363",
+      "source_lemma": "오렌지",
+      "source_pos": "noun",
+      "source_sense": "orange",
+      "action": "retire_and_replace",
+      "removal_reason": "果物品種より歯磨き・清掃の基本動作を優先。",
+      "candidate": {
+        "lemma": "닦다",
+        "pos": "verb",
+        "sense": "wipe_clean",
+        "gloss_ja": "磨く・拭く",
+        "category": "verbs",
+        "tier": "E1",
+        "notes": "清掃のために磨く・拭く動作のみ。歯磨き、机や物を拭く場面。抽象的な腕前を磨く義は許可しない。"
+      },
+      "replacement_reason": "Phase 2.1A人間レビューで正式採用。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0808"
+    },
+    {
+      "source_id": "ko_k1_0603",
+      "source_lemma": "찍다",
+      "source_pos": "verb",
+      "source_sense": "stamp",
+      "action": "retire_and_replace",
+      "removal_reason": "判の義より貼付・工作・修理の基本動作を優先。Core写真義は維持。",
+      "candidate": {
+        "lemma": "붙이다",
+        "pos": "verb",
+        "sense": "attach_stick",
+        "gloss_ja": "貼る",
+        "category": "verbs",
+        "tier": "E2",
+        "notes": "紙・テープなどを対象へ貼り付ける物理的動作のみ。火をつける等の別義は許可しない。"
+      },
+      "replacement_reason": "Phase 2.1A人間レビューで正式採用。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0809"
+    },
+    {
+      "source_id": "ko_k1_0365",
+      "source_lemma": "포도",
+      "source_pos": "noun",
+      "source_sense": "grape",
+      "action": "retire_and_replace",
+      "removal_reason": "果物品種より投げる・受ける・遊ぶ対象を優先。",
+      "candidate": {
+        "lemma": "공",
+        "pos": "noun",
+        "sense": "ball",
+        "gloss_ja": "ボール",
+        "category": "places_objects",
+        "tier": "E1",
+        "notes": "遊び・運動に使うボールのみ。同音の抽象義や漢字語の構成要素は許可しない。"
+      },
+      "replacement_reason": "Phase 2.1A人間レビューで正式採用。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0810"
+    },
+    {
+      "source_id": "ko_k1_0577",
+      "source_lemma": "오르다",
+      "source_pos": "verb",
+      "source_sense": "rise_climb",
+      "action": "retire_and_replace",
+      "removal_reason": "上る移動語の重複を減らして描画・展示の対象名詞を補う。",
+      "candidate": {
+        "lemma": "그림",
+        "pos": "noun",
+        "sense": "drawing_picture",
+        "gloss_ja": "絵",
+        "category": "places_objects",
+        "tier": "E2",
+        "notes": "描かれた絵・図の中心義。写真はCore 사진で扱う。"
+      },
+      "replacement_reason": "Phase 2.1A人間レビューで正式採用。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0811"
+    },
+    {
+      "source_id": "ko_k1_0571",
+      "source_lemma": "가져다주다",
+      "source_pos": "verb",
+      "source_sense": "bring_to_someone",
+      "action": "retire_and_replace",
+      "removal_reason": "既存の移動・授受語の組合せより物を保持・持ち上げる動作を補う。",
+      "candidate": {
+        "lemma": "들다",
+        "pos": "verb",
+        "sense": "hold_lift_by_hand",
+        "gloss_ja": "手に持つ・持ち上げる",
+        "category": "verbs",
+        "tier": "E2",
+        "notes": "手に持つ・持ち上げる物理的動作だけを許可する。가방을 들어요 / 책을 들어요。費用がかかる・気に入る・年を取る・中へ入る系・その他の辞書上の別義は自動許可しない。lemmaが同じでも別senseは未許可。全用例で対象物と手による保持・持ち上げの文脈を確認する。"
+      },
+      "replacement_reason": "Phase 2.1A人間レビューで正式採用。",
+      "status": "accepted",
+      "adopted_id": "ko_k1_0812"
+    }
+  ],
+  "notes": "Phase 1.2の7交換とPhase 2.1Aの5交換の採用履歴。DBへ重ねて結合しない。"
+}

@@ -1,0 +1,18 @@
+{
+ "phase":"3.9a",
+ "policy":"Report-only after commit; no corpus/ledger/credit rewrite. This is separate from mechanical identity/coverage statistics.",
+ "issues":[
+  {
+   "text_number":27,
+   "category":"translation_and_language_quality",
+   "confirmed":true,
+   "type":"author_file_transport_encoding_failure",
+   "cause":"A PowerShell-to-Python pipe used to insert one Korean/Japanese pair encoded the Unicode literals as question marks. The author reviewed the intended insertion instead of the serialized pair before commit.",
+   "impact":"One added paper-exchange sentence and its translation are corrupted; the intended explicit exchange therefore is missing. Existing Korean sentences remain preserved.",
+   "mechanical_interpretation":"The corrupted span is punctuation rather than an unknown content word under the existing lexical denominator, so its acceptance does not establish correct language quality. No intro/exposure credit arose from that span.",
+   "resolution":"Committed historical text stays frozen. Later candidate files use Unicode-preserving apply_patch; post-mechanical author review reads serialized pairs. Propose future corpus repair in a separate authorized version, not during this frozen trial.",
+   "human_review_required":true,
+   "not_an_analyzer_or_scope_research_change":true
+  }
+ ]
+}

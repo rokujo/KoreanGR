@@ -1,0 +1,73 @@
+{
+  "phase": "2.1A",
+  "scope": "isolated_examples_not_readers",
+  "annotation_is_independent_gold": false,
+  "groups": [
+    {
+      "key": "tooth_cleaning",
+      "required": [
+        "이",
+        "닦다"
+      ],
+      "sentences": [
+        "아침에 이를 닦아요.",
+        "저는 칫솔로 이를 닦아요.",
+        "수건으로 책상을 닦아요."
+      ],
+      "sense_overrides": {
+        "아침에 이를 닦아요.::이": "tooth",
+        "저는 칫솔로 이를 닦아요.::이": "tooth"
+      }
+    },
+    {
+      "key": "tape_attachment",
+      "required": [
+        "테이프",
+        "붙이다"
+      ],
+      "sentences": [
+        "종이에 테이프를 붙여요.",
+        "친구도 테이프를 붙여요.",
+        "테이프로 종이를 책에 붙여요."
+      ]
+    },
+    {
+      "key": "ball_play",
+      "required": [
+        "던지다",
+        "공"
+      ],
+      "sentences": [
+        "친구에게 공을 던져요.",
+        "친구가 공을 받아요."
+      ]
+    },
+    {
+      "key": "drawing_art",
+      "required": [
+        "미술관",
+        "그리다",
+        "그림"
+      ],
+      "sentences": [
+        "미술관에서 그림을 봐요.",
+        "집에서 그림을 그려요.",
+        "그림은 책상 위에 있어요."
+      ]
+    },
+    {
+      "key": "holding_lifting",
+      "required": [
+        "가방",
+        "책",
+        "들다"
+      ],
+      "sentences": [
+        "가방을 들어요.",
+        "저는 한 손으로 책을 들어요."
+      ],
+      "declared_sense": "hold_lift_by_hand",
+      "context_review_required": true
+    }
+  ]
+}

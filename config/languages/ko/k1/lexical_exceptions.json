@@ -1,0 +1,65 @@
+{
+  "status": "proposed",
+  "counted_in_vocab_budget": false,
+  "policy": {
+    "match": "exact_surface_sequence",
+    "allow_inflection": false,
+    "license_constituents": false,
+    "max_occurrences_per_text": 2,
+    "context": "登場人物の挨拶・感謝・謝罪・別れの会話に限定",
+    "coverage_policy": "登録されたfrozen_exceptionは導入基準教材0の固定spanとしてNへ1 tokenを計数する。regular_vocab_formは依存語彙の導入教材に従う。学習者の実際の知識は推定しない。",
+    "notes": "文法外の定型表現は5種類のみ。新しい例外は人間レビュー後に台帳へ追加。"
+  },
+  "entries": [
+    {
+      "id": "ko_k1_x01",
+      "form": "안녕하세요",
+      "meaning_ja": "こんにちは",
+      "kind": "frozen_exception",
+      "requires_vocab": [],
+      "notes": "挨拶の固定形のみ。안녕하다・尊敬表現全般は許可しない。"
+    },
+    {
+      "id": "ko_k1_x02",
+      "form": "감사합니다",
+      "meaning_ja": "ありがとうございます",
+      "kind": "frozen_exception",
+      "requires_vocab": [],
+      "notes": "固定形のみ。감사하다の活用や합니다体全般は許可しない。"
+    },
+    {
+      "id": "ko_k1_x03",
+      "form": "죄송합니다",
+      "meaning_ja": "申し訳ありません",
+      "kind": "frozen_exception",
+      "requires_vocab": [],
+      "notes": "固定形のみ。죄송하다の自由活用は許可しない。"
+    },
+    {
+      "id": "ko_k1_x04",
+      "form": "안녕히 가세요",
+      "meaning_ja": "さようなら（去る相手へ）",
+      "kind": "frozen_exception",
+      "requires_vocab": [],
+      "notes": "別れの固定句。안녕히の自由使用は許可しない。"
+    },
+    {
+      "id": "ko_k1_x05",
+      "form": "안녕히 계세요",
+      "meaning_ja": "さようなら（残る相手へ）",
+      "kind": "frozen_exception",
+      "requires_vocab": [],
+      "notes": "別れの固定句。계시다の自由活用は許可しない。"
+    },
+    {
+      "id": "ko_k1_x06",
+      "form": "괜찮아요",
+      "meaning_ja": "大丈夫です",
+      "kind": "regular_vocab_form",
+      "requires_vocab": [
+        "괜찮다"
+      ],
+      "notes": "E1 괜찮다とg02の通常活用。語彙例外による未導入語の迂回を認めない。"
+    }
+  ]
+}

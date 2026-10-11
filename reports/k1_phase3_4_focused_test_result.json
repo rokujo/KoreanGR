@@ -1,0 +1,11 @@
+{
+  "command": "python -B scripts/run_k1_phase3_4_tests.py --focused",
+  "tests": 33,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 10.868,
+  "status": "PASS",
+  "log": "reports/k1_phase3_4_focused_test_log.txt",
+  "exit_code": 0
+}

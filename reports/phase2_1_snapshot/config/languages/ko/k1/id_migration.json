@@ -1,0 +1,104 @@
+{
+  "phase": "1.2",
+  "status": "applied",
+  "id_policy": {
+    "immutable": true,
+    "reuse_retired_ids": false,
+    "next_id_sequence": 808,
+    "id_rank_independent": true,
+    "rank_policy": "rankは1〜800の表示スロット。新語は旧語のrankを引き継ぐが恒久IDは0801〜0807を新規採番。"
+  },
+  "mappings": [
+    {
+      "old_id": "ko_k1_0773",
+      "old_lemma": "함께",
+      "old_pos": "adverb",
+      "old_sense": "together",
+      "new_id": "ko_k1_0801",
+      "new_lemma": "가만히",
+      "new_pos": "adverb",
+      "new_sense": "without_moving",
+      "rank": 773,
+      "tier": "E3",
+      "category": "adverbs_connectors"
+    },
+    {
+      "old_id": "ko_k1_0702",
+      "old_lemma": "조부모",
+      "old_pos": "noun",
+      "old_sense": "grandparents",
+      "new_id": "ko_k1_0802",
+      "new_lemma": "아저씨",
+      "new_pos": "noun",
+      "new_sense": "adult_man_address",
+      "rank": 702,
+      "tier": "E3",
+      "category": "people_social"
+    },
+    {
+      "old_id": "ko_k1_0797",
+      "old_lemma": "기차역",
+      "old_pos": "noun",
+      "old_sense": "train_station",
+      "new_id": "ko_k1_0803",
+      "new_lemma": "시간표",
+      "new_pos": "noun",
+      "new_sense": "timetable",
+      "rank": 797,
+      "tier": "E3",
+      "category": "school_work_transport_info"
+    },
+    {
+      "old_id": "ko_k1_0757",
+      "old_lemma": "찍히다",
+      "old_pos": "verb",
+      "old_sense": "be_photographed",
+      "new_id": "ko_k1_0804",
+      "new_lemma": "충전하다",
+      "new_pos": "verb",
+      "new_sense": "charge_battery",
+      "rank": 757,
+      "tier": "E3",
+      "category": "verbs"
+    },
+    {
+      "old_id": "ko_k1_0710",
+      "old_lemma": "관계",
+      "old_pos": "noun",
+      "old_sense": "relationship",
+      "new_id": "ko_k1_0805",
+      "new_lemma": "동갑",
+      "new_pos": "noun",
+      "new_sense": "same_age",
+      "rank": 710,
+      "tier": "E3",
+      "category": "people_social"
+    },
+    {
+      "old_id": "ko_k1_0800",
+      "old_lemma": "정보",
+      "old_pos": "noun",
+      "old_sense": "information",
+      "new_id": "ko_k1_0806",
+      "new_lemma": "충전기",
+      "new_pos": "noun",
+      "new_sense": "charger",
+      "rank": 800,
+      "tier": "E3",
+      "category": "school_work_transport_info"
+    },
+    {
+      "old_id": "ko_k1_0647",
+      "old_lemma": "가장",
+      "old_pos": "adverb",
+      "old_sense": "most",
+      "new_id": "ko_k1_0807",
+      "new_lemma": "방금",
+      "new_pos": "adverb",
+      "new_sense": "just_now",
+      "rank": 647,
+      "tier": "E3",
+      "category": "adverbs_connectors"
+    }
+  ]
+}

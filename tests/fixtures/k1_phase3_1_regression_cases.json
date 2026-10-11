@@ -1,0 +1,10 @@
+{
+  "scope": "Unit fixtures, not additional generated smoke texts or actual exposure",
+  "cases": [
+    {"case":"A", "sentence":"친구도 집에 들어오고 싶어요.", "text_number":1, "expected":"REJECT", "reason":"future_expansion", "vocab_id":"ko_k1_0386", "first_planned_text":51},
+    {"case":"B", "sentence":"공원까지 친구하고 걸어요.", "text_number":1, "generated_intent":{"lemma":"걷다", "pos":"verb", "sense":"walk", "vocab_id":"ko_k1_0186", "surface":"걸어요"}, "scene_actions":["walk"], "expected":"RESOLVED_IF_ALL_LOCAL_EVIDENCE"},
+    {"case":"C", "sentence":"가방을 벽에 걸어요.", "expected":"NEVER_RESOLVE_AS_WALK", "note":"Object veto applies even in a hypothetical future vocabulary state allowing hang; current K1 does not gain 걸다."},
+    {"case":"D", "source_factory":"k1_phase3_1.smoke_source", "attempt":2, "eojeol":119, "expected":"REJECT_LENGTH"},
+    {"case":"E", "source_factory":"k1_phase3_1.smoke_source", "attempt":3, "eojeol":135, "expected":"PASS_THEN_SINGLE_ATOMIC_COMMIT"}
+  ]
+}

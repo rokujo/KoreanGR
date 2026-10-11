@@ -1,0 +1,7 @@
+{
+  "command": "python -B -X utf8 -m unittest discover -s tests -p test_k1_phase3_sequential_v2.py -v",
+  "exit_code": 0,
+  "passed": true,
+  "elapsed_seconds": 11.276,
+  "log": "reports/k1_phase3_sequential_v2_test_log.txt"
+}

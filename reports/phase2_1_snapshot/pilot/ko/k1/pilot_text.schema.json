@@ -1,0 +1,31 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Korean K1 pilot text and annotation hypotheses",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["id","text_number","title_ko","genre","text_ko","translation_ja","scheduled_new_vocab_ids","scheduled_review_vocab_ids","actually_used_new_vocab_ids","actually_used_review_vocab_ids","extra_previous_vocab_ids","grammar_used","eojeol_count","sentence_count","max_sentence_eojeol","coverage","validation","semantic_schedule_conflicts","notes","annotation_origin","sense_overrides","annotations","raw_morphology","annotation_review_required","unresolved_tokens"],
+  "$defs":{
+    "ids":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^ko_k1_[0-9]{4}$"}},
+    "annotations":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["surface","lemma","pos","sense","vocab_id","role","start","end","morph_indices","grammar_id"],"properties":{
+      "surface":{"type":"string","minLength":1},"lemma":{"type":["string","null"]},"pos":{"type":["string","null"]},"sense":{"type":["string","null"]},"vocab_id":{"type":["string","null"]},
+      "role":{"enum":["core","previous_expansion","current_new_expansion","scheduled_review","proper_name","frozen_exception","grammar_function","unresolved"]},
+      "start":{"type":"integer","minimum":0},"end":{"type":"integer","minimum":1},"morph_indices":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"integer","minimum":0}},
+      "grammar_id":{"type":["string","null"]},"exception_id":{"type":"string"}
+    }}}
+  },
+  "properties":{
+    "id":{"type":"string","pattern":"^K1-[0-9]{3}$"},"text_number":{"type":"integer","minimum":1,"maximum":300},
+    "title_ko":{"type":"string","minLength":1},"genre":{"type":"string","minLength":1},"text_ko":{"type":"string","minLength":1},"translation_ja":{"type":"string","minLength":1},
+    "scheduled_new_vocab_ids":{"$ref":"#/$defs/ids","maxItems":2},"scheduled_review_vocab_ids":{"$ref":"#/$defs/ids"},"actually_used_new_vocab_ids":{"$ref":"#/$defs/ids","maxItems":2},"actually_used_review_vocab_ids":{"$ref":"#/$defs/ids"},"extra_previous_vocab_ids":{"$ref":"#/$defs/ids"},
+    "grammar_used":{"type":"array","uniqueItems":true,"items":{"type":"string","pattern":"^ko_k1_g(?:0[1-9]|[12][0-9]|3[0-2])$"}},
+    "eojeol_count":{"type":"integer","minimum":0},"sentence_count":{"type":"integer","minimum":0},"max_sentence_eojeol":{"type":"integer","minimum":0},
+    "coverage":{"type":"object","additionalProperties":false,"required":["denominator_N","new_tokens_U","controlled_vocab_coverage","previous_vocab_coverage","target_99_met"],"properties":{
+      "denominator_N":{"type":"integer","minimum":0},"new_tokens_U":{"type":"integer","minimum":0},"controlled_vocab_coverage":{"type":["number","null"],"minimum":0,"maximum":1},"previous_vocab_coverage":{"type":["number","null"],"minimum":0,"maximum":1},"target_99_met":{"type":"boolean"}}},
+    "validation":{"type":"object","additionalProperties":false,"required":["vocab_pass","grammar_pass","length_pass","sentence_length_pass","schedule_pass","naturalness_review_required"],"properties":{"vocab_pass":{"type":"boolean"},"grammar_pass":{"type":"boolean"},"length_pass":{"type":"boolean"},"sentence_length_pass":{"type":"boolean"},"schedule_pass":{"type":"boolean"},"naturalness_review_required":{"const":true}}},
+    "semantic_schedule_conflicts":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["type","vocab_id","lemma","sense","reason","proposed_text_candidates","proposal_status","proposal_notes"],"properties":{"type":{"const":"semantic_schedule_conflict"},"vocab_id":{"type":"string"},"lemma":{"type":"string"},"sense":{"type":"string"},"reason":{"type":"string","minLength":1},"proposed_text_candidates":{"type":"array","minItems":1,"uniqueItems":true,"items":{"type":"integer","minimum":1,"maximum":300}},"proposal_status":{"const":"candidate_only_schedule_unchanged"},"proposal_notes":{"type":"string"}}}},
+    "notes":{"type":"array","items":{"type":"string"}},"annotation_origin":{"type":"string"},"sense_overrides":{"type":"object","additionalProperties":{"type":"string"}},
+    "annotations":{"$ref":"#/$defs/annotations"},"unresolved_tokens":{"$ref":"#/$defs/annotations"},
+    "annotation_review_required":{"type":"array","items":{"type":"object","required":["type","surface","lemma","start","candidate_id"],"properties":{"type":{"type":"string"},"surface":{"type":"string"},"lemma":{"type":["string","null"]},"start":{"type":"integer"},"candidate_id":{"type":["string","null"]}}}},
+    "raw_morphology":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["form","tag","start","length"],"properties":{"form":{"type":"string"},"tag":{"type":"string"},"start":{"type":"integer","minimum":0},"length":{"type":"integer","minimum":0}}}}
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "command": "python -B -m unittest discover -s tests -p test_k1_phase3.py -v",
+  "tests_run": 16,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 1.323,
+  "ok": true,
+  "scope": "Final Phase 3 actual-history and stop guard changes; earlier full suite began before five additional guards were added"
+}

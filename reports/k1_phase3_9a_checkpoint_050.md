@@ -1,0 +1,753 @@
+# Phase 3.9a checkpoint
+
+{
+  "phase": "3.9a",
+  "committed_count": 50,
+  "completed": false,
+  "stop": null,
+  "total_attempts": 61,
+  "formal_first_pass_count": 41,
+  "formal_first_pass_ratio": 0.82,
+  "mean_attempts": 1.22,
+  "initial_draft_with_finding": 21,
+  "initial_draft_with_future": 2,
+  "initial_finding_ratio": 0.42,
+  "initial_future_ratio": 0.04,
+  "preflight_completed_count": 50,
+  "author_contract_retry_count": 0,
+  "contract_failures_recovered": 0,
+  "contract_max_exhaustion": false,
+  "formal_future_findings": [],
+  "retry_error_codes": {
+    "unknown_or_unresolved": 4,
+    "coverage_or_token_policy": 8,
+    "candidate_format": 1,
+    "unresolved_context_ambiguity": 2
+  },
+  "hard_errors": 0,
+  "committed_future": 0,
+  "committed_unresolved": 0,
+  "planned_mismatch": 0,
+  "final_canonical_mismatch": 0,
+  "integrity_errors": [],
+  "restricted_false_accepts": [],
+  "failed_state_isolation": true,
+  "semantic_warning_count": 712,
+  "naturalness_warning_categories": {
+    "nat_reference_clarity": 43,
+    "nat_restricted_sense": 23,
+    "nat_verb_argument_frame": 5,
+    "nat_filler_adverb": 10,
+    "nat_genitive_overuse": 1
+  },
+  "confirmed_committed_issues": [],
+  "author_repair_count": 6,
+  "known_gap_occurrences": [
+    {
+      "text": 27,
+      "intended_meaning": "erase the initial written answer before rewriting",
+      "missing_natural_word": "지우다",
+      "current_workaround": "omit erasing action; borrow the eraser and write the answer again without a substitute verb",
+      "whether_omission_solved_it": true,
+      "resolution": "omit_rewrite",
+      "recurrence_count_in_this_run": 1,
+      "historical_reference": "Existing known gap from Phase 3.8/3.9; no new restriction or vocabulary change."
+    }
+  ],
+  "selected_review": 115,
+  "incidental": 343,
+  "introduced_count": 99,
+  "effective_review_credits": 557,
+  "effective_credit_distribution": {
+    "n": 50,
+    "mean": 11.14,
+    "median": 11.5,
+    "p90": 17,
+    "min": 2,
+    "max": 20
+  },
+  "exposure_distribution": {
+    "7": 6,
+    "8": 3,
+    "0": 401,
+    "9": 5,
+    "6": 10,
+    "3": 18,
+    "17": 2,
+    "5": 8,
+    "4": 10,
+    "13": 3,
+    "10": 4,
+    "2": 11,
+    "1": 14,
+    "24": 1,
+    "26": 1,
+    "14": 1,
+    "20": 1,
+    "19": 1
+  },
+  "outstanding_debt": [
+    {
+      "vocab_id": "ko_k1_0301",
+      "window_index": 2,
+      "window": {
+        "from": 33,
+        "to": 73
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0306",
+      "window_index": 2,
+      "window": {
+        "from": 35,
+        "to": 75
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0307",
+      "window_index": 2,
+      "window": {
+        "from": 36,
+        "to": 76
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0308",
+      "window_index": 2,
+      "window": {
+        "from": 36,
+        "to": 76
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0310",
+      "window_index": 2,
+      "window": {
+        "from": 37,
+        "to": 77
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0319",
+      "window_index": 2,
+      "window": {
+        "from": 42,
+        "to": 82
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0321",
+      "window_index": 2,
+      "window": {
+        "from": 43,
+        "to": 83
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0323",
+      "window_index": 2,
+      "window": {
+        "from": 44,
+        "to": 84
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0326",
+      "window_index": 1,
+      "window": {
+        "from": 46,
+        "to": 64
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0327",
+      "window_index": 2,
+      "window": {
+        "from": 46,
+        "to": 86
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0328",
+      "window_index": 2,
+      "window": {
+        "from": 46,
+        "to": 86
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0329",
+      "window_index": 2,
+      "window": {
+        "from": 47,
+        "to": 87
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0331",
+      "window_index": 2,
+      "window": {
+        "from": 48,
+        "to": 88
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0333",
+      "window_index": 2,
+      "window": {
+        "from": 49,
+        "to": 89
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0334",
+      "window_index": 2,
+      "window": {
+        "from": 49,
+        "to": 89
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0335",
+      "window_index": 2,
+      "window": {
+        "from": 50,
+        "to": 90
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0336",
+      "window_index": 2,
+      "window": {
+        "from": 50,
+        "to": 90
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0343",
+      "window_index": 0,
+      "window": {
+        "from": 31,
+        "to": 34
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0343",
+      "window_index": 1,
+      "window": {
+        "from": 35,
+        "to": 53
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0345",
+      "window_index": 1,
+      "window": {
+        "from": 36,
+        "to": 54
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0349",
+      "window_index": 1,
+      "window": {
+        "from": 38,
+        "to": 56
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0351",
+      "window_index": 1,
+      "window": {
+        "from": 40,
+        "to": 58
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0352",
+      "window_index": 1,
+      "window": {
+        "from": 40,
+        "to": 58
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0353",
+      "window_index": 1,
+      "window": {
+        "from": 41,
+        "to": 59
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0354",
+      "window_index": 1,
+      "window": {
+        "from": 41,
+        "to": 59
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0358",
+      "window_index": 1,
+      "window": {
+        "from": 43,
+        "to": 61
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0359",
+      "window_index": 1,
+      "window": {
+        "from": 44,
+        "to": 62
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0360",
+      "window_index": 1,
+      "window": {
+        "from": 44,
+        "to": 62
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0361",
+      "window_index": 1,
+      "window": {
+        "from": 45,
+        "to": 63
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0366",
+      "window_index": 0,
+      "window": {
+        "from": 43,
+        "to": 46
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0366",
+      "window_index": 1,
+      "window": {
+        "from": 47,
+        "to": 65
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0367",
+      "window_index": 0,
+      "window": {
+        "from": 44,
+        "to": 47
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0367",
+      "window_index": 1,
+      "window": {
+        "from": 48,
+        "to": 66
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0368",
+      "window_index": 0,
+      "window": {
+        "from": 44,
+        "to": 47
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0368",
+      "window_index": 1,
+      "window": {
+        "from": 48,
+        "to": 66
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0369",
+      "window_index": 0,
+      "window": {
+        "from": 45,
+        "to": 48
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0369",
+      "window_index": 1,
+      "window": {
+        "from": 49,
+        "to": 67
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0370",
+      "window_index": 0,
+      "window": {
+        "from": 45,
+        "to": 48
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0370",
+      "window_index": 1,
+      "window": {
+        "from": 49,
+        "to": 67
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0371",
+      "window_index": 0,
+      "window": {
+        "from": 46,
+        "to": 49
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0371",
+      "window_index": 1,
+      "window": {
+        "from": 50,
+        "to": 68
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0372",
+      "window_index": 0,
+      "window": {
+        "from": 46,
+        "to": 49
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0372",
+      "window_index": 1,
+      "window": {
+        "from": 50,
+        "to": 68
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0374",
+      "window_index": 0,
+      "window": {
+        "from": 47,
+        "to": 50
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0376",
+      "window_index": 0,
+      "window": {
+        "from": 48,
+        "to": 51
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0379",
+      "window_index": 0,
+      "window": {
+        "from": 49,
+        "to": 52
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0380",
+      "window_index": 0,
+      "window": {
+        "from": 50,
+        "to": 53
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0381",
+      "window_index": 0,
+      "window": {
+        "from": 50,
+        "to": 53
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0448",
+      "window_index": 2,
+      "window": {
+        "from": 30,
+        "to": 70
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0778",
+      "window_index": 1,
+      "window": {
+        "from": 47,
+        "to": 65
+      }
+    }
+  ],
+  "expired_debt": [
+    {
+      "vocab_id": "ko_k1_0343",
+      "window_index": 0,
+      "window": {
+        "from": 31,
+        "to": 34
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0366",
+      "window_index": 0,
+      "window": {
+        "from": 43,
+        "to": 46
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0367",
+      "window_index": 0,
+      "window": {
+        "from": 44,
+        "to": 47
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0368",
+      "window_index": 0,
+      "window": {
+        "from": 44,
+        "to": 47
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0369",
+      "window_index": 0,
+      "window": {
+        "from": 45,
+        "to": 48
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0370",
+      "window_index": 0,
+      "window": {
+        "from": 45,
+        "to": 48
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0371",
+      "window_index": 0,
+      "window": {
+        "from": 46,
+        "to": 49
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0372",
+      "window_index": 0,
+      "window": {
+        "from": 46,
+        "to": 49
+      }
+    }
+  ],
+  "recovered_expired_count": 17,
+  "ever_expired_count": 25,
+  "recovered_expired_windows": [
+    [
+      "ko_k1_0310",
+      0
+    ],
+    [
+      "ko_k1_0311",
+      0
+    ],
+    [
+      "ko_k1_0321",
+      0
+    ],
+    [
+      "ko_k1_0322",
+      0
+    ],
+    [
+      "ko_k1_0332",
+      0
+    ],
+    [
+      "ko_k1_0338",
+      0
+    ],
+    [
+      "ko_k1_0340",
+      0
+    ],
+    [
+      "ko_k1_0341",
+      0
+    ],
+    [
+      "ko_k1_0342",
+      0
+    ],
+    [
+      "ko_k1_0345",
+      0
+    ],
+    [
+      "ko_k1_0347",
+      0
+    ],
+    [
+      "ko_k1_0348",
+      0
+    ],
+    [
+      "ko_k1_0349",
+      0
+    ],
+    [
+      "ko_k1_0350",
+      0
+    ],
+    [
+      "ko_k1_0354",
+      0
+    ],
+    [
+      "ko_k1_0360",
+      0
+    ],
+    [
+      "ko_k1_0810",
+      0
+    ]
+  ],
+  "near_deadline_debt": [
+    {
+      "vocab_id": "ko_k1_0343",
+      "window_index": 1,
+      "window": {
+        "from": 35,
+        "to": 53
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0374",
+      "window_index": 0,
+      "window": {
+        "from": 47,
+        "to": 50
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0376",
+      "window_index": 0,
+      "window": {
+        "from": 48,
+        "to": 51
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0379",
+      "window_index": 0,
+      "window": {
+        "from": 49,
+        "to": 52
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0380",
+      "window_index": 0,
+      "window": {
+        "from": 50,
+        "to": 53
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0381",
+      "window_index": 0,
+      "window": {
+        "from": 50,
+        "to": 53
+      }
+    }
+  ],
+  "genre_distribution": {
+    "school": 7,
+    "friends": 4,
+    "home": 2,
+    "outdoor": 1,
+    "short_dialogue": 1,
+    "shopping": 6,
+    "family": 6,
+    "travel": 4,
+    "simple_outing": 2,
+    "objects": 2,
+    "health": 2,
+    "daily_life": 3,
+    "simple_hobby": 2,
+    "food": 3,
+    "small_problem": 4,
+    "transport": 1
+  },
+  "max_scene_similarity": 0.16666666666666666,
+  "eojeol": {
+    "n": 50,
+    "mean": 142.22,
+    "median": 140.5,
+    "p90": 151,
+    "min": 128,
+    "max": 170
+  },
+  "sentence_length_distribution": {
+    "4": 801,
+    "5": 640,
+    "3": 81,
+    "1": 16,
+    "6": 69,
+    "2": 12,
+    "7": 1,
+    "8": 1
+  },
+  "production_wall_seconds": 10951.014280700008,
+  "per_text_seconds": {
+    "n": 50,
+    "mean": 211.67088202200046,
+    "median": 179.86902640000335,
+    "p90": 302.48329250000825,
+    "min": 104.08582539999043,
+    "max": 561.3119499000022
+  },
+  "stage_seconds": {
+    "scene_planning": 4310.439253399978,
+    "lexical_preflight": 102.85788090003189,
+    "author_draft": 2571.2190789999877,
+    "preflight_repair": 760.2462877000071,
+    "morphology_vocab_analysis": 152.64823409919336,
+    "mechanical_validation": 296.0894009008043,
+    "naturalness_review": 1511.9947093000228,
+    "final_reanalysis": 128.71492480000597,
+    "commit": 546.9512509000633,
+    "controller_overhead": 59.113273899885826,
+    "retry_repair": 143.26980620004178
+  },
+  "preflight_repair_fraction": 0.06942245423237735,
+  "formal_retry_fraction": 0.013082788728760905,
+  "largest_stage": "scene_planning",
+  "capped_exposure_progress": 398,
+  "required_total": 3000,
+  "remaining_required_capped_credits": 2602,
+  "remaining_texts_to_300": 250,
+  "required_future_credit_rate": 10.408,
+  "planning_color": "GREEN",
+  "outstanding_windows": 50,
+  "expired_windows": 8,
+  "trajectory": "rising",
+  "newly_expired_since_checkpoint": 21,
+  "recovered_expired_since_checkpoint": 13,
+  "scheduler_risk": true
+}

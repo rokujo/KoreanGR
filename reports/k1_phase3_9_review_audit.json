@@ -1,0 +1,33 @@
+{
+  "phase": "3.9",
+  "review_origin": "Post-commit author reread; model screening, not independent human gold",
+  "corpus_modified": false,
+  "confirmed_language_quality_issues": [
+    {
+      "text": 9,
+      "category": "C_naturalness",
+      "surface": "밖에는 비하고 바람이 있어요.",
+      "reason": "Weather is described with an inventory-like existential relation. In this context, 비가 와요 is the simpler idiomatic rain expression; a wind-action verb is not available in the current snapshot.",
+      "preferred_strategy": "Omit the wind statement and use 밖에는 비가 많이 와요. No change applied to committed text.",
+      "systematic_recurrence_established": false,
+      "status": "report_only"
+    }
+  ],
+  "human_review_flags": [
+    {
+      "text": 3,
+      "category": "C_naturalness",
+      "surface": "언니는 종이에 말을 써요.",
+      "reason": "Check whether 말 is a natural noun for the written birthday message here. Do not silently broaden the vocabulary policy or declare a new hard restriction.",
+      "preferred_strategy": "The immediately following quotation can identify the message; an object-omitting sentence such as 언니가 종이에 써요 may suffice. Report only.",
+      "status": "REVIEW"
+    }
+  ],
+  "confirmed_translation_issues": [],
+  "diversity_review": {
+    "genre_labels": "Twelve distinct labels do not prove twelve semantically distinct scenes.",
+    "fingerprint_limit": "Very small fingerprint similarity can reflect unique wording of labels. It is not a semantic similarity model.",
+    "observations": "Books, family, waiting, seated conversation recur across several early texts. Goals vary (lesson preparation, telephone appointment, birthday photo, career discussion, bus selection, snack break, classroom task, borrowed books, rain outing, store opening, baby rest, clinic visit), but prose often follows statement/conversation/return-home patterns.",
+    "conclusion": "No independent proof of diversity or a 100-text absence of repetition; endurance trial is incomplete."
+  }
+}

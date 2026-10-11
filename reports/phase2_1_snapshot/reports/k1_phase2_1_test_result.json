@@ -1,0 +1,43 @@
+{
+  "runs": [
+    {
+      "command": "python -B -m unittest discover -s tests -v",
+      "status": "PASS",
+      "tests": 40,
+      "duration_seconds": 173.07,
+      "scope": "Initial full suite: 26 unchanged existing tests and 14 initial new tests. New modules subsequently amended and checked by the final focused run."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_k1_review_scheduler.py -v",
+      "status": "PASS",
+      "tests": 15,
+      "duration_seconds": 10.172,
+      "scope": "Final new/changed modules, including schema, freeze, capacity, replay, actual ledger CLI and annotation triage."
+    }
+  ],
+  "final_source_hashes": {
+    "config/languages/ko/k1/vocab_review_windows.json": "5ab4cb148617ba811acf56266603c5fb341eaef30990cd9b6984f4023f225b8a",
+    "config/languages/ko/k1/vocab_review_windows.schema.json": "fa53777889da952d9dafd6d5566b3e564d9441adb7185f313ef37da8d524f254",
+    "scripts/audit_phase1_1_changes.py": "449e81f6568e159e7fadca64707d00dd886543bb010bca3b2f209d9d9d7edef4",
+    "scripts/audit_phase1_2_changes.py": "e4c425ada2e94c09c1e1b4c93640d16ae85129e12d73f0dc9997bb609eb8923f",
+    "scripts/build_k1_data.py": "8e7639b52169d85813e2ff75183b790d4b44838ec43a1a108cf48a11cd3338e8",
+    "scripts/build_k1_phase2_1.py": "5b2b0b868a417d16bbfe9e365ac8810372f71258666e5a7ec18c5aa90b6b2ba5",
+    "scripts/build_k1_pilot.py": "2546a5744cc36034570246b9f15204ed204764d8fc107a7cedb37ebe0cbab374",
+    "scripts/k1_annotation_triage.py": "cedee9a423199550ad320091edc927195d33a3721dfb53ba82c3522118efe158",
+    "scripts/k1_pilot_analysis.py": "6764f6d36facffbd20684a8ccde573a63b264017ff11c7de41267e74af60e240",
+    "scripts/k1_review_scheduler.py": "5e8f12c2b9c541325b4f5519356cc7ff15a6f6415d62c1c42d4af2a2e9ae1c4a",
+    "scripts/k1_schedule.py": "93a6a0c8d717e059bcecd475163a2c297857c0b955f9215e5f95897d601c6bbd",
+    "scripts/lexical_coverage.py": "dab1adf31d360c9db8511df067bc9180d2292de39a37def076995130c7428fa2",
+    "scripts/report_k1_pilot.py": "ae87ab8f171f2bd48c51eeebe8ffcc882d4e0f0a36e5ae638e91255c3451b6ef",
+    "scripts/select_k1_pilot.py": "423d4eebd8aac432e3ff37eac3a3f421a739e7a4d7dcee420b70bccd0876bc53",
+    "scripts/validate_k1_phase2_1.py": "c41fd0ae35a6fd03d658a4aad9d957703fcfa933df5d1e8bcd2adf0ecb909828",
+    "scripts/validate_k1_pilot.py": "5b290924baaa778f1e52750e2de5ee395020ad81506d8f14f7eae3467744f565",
+    "scripts/validate_k1_vocab.py": "d968d2244d46fbb516155719d7ba2e2cb0c4a0fc06e1b2f915722b1633919ab0",
+    "tests/test_k1_pilot.py": "c3a8455452e76fa8ef82d379550811b35593c4749ab3418e6c622ef255b30796",
+    "tests/test_k1_review_scheduler.py": "e7d0eeaa6c943cb3bb411808be8bb468003ffe3a743fadb4ef520445f855876d",
+    "tests/test_lexical_coverage.py": "70ca9e644ab63d6296adb065f934c73e79b681af3c07a711f9cdca7effe17961",
+    "tests/test_validate_k1_vocab.py": "dc05bf2a190afbaac7f9fdffc9a0c2601c87e051c120701e9afc714150e7484a"
+  },
+  "final_focused_output": "test_all_frozen_inputs_and_23_replays (test_k1_review_scheduler.SchedulerTests.test_all_frozen_inputs_and_23_replays) ... ok\ntest_ambiguity_triage_preserves_269_and_detects_bad_span (test_k1_review_scheduler.SchedulerTests.test_ambiguity_triage_preserves_269_and_detects_bad_span) ... ok\ntest_capacity_and_last_25_have_no_new_words (test_k1_review_scheduler.SchedulerTests.test_capacity_and_last_25_have_no_new_words) ... ok\ntest_cli_dry_run_cannot_be_substituted_for_actual_final (test_k1_review_scheduler.SchedulerTests.test_cli_dry_run_cannot_be_substituted_for_actual_final) ... ok\ntest_final_missing_introduction_detected (test_k1_review_scheduler.SchedulerTests.test_final_missing_introduction_detected) ... ok\ntest_future_retired_and_nonchronological_events_rejected (test_k1_review_scheduler.SchedulerTests.test_future_retired_and_nonchronological_events_rejected) ... ok\ntest_late_introduction_preserves_five_distinct_windows (test_k1_review_scheduler.SchedulerTests.test_late_introduction_preserves_five_distinct_windows) ... ok\ntest_no_prepayment_of_unopened_window (test_k1_review_scheduler.SchedulerTests.test_no_prepayment_of_unopened_window) ... ok\ntest_repeated_single_text_cannot_finish (test_k1_review_scheduler.SchedulerTests.test_repeated_single_text_cannot_finish) ... ok\ntest_schema_disallows_exact_reviews_and_policy_drift (test_k1_review_scheduler.SchedulerTests.test_schema_disallows_exact_reviews_and_policy_drift) ... ok\ntest_selection_is_not_exposure (test_k1_review_scheduler.SchedulerTests.test_selection_is_not_exposure) ... ok\ntest_semantic_veto_overrides_urgent_deadline (test_k1_review_scheduler.SchedulerTests.test_semantic_veto_overrides_urgent_deadline) ... ok\ntest_tags_without_positive_realization_do_not_pass (test_k1_review_scheduler.SchedulerTests.test_tags_without_positive_realization_do_not_pass) ... ok\ntest_unique_six_actual_texts_not_tokens (test_k1_review_scheduler.SchedulerTests.test_unique_six_actual_texts_not_tokens) ... ok\ntest_window_expiry_is_debt_then_oldest_single_credit (test_k1_review_scheduler.SchedulerTests.test_window_expiry_is_debt_then_oldest_single_credit) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 8.950s\n\nOK\n",
+  "external_dependencies_added": false
+}

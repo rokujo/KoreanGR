@@ -1,0 +1,1787 @@
+{
+  "engineering_start_utc": "2026-10-10T22:45:11.381976+00:00",
+  "production_start_utc": "2026-10-10T22:49:10.742883+00:00",
+  "production_start_counter": 59642.2799219,
+  "texts": [
+    {
+      "text_number": 1,
+      "start_counter": 59642.2799423,
+      "start_utc": "2026-10-10T22:49:10.791205+00:00",
+      "phase": "committed",
+      "phase_start_counter": 59697.6236025,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-001-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 43.429824999999255,
+          "validation_seconds": 1.7081679000039003,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.5769688000145834,
+            "semantic_diagnostics": 0.006770300002244767
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 8.930805399999372,
+        "lexical_preflight": 1.2700687999968068,
+        "author_draft": 43.429824999999255,
+        "morphology_vocab_analysis": 1.5769688000145834,
+        "mechanical_validation": 0.1311990999893169,
+        "naturalness_review": 12.844879199998104,
+        "final_reanalysis": 1.5928449999992154,
+        "commit": 0.4354624000043259,
+        "controller_overhead": 0.6753096999964328
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 1,
+        "title_ko": "동생의 학교 가방",
+        "genre": "family",
+        "scene": [
+          "family",
+          "home",
+          "school"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "prepare younger sibling for first school day",
+          "setting": "home in evening",
+          "participants": [
+            "older sibling narrator",
+            "younger sibling",
+            "mother"
+          ],
+          "problem_type": "school bag has no books",
+          "resolution_type": "put books in bag and check together",
+          "main_actions": [
+            "check school bag",
+            "choose books",
+            "pack books",
+            "confirm readiness",
+            "sleep"
+          ]
+        }
+      },
+      "preflight_seconds": 1.2700687999968068,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 3,
+            "vocab_id": "ko_k1_0382",
+            "lemma": "가지다",
+            "surface": "가지",
+            "start": 11,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 6,
+            "vocab_id": "ko_k1_0381",
+            "lemma": "놓다",
+            "surface": "놓",
+            "start": 14,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 30,
+            "vocab_id": null,
+            "lemma": "내일",
+            "surface": "내일",
+            "start": 3,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 33,
+            "vocab_id": "ko_k1_0445",
+            "lemma": "그",
+            "surface": "그",
+            "start": 4,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 34,
+            "vocab_id": null,
+            "lemma": "지금",
+            "surface": "지금",
+            "start": 4,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 3,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-001-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Post-mechanical reread: one family school-preparation scene; bag ownership remains the younger sibling's; 되다 describes becoming a student and 괜찮아요 responds to bag size. No reaction verb substitution or unrelated review scene. The Japanese translation follows the finalized Korean; chair-location wording implies the seated viewing context. 99% target miss is expected with two new tokens, not a hard failure. Author review is not independent gold."
+          }
+        }
+      ],
+      "end_counter": 59713.1673057,
+      "total_seconds": 70.88736339999741,
+      "coverage": {
+        "denominator_N": 149,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9865771812080537,
+        "target_99_met": false
+      },
+      "eojeol_count": 155,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Post-mechanical reread: one family school-preparation scene; bag ownership remains the younger sibling's; 되다 describes becoming a student and 괜찮아요 responds to bag size. No reaction verb substitution or unrelated review scene. The Japanese translation follows the finalized Korean; chair-location wording implies the seated viewing context. 99% target miss is expected with two new tokens, not a hard failure. Author review is not independent gold."
+      }
+    },
+    {
+      "text_number": 2,
+      "start_counter": 59714.6467008,
+      "start_utc": "2026-10-10T22:50:23.219496+00:00",
+      "phase": "committed",
+      "phase_start_counter": 59776.2414446,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-002-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 40.811911599994346,
+          "validation_seconds": 1.776654100001906,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.5198432999968645,
+            "semantic_diagnostics": 0.0075196000034338795
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 17.774587699997937,
+        "lexical_preflight": 1.2261520000029122,
+        "author_draft": 40.811911599994346,
+        "morphology_vocab_analysis": 1.5198432999968645,
+        "mechanical_validation": 0.25681080000504153,
+        "naturalness_review": 10.809772400003567,
+        "final_reanalysis": 1.6085229000018444,
+        "commit": 0.7829964999982622,
+        "controller_overhead": 0.6581799999985378
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 2,
+        "title_ko": "어머니하고 먹는 빵",
+        "genre": "shopping",
+        "scene": [
+          "shopping",
+          "food",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "buy bread and milk for breakfast with mother",
+          "setting": "small neighborhood shop",
+          "participants": [
+            "narrator",
+            "mother",
+            "shop worker"
+          ],
+          "problem_type": "choose bread and decline coffee",
+          "resolution_type": "buy affordable bread and milk",
+          "main_actions": [
+            "look at bread",
+            "ask about food",
+            "choose milk",
+            "pay",
+            "return home"
+          ]
+        }
+      },
+      "preflight_seconds": 1.2261520000029122,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 13,
+            "vocab_id": null,
+            "lemma": "묻다",
+            "surface": "물",
+            "start": 12,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 25,
+            "vocab_id": "ko_k1_0445",
+            "lemma": "그",
+            "surface": "그",
+            "start": 0,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 33,
+            "vocab_id": "ko_k1_0387",
+            "lemma": "나오다",
+            "surface": "나와",
+            "start": 9,
+            "reason": "future_expansion"
+          }
+        ],
+        "future_count": 2,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-002-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Post-validation reread: one bread/milk shopping goal. No added review words. Here refers to the milk beside the bread already identified in the preceding sentences. Response 네/아니요 occur once each in coherent buyer dialogue. The repeated shop-worker noun avoids a future demonstrative. Translation preserves who asks, chooses and pays. Model review is not independent gold."
+          }
+        }
+      ],
+      "end_counter": 59790.095478,
+      "total_seconds": 75.44877719999931,
+      "coverage": {
+        "denominator_N": 144,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9861111111111112,
+        "target_99_met": false
+      },
+      "eojeol_count": 152,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Post-validation reread: one bread/milk shopping goal. No added review words. Here refers to the milk beside the bread already identified in the preceding sentences. Response 네/아니요 occur once each in coherent buyer dialogue. The repeated shop-worker noun avoids a future demonstrative. Translation preserves who asks, chooses and pays. Model review is not independent gold."
+      }
+    },
+    {
+      "text_number": 3,
+      "start_counter": 59791.6839819,
+      "start_utc": "2026-10-10T22:51:40.321310+00:00",
+      "phase": "committed",
+      "phase_start_counter": 59889.3385007,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-003-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "ᆫ",
+                "surface": "산",
+                "start": 307,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 142: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 28.143519600002037,
+          "validation_seconds": 1.8680558999985806,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.4628869000007398,
+            "semantic_diagnostics": 0.006583099995623343
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-003-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 23.02001140000357,
+          "validation_seconds": 1.8486873000001651,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.4650501000214717,
+            "semantic_diagnostics": 0.007408999998006038
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 41.52641629999562,
+        "lexical_preflight": 1.2350114000000758,
+        "author_draft": 28.143519600002037,
+        "morphology_vocab_analysis": 2.9279370000222116,
+        "mechanical_validation": 0.7888061999765341,
+        "retry_repair": 23.02001140000357,
+        "naturalness_review": 8.66986259999976,
+        "final_reanalysis": 1.7168239999955404,
+        "commit": 1.2994430000035209,
+        "controller_overhead": 0.8047444999974687
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 3,
+        "title_ko": "어머니에게 주는 사진",
+        "genre": "objects",
+        "scene": [
+          "home",
+          "family",
+          "friendship",
+          "communication"
+        ],
+        "review_candidates": [
+          "괜찮다"
+        ],
+        "scene_fingerprint": {
+          "goal": "choose own photograph as mother's birthday gift",
+          "setting": "narrator's room",
+          "participants": [
+            "narrator",
+            "friend"
+          ],
+          "problem_type": "choose between sea and mountain photograph",
+          "resolution_type": "choose mother's preferred mountain",
+          "main_actions": [
+            "compare photographs",
+            "discuss mother's preference",
+            "choose mountain photograph",
+            "put photograph in book",
+            "plan gift"
+          ]
+        }
+      },
+      "preflight_seconds": 1.2350114000000758,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 4,
+            "vocab_id": null,
+            "lemma": "여행하다",
+            "surface": "여행할",
+            "start": 3,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 4,
+            "vocab_id": null,
+            "lemma": "ᆯ",
+            "surface": "할",
+            "start": 5,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 13,
+            "vocab_id": null,
+            "lemma": "배",
+            "surface": "배",
+            "start": 9,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 17,
+            "vocab_id": null,
+            "lemma": "ᆫ",
+            "surface": "산",
+            "start": 8,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 17,
+            "vocab_id": "ko_k1_0389",
+            "lemma": "보이다",
+            "surface": "보여",
+            "start": 14,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 17,
+            "vocab_id": null,
+            "lemma": "어",
+            "surface": "여",
+            "start": 15,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 17,
+            "vocab_id": null,
+            "lemma": "주",
+            "surface": "주",
+            "start": 17,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 22,
+            "vocab_id": null,
+            "lemma": "ᆫ",
+            "surface": "산",
+            "start": 9,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 25,
+            "vocab_id": null,
+            "lemma": "어요",
+            "surface": "아요",
+            "start": 3,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 25,
+            "vocab_id": "ko_k1_0389",
+            "lemma": "보이다",
+            "surface": "보여",
+            "start": 12,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 31,
+            "vocab_id": null,
+            "lemma": "ᆫ",
+            "surface": "산",
+            "start": 10,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 32,
+            "vocab_id": "ko_k1_0739",
+            "lemma": "기억하다",
+            "surface": "기억하",
+            "start": 12,
+            "reason": "future_expansion"
+          }
+        ],
+        "future_count": 3,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-003-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "The sea and mountain photographs belong to the narrator throughout. 이 points to the sea photo presented by the narrator; 그 points to the mountain photo in front of the friend. The mountain photo is chosen as a gift because mother likes mountain outings. 괜찮아요 naturally reassures the narrator about the photograph's size. 되다 does not fit this scene and is deferred rather than forced. The rejected 산-photo reading was repaired by changing a natural viewing sentence, without altering parser or sense policy. Japanese follows Korean."
+          }
+        }
+      ],
+      "end_counter": 59901.8165579,
+      "total_seconds": 110.13257599999633,
+      "coverage": {
+        "denominator_N": 141,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9858156028368794,
+        "target_99_met": false
+      },
+      "eojeol_count": 147,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "The sea and mountain photographs belong to the narrator throughout. 이 points to the sea photo presented by the narrator; 그 points to the mountain photo in front of the friend. The mountain photo is chosen as a gift because mother likes mountain outings. 괜찮아요 naturally reassures the narrator about the photograph's size. 되다 does not fit this scene and is deferred rather than forced. The rejected 산-photo reading was repaired by changing a natural viewing sentence, without altering parser or sense policy. Japanese follows Korean."
+      }
+    },
+    {
+      "text_number": 4,
+      "start_counter": 59903.6102407,
+      "start_utc": "2026-10-10T22:53:32.329249+00:00",
+      "phase": "committed",
+      "phase_start_counter": 59972.2242417,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-004-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 17.20723910000379,
+          "validation_seconds": 2.0201582000008784,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.4977471999955014,
+            "semantic_diagnostics": 0.006352500000502914
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 48.15897589999804,
+        "lexical_preflight": 1.2221890000000712,
+        "author_draft": 17.20723910000379,
+        "morphology_vocab_analysis": 1.4977471999955014,
+        "mechanical_validation": 0.522411000005377,
+        "naturalness_review": 11.00532679999742,
+        "final_reanalysis": 1.5450321000025724,
+        "commit": 1.779791100001603,
+        "controller_overhead": 0.6604146999961813
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 4,
+        "title_ko": "카페에서 읽는 책",
+        "genre": "simple_outing",
+        "scene": [
+          "school",
+          "work",
+          "food",
+          "communication",
+          "friendship"
+        ],
+        "review_candidates": [
+          "되다",
+          "네",
+          "아니요"
+        ],
+        "scene_fingerprint": {
+          "goal": "find seats to study with a new teacher",
+          "setting": "library and nearby cafe",
+          "participants": [
+            "adult narrator",
+            "friend starting teaching job"
+          ],
+          "problem_type": "no library seats",
+          "resolution_type": "study in cafe",
+          "main_actions": [
+            "look for seat",
+            "choose nearby cafe",
+            "order coffee",
+            "read Korean book",
+            "practice reading"
+          ]
+        }
+      },
+      "preflight_seconds": 1.2221890000000712,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 20,
+            "vocab_id": null,
+            "lemma": "은지",
+            "surface": "은지",
+            "start": 14,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 25,
+            "vocab_id": null,
+            "lemma": "은지",
+            "surface": "은지",
+            "start": 11,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 28,
+            "vocab_id": null,
+            "lemma": "지금",
+            "surface": "지금",
+            "start": 6,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 31,
+            "vocab_id": null,
+            "lemma": "어",
+            "surface": "어",
+            "start": 13,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 31,
+            "vocab_id": null,
+            "lemma": "주",
+            "surface": "줘",
+            "start": 15,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-004-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "One goal: find a place to read with a friend preparing for a teaching job. Library seating problem motivates the cafe; 되다 is an integral background fact rather than an appended event. 저 points to the cafe just identified outside; 무슨 asks book type. 네/아니요 are ordinary responses to coffee/bread proposals. The Japanese follows the finalized simple questions, with no indirect-question or productive auxiliary construction. Core 저 and new determiner 저 remain distinct canonical identities."
+          }
+        }
+      ],
+      "end_counter": 59987.2093676,
+      "total_seconds": 83.59912690000056,
+      "coverage": {
+        "denominator_N": 136,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9852941176470589,
+        "target_99_met": false
+      },
+      "eojeol_count": 142,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "One goal: find a place to read with a friend preparing for a teaching job. Library seating problem motivates the cafe; 되다 is an integral background fact rather than an appended event. 저 points to the cafe just identified outside; 무슨 asks book type. 네/아니요 are ordinary responses to coffee/bread proposals. The Japanese follows the finalized simple questions, with no indirect-question or productive auxiliary construction. Core 저 and new determiner 저 remain distinct canonical identities."
+      }
+    },
+    {
+      "text_number": 5,
+      "start_counter": 59989.0406811,
+      "start_utc": "2026-10-10T22:54:57.835335+00:00",
+      "phase": "committed",
+      "phase_start_counter": 60055.210003,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-005-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 19.866342699999223,
+          "validation_seconds": 2.1898905000052764,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.5386900000157766,
+            "semantic_diagnostics": 0.006473300003563054
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 42.88560890000372,
+        "lexical_preflight": 1.2201949000009336,
+        "author_draft": 19.866342699999223,
+        "morphology_vocab_analysis": 1.5386900000157766,
+        "mechanical_validation": 0.6512004999894998,
+        "naturalness_review": 8.365353799999866,
+        "final_reanalysis": 1.613037399998575,
+        "commit": 1.850444100004097,
+        "controller_overhead": 0.6694990999894799
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 5,
+        "title_ko": "공원에서 쉬는 시간",
+        "genre": "outdoor",
+        "scene": [
+          "outdoor",
+          "nature",
+          "health",
+          "friendship",
+          "communication"
+        ],
+        "review_candidates": [
+          "이",
+          "그"
+        ],
+        "generated_intents": [
+          {
+            "sentence": "공원까지 친구하고 걸어요.",
+            "surface": "걸어요",
+            "vocab_id": "ko_k1_0186",
+            "lemma": "걷다",
+            "pos": "verb",
+            "sense": "walk"
+          }
+        ],
+        "scene_fingerprint": {
+          "goal": "exercise before going home for dinner",
+          "setting": "park paths and rest area",
+          "participants": [
+            "narrator",
+            "friend"
+          ],
+          "problem_type": "thirst after running",
+          "resolution_type": "rest and drink water then leave on time",
+          "main_actions": [
+            "walk",
+            "choose path",
+            "run",
+            "drink water",
+            "check departure time"
+          ]
+        }
+      },
+      "preflight_seconds": 1.2201949000009336,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 2,
+            "vocab_id": null,
+            "lemma": "걸다",
+            "surface": "걸",
+            "start": 10,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 16,
+            "vocab_id": null,
+            "lemma": "지",
+            "surface": "지",
+            "start": 12,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 16,
+            "vocab_id": null,
+            "lemma": "않",
+            "surface": "않",
+            "start": 14,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 16,
+            "vocab_id": null,
+            "lemma": "어도",
+            "surface": "아도",
+            "start": 15,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 17,
+            "vocab_id": null,
+            "lemma": "나",
+            "surface": "나",
+            "start": 7,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-005-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Post-mechanical reread: exercise, thirst, rest and departure time form one outing goal. 더 denotes wanting additional water after drinking; 몇 asks departure time once. 이/그 point to an immediately described path and chair. 걷다 has registered inflection, no direct object, licensed destination marker and human companion plus matching scene evidence; generated intent alone is not used. The preflight lacked optional scene/intent evidence, but formal canonical validation independently checks the full limited resolver evidence. Japanese is aligned and no unapproved negative/sequence remains."
+          }
+        }
+      ],
+      "end_counter": 60067.7010525,
+      "total_seconds": 78.66037140000117,
+      "coverage": {
+        "denominator_N": 142,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9859154929577465,
+        "target_99_met": false
+      },
+      "eojeol_count": 148,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Post-mechanical reread: exercise, thirst, rest and departure time form one outing goal. 더 denotes wanting additional water after drinking; 몇 asks departure time once. 이/그 point to an immediately described path and chair. 걷다 has registered inflection, no direct object, licensed destination marker and human companion plus matching scene evidence; generated intent alone is not used. The preflight lacked optional scene/intent evidence, but formal canonical validation independently checks the full limited resolver evidence. Japanese is aligned and no unapproved negative/sequence remains."
+      }
+    },
+    {
+      "text_number": 6,
+      "start_counter": 60069.7136571,
+      "start_utc": "2026-10-10T22:56:18.578037+00:00",
+      "phase": "committed",
+      "phase_start_counter": 60145.1151248,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-006-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 23.140177400004177,
+          "validation_seconds": 2.2386060999997426,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.482769600021129,
+            "semantic_diagnostics": 0.006989600005908869
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 48.802476700002444,
+        "lexical_preflight": 1.214845199996489,
+        "author_draft": 23.140177400004177,
+        "morphology_vocab_analysis": 1.482769600021129,
+        "mechanical_validation": 0.7558364999786136,
+        "naturalness_review": 8.700090599995747,
+        "final_reanalysis": 1.5445838000014191,
+        "commit": 2.0634729000012157,
+        "controller_overhead": 0.660270299995318
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 6,
+        "title_ko": "동생하고 먹는 사과",
+        "genre": "food",
+        "scene": [
+          "food",
+          "home",
+          "family",
+          "kitchen",
+          "communication"
+        ],
+        "review_candidates": [
+          "무슨"
+        ],
+        "scene_fingerprint": {
+          "goal": "prepare apples for sibling's return",
+          "setting": "home after school",
+          "participants": [
+            "narrator",
+            "mother",
+            "younger sibling"
+          ],
+          "problem_type": "fruit needs washing before snack",
+          "resolution_type": "wash apples and share after sibling arrives",
+          "main_actions": [
+            "choose fruit",
+            "count apples",
+            "wash fruit",
+            "wait to share",
+            "eat apples"
+          ]
+        }
+      },
+      "preflight_seconds": 1.214845199996489,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 2,
+            "vocab_id": null,
+            "lemma": "혼자",
+            "surface": "혼자",
+            "start": 9,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 17,
+            "vocab_id": "ko_k1_0430",
+            "lemma": "더럽다",
+            "surface": "더러운",
+            "start": 8,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 28,
+            "vocab_id": "ko_k1_0381",
+            "lemma": "놓다",
+            "surface": "놓",
+            "start": 12,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 34,
+            "vocab_id": null,
+            "lemma": "으면서",
+            "surface": "으면서",
+            "start": 8,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 2,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-006-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "One home snack scene: count and wash apples, save sibling's large apple, share after return. 아직 describes sibling not home yet; 개 is the item counter governed by 세, not the animal sense. 무슨 is a natural fruit preference question. The brief school talk is plausible during waiting/eating and is not a review-only event. The distant determiner 저 is not forced into this scene and remains unpaid. The Japanese preserves the fruit owners and temporal sequence. Preflight productive -으면서 and future lexemes were removed before formal validation."
+          }
+        }
+      ],
+      "end_counter": 60158.0781801,
+      "total_seconds": 88.36452299999655,
+      "coverage": {
+        "denominator_N": 144,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9861111111111112,
+        "target_99_met": false
+      },
+      "eojeol_count": 155,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "One home snack scene: count and wash apples, save sibling's large apple, share after return. 아직 describes sibling not home yet; 개 is the item counter governed by 세, not the animal sense. 무슨 is a natural fruit preference question. The brief school talk is plausible during waiting/eating and is not a review-only event. The distant determiner 저 is not forced into this scene and remains unpaid. The Japanese preserves the fruit owners and temporal sequence. Preflight productive -으면서 and future lexemes were removed before formal validation."
+      }
+    },
+    {
+      "text_number": 7,
+      "start_counter": 60160.1904213,
+      "start_utc": "2026-10-10T22:57:49.102098+00:00",
+      "phase": "committed",
+      "phase_start_counter": 60246.5074871,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-007-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 25.34411920000275,
+          "validation_seconds": 2.3347601999994367,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.4565759999968577,
+            "semantic_diagnostics": 0.006133599999884609
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 57.43033840000135,
+        "lexical_preflight": 1.2029688999973587,
+        "author_draft": 25.34411920000275,
+        "morphology_vocab_analysis": 1.4565759999968577,
+        "mechanical_validation": 0.878184200002579,
+        "naturalness_review": 11.14145109999663,
+        "final_reanalysis": 1.5249094999962836,
+        "commit": 2.3848154000006616,
+        "controller_overhead": 0.6541160000051605
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 7,
+        "title_ko": "동생의 한국어 수업",
+        "genre": "school",
+        "scene": [
+          "school",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [
+          "저",
+          "몇"
+        ],
+        "scene_fingerprint": {
+          "goal": "accompany younger sibling to small Korean reading class",
+          "setting": "school classroom",
+          "participants": [
+            "older sibling narrator",
+            "six-year-old sibling",
+            "teacher",
+            "other children"
+          ],
+          "problem_type": "sibling unsure about class start and reading",
+          "resolution_type": "teacher starts simple reading lesson",
+          "main_actions": [
+            "find school",
+            "ask lesson time",
+            "count classmates",
+            "read a book",
+            "listen to lesson"
+          ]
+        }
+      },
+      "preflight_seconds": 1.2029688999973587,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 13,
+            "vocab_id": "ko_k1_0572",
+            "lemma": "데리다",
+            "surface": "데리",
+            "start": 13,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 15,
+            "vocab_id": null,
+            "lemma": "들",
+            "surface": "들",
+            "start": 6,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 17,
+            "vocab_id": null,
+            "lemma": "들",
+            "surface": "들",
+            "start": 2,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 25,
+            "vocab_id": null,
+            "lemma": "들",
+            "surface": "들",
+            "start": 13,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 27,
+            "vocab_id": null,
+            "lemma": "들",
+            "surface": "들",
+            "start": 2,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 1,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-007-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "The narrator accompanies a six-year-old sibling to a reading class. School-name and self-introduction statements literally communicate names; neither means calling a person. 쓰다 has an explicit name object and means writing. 저 identifies the visible school, and 몇 asks start time, so both due review words belong to the scene. 명 and 살 are licensed person/age counters with numerals, one new token each. The older sibling watches from the classroom back. Japanese keeps the same actor and sequence. No semantic warning is treated as an error automatically."
+          }
+        }
+      ],
+      "end_counter": 60262.2079,
+      "total_seconds": 102.01747869999963,
+      "coverage": {
+        "denominator_N": 141,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9858156028368794,
+        "target_99_met": false
+      },
+      "eojeol_count": 146,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "The narrator accompanies a six-year-old sibling to a reading class. School-name and self-introduction statements literally communicate names; neither means calling a person. 쓰다 has an explicit name object and means writing. 저 identifies the visible school, and 몇 asks start time, so both due review words belong to the scene. 명 and 살 are licensed person/age counters with numerals, one new token each. The older sibling watches from the classroom back. Japanese keeps the same actor and sequence. No semantic warning is treated as an error automatically."
+      }
+    },
+    {
+      "text_number": 8,
+      "start_counter": 60264.4420384,
+      "start_utc": "2026-10-10T22:59:33.423849+00:00",
+      "phase": "committed",
+      "phase_start_counter": 60366.6673672,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-008-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 25.662110099998245,
+          "validation_seconds": 2.4630649000027915,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.4465215999953216,
+            "semantic_diagnostics": 0.006640700004936662
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 72.90538150000066,
+        "lexical_preflight": 1.1897428000011132,
+        "author_draft": 25.662110099998245,
+        "morphology_vocab_analysis": 1.4465215999953216,
+        "mechanical_validation": 1.01654330000747,
+        "naturalness_review": 15.432293199999549,
+        "final_reanalysis": 1.5160931999998866,
+        "commit": 2.719161400003941,
+        "controller_overhead": 0.652254599997832
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 8,
+        "title_ko": "숙제하고 책",
+        "genre": "home",
+        "scene": [
+          "home",
+          "family",
+          "school",
+          "communication"
+        ],
+        "review_candidates": [
+          "아직",
+          "더",
+          "개",
+          "네",
+          "아니요"
+        ],
+        "scene_fingerprint": {
+          "goal": "finish homework before reading borrowed books with mother",
+          "setting": "home desk in evening",
+          "participants": [
+            "child narrator",
+            "mother"
+          ],
+          "problem_type": "homework unfinished",
+          "resolution_type": "answer two questions then read together",
+          "main_actions": [
+            "ask to read",
+            "check homework",
+            "answer questions",
+            "open borrowed books",
+            "continue reading"
+          ]
+        }
+      },
+      "preflight_seconds": 1.1897428000011132,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 4,
+            "vocab_id": "ko_k1_0389",
+            "lemma": "보이다",
+            "surface": "보여",
+            "start": 12,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 10,
+            "vocab_id": null,
+            "lemma": "다",
+            "surface": "다",
+            "start": 5,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 24,
+            "vocab_id": "ko_k1_0393",
+            "lemma": "끝내다",
+            "surface": "끝내",
+            "start": 7,
+            "reason": "future_expansion"
+          }
+        ],
+        "future_count": 2,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-008-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Homework completion motivates later reading. The two library books remain borrowed throughout; no gift/owner substitution occurs. 엄마 is one natural direct address, with 어머니 retained in narration. 권 counts borrowed books once. Still/more/item counter/yes/no reviews are meaningful in the homework and reading sequence. Both 쓰다 occurrences have answer objects and a notebook location, confirming write rather than use/wear. Japanese is faithful to the repaired intransitive homework completion and simple dialogue."
+          }
+        }
+      ],
+      "end_counter": 60386.9821401,
+      "total_seconds": 122.54010170000402,
+      "coverage": {
+        "denominator_N": 136,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9852941176470589,
+        "target_99_met": false
+      },
+      "eojeol_count": 143,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Homework completion motivates later reading. The two library books remain borrowed throughout; no gift/owner substitution occurs. 엄마 is one natural direct address, with 어머니 retained in narration. 권 counts borrowed books once. Still/more/item counter/yes/no reviews are meaningful in the homework and reading sequence. Both 쓰다 occurrences have answer objects and a notebook location, confirming write rather than use/wear. Japanese is faithful to the repaired intransitive homework completion and simple dialogue."
+      }
+    },
+    {
+      "text_number": 9,
+      "start_counter": 60389.2608504,
+      "start_utc": "2026-10-10T23:01:38.302258+00:00",
+      "phase": "committed",
+      "phase_start_counter": 60538.3321173,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-009-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 39.8239068000039,
+          "validation_seconds": 2.6884361000047647,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.5598809999937657,
+            "semantic_diagnostics": 0.008042400004342198
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-009-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 1.4500991000022623,
+          "validation_seconds": 2.7513896000018576,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.5852056999865454,
+            "semantic_diagnostics": 0.008256300003267825
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 65.77894699999888,
+        "lexical_preflight": 1.2416747999959625,
+        "author_draft": 39.8239068000039,
+        "morphology_vocab_analysis": 3.145086699980311,
+        "mechanical_validation": 2.2947390000263113,
+        "naturalness_review": 45.890571500007354,
+        "retry_repair": 1.4500991000022623,
+        "final_reanalysis": 1.618734299998323,
+        "commit": 3.2779429000001983,
+        "controller_overhead": 1.3154206999824964
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 9,
+        "title_ko": "내일 가족하고 가요",
+        "genre": "family",
+        "scene": [
+          "family",
+          "home",
+          "communication",
+          "travel",
+          "transport"
+        ],
+        "review_candidates": [
+          "명",
+          "살",
+          "이",
+          "그",
+          "괜찮다"
+        ],
+        "scene_fingerprint": {
+          "goal": "arrange family visit by phone and prepare for train journey",
+          "setting": "home during phone call",
+          "participants": [
+            "father",
+            "narrator",
+            "younger sibling",
+            "grandmother on phone",
+            "mother"
+          ],
+          "problem_type": "agree visitors and arrival time",
+          "resolution_type": "confirm three visitors then pack food and umbrellas",
+          "main_actions": [
+            "call grandmother",
+            "confirm visitors",
+            "answer age question",
+            "check train time",
+            "pack travel items"
+          ]
+        }
+      },
+      "preflight_seconds": 1.2416747999959625,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 11,
+            "vocab_id": null,
+            "lemma": "이야기하다",
+            "surface": "이야기하",
+            "start": 8,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 19,
+            "vocab_id": null,
+            "lemma": "하",
+            "surface": "해",
+            "start": 13,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 21,
+            "vocab_id": null,
+            "lemma": "어도",
+            "surface": "어도",
+            "start": 14,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 28,
+            "vocab_id": "ko_k1_0382",
+            "lemma": "가지다",
+            "surface": "가지",
+            "start": 8,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 28,
+            "vocab_id": null,
+            "lemma": "하",
+            "surface": "해",
+            "start": 15,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 33,
+            "vocab_id": null,
+            "lemma": "내일",
+            "surface": "내일",
+            "start": 3,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 33,
+            "vocab_id": null,
+            "lemma": "을",
+            "surface": "을",
+            "start": 7,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 37,
+            "vocab_id": null,
+            "lemma": "어요",
+            "surface": "아요",
+            "start": 3,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 1,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-009-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "REPAIR",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Post-validation reread finds destination underspecified: the plan says grandmother's house, but the Korean only says another city then shows a phone call. Explicitly name grandmother's house in the opening, and replace a later redundant grandmother mention with phone context so new-token total remains three. This is reference clarity repair, not a semantic grammar warning reduction."
+          }
+        },
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "The opening now explicitly names grandmother's house as the destination. Father's call confirms three visitors, sibling age and train timing; preparation then follows naturally. 아빠 is one direct address. The smartphone is the physical transferred object, while telephone conversation retains the call sense. Three new tokens over N=165 meet hard98. 이/그 name the same small reading book without changing ownership. The large umbrella goes in father's bag because sibling's bag is small. Japanese matches the revised destination and phone exchange. No warning-driven repair."
+          }
+        }
+      ],
+      "end_counter": 60555.0979732,
+      "total_seconds": 165.837122799996,
+      "coverage": {
+        "denominator_N": 165,
+        "new_tokens_U": 3,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9818181818181818,
+        "target_99_met": false
+      },
+      "eojeol_count": 178,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "The opening now explicitly names grandmother's house as the destination. Father's call confirms three visitors, sibling age and train timing; preparation then follows naturally. 아빠 is one direct address. The smartphone is the physical transferred object, while telephone conversation retains the call sense. Three new tokens over N=165 meet hard98. 이/그 name the same small reading book without changing ownership. The large umbrella goes in father's bag because sibling's bag is small. Japanese matches the revised destination and phone exchange. No warning-driven repair."
+      }
+    },
+    {
+      "text_number": 10,
+      "start_counter": 60557.7109038,
+      "start_utc": "2026-10-10T23:04:26.840856+00:00",
+      "phase": "committed",
+      "phase_start_counter": 60685.771623,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-010-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 29.44569629999023,
+          "validation_seconds": 3.3824066999950446,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.823547599989979,
+            "semantic_diagnostics": 0.008099599996057805
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 93.99856730000465,
+        "lexical_preflight": 1.2277335000035237,
+        "author_draft": 29.44569629999023,
+        "morphology_vocab_analysis": 1.823547599989979,
+        "mechanical_validation": 1.5588591000050656,
+        "naturalness_review": 14.46934229999897,
+        "final_reanalysis": 2.436723400001938,
+        "commit": 4.54925060000096,
+        "controller_overhead": 0.9470515000066371
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 10,
+        "title_ko": "생일 선물",
+        "genre": "simple_hobby",
+        "scene": [
+          "family",
+          "home",
+          "communication",
+          "food"
+        ],
+        "review_candidates": [
+          "권",
+          "무슨",
+          "저"
+        ],
+        "scene_fingerprint": {
+          "goal": "celebrate grandfather's birthday with books and music",
+          "setting": "grandparents' home",
+          "participants": [
+            "adult narrator",
+            "husband",
+            "grandfather",
+            "grandmother"
+          ],
+          "problem_type": "find a comfortable place to read birthday books",
+          "resolution_type": "read near window and listen to music together",
+          "main_actions": [
+            "bring books",
+            "give birthday gift",
+            "choose reading seat",
+            "read travel story",
+            "listen to music"
+          ]
+        }
+      },
+      "preflight_seconds": 1.2277335000035237,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 2,
+            "vocab_id": "ko_k1_0382",
+            "lemma": "가지다",
+            "surface": "가지",
+            "start": 12,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 6,
+            "vocab_id": null,
+            "lemma": "러",
+            "surface": "러",
+            "start": 13,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 13,
+            "vocab_id": null,
+            "lemma": "어",
+            "surface": "어",
+            "start": 16,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 13,
+            "vocab_id": null,
+            "lemma": "주",
+            "surface": "줘",
+            "start": 18,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 28,
+            "vocab_id": null,
+            "lemma": "여행하다",
+            "surface": "여행하",
+            "start": 7,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 33,
+            "vocab_id": null,
+            "lemma": "으면서",
+            "surface": "들으면서",
+            "start": 8,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 37,
+            "vocab_id": "ko_k1_0463",
+            "lemma": "다음",
+            "surface": "다음",
+            "start": 0,
+            "reason": "future_expansion"
+          }
+        ],
+        "future_count": 2,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-010-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Birthday visit has one related celebration scene: books are the gift and family reads travel stories/photos while listening to music. Adult narrator's husband is a companion, distinct from grandfather as recipient; no relationship identity is substituted. The destination is explicitly grandmother's house. 권 counts books naturally; 무슨 asks story kind and 저 points at a described distant chair. Three new tokens over N=161 satisfy hard98. The Japanese reflects the revised simple conjunctions without restoring unapproved purpose/simultaneous constructions. Author screening is not independent human gold."
+          }
+        }
+      ],
+      "end_counter": 60708.1676754,
+      "total_seconds": 150.45677160000196,
+      "coverage": {
+        "denominator_N": 161,
+        "new_tokens_U": 3,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9813664596273292,
+        "target_99_met": false
+      },
+      "eojeol_count": 165,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Birthday visit has one related celebration scene: books are the gift and family reads travel stories/photos while listening to music. Adult narrator's husband is a companion, distinct from grandfather as recipient; no relationship identity is substituted. The destination is explicitly grandmother's house. 권 counts books naturally; 무슨 asks story kind and 저 points at a described distant chair. Three new tokens over N=161 satisfy hard98. The Japanese reflects the revised simple conjunctions without restoring unapproved purpose/simultaneous constructions. Author screening is not independent human gold."
+      }
+    },
+    {
+      "text_number": 11,
+      "start_counter": 60723.6094932,
+      "start_utc": "2026-10-10T23:07:13.311012+00:00",
+      "phase": "stopped",
+      "phase_start_counter": 60813.9288773,
+      "attempts": [],
+      "stages": {
+        "scene_planning": 90.31938179999997,
+        "lexical_preflight": 1.655333700000483,
+        "author_draft": 141.28672489999735,
+        "controller_overhead": 2.3000029614195228e-06
+      },
+      "committed": false,
+      "plan": {
+        "text_number": 11,
+        "title_ko": "가족의 아침",
+        "genre": "daily_life",
+        "scene": [
+          "home",
+          "family",
+          "food",
+          "health",
+          "communication"
+        ],
+        "review_candidates": [
+          "되다",
+          "엄마",
+          "아빠",
+          "할머니",
+          "몇",
+          "더"
+        ],
+        "scene_fingerprint": {
+          "goal": "prepare breakfast and share childcare after becoming parents",
+          "setting": "home morning",
+          "participants": [
+            "father narrator",
+            "wife",
+            "baby",
+            "grandmother"
+          ],
+          "problem_type": "tired mother needs rest while child sleeps",
+          "resolution_type": "father makes breakfast and grandmother helps",
+          "main_actions": [
+            "check sleeping baby",
+            "prepare breakfast",
+            "call grandmother",
+            "serve meal",
+            "share household work"
+          ]
+        }
+      },
+      "preflight_seconds": 1.655333700000483,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 2,
+            "vocab_id": "ko_k1_0454",
+            "lemma": "이제",
+            "surface": "이제",
+            "start": 3,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 7,
+            "vocab_id": null,
+            "lemma": "어",
+            "surface": "어",
+            "start": 14,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 7,
+            "vocab_id": null,
+            "lemma": "주",
+            "surface": "줘",
+            "start": 16,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 11,
+            "vocab_id": null,
+            "lemma": "기",
+            "surface": "기",
+            "start": 7,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 12,
+            "vocab_id": "ko_k1_0381",
+            "lemma": "놓다",
+            "surface": "놓",
+            "start": 11,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 15,
+            "vocab_id": null,
+            "lemma": "말",
+            "surface": "마",
+            "start": 11,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 15,
+            "vocab_id": null,
+            "lemma": "시",
+            "surface": "셔",
+            "start": 12,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 26,
+            "vocab_id": "ko_k1_0594",
+            "lemma": "열리다",
+            "surface": "열려",
+            "start": 11,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 27,
+            "vocab_id": "ko_k1_0382",
+            "lemma": "가지다",
+            "surface": "가지",
+            "start": 9,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 28,
+            "vocab_id": null,
+            "lemma": "위하다",
+            "surface": "위한",
+            "start": 9,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 28,
+            "vocab_id": null,
+            "lemma": "ᆫ",
+            "surface": "한",
+            "start": 10,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 32,
+            "vocab_id": "ko_k1_0387",
+            "lemma": "나오다",
+            "surface": "나와",
+            "start": 13,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 34,
+            "vocab_id": null,
+            "lemma": "어",
+            "surface": "어",
+            "start": 16,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 34,
+            "vocab_id": null,
+            "lemma": "주",
+            "surface": "줘",
+            "start": 18,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 35,
+            "vocab_id": null,
+            "lemma": "게",
+            "surface": "게",
+            "start": 10,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 35,
+            "vocab_id": "ko_k1_0808",
+            "lemma": "닦다",
+            "surface": "닦",
+            "start": 12,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 37,
+            "vocab_id": "ko_k1_0638",
+            "lemma": "서로",
+            "surface": "서로",
+            "start": 8,
+            "reason": "future_expansion"
+          }
+        ],
+        "future_count": 7,
+        "ledger_unchanged": true
+      },
+      "end_counter": 60956.8709359,
+      "total_seconds": 233.26144270000077,
+      "timing_caveat": "The unfinished text 011 author-stage elapsed includes discovering and diagnosing the lexical-sense false acceptance, not only prose generation. Preflight seconds counted separately without overlap."
+    }
+  ],
+  "completed": false,
+  "methodology": "Live local LLM author, sequential snapshot/file callback; elapsed author stage includes model reasoning and file transport. Not external API throughput.",
+  "stop": {
+    "type": "sentence_local_semantic_identity_engine_defect",
+    "text": 11,
+    "affected_committed_text": 5,
+    "detail": "Core evening-only entry accepted dinner-meal use by sentence-local identity gate; frozen explicit restriction and author review missed. No code-free repair or historical rewrite.",
+    "evidence": "reports/k1_phase3_7_sense_boundary_stop_audit.json"
+  },
+  "production_end_counter": 60956.8709359,
+  "production_end_utc": "2026-10-10T23:11:05.333988+00:00",
+  "production_wall_seconds": 1314.5910139999978,
+  "stage_totals_seconds": {
+    "scene_planning": 588.5114869000026,
+    "lexical_preflight": 13.90591499999573,
+    "author_draft": 434.1615726999953,
+    "morphology_vocab_analysis": 18.415687800028536,
+    "mechanical_validation": 8.854589699985809,
+    "naturalness_review": 147.32894349999697,
+    "final_reanalysis": 16.717305599995598,
+    "commit": 21.142780300018785,
+    "controller_overhead": 7.697263399968506,
+    "retry_repair": 24.47011050000583
+  },
+  "per_text_statistics": {
+    "n": 10,
+    "min": 70.88736339999741,
+    "max": 165.837122799996,
+    "mean": 104.79442126999929,
+    "median": 95.19100084999809,
+    "p90": 150.45677160000196
+  }
+}

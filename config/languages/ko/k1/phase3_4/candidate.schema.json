@@ -1,0 +1,1030 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "id",
+    "text_number",
+    "hard_pass",
+    "hard_errors",
+    "source",
+    "snapshot_digest",
+    "state_checksum_before",
+    "attempt_number",
+    "candidate_status",
+    "candidate_digest",
+    "ledger_sha_before_evaluation",
+    "ledger_sha_after_evaluation"
+  ],
+  "properties": {
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/generic_k1_id"
+        },
+        {
+          "enum": [
+            "K1-001",
+            "K1-002",
+            "K1-003",
+            "K1-004",
+            "K1-005",
+            "K1-006",
+            "K1-007",
+            "K1-008",
+            "K1-009",
+            "K1-010",
+            "K1-011",
+            "K1-012",
+            "K1-013",
+            "K1-014",
+            "K1-015",
+            "K1-016",
+            "K1-017",
+            "K1-018",
+            "K1-019",
+            "K1-020",
+            "K1-021",
+            "K1-022",
+            "K1-023",
+            "K1-024",
+            "K1-025",
+            "K1-026",
+            "K1-027",
+            "K1-028",
+            "K1-029",
+            "K1-030",
+            "K1-031",
+            "K1-032",
+            "K1-033",
+            "K1-034",
+            "K1-035",
+            "K1-036",
+            "K1-037",
+            "K1-038",
+            "K1-039",
+            "K1-040",
+            "K1-041",
+            "K1-042",
+            "K1-043",
+            "K1-044",
+            "K1-045",
+            "K1-046",
+            "K1-047",
+            "K1-048",
+            "K1-049",
+            "K1-050"
+          ]
+        }
+      ]
+    },
+    "text_number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 50
+    },
+    "hard_pass": {
+      "type": "boolean"
+    },
+    "hard_errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "detail"
+        ]
+      }
+    },
+    "attempt_number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "candidate_status": {
+      "enum": [
+        "REJECTED",
+        "PASS_PENDING_COMMIT"
+      ]
+    },
+    "source": {
+      "type": "object"
+    },
+    "candidate_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "state_checksum_before": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "snapshot_digest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "ledger_sha_before_evaluation": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "ledger_sha_after_evaluation": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "if": {
+    "properties": {
+      "hard_pass": {
+        "const": true
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "text_ko",
+      "translation_ja",
+      "annotations",
+      "raw_morphology",
+      "unresolved_tokens",
+      "invalid_usage_ids",
+      "actual_new_vocab_ids",
+      "actual_review_vocab_ids",
+      "incidental_previous_vocab_ids",
+      "grammar_used",
+      "eojeol_count",
+      "max_sentence_eojeol",
+      "coverage",
+      "naturalness"
+    ],
+    "properties": {
+      "hard_errors": {
+        "maxItems": 0
+      },
+      "candidate_status": {
+        "const": "PASS_PENDING_COMMIT"
+      },
+      "eojeol_count": {
+        "type": "integer",
+        "minimum": 120,
+        "maximum": 180
+      },
+      "max_sentence_eojeol": {
+        "type": "integer",
+        "maximum": 10
+      },
+      "invalid_usage_ids": {
+        "maxItems": 0
+      },
+      "unresolved_tokens": {
+        "maxItems": 0
+      },
+      "actual_new_vocab_ids": {
+        "maxItems": 2,
+        "uniqueItems": true
+      },
+      "coverage": {
+        "type": "object",
+        "required": [
+          "denominator_N",
+          "new_tokens_U",
+          "controlled_vocab_coverage",
+          "previous_vocab_coverage"
+        ],
+        "properties": {
+          "denominator_N": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "new_tokens_U": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "controlled_vocab_coverage": {
+            "const": 1
+          },
+          "previous_vocab_coverage": {
+            "type": "number",
+            "minimum": 0.98,
+            "maximum": 1
+          }
+        }
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "hard_errors": {
+        "minItems": 1
+      },
+      "candidate_status": {
+        "const": "REJECTED"
+      }
+    }
+  },
+  "$defs": {
+    "generic_k1_id": {
+      "type": "string",
+      "pattern": "^K1-[0-9]{3}$"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 1
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-001"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 2
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-002"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 3
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-003"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 4
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-004"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 5
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-005"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 6
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-006"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 7
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-007"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 8
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-008"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 9
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-009"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 10
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-010"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 11
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-011"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 12
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-012"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 13
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-013"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 14
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-014"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 15
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-015"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 16
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-016"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 17
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-017"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 18
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-018"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 19
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-019"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 20
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-020"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 21
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-021"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 22
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-022"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 23
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-023"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 24
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-024"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 25
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-025"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 26
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-026"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 27
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-027"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 28
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-028"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 29
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-029"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 30
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-030"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 31
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-031"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 32
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-032"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 33
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-033"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 34
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-034"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 35
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-035"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 36
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-036"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 37
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-037"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 38
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-038"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 39
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-039"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 40
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-040"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 41
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-041"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 42
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-042"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 43
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-043"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 44
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-044"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 45
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-045"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 46
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-046"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 47
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-047"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 48
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-048"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 49
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-049"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "text_number": {
+            "const": 50
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "id": {
+            "const": "K1-050"
+          }
+        }
+      }
+    }
+  ]
+}

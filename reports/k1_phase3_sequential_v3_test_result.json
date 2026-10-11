@@ -1,0 +1,9 @@
+{
+  "tests": 9,
+  "failures": 0,
+  "errors": 0,
+  "status": "PASS",
+  "seconds": 3.515,
+  "log": "reports/k1_phase3_sequential_v3_test_log.txt",
+  "exit_code": 0
+}

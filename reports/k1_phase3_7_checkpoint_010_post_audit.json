@@ -1,0 +1,17 @@
+{
+  "mechanical_checkpoint_preserved": true,
+  "later_confirmed_policy_violation": {
+    "text": 5,
+    "category": "frozen_lexical_sense_violation",
+    "registered_id": "ko_k1_0074",
+    "registered_sense": "evening",
+    "actual_function": "dinner_meal",
+    "language_naturalness_error": false,
+    "confirmed": true,
+    "author_missed": true,
+    "not_rewritten": true
+  },
+  "state_integrity_preserved": true,
+  "not_certified_for_continuation": true,
+  "scope_alignment_artifacts": 390
+}

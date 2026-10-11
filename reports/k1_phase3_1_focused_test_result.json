@@ -1,0 +1,9 @@
+{
+  "command": "python -B -m unittest discover -s tests -p test_k1_candidate_gate.py -v",
+  "tests_run": 34,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 26.658,
+  "ok": true,
+  "scope": "Final resolver conservative REVIEW gate and candidate/state transaction implementation"
+}

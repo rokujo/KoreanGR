@@ -1,0 +1,439 @@
+{
+  "run": "phase3_sequential_v3",
+  "generated_count": 1,
+  "control": {
+    "status": "stopped",
+    "max_attempts": 5,
+    "max_text": 50,
+    "stop": {
+      "type": "analyzer_structural_failure",
+      "text": 2,
+      "attempt": 2,
+      "registered_vocab_id": "ko_k1_0004",
+      "raw_pos": "NNG",
+      "registered_pos": "pronoun",
+      "surface": "우리",
+      "start": 238,
+      "end": 240,
+      "reason": "Sentence precheck resolves NP; paragraph and full quoted text independently reproduce NNG identity loss. Removing quotes for diagnosis yields NP. No global NNG-to-pronoun alias permitted.",
+      "diagnostics": "reports/k1_phase3_sequential_v3_analyzer_diagnostics.json"
+    }
+  },
+  "max_attempts": 5,
+  "total_candidate_attempts": 4,
+  "rejected_candidates": 3,
+  "first_attempt_pass_count": 0,
+  "first_attempt_pass_rate": 0.0,
+  "mean_attempts_per_committed_text": 2,
+  "mean_attempts_per_started_text": 2.0,
+  "retry_reason_distribution": {
+    "unknown_or_unresolved": 2,
+    "unresolved_context_ambiguity": 2,
+    "coverage_or_token_policy": 6,
+    "candidate_format": 1
+  },
+  "future_contaminated_candidates": 0,
+  "future_candidate_contamination_rate": 0.0,
+  "resolver_review_count": 2,
+  "hard_errors": 0,
+  "controlled_violations": 0,
+  "previous_below_98": 0,
+  "grammar_violations": 0,
+  "unresolved_content_words": 0,
+  "introduced_count": 2,
+  "selected_review_exposures": 0,
+  "incidental_exposures": 0,
+  "exposure_distribution": {
+    "0": 498,
+    "1": 2
+  },
+  "outstanding_debt": 0,
+  "expired_debt": 0,
+  "near_deadline_debt": 0,
+  "naturalness_warning_categories": {
+    "nat_restricted_sense": 2
+  },
+  "confirmed_naturalness_issues": [],
+  "semantic_review_flags": 0,
+  "translation_flags": 0,
+  "natural_expression_gaps": [],
+  "genre_distribution": {
+    "school": 1
+  },
+  "scene_similarity_pairs": [],
+  "high_scene_similarity_pairs": [],
+  "eojeol_mean": 137,
+  "eojeol_min": 137,
+  "eojeol_max": 137,
+  "sentence_length_distribution": {
+    "1": 1,
+    "3": 5,
+    "4": 24,
+    "5": 5
+  },
+  "sentence_preferred_compliance": 0.9714285714285714,
+  "frozen_input_violations": [],
+  "decision": "C",
+  "sequential_50_completed": false,
+  "decision_reason": "Confirmed full-text/paragraph lexical POS identity instability; stop before K1-002 commit",
+  "integrity_errors": [],
+  "integrity_pass": true,
+  "initial_actual_state_zero": true,
+  "candidate_schema_errors": [],
+  "committed_reanalysis": [
+    {
+      "text": 1,
+      "hard_pass": true,
+      "mismatches": []
+    }
+  ],
+  "ledger_epoch": 1,
+  "actual_commit_transactions": 1,
+  "failed_candidates_credited": false,
+  "maximum_committed_text": 1,
+  "maximum_candidate_text": 2,
+  "frozen_file_count": 583,
+  "candidate_attempt_counts": {
+    "1": 2,
+    "2": 2
+  },
+  "rejected_hard_error_count": 11,
+  "rejected_unresolved_content_count": 2,
+  "raw_analyzed_candidates": 3,
+  "raw_analyzed_future_contaminated_candidates": 0,
+  "diagnostics": [
+    {
+      "name": "plain_question",
+      "raw_uri": [
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 0,
+          "length": 2
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "name": "quoted_question",
+      "raw_uri": [
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 1,
+          "length": 2
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "name": "speaker_and_quote",
+      "raw_uri": [
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 14,
+          "length": 2
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "name": "unquoted_narration",
+      "raw_uri": [
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 4,
+          "length": 2
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "name": "topic_pronoun",
+      "raw_uri": [
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 0,
+          "length": 2
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "name": "noun_pen_contrast",
+      "raw_uri": [
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 0,
+          "length": 2
+        }
+      ],
+      "unresolved": [
+        {
+          "surface": "개",
+          "lemma": "개",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 6,
+          "end": 7,
+          "morph_indices": [
+            3
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "name": "quoted_yes_regression",
+      "raw_uri": [],
+      "unresolved": []
+    },
+    {
+      "name": "quoted_no_regression",
+      "raw_uri": [],
+      "unresolved": []
+    },
+    {
+      "name": "candidate_full_text",
+      "raw_uri": [
+        {
+          "form": "우리",
+          "tag": "NNG",
+          "start": 238,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 256,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 334,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 371,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 440,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 474,
+          "length": 2
+        }
+      ],
+      "unresolved": [
+        {
+          "surface": "우리",
+          "lemma": "우리",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 238,
+          "end": 240,
+          "morph_indices": [
+            141
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "name": "candidate_paragraph",
+      "raw_uri": [
+        {
+          "form": "우리",
+          "tag": "NNG",
+          "start": 49,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 67,
+          "length": 2
+        }
+      ],
+      "unresolved": [
+        {
+          "surface": "우리",
+          "lemma": "우리",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 49,
+          "end": 51,
+          "morph_indices": [
+            33
+          ],
+          "grammar_id": null
+        }
+      ]
+    },
+    {
+      "name": "diagnostic_full_without_quotes",
+      "raw_uri": [
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 229,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 246,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 324,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 361,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 430,
+          "length": 2
+        },
+        {
+          "form": "우리",
+          "tag": "NP",
+          "start": 464,
+          "length": 2
+        }
+      ],
+      "unresolved": []
+    }
+  ],
+  "tests": {
+    "tests": 9,
+    "failures": 0,
+    "errors": 0,
+    "status": "PASS",
+    "seconds": 3.515,
+    "log": "reports/k1_phase3_sequential_v3_test_log.txt",
+    "exit_code": 0
+  },
+  "forward_candidate_schema_rejections": [
+    "K1-003",
+    "K1-004",
+    "K1-005",
+    "K1-006",
+    "K1-007",
+    "K1-008",
+    "K1-009",
+    "K1-010",
+    "K1-011",
+    "K1-012",
+    "K1-013",
+    "K1-014",
+    "K1-015",
+    "K1-016",
+    "K1-017",
+    "K1-018",
+    "K1-019",
+    "K1-020",
+    "K1-021",
+    "K1-022",
+    "K1-023",
+    "K1-024",
+    "K1-025",
+    "K1-026",
+    "K1-027",
+    "K1-028",
+    "K1-029",
+    "K1-030",
+    "K1-031",
+    "K1-032",
+    "K1-033",
+    "K1-034",
+    "K1-035",
+    "K1-036",
+    "K1-037",
+    "K1-038",
+    "K1-039",
+    "K1-040",
+    "K1-041",
+    "K1-042",
+    "K1-043",
+    "K1-044",
+    "K1-045",
+    "K1-046",
+    "K1-047",
+    "K1-048",
+    "K1-049",
+    "K1-050"
+  ],
+  "forward_schema_revision_applied": false,
+  "ten_text_checkpoints_reached": [],
+  "phase2_3_comparison": [
+    {
+      "text": 1,
+      "identical_text": false,
+      "prior_eojeol": 126,
+      "new_eojeol": 137,
+      "prior_coverage": {
+        "denominator_N": 125,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984,
+        "target_99_met": false
+      },
+      "new_coverage": {
+        "denominator_N": 133,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9849624060150376,
+        "target_99_met": false
+      },
+      "new_scene": {
+        "goal": "understand_a_korean_lesson",
+        "setting": "classroom",
+        "participants": [
+          "learner",
+          "classmate",
+          "teacher"
+        ],
+        "problem_type": "difficult_class_question",
+        "resolution_type": "teacher_explanation_and_written_answer",
+        "main_actions": [
+          "attend",
+          "listen",
+          "ask",
+          "write",
+          "read"
+        ]
+      },
+      "prior_review_ids": [],
+      "new_review_ids": [],
+      "prior_credit_imported": false
+    }
+  ]
+}

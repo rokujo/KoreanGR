@@ -1,0 +1,13 @@
+# Phase 3.6 production-lite policy
+
+ユーザーPhase 3.6指示を新runのauthorityとします。Phase 3.5のgrammar意味registry、閉じた意味仕様による旧判定、369 REVIEW、旧runを変更しません。
+
+hard gateは語彙identity/permission、actual previous state、planned introduction、ID、長さ、coverage、文法形式、明示的未許可構文、title、最終再解析、atomic publishです。助詞や基本語尾のsemantic roleのREVIEW/heuristic FAILはdiagnosticsのみで、coverageやcommit可否を変更しません。未許可形態は従来のraw境界判定に加え明示的禁止構文を検出します。意味分類と形態的禁止を混同しません。
+
+作者callbackへactual snapshotを生成前に渡し、future lemmaは提示しません。raw analyzerにはidentityを検出するため全登録DBが必要ですが、これは作者の候補集合とは別です。作者の自然さ・訳忠実性のpost-mechanical確認をcandidate digestへ結び付けて保存し、明確な不自然さはrepairします。自己評価は独立goldでも人間承認でもありません。
+
+既知の마셔요復元だけを限定overlayで実装します。raw形態素を保持し、飲料目的語+받고+exact 마셔요の特定signatureを扱います。語義・文法を追加せず、命令/禁止마세요や目的語なしには適用しません。
+
+run開始後のコード変更をhashで禁止します。毎candidateは局所機械検証と意味diagnosticsのみ、full suiteは前後1回ずつです。5attempt、同一hard error停滞2回、構造障害、state破損、数学的不能でSTOP。semantic warningはSTOP理由になりません。
+
+時間は保存済み本文のreplayを生成とみなさず、actual snapshot後のlive authoringから計測します。CLI callbackはLLM作者によるローカル作業経路なので、モデルAPIだけのlatencyは測定していません。planning/draft/reviewは実wall、解析/検証/最終再解析/commitはperf_counterで計測し、setup/full pre-suiteはproductionから除外します。全production wallにはプロセス起動・教材間オペレーションも含めます。

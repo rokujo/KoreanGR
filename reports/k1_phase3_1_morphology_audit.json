@@ -1,0 +1,2537 @@
+{
+  "scope": "Inventory of active 800 + selected valid-inflection regression probes, not exhaustive conjugation or sense gold; audit all-permitted scenario is never credited to smoke.",
+  "inactive_standalone_help": {
+    "lemma": "돕다",
+    "active": false,
+    "alternative_registered_lemma": "도와주다"
+  },
+  "stem_candidates": [
+    {
+      "vocab_id": "ko_k1_0175",
+      "lemma": "듣다",
+      "sense": "hear_listen",
+      "candidate_classes": [
+        "d_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0176",
+      "lemma": "말하다",
+      "sense": "speak",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0179",
+      "lemma": "하다",
+      "sense": "do",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0186",
+      "lemma": "걷다",
+      "sense": "walk",
+      "candidate_classes": [
+        "d_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0193",
+      "lemma": "받다",
+      "sense": "receive",
+      "candidate_classes": [
+        "d_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0195",
+      "lemma": "닫다",
+      "sense": "close",
+      "candidate_classes": [
+        "d_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0196",
+      "lemma": "입다",
+      "sense": "wear_clothes",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0200",
+      "lemma": "시작하다",
+      "sense": "start",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0202",
+      "lemma": "공부하다",
+      "sense": "study",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0203",
+      "lemma": "일하다",
+      "sense": "work",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0204",
+      "lemma": "운동하다",
+      "sense": "exercise",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0205",
+      "lemma": "좋아하다",
+      "sense": "like",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0206",
+      "lemma": "싫어하다",
+      "sense": "dislike",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0208",
+      "lemma": "모르다",
+      "sense": "not_know",
+      "candidate_classes": [
+        "reu_stem_candidate"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0219",
+      "lemma": "요리하다",
+      "sense": "cook",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0220",
+      "lemma": "전화하다",
+      "sense": "phone",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0221",
+      "lemma": "사용하다",
+      "sense": "use",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0222",
+      "lemma": "필요하다",
+      "sense": "necessary",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0226",
+      "lemma": "생각하다",
+      "sense": "think",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0230",
+      "lemma": "도착하다",
+      "sense": "arrive",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0231",
+      "lemma": "출발하다",
+      "sense": "depart",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0241",
+      "lemma": "빠르다",
+      "sense": "fast",
+      "candidate_classes": [
+        "reu_stem_candidate"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0243",
+      "lemma": "쉽다",
+      "sense": "easy",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0244",
+      "lemma": "어렵다",
+      "sense": "difficult",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0251",
+      "lemma": "덥다",
+      "sense": "hot_weather",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0252",
+      "lemma": "춥다",
+      "sense": "cold_weather",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0253",
+      "lemma": "따뜻하다",
+      "sense": "warm",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0254",
+      "lemma": "시원하다",
+      "sense": "cool_refreshing",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0256",
+      "lemma": "피곤하다",
+      "sense": "tired",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0259",
+      "lemma": "깨끗하다",
+      "sense": "clean",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0262",
+      "lemma": "다르다",
+      "sense": "different",
+      "candidate_classes": [
+        "reu_stem_candidate"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0377",
+      "lemma": "대답하다",
+      "sense": "answer",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0379",
+      "lemma": "준비하다",
+      "sense": "prepare",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0380",
+      "lemma": "고르다",
+      "sense": "choose",
+      "candidate_classes": [
+        "reu_stem_candidate"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0391",
+      "lemma": "청소하다",
+      "sense": "clean",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0392",
+      "lemma": "빨래하다",
+      "sense": "do_laundry",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0397",
+      "lemma": "잡다",
+      "sense": "grasp",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0403",
+      "lemma": "이해하다",
+      "sense": "understand",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0404",
+      "lemma": "연습하다",
+      "sense": "practice",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0405",
+      "lemma": "걱정하다",
+      "sense": "worry",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0406",
+      "lemma": "주문하다",
+      "sense": "order_food",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0407",
+      "lemma": "계산하다",
+      "sense": "pay_bill",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0408",
+      "lemma": "예약하다",
+      "sense": "reserve",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0409",
+      "lemma": "인사하다",
+      "sense": "greet",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0414",
+      "lemma": "뜨겁다",
+      "sense": "hot_object",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0415",
+      "lemma": "차갑다",
+      "sense": "cold_object",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0417",
+      "lemma": "배부르다",
+      "sense": "full_after_eating",
+      "candidate_classes": [
+        "reu_stem_candidate"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0418",
+      "lemma": "목마르다",
+      "sense": "thirsty",
+      "candidate_classes": [
+        "reu_stem_candidate"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0422",
+      "lemma": "행복하다",
+      "sense": "happy",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0423",
+      "lemma": "무섭다",
+      "sense": "scary_afraid",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0425",
+      "lemma": "가깝다",
+      "sense": "near",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0428",
+      "lemma": "무겁다",
+      "sense": "heavy",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0429",
+      "lemma": "가볍다",
+      "sense": "light_weight",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0430",
+      "lemma": "더럽다",
+      "sense": "dirty",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0431",
+      "lemma": "조용하다",
+      "sense": "quiet",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0432",
+      "lemma": "시끄럽다",
+      "sense": "noisy",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0434",
+      "lemma": "어둡다",
+      "sense": "dark",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0436",
+      "lemma": "좁다",
+      "sense": "narrow",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0437",
+      "lemma": "편하다",
+      "sense": "comfortable",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0438",
+      "lemma": "불편하다",
+      "sense": "uncomfortable",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0439",
+      "lemma": "친절하다",
+      "sense": "kind_courteous",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0440",
+      "lemma": "중요하다",
+      "sense": "important",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0441",
+      "lemma": "미안하다",
+      "sense": "sorry",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0587",
+      "lemma": "씹다",
+      "sense": "chew",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0589",
+      "lemma": "굽다",
+      "sense": "bake_grill",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0590",
+      "lemma": "자르다",
+      "sense": "cut",
+      "candidate_classes": [
+        "reu_stem_candidate"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0599",
+      "lemma": "설명하다",
+      "sense": "explain",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0600",
+      "lemma": "소개하다",
+      "sense": "introduce",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0601",
+      "lemma": "초대하다",
+      "sense": "invite",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0602",
+      "lemma": "방문하다",
+      "sense": "visit",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0605",
+      "lemma": "노래하다",
+      "sense": "sing",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0607",
+      "lemma": "수영하다",
+      "sense": "swim",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0608",
+      "lemma": "산책하다",
+      "sense": "take_walk",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0609",
+      "lemma": "귀엽다",
+      "sense": "cute",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0612",
+      "lemma": "새롭다",
+      "sense": "new",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0613",
+      "lemma": "건강하다",
+      "sense": "healthy",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0614",
+      "lemma": "안전하다",
+      "sense": "safe",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0615",
+      "lemma": "위험하다",
+      "sense": "dangerous",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0617",
+      "lemma": "복잡하다",
+      "sense": "complicated",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0618",
+      "lemma": "간단하다",
+      "sense": "simple_easy",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0621",
+      "lemma": "맵다",
+      "sense": "spicy",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0624",
+      "lemma": "부드럽다",
+      "sense": "soft",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0625",
+      "lemma": "딱딱하다",
+      "sense": "hard_texture",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0626",
+      "lemma": "두껍다",
+      "sense": "thick",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0630",
+      "lemma": "비슷하다",
+      "sense": "similar",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0631",
+      "lemma": "급하다",
+      "sense": "urgent",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0633",
+      "lemma": "부끄럽다",
+      "sense": "embarrassed",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0739",
+      "lemma": "기억하다",
+      "sense": "remember",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0744",
+      "lemma": "줍다",
+      "sense": "pick_up",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0749",
+      "lemma": "이사하다",
+      "sense": "move_house",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0755",
+      "lemma": "사과하다",
+      "sense": "apologize",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0756",
+      "lemma": "약속하다",
+      "sense": "promise",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0804",
+      "lemma": "충전하다",
+      "sense": "charge_battery",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0758",
+      "lemma": "부르다",
+      "sense": "call_person",
+      "candidate_classes": [
+        "reu_stem_candidate"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0760",
+      "lemma": "확인하다",
+      "sense": "check",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0762",
+      "lemma": "심심하다",
+      "sense": "bored",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0763",
+      "lemma": "즐겁다",
+      "sense": "enjoyable",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0766",
+      "lemma": "아쉽다",
+      "sense": "regretful",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0767",
+      "lemma": "부럽다",
+      "sense": "envious",
+      "candidate_classes": [
+        "b_stem_candidate_not_automatically_irregular"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0768",
+      "lemma": "친하다",
+      "sense": "close_relationship",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    },
+    {
+      "vocab_id": "ko_k1_0771",
+      "lemma": "이상하다",
+      "sense": "strange",
+      "candidate_classes": [
+        "registered_hada_compound"
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "lemma": "걷다",
+      "vocab_id": "ko_k1_0186",
+      "sense": "walk",
+      "kind": "d_irregular",
+      "sentence": "공원까지 친구하고 걸어요.",
+      "before_unresolved": [
+        {
+          "surface": "걸",
+          "lemma": "걸다",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 10,
+          "end": 11,
+          "morph_indices": [
+            4
+          ],
+          "grammar_id": null
+        }
+      ],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "공원",
+          "tag": "NNG",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "까지",
+          "tag": "JX",
+          "start": 2,
+          "length": 2
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 5,
+          "length": 2
+        },
+        {
+          "form": "하고",
+          "tag": "JKB",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": "걸",
+          "tag": "VV",
+          "start": 10,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 11,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 13,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": [
+        {
+          "status": "RESOLVED",
+          "evidence": {
+            "registered_identity": true,
+            "valid_inflection": true,
+            "generated_intent_matches": true,
+            "locomotion_scene": true,
+            "licensed_location_marker": true,
+            "human_companion": true,
+            "no_direct_object": true
+          },
+          "vocab_id": "ko_k1_0186",
+          "lemma": "걷다",
+          "pos": "verb",
+          "sense": "walk",
+          "scope": "Conservative local-context inference; not native speaker approval",
+          "type": "walk_hang_context",
+          "surface": "걸어요",
+          "sentence": "공원까지 친구하고 걸어요.",
+          "start": 10,
+          "end": 14,
+          "original_annotation": {
+            "surface": "걸",
+            "lemma": "걸다",
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "unresolved",
+            "start": 10,
+            "end": 11,
+            "morph_indices": [
+              4
+            ],
+            "grammar_id": null
+          },
+          "requires_candidate_review": false
+        }
+      ]
+    },
+    {
+      "lemma": "걷다",
+      "vocab_id": "ko_k1_0186",
+      "sense": "walk",
+      "kind": "d_irregular_past",
+      "sentence": "공원까지 친구하고 걸었어요.",
+      "before_unresolved": [
+        {
+          "surface": "걸",
+          "lemma": "걸다",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 10,
+          "end": 11,
+          "morph_indices": [
+            4
+          ],
+          "grammar_id": null
+        }
+      ],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "공원",
+          "tag": "NNG",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "까지",
+          "tag": "JX",
+          "start": 2,
+          "length": 2
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 5,
+          "length": 2
+        },
+        {
+          "form": "하고",
+          "tag": "JKB",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": "걸",
+          "tag": "VV",
+          "start": 10,
+          "length": 1
+        },
+        {
+          "form": "었",
+          "tag": "EP",
+          "start": 11,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 12,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 14,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": [
+        {
+          "status": "RESOLVED",
+          "evidence": {
+            "registered_identity": true,
+            "valid_inflection": true,
+            "generated_intent_matches": true,
+            "locomotion_scene": true,
+            "licensed_location_marker": true,
+            "human_companion": true,
+            "no_direct_object": true
+          },
+          "vocab_id": "ko_k1_0186",
+          "lemma": "걷다",
+          "pos": "verb",
+          "sense": "walk",
+          "scope": "Conservative local-context inference; not native speaker approval",
+          "type": "walk_hang_context",
+          "surface": "걸었어요",
+          "sentence": "공원까지 친구하고 걸었어요.",
+          "start": 10,
+          "end": 15,
+          "original_annotation": {
+            "surface": "걸",
+            "lemma": "걸다",
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "unresolved",
+            "start": 10,
+            "end": 11,
+            "morph_indices": [
+              4
+            ],
+            "grammar_id": null
+          },
+          "requires_candidate_review": false
+        }
+      ]
+    },
+    {
+      "lemma": "듣다",
+      "vocab_id": "ko_k1_0175",
+      "sense": "hear_listen",
+      "kind": "d_irregular",
+      "sentence": "저는 음악을 들어요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "음악",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "을",
+          "tag": "JKO",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "듣",
+          "tag": "VV-I",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "듣다",
+      "vocab_id": "ko_k1_0175",
+      "sense": "hear_listen",
+      "kind": "d_irregular_past",
+      "sentence": "저는 음악을 들었어요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "음악",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "을",
+          "tag": "JKO",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "듣",
+          "tag": "VV-I",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "었",
+          "tag": "EP",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "도와주다",
+      "vocab_id": "ko_k1_0225",
+      "sense": "help",
+      "kind": "b_irregular_compound",
+      "sentence": "저는 친구를 도와줘요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "를",
+          "tag": "JKO",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "돕",
+          "tag": "VV-I",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "어",
+          "tag": "EC",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "주",
+          "tag": "VX",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": [
+        {
+          "type": "registered_compound_prefix",
+          "lemma": "도와주다",
+          "surface": "도와줘요.",
+          "start": 7,
+          "raw_signature": [
+            "돕",
+            "어",
+            "주"
+          ],
+          "status": "GROUPED_NOT_PERMISSION_GRANTED"
+        }
+      ]
+    },
+    {
+      "lemma": "도와주다",
+      "vocab_id": "ko_k1_0225",
+      "sense": "help",
+      "kind": "b_irregular_compound_auxiliary",
+      "sentence": "친구를 도와주고 싶어요.",
+      "before_unresolved": [
+        {
+          "surface": "도",
+          "lemma": "돕다",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 4,
+          "end": 5,
+          "morph_indices": [
+            2
+          ],
+          "grammar_id": null
+        },
+        {
+          "surface": "와",
+          "lemma": "어",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 5,
+          "end": 6,
+          "morph_indices": [
+            3
+          ],
+          "grammar_id": null
+        },
+        {
+          "surface": "주",
+          "lemma": "주",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 6,
+          "end": 7,
+          "morph_indices": [
+            4
+          ],
+          "grammar_id": null
+        }
+      ],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "를",
+          "tag": "JKO",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "돕",
+          "tag": "VV-I",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "어",
+          "tag": "EC",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "주",
+          "tag": "VX",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "고",
+          "tag": "EC",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "싶",
+          "tag": "VX",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 12,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": [
+        {
+          "type": "registered_compound_prefix",
+          "lemma": "도와주다",
+          "surface": "도와주고",
+          "start": 4,
+          "raw_signature": [
+            "돕",
+            "어",
+            "주"
+          ],
+          "status": "GROUPED_NOT_PERMISSION_GRANTED"
+        }
+      ]
+    },
+    {
+      "lemma": "덥다",
+      "vocab_id": "ko_k1_0251",
+      "sense": "hot_weather",
+      "kind": "b_irregular",
+      "sentence": "오늘 날씨가 더워요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "오늘",
+          "tag": "NNG",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "날씨",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "가",
+          "tag": "JKS",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "덥",
+          "tag": "VA-I",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "춥다",
+      "vocab_id": "ko_k1_0252",
+      "sense": "cold_weather",
+      "kind": "b_irregular",
+      "sentence": "오늘 날씨가 추워요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "오늘",
+          "tag": "NNG",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "날씨",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "가",
+          "tag": "JKS",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "춥",
+          "tag": "VA-I",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "쉽다",
+      "vocab_id": "ko_k1_0243",
+      "sense": "easy",
+      "kind": "b_irregular",
+      "sentence": "이 문제는 쉬워요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "이",
+          "tag": "MM",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "문제",
+          "tag": "NNG",
+          "start": 2,
+          "length": 2
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "쉽",
+          "tag": "VA-I",
+          "start": 6,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 9,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "어렵다",
+      "vocab_id": "ko_k1_0244",
+      "sense": "difficult",
+      "kind": "b_irregular",
+      "sentence": "이 숙제는 어려워요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "이",
+          "tag": "MM",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "숙제",
+          "tag": "NNG",
+          "start": 2,
+          "length": 2
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "어렵",
+          "tag": "VA-I",
+          "start": 6,
+          "length": 3
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "가깝다",
+      "vocab_id": "ko_k1_0425",
+      "sense": "near",
+      "kind": "b_irregular",
+      "sentence": "집이 학교에서 가까워요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "집",
+          "tag": "NNG",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "JKS",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "학교",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "에서",
+          "tag": "JKB",
+          "start": 5,
+          "length": 2
+        },
+        {
+          "form": "가깝",
+          "tag": "VA-I",
+          "start": 8,
+          "length": 3
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 12,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "무겁다",
+      "vocab_id": "ko_k1_0428",
+      "sense": "heavy",
+      "kind": "b_irregular",
+      "sentence": "이 가방은 무거워요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "이",
+          "tag": "MM",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "가방",
+          "tag": "NNG",
+          "start": 2,
+          "length": 2
+        },
+        {
+          "form": "은",
+          "tag": "JX",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "무겁",
+          "tag": "VA-I",
+          "start": 6,
+          "length": 3
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "가볍다",
+      "vocab_id": "ko_k1_0429",
+      "sense": "light_weight",
+      "kind": "b_irregular",
+      "sentence": "이 책은 가벼워요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "이",
+          "tag": "MM",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "은",
+          "tag": "JX",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": "가볍",
+          "tag": "VA-I",
+          "start": 5,
+          "length": 3
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 9,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "뜨겁다",
+      "vocab_id": "ko_k1_0414",
+      "sense": "hot_object",
+      "kind": "b_irregular",
+      "sentence": "이 물은 뜨거워요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "이",
+          "tag": "MM",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "물",
+          "tag": "NNG",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "은",
+          "tag": "JX",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": "뜨겁",
+          "tag": "VA-I",
+          "start": 5,
+          "length": 3
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 9,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "차갑다",
+      "vocab_id": "ko_k1_0415",
+      "sense": "cold_object",
+      "kind": "b_irregular",
+      "sentence": "이 물은 차가워요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "이",
+          "tag": "MM",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "물",
+          "tag": "NNG",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "은",
+          "tag": "JX",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": "차갑",
+          "tag": "VA-I",
+          "start": 5,
+          "length": 3
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 9,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "빠르다",
+      "vocab_id": "ko_k1_0241",
+      "sense": "fast",
+      "kind": "reu_irregular",
+      "sentence": "버스가 빨라요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "버스",
+          "tag": "NNG",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "가",
+          "tag": "JKS",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "빠르",
+          "tag": "VA",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 5,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 7,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "모르다",
+      "vocab_id": "ko_k1_0208",
+      "sense": "not_know",
+      "kind": "reu_irregular",
+      "sentence": "저는 친구 이름을 몰라요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "이름",
+          "tag": "NNG",
+          "start": 6,
+          "length": 2
+        },
+        {
+          "form": "을",
+          "tag": "JKO",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "모르",
+          "tag": "VV",
+          "start": 10,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 11,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 13,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "다르다",
+      "vocab_id": "ko_k1_0262",
+      "sense": "different",
+      "kind": "reu_irregular",
+      "sentence": "저하고 친구는 달라요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "하고",
+          "tag": "JKB",
+          "start": 1,
+          "length": 2
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 4,
+          "length": 2
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "다르",
+          "tag": "VA",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "고르다",
+      "vocab_id": "ko_k1_0380",
+      "sense": "choose",
+      "kind": "reu_irregular",
+      "sentence": "저는 사과를 골라요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "사과",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "를",
+          "tag": "JKO",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "고르",
+          "tag": "VV",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "부르다",
+      "vocab_id": "ko_k1_0758",
+      "sense": "call_person",
+      "kind": "reu_irregular",
+      "sentence": "저는 친구를 불러요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "를",
+          "tag": "JKO",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "부르",
+          "tag": "VV",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 10,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "닫다",
+      "vocab_id": "ko_k1_0195",
+      "sense": "close",
+      "kind": "d_regular_negative_control",
+      "sentence": "문을 닫아요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "문",
+          "tag": "NNG",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "을",
+          "tag": "JKO",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "닫",
+          "tag": "VV-R",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 4,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 6,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "받다",
+      "vocab_id": "ko_k1_0193",
+      "sense": "receive",
+      "kind": "d_regular_negative_control",
+      "sentence": "저는 책을 받아요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "책",
+          "tag": "NNG",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": "을",
+          "tag": "JKO",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "받",
+          "tag": "VV-R",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 9,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "입다",
+      "vocab_id": "ko_k1_0196",
+      "sense": "wear_clothes",
+      "kind": "b_regular_negative_control",
+      "sentence": "저는 옷을 입어요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "옷",
+          "tag": "NNG",
+          "start": 3,
+          "length": 1
+        },
+        {
+          "form": "을",
+          "tag": "JKO",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "입",
+          "tag": "VV-R",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 9,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "공부하다",
+      "vocab_id": "ko_k1_0202",
+      "sense": "study",
+      "kind": "hada_compound",
+      "sentence": "저는 한국어를 공부해요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "한국어",
+          "tag": "NNP",
+          "start": 3,
+          "length": 3
+        },
+        {
+          "form": "를",
+          "tag": "JKO",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "공부",
+          "tag": "NNG",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 10,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 12,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "운동하다",
+      "vocab_id": "ko_k1_0204",
+      "sense": "exercise",
+      "kind": "hada_compound",
+      "sentence": "친구는 공원에서 운동해요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 2,
+          "length": 1
+        },
+        {
+          "form": "공원",
+          "tag": "NNG",
+          "start": 4,
+          "length": 2
+        },
+        {
+          "form": "에서",
+          "tag": "JKB",
+          "start": 6,
+          "length": 2
+        },
+        {
+          "form": "운동",
+          "tag": "NNG",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 11,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 11,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 13,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "전화하다",
+      "vocab_id": "ko_k1_0220",
+      "sense": "phone",
+      "kind": "hada_compound",
+      "sentence": "저는 친구에게 전화해요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "에게",
+          "tag": "JKB",
+          "start": 5,
+          "length": 2
+        },
+        {
+          "form": "전화",
+          "tag": "NNG",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 10,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 12,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "준비하다",
+      "vocab_id": "ko_k1_0379",
+      "sense": "prepare",
+      "kind": "hada_compound",
+      "sentence": "저는 여행을 준비해요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "여행",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "을",
+          "tag": "JKO",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "준비",
+          "tag": "NNG",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    },
+    {
+      "lemma": "사용하다",
+      "vocab_id": "ko_k1_0221",
+      "sense": "use",
+      "kind": "hada_compound",
+      "sentence": "저는 컴퓨터를 사용해요.",
+      "before_unresolved": [],
+      "after_unresolved": [],
+      "target_recognized": true,
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "컴퓨터",
+          "tag": "NNG",
+          "start": 3,
+          "length": 3
+        },
+        {
+          "form": "를",
+          "tag": "JKO",
+          "start": 6,
+          "length": 1
+        },
+        {
+          "form": "사용",
+          "tag": "NNG",
+          "start": 8,
+          "length": 2
+        },
+        {
+          "form": "하",
+          "tag": "XSV",
+          "start": 10,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 12,
+          "length": 1
+        }
+      ],
+      "resolver_decisions": []
+    }
+  ],
+  "probe_count": 28,
+  "failed_probes": []
+}

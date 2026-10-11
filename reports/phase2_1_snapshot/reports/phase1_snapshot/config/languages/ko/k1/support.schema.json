@@ -1,0 +1,391 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "K1 supporting data schemas",
+  "$defs": {
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "language",
+        "level",
+        "version",
+        "status",
+        "target_texts",
+        "vocab_budget",
+        "length",
+        "sentence_length",
+        "new_vocab",
+        "known_vocab_ratio",
+        "repetition",
+        "style",
+        "grammar_count",
+        "counting",
+        "introduction",
+        "feasibility",
+        "grammar_policy",
+        "review_required"
+      ],
+      "properties": {
+        "language": {
+          "const": "ko"
+        },
+        "level": {
+          "const": "K1"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_texts": {
+          "const": 300
+        },
+        "vocab_budget": {
+          "const": {
+            "core": 300,
+            "expansion": 500,
+            "total": 800
+          }
+        },
+        "length": {
+          "const": {
+            "min_eojeol": 120,
+            "max_eojeol": 180
+          }
+        },
+        "sentence_length": {
+          "const": {
+            "preferred_min_eojeol": 4,
+            "preferred_max_eojeol": 7,
+            "hard_max_eojeol": 10
+          }
+        },
+        "new_vocab": {
+          "const": {
+            "min": 0,
+            "max": 2
+          }
+        },
+        "known_vocab_ratio": {
+          "const": 0.99
+        },
+        "repetition": {
+          "const": {
+            "near_repetition_allowed": true,
+            "near_repetition_encouraged": true,
+            "paraphrase_required": false
+          }
+        },
+        "style": {
+          "const": {
+            "default_register": "해요체",
+            "prefer_processing_ease": true,
+            "prefer_naturalness_over_variety": true
+          }
+        },
+        "grammar_count": {
+          "const": 29
+        },
+        "counting": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "vocab_unit",
+            "proper_names_in_budget",
+            "grammar_bound_forms_in_budget",
+            "eojeol",
+            "known_ratio_denominator",
+            "known_ratio_numerator",
+            "new_vocab_definition",
+            "number_forms"
+          ],
+          "properties": {
+            "vocab_unit": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "proper_names_in_budget": {
+              "type": "boolean"
+            },
+            "grammar_bound_forms_in_budget": {
+              "type": "boolean"
+            },
+            "eojeol": {
+              "type": "string",
+              "minLength": 1
+            },
+            "known_ratio_denominator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "known_ratio_numerator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "new_vocab_definition": {
+              "type": "string",
+              "minLength": 1
+            },
+            "number_forms": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "introduction": {
+          "const": {
+            "first_text": 1,
+            "last_text": 250,
+            "consolidation_from": 251,
+            "tier_counts": {
+              "E1": 200,
+              "E2": 200,
+              "E3": 100
+            },
+            "ranges": {
+              "E1": [
+                1,
+                170
+              ],
+              "E2": [
+                61,
+                250
+              ],
+              "E3": [
+                151,
+                250
+              ]
+            },
+            "target_exposures": 6,
+            "distinct_texts_required": true
+          }
+        },
+        "feasibility": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "introduction_slots",
+            "required_new_entries",
+            "slack_slots",
+            "warning",
+            "known_ratio_resolution",
+            "generation_gate"
+          ],
+          "properties": {
+            "introduction_slots": {
+              "type": "integer"
+            },
+            "required_new_entries": {
+              "type": "integer"
+            },
+            "slack_slots": {
+              "type": "integer"
+            },
+            "warning": {
+              "type": "string",
+              "minLength": 1
+            },
+            "known_ratio_resolution": {
+              "type": "string",
+              "minLength": 1
+            },
+            "generation_gate": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "grammar_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "max_connector_clauses_preferred",
+            "allow_unlisted_productive_derivation",
+            "inflection_not_new_vocab",
+            "notes"
+          ],
+          "properties": {
+            "max_connector_clauses_preferred": {
+              "type": "integer"
+            },
+            "allow_unlisted_productive_derivation": {
+              "type": "boolean"
+            },
+            "inflection_not_new_vocab": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "review_required": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "exceptions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "counted_in_vocab_budget",
+        "policy",
+        "entries"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "counted_in_vocab_budget": {
+          "const": false
+        },
+        "policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "match",
+            "allow_inflection",
+            "license_constituents",
+            "max_occurrences_per_text",
+            "context",
+            "unknown_ratio_policy",
+            "notes"
+          ],
+          "properties": {
+            "match": {
+              "const": "exact_surface_sequence"
+            },
+            "allow_inflection": {
+              "const": false
+            },
+            "license_constituents": {
+              "const": false
+            },
+            "max_occurrences_per_text": {
+              "const": 2
+            },
+            "context": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unknown_ratio_policy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "form",
+              "meaning_ja",
+              "kind",
+              "requires_vocab",
+              "notes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^ko_k1_x[0-9]{2}$"
+              },
+              "form": {
+                "type": "string",
+                "minLength": 1
+              },
+              "meaning_ja": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "enum": [
+                  "frozen_exception",
+                  "regular_vocab_form"
+                ]
+              },
+              "requires_vocab": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "proper_names": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "counted_in_vocab_budget",
+        "entries"
+      ],
+      "properties": {
+        "counted_in_vocab_budget": {
+          "const": false
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "lemma",
+              "kind",
+              "gloss_ja",
+              "source",
+              "notes"
+            ],
+            "properties": {
+              "lemma": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "gloss_ja": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

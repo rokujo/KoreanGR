@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["version", "authoritative_source", "authoritative_sha256", "policy", "entries"],
+  "properties": {
+    "version": {"const": "3.5"},
+    "authoritative_source": {"const": "config/languages/ko/k1/grammar.json"},
+    "authoritative_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "policy": {"type": "string", "minLength": 1},
+    "entries": {
+      "type": "array", "minItems": 32, "maxItems": 32,
+      "items": {
+        "type": "object",
+        "required": ["grammar_id", "surface", "frozen_definition", "allowed_functions", "disallowed_or_unapproved_functions", "required_context", "positive_examples", "negative_examples", "ambiguous_examples", "autocheck", "notes", "needs_human_policy"],
+        "properties": {
+          "grammar_id": {"type": "string", "pattern": "^ko_k1_g(0[1-9]|[12][0-9]|3[0-2])$"},
+          "surface": {"type": "string", "minLength": 1},
+          "frozen_definition": {"type": "object"},
+          "allowed_functions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+          "disallowed_or_unapproved_functions": {"type": "array", "items": {"type": "string"}},
+          "required_context": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "positive_examples": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "negative_examples": {"type": "array", "items": {"type": "string"}},
+          "ambiguous_examples": {"type": "array", "items": {"type": "string"}},
+          "autocheck": {"enum": ["hard", "review", "heuristic"]},
+          "notes": {"type": "string"},
+          "needs_human_policy": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}

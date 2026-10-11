@@ -1,0 +1,51 @@
+{
+  "phase": "3.6a",
+  "source": "contemporaneous author observations and immutable candidate records",
+  "independent_gold": false,
+  "confirmed_draft_language_issues": [
+    {
+      "text": "K1-003",
+      "attempt": 1,
+      "category": "restricted_sense",
+      "surface": "학교에서 쓰는 책 / 학교에서 쓰는 가방",
+      "reason": "The registered Core 쓰다 identity is write; the intended use function cannot be approved on lemma membership alone.",
+      "repair": "학교에서 사용하는 책 / 학교 가방",
+      "resolved_before_commit": true
+    }
+  ],
+  "confirmed_translation_repairs": [
+    {
+      "text": "K1-005",
+      "attempt": 2,
+      "surface_ko": "어머니가 저에게 고기도 줘요.",
+      "before_ja": "母が私にも肉を渡します。",
+      "after_ja": "母が私に肉も渡します。",
+      "reason": "Preserve the additive focus on meat; this is not a Korean grammar or scene failure.",
+      "resolved_before_commit": true
+    }
+  ],
+  "retry_events": {
+    "lexical_or_morphosyntactic_candidate_rejection": 7,
+    "ne_short_scope_evidence_insufficient": 1,
+    "author_translation_repair_after_mechanical_pass": 1
+  },
+  "timing_caveats": [
+    "Counters measure live local LLM author/file-callback elapsed time, including reasoning, file transport, tool wait and orchestration. Pure model inference cannot be isolated by these timers.",
+    "K1-001 scene_planning includes context-resumption and controller inspection elapsed time. It remains in the production wall and per-text totals; it was not silently excluded as setup.",
+    "K1-002 initial plan and initial draft were written together before the plan-stage boundary. Its measured scene_planning 38.392 seconds therefore includes initial drafting; stage totals are operational phase timings rather than a clean separation of planning and prose generation.",
+    "Setup, resolver development, pre-run full regression and post-run tests/replay are outside the production wall. No code/config changes occurred during generation."
+  ],
+  "confirmed_committed_language_issues": 0,
+  "confirmed_committed_translation_issues": 0,
+  "human_spot_review_pending": true,
+  "natural_expression_gap": {
+    "new_confirmed_recurring_gaps": 0,
+    "tracked_prior_gap": "펴다",
+    "phase3_6a_handling": "Umbrella opening action was omitted in K1-001; 열다 was not used as a substitute and no word/sense was added."
+  },
+  "local_repair_vs_structural_stop": {
+    "K1-009_attempt-01": "The short-scope probe also failed to establish yes; no sentence/paragraph/full-text final identity divergence occurred. The resolver correctly declined recovery. The response was repaired to an independent 네. sentence and revalidated, without changing the resolver or crediting the failed attempt.",
+    "stable_false_negative_examples": ["오늘 MAG versus registered noun", "어제 MAG versus registered noun", "아는 parsed as 아/NNG", "어요 or 세요 in unsupported local raw ending segmentation"],
+    "policy": "These were treated as localized candidate ambiguity with simple prose repair; unresolved scope identity divergence or a defect preventing safe validation would still stop the run. No general POS alias or morphology repair was added."
+  }
+}

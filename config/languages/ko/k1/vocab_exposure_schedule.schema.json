@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Historical exact reviews reference; not an active schedule",
+  "const": {
+    "language": "ko",
+    "level": "K1",
+    "phase": "2.1A",
+    "status": "historical_exact_reviews_not_active",
+    "historical_file": "reports/phase2_1_snapshot/config/languages/ko/k1/vocab_exposure_schedule.json",
+    "introduction_source": "introduction_schedule.json",
+    "active_review_source": "vocab_review_windows.json",
+    "historical_reviews_binding": false
+  }
+}

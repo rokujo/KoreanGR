@@ -1,0 +1,282 @@
+{
+  "version": "phase3_8",
+  "scope": "Existing explicit lexical sense restrictions only. POS boundaries and grammar restrictions retain their existing gates; no new restriction is invented.",
+  "entries": [
+    {
+      "vocab_id": "ko_k1_0073",
+      "lemma": "점심",
+      "pos": "noun",
+      "allowed_sense": "lunch",
+      "source": {
+        "file": "config/languages/ko/k1/core_vocab.json",
+        "notes": "昼食を中心義に採用。正午の厳密な時刻義は未許可。"
+      },
+      "positive_example": "점심을 먹어요.",
+      "negative_example": "점심은 정확히 열두 시라는 뜻이에요.",
+      "negative_pattern": "정확히\\s*열두\\s*시|정오",
+      "disallowed_function": "strict_noon",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0078",
+      "lemma": "분",
+      "pos": "counter",
+      "allowed_sense": "minute",
+      "source": {
+        "file": "config/languages/ko/k1/core_vocab.json",
+        "notes": "時間単位のみ。敬称분は未登録。"
+      },
+      "positive_example": "오 분 동안 기다려요.",
+      "negative_example": "좋은 분이 와요.",
+      "negative_pattern": "좋은\\s*분|그\\s*분|이\\s*분",
+      "disallowed_function": "honorific_person",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0080",
+      "lemma": "월",
+      "pos": "counter",
+      "allowed_sense": "calendar_month",
+      "source": {
+        "file": "config/languages/ko/k1/core_vocab.json",
+        "notes": "暦の月のみ。期間はExpansion 달/month_duration。"
+      },
+      "positive_example": "일 월이에요.",
+      "negative_example": "세 월 동안 기다려요.",
+      "negative_pattern": "(?:한|두|세|네)\\s*월\\s*동안",
+      "disallowed_function": "duration_month",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0127",
+      "lemma": "차",
+      "pos": "noun",
+      "allowed_sense": "tea",
+      "source": {
+        "file": "config/languages/ko/k1/core_vocab.json",
+        "notes": "飲み物のお茶のみ。自動車の略称차は未登録。"
+      },
+      "positive_example": "차를 마셔요.",
+      "negative_example": "차를 운전해요.",
+      "negative_pattern": "차(?:를|로|가).*?(?:운전|주차)|차를\\s*타",
+      "disallowed_function": "automobile",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0133",
+      "lemma": "말",
+      "pos": "noun",
+      "allowed_sense": "speech",
+      "source": {
+        "file": "config/languages/ko/k1/core_vocab.json",
+        "notes": "言葉・発言のみ。馬は未登録。"
+      },
+      "positive_example": "친구의 말을 들어요.",
+      "negative_example": "말을 타요.",
+      "negative_pattern": "말(?:을|에)\\s*타|말이\\s*달려",
+      "disallowed_function": "horse",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0135",
+      "lemma": "일",
+      "pos": "noun",
+      "allowed_sense": "work",
+      "source": {
+        "file": "config/languages/ko/k1/core_vocab.json",
+        "notes": "仕事・作業のみ。日付の일と事件の일はこの義では未許可。"
+      },
+      "positive_example": "일을 해요.",
+      "negative_example": "일이 일어났어요.",
+      "negative_pattern": "일이\\s*(?:일어났|생겼)",
+      "disallowed_function": "incident",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0153",
+      "lemma": "눈",
+      "pos": "noun",
+      "allowed_sense": "snow",
+      "source": {
+        "file": "config/languages/ko/k1/core_vocab.json",
+        "notes": "雪のみ。目はExpansionの別sense。"
+      },
+      "positive_example": "눈이 와요.",
+      "negative_example": "눈을 감아요.",
+      "negative_pattern": "눈(?:을|이)\\s*(?:감|아파)|눈으로\\s*봐",
+      "disallowed_function": "eye",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0178",
+      "lemma": "쓰다",
+      "pos": "verb",
+      "allowed_sense": "write",
+      "source": {
+        "file": "config/languages/ko/k1/core_vocab.json",
+        "notes": "書くのみ。使う・かぶるはこの義では未許可。"
+      },
+      "positive_example": "이름을 써요.",
+      "negative_example": "모자를 써요.",
+      "negative_pattern": "(?:모자|안경|기계)(?:를|을)\\s*(?:쓰|써)|컴퓨터를\\s*써",
+      "disallowed_function": "wear_or_use",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0229",
+      "lemma": "찍다",
+      "pos": "verb",
+      "allowed_sense": "take_photo",
+      "source": {
+        "file": "config/languages/ko/k1/core_vocab.json",
+        "notes": "写真を撮るのみ。印を押すはExpansionの別sense。"
+      },
+      "positive_example": "사진을 찍어요.",
+      "negative_example": "도장을 찍어요.",
+      "negative_pattern": "(?:도장|점|인장)(?:을|를)\\s*찍",
+      "disallowed_function": "stamp_or_mark",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0808",
+      "lemma": "닦다",
+      "pos": "verb",
+      "allowed_sense": "wipe_clean",
+      "source": {
+        "file": "config/languages/ko/k1/expansion_vocab.json",
+        "notes": "清掃のために磨く・拭く動作のみ。歯磨き、机や物を拭く場面。抽象的な腕前を磨く義は許可しない。"
+      },
+      "positive_example": "이를 닦아요.",
+      "negative_example": "실력을 닦아요.",
+      "negative_pattern": "(?:실력|솜씨|학문)(?:을|를)\\s*닦",
+      "disallowed_function": "abstract_skill",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0810",
+      "lemma": "공",
+      "pos": "noun",
+      "allowed_sense": "ball",
+      "source": {
+        "file": "config/languages/ko/k1/expansion_vocab.json",
+        "notes": "遊び・運動に使うボールのみ。同音の抽象義や漢字語の構成要素は許可しない。"
+      },
+      "positive_example": "공을 던져요.",
+      "negative_example": "공을 세워요.",
+      "negative_pattern": "공을\\s*세워|공이\\s*크다는\\s*업적",
+      "disallowed_function": "merit",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0389",
+      "lemma": "보이다",
+      "pos": "verb",
+      "allowed_sense": "be_visible",
+      "source": {
+        "file": "config/languages/ko/k1/expansion_vocab.json",
+        "notes": "見えるの自動詞義のみ。見せるの使役義は未許可。"
+      },
+      "positive_example": "집이 보여요.",
+      "negative_example": "사진을 보여요.",
+      "negative_pattern": "사진을\\s*보여",
+      "disallowed_function": "causative_show",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0495",
+      "lemma": "표",
+      "pos": "noun",
+      "allowed_sense": "ticket",
+      "source": {
+        "file": "config/languages/ko/k1/expansion_vocab.json",
+        "notes": "交通・入場の切符のみ。表・票の意味は未許可。"
+      },
+      "positive_example": "표를 사요.",
+      "negative_example": "표에 숫자를 정리해요.",
+      "negative_pattern": "표에\\s*숫자.*정리|표를\\s*작성",
+      "disallowed_function": "table",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0511",
+      "lemma": "기사",
+      "pos": "noun",
+      "allowed_sense": "driver",
+      "source": {
+        "file": "config/languages/ko/k1/expansion_vocab.json",
+        "notes": "運転手のみ。新聞記事・騎士の意味は未許可。"
+      },
+      "positive_example": "기사가 버스를 운전해요.",
+      "negative_example": "기사를 읽어요.",
+      "negative_pattern": "기사(?:를|가).*?(?:읽|신문)|기사에서\\s*뉴스",
+      "disallowed_function": "news_article",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0812",
+      "lemma": "들다",
+      "pos": "verb",
+      "allowed_sense": "hold_lift_by_hand",
+      "source": {
+        "file": "config/languages/ko/k1/expansion_vocab.json",
+        "notes": "手に持つ・持ち上げる物理的動作だけを許可する。가방을 들어요 / 책을 들어요。費用がかかる・気に入る・年を取る・中へ入る系・その他の辞書上の別義は自動許可しない。lemmaが同じでも別senseは未許可。全用例で対象物と手による保持・持ち上げの文脈を確認する。"
+      },
+      "positive_example": "가방을 들어요.",
+      "negative_example": "마음에 들어요.",
+      "negative_pattern": "마음에\\s*들|(?:돈|비용|나이)(?:이|가)\\s*들",
+      "disallowed_function": "cost_liking_age",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0809",
+      "lemma": "붙이다",
+      "pos": "verb",
+      "allowed_sense": "attach_stick",
+      "source": {
+        "file": "config/languages/ko/k1/expansion_vocab.json",
+        "notes": "紙・テープなどを対象へ貼り付ける物理的動作のみ。火をつける等の別義は許可しない。"
+      },
+      "positive_example": "종이를 붙여요.",
+      "negative_example": "불을 붙여요.",
+      "negative_pattern": "불을\\s*붙",
+      "disallowed_function": "ignite",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0804",
+      "lemma": "충전하다",
+      "pos": "verb",
+      "allowed_sense": "charge_battery",
+      "source": {
+        "file": "config/languages/ko/k1/expansion_vocab.json",
+        "notes": "Phase 1.2で正式採用。電気機器の充電のみ。補助構文や専門的な電気説明へ拡張しない。"
+      },
+      "positive_example": "휴대폰을 충전해요.",
+      "negative_example": "마음을 충전해요.",
+      "negative_pattern": "(?:마음|기분|의욕)(?:을|를)\\s*충전",
+      "disallowed_function": "figurative_recharge",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    },
+    {
+      "vocab_id": "ko_k1_0786",
+      "lemma": "꿈",
+      "pos": "noun",
+      "allowed_sense": "dream_sleep",
+      "source": {
+        "file": "config/languages/ko/k1/expansion_vocab.json",
+        "notes": "睡眠中の夢のみ。将来の夢・希望の抽象義は未許可。"
+      },
+      "positive_example": "밤에 꿈을 꿨어요.",
+      "negative_example": "제 꿈은 의사예요.",
+      "negative_pattern": "(?:제|나의)\\s*꿈은\\s*(?:의사|선생님)|장래의\\s*꿈",
+      "disallowed_function": "future_aspiration",
+      "mechanical_policy": "Reject only canonical occurrence of this ID plus clear local negative context. Missing pattern evidence is not a new inferred sense restriction; author checks remain required."
+    }
+  ],
+  "excluded_notes": [
+    "Social address/register guidance is naturalness review, not a new lexical sense hard rule.",
+    "POS-only/compound/grammar boundary notes are already governed by the frozen analyzer/form gate.",
+    "Old breakfast/dinner exclusions are superseded only by basic_sense_families.json.",
+    "普通の中心義のglossや多義性だけを根拠に新しいhard restrictionを作らない。"
+  ]
+}

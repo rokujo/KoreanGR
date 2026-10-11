@@ -1,0 +1,242 @@
+{
+  "engineering_start_utc": "2026-10-10T18:51:27Z",
+  "production_start_utc": "2026-10-10T19:05:05.751304+00:00",
+  "production_start_counter": 46197.2882808,
+  "texts": [
+    {
+      "text_number": 1,
+      "start_counter": 46197.2882848,
+      "start_utc": "2026-10-10T19:05:05.813339+00:00",
+      "phase": "committed",
+      "phase_start_counter": 46307.3205395,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6\\candidates\\K1-001-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "밥하다",
+                "surface": "밥하",
+                "start": 359,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "compound_boundary",
+                "surface": "\"밥하고",
+                "lemma": "밥하다",
+                "start": 358,
+                "status": "REVIEW",
+                "requires_candidate_review": true
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 159: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 50.61749179999606,
+          "validation_seconds": 2.274454999998852,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 2.1056369000143604,
+            "semantic_diagnostics": 0.011228299998037983
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6\\candidates\\K1-001-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 46.36255450000317,
+          "validation_seconds": 1.4649043000026722,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.3669477999865194,
+            "semantic_diagnostics": 0.007009200002357829
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 9.305985099999816,
+        "author_draft": 50.61749179999606,
+        "morphology_vocab_analysis": 3.47258470000088,
+        "mechanical_validation": 0.26677460000064457,
+        "retry_repair": 46.36255450000317,
+        "naturalness_review": 20.258823800002574,
+        "final_reanalysis": 1.2678595000033965,
+        "commit": 0.18497029999707593,
+        "controller_overhead": 0.6979343999919365
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 1,
+        "title_ko": "오늘 저녁",
+        "genre": "food",
+        "scene": [
+          "home",
+          "kitchen",
+          "family"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "make_dinner_for_busy_mother",
+          "setting": "home_kitchen",
+          "participants": [
+            "speaker",
+            "mother"
+          ],
+          "problem_type": "mother_has_work",
+          "resolution_type": "speaker_cooks_simple_food",
+          "main_actions": [
+            "wash_vegetables",
+            "cook",
+            "eat"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6\\candidates\\K1-001-attempt-02.json",
+      "end_counter": 46329.7232635,
+      "total_seconds": 132.43497869999555,
+      "coverage": {
+        "denominator_N": 131,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9847328244274809,
+        "target_99_met": false
+      },
+      "eojeol_count": 133,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "母の在宅仕事を手伝うため夕食を作る一場面。되다は夕食の時間、괜찮다は忙しい母への応答で各1token。物で洗う・母と料理する・食後に仕事の話を聞く役割と時系列を確認。조금は味見の量、자주は普段母と料理する習慣であり文長fillerではない。訳は出来事を追加せず、料理の味は作った本人の味見で確認されている。作者による確認であり独立goldではない。"
+      }
+    },
+    {
+      "text_number": 2,
+      "start_counter": 46331.2462833,
+      "start_utc": "2026-10-10T19:07:19.753697+00:00",
+      "phase": "stopped",
+      "phase_start_counter": 46435.2586114,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6\\candidates\\K1-002-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "planned_new_not_present",
+              "detail": [
+                "ko_k1_0442"
+              ]
+            }
+          ],
+          "author_seconds": 77.04085430000123,
+          "validation_seconds": 1.2273372999989078,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1144539999877452,
+            "semantic_diagnostics": 0.006700099998852238
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 25.743435399999726,
+        "author_draft": 77.04085430000123,
+        "morphology_vocab_analysis": 1.1144539999877452,
+        "mechanical_validation": 0.11288330001116265,
+        "structural_diagnostics": 52.258329800002684,
+        "controller_overhead": 0.0007010999979684129
+      },
+      "committed": false,
+      "plan": {
+        "text_number": 2,
+        "title_ko": "공원에서 만나요",
+        "genre": "short_dialogue",
+        "scene": [
+          "communication",
+          "friendship",
+          "outdoor"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "agree_on_a_park_meeting_time",
+          "setting": "phone_then_park",
+          "participants": [
+            "speaker",
+            "friend"
+          ],
+          "problem_type": "morning_homework",
+          "resolution_type": "meet_in_evening",
+          "main_actions": [
+            "telephone",
+            "agree_time",
+            "meet",
+            "see_flowers"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6\\candidates\\K1-002-attempt-01.json",
+      "end_counter": 46487.5169412,
+      "total_seconds": 156.27065790000051
+    }
+  ],
+  "completed": false,
+  "methodology": "Live local LLM author, sequential snapshot/file callback; elapsed author stage includes model reasoning and file transport. Not external API throughput.",
+  "stop": {
+    "type": "structural_analyzer_defect",
+    "text": 2,
+    "surface": "네",
+    "expected_vocab_id": "ko_k1_0442",
+    "actual_vocab_id": "ko_k1_0003",
+    "raw_parts": [
+      "너/NP",
+      "의/JKG"
+    ],
+    "diagnostic": "reports/k1_phase3_6_ne_identity_structural_diagnostic.json",
+    "code_changed": false
+  },
+  "production_end_counter": 46487.5169412,
+  "production_end_utc": "2026-10-10T19:09:55.979989+00:00",
+  "production_wall_seconds": 290.2286604000037,
+  "per_text_statistics": {
+    "n": 1,
+    "min": 132.43497869999555,
+    "max": 132.43497869999555,
+    "mean": 132.43497869999555,
+    "median": 132.43497869999555,
+    "p90": 132.43497869999555
+  },
+  "stage_totals_seconds": {
+    "scene_planning": 35.04942049999954,
+    "author_draft": 127.65834609999729,
+    "morphology_vocab_analysis": 4.587038699988625,
+    "mechanical_validation": 0.3796579000118072,
+    "retry_repair": 46.36255450000317,
+    "naturalness_review": 20.258823800002574,
+    "final_reanalysis": 1.2678595000033965,
+    "commit": 0.18497029999707593,
+    "controller_overhead": 0.6986354999899049,
+    "structural_diagnostics": 52.258329800002684
+  },
+  "estimated_300_serial_hours": null,
+  "engineering_before_production_seconds": 818.751304,
+  "between_text_overhead_seconds": 1.5230238000076497,
+  "statistics_scope": "committed texts only, n=1; incomplete 10-text benchmark",
+  "estimated_300_serial_hours_reason": "Stopped at structural analyzer defect in 002. One committed text does not establish serial throughput for 300."
+}

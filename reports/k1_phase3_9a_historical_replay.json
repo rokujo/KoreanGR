@@ -1,0 +1,219 @@
+{
+  "report_only": true,
+  "rows": [
+    {
+      "historical_phase": "3_6",
+      "text": 2,
+      "source": "pilot\\ko\\k1\\phase3_6\\candidates\\K1-002-attempt-01.json",
+      "lexical_violations": [],
+      "restricted_violations": [],
+      "basic_family_usages": [
+        {
+          "vocab_id": "ko_k1_0072",
+          "surface": "아침",
+          "start": 88,
+          "end": 90,
+          "function": "morning_time",
+          "registered_sense_unchanged": "morning",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        },
+        {
+          "vocab_id": "ko_k1_0072",
+          "surface": "아침",
+          "start": 108,
+          "end": 110,
+          "function": "morning_time",
+          "registered_sense_unchanged": "morning",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        },
+        {
+          "vocab_id": "ko_k1_0072",
+          "surface": "아침",
+          "start": 141,
+          "end": 143,
+          "function": "morning_time",
+          "registered_sense_unchanged": "morning",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        },
+        {
+          "vocab_id": "ko_k1_0074",
+          "surface": "저녁",
+          "start": 159,
+          "end": 161,
+          "function": "evening_time",
+          "registered_sense_unchanged": "evening",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        },
+        {
+          "vocab_id": "ko_k1_0074",
+          "surface": "저녁",
+          "start": 175,
+          "end": 177,
+          "function": "evening_time",
+          "registered_sense_unchanged": "evening",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        },
+        {
+          "vocab_id": "ko_k1_0074",
+          "surface": "저녁",
+          "start": 190,
+          "end": 192,
+          "function": "evening_time",
+          "registered_sense_unchanged": "evening",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        },
+        {
+          "vocab_id": "ko_k1_0074",
+          "surface": "저녁",
+          "start": 210,
+          "end": 212,
+          "function": "evening_time",
+          "registered_sense_unchanged": "evening",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        },
+        {
+          "vocab_id": "ko_k1_0072",
+          "surface": "아침",
+          "start": 345,
+          "end": 347,
+          "function": "morning_time",
+          "registered_sense_unchanged": "morning",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        },
+        {
+          "vocab_id": "ko_k1_0074",
+          "surface": "저녁",
+          "start": 393,
+          "end": 395,
+          "function": "evening_time",
+          "registered_sense_unchanged": "evening",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        }
+      ],
+      "scope_diagnostic_count": 1,
+      "canonical_authority": "sentence_local"
+    },
+    {
+      "historical_phase": "3_6b",
+      "text": 7,
+      "source": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-007-attempt-01.json",
+      "lexical_violations": [],
+      "restricted_violations": [],
+      "basic_family_usages": [
+        {
+          "vocab_id": "ko_k1_0072",
+          "surface": "아침",
+          "start": 33,
+          "end": 35,
+          "function": "morning_time",
+          "registered_sense_unchanged": "morning",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        }
+      ],
+      "scope_diagnostic_count": 4,
+      "canonical_authority": "sentence_local"
+    },
+    {
+      "historical_phase": "3_6c",
+      "text": 1,
+      "source": "pilot\\ko\\k1\\phase3_6c\\candidates\\K1-001-attempt-01.json",
+      "lexical_violations": [],
+      "restricted_violations": [],
+      "basic_family_usages": [
+        {
+          "vocab_id": "ko_k1_0072",
+          "surface": "아침",
+          "start": 3,
+          "end": 5,
+          "function": "morning_time",
+          "registered_sense_unchanged": "morning",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        }
+      ],
+      "scope_diagnostic_count": 4,
+      "canonical_authority": "sentence_local"
+    },
+    {
+      "historical_phase": "3_7",
+      "text": 5,
+      "source": "pilot\\ko\\k1\\phase3_7\\candidates\\K1-005-attempt-01.json",
+      "lexical_violations": [],
+      "restricted_violations": [],
+      "basic_family_usages": [
+        {
+          "vocab_id": "ko_k1_0074",
+          "surface": "저녁",
+          "start": 478,
+          "end": 480,
+          "function": "dinner_meal",
+          "registered_sense_unchanged": "evening",
+          "decision": "ALLOWED_BASIC_FAMILY",
+          "new_vocabulary_count": 0,
+          "classification_scope": "narrow meal/time diagnostic; not an exhaustive sense classifier"
+        }
+      ],
+      "scope_diagnostic_count": 0,
+      "canonical_authority": "sentence_local"
+    },
+    {
+      "historical_phase": "3_8",
+      "text": 39,
+      "source": "pilot\\ko\\k1\\phase3_8\\texts\\K1-039.json",
+      "observed_author_patterns": [],
+      "corpus_unchanged": true
+    },
+    {
+      "historical_phase": "3_8",
+      "text": 47,
+      "source": "pilot\\ko\\k1\\phase3_8\\texts\\K1-047.json",
+      "observed_author_patterns": [],
+      "corpus_unchanged": true
+    },
+    {
+      "historical_phase": "3_8",
+      "text": 48,
+      "source": "pilot\\ko\\k1\\phase3_8\\texts\\K1-048.json",
+      "observed_author_patterns": [
+        {
+          "category": "naturalness",
+          "key": "paper_book_open",
+          "strategy": "omit opening; read the book"
+        }
+      ],
+      "corpus_unchanged": true
+    },
+    {
+      "historical_phase": "3_9",
+      "text": 13,
+      "first_rejected": true,
+      "first_exhausted": false,
+      "second_accepted": true,
+      "contract_retry_count": 1,
+      "same_body": true,
+      "state_unchanged": true,
+      "formal_attempts": 0
+    }
+  ]
+}

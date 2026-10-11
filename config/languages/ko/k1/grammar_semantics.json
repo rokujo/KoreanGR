@@ -1,0 +1,1184 @@
+{
+  "version": "3.5",
+  "authoritative_source": "config/languages/ko/k1/grammar.json",
+  "authoritative_sha256": "30b04cbcd6c6e5b9ab44f27a4c4a798e054e3c5fb6999f5c73cacc4e36a898d3",
+  "policy": "Only evidence-backed allowed meanings PASS. FAIL and REVIEW both prevent commit. This is a limited role/frame checker, not a complete Korean semantic parser.",
+  "entries": [
+    {
+      "grammar_id": "ko_k1_g01",
+      "surface": "이다: 이에요/예요",
+      "frozen_definition": {
+        "id": "ko_k1_g01",
+        "form": "이다: 이에요/예요",
+        "meaning_ja": "〜です",
+        "category": "copula",
+        "example": "여기는 우리 집이에요.",
+        "notes": "名詞述語。받침あり이에요、なし예요。過去였어요/이었어요はg03と組み合わせる。否定はCore 아니다でN이/가 아니에요。"
+      },
+      "allowed_functions": [
+        "identity"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "change",
+        "existential"
+      ],
+      "required_context": [
+        "registered nominal predicate; bound future 거 handled by g04",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "여기는 우리 집이에요."
+      ],
+      "negative_examples": [
+        "그 사람이 의사가 됐어요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "名詞述語。받침あり이에요、なし예요。過去였어요/이었어요はg03と組み合わせる。否定はCore 아니다でN이/가 아니에요。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g02",
+      "surface": "-아요/어요",
+      "frozen_definition": {
+        "id": "ko_k1_g02",
+        "form": "-아요/어요",
+        "meaning_ja": "〜ます・〜です（現在）",
+        "category": "ending",
+        "example": "저는 매일 학교에 가요.",
+        "notes": "動詞・形容詞の해요체。하다→해요等の縮約・不規則活用を認める。独立した新文法を追加しない。"
+      },
+      "allowed_functions": [
+        "polite_present"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "unapproved_speech_level"
+      ],
+      "required_context": [
+        "polite terminal of a licensed predicate; tense/aspect is checked separately",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 매일 학교에 가요."
+      ],
+      "negative_examples": [],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "動詞・形容詞の해요체。하다→해요等の縮約・不規則活用を認める。独立した新文法を追加しない。",
+      "alternate_fixture_note": "No forced artificial same-surface negative; invalid morphology remains the preceding gate responsibility."
+    },
+    {
+      "grammar_id": "ko_k1_g03",
+      "surface": "-았/었어요",
+      "frozen_definition": {
+        "id": "ko_k1_g03",
+        "form": "-았/었어요",
+        "meaning_ja": "〜ました・〜でした",
+        "category": "tense",
+        "example": "저는 어제 책을 읽었어요.",
+        "notes": "했어요等の縮約を認める。経験・過去連体形や大過去-았었-は未許可。"
+      },
+      "allowed_functions": [
+        "simple_past"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "double_past",
+        "independent_experience"
+      ],
+      "required_context": [
+        "single past marker; ordinary completed event",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 어제 책을 읽었어요."
+      ],
+      "negative_examples": [
+        "책을 읽었었어요."
+      ],
+      "ambiguous_examples": [
+        "이 책을 읽어 봤어요."
+      ],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": "g03 excludes experience in notes, while g18 explicitly licenses experiential tried-past with g03. Trial past is not auto-approved until the interpretation is confirmed.",
+      "notes": "했어요等の縮約を認める。経験・過去連体形や大過去-았었-は未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g04",
+      "surface": "-(으)ㄹ 거예요",
+      "frozen_definition": {
+        "id": "ko_k1_g04",
+        "form": "-(으)ㄹ 거예요",
+        "meaning_ja": "〜する予定です",
+        "category": "tense",
+        "example": "저는 내일 학교에 갈 거예요.",
+        "notes": "予定中心。推量の多用は避ける。거/것のこの構文内用法だけ許可。自由な名詞化は不可。"
+      },
+      "allowed_functions": [
+        "future_plan"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "epistemic_conjecture"
+      ],
+      "required_context": [
+        "explicit prospective time or first-person action plan",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 내일 학교에 갈 거예요."
+      ],
+      "negative_examples": [
+        "지금 집에 있을 거예요."
+      ],
+      "ambiguous_examples": [
+        "친구는 학교에 갈 거예요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": "Plan centered and avoid frequent conjecture do not precisely define the permitted amount of conjecture. No automatic conjecture permission.",
+      "notes": "予定中心。推量の多用は避ける。거/것のこの構文内用法だけ許可。自由な名詞化は不可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g05",
+      "surface": "-고 있다",
+      "frozen_definition": {
+        "id": "ko_k1_g05",
+        "form": "-고 있다",
+        "meaning_ja": "〜しています",
+        "category": "aspect",
+        "example": "저는 지금 책을 읽고 있어요.",
+        "notes": "進行のみ。着用・結果状態や-아/어 있다は未許可。있다は補助用言として文法内で認可。"
+      },
+      "allowed_functions": [
+        "ongoing_action"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "result_state",
+        "habitual_only"
+      ],
+      "required_context": [
+        "action verb + current-action evidence; no habit marker without explicit now",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 지금 책을 읽고 있어요."
+      ],
+      "negative_examples": [
+        "매일 공부하고 있어요."
+      ],
+      "ambiguous_examples": [
+        "친구는 책을 읽고 있어요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "進行のみ。着用・結果状態や-아/어 있다は未許可。있다は補助用言として文法内で認可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g06",
+      "surface": "-고 싶다",
+      "frozen_definition": {
+        "id": "ko_k1_g06",
+        "form": "-고 싶다",
+        "meaning_ja": "〜したいです",
+        "category": "modality",
+        "example": "저는 지금 물을 마시고 싶어요.",
+        "notes": "動詞に接続。本人の希望・相手への質問を中心にする。第三者の-고 싶어하다は未許可。"
+      },
+      "allowed_functions": [
+        "own_wish",
+        "question_to_addressee"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "third_person_desiderative_derivation"
+      ],
+      "required_context": [
+        "first-person subject or direct question to addressee",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 지금 물을 마시고 싶어요."
+      ],
+      "negative_examples": [
+        "친구는 책을 읽고 싶어해요."
+      ],
+      "ambiguous_examples": [
+        "친구는 책을 읽고 싶어요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": "Own wishes / questions to others are centered, but bare third-person -고 싶다 is not expressly banned. Treat it as needs_human_policy.",
+      "notes": "動詞に接続。本人の希望・相手への質問を中心にする。第三者の-고 싶어하다は未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g07",
+      "surface": "안",
+      "frozen_definition": {
+        "id": "ko_k1_g07",
+        "form": "안",
+        "meaning_ja": "〜しません・〜くありません",
+        "category": "negation",
+        "example": "저는 오늘 학교에 안 가요.",
+        "notes": "短形否定。名詞+하다語では공부 안 해요等を認めるが、否定できない語に機械的に付けない。-지 않다は未許可。"
+      },
+      "allowed_functions": [
+        "short_negation"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "long_negation"
+      ],
+      "required_context": [
+        "안 attached to a licensed negatable predicate",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 오늘 학교에 안 가요."
+      ],
+      "negative_examples": [
+        "학교에 가지 않아요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "短形否定。名詞+하다語では공부 안 해요等を認めるが、否定できない語に機械的に付けない。-지 않다は未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g08",
+      "surface": "못",
+      "frozen_definition": {
+        "id": "ko_k1_g08",
+        "form": "못",
+        "meaning_ja": "〜できません",
+        "category": "negation",
+        "example": "저는 오늘 학교에 못 가요.",
+        "notes": "動詞の不可能のみ。能力・状況による不可能。形容詞への一律付加は禁止。"
+      },
+      "allowed_functions": [
+        "capacity_or_circumstance_inability"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "adjective_inability"
+      ],
+      "required_context": [
+        "action verb; capacity or circumstances",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 오늘 학교에 못 가요."
+      ],
+      "negative_examples": [
+        "방이 못 커요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "動詞の不可能のみ。能力・状況による不可能。形容詞への一律付加は禁止。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g09",
+      "surface": "-고",
+      "frozen_definition": {
+        "id": "ko_k1_g09",
+        "form": "-고",
+        "meaning_ja": "〜して・〜で（並列・順序）",
+        "category": "connector",
+        "example": "저는 밥을 먹고 학교에 가요.",
+        "notes": "2事態までを優先。長い列挙は避ける。"
+      },
+      "allowed_functions": [
+        "parallel",
+        "sequence"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "resultative_state"
+      ],
+      "required_context": [
+        "two independent licensed predicates; auxiliary compounds excluded",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 밥을 먹고 학교에 가요."
+      ],
+      "negative_examples": [
+        "문을 열고 있어요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "2事態までを優先。長い列挙は避ける。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g10",
+      "surface": "-지만",
+      "frozen_definition": {
+        "id": "ko_k1_g10",
+        "form": "-지만",
+        "meaning_ja": "〜ですが",
+        "category": "connector",
+        "example": "방은 작지만 아주 좋아요.",
+        "notes": "対比・逆接。1文の接続節は通常1つ。"
+      },
+      "allowed_functions": [
+        "contrast"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "mere_sequence"
+      ],
+      "required_context": [
+        "visible opposed propositions or concrete concession",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "방은 작지만 아주 좋아요."
+      ],
+      "negative_examples": [],
+      "ambiguous_examples": [
+        "책을 읽지만 집에 가요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "対比・逆接。1文の接続節は通常1つ。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g11",
+      "surface": "-아/어서",
+      "frozen_definition": {
+        "id": "ko_k1_g11",
+        "form": "-아/어서",
+        "meaning_ja": "〜なので・〜して（順序）",
+        "category": "connector",
+        "example": "오늘은 비가 와서 집에 있어요.",
+        "notes": "理由と密接な順序。理由用法の後ろの命令・勧誘、接続直前の過去-았/었-は避ける。"
+      },
+      "allowed_functions": [
+        "reason",
+        "related_sequence"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "unrelated_sequence",
+        "reason_followed_by_instruction"
+      ],
+      "required_context": [
+        "causal lexical pair or tightly related action chain",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "오늘은 비가 와서 집에 있어요."
+      ],
+      "negative_examples": [
+        "비가 와서 우산을 가져가세요."
+      ],
+      "ambiguous_examples": [
+        "책을 읽어서 학교에 가요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "理由と密接な順序。理由用法の後ろの命令・勧誘、接続直前の過去-았/었-は避ける。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g12",
+      "surface": "-(으)니까",
+      "frozen_definition": {
+        "id": "ko_k1_g12",
+        "form": "-(으)니까",
+        "meaning_ja": "〜なので",
+        "category": "connector",
+        "example": "오늘은 비가 오니까 우산을 가져가세요.",
+        "notes": "理由。命令・勧誘への接続も許可。発見用法は未許可。"
+      },
+      "allowed_functions": [
+        "reason"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "discovery"
+      ],
+      "required_context": [
+        "causal relation; commands/proposals permitted; discovery not permitted",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "오늘은 비가 오니까 우산을 가져가세요."
+      ],
+      "negative_examples": [
+        "집에 가니까 친구가 있었어요."
+      ],
+      "ambiguous_examples": [
+        "책을 읽으니까 학교에 가요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "理由。命令・勧誘への接続も許可。発見用法は未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g13",
+      "surface": "-(으)면",
+      "frozen_definition": {
+        "id": "ko_k1_g13",
+        "form": "-(으)면",
+        "meaning_ja": "〜なら・〜したら",
+        "category": "connector",
+        "example": "시간이 있으면 같이 책을 읽어요.",
+        "notes": "具体的な条件のみ。反実仮想・複雑な仮定は避ける。"
+      },
+      "allowed_functions": [
+        "concrete_condition"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "counterfactual",
+        "complex_hypothetical"
+      ],
+      "required_context": [
+        "concrete state/action antecedent and contingent consequence",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "시간이 있으면 같이 책을 읽어요."
+      ],
+      "negative_examples": [],
+      "ambiguous_examples": [
+        "돈이 많았으면 좋겠어요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "具体的な条件のみ。反実仮想・複雑な仮定は避ける。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g14",
+      "surface": "-(으)세요",
+      "frozen_definition": {
+        "id": "ko_k1_g14",
+        "form": "-(으)세요",
+        "meaning_ja": "〜してください",
+        "category": "request",
+        "example": "여기에서 우리 친구를 기다리세요.",
+        "notes": "依頼・指示のみ。一般的な尊敬-(으)시-や드리다の派生を許可しない。命令対象は動作動詞を中心にする。"
+      },
+      "allowed_functions": [
+        "request",
+        "instruction"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "generic_honorific_statement"
+      ],
+      "required_context": [
+        "action directed to addressee; not third-person respectful narration",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "여기에서 우리 친구를 기다리세요."
+      ],
+      "negative_examples": [
+        "선생님이 학교에 가세요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "依頼・指示のみ。一般的な尊敬-(으)시-や드리다の派生を許可しない。命令対象は動作動詞を中心にする。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g15",
+      "surface": "-(으)ㄹ까요",
+      "frozen_definition": {
+        "id": "ko_k1_g15",
+        "form": "-(으)ㄹ까요",
+        "meaning_ja": "〜しましょうか・〜でしょうか",
+        "category": "proposal",
+        "example": "우리 같이 공원에 갈까요?",
+        "notes": "勧誘・意向確認を中心にする。複雑な推量質問は避ける。"
+      },
+      "allowed_functions": [
+        "invitation",
+        "intention_check"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "complex_conjecture"
+      ],
+      "required_context": [
+        "joint/first-person controllable action question",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "우리 같이 공원에 갈까요?"
+      ],
+      "negative_examples": [
+        "내일 비가 올까요?"
+      ],
+      "ambiguous_examples": [
+        "친구가 올까요?"
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": "meaning_ja includes 〜でしょうか but notes center on invitation/intention and avoid complex conjecture. Predictive questions are not auto-approved.",
+      "notes": "勧誘・意向確認を中心にする。複雑な推量質問は避ける。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g16",
+      "surface": "-(으)ㄹ 수 있다/없다",
+      "frozen_definition": {
+        "id": "ko_k1_g16",
+        "form": "-(으)ㄹ 수 있다/없다",
+        "meaning_ja": "〜できます・できません",
+        "category": "modality",
+        "example": "저는 한국어를 읽을 수 있어요.",
+        "notes": "수はこの構文専用の依存名詞。있다/없다の補助用法のみ許可。自由な수の語義は不可。"
+      },
+      "allowed_functions": [
+        "ability"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "epistemic_possibility"
+      ],
+      "required_context": [
+        "수 construction + controllable action capacity",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 한국어를 읽을 수 있어요."
+      ],
+      "negative_examples": [
+        "친구는 지금 집에 있을 수 있어요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "수はこの構文専用の依存名詞。있다/없다の補助用法のみ許可。自由な수の語義は不可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g17",
+      "surface": "-아/어야 하다",
+      "frozen_definition": {
+        "id": "ko_k1_g17",
+        "form": "-아/어야 하다",
+        "meaning_ja": "〜しなければなりません",
+        "category": "modality",
+        "example": "저는 오늘 숙제를 해야 해요.",
+        "notes": "義務の基本形。-아/어야 되다や-아/어야等の別構文は未許可。"
+      },
+      "allowed_functions": [
+        "obligation"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "necessary_condition_inference"
+      ],
+      "required_context": [
+        "licensed action + 해야 하다 construction",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 오늘 숙제를 해야 해요."
+      ],
+      "negative_examples": [
+        "비가 와야 추워요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "義務の基本形。-아/어야 되다や-아/어야等の別構文は未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g18",
+      "surface": "-아/어 보다",
+      "frozen_definition": {
+        "id": "ko_k1_g18",
+        "form": "-아/어 보다",
+        "meaning_ja": "試しに〜してみます",
+        "category": "auxiliary",
+        "example": "이 책을 읽어 봐요.",
+        "notes": "試行のみ。보다は補助用法を文法内で許可。経験-아/어 봤다はg03と組み合わせ可。一般的な補助動詞構文への拡張は不可。"
+      },
+      "allowed_functions": [
+        "trial"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "visual_perception",
+        "generic_auxiliary"
+      ],
+      "required_context": [
+        "action verb + auxiliary 보다, not lexical seeing",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "이 책을 읽어 봐요."
+      ],
+      "negative_examples": [],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "試行のみ。보다は補助用法を文法内で許可。経験-아/어 봤다はg03と組み合わせ可。一般的な補助動詞構文への拡張は不可。",
+      "alternate_fixture_note": "No forced artificial same-surface negative; invalid morphology remains the preceding gate responsibility."
+    },
+    {
+      "grammar_id": "ko_k1_g19",
+      "surface": "은/는",
+      "frozen_definition": {
+        "id": "ko_k1_g19",
+        "form": "은/는",
+        "meaning_ja": "主題・対比",
+        "category": "particle",
+        "example": "저는 매일 학교에 가요.",
+        "notes": "話題を示す。隠れた対比の説明負荷は避ける。"
+      },
+      "allowed_functions": [
+        "topic",
+        "contrast_topic"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "adnominal_ending"
+      ],
+      "required_context": [
+        "nominal phrase topic, ending 는 is handled by g27",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 매일 학교에 가요."
+      ],
+      "negative_examples": [],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "話題を示す。隠れた対比の説明負荷は避ける。",
+      "alternate_fixture_note": "No forced artificial same-surface negative; invalid morphology remains the preceding gate responsibility."
+    },
+    {
+      "grammar_id": "ko_k1_g20",
+      "surface": "이/가",
+      "frozen_definition": {
+        "id": "ko_k1_g20",
+        "form": "이/가",
+        "meaning_ja": "主語",
+        "category": "particle",
+        "example": "친구가 지금 집에 있어요.",
+        "notes": "아니다の補語にも使用。누구+가→누가、나+가→내가、저+가→제가、너+가→네가を同一語に正規化。"
+      },
+      "allowed_functions": [
+        "subject",
+        "negative_copula_complement"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "unapproved_complement"
+      ],
+      "required_context": [
+        "nominal subject or explicit 아니다 complement; 되다 complement needs policy",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "친구가 지금 집에 있어요."
+      ],
+      "negative_examples": [],
+      "ambiguous_examples": [
+        "저는 선생님이 돼요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": "Notes explicitly admit 아니다 complements but do not explicitly settle 되다 complements. Core 되다 remains active; no lexical change.",
+      "notes": "아니다の補語にも使用。누구+가→누가、나+가→내가、저+가→제가、너+가→네가を同一語に正規化。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g21",
+      "surface": "을/를",
+      "frozen_definition": {
+        "id": "ko_k1_g21",
+        "form": "을/를",
+        "meaning_ja": "目的語",
+        "category": "particle",
+        "example": "저는 매일 책을 읽어요.",
+        "notes": "目的語の基本用法のみ。数え方では助詞を語彙に含めない。"
+      },
+      "allowed_functions": [
+        "direct_object"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "path_extent",
+        "time_extent"
+      ],
+      "required_context": [
+        "nominal argument of a transitive lexical frame",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 매일 책을 읽어요."
+      ],
+      "negative_examples": [
+        "길을 걸어요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "目的語の基本用法のみ。数え方では助詞を語彙に含めない。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g22",
+      "surface": "에",
+      "frozen_definition": {
+        "id": "ko_k1_g22",
+        "form": "에",
+        "meaning_ja": "場所・行先・時点",
+        "category": "particle",
+        "example": "저는 아침에 학교에 가요.",
+        "notes": "存在の場所、移動の行先、時点。数量당等の拡張は未許可。"
+      },
+      "allowed_functions": [
+        "existence_location",
+        "destination",
+        "point_time"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "quantity_per_unit",
+        "cause",
+        "recipient"
+      ],
+      "required_context": [
+        "time/location noun and matching predicate",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 아침에 학교에 가요."
+      ],
+      "negative_examples": [
+        "감기에 아파요."
+      ],
+      "ambiguous_examples": [
+        "이것에 좋아요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "存在の場所、移動の行先、時点。数量당等の拡張は未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g23",
+      "surface": "에서",
+      "frozen_definition": {
+        "id": "ko_k1_g23",
+        "form": "에서",
+        "meaning_ja": "動作の場所",
+        "category": "particle",
+        "example": "저는 집에서 책을 읽어요.",
+        "notes": "動作の場所のみ。起点は追加候補として保留。"
+      },
+      "allowed_functions": [
+        "action_location"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "source",
+        "agent"
+      ],
+      "required_context": [
+        "action occurs at location; movement source is not authorized",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 집에서 책을 읽어요."
+      ],
+      "negative_examples": [
+        "학교에서 집으로 와요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "動作の場所のみ。起点は追加候補として保留。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g24",
+      "surface": "도",
+      "frozen_definition": {
+        "id": "ko_k1_g24",
+        "form": "도",
+        "meaning_ja": "〜も",
+        "category": "particle",
+        "example": "저도 오늘 학교에 가요.",
+        "notes": "単純な追加。疑問語+도等は아무 N도の許可範囲以外へ拡張しない。"
+      },
+      "allowed_functions": [
+        "simple_addition"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "scalar_even",
+        "unapproved_indefinite_negation"
+      ],
+      "required_context": [
+        "explicit additive referent/parallel proposition in context",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저도 오늘 학교에 가요."
+      ],
+      "negative_examples": [
+        "아이도 이것을 알아요."
+      ],
+      "ambiguous_examples": [
+        "저도 책을 읽어요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": "Simple addition is allowed; the reference to the permitted scope of 아무N도 does not define that scope. Scalar/indefinite readings need policy.",
+      "notes": "単純な追加。疑問語+도等は아무 N도の許可範囲以外へ拡張しない。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g25",
+      "surface": "하고",
+      "frozen_definition": {
+        "id": "ko_k1_g25",
+        "form": "하고",
+        "meaning_ja": "〜と（名詞並列・共同）",
+        "category": "particle",
+        "example": "저는 친구하고 밥을 먹어요.",
+        "notes": "接続・共同格。用言하다+고と区別する。와/과・(이)랑は未許可。"
+      },
+      "allowed_functions": [
+        "nominal_coordination",
+        "companionship"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "quotative",
+        "verbal_hada_group"
+      ],
+      "required_context": [
+        "noun + 하고 plus nominal peer or joint-action predicate",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 친구하고 밥을 먹어요."
+      ],
+      "negative_examples": [
+        "가라고 하고 가요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "接続・共同格。用言하다+고と区別する。와/과・(이)랑は未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g26",
+      "surface": "-(으)ㄴ",
+      "frozen_definition": {
+        "id": "ko_k1_g26",
+        "form": "-(으)ㄴ",
+        "meaning_ja": "〜い・〜な（形容詞連体）",
+        "category": "adnominal",
+        "example": "저는 작은 가방을 샀어요.",
+        "notes": "形容詞のみ。있다/없다の있는/없는は個別異形。動詞過去連体形は未許可。連体節の深い埋め込みは避ける。"
+      },
+      "allowed_functions": [
+        "adjective_attributive",
+        "existential_attributive"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "verb_past_attributive"
+      ],
+      "required_context": [
+        "registered adjective or explicitly listed 있는/없는",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 작은 가방을 샀어요."
+      ],
+      "negative_examples": [
+        "어제 읽은 책이에요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "形容詞のみ。있다/없다の있는/없는は個別異形。動詞過去連体形は未許可。連体節の深い埋め込みは避ける。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g27",
+      "surface": "-는",
+      "frozen_definition": {
+        "id": "ko_k1_g27",
+        "form": "-는",
+        "meaning_ja": "〜する（動詞現在連体）",
+        "category": "adnominal",
+        "example": "저는 친구가 읽는 책을 봐요.",
+        "notes": "現在連体形のみ。動詞の-(으)ㄴ/-(으)ㄹはこの項目では未許可。"
+      },
+      "allowed_functions": [
+        "verb_present_attributive"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "verb_past_attributive",
+        "verb_future_attributive"
+      ],
+      "required_context": [
+        "registered action verb and present modifier",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 친구가 읽는 책을 봐요."
+      ],
+      "negative_examples": [
+        "내일 읽을 책이에요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "現在連体形のみ。動詞の-(으)ㄴ/-(으)ㄹはこの項目では未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g28",
+      "surface": "에게/한테",
+      "frozen_definition": {
+        "id": "ko_k1_g28",
+        "form": "에게/한테",
+        "meaning_ja": "人に（受け手・相手）",
+        "category": "particle",
+        "example": "저는 친구한테 책을 줘요.",
+        "notes": "해요체では한테優先。에게서/한테서は未許可。"
+      },
+      "allowed_functions": [
+        "recipient",
+        "counterparty"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "source",
+        "nonhuman_destination"
+      ],
+      "required_context": [
+        "human noun/pronoun + giving/communication predicate",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 친구한테 책을 줘요."
+      ],
+      "negative_examples": [
+        "친구에게서 책을 받아요."
+      ],
+      "ambiguous_examples": [
+        "친구에게 책을 받아요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": "受け手・相手 does not explicitly authorize a source with 받다. Bare recipient/source ambiguity is REVIEW, not automatic source permission.",
+      "notes": "해요체では한테優先。에게서/한테서は未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g29",
+      "surface": "의",
+      "frozen_definition": {
+        "id": "ko_k1_g29",
+        "form": "의",
+        "meaning_ja": "〜の（所有）",
+        "category": "particle",
+        "example": "이것은 친구의 책이에요.",
+        "notes": "所有・所属のみ。나의→내、저의→제を同一語に正規化。이/그/저の指示連体詞と混同しない。"
+      },
+      "allowed_functions": [
+        "ownership",
+        "belonging"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "subjective_genitive",
+        "material",
+        "generic_relation"
+      ],
+      "required_context": [
+        "explicit human possessor and concrete possessed object",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "이것은 친구의 책이에요."
+      ],
+      "negative_examples": [
+        "나무의 의자예요."
+      ],
+      "ambiguous_examples": [
+        "영화의 이야기예요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": "所有・所属 does not delimit abstract content relationships. Concrete ownership is auto-checkable; broader relation needs policy.",
+      "notes": "所有・所属のみ。나의→내、저의→제を同一語に正規化。이/그/저の指示連体詞と混同しない。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g30",
+      "surface": "-(으)로",
+      "frozen_definition": {
+        "id": "ko_k1_g30",
+        "form": "-(으)로",
+        "meaning_ja": "〜で（手段）・〜へ（方向）",
+        "category": "particle",
+        "example": "저는 버스로 학교에 가요.",
+        "notes": "名詞に接続。母音・ㄹ받침の後は로、それ以外の받침は으로。交通手段・道具・移動方向に限定。資格・材料・原因・結果義、(으)로써/로서は未許可。"
+      },
+      "allowed_functions": [
+        "transport",
+        "instrument",
+        "direction"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "role",
+        "material",
+        "cause",
+        "change_result"
+      ],
+      "required_context": [
+        "dependent noun class AND governing predicate frame agree",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 버스로 학교에 가요."
+      ],
+      "negative_examples": [
+        "사진을 선물로 줘요."
+      ],
+      "ambiguous_examples": [
+        "이것으로 괜찮아요."
+      ],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "名詞に接続。母音・ㄹ받침の後は로、それ以外の받침は으로。交通手段・道具・移動方向に限定。資格・材料・原因・結果義、(으)로써/로서は未許可。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g31",
+      "surface": "부터 / 까지",
+      "frozen_definition": {
+        "id": "ko_k1_g31",
+        "form": "부터 / 까지",
+        "meaning_ja": "〜から・〜まで（起点・終点）",
+        "category": "particle",
+        "example": "저는 아침부터 저녁까지 일해요.",
+        "notes": "時間・場所の区間の開始と終わりに限定。この一対を1文法項目と数える。場所起点は집에서부터等の에서との組合せを優先。強調の「〜さえ」までへ拡張しない。"
+      },
+      "allowed_functions": [
+        "temporal_start_end",
+        "spatial_start_end"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "scalar_even"
+      ],
+      "required_context": [
+        "time/place endpoint and relevant event; emphasis not permitted",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 아침부터 저녁까지 일해요."
+      ],
+      "negative_examples": [
+        "아이까지 이것을 알아요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "heuristic",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "時間・場所の区間の開始と終わりに限定。この一対を1文法項目と数える。場所起点は집에서부터等の에서との組合せを優先。強調の「〜さえ」までへ拡張しない。",
+      "alternate_fixture_note": null
+    },
+    {
+      "grammar_id": "ko_k1_g32",
+      "surface": "만",
+      "frozen_definition": {
+        "id": "ko_k1_g32",
+        "form": "만",
+        "meaning_ja": "〜だけ（限定）",
+        "category": "particle",
+        "example": "저는 오늘 물만 마셔요.",
+        "notes": "名詞等の単純な限定のみ。숫자 만「万」と区別。-기만、만에、-(으)ㄹ 만하다等の別構文は未許可。"
+      },
+      "allowed_functions": [
+        "simple_nominal_limit"
+      ],
+      "disallowed_or_unapproved_functions": [
+        "ten_thousand",
+        "nominalization_only",
+        "elapsed_time",
+        "worth_doing"
+      ],
+      "required_context": [
+        "nominal attachment and ordinary event restriction",
+        "Registered lexical identity and untouched raw morphology are required; author labels alone are insufficient."
+      ],
+      "positive_examples": [
+        "저는 오늘 물만 마셔요."
+      ],
+      "negative_examples": [
+        "책을 읽기만 해요."
+      ],
+      "ambiguous_examples": [],
+      "autocheck": "hard",
+      "auto_pass_possible": true,
+      "context_review_possible": true,
+      "needs_human_policy": null,
+      "notes": "名詞等の単純な限定のみ。숫자 만「万」と区別。-기만、만에、-(으)ㄹ 만하다等の別構文は未許可。",
+      "alternate_fixture_note": null
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Korean K1 grammar array",
+  "type": "array",
+  "minItems": 29,
+  "maxItems": 29,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "form",
+      "meaning_ja",
+      "category",
+      "example",
+      "notes"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^ko_k1_g[0-9]{2}$"
+      },
+      "form": {
+        "type": "string",
+        "minLength": 1
+      },
+      "meaning_ja": {
+        "type": "string",
+        "minLength": 1
+      },
+      "category": {
+        "enum": [
+          "copula",
+          "ending",
+          "tense",
+          "aspect",
+          "modality",
+          "negation",
+          "connector",
+          "request",
+          "proposal",
+          "auxiliary",
+          "particle",
+          "adnominal"
+        ]
+      },
+      "example": {
+        "type": "string",
+        "minLength": 1
+      },
+      "notes": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

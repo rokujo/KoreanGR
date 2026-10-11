@@ -1,0 +1,13 @@
+{
+  "run": "phase3_retry",
+  "text_number": 2,
+  "status": "known_structural_failure_unfixed",
+  "surface": "네",
+  "raw_tag": "IC",
+  "expected": {"vocab_id": "ko_k1_0442", "lemma": "네", "pos": "interjection", "sense": "yes"},
+  "observed": {"vocab_id": "ko_k1_0003", "lemma": "너", "pos": "pronoun", "sense": "you_informal"},
+  "full_candidate_fixture": "pilot/ko/k1/phase3_retry/failed_attempts/K1-002-attempt-01.json",
+  "minimal_probes": ["네.", "네, 책이 있어요.", "“네, 가방 안에 있어요.”"],
+  "required_future_contrast_tests": ["interjection_yes", "possessive_informal_you", "native_numeral_four"],
+  "policy": "Do not rewrite the frozen analyzer or resume the stopped run. A future analyzer version must resolve from registered identity, raw POS and local evidence."
+}

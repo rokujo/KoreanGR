@@ -1,0 +1,387 @@
+{
+  "engineering_start_utc": "2026-10-10T22:21:36Z",
+  "production_start_utc": "2026-10-10T22:28:38.286762+00:00",
+  "production_start_counter": 58409.8237418,
+  "texts": [
+    {
+      "text_number": 1,
+      "start_counter": 58409.8237466,
+      "start_utc": "2026-10-10T22:28:38.330300+00:00",
+      "phase": "stopped",
+      "phase_start_counter": 58499.6450263,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6c\\candidates\\K1-001-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "future_expansion",
+              "detail": {
+                "vocab_id": "ko_k1_0446",
+                "lemma": "저",
+                "surface": "저",
+                "start": 176,
+                "reason": "future_expansion"
+              }
+            },
+            {
+              "code": "future_expansion",
+              "detail": {
+                "vocab_id": "ko_k1_0446",
+                "lemma": "저",
+                "surface": "저",
+                "start": 219,
+                "reason": "future_expansion"
+              }
+            },
+            {
+              "code": "scope_identity_mismatch",
+              "detail": {
+                "type": "SCOPE_IDENTITY_MISMATCH",
+                "start": 176,
+                "end": 177,
+                "surface": "저",
+                "views": [
+                  {
+                    "scope": "sentence",
+                    "original_offset": 175,
+                    "before_recovery_ids": [
+                      "ko_k1_0002"
+                    ],
+                    "resolved_ids": [
+                      "ko_k1_0002"
+                    ],
+                    "ne_recovery_decisions": []
+                  },
+                  {
+                    "scope": "paragraph",
+                    "original_offset": 94,
+                    "before_recovery_ids": [
+                      "ko_k1_0446"
+                    ],
+                    "resolved_ids": [
+                      "ko_k1_0446"
+                    ],
+                    "ne_recovery_decisions": []
+                  },
+                  {
+                    "scope": "full_text",
+                    "original_offset": 0,
+                    "before_recovery_ids": [
+                      "ko_k1_0446"
+                    ],
+                    "resolved_ids": [
+                      "ko_k1_0446"
+                    ],
+                    "ne_recovery_decisions": []
+                  }
+                ],
+                "decision": "UNRESOLVED",
+                "structural_defect": true,
+                "author_intent_not_authority": true
+              }
+            },
+            {
+              "code": "scope_identity_mismatch",
+              "detail": {
+                "type": "SCOPE_IDENTITY_MISMATCH",
+                "start": 219,
+                "end": 220,
+                "surface": "저",
+                "views": [
+                  {
+                    "scope": "sentence",
+                    "original_offset": 218,
+                    "before_recovery_ids": [
+                      "ko_k1_0002"
+                    ],
+                    "resolved_ids": [
+                      "ko_k1_0002"
+                    ],
+                    "ne_recovery_decisions": []
+                  },
+                  {
+                    "scope": "paragraph",
+                    "original_offset": 194,
+                    "before_recovery_ids": [
+                      "ko_k1_0446"
+                    ],
+                    "resolved_ids": [
+                      "ko_k1_0446"
+                    ],
+                    "ne_recovery_decisions": []
+                  },
+                  {
+                    "scope": "full_text",
+                    "original_offset": 0,
+                    "before_recovery_ids": [
+                      "ko_k1_0446"
+                    ],
+                    "resolved_ids": [
+                      "ko_k1_0446"
+                    ],
+                    "ne_recovery_decisions": []
+                  }
+                ],
+                "decision": "UNRESOLVED",
+                "structural_defect": true,
+                "author_intent_not_authority": true
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 82: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 102: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 80.95642650000082,
+          "validation_seconds": 1.4363094000000274,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.2828636999838636,
+            "semantic_diagnostics": 0.006198199997015763
+          },
+          "future_usage_count": 2
+        }
+      ],
+      "stages": {
+        "scene_planning": 6.235393299997668,
+        "lexical_preflight": 1.1920601000019815,
+        "author_draft": 80.95642650000082,
+        "morphology_vocab_analysis": 1.2828636999838636,
+        "mechanical_validation": 0.15344570001616376
+      },
+      "committed": false,
+      "plan": {
+        "text_number": 1,
+        "title_ko": "친구하고 점심을 먹어요",
+        "genre": "work",
+        "scene": [
+          "work",
+          "food",
+          "friendship",
+          "communication"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "eat lunch with busy colleague",
+          "setting": "company and nearby restaurant",
+          "participants": [
+            "adult narrator",
+            "friend at work"
+          ],
+          "problem_type": "friend has unfinished work",
+          "resolution_type": "wait briefly then eat together",
+          "main_actions": [
+            "check lunchtime",
+            "finish work",
+            "wait for colleague",
+            "eat lunch",
+            "return to company"
+          ]
+        }
+      },
+      "preflight_seconds": 1.1920601000019815,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 7,
+            "vocab_id": null,
+            "lemma": "제",
+            "surface": "제",
+            "start": 0,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 7,
+            "vocab_id": "ko_k1_0464",
+            "lemma": "전",
+            "surface": "전",
+            "start": 8,
+            "reason": "future_expansion"
+          },
+          {
+            "sentence": 12,
+            "vocab_id": null,
+            "lemma": "세요",
+            "surface": "세요",
+            "start": 9,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 1,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6c\\candidates\\K1-001-attempt-01.json",
+      "end_counter": 58499.6504529,
+      "total_seconds": 89.82670630000212
+    }
+  ],
+  "completed": false,
+  "methodology": "Live local LLM author, sequential snapshot/file callback; elapsed author stage includes model reasoning and file transport. Not external API throughput.",
+  "stop": {
+    "type": "structural_analyzer_defect",
+    "text": 1,
+    "errors": [
+      {
+        "code": "future_expansion",
+        "detail": {
+          "vocab_id": "ko_k1_0446",
+          "lemma": "저",
+          "surface": "저",
+          "start": 176,
+          "reason": "future_expansion"
+        }
+      },
+      {
+        "code": "future_expansion",
+        "detail": {
+          "vocab_id": "ko_k1_0446",
+          "lemma": "저",
+          "surface": "저",
+          "start": 219,
+          "reason": "future_expansion"
+        }
+      },
+      {
+        "code": "scope_identity_mismatch",
+        "detail": {
+          "type": "SCOPE_IDENTITY_MISMATCH",
+          "start": 176,
+          "end": 177,
+          "surface": "저",
+          "views": [
+            {
+              "scope": "sentence",
+              "original_offset": 175,
+              "before_recovery_ids": [
+                "ko_k1_0002"
+              ],
+              "resolved_ids": [
+                "ko_k1_0002"
+              ],
+              "ne_recovery_decisions": []
+            },
+            {
+              "scope": "paragraph",
+              "original_offset": 94,
+              "before_recovery_ids": [
+                "ko_k1_0446"
+              ],
+              "resolved_ids": [
+                "ko_k1_0446"
+              ],
+              "ne_recovery_decisions": []
+            },
+            {
+              "scope": "full_text",
+              "original_offset": 0,
+              "before_recovery_ids": [
+                "ko_k1_0446"
+              ],
+              "resolved_ids": [
+                "ko_k1_0446"
+              ],
+              "ne_recovery_decisions": []
+            }
+          ],
+          "decision": "UNRESOLVED",
+          "structural_defect": true,
+          "author_intent_not_authority": true
+        }
+      },
+      {
+        "code": "scope_identity_mismatch",
+        "detail": {
+          "type": "SCOPE_IDENTITY_MISMATCH",
+          "start": 219,
+          "end": 220,
+          "surface": "저",
+          "views": [
+            {
+              "scope": "sentence",
+              "original_offset": 218,
+              "before_recovery_ids": [
+                "ko_k1_0002"
+              ],
+              "resolved_ids": [
+                "ko_k1_0002"
+              ],
+              "ne_recovery_decisions": []
+            },
+            {
+              "scope": "paragraph",
+              "original_offset": 194,
+              "before_recovery_ids": [
+                "ko_k1_0446"
+              ],
+              "resolved_ids": [
+                "ko_k1_0446"
+              ],
+              "ne_recovery_decisions": []
+            },
+            {
+              "scope": "full_text",
+              "original_offset": 0,
+              "before_recovery_ids": [
+                "ko_k1_0446"
+              ],
+              "resolved_ids": [
+                "ko_k1_0446"
+              ],
+              "ne_recovery_decisions": []
+            }
+          ],
+          "decision": "UNRESOLVED",
+          "structural_defect": true,
+          "author_intent_not_authority": true
+        }
+      },
+      {
+        "code": "coverage_or_token_policy",
+        "detail": "Token 82: uncontrolled vocabulary or future introduction"
+      },
+      {
+        "code": "coverage_or_token_policy",
+        "detail": "Token 102: uncontrolled vocabulary or future introduction"
+      },
+      {
+        "code": "coverage_or_token_policy",
+        "detail": "controlled_vocab_coverage below hard 100%"
+      },
+      {
+        "code": "coverage_or_token_policy",
+        "detail": "previous_vocab_coverage below hard 98%"
+      }
+    ]
+  },
+  "production_end_counter": 58499.6504529,
+  "production_end_utc": "2026-10-10T22:30:08.113501+00:00",
+  "production_wall_seconds": 89.82671110000229,
+  "stage_totals_seconds": {
+    "scene_planning": 6.235393299997668,
+    "lexical_preflight": 1.1920601000019815,
+    "author_draft": 80.95642650000082,
+    "morphology_vocab_analysis": 1.2828636999838636,
+    "mechanical_validation": 0.15344570001616376
+  },
+  "per_text_statistics": {
+    "n": 0,
+    "min": null,
+    "max": null,
+    "mean": null,
+    "median": null,
+    "p90": null
+  }
+}

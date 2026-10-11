@@ -1,0 +1,21 @@
+{
+  "command": "python -B scripts/run_k1_phase3_1_tests.py",
+  "tests_run": 134,
+  "failures": 0,
+  "errors": 0,
+  "ok": true,
+  "seconds": 262.486,
+  "initial_candidate_tests": {
+    "tests": 30,
+    "failures": 1,
+    "errors": 15,
+    "cause": "Duplicate grammar_used output keyword and VV-I prefix handling bug in new code; fixed implementation, no rule relaxation.",
+    "corrected_before_smoke": {
+      "tests": 30,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 44.199
+    }
+  },
+  "log": "reports/k1_phase3_1_test_log.txt"
+}

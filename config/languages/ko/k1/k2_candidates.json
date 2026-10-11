@@ -1,0 +1,147 @@
+{
+  "status": "candidate_ledger_only",
+  "counted_in_K1_budget": false,
+  "notes": "退役12エントリのK2候補台帳のみ。K2の語彙・Tier・教材計画は設計しない。",
+  "entries": [
+    {
+      "former_id": "ko_k1_0773",
+      "lemma": "함께",
+      "pos": "adverb",
+      "sense": "together",
+      "gloss_ja": "一緒に",
+      "status": "K2_candidate_only",
+      "reason": "Core 같이とほぼ同義。",
+      "replacement_id": "ko_k1_0801"
+    },
+    {
+      "former_id": "ko_k1_0702",
+      "lemma": "조부모",
+      "pos": "noun",
+      "sense": "grandparents",
+      "gloss_ja": "祖父母",
+      "status": "K2_candidate_only",
+      "reason": "E1 할머니/할아버지で表現できる。",
+      "replacement_id": "ko_k1_0802"
+    },
+    {
+      "former_id": "ko_k1_0797",
+      "lemma": "기차역",
+      "pos": "noun",
+      "sense": "train_station",
+      "gloss_ja": "鉄道の駅",
+      "status": "K2_candidate_only",
+      "reason": "Core 역との差が小さい。",
+      "replacement_id": "ko_k1_0803"
+    },
+    {
+      "former_id": "ko_k1_0757",
+      "lemma": "찍히다",
+      "pos": "verb",
+      "sense": "be_photographed",
+      "gloss_ja": "写真に写る",
+      "status": "K2_candidate_only",
+      "reason": "受動の負荷に対して場面が限定される。",
+      "replacement_id": "ko_k1_0804"
+    },
+    {
+      "former_id": "ko_k1_0710",
+      "lemma": "관계",
+      "pos": "noun",
+      "sense": "relationship",
+      "gloss_ja": "人と人の関係",
+      "status": "K2_candidate_only",
+      "reason": "抽象的で、具体的な人物関係は既存語で表現できる。",
+      "replacement_id": "ko_k1_0805"
+    },
+    {
+      "former_id": "ko_k1_0800",
+      "lemma": "정보",
+      "pos": "noun",
+      "sense": "information",
+      "gloss_ja": "情報",
+      "status": "K2_candidate_only",
+      "reason": "住所・時刻等の具体語で代替できる。",
+      "replacement_id": "ko_k1_0806"
+    },
+    {
+      "former_id": "ko_k1_0647",
+      "lemma": "가장",
+      "pos": "adverb",
+      "sense": "most",
+      "gloss_ja": "最も",
+      "status": "K2_candidate_only",
+      "reason": "제일をK1の最上級として優先し、重複を減らす。",
+      "replacement_id": "ko_k1_0807"
+    },
+    {
+      "former_id": "ko_k1_0363",
+      "lemma": "오렌지",
+      "pos": "noun",
+      "sense": "orange",
+      "gloss_ja": "オレンジ",
+      "status": "K2_candidate_only",
+      "reason": "果物品種より歯磨き・清掃の基本動作を優先。",
+      "replacement_id": "ko_k1_0808",
+      "former_rank": 363,
+      "former_tier": "E1",
+      "former_category": "food_nature",
+      "retired_in_phase": "2.1A"
+    },
+    {
+      "former_id": "ko_k1_0603",
+      "lemma": "찍다",
+      "pos": "verb",
+      "sense": "stamp",
+      "gloss_ja": "印を押す",
+      "status": "K2_candidate_only",
+      "reason": "判の義より貼付・工作・修理の基本動作を優先。Core写真義は維持。",
+      "replacement_id": "ko_k1_0809",
+      "former_rank": 603,
+      "former_tier": "E2",
+      "former_category": "verbs",
+      "retired_in_phase": "2.1A"
+    },
+    {
+      "former_id": "ko_k1_0365",
+      "lemma": "포도",
+      "pos": "noun",
+      "sense": "grape",
+      "gloss_ja": "ブドウ",
+      "status": "K2_candidate_only",
+      "reason": "果物品種より投げる・受ける・遊ぶ対象を優先。",
+      "replacement_id": "ko_k1_0810",
+      "former_rank": 365,
+      "former_tier": "E1",
+      "former_category": "food_nature",
+      "retired_in_phase": "2.1A"
+    },
+    {
+      "former_id": "ko_k1_0577",
+      "lemma": "오르다",
+      "pos": "verb",
+      "sense": "rise_climb",
+      "gloss_ja": "上る",
+      "status": "K2_candidate_only",
+      "reason": "上る移動語の重複を減らして描画・展示の対象名詞を補う。",
+      "replacement_id": "ko_k1_0811",
+      "former_rank": 577,
+      "former_tier": "E2",
+      "former_category": "verbs",
+      "retired_in_phase": "2.1A"
+    },
+    {
+      "former_id": "ko_k1_0571",
+      "lemma": "가져다주다",
+      "pos": "verb",
+      "sense": "bring_to_someone",
+      "gloss_ja": "持ってきて渡す",
+      "status": "K2_candidate_only",
+      "reason": "既存の移動・授受語の組合せより物を保持・持ち上げる動作を補う。",
+      "replacement_id": "ko_k1_0812",
+      "former_rank": 571,
+      "former_tier": "E2",
+      "former_category": "verbs",
+      "retired_in_phase": "2.1A"
+    }
+  ]
+}

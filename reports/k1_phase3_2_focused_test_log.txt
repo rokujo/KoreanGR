@@ -1,0 +1,27 @@
+test_audit_covers_all_frozen_aliases (test_k1_phase3_2.BoundaryTests.test_audit_covers_all_frozen_aliases) ... ok
+test_contrast_fixtures (test_k1_phase3_2.BoundaryTests.test_contrast_fixtures) ... ok
+test_existing_constrained_walk_retained (test_k1_phase3_2.BoundaryTests.test_existing_constrained_walk_retained) ... ok
+test_frozen_phase23_regression_sentences (test_k1_phase3_2.BoundaryTests.test_frozen_phase23_regression_sentences) ... ok
+test_frozen_phase31_irregular_probes (test_k1_phase3_2.BoundaryTests.test_frozen_phase31_irregular_probes) ... ok
+test_generated_sense_cannot_override_context (test_k1_phase3_2.BoundaryTests.test_generated_sense_cannot_override_context) ... ok
+test_hang_is_not_walk (test_k1_phase3_2.BoundaryTests.test_hang_is_not_walk) ... ok
+test_no_sense_default_without_positive_evidence (test_k1_phase3_2.BoundaryTests.test_no_sense_default_without_positive_evidence) ... ok
+test_numeral_alias_cannot_cross_punctuation (test_k1_phase3_2.BoundaryTests.test_numeral_alias_cannot_cross_punctuation) ... ok
+test_possessive_alias_requires_np_and_nominal_evidence (test_k1_phase3_2.BoundaryTests.test_possessive_alias_requires_np_and_nominal_evidence) ... ok
+test_unique_entry_does_not_override_pos (test_k1_phase3_2.BoundaryTests.test_unique_entry_does_not_override_pos) ... ok
+test_003_boundary (test_k1_phase3_2.GateTests.test_003_boundary) ... ok
+test_actual_permission_only_and_two_smoke_transactions (test_k1_phase3_2.GateTests.test_actual_permission_only_and_two_smoke_transactions) ... ok
+test_atomic_crash_after_publish_recovery_once (test_k1_phase3_2.GateTests.test_atomic_crash_after_publish_recovery_once) ... ok
+test_atomic_crash_before_publish (test_k1_phase3_2.GateTests.test_atomic_crash_before_publish) ... ok
+test_future_vocab_reject_not_incidental (test_k1_phase3_2.GateTests.test_future_vocab_reject_not_incidental) ... ok
+test_old_ne_identity_bug_still_rejected_by_unchanged_gate (test_k1_phase3_2.GateTests.test_old_ne_identity_bug_still_rejected_by_unchanged_gate) ... ok
+test_original_rice_candidate_passes_and_state_unchanged_until_commit (test_k1_phase3_2.GateTests.test_original_rice_candidate_passes_and_state_unchanged_until_commit) ... ok
+test_planned_new_identity_gate_not_relaxed (test_k1_phase3_2.GateTests.test_planned_new_identity_gate_not_relaxed) ... ok
+test_retired_identity_reject (test_k1_phase3_2.GateTests.test_retired_identity_reject) ... ok
+test_retry_isolation_then_commit (test_k1_phase3_2.GateTests.test_retry_isolation_then_commit) ... ok
+test_wrong_pos_unique_dictionary_candidate_rejected (test_k1_phase3_2.GateTests.test_wrong_pos_unique_dictionary_candidate_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 40.411s
+
+OK

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "phase",
+    "scope",
+    "annotation_is_independent_gold",
+    "groups"
+  ],
+  "properties": {
+    "phase": {
+      "const": "2.1A"
+    },
+    "scope": {
+      "const": "isolated_examples_not_readers"
+    },
+    "annotation_is_independent_gold": {
+      "const": false
+    },
+    "groups": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "required",
+          "sentences"
+        ],
+        "properties": {
+          "key": {
+            "enum": [
+              "tooth_cleaning",
+              "tape_attachment",
+              "ball_play",
+              "drawing_art",
+              "holding_lifting"
+            ]
+          },
+          "required": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 3,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "sentences": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 3,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            }
+          },
+          "declared_sense": {
+            "const": "hold_lift_by_hand"
+          },
+          "context_review_required": {
+            "const": true
+          },
+          "sense_overrides": {
+            "type": "object",
+            "additionalProperties": {
+              "const": "tooth"
+            }
+          }
+        }
+      }
+    }
+  }
+}

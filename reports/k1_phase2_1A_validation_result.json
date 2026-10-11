@@ -1,0 +1,2176 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "Flexible windows and numeric matching are plans, not actual exposure evidence.",
+    "Short-example morphology/sense annotations require human review; lemma alone never licenses a meaning."
+  ],
+  "summary": {
+    "core": 300,
+    "expansion": 500,
+    "total": 800,
+    "tiers": {
+      "E1": 200,
+      "E2": 200,
+      "E3": 100
+    },
+    "grammar": 32,
+    "categories": {
+      "people_social": 40,
+      "places_objects": 92,
+      "food_nature": 48,
+      "verbs": 100,
+      "adjectives": 65,
+      "adverbs_connectors": 50,
+      "time_counters_units": 35,
+      "abstract_body_emotion": 40,
+      "school_work_transport_info": 30
+    },
+    "new_texts_generated": 0,
+    "introduction_capacity": {
+      "assigned": 500,
+      "slots": 510,
+      "slack": 10,
+      "period_counts": {
+        "0": 2,
+        "1": 6,
+        "2": 247
+      },
+      "last_introduction": 255,
+      "new_entries_256_to_300": 0
+    },
+    "replacements": {
+      "adopted_total": 12,
+      "adopted_this_phase": 5,
+      "pending": 0
+    },
+    "id_migration": {
+      "retired": 12,
+      "new_this_phase": [
+        "ko_k1_0808",
+        "ko_k1_0809",
+        "ko_k1_0810",
+        "ko_k1_0811",
+        "ko_k1_0812"
+      ],
+      "next_sequence": 813,
+      "aliases": 0
+    },
+    "review_windows": {
+      "active_entries": 500,
+      "window_count": 2500,
+      "retired_entries": 0,
+      "numeric_review_capacity": 10,
+      "numeric_complete": true,
+      "minimum_simulated_distinct_texts": 6,
+      "actual_exposure_verified": false,
+      "review_load": {
+        "min": 0,
+        "max": 10,
+        "mean": 8.333,
+        "median": 10.0,
+        "p90": 10
+      }
+    },
+    "history_integrity": "PASS",
+    "category_hard_exact": false,
+    "coverage_policy": {
+      "controlled_hard": 1.0,
+      "previous_hard": 0.98,
+      "previous_target": 0.99,
+      "target_miss_is_blocker": false
+    },
+    "phase2_2_can_proceed": true,
+    "mass_generation_approved": false,
+    "lexical_gap_examples": [
+      {
+        "key": "tooth_cleaning",
+        "scope": "isolated_examples_not_readers",
+        "sentences": [
+          "아침에 이를 닦아요.",
+          "저는 칫솔로 이를 닦아요.",
+          "수건으로 책상을 닦아요."
+        ],
+        "validation_text_number": 207,
+        "required_vocab_ids": [
+          "ko_k1_0674",
+          "ko_k1_0808"
+        ],
+        "used_vocab_ids": [
+          "ko_k1_0002",
+          "ko_k1_0072",
+          "ko_k1_0112",
+          "ko_k1_0325",
+          "ko_k1_0327",
+          "ko_k1_0674",
+          "ko_k1_0808"
+        ],
+        "grammar_used": [
+          "ko_k1_g02",
+          "ko_k1_g19",
+          "ko_k1_g21",
+          "ko_k1_g22",
+          "ko_k1_g30"
+        ],
+        "coverage": {
+          "ok": true,
+          "N": 10,
+          "U": 0,
+          "controlled_tokens": 10,
+          "previous_tokens": 10,
+          "new_lemma_count": 0,
+          "new_entry_count": 0,
+          "controlled_vocab_coverage": 1.0,
+          "previous_vocab_coverage": 1.0,
+          "dynamic_hard_new_token_limit": 0,
+          "target_new_token_limit": 0,
+          "errors": [],
+          "warnings": []
+        },
+        "generated_annotations": [
+          {
+            "surface": "아침",
+            "lemma": "아침",
+            "pos": "noun",
+            "sense": "morning",
+            "vocab_id": "ko_k1_0072",
+            "role": "core",
+            "start": 0,
+            "end": 2,
+            "morph_indices": [
+              0
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "에",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 2,
+            "end": 3,
+            "morph_indices": [
+              1
+            ],
+            "grammar_id": "ko_k1_g22"
+          },
+          {
+            "surface": "이",
+            "lemma": "이",
+            "pos": "noun",
+            "sense": "tooth",
+            "vocab_id": "ko_k1_0674",
+            "role": "previous_expansion",
+            "start": 4,
+            "end": 5,
+            "morph_indices": [
+              2
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "를",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 5,
+            "end": 6,
+            "morph_indices": [
+              3
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "닦",
+            "lemma": "닦다",
+            "pos": "verb",
+            "sense": "wipe_clean",
+            "vocab_id": "ko_k1_0808",
+            "role": "previous_expansion",
+            "start": 7,
+            "end": 8,
+            "morph_indices": [
+              4
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "아요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 8,
+            "end": 10,
+            "morph_indices": [
+              5
+            ],
+            "grammar_id": "ko_k1_g02"
+          },
+          {
+            "surface": "저",
+            "lemma": "저",
+            "pos": "pronoun",
+            "sense": "i_humble",
+            "vocab_id": "ko_k1_0002",
+            "role": "core",
+            "start": 12,
+            "end": 13,
+            "morph_indices": [
+              7
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "는",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 13,
+            "end": 14,
+            "morph_indices": [
+              8
+            ],
+            "grammar_id": "ko_k1_g19"
+          },
+          {
+            "surface": "칫솔",
+            "lemma": "칫솔",
+            "pos": "noun",
+            "sense": "toothbrush",
+            "vocab_id": "ko_k1_0327",
+            "role": "previous_expansion",
+            "start": 15,
+            "end": 17,
+            "morph_indices": [
+              9
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "로",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 17,
+            "end": 18,
+            "morph_indices": [
+              10
+            ],
+            "grammar_id": "ko_k1_g30"
+          },
+          {
+            "surface": "이",
+            "lemma": "이",
+            "pos": "noun",
+            "sense": "tooth",
+            "vocab_id": "ko_k1_0674",
+            "role": "previous_expansion",
+            "start": 19,
+            "end": 20,
+            "morph_indices": [
+              11
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "를",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 20,
+            "end": 21,
+            "morph_indices": [
+              12
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "닦",
+            "lemma": "닦다",
+            "pos": "verb",
+            "sense": "wipe_clean",
+            "vocab_id": "ko_k1_0808",
+            "role": "previous_expansion",
+            "start": 22,
+            "end": 23,
+            "morph_indices": [
+              13
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "아요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 23,
+            "end": 25,
+            "morph_indices": [
+              14
+            ],
+            "grammar_id": "ko_k1_g02"
+          },
+          {
+            "surface": "수건",
+            "lemma": "수건",
+            "pos": "noun",
+            "sense": "towel",
+            "vocab_id": "ko_k1_0325",
+            "role": "previous_expansion",
+            "start": 27,
+            "end": 29,
+            "morph_indices": [
+              16
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "으로",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 29,
+            "end": 31,
+            "morph_indices": [
+              17
+            ],
+            "grammar_id": "ko_k1_g30"
+          },
+          {
+            "surface": "책상",
+            "lemma": "책상",
+            "pos": "noun",
+            "sense": "desk",
+            "vocab_id": "ko_k1_0112",
+            "role": "core",
+            "start": 32,
+            "end": 34,
+            "morph_indices": [
+              18
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "을",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 34,
+            "end": 35,
+            "morph_indices": [
+              19
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "닦",
+            "lemma": "닦다",
+            "pos": "verb",
+            "sense": "wipe_clean",
+            "vocab_id": "ko_k1_0808",
+            "role": "previous_expansion",
+            "start": 36,
+            "end": 37,
+            "morph_indices": [
+              20
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "아요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 37,
+            "end": 39,
+            "morph_indices": [
+              21
+            ],
+            "grammar_id": "ko_k1_g02"
+          }
+        ],
+        "raw_morphology": [
+          {
+            "form": "아침",
+            "tag": "NNG",
+            "start": 0,
+            "length": 2
+          },
+          {
+            "form": "에",
+            "tag": "JKB",
+            "start": 2,
+            "length": 1
+          },
+          {
+            "form": "이",
+            "tag": "NP",
+            "start": 4,
+            "length": 1
+          },
+          {
+            "form": "를",
+            "tag": "JKO",
+            "start": 5,
+            "length": 1
+          },
+          {
+            "form": "닦",
+            "tag": "VV",
+            "start": 7,
+            "length": 1
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 8,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 10,
+            "length": 1
+          },
+          {
+            "form": "저",
+            "tag": "NP",
+            "start": 12,
+            "length": 1
+          },
+          {
+            "form": "는",
+            "tag": "JX",
+            "start": 13,
+            "length": 1
+          },
+          {
+            "form": "칫솔",
+            "tag": "NNG",
+            "start": 15,
+            "length": 2
+          },
+          {
+            "form": "로",
+            "tag": "JKB",
+            "start": 17,
+            "length": 1
+          },
+          {
+            "form": "이",
+            "tag": "NNG",
+            "start": 19,
+            "length": 1
+          },
+          {
+            "form": "를",
+            "tag": "JKO",
+            "start": 20,
+            "length": 1
+          },
+          {
+            "form": "닦",
+            "tag": "VV",
+            "start": 22,
+            "length": 1
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 23,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 25,
+            "length": 1
+          },
+          {
+            "form": "수건",
+            "tag": "NNG",
+            "start": 27,
+            "length": 2
+          },
+          {
+            "form": "으로",
+            "tag": "JKB",
+            "start": 29,
+            "length": 2
+          },
+          {
+            "form": "책상",
+            "tag": "NNG",
+            "start": 32,
+            "length": 2
+          },
+          {
+            "form": "을",
+            "tag": "JKO",
+            "start": 34,
+            "length": 1
+          },
+          {
+            "form": "닦",
+            "tag": "VV",
+            "start": 36,
+            "length": 1
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 37,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 39,
+            "length": 1
+          }
+        ],
+        "annotation_review_required": [
+          {
+            "type": "Kiwi_POS_sense_disagreement",
+            "surface": "이",
+            "lemma": "이",
+            "start": 4,
+            "candidate_id": "ko_k1_0674"
+          },
+          {
+            "type": "sense_disambiguation",
+            "surface": "저",
+            "lemma": "저",
+            "start": 12,
+            "candidate_id": "ko_k1_0002"
+          },
+          {
+            "type": "sense_disambiguation",
+            "surface": "이",
+            "lemma": "이",
+            "start": 19,
+            "candidate_id": "ko_k1_0674"
+          }
+        ],
+        "errors": [],
+        "declared_sense_overrides": {
+          "아침에 이를 닦아요.::이": "tooth",
+          "저는 칫솔로 이를 닦아요.::이": "tooth"
+        },
+        "ok": true,
+        "sense_truth_independently_verified": false
+      },
+      {
+        "key": "tape_attachment",
+        "scope": "isolated_examples_not_readers",
+        "sentences": [
+          "종이에 테이프를 붙여요.",
+          "친구도 테이프를 붙여요.",
+          "테이프로 종이를 책에 붙여요."
+        ],
+        "validation_text_number": 186,
+        "required_vocab_ids": [
+          "ko_k1_0711",
+          "ko_k1_0809"
+        ],
+        "used_vocab_ids": [
+          "ko_k1_0022",
+          "ko_k1_0101",
+          "ko_k1_0103",
+          "ko_k1_0711",
+          "ko_k1_0809"
+        ],
+        "grammar_used": [
+          "ko_k1_g02",
+          "ko_k1_g21",
+          "ko_k1_g22",
+          "ko_k1_g24",
+          "ko_k1_g30"
+        ],
+        "coverage": {
+          "ok": true,
+          "N": 10,
+          "U": 0,
+          "controlled_tokens": 10,
+          "previous_tokens": 10,
+          "new_lemma_count": 0,
+          "new_entry_count": 0,
+          "controlled_vocab_coverage": 1.0,
+          "previous_vocab_coverage": 1.0,
+          "dynamic_hard_new_token_limit": 0,
+          "target_new_token_limit": 0,
+          "errors": [],
+          "warnings": []
+        },
+        "generated_annotations": [
+          {
+            "surface": "종이",
+            "lemma": "종이",
+            "pos": "noun",
+            "sense": "paper",
+            "vocab_id": "ko_k1_0103",
+            "role": "core",
+            "start": 0,
+            "end": 2,
+            "morph_indices": [
+              0
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "에",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 2,
+            "end": 3,
+            "morph_indices": [
+              1
+            ],
+            "grammar_id": "ko_k1_g22"
+          },
+          {
+            "surface": "테이프",
+            "lemma": "테이프",
+            "pos": "noun",
+            "sense": "adhesive_tape",
+            "vocab_id": "ko_k1_0711",
+            "role": "previous_expansion",
+            "start": 4,
+            "end": 7,
+            "morph_indices": [
+              2
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "를",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 7,
+            "end": 8,
+            "morph_indices": [
+              3
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "붙여",
+            "lemma": "붙이다",
+            "pos": "verb",
+            "sense": "attach_stick",
+            "vocab_id": "ko_k1_0809",
+            "role": "previous_expansion",
+            "start": 9,
+            "end": 11,
+            "morph_indices": [
+              4
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "여요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 10,
+            "end": 12,
+            "morph_indices": [
+              5
+            ],
+            "grammar_id": "ko_k1_g02"
+          },
+          {
+            "surface": "친구",
+            "lemma": "친구",
+            "pos": "noun",
+            "sense": "friend",
+            "vocab_id": "ko_k1_0022",
+            "role": "core",
+            "start": 14,
+            "end": 16,
+            "morph_indices": [
+              7
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "도",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 16,
+            "end": 17,
+            "morph_indices": [
+              8
+            ],
+            "grammar_id": "ko_k1_g24"
+          },
+          {
+            "surface": "테이프",
+            "lemma": "테이프",
+            "pos": "noun",
+            "sense": "adhesive_tape",
+            "vocab_id": "ko_k1_0711",
+            "role": "previous_expansion",
+            "start": 18,
+            "end": 21,
+            "morph_indices": [
+              9
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "를",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 21,
+            "end": 22,
+            "morph_indices": [
+              10
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "붙여",
+            "lemma": "붙이다",
+            "pos": "verb",
+            "sense": "attach_stick",
+            "vocab_id": "ko_k1_0809",
+            "role": "previous_expansion",
+            "start": 23,
+            "end": 25,
+            "morph_indices": [
+              11
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "여요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 24,
+            "end": 26,
+            "morph_indices": [
+              12
+            ],
+            "grammar_id": "ko_k1_g02"
+          },
+          {
+            "surface": "테이프",
+            "lemma": "테이프",
+            "pos": "noun",
+            "sense": "adhesive_tape",
+            "vocab_id": "ko_k1_0711",
+            "role": "previous_expansion",
+            "start": 28,
+            "end": 31,
+            "morph_indices": [
+              14
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "로",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 31,
+            "end": 32,
+            "morph_indices": [
+              15
+            ],
+            "grammar_id": "ko_k1_g30"
+          },
+          {
+            "surface": "종이",
+            "lemma": "종이",
+            "pos": "noun",
+            "sense": "paper",
+            "vocab_id": "ko_k1_0103",
+            "role": "core",
+            "start": 33,
+            "end": 35,
+            "morph_indices": [
+              16
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "를",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 35,
+            "end": 36,
+            "morph_indices": [
+              17
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "책",
+            "lemma": "책",
+            "pos": "noun",
+            "sense": "book",
+            "vocab_id": "ko_k1_0101",
+            "role": "core",
+            "start": 37,
+            "end": 38,
+            "morph_indices": [
+              18
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "에",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 38,
+            "end": 39,
+            "morph_indices": [
+              19
+            ],
+            "grammar_id": "ko_k1_g22"
+          },
+          {
+            "surface": "붙여",
+            "lemma": "붙이다",
+            "pos": "verb",
+            "sense": "attach_stick",
+            "vocab_id": "ko_k1_0809",
+            "role": "previous_expansion",
+            "start": 40,
+            "end": 42,
+            "morph_indices": [
+              20
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "여요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 41,
+            "end": 43,
+            "morph_indices": [
+              21
+            ],
+            "grammar_id": "ko_k1_g02"
+          }
+        ],
+        "raw_morphology": [
+          {
+            "form": "종이",
+            "tag": "NNG",
+            "start": 0,
+            "length": 2
+          },
+          {
+            "form": "에",
+            "tag": "JKB",
+            "start": 2,
+            "length": 1
+          },
+          {
+            "form": "테이프",
+            "tag": "NNG",
+            "start": 4,
+            "length": 3
+          },
+          {
+            "form": "를",
+            "tag": "JKO",
+            "start": 7,
+            "length": 1
+          },
+          {
+            "form": "붙이",
+            "tag": "VV",
+            "start": 9,
+            "length": 2
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 10,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 12,
+            "length": 1
+          },
+          {
+            "form": "친구",
+            "tag": "NNG",
+            "start": 14,
+            "length": 2
+          },
+          {
+            "form": "도",
+            "tag": "JX",
+            "start": 16,
+            "length": 1
+          },
+          {
+            "form": "테이프",
+            "tag": "NNG",
+            "start": 18,
+            "length": 3
+          },
+          {
+            "form": "를",
+            "tag": "JKO",
+            "start": 21,
+            "length": 1
+          },
+          {
+            "form": "붙이",
+            "tag": "VV",
+            "start": 23,
+            "length": 2
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 24,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 26,
+            "length": 1
+          },
+          {
+            "form": "테이프",
+            "tag": "NNG",
+            "start": 28,
+            "length": 3
+          },
+          {
+            "form": "로",
+            "tag": "JKB",
+            "start": 31,
+            "length": 1
+          },
+          {
+            "form": "종이",
+            "tag": "NNG",
+            "start": 33,
+            "length": 2
+          },
+          {
+            "form": "를",
+            "tag": "JKO",
+            "start": 35,
+            "length": 1
+          },
+          {
+            "form": "책",
+            "tag": "NNG",
+            "start": 37,
+            "length": 1
+          },
+          {
+            "form": "에",
+            "tag": "JKB",
+            "start": 38,
+            "length": 1
+          },
+          {
+            "form": "붙이",
+            "tag": "VV",
+            "start": 40,
+            "length": 2
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 41,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 43,
+            "length": 1
+          }
+        ],
+        "annotation_review_required": [],
+        "errors": [],
+        "declared_sense_overrides": {},
+        "ok": true,
+        "sense_truth_independently_verified": false
+      },
+      {
+        "key": "ball_play",
+        "scope": "isolated_examples_not_readers",
+        "sentences": [
+          "친구에게 공을 던져요.",
+          "친구가 공을 받아요."
+        ],
+        "validation_text_number": 228,
+        "required_vocab_ids": [
+          "ko_k1_0743",
+          "ko_k1_0810"
+        ],
+        "used_vocab_ids": [
+          "ko_k1_0022",
+          "ko_k1_0193",
+          "ko_k1_0743",
+          "ko_k1_0810"
+        ],
+        "grammar_used": [
+          "ko_k1_g02",
+          "ko_k1_g20",
+          "ko_k1_g21",
+          "ko_k1_g28"
+        ],
+        "coverage": {
+          "ok": true,
+          "N": 6,
+          "U": 0,
+          "controlled_tokens": 6,
+          "previous_tokens": 6,
+          "new_lemma_count": 0,
+          "new_entry_count": 0,
+          "controlled_vocab_coverage": 1.0,
+          "previous_vocab_coverage": 1.0,
+          "dynamic_hard_new_token_limit": 0,
+          "target_new_token_limit": 0,
+          "errors": [],
+          "warnings": []
+        },
+        "generated_annotations": [
+          {
+            "surface": "친구",
+            "lemma": "친구",
+            "pos": "noun",
+            "sense": "friend",
+            "vocab_id": "ko_k1_0022",
+            "role": "core",
+            "start": 0,
+            "end": 2,
+            "morph_indices": [
+              0
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "에게",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 2,
+            "end": 4,
+            "morph_indices": [
+              1
+            ],
+            "grammar_id": "ko_k1_g28"
+          },
+          {
+            "surface": "공",
+            "lemma": "공",
+            "pos": "noun",
+            "sense": "ball",
+            "vocab_id": "ko_k1_0810",
+            "role": "previous_expansion",
+            "start": 5,
+            "end": 6,
+            "morph_indices": [
+              2
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "을",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 6,
+            "end": 7,
+            "morph_indices": [
+              3
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "던져",
+            "lemma": "던지다",
+            "pos": "verb",
+            "sense": "throw",
+            "vocab_id": "ko_k1_0743",
+            "role": "previous_expansion",
+            "start": 8,
+            "end": 10,
+            "morph_indices": [
+              4
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "져요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 9,
+            "end": 11,
+            "morph_indices": [
+              5
+            ],
+            "grammar_id": "ko_k1_g02"
+          },
+          {
+            "surface": "친구",
+            "lemma": "친구",
+            "pos": "noun",
+            "sense": "friend",
+            "vocab_id": "ko_k1_0022",
+            "role": "core",
+            "start": 13,
+            "end": 15,
+            "morph_indices": [
+              7
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "가",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 15,
+            "end": 16,
+            "morph_indices": [
+              8
+            ],
+            "grammar_id": "ko_k1_g20"
+          },
+          {
+            "surface": "공",
+            "lemma": "공",
+            "pos": "noun",
+            "sense": "ball",
+            "vocab_id": "ko_k1_0810",
+            "role": "previous_expansion",
+            "start": 17,
+            "end": 18,
+            "morph_indices": [
+              9
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "을",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 18,
+            "end": 19,
+            "morph_indices": [
+              10
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "받",
+            "lemma": "받다",
+            "pos": "verb",
+            "sense": "receive",
+            "vocab_id": "ko_k1_0193",
+            "role": "core",
+            "start": 20,
+            "end": 21,
+            "morph_indices": [
+              11
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "아요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 21,
+            "end": 23,
+            "morph_indices": [
+              12
+            ],
+            "grammar_id": "ko_k1_g02"
+          }
+        ],
+        "raw_morphology": [
+          {
+            "form": "친구",
+            "tag": "NNG",
+            "start": 0,
+            "length": 2
+          },
+          {
+            "form": "에게",
+            "tag": "JKB",
+            "start": 2,
+            "length": 2
+          },
+          {
+            "form": "공",
+            "tag": "NNG",
+            "start": 5,
+            "length": 1
+          },
+          {
+            "form": "을",
+            "tag": "JKO",
+            "start": 6,
+            "length": 1
+          },
+          {
+            "form": "던지",
+            "tag": "VV",
+            "start": 8,
+            "length": 2
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 9,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 11,
+            "length": 1
+          },
+          {
+            "form": "친구",
+            "tag": "NNG",
+            "start": 13,
+            "length": 2
+          },
+          {
+            "form": "가",
+            "tag": "JKS",
+            "start": 15,
+            "length": 1
+          },
+          {
+            "form": "공",
+            "tag": "NNG",
+            "start": 17,
+            "length": 1
+          },
+          {
+            "form": "을",
+            "tag": "JKO",
+            "start": 18,
+            "length": 1
+          },
+          {
+            "form": "받",
+            "tag": "VV-R",
+            "start": 20,
+            "length": 1
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 21,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 23,
+            "length": 1
+          }
+        ],
+        "annotation_review_required": [],
+        "errors": [],
+        "declared_sense_overrides": {},
+        "ok": true,
+        "sense_truth_independently_verified": false
+      },
+      {
+        "key": "drawing_art",
+        "scope": "isolated_examples_not_readers",
+        "sentences": [
+          "미술관에서 그림을 봐요.",
+          "집에서 그림을 그려요.",
+          "그림은 책상 위에 있어요."
+        ],
+        "validation_text_number": 190,
+        "required_vocab_ids": [
+          "ko_k1_0604",
+          "ko_k1_0720",
+          "ko_k1_0811"
+        ],
+        "used_vocab_ids": [
+          "ko_k1_0042",
+          "ko_k1_0064",
+          "ko_k1_0112",
+          "ko_k1_0174",
+          "ko_k1_0180",
+          "ko_k1_0604",
+          "ko_k1_0720",
+          "ko_k1_0811"
+        ],
+        "grammar_used": [
+          "ko_k1_g02",
+          "ko_k1_g19",
+          "ko_k1_g21",
+          "ko_k1_g22",
+          "ko_k1_g23"
+        ],
+        "coverage": {
+          "ok": true,
+          "N": 10,
+          "U": 0,
+          "controlled_tokens": 10,
+          "previous_tokens": 10,
+          "new_lemma_count": 0,
+          "new_entry_count": 0,
+          "controlled_vocab_coverage": 1.0,
+          "previous_vocab_coverage": 1.0,
+          "dynamic_hard_new_token_limit": 0,
+          "target_new_token_limit": 0,
+          "errors": [],
+          "warnings": []
+        },
+        "generated_annotations": [
+          {
+            "surface": "미술관",
+            "lemma": "미술관",
+            "pos": "noun",
+            "sense": "art_museum",
+            "vocab_id": "ko_k1_0720",
+            "role": "previous_expansion",
+            "start": 0,
+            "end": 3,
+            "morph_indices": [
+              0
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "에서",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 3,
+            "end": 5,
+            "morph_indices": [
+              1
+            ],
+            "grammar_id": "ko_k1_g23"
+          },
+          {
+            "surface": "그림",
+            "lemma": "그림",
+            "pos": "noun",
+            "sense": "drawing_picture",
+            "vocab_id": "ko_k1_0811",
+            "role": "previous_expansion",
+            "start": 6,
+            "end": 8,
+            "morph_indices": [
+              2
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "을",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 8,
+            "end": 9,
+            "morph_indices": [
+              3
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "봐",
+            "lemma": "보다",
+            "pos": "verb",
+            "sense": "see_watch",
+            "vocab_id": "ko_k1_0174",
+            "role": "core",
+            "start": 10,
+            "end": 11,
+            "morph_indices": [
+              4
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "봐요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 10,
+            "end": 12,
+            "morph_indices": [
+              5
+            ],
+            "grammar_id": "ko_k1_g02"
+          },
+          {
+            "surface": "집",
+            "lemma": "집",
+            "pos": "noun",
+            "sense": "home",
+            "vocab_id": "ko_k1_0042",
+            "role": "core",
+            "start": 14,
+            "end": 15,
+            "morph_indices": [
+              7
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "에서",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 15,
+            "end": 17,
+            "morph_indices": [
+              8
+            ],
+            "grammar_id": "ko_k1_g23"
+          },
+          {
+            "surface": "그림",
+            "lemma": "그림",
+            "pos": "noun",
+            "sense": "drawing_picture",
+            "vocab_id": "ko_k1_0811",
+            "role": "previous_expansion",
+            "start": 18,
+            "end": 20,
+            "morph_indices": [
+              9
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "을",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 20,
+            "end": 21,
+            "morph_indices": [
+              10
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "그려",
+            "lemma": "그리다",
+            "pos": "verb",
+            "sense": "draw",
+            "vocab_id": "ko_k1_0604",
+            "role": "previous_expansion",
+            "start": 22,
+            "end": 24,
+            "morph_indices": [
+              11
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "려요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 23,
+            "end": 25,
+            "morph_indices": [
+              12
+            ],
+            "grammar_id": "ko_k1_g02"
+          },
+          {
+            "surface": "그림",
+            "lemma": "그림",
+            "pos": "noun",
+            "sense": "drawing_picture",
+            "vocab_id": "ko_k1_0811",
+            "role": "previous_expansion",
+            "start": 27,
+            "end": 29,
+            "morph_indices": [
+              14
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "은",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 29,
+            "end": 30,
+            "morph_indices": [
+              15
+            ],
+            "grammar_id": "ko_k1_g19"
+          },
+          {
+            "surface": "책상",
+            "lemma": "책상",
+            "pos": "noun",
+            "sense": "desk",
+            "vocab_id": "ko_k1_0112",
+            "role": "core",
+            "start": 31,
+            "end": 33,
+            "morph_indices": [
+              16
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "위",
+            "lemma": "위",
+            "pos": "noun",
+            "sense": "above",
+            "vocab_id": "ko_k1_0064",
+            "role": "core",
+            "start": 34,
+            "end": 35,
+            "morph_indices": [
+              17
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "에",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 35,
+            "end": 36,
+            "morph_indices": [
+              18
+            ],
+            "grammar_id": "ko_k1_g22"
+          },
+          {
+            "surface": "있",
+            "lemma": "있다",
+            "pos": "adjective",
+            "sense": "exist",
+            "vocab_id": "ko_k1_0180",
+            "role": "core",
+            "start": 37,
+            "end": 38,
+            "morph_indices": [
+              19
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "어요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 38,
+            "end": 40,
+            "morph_indices": [
+              20
+            ],
+            "grammar_id": "ko_k1_g02"
+          }
+        ],
+        "raw_morphology": [
+          {
+            "form": "미술관",
+            "tag": "NNG",
+            "start": 0,
+            "length": 3
+          },
+          {
+            "form": "에서",
+            "tag": "JKB",
+            "start": 3,
+            "length": 2
+          },
+          {
+            "form": "그림",
+            "tag": "NNG",
+            "start": 6,
+            "length": 2
+          },
+          {
+            "form": "을",
+            "tag": "JKO",
+            "start": 8,
+            "length": 1
+          },
+          {
+            "form": "보",
+            "tag": "VV",
+            "start": 10,
+            "length": 1
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 10,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 12,
+            "length": 1
+          },
+          {
+            "form": "집",
+            "tag": "NNG",
+            "start": 14,
+            "length": 1
+          },
+          {
+            "form": "에서",
+            "tag": "JKB",
+            "start": 15,
+            "length": 2
+          },
+          {
+            "form": "그림",
+            "tag": "NNG",
+            "start": 18,
+            "length": 2
+          },
+          {
+            "form": "을",
+            "tag": "JKO",
+            "start": 20,
+            "length": 1
+          },
+          {
+            "form": "그리",
+            "tag": "VV",
+            "start": 22,
+            "length": 2
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 23,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 25,
+            "length": 1
+          },
+          {
+            "form": "그림",
+            "tag": "NNG",
+            "start": 27,
+            "length": 2
+          },
+          {
+            "form": "은",
+            "tag": "JX",
+            "start": 29,
+            "length": 1
+          },
+          {
+            "form": "책상",
+            "tag": "NNG",
+            "start": 31,
+            "length": 2
+          },
+          {
+            "form": "위",
+            "tag": "NNG",
+            "start": 34,
+            "length": 1
+          },
+          {
+            "form": "에",
+            "tag": "JKB",
+            "start": 35,
+            "length": 1
+          },
+          {
+            "form": "있",
+            "tag": "VV",
+            "start": 37,
+            "length": 1
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 38,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 40,
+            "length": 1
+          }
+        ],
+        "annotation_review_required": [],
+        "errors": [],
+        "declared_sense_overrides": {},
+        "ok": true,
+        "sense_truth_independently_verified": false
+      },
+      {
+        "key": "holding_lifting",
+        "scope": "isolated_examples_not_readers",
+        "sentences": [
+          "가방을 들어요.",
+          "저는 한 손으로 책을 들어요."
+        ],
+        "validation_text_number": 111,
+        "required_vocab_ids": [
+          "ko_k1_0101",
+          "ko_k1_0114",
+          "ko_k1_0812"
+        ],
+        "used_vocab_ids": [
+          "ko_k1_0002",
+          "ko_k1_0101",
+          "ko_k1_0114",
+          "ko_k1_0281",
+          "ko_k1_0483",
+          "ko_k1_0812"
+        ],
+        "grammar_used": [
+          "ko_k1_g02",
+          "ko_k1_g19",
+          "ko_k1_g21",
+          "ko_k1_g30"
+        ],
+        "coverage": {
+          "ok": true,
+          "N": 7,
+          "U": 0,
+          "controlled_tokens": 7,
+          "previous_tokens": 7,
+          "new_lemma_count": 0,
+          "new_entry_count": 0,
+          "controlled_vocab_coverage": 1.0,
+          "previous_vocab_coverage": 1.0,
+          "dynamic_hard_new_token_limit": 0,
+          "target_new_token_limit": 0,
+          "errors": [],
+          "warnings": []
+        },
+        "generated_annotations": [
+          {
+            "surface": "가방",
+            "lemma": "가방",
+            "pos": "noun",
+            "sense": "bag",
+            "vocab_id": "ko_k1_0114",
+            "role": "core",
+            "start": 0,
+            "end": 2,
+            "morph_indices": [
+              0
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "을",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 2,
+            "end": 3,
+            "morph_indices": [
+              1
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "들",
+            "lemma": "들다",
+            "pos": "verb",
+            "sense": "hold_lift_by_hand",
+            "vocab_id": "ko_k1_0812",
+            "role": "previous_expansion",
+            "start": 4,
+            "end": 5,
+            "morph_indices": [
+              2
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "어요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 5,
+            "end": 7,
+            "morph_indices": [
+              3
+            ],
+            "grammar_id": "ko_k1_g02"
+          },
+          {
+            "surface": "저",
+            "lemma": "저",
+            "pos": "pronoun",
+            "sense": "i_humble",
+            "vocab_id": "ko_k1_0002",
+            "role": "core",
+            "start": 9,
+            "end": 10,
+            "morph_indices": [
+              5
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "는",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 10,
+            "end": 11,
+            "morph_indices": [
+              6
+            ],
+            "grammar_id": "ko_k1_g19"
+          },
+          {
+            "surface": "한",
+            "lemma": "하나",
+            "pos": "numeral",
+            "sense": "one_native",
+            "vocab_id": "ko_k1_0281",
+            "role": "core",
+            "start": 12,
+            "end": 13,
+            "morph_indices": [
+              7
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "손",
+            "lemma": "손",
+            "pos": "noun",
+            "sense": "hand",
+            "vocab_id": "ko_k1_0483",
+            "role": "previous_expansion",
+            "start": 14,
+            "end": 15,
+            "morph_indices": [
+              8
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "으로",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 15,
+            "end": 17,
+            "morph_indices": [
+              9
+            ],
+            "grammar_id": "ko_k1_g30"
+          },
+          {
+            "surface": "책",
+            "lemma": "책",
+            "pos": "noun",
+            "sense": "book",
+            "vocab_id": "ko_k1_0101",
+            "role": "core",
+            "start": 18,
+            "end": 19,
+            "morph_indices": [
+              10
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "을",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 19,
+            "end": 20,
+            "morph_indices": [
+              11
+            ],
+            "grammar_id": "ko_k1_g21"
+          },
+          {
+            "surface": "들",
+            "lemma": "들다",
+            "pos": "verb",
+            "sense": "hold_lift_by_hand",
+            "vocab_id": "ko_k1_0812",
+            "role": "previous_expansion",
+            "start": 21,
+            "end": 22,
+            "morph_indices": [
+              12
+            ],
+            "grammar_id": null
+          },
+          {
+            "surface": "어요",
+            "lemma": null,
+            "pos": null,
+            "sense": null,
+            "vocab_id": null,
+            "role": "grammar_function",
+            "start": 22,
+            "end": 24,
+            "morph_indices": [
+              13
+            ],
+            "grammar_id": "ko_k1_g02"
+          }
+        ],
+        "raw_morphology": [
+          {
+            "form": "가방",
+            "tag": "NNG",
+            "start": 0,
+            "length": 2
+          },
+          {
+            "form": "을",
+            "tag": "JKO",
+            "start": 2,
+            "length": 1
+          },
+          {
+            "form": "들",
+            "tag": "VV",
+            "start": 4,
+            "length": 1
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 5,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 7,
+            "length": 1
+          },
+          {
+            "form": "저",
+            "tag": "NP",
+            "start": 9,
+            "length": 1
+          },
+          {
+            "form": "는",
+            "tag": "JX",
+            "start": 10,
+            "length": 1
+          },
+          {
+            "form": "한",
+            "tag": "MM",
+            "start": 12,
+            "length": 1
+          },
+          {
+            "form": "손",
+            "tag": "NNG",
+            "start": 14,
+            "length": 1
+          },
+          {
+            "form": "으로",
+            "tag": "JKB",
+            "start": 15,
+            "length": 2
+          },
+          {
+            "form": "책",
+            "tag": "NNG",
+            "start": 18,
+            "length": 1
+          },
+          {
+            "form": "을",
+            "tag": "JKO",
+            "start": 19,
+            "length": 1
+          },
+          {
+            "form": "들",
+            "tag": "VV",
+            "start": 21,
+            "length": 1
+          },
+          {
+            "form": "어요",
+            "tag": "EF",
+            "start": 22,
+            "length": 2
+          },
+          {
+            "form": ".",
+            "tag": "SF",
+            "start": 24,
+            "length": 1
+          }
+        ],
+        "annotation_review_required": [
+          {
+            "type": "restricted_sense_context_review",
+            "surface": "들",
+            "lemma": "들다",
+            "start": 4,
+            "candidate_id": "ko_k1_0812"
+          },
+          {
+            "type": "sense_disambiguation",
+            "surface": "저",
+            "lemma": "저",
+            "start": 9,
+            "candidate_id": "ko_k1_0002"
+          },
+          {
+            "type": "restricted_sense_context_review",
+            "surface": "들",
+            "lemma": "들다",
+            "start": 21,
+            "candidate_id": "ko_k1_0812"
+          }
+        ],
+        "errors": [],
+        "declared_sense_overrides": {},
+        "ok": true,
+        "sense_truth_independently_verified": false
+      }
+    ]
+  },
+  "scope": "phase2_1A_vocabulary_revision_no_reader_generation",
+  "test_evidence": {
+    "file": "k1_phase2_1A_test_result.json",
+    "runs": [
+      {
+        "command": "python -B -m unittest discover -s tests -v",
+        "status": "PASS",
+        "tests": 51,
+        "elapsed_seconds": 190.66,
+        "scope": "Full regression suite before final schema and negative-case additions; followed by focused verification of final revision."
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_k1_phase2_1A.py -v",
+        "status": "PASS",
+        "tests": 10,
+        "elapsed_seconds": 51.21,
+        "scope": "Final active revision, strict schemas, examples and malformed-data negative cases."
+      }
+    ]
+  }
+}

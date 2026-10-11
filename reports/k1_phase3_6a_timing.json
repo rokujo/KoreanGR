@@ -1,0 +1,1392 @@
+{
+  "engineering_start_utc": "2026-10-10T19:41:14Z",
+  "production_start_utc": "2026-10-10T19:51:54.943168+00:00",
+  "production_start_counter": 49006.4801531,
+  "texts": [
+    {
+      "text_number": 1,
+      "start_counter": 49006.4801601,
+      "start_utc": "2026-10-10T19:51:54.981259+00:00",
+      "phase": "committed",
+      "phase_start_counter": 49205.8471879,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-001-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "어요",
+                "surface": "아요",
+                "start": 201,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "오늘",
+                "surface": "오늘",
+                "start": 470,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "identity_boundary",
+                "surface": "오늘",
+                "lemma": "오늘",
+                "start": 470,
+                "raw_pos": "MAG",
+                "registered_candidates": [
+                  {
+                    "id": "ko_k1_0068",
+                    "pos": "noun",
+                    "sense": "today"
+                  }
+                ],
+                "alias_reason": null,
+                "status": "REVIEW",
+                "requires_candidate_review": true
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 100: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 225: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 43.08824280000408,
+          "validation_seconds": 1.2003344999975525,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1182354999764357,
+            "semantic_diagnostics": 0.0051918999961344525
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-001-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 22.199399999997695,
+          "validation_seconds": 1.1996767000018735,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1218697000149405,
+            "semantic_diagnostics": 0.005061799995019101
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 131.67244490000303,
+        "author_draft": 43.08824280000408,
+        "morphology_vocab_analysis": 2.240105199991376,
+        "mechanical_validation": 0.1599060000080499,
+        "retry_repair": 22.199399999997695,
+        "naturalness_review": 12.521949800000584,
+        "final_reanalysis": 1.1535626999975648,
+        "commit": 0.8806005000005825,
+        "controller_overhead": 0.6443431000006967
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 1,
+        "title_ko": "친구의 우산",
+        "genre": "weather",
+        "scene": [
+          "outdoor",
+          "friendship",
+          "home"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "get home in rain with borrowed umbrella",
+          "setting": "school gate and route home",
+          "participants": [
+            "speaker",
+            "friend"
+          ],
+          "problem_type": "no umbrella in rain",
+          "resolution_type": "share then borrow umbrella",
+          "main_actions": [
+            "notice rain",
+            "check bag",
+            "share umbrella",
+            "borrow umbrella",
+            "walk home"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-001-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "雨の下校と傘の貸し借りという一つの目的でつながる。友達の家までは傘を共有し、その後は借りて自宅へ帰るため行動の理由が明確。괜찮다は傘がない相手への安心の応答、되다は夕方への時間変化で各1token。訳は話者・貸し手・翌日の返却予定を本文どおりに示す。最初の候補の2件は単文でも同じ失敗でscope差ではなく、応答を独立文にし不要な오늘を省いた局所prose repairで解決した。モデルの確認は人間の独立承認ではない。"
+          }
+        }
+      ],
+      "end_counter": 49221.0407151,
+      "total_seconds": 214.56055500000366,
+      "coverage": {
+        "denominator_N": 127,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984251968503937,
+        "target_99_met": false
+      },
+      "eojeol_count": 129,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "雨の下校と傘の貸し借りという一つの目的でつながる。友達の家までは傘を共有し、その後は借りて自宅へ帰るため行動の理由が明確。괜찮다は傘がない相手への安心の応答、되다は夕方への時間変化で各1token。訳は話者・貸し手・翌日の返却予定を本文どおりに示す。最初の候補の2件は単文でも同じ失敗でscope差ではなく、応答を独立文にし不要な오늘を省いた局所prose repairで解決した。モデルの確認は人間の独立承認ではない。"
+      }
+    },
+    {
+      "text_number": 2,
+      "start_counter": 49222.2662307,
+      "start_utc": "2026-10-10T19:55:30.765405+00:00",
+      "phase": "committed",
+      "phase_start_counter": 49316.7413704,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-002-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "들",
+                "surface": "들",
+                "start": 54,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 24: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 17.908438600003137,
+          "validation_seconds": 1.2631131999951322,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.150024200011103,
+            "semantic_diagnostics": 0.005693400002201088
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-002-attempt-02.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "아",
+                "surface": "아",
+                "start": 444,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 198: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 14.582280399998126,
+          "validation_seconds": 1.2623271999982535,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1433055999950739,
+            "semantic_diagnostics": 0.00557860000844812
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 3,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-002-attempt-03.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 19.809972100003506,
+          "validation_seconds": 1.2444832999972277,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1403988000383833,
+            "semantic_diagnostics": 0.007142700000258628
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 38.39203979999729,
+        "author_draft": 17.908438600003137,
+        "morphology_vocab_analysis": 3.43372860004456,
+        "mechanical_validation": 0.33619509994605323,
+        "retry_repair": 34.39225250000163,
+        "naturalness_review": 13.912191199997324,
+        "final_reanalysis": 1.1684922999993432,
+        "commit": 0.3679926000040723,
+        "controller_overhead": 0.6502387000073213
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 2,
+        "title_ko": "도서관에서 읽는 책",
+        "genre": "short_dialogue",
+        "scene": [
+          "school",
+          "communication",
+          "friendship"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "choose and borrow an easy Korean book",
+          "setting": "school library after class",
+          "participants": [
+            "speaker",
+            "friend"
+          ],
+          "problem_type": "find a book at suitable difficulty",
+          "resolution_type": "check with friend and borrow",
+          "main_actions": [
+            "look for book",
+            "ask availability",
+            "check difficulty",
+            "read together",
+            "borrow book"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-002-attempt-03.json",
+      "author_review_history": [
+        {
+          "attempt": 3,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "図書館で読みやすい本を探し、友達に所在と難しさを確認して借りる一場面。네は所在質問への肯定、아니요は難しすぎるかという質問への否定で自然な引用応答。ここは既に机の上と明示され、指示語warningにも参照先がある。좋아하다は猫の話への具体的嗜好で、万能な感情反応ではない。借りる・学ぶの相手と目的語は自然で訳も一致。未知扱いになった複数接尾辞と아는は単文でも失敗し、局所表現を変えた。作者確認は独立goldではない。"
+          }
+        }
+      ],
+      "end_counter": 49332.8278001,
+      "total_seconds": 110.56156940000074,
+      "coverage": {
+        "denominator_N": 130,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9846153846153847,
+        "target_99_met": false
+      },
+      "eojeol_count": 132,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "図書館で読みやすい本を探し、友達に所在と難しさを確認して借りる一場面。네は所在質問への肯定、아니요は難しすぎるかという質問への否定で自然な引用応答。ここは既に机の上と明示され、指示語warningにも参照先がある。좋아하다は猫の話への具体的嗜好で、万能な感情反応ではない。借りる・学ぶの相手と目的語は自然で訳も一致。未知扱いになった複数接尾辞と아는は単文でも失敗し、局所表現を変えた。作者確認は独立goldではない。"
+      }
+    },
+    {
+      "text_number": 3,
+      "start_counter": 49334.0914879,
+      "start_utc": "2026-10-10T19:57:22.606976+00:00",
+      "phase": "committed",
+      "phase_start_counter": 49427.647141,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-003-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "ᆯ",
+                "surface": "갈",
+                "start": 282,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 140: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 44.92509060000157,
+          "validation_seconds": 1.2532310999959009,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.119338099975721,
+            "semantic_diagnostics": 0.006129299996246118
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-003-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 24.453364599998167,
+          "validation_seconds": 1.2416150999997626,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1123651999732829,
+            "semantic_diagnostics": 0.0054721000051358715
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 21.675256100003025,
+        "author_draft": 44.92509060000157,
+        "morphology_vocab_analysis": 2.231703299949004,
+        "mechanical_validation": 0.26314290004665963,
+        "retry_repair": 24.453364599998167,
+        "naturalness_review": 15.58625739999843,
+        "final_reanalysis": 1.1474071999982698,
+        "commit": 0.3801166999983252,
+        "controller_overhead": 0.641142900007253
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 3,
+        "title_ko": "학교 가방",
+        "genre": "shopping",
+        "scene": [
+          "shopping",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [
+          "괜찮다",
+          "되다"
+        ],
+        "scene_fingerprint": {
+          "goal": "buy a school bag that fits books",
+          "setting": "bag shop with mother",
+          "participants": [
+            "speaker",
+            "mother"
+          ],
+          "problem_type": "choose between small and large bags",
+          "resolution_type": "test book fit and buy small bag",
+          "main_actions": [
+            "compare bag sizes",
+            "put books inside",
+            "check price",
+            "choose bag",
+            "pay"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-003-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "本が入る学校用かばんを選ぶという一目的。이は目の前の小さいかばん、그は直前に述べた椅子上の大きいかばんで参照先が明確。괜찮다は値段の評価、되다は昼食時刻への変化で意味が自然。初稿の쓰다(use)はCoreのwrite義を超えるため、本文を사용하다、タイトルを학교 가방へ修正した。また갈 때を現在の学校での用途に簡略化した。これは語彙DB・文法の拡張ではない。書店で試した本はかばんの中に保持され、帰宅後の宿題と荷造りへつながる。訳もその順序・人物に忠実。"
+          }
+        }
+      ],
+      "end_counter": 49445.3949696,
+      "total_seconds": 111.3034817000007,
+      "coverage": {
+        "denominator_N": 129,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9844961240310077,
+        "target_99_met": false
+      },
+      "eojeol_count": 133,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "本が入る学校用かばんを選ぶという一目的。이は目の前の小さいかばん、그は直前に述べた椅子上の大きいかばんで参照先が明確。괜찮다は値段の評価、되다は昼食時刻への変化で意味が自然。初稿の쓰다(use)はCoreのwrite義を超えるため、本文を사용하다、タイトルを학교 가방へ修正した。また갈 때を現在の学校での用途に簡略化した。これは語彙DB・文法の拡張ではない。書店で試した本はかばんの中に保持され、帰宅後の宿題と荷造りへつながる。訳もその順序・人物に忠実。"
+      }
+    },
+    {
+      "text_number": 4,
+      "start_counter": 49446.6767266,
+      "start_utc": "2026-10-10T19:59:15.200427+00:00",
+      "phase": "committed",
+      "phase_start_counter": 49522.3333681,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-004-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 50.22327249999944,
+          "validation_seconds": 1.276497200000449,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1194425000212505,
+            "semantic_diagnostics": 0.0055925999986357056
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 24.156171800001175,
+        "author_draft": 50.22327249999944,
+        "morphology_vocab_analysis": 1.1194425000212505,
+        "mechanical_validation": 0.15705469997919863,
+        "naturalness_review": 12.815078499996162,
+        "final_reanalysis": 1.1638222000037786,
+        "commit": 0.45288579999032663,
+        "controller_overhead": 0.6567255000045407
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 4,
+        "title_ko": "친구하고 타는 버스",
+        "genre": "transport",
+        "scene": [
+          "transport",
+          "outdoor",
+          "communication",
+          "friendship"
+        ],
+        "review_candidates": [
+          "네",
+          "아니요"
+        ],
+        "scene_fingerprint": {
+          "goal": "join friend on a bus trip to the park",
+          "setting": "outside school then bus to park",
+          "participants": [
+            "speaker",
+            "friend"
+          ],
+          "problem_type": "clarify friend's destination and bus",
+          "resolution_type": "agree destination and take approaching bus",
+          "main_actions": [
+            "ask destination",
+            "identify approaching bus",
+            "board",
+            "sit",
+            "arrive at park"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-004-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "土曜の運動後に友達の公園行きへ同行する流れで、行き先と乗るバスの質問に理由がある。무슨はバスの選択、저は遠方に見えるバスを指す。아니요は家に帰るかへの否定、네は花を見られるかへの肯定で自然。待っている進行形は今の行動、자주 가요は習慣の単純現在として区別した。到着して降りる動詞関係も正常。訳は目的地や話者を補正せず保持。review2語は会話の意味に関与し、soft targetのために増やしていない。"
+          }
+        }
+      ],
+      "end_counter": 49537.4211801,
+      "total_seconds": 90.74445349999587,
+      "coverage": {
+        "denominator_N": 119,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9831932773109243,
+        "target_99_met": false
+      },
+      "eojeol_count": 126,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "土曜の運動後に友達の公園行きへ同行する流れで、行き先と乗るバスの質問に理由がある。무슨はバスの選択、저は遠方に見えるバスを指す。아니요は家に帰るかへの否定、네は花を見られるかへの肯定で自然。待っている進行形は今の行動、자주 가요は習慣の単純現在として区別した。到着して降りる動詞関係も正常。訳は目的地や話者を補正せず保持。review2語は会話の意味に関与し、soft targetのために増やしていない。"
+      }
+    },
+    {
+      "text_number": 5,
+      "start_counter": 49538.7070597,
+      "start_utc": "2026-10-10T20:00:47.245731+00:00",
+      "phase": "committed",
+      "phase_start_counter": 49645.4692687,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-005-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "요리",
+                "surface": "요리",
+                "start": 44,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "요리",
+                "surface": "요리",
+                "start": 212,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 18: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 92: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 39.57214510000631,
+          "validation_seconds": 1.3057062000007136,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.119173299986869,
+            "semantic_diagnostics": 0.00517599999147933
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-005-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 16.086177600001974,
+          "validation_seconds": 1.3086708999981056,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1242029999993974,
+            "semantic_diagnostics": 0.005611900000076275
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 3,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-005-attempt-03.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 1.2170740000001388,
+          "validation_seconds": 1.3046099999992293,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1230685999980778,
+            "semantic_diagnostics": 0.005623000004561618
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 21.15840830000525,
+        "author_draft": 39.57214510000631,
+        "morphology_vocab_analysis": 3.3664448999843444,
+        "mechanical_validation": 0.5525422000137041,
+        "retry_repair": 17.303251600002113,
+        "naturalness_review": 33.56463200000144,
+        "final_reanalysis": 1.1568267999973614,
+        "commit": 0.544850199999928,
+        "controller_overhead": 1.283213299990166
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 5,
+        "title_ko": "아버지 생일 저녁",
+        "genre": "food",
+        "scene": [
+          "food",
+          "kitchen",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [
+          "이",
+          "그"
+        ],
+        "scene_fingerprint": {
+          "goal": "prepare a birthday dinner for father",
+          "setting": "family home in evening",
+          "participants": [
+            "speaker",
+            "mother",
+            "father"
+          ],
+          "problem_type": "coordinate food preparation with arrival time",
+          "resolution_type": "serve warm meal and additional rice",
+          "main_actions": [
+            "ask dinner time",
+            "wash vegetables",
+            "cook meal",
+            "serve rice",
+            "eat fruit"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-005-attempt-03.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "REPAIR",
+            "review_word_integration": "PASS",
+            "reason": "고기도は肉もであり、私にもとだけ訳すと追加対象の焦点がずれる。該当訳を『母が私に肉も渡します』へ直す。韓国語本文、몇/더の初出各1token、이/그のreview、誕生日の食事場面は自然。意味role diagnosticsの件数を減らす修正ではない。"
+          }
+        },
+        {
+          "attempt": 3,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "誕生日の夕食作り、父の帰宅、食事と写真の贈り物が一つの家族場面につながる。몇は夕食時刻、더は父本人の引用で追加のご飯を望む用法で各1token。그 사과は直前の机上のリンゴ、이 밥は渡された温かいご飯を指す。語義のない요리名詞は음식을 만들다へ改め、料理動詞요리하다は登録通り。고기도の訳は『肉も』に修正済みで、韓国語の意味を日本語だけで補正していない。"
+          }
+        }
+      ],
+      "end_counter": 49657.2093741,
+      "total_seconds": 118.50231440000061,
+      "coverage": {
+        "denominator_N": 124,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9838709677419355,
+        "target_99_met": false
+      },
+      "eojeol_count": 128,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "誕生日の夕食作り、父の帰宅、食事と写真の贈り物が一つの家族場面につながる。몇は夕食時刻、더は父本人の引用で追加のご飯を望む用法で各1token。그 사과は直前の机上のリンゴ、이 밥は渡された温かいご飯を指す。語義のない요리名詞は음식을 만들다へ改め、料理動詞요리하다は登録通り。고기도の訳は『肉も』に修正済みで、韓国語の意味を日本語だけで補正していない。"
+      }
+    },
+    {
+      "text_number": 6,
+      "start_counter": 49658.5508989,
+      "start_utc": "2026-10-10T20:02:47.103914+00:00",
+      "phase": "committed",
+      "phase_start_counter": 49733.5609358,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-006-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 38.101019100002304,
+          "validation_seconds": 1.3319102999957977,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1223163999748067,
+            "semantic_diagnostics": 0.005030599997553509
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 35.576380999998946,
+        "author_draft": 38.101019100002304,
+        "morphology_vocab_analysis": 1.1223163999748067,
+        "mechanical_validation": 0.209593900020991,
+        "naturalness_review": 16.550488900000346,
+        "final_reanalysis": 1.1543654999986757,
+        "commit": 0.6403964000055566,
+        "controller_overhead": 0.6383741999961785
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 6,
+        "title_ko": "집에 오는 손님",
+        "genre": "home",
+        "scene": [
+          "home",
+          "family",
+          "communication",
+          "food"
+        ],
+        "review_candidates": [
+          "저",
+          "무슨"
+        ],
+        "scene_fingerprint": {
+          "goal": "welcome father's friend at home",
+          "setting": "living room before and during afternoon visit",
+          "participants": [
+            "speaker",
+            "father",
+            "father's friend"
+          ],
+          "problem_type": "wait for invited guest",
+          "resolution_type": "welcome guest and serve fruit and coffee",
+          "main_actions": [
+            "confirm arrival time",
+            "count chairs",
+            "notice guest outside",
+            "greet",
+            "serve fruit"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-006-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "父の友達を迎える一場面で、来訪時刻の確認・三人分の椅子・電話の道案内・挨拶と接客に目的がある。아직は来客待ち、개は椅子の数量で各1token。遠くから来る人を저で示し、来客の食べ物の好みを무슨で確認するためreview2語は自然。電話後の家の目印の引用は父の発話、こんにちはは登録済み定型句の独立引用。名詞요리・別lemma이야기하다へ迂回せず登録語で表現した。日本語訳の時刻・発話者・行動は一致。"
+          }
+        }
+      ],
+      "end_counter": 49752.5438343,
+      "total_seconds": 93.9929353999978,
+      "coverage": {
+        "denominator_N": 123,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.983739837398374,
+        "target_99_met": false
+      },
+      "eojeol_count": 128,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "父の友達を迎える一場面で、来訪時刻の確認・三人分の椅子・電話の道案内・挨拶と接客に目的がある。아직は来客待ち、개は椅子の数量で各1token。遠くから来る人を저で示し、来客の食べ物の好みを무슨で確認するためreview2語は自然。電話後の家の目印の引用は父の発話、こんにちはは登録済み定型句の独立引用。名詞요리・別lemma이야기하다へ迂回せず登録語で表現した。日本語訳の時刻・発話者・行動は一致。"
+      }
+    },
+    {
+      "text_number": 7,
+      "start_counter": 49753.8871687,
+      "start_utc": "2026-10-10T20:04:22.451226+00:00",
+      "phase": "committed",
+      "phase_start_counter": 49826.4245103,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-007-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 39.049025399996026,
+          "validation_seconds": 1.3560752000048524,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1203050000040093,
+            "semantic_diagnostics": 0.005434200007584877
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 32.13131019999855,
+        "author_draft": 39.049025399996026,
+        "morphology_vocab_analysis": 1.1203050000040093,
+        "mechanical_validation": 0.23577020000084303,
+        "naturalness_review": 11.430719099997077,
+        "final_reanalysis": 1.19832590000442,
+        "commit": 0.7901724999974249,
+        "controller_overhead": 0.6301679000025615
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 7,
+        "title_ko": "처음 만나는 친구",
+        "genre": "school",
+        "scene": [
+          "school",
+          "friendship",
+          "communication"
+        ],
+        "review_candidates": [
+          "몇",
+          "더",
+          "되다",
+          "괜찮다"
+        ],
+        "scene_fingerprint": {
+          "goal": "meet classmates at the first lesson",
+          "setting": "small classroom on first day",
+          "participants": [
+            "speaker",
+            "teacher",
+            "classmates"
+          ],
+          "problem_type": "learn names and settle into class",
+          "resolution_type": "introduce self and read a story together",
+          "main_actions": [
+            "count students",
+            "write name",
+            "introduce age",
+            "listen to story",
+            "ask lesson end time"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-007-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "初授業で友達と名前を交換し、先生に名前を提出して一緒に物語を読む場面。명は教室の学生数、살は語り手の年齢で各1token。時刻到来の되다、難しさへの괜찮다、もっと聞きたい더、翌日の時刻を尋ねる몇が自然に使える。쓰다2件は紙へ名前を書く明確なwrite義で、warningの存在だけを問題扱いしない。入室方向動詞を無理に代用せず授業開始を述べた。日本語訳は人物と時系列を保持。"
+          }
+        }
+      ],
+      "end_counter": 49840.4729649,
+      "total_seconds": 86.58579620000091,
+      "coverage": {
+        "denominator_N": 121,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9834710743801653,
+        "target_99_met": false
+      },
+      "eojeol_count": 125,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "初授業で友達と名前を交換し、先生に名前を提出して一緒に物語を読む場面。명は教室の学生数、살は語り手の年齢で各1token。時刻到来の되다、難しさへの괜찮다、もっと聞きたい더、翌日の時刻を尋ねる몇が自然に使える。쓰다2件は紙へ名前を書く明確なwrite義で、warningの存在だけを問題扱いしない。入室方向動詞を無理に代用せず授業開始を述べた。日本語訳は人物と時系列を保持。"
+      }
+    },
+    {
+      "text_number": 8,
+      "start_counter": 49841.8439353,
+      "start_utc": "2026-10-10T20:05:50.422790+00:00",
+      "phase": "committed",
+      "phase_start_counter": 49948.3784585,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-008-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "어제",
+                "surface": "어제",
+                "start": 0,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "세요",
+                "surface": "세요",
+                "start": 324,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "identity_boundary",
+                "surface": "어제",
+                "lemma": "어제",
+                "start": 0,
+                "raw_pos": "MAG",
+                "registered_candidates": [
+                  {
+                    "id": "ko_k1_0069",
+                    "pos": "noun",
+                    "sense": "yesterday"
+                  }
+                ],
+                "alias_reason": null,
+                "status": "REVIEW",
+                "requires_candidate_review": true
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 0: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 150: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 39.65482450000127,
+          "validation_seconds": 1.3930831999969087,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.125199700029043,
+            "semantic_diagnostics": 0.006088499998440966
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-008-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 20.652582300004724,
+          "validation_seconds": 1.3809379000012996,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.116403000021819,
+            "semantic_diagnostics": 0.006395700002030935
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 43.44599390000076,
+        "author_draft": 39.65482450000127,
+        "morphology_vocab_analysis": 2.241602700050862,
+        "mechanical_validation": 0.5324183999473462,
+        "retry_repair": 20.652582300004724,
+        "naturalness_review": 25.293242899999314,
+        "final_reanalysis": 1.1463677000065218,
+        "commit": 0.9652798999959487,
+        "controller_overhead": 0.6461800999968546
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 8,
+        "title_ko": "침대 위에 있는 책",
+        "genre": "small_problem",
+        "scene": [
+          "home",
+          "family",
+          "lost_and_found",
+          "communication"
+        ],
+        "review_candidates": [
+          "아직",
+          "네",
+          "아니요"
+        ],
+        "scene_fingerprint": {
+          "goal": "find borrowed animal book and finish reading",
+          "setting": "child's room at home",
+          "participants": [
+            "speaker",
+            "mother"
+          ],
+          "problem_type": "book not in school bag",
+          "resolution_type": "look at bed after mother's suggestion",
+          "main_actions": [
+            "search bag",
+            "ask mother",
+            "check desk",
+            "find book on bed",
+            "read ending"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-008-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "借りた動物の本を探して読了する一つの小さな問題。권は借りた冊数、엄마は母への直接呼びかけで各1token。아직は未読了、아니요は机上にあるかへの否定、네は見つかったかへの肯定でreview3語が自然。机上の学校の本とベッド上の動物の本を区別したので参照は明確。猫の帰宅と睡眠は本の物語と読める。語り手と母の動作を省略しすぎず、日本語にも同じ情報と発話者を残している。"
+          }
+        }
+      ],
+      "end_counter": 49976.4224277,
+      "total_seconds": 134.5784924000036,
+      "coverage": {
+        "denominator_N": 139,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9856115107913669,
+        "target_99_met": false
+      },
+      "eojeol_count": 143,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "借りた動物の本を探して読了する一つの小さな問題。권は借りた冊数、엄마は母への直接呼びかけで各1token。아직は未読了、아니요は机上にあるかへの否定、네は見つかったかへの肯定でreview3語が自然。机上の学校の本とベッド上の動物の本を区別したので参照は明確。猫の帰宅と睡眠は本の物語と読める。語り手と母の動作を省略しすぎず、日本語にも同じ情報と発話者を残している。"
+      }
+    },
+    {
+      "text_number": 9,
+      "start_counter": 49977.8120639,
+      "start_utc": "2026-10-10T20:08:06.405093+00:00",
+      "phase": "committed",
+      "phase_start_counter": 50113.0142201,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-009-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "ne_response_evidence_insufficient",
+                "start": 128,
+                "surface": "네",
+                "status": "REVIEW",
+                "requires_candidate_review": true,
+                "evidence": {
+                  "exact_original_surface": true,
+                  "unique_registered_yes": true,
+                  "utterance_initial": true,
+                  "response_punctuation_boundary": true,
+                  "balanced_or_independent": true,
+                  "no_direct_possessive_nominal": true,
+                  "exact_overlapping_ner_ui_signature": true,
+                  "exclusive_annotations": true,
+                  "short_scope_raw_ic_and_registered_yes": false,
+                  "annotation_intent_not_used": true
+                }
+              }
+            }
+          ],
+          "author_seconds": 44.83207140000013,
+          "validation_seconds": 1.4446338999987347,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1399586999905296,
+            "semantic_diagnostics": 0.0071310999992419966
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-009-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 35.819145900000876,
+          "validation_seconds": 1.4358090000023367,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.134053000001586,
+            "semantic_diagnostics": 0.007556999997177627
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 51.66404700000567,
+        "author_draft": 44.83207140000013,
+        "morphology_vocab_analysis": 2.2740116999921156,
+        "mechanical_validation": 0.6064312000089558,
+        "retry_repair": 35.819145900000876,
+        "naturalness_review": 20.41126280000026,
+        "final_reanalysis": 1.1727377999995952,
+        "commit": 1.1350440999958664,
+        "controller_overhead": 0.6384372999964398
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 9,
+        "title_ko": "가족에게 주는 사과",
+        "genre": "family",
+        "scene": [
+          "family",
+          "home",
+          "transport",
+          "communication"
+        ],
+        "review_candidates": [
+          "개",
+          "명",
+          "이",
+          "그"
+        ],
+        "scene_fingerprint": {
+          "goal": "take apples on a visit to grandmother",
+          "setting": "home then train and grandmother's house",
+          "participants": [
+            "speaker",
+            "father",
+            "grandmother"
+          ],
+          "problem_type": "pack gift and reach family home",
+          "resolution_type": "travel by train and greet grandmother",
+          "main_actions": [
+            "wash apples",
+            "pack gift",
+            "ask father",
+            "take train",
+            "greet grandmother"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-009-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "祖母にリンゴを持って行くための準備、電車移動、到着と挨拶という一つの外出。아빠は父への呼びかけ1token、할머니は訪問目的と到着場面の2tokenで、N=161に対してU=3のhard98を満たす。개は贈り物のリンゴ数、명は二人が窓側に座れること、이/그は目の前のリンゴと直前の父のかばんを指す。선물로は通常の自然な贈り物用法でsemantic warningだけで拒否しない。初稿の네応答はshort-scope側もyesを支持しなかったため限定resolverは拒否し、独立応答と説明文へ分けた。rawを改変せず、最終候補でのidentity一致を確認した。訳は数量・人物・時系列を保持。"
+          }
+        }
+      ],
+      "end_counter": 50136.3652531,
+      "total_seconds": 158.5531891999999,
+      "coverage": {
+        "denominator_N": 161,
+        "new_tokens_U": 3,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9813664596273292,
+        "target_99_met": false
+      },
+      "eojeol_count": 170,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "祖母にリンゴを持って行くための準備、電車移動、到着と挨拶という一つの外出。아빠は父への呼びかけ1token、할머니は訪問目的と到着場面の2tokenで、N=161に対してU=3のhard98を満たす。개は贈り物のリンゴ数、명は二人が窓側に座れること、이/그は目の前のリンゴと直前の父のかばんを指す。선물로は通常の自然な贈り物用法でsemantic warningだけで拒否しない。初稿の네応答はshort-scope側もyesを支持しなかったため限定resolverは拒否し、独立応答と説明文へ分けた。rawを改変せず、最終候補でのidentity一致を確認した。訳は数量・人物・時系列を保持。"
+      }
+    },
+    {
+      "text_number": 10,
+      "start_counter": 50137.7839232,
+      "start_utc": "2026-10-10T20:10:46.392445+00:00",
+      "phase": "committed",
+      "phase_start_counter": 50279.014912,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-010-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "오늘",
+                "surface": "오늘",
+                "start": 650,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "identity_boundary",
+                "surface": "오늘",
+                "lemma": "오늘",
+                "start": 650,
+                "raw_pos": "MAG",
+                "registered_candidates": [
+                  {
+                    "id": "ko_k1_0068",
+                    "pos": "noun",
+                    "sense": "today"
+                  }
+                ],
+                "alias_reason": null,
+                "status": "REVIEW",
+                "requires_candidate_review": true
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 295: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 51.22775930000353,
+          "validation_seconds": 1.4663775000008172,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1284747000099742,
+            "semantic_diagnostics": 0.007314199996471871
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-010-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 16.8047516000006,
+          "validation_seconds": 1.4759202999994159,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1405236999926274,
+            "semantic_diagnostics": 0.007194500001787674
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 70.2502883000052,
+        "author_draft": 51.22775930000353,
+        "morphology_vocab_analysis": 2.2689984000026016,
+        "mechanical_validation": 0.6732993999976316,
+        "retry_repair": 16.8047516000006,
+        "naturalness_review": 19.280598299999838,
+        "final_reanalysis": 1.177715799996804,
+        "commit": 1.304542700003367,
+        "controller_overhead": 0.6393543999947724
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 10,
+        "title_ko": "가족 사진을 보는 날",
+        "genre": "simple_hobby",
+        "scene": [
+          "family",
+          "home",
+          "communication"
+        ],
+        "review_candidates": [
+          "엄마",
+          "살",
+          "무슨"
+        ],
+        "scene_fingerprint": {
+          "goal": "share a childhood family photo and take a family photo today",
+          "setting": "mother's home on weekend",
+          "participants": [
+            "adult speaker",
+            "husband",
+            "mother",
+            "father"
+          ],
+          "problem_type": "explain who and what are in a childhood picture",
+          "resolution_type": "recall birthday and take today's family picture",
+          "main_actions": [
+            "visit parents",
+            "look at family photo",
+            "ask about picture",
+            "recall birthday",
+            "take family photograph"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6a\\candidates\\K1-010-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "成人の語り手が夫と両親を訪ね、子供時代の写真を見てから現在の写真を撮る一場面。남편2tokenと할아버지1tokenは必要な人物参照で、N=154/U=3によりhard98を満たす。엄마と무슨は写真の場面を母へ尋ねる自然な質問、살はその写真の時点の年齢で、期限の近いreviewも文脈に関与する。写った家族・海と実在の現在の人物を混同しないよう写真内と明示した。両親の写真と語り手夫婦の写真を交代で撮るので、母と語り手がそれぞれ笑って写る記述も成立する。各教材は独立場面であり007の児童が010で成人へ急成長する連続物語ではない。日本語訳は過去の思い出と現在の撮影を忠実に区別。"
+          }
+        }
+      ],
+      "end_counter": 50301.4112314,
+      "total_seconds": 163.62730820000434,
+      "coverage": {
+        "denominator_N": 154,
+        "new_tokens_U": 3,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9805194805194806,
+        "target_99_met": false
+      },
+      "eojeol_count": 157,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "成人の語り手が夫と両親を訪ね、子供時代の写真を見てから現在の写真を撮る一場面。남편2tokenと할아버지1tokenは必要な人物参照で、N=154/U=3によりhard98を満たす。엄마と무슨は写真の場面を母へ尋ねる自然な質問、살はその写真の時点の年齢で、期限の近いreviewも文脈に関与する。写った家族・海と実在の現在の人物を混同しないよう写真内と明示した。両親の写真と語り手夫婦の写真を交代で撮るので、母と語り手がそれぞれ笑って写る記述も成立する。各教材は独立場面であり007の児童が010で成人へ急成長する連続物語ではない。日本語訳は過去の思い出と現在の撮影を忠実に区別。"
+      }
+    }
+  ],
+  "completed": true,
+  "methodology": "Live local LLM author, sequential snapshot/file callback; elapsed author stage includes model reasoning and file transport. Not external API throughput.",
+  "production_end_counter": 50301.4112372,
+  "production_end_utc": "2026-10-10T20:13:29.874286+00:00",
+  "production_wall_seconds": 1294.9310841000042,
+  "per_text_statistics": {
+    "n": 10,
+    "min": 86.58579620000091,
+    "max": 214.56055500000366,
+    "mean": 128.30100954000082,
+    "median": 114.90289805000066,
+    "p90": 163.62730820000434
+  },
+  "stage_totals_seconds": {
+    "scene_planning": 470.1223413000189,
+    "author_draft": 408.5818893000178,
+    "morphology_vocab_analysis": 21.41865870001493,
+    "mechanical_validation": 3.726353999969433,
+    "retry_repair": 171.6247485000058,
+    "naturalness_review": 181.36642089999077,
+    "final_reanalysis": 11.639623900002334,
+    "commit": 7.461881399991398,
+    "controller_overhead": 7.0681773999967845
+  },
+  "estimated_300_serial_hours": {
+    "estimated_300_mean_hours": 10.691750795000068,
+    "estimated_300_median_hours": 9.575241504166721
+  },
+  "engineering_before_production_seconds": 640.943168,
+  "timing_caveats": [
+    "Counters measure live local LLM author/file-callback elapsed time, including reasoning, file transport, tool wait and orchestration. Pure model inference cannot be isolated by these timers.",
+    "K1-001 scene_planning includes context-resumption and controller inspection elapsed time. It remains in the production wall and per-text totals; it was not silently excluded as setup.",
+    "K1-002 initial plan and initial draft were written together before the plan-stage boundary. Its measured scene_planning 38.392 seconds therefore includes initial drafting; stage totals are operational phase timings rather than a clean separation of planning and prose generation.",
+    "Setup, resolver development, pre-run full regression and post-run tests/replay are outside the production wall. No code/config changes occurred during generation."
+  ]
+}

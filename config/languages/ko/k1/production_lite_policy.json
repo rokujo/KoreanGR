@@ -1,0 +1,27 @@
+{
+  "version": "phase3_6",
+  "authority": "User Phase 3.6 instructions; frozen grammar32 now defines permitted forms, not an exhaustive closed inventory of semantic roles.",
+  "semantic_grammar_gate": "diagnostics_only",
+  "semantic_heuristic_fail_blocks_commit": false,
+  "lexical_unresolved_blocks_commit": true,
+  "unapproved_morphosyntactic_construction_blocks_commit": true,
+  "author_confirmed_unnaturalness_requires_repair": true,
+  "controlled_coverage_hard": 1.0,
+  "previous_coverage_hard": 0.98,
+  "previous_coverage_target": 0.99,
+  "max_attempts": 5,
+  "benchmark_max_text": 10,
+  "draft_target_eojeol": [
+    130,
+    150
+  ],
+  "hard_length_eojeol": [
+    120,
+    180
+  ],
+  "hard_sentence_max_eojeol": 10,
+  "new_lemma_max": 2,
+  "new_token_soft_max": 3,
+  "code_changes_during_benchmark": false,
+  "semantic_grammar_review_blocks_commit": false
+}

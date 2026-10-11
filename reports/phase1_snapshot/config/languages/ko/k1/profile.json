@@ -1,0 +1,98 @@
+{
+  "language": "ko",
+  "level": "K1",
+  "version": "0.1.0",
+  "status": "draft_for_human_review",
+  "target_texts": 300,
+  "vocab_budget": {
+    "core": 300,
+    "expansion": 500,
+    "total": 800
+  },
+  "length": {
+    "min_eojeol": 120,
+    "max_eojeol": 180
+  },
+  "sentence_length": {
+    "preferred_min_eojeol": 4,
+    "preferred_max_eojeol": 7,
+    "hard_max_eojeol": 10
+  },
+  "new_vocab": {
+    "min": 0,
+    "max": 2
+  },
+  "known_vocab_ratio": 0.99,
+  "repetition": {
+    "near_repetition_allowed": true,
+    "near_repetition_encouraged": true,
+    "paraphrase_required": false
+  },
+  "style": {
+    "default_register": "해요체",
+    "prefer_processing_ease": true,
+    "prefer_naturalness_over_variety": true
+  },
+  "grammar_count": 29,
+  "counting": {
+    "vocab_unit": [
+      "lemma",
+      "pos",
+      "sense"
+    ],
+    "proper_names_in_budget": false,
+    "grammar_bound_forms_in_budget": false,
+    "eojeol": "空白区切りの非空トークン数。句読点だけのトークンを数えない。",
+    "known_ratio_denominator": "本文中の内容語lemma+POS+senseの延べ出現数。助詞・語尾・許可構文内の文法専用語を除く。固有名詞・定型表現は1意味単位として分母へ含める。",
+    "known_ratio_numerator": "学習者が読む前に既知である意味単位の延べ出現数。未知語の繰返しも未知のまま計数。",
+    "new_vocab_definition": "教材単位で初めて導入する異なるExpansionエントリの数。事前提示した語も初出教材の導入語数に含める。",
+    "number_forms": "한/두/세/네/스무を固有数詞へ正規化。漢数詞の組合せは登録された数詞に分解。ゼロ・日付単位일・未登録の十位固有数詞は未許可。"
+  },
+  "introduction": {
+    "first_text": 1,
+    "last_text": 250,
+    "consolidation_from": 251,
+    "tier_counts": {
+      "E1": 200,
+      "E2": 200,
+      "E3": 100
+    },
+    "ranges": {
+      "E1": [
+        1,
+        170
+      ],
+      "E2": [
+        61,
+        250
+      ],
+      "E3": [
+        151,
+        250
+      ]
+    },
+    "target_exposures": 6,
+    "distinct_texts_required": true
+  },
+  "feasibility": {
+    "introduction_slots": 500,
+    "required_new_entries": 500,
+    "slack_slots": 0,
+    "warning": "全500語を本文初出させる場合、K1-001〜250は例外なく2語導入が必要。0〜1語回の余裕なし。",
+    "known_ratio_resolution": "未確定。事前提示を推奨するが、実際に読前既知になったことの確認が必要。本文だけで2未知語を導入すると延べ内容語200以上が99%条件の必要条件。",
+    "generation_gate": "人間レビューで導入容量と既知語率の測定・読前既知化方針を確定するまで大量本文生成へ進まない。"
+  },
+  "grammar_policy": {
+    "max_connector_clauses_preferred": 2,
+    "allow_unlisted_productive_derivation": false,
+    "inflection_not_new_vocab": true,
+    "notes": "活用の許可は新たな語義・構文の許可ではない。辞書語の使役・受動・移動複合動詞は個別lemmaとしてのみ許可。"
+  },
+  "review_required": [
+    "Core 한국→아니다置換案",
+    "意味境界とPOSの韓国語母語話者確認",
+    "500語導入容量と99%既知率の両立",
+    "E3再遭遇6教材の設計",
+    "例外5固定句の事前提示"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "phase": "3",
+  "validator_integrity_errors": [],
+  "validator_integrity_pass": true,
+  "experiment_pass": false,
+  "run_status": "stopped",
+  "stop": {
+    "text": 1,
+    "reasons": [
+      "Body length outside 120..180",
+      "Future Expansion ko_k1_0386",
+      "Token 198: uncontrolled vocabulary or future introduction",
+      "Token 91: uncontrolled vocabulary or future introduction",
+      "Unconfirmed previous Expansion ko_k1_0386",
+      "Unresolved 걸 / 걸다",
+      "controlled_vocab_coverage below hard 100%",
+      "previous_vocab_coverage below hard 98%"
+    ]
+  },
+  "accepted_count": 0,
+  "failed_attempt_count": 1,
+  "vocabulary_counts": {
+    "core": 300,
+    "expansion": 500,
+    "total": 800,
+    "tiers": {
+      "E1": 200,
+      "E2": 200,
+      "E3": 100
+    }
+  },
+  "grammar_count": 32,
+  "body_results": [
+    {
+      "text": 1,
+      "accepted": false,
+      "eojeol": 119,
+      "coverage": {
+        "denominator_N": 115,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 0.9826086956521739,
+        "previous_vocab_coverage": 0.9652173913043478,
+        "target_99_met": false
+      },
+      "future_expansion_ids": [
+        "ko_k1_0386"
+      ],
+      "unconfirmed_prior_ids": [
+        "ko_k1_0386"
+      ],
+      "missing_planned_new_ids": [],
+      "unlicensed_grammar_ids": [],
+      "unresolved_grammar_tokens": [],
+      "unresolved_content_tokens": [
+        {
+          "surface": "걸",
+          "lemma": "걸다",
+          "pos": null,
+          "sense": null,
+          "vocab_id": null,
+          "role": "unresolved",
+          "start": 407,
+          "end": 408,
+          "morph_indices": [
+            228
+          ],
+          "grammar_id": null
+        }
+      ],
+      "retired_ids": [],
+      "hard_errors": [
+        "Body length outside 120..180",
+        "Future Expansion ko_k1_0386",
+        "Token 198: uncontrolled vocabulary or future introduction",
+        "Token 91: uncontrolled vocabulary or future introduction",
+        "Unconfirmed previous Expansion ko_k1_0386",
+        "Unresolved 걸 / 걸다",
+        "controlled_vocab_coverage below hard 100%",
+        "previous_vocab_coverage below hard 98%"
+      ]
+    }
+  ],
+  "accepted_review_debt": [],
+  "actual_credit_pairs": 0,
+  "limitations": "Raw reanalysis is reproducible, not independent semantic gold; failed body never credited."
+}

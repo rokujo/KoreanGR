@@ -1,0 +1,24 @@
+test_atomic_fault_before_and_after_publish (test_k1_phase3_3.GateTests.test_atomic_fault_before_and_after_publish) ... ok
+test_future_attributive_title_alone_rejected (test_k1_phase3_3.GateTests.test_future_attributive_title_alone_rejected) ... ok
+test_original_full_failed002_identity_fixed_draft_errors_retained (test_k1_phase3_3.GateTests.test_original_full_failed002_identity_fixed_draft_errors_retained) ... ok
+test_planned_identity_gate_unchanged (test_k1_phase3_3.GateTests.test_planned_identity_gate_unchanged) ... ok
+test_recovery_does_not_allow_future_interjection (test_k1_phase3_3.GateTests.test_recovery_does_not_allow_future_interjection) ... ok
+test_reject_repair_commit_only_two_transactions (test_k1_phase3_3.GateTests.test_reject_repair_commit_only_two_transactions) ... ok
+test_retired_intent_and_future_title_rejected (test_k1_phase3_3.GateTests.test_retired_intent_and_future_title_rejected) ... ok
+test_all_phase32_contrast_fixtures_on_new_layer (test_k1_phase3_3.RecoveryTests.test_all_phase32_contrast_fixtures_on_new_layer) ... ok
+test_audit_full_evidence (test_k1_phase3_3.RecoveryTests.test_audit_full_evidence) ... ok
+test_core_anida_not_absorbed (test_k1_phase3_3.RecoveryTests.test_core_anida_not_absorbed) ... ok
+test_frozen_phase23_fixtures_on_new_layer (test_k1_phase3_3.RecoveryTests.test_frozen_phase23_fixtures_on_new_layer) ... ok
+test_irregular_and_limited_walk_on_new_layer (test_k1_phase3_3.RecoveryTests.test_irregular_and_limited_walk_on_new_layer) ... ok
+test_missing_registered_identity_cannot_recover (test_k1_phase3_3.RecoveryTests.test_missing_registered_identity_cannot_recover) ... ok
+test_no_unsafe_reassembly (test_k1_phase3_3.RecoveryTests.test_no_unsafe_reassembly) ... ok
+test_paragraph_multiple_turns_and_offsets (test_k1_phase3_3.RecoveryTests.test_paragraph_multiple_turns_and_offsets) ... ok
+test_quoted_unquoted_parity (test_k1_phase3_3.RecoveryTests.test_quoted_unquoted_parity) ... ok
+test_raw_nonconsecutive_or_overlapping_not_repaired (test_k1_phase3_3.RecoveryTests.test_raw_nonconsecutive_or_overlapping_not_repaired) ... ok
+test_raw_pos_mismatch_not_repaired (test_k1_phase3_3.RecoveryTests.test_raw_pos_mismatch_not_repaired) ... ok
+test_smart_quotes_keep_offsets (test_k1_phase3_3.RecoveryTests.test_smart_quotes_keep_offsets) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 17.372s
+
+OK

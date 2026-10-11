@@ -1,0 +1,59 @@
+{
+  "entries": [
+    {
+      "phase": "3.9",
+      "text": 7,
+      "intended_meaning": "open a paper book before the group lesson",
+      "missing_natural_word": "펴다",
+      "current_workaround": "omit opening and directly read the book",
+      "whether_omission_solved_it": true,
+      "resolution": "omit",
+      "recurrence_count_in_this_run": 1,
+      "historical_reference": "Known Phase 3.8 gap; no vocabulary or sense expansion."
+    },
+    {
+      "phase": "3.9",
+      "text": 11,
+      "intended_meaning": "dress the baby before resting",
+      "missing_natural_word": "입히다",
+      "current_workaround": "omit the dressing step and begin with the family already at home",
+      "whether_omission_solved_it": true,
+      "resolution": "omit",
+      "recurrence_count_in_this_run": 1,
+      "historical_reference": "Known Phase 3.8 gap; never use 입다 as causative dress."
+    },
+    {
+      "phase": "3.9",
+      "text": 9,
+      "intended_meaning": "wind blowing outside together with rain",
+      "missing_natural_word": "불다",
+      "current_workaround": "Committed text used an inventory-like 비하고 바람이 있어요; post-commit review flags it as unnatural.",
+      "whether_omission_solved_it": false,
+      "resolution": "report_only; future rewrite should omit wind rather than force an approximate predicate",
+      "recurrence_count_in_this_run": 1,
+      "origin": "post_commit_author_audit_not_human_gold"
+    },
+    {
+      "phase": "3.9a",
+      "text": 27,
+      "intended_meaning": "erase the initial written answer before rewriting",
+      "missing_natural_word": "지우다",
+      "current_workaround": "omit erasing action; borrow the eraser and write the answer again without a substitute verb",
+      "whether_omission_solved_it": true,
+      "resolution": "omit_rewrite",
+      "recurrence_count_in_this_run": 1,
+      "historical_reference": "Existing known gap from Phase 3.8/3.9; no new restriction or vocabulary change."
+    },
+    {
+      "phase": "3.9a",
+      "text": 61,
+      "intended_meaning": "friend consumes ramen broth with spoon",
+      "missing_natural_word": "국물",
+      "current_workaround": "omit broth description; state ordinary spoon use",
+      "whether_omission_solved_it": true,
+      "resolution": "omit",
+      "recurrence_count_in_this_run": 1,
+      "source": "Post-run compilation of saved live-author self-check note; not a new lexical restriction and not an exhaustive internal-gap count"
+    }
+  ]
+}

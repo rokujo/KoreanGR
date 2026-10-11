@@ -1,0 +1,2 @@
+# Frozen artifacts use exact-byte SHA-256 checks. Never normalize line endings.
+* -text

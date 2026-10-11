@@ -1,0 +1,316 @@
+{
+  "phase": "2.1A",
+  "status": "applied",
+  "migration_mappings_added": [
+    {
+      "phase": "2.1A",
+      "old_id": "ko_k1_0363",
+      "old_lemma": "오렌지",
+      "old_pos": "noun",
+      "old_sense": "orange",
+      "new_id": "ko_k1_0808",
+      "new_lemma": "닦다",
+      "new_pos": "verb",
+      "new_sense": "wipe_clean",
+      "rank": 363,
+      "tier": "E1",
+      "category": "verbs",
+      "old_rank": 363,
+      "old_tier": "E1",
+      "old_category": "food_nature",
+      "old_first_introduction_text": 40,
+      "new_first_introduction_text": 20
+    },
+    {
+      "phase": "2.1A",
+      "old_id": "ko_k1_0603",
+      "old_lemma": "찍다",
+      "old_pos": "verb",
+      "old_sense": "stamp",
+      "new_id": "ko_k1_0809",
+      "new_lemma": "붙이다",
+      "new_pos": "verb",
+      "new_sense": "attach_stick",
+      "rank": 603,
+      "tier": "E2",
+      "category": "verbs",
+      "old_rank": 603,
+      "old_tier": "E2",
+      "old_category": "verbs",
+      "old_first_introduction_text": 155,
+      "new_first_introduction_text": 127
+    },
+    {
+      "phase": "2.1A",
+      "old_id": "ko_k1_0365",
+      "old_lemma": "포도",
+      "old_pos": "noun",
+      "old_sense": "grape",
+      "new_id": "ko_k1_0810",
+      "new_lemma": "공",
+      "new_pos": "noun",
+      "new_sense": "ball",
+      "rank": 365,
+      "tier": "E1",
+      "category": "places_objects",
+      "old_rank": 365,
+      "old_tier": "E1",
+      "old_category": "food_nature",
+      "old_first_introduction_text": 41,
+      "new_first_introduction_text": 33
+    },
+    {
+      "phase": "2.1A",
+      "old_id": "ko_k1_0577",
+      "old_lemma": "오르다",
+      "old_pos": "verb",
+      "old_sense": "rise_climb",
+      "new_id": "ko_k1_0811",
+      "new_lemma": "그림",
+      "new_pos": "noun",
+      "new_sense": "drawing_picture",
+      "rank": 577,
+      "tier": "E2",
+      "category": "places_objects",
+      "old_rank": 577,
+      "old_tier": "E2",
+      "old_category": "verbs",
+      "old_first_introduction_text": 141,
+      "new_first_introduction_text": 111
+    },
+    {
+      "phase": "2.1A",
+      "old_id": "ko_k1_0571",
+      "old_lemma": "가져다주다",
+      "old_pos": "verb",
+      "old_sense": "bring_to_someone",
+      "new_id": "ko_k1_0812",
+      "new_lemma": "들다",
+      "new_pos": "verb",
+      "new_sense": "hold_lift_by_hand",
+      "rank": 571,
+      "tier": "E2",
+      "category": "verbs",
+      "old_rank": 571,
+      "old_tier": "E2",
+      "old_category": "verbs",
+      "old_first_introduction_text": 138,
+      "new_first_introduction_text": 110
+    }
+  ],
+  "introduction_movements": [
+    {
+      "new_id": "ko_k1_0808",
+      "new_lemma": "닦다",
+      "tier": "E1",
+      "former_slot_text": 40,
+      "new_first_text": 20,
+      "displaced_id": "ko_k1_0326",
+      "displaced_lemma": "비누",
+      "displaced_from": 20,
+      "displaced_to": 40
+    },
+    {
+      "new_id": "ko_k1_0809",
+      "new_lemma": "붙이다",
+      "tier": "E2",
+      "former_slot_text": 155,
+      "new_first_text": 127,
+      "displaced_id": "ko_k1_0549",
+      "displaced_lemma": "가위",
+      "displaced_from": 127,
+      "displaced_to": 155
+    },
+    {
+      "new_id": "ko_k1_0810",
+      "new_lemma": "공",
+      "tier": "E1",
+      "former_slot_text": 41,
+      "new_first_text": 33,
+      "displaced_id": "ko_k1_0778",
+      "displaced_lemma": "잠깐",
+      "displaced_from": 33,
+      "displaced_to": 41
+    },
+    {
+      "new_id": "ko_k1_0811",
+      "new_lemma": "그림",
+      "tier": "E2",
+      "former_slot_text": 141,
+      "new_first_text": 111,
+      "displaced_id": "ko_k1_0518",
+      "displaced_lemma": "건물",
+      "displaced_from": 111,
+      "displaced_to": 141
+    },
+    {
+      "new_id": "ko_k1_0812",
+      "new_lemma": "들다",
+      "tier": "E2",
+      "former_slot_text": 138,
+      "new_first_text": 110,
+      "displaced_id": "ko_k1_0516",
+      "displaced_lemma": "엘리베이터",
+      "displaced_from": 110,
+      "displaced_to": 138
+    }
+  ],
+  "changed_existing_vocab_entries": [],
+  "category_before": {
+    "people_social": 40,
+    "places_objects": 90,
+    "food_nature": 50,
+    "verbs": 100,
+    "adjectives": 65,
+    "adverbs_connectors": 50,
+    "time_counters_units": 35,
+    "abstract_body_emotion": 40,
+    "school_work_transport_info": 30
+  },
+  "category_after": {
+    "people_social": 40,
+    "places_objects": 92,
+    "food_nature": 48,
+    "verbs": 100,
+    "adjectives": 65,
+    "adverbs_connectors": 50,
+    "time_counters_units": 35,
+    "abstract_body_emotion": 40,
+    "school_work_transport_info": 30
+  },
+  "historical_snapshot": "reports/phase2_1_snapshot",
+  "texts_generated": 0,
+  "modified_files": [
+    {
+      "path": "config/languages/ko/k1/expansion_replacement_proposals.json",
+      "before_sha256": "82d4b7933a816ff945ed1dd84b67cd28b1df0f35e5e012c8ff9ecbddbd551654",
+      "after_sha256": "8bcaa16ada729e58a607aa56650ca834bd3c4df2d0127cf7fbf2a5345ef9ea85"
+    },
+    {
+      "path": "config/languages/ko/k1/expansion_vocab.json",
+      "before_sha256": "ef447c43d64153fc03b1cd32194978b5bb86abd134bc9b3bef4682090c799983",
+      "after_sha256": "4d673c622988cc13044a019f368f7739de0cf2041bf85f28d2b2c5d4710a66c5"
+    },
+    {
+      "path": "config/languages/ko/k1/id_migration.json",
+      "before_sha256": "e97a1c0a2c498d019e756433cd0b5873bf558721005e23771881e41f4bbeafd4",
+      "after_sha256": "53beefc75f2a2ac81a72660d2bf9381e344f7a8f3f546d02fd1980345f7df8f9"
+    },
+    {
+      "path": "config/languages/ko/k1/introduction_schedule.json",
+      "before_sha256": "f79e5e87b4f12faf57d95641f0ca84a410fc458b352f107b8376b5340f5a0d37",
+      "after_sha256": "7259e5b3f37a24630e17f917a05636ab2b158b723df43e840af91ee82f3be241"
+    },
+    {
+      "path": "config/languages/ko/k1/k2_candidates.json",
+      "before_sha256": "790162b12542024f9145431eecf6917caffe1fb81931a77eca2687765bddc977",
+      "after_sha256": "091c7e70674f27920884e4947c3b67137b770aeb6ff675996cb5bc3be2400784"
+    },
+    {
+      "path": "config/languages/ko/k1/profile.json",
+      "before_sha256": "ea9f591f8f040ab4046380bf109f96bb349f433682d6211038c820248909c055",
+      "after_sha256": "c32bbe600414c7bdf6b945d3c34c3231b8867f34844076f203d58e7fad652b51"
+    },
+    {
+      "path": "config/languages/ko/k1/support.schema.json",
+      "before_sha256": "f8926ee46de6013cf78f10f1b97f4a9076ec4087a56325737528aaa12d7500e9",
+      "after_sha256": "01450b8ffc0cf96fc79797ca57656b6641be1e836b5efacf1f0d942635979c83"
+    },
+    {
+      "path": "config/languages/ko/k1/vocab.schema.json",
+      "before_sha256": "ae77f98ddbac28728d08f934a744c7f1da978144fd3f3e2069a8b3eed0bce5fb",
+      "after_sha256": "5bc45a02a88d2276d8dab2ad9707f7a5f007d482b0ce5ddbe0d298453fab2eac"
+    },
+    {
+      "path": "config/languages/ko/k1/vocab_exposure_schedule.json",
+      "before_sha256": "745dc2c7425ef9f0c599b95163a589383a6e7e7fd07c80d4ccde2cd00e81d1ff",
+      "after_sha256": "6c2df22647822326f45aa16b23e8ae9d318b7a9b73ef0988d7b126b81008862d"
+    },
+    {
+      "path": "config/languages/ko/k1/vocab_exposure_schedule.schema.json",
+      "before_sha256": "96fa8a1d67b3584ab4fef64b9868f860cc83df82ed1a07b6c25c99f348545b02",
+      "after_sha256": "6e7f95ef09c49c1b07cfcb83c3eaa69f6a68cc38ce21ff7b59054ac8c33a88eb"
+    },
+    {
+      "path": "config/languages/ko/k1/vocab_review_windows.json",
+      "before_sha256": "5ab4cb148617ba811acf56266603c5fb341eaef30990cd9b6984f4023f225b8a",
+      "after_sha256": "9b00ad8784718377c141bbc26b863e9215bc38cf7209b7f0c7cb1e57d11c728d"
+    },
+    {
+      "path": "config/languages/ko/k1/vocab_review_windows.schema.json",
+      "before_sha256": "fa53777889da952d9dafd6d5566b3e564d9441adb7185f313ef37da8d524f254",
+      "after_sha256": "15ebd3a9627a0b2ed96f74d94dc1a9c179866e5ecff2e4dde38fd755175c5336"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "e0432142cdc9fe764ba648fd1d84b3b86e0a4aa7805cc2a3e9d94d38ea27a486",
+      "after_sha256": "39232887682b382d0065eb6bae0b40f0fbaa020a58cdace654a9f7c2bb7ecf57"
+    },
+    {
+      "path": "scripts/audit_phase1_1_changes.py",
+      "before_sha256": "449e81f6568e159e7fadca64707d00dd886543bb010bca3b2f209d9d9d7edef4",
+      "after_sha256": "8791c014b6953e0b6d1b842edcd4cded54f267a932b5ccf594ce02cfcc573e16"
+    },
+    {
+      "path": "scripts/audit_phase1_2_changes.py",
+      "before_sha256": "e4c425ada2e94c09c1e1b4c93640d16ae85129e12d73f0dc9997bb609eb8923f",
+      "after_sha256": "9d15f15e4007b5314cc65cba00b41dede3a26f9bf8bd569db1788afde3cda079"
+    },
+    {
+      "path": "scripts/build_k1_data.py",
+      "before_sha256": "8e7639b52169d85813e2ff75183b790d4b44838ec43a1a108cf48a11cd3338e8",
+      "after_sha256": "729f8ec5e84a4ddfb103b069ef5f76b57b0b1fb74709c4948367325e1416158f"
+    },
+    {
+      "path": "scripts/build_k1_phase2_1.py",
+      "before_sha256": "5b2b0b868a417d16bbfe9e365ac8810372f71258666e5a7ec18c5aa90b6b2ba5",
+      "after_sha256": "d414907d4911effc84f400fdd74d52967047ef73e5db118467efbc9510ed0558"
+    },
+    {
+      "path": "scripts/build_k1_pilot.py",
+      "before_sha256": "2546a5744cc36034570246b9f15204ed204764d8fc107a7cedb37ebe0cbab374",
+      "after_sha256": "bce104e2a88876e74948e4558b44b4d5b8f824ffdbcb7531b6944eaf452ac9cb"
+    },
+    {
+      "path": "scripts/k1_annotation_triage.py",
+      "before_sha256": "cedee9a423199550ad320091edc927195d33a3721dfb53ba82c3522118efe158",
+      "after_sha256": "2e648f90ac871db8891c26b444af2adb620eeb1c1148ecfe61466a01b22a6746"
+    },
+    {
+      "path": "scripts/k1_pilot_analysis.py",
+      "before_sha256": "6764f6d36facffbd20684a8ccde573a63b264017ff11c7de41267e74af60e240",
+      "after_sha256": "762e528497e919d3e94faad6ec324c0e5ada257e746a04c9b88c2940e8568284"
+    },
+    {
+      "path": "scripts/lexical_coverage.py",
+      "before_sha256": "dab1adf31d360c9db8511df067bc9180d2292de39a37def076995130c7428fa2",
+      "after_sha256": "faf14d310111ec5790ddb60c8fceda0abc7156d674fb27202a00b062892e8cb5"
+    },
+    {
+      "path": "scripts/report_k1_pilot.py",
+      "before_sha256": "ae87ab8f171f2bd48c51eeebe8ffcc882d4e0f0a36e5ae638e91255c3451b6ef",
+      "after_sha256": "1a69c15016e790c09450f48c0dcb3c25c64102bf578095c9e5ed3adfaffec908"
+    },
+    {
+      "path": "scripts/select_k1_pilot.py",
+      "before_sha256": "423d4eebd8aac432e3ff37eac3a3f421a739e7a4d7dcee420b70bccd0876bc53",
+      "after_sha256": "3f29df9554df4759ee21bc4199a7c6af4dd5e25a4fc506cf553a8c67083e438a"
+    },
+    {
+      "path": "scripts/validate_k1_vocab.py",
+      "before_sha256": "d968d2244d46fbb516155719d7ba2e2cb0c4a0fc06e1b2f915722b1633919ab0",
+      "after_sha256": "28d57ae4e91cdbb579e5a1873ebbb8b9ede50b0286d12b75215f0d2ea9f71e7f"
+    },
+    {
+      "path": "tests/test_lexical_coverage.py",
+      "before_sha256": "70ca9e644ab63d6296adb065f934c73e79b681af3c07a711f9cdca7effe17961",
+      "after_sha256": "481b6a0ae98e4b3132ed5619e5e5ea642b4509b92aee0c985779e881693af8db"
+    },
+    {
+      "path": "tests/test_validate_k1_vocab.py",
+      "before_sha256": "dc05bf2a190afbaac7f9fdffc9a0c2601c87e051c120701e9afc714150e7484a",
+      "after_sha256": "e955953b721e14c2f2e679eecc164b2e3abe4f257a3ec0c87e19d05189ea8651"
+    }
+  ],
+  "freeze_integrity_errors": []
+}

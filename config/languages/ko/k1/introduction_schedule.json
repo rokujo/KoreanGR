@@ -1,0 +1,1961 @@
+{
+  "language": "ko",
+  "level": "K1",
+  "status": "introduction_plan",
+  "notes": "Phase 2.1A：同tier内の5交換・5位置入替。最終初出255、256〜300は新出0。全500エントリの初出。",
+  "rows": [
+    {
+      "text": 1,
+      "entry_ids": [
+        "ko_k1_0373",
+        "ko_k1_0413"
+      ]
+    },
+    {
+      "text": 2,
+      "entry_ids": [
+        "ko_k1_0442",
+        "ko_k1_0443"
+      ]
+    },
+    {
+      "text": 3,
+      "entry_ids": [
+        "ko_k1_0444",
+        "ko_k1_0445"
+      ]
+    },
+    {
+      "text": 4,
+      "entry_ids": [
+        "ko_k1_0446",
+        "ko_k1_0447"
+      ]
+    },
+    {
+      "text": 5,
+      "entry_ids": [
+        "ko_k1_0448",
+        "ko_k1_0449"
+      ]
+    },
+    {
+      "text": 6,
+      "entry_ids": [
+        "ko_k1_0451",
+        "ko_k1_0467"
+      ]
+    },
+    {
+      "text": 7,
+      "entry_ids": [
+        "ko_k1_0468",
+        "ko_k1_0469"
+      ]
+    },
+    {
+      "text": 8,
+      "entry_ids": [
+        "ko_k1_0476",
+        "ko_k1_0301"
+      ]
+    },
+    {
+      "text": 9,
+      "entry_ids": [
+        "ko_k1_0302",
+        "ko_k1_0304"
+      ]
+    },
+    {
+      "text": 10,
+      "entry_ids": [
+        "ko_k1_0305",
+        "ko_k1_0306"
+      ]
+    },
+    {
+      "text": 11,
+      "entry_ids": [
+        "ko_k1_0307",
+        "ko_k1_0308"
+      ]
+    },
+    {
+      "text": 12,
+      "entry_ids": [
+        "ko_k1_0309",
+        "ko_k1_0310"
+      ]
+    },
+    {
+      "text": 13,
+      "entry_ids": [
+        "ko_k1_0311",
+        "ko_k1_0312"
+      ]
+    },
+    {
+      "text": 14,
+      "entry_ids": [
+        "ko_k1_0313",
+        "ko_k1_0314"
+      ]
+    },
+    {
+      "text": 15,
+      "entry_ids": [
+        "ko_k1_0315",
+        "ko_k1_0316"
+      ]
+    },
+    {
+      "text": 16,
+      "entry_ids": [
+        "ko_k1_0317",
+        "ko_k1_0318"
+      ]
+    },
+    {
+      "text": 17,
+      "entry_ids": [
+        "ko_k1_0319",
+        "ko_k1_0320"
+      ]
+    },
+    {
+      "text": 18,
+      "entry_ids": [
+        "ko_k1_0321",
+        "ko_k1_0322"
+      ]
+    },
+    {
+      "text": 19,
+      "entry_ids": [
+        "ko_k1_0323",
+        "ko_k1_0324"
+      ]
+    },
+    {
+      "text": 20,
+      "entry_ids": [
+        "ko_k1_0325",
+        "ko_k1_0808"
+      ]
+    },
+    {
+      "text": 21,
+      "entry_ids": [
+        "ko_k1_0327",
+        "ko_k1_0328"
+      ]
+    },
+    {
+      "text": 22,
+      "entry_ids": [
+        "ko_k1_0329",
+        "ko_k1_0330"
+      ]
+    },
+    {
+      "text": 23,
+      "entry_ids": [
+        "ko_k1_0331",
+        "ko_k1_0332"
+      ]
+    },
+    {
+      "text": 24,
+      "entry_ids": [
+        "ko_k1_0333",
+        "ko_k1_0334"
+      ]
+    },
+    {
+      "text": 25,
+      "entry_ids": [
+        "ko_k1_0335",
+        "ko_k1_0336"
+      ]
+    },
+    {
+      "text": 26,
+      "entry_ids": [
+        "ko_k1_0337",
+        "ko_k1_0338"
+      ]
+    },
+    {
+      "text": 27,
+      "entry_ids": [
+        "ko_k1_0339",
+        "ko_k1_0340"
+      ]
+    },
+    {
+      "text": 28,
+      "entry_ids": [
+        "ko_k1_0341",
+        "ko_k1_0342"
+      ]
+    },
+    {
+      "text": 29,
+      "entry_ids": [
+        "ko_k1_0343",
+        "ko_k1_0344"
+      ]
+    },
+    {
+      "text": 30,
+      "entry_ids": [
+        "ko_k1_0345",
+        "ko_k1_0346"
+      ]
+    },
+    {
+      "text": 31,
+      "entry_ids": [
+        "ko_k1_0347",
+        "ko_k1_0348"
+      ]
+    },
+    {
+      "text": 32,
+      "entry_ids": [
+        "ko_k1_0349",
+        "ko_k1_0350"
+      ]
+    },
+    {
+      "text": 33,
+      "entry_ids": [
+        "ko_k1_0770",
+        "ko_k1_0810"
+      ]
+    },
+    {
+      "text": 34,
+      "entry_ids": [
+        "ko_k1_0351",
+        "ko_k1_0352"
+      ]
+    },
+    {
+      "text": 35,
+      "entry_ids": [
+        "ko_k1_0353",
+        "ko_k1_0354"
+      ]
+    },
+    {
+      "text": 36,
+      "entry_ids": [
+        "ko_k1_0355",
+        "ko_k1_0356"
+      ]
+    },
+    {
+      "text": 37,
+      "entry_ids": [
+        "ko_k1_0357",
+        "ko_k1_0358"
+      ]
+    },
+    {
+      "text": 38,
+      "entry_ids": [
+        "ko_k1_0359",
+        "ko_k1_0360"
+      ]
+    },
+    {
+      "text": 39,
+      "entry_ids": [
+        "ko_k1_0361",
+        "ko_k1_0362"
+      ]
+    },
+    {
+      "text": 40,
+      "entry_ids": [
+        "ko_k1_0326"
+      ]
+    },
+    {
+      "text": 41,
+      "entry_ids": [
+        "ko_k1_0778",
+        "ko_k1_0366"
+      ]
+    },
+    {
+      "text": 42,
+      "entry_ids": [
+        "ko_k1_0367",
+        "ko_k1_0368"
+      ]
+    },
+    {
+      "text": 43,
+      "entry_ids": [
+        "ko_k1_0369",
+        "ko_k1_0370"
+      ]
+    },
+    {
+      "text": 44,
+      "entry_ids": [
+        "ko_k1_0371",
+        "ko_k1_0372"
+      ]
+    },
+    {
+      "text": 45,
+      "entry_ids": [
+        "ko_k1_0374",
+        "ko_k1_0375"
+      ]
+    },
+    {
+      "text": 46,
+      "entry_ids": [
+        "ko_k1_0376",
+        "ko_k1_0377"
+      ]
+    },
+    {
+      "text": 47,
+      "entry_ids": [
+        "ko_k1_0378",
+        "ko_k1_0379"
+      ]
+    },
+    {
+      "text": 48,
+      "entry_ids": [
+        "ko_k1_0380",
+        "ko_k1_0381"
+      ]
+    },
+    {
+      "text": 49,
+      "entry_ids": [
+        "ko_k1_0382",
+        "ko_k1_0383"
+      ]
+    },
+    {
+      "text": 50,
+      "entry_ids": [
+        "ko_k1_0384",
+        "ko_k1_0385"
+      ]
+    },
+    {
+      "text": 51,
+      "entry_ids": [
+        "ko_k1_0386",
+        "ko_k1_0387"
+      ]
+    },
+    {
+      "text": 52,
+      "entry_ids": [
+        "ko_k1_0388",
+        "ko_k1_0389"
+      ]
+    },
+    {
+      "text": 53,
+      "entry_ids": [
+        "ko_k1_0390",
+        "ko_k1_0391"
+      ]
+    },
+    {
+      "text": 54,
+      "entry_ids": [
+        "ko_k1_0392",
+        "ko_k1_0393"
+      ]
+    },
+    {
+      "text": 55,
+      "entry_ids": [
+        "ko_k1_0394",
+        "ko_k1_0395"
+      ]
+    },
+    {
+      "text": 56,
+      "entry_ids": [
+        "ko_k1_0396",
+        "ko_k1_0397"
+      ]
+    },
+    {
+      "text": 57,
+      "entry_ids": [
+        "ko_k1_0398",
+        "ko_k1_0399"
+      ]
+    },
+    {
+      "text": 58,
+      "entry_ids": [
+        "ko_k1_0400",
+        "ko_k1_0401"
+      ]
+    },
+    {
+      "text": 59,
+      "entry_ids": [
+        "ko_k1_0402",
+        "ko_k1_0403"
+      ]
+    },
+    {
+      "text": 60,
+      "entry_ids": [
+        "ko_k1_0404",
+        "ko_k1_0405"
+      ]
+    },
+    {
+      "text": 61,
+      "entry_ids": [
+        "ko_k1_0406",
+        "ko_k1_0407"
+      ]
+    },
+    {
+      "text": 62,
+      "entry_ids": [
+        "ko_k1_0408",
+        "ko_k1_0409"
+      ]
+    },
+    {
+      "text": 63,
+      "entry_ids": [
+        "ko_k1_0410",
+        "ko_k1_0411"
+      ]
+    },
+    {
+      "text": 64,
+      "entry_ids": [
+        "ko_k1_0412",
+        "ko_k1_0414"
+      ]
+    },
+    {
+      "text": 65,
+      "entry_ids": [
+        "ko_k1_0415",
+        "ko_k1_0416"
+      ]
+    },
+    {
+      "text": 66,
+      "entry_ids": [
+        "ko_k1_0417",
+        "ko_k1_0418"
+      ]
+    },
+    {
+      "text": 67,
+      "entry_ids": [
+        "ko_k1_0419",
+        "ko_k1_0420"
+      ]
+    },
+    {
+      "text": 68,
+      "entry_ids": [
+        "ko_k1_0421",
+        "ko_k1_0422"
+      ]
+    },
+    {
+      "text": 69,
+      "entry_ids": [
+        "ko_k1_0423",
+        "ko_k1_0424"
+      ]
+    },
+    {
+      "text": 70,
+      "entry_ids": [
+        "ko_k1_0425",
+        "ko_k1_0426"
+      ]
+    },
+    {
+      "text": 71,
+      "entry_ids": [
+        "ko_k1_0427",
+        "ko_k1_0428"
+      ]
+    },
+    {
+      "text": 72,
+      "entry_ids": [
+        "ko_k1_0429",
+        "ko_k1_0430"
+      ]
+    },
+    {
+      "text": 73,
+      "entry_ids": [
+        "ko_k1_0431",
+        "ko_k1_0432"
+      ]
+    },
+    {
+      "text": 74,
+      "entry_ids": [
+        "ko_k1_0433",
+        "ko_k1_0434"
+      ]
+    },
+    {
+      "text": 75,
+      "entry_ids": [
+        "ko_k1_0435",
+        "ko_k1_0436"
+      ]
+    },
+    {
+      "text": 76,
+      "entry_ids": [
+        "ko_k1_0437",
+        "ko_k1_0438"
+      ]
+    },
+    {
+      "text": 77,
+      "entry_ids": [
+        "ko_k1_0439",
+        "ko_k1_0440"
+      ]
+    },
+    {
+      "text": 78,
+      "entry_ids": [
+        "ko_k1_0441",
+        "ko_k1_0450"
+      ]
+    },
+    {
+      "text": 79,
+      "entry_ids": [
+        "ko_k1_0452",
+        "ko_k1_0453"
+      ]
+    },
+    {
+      "text": 80,
+      "entry_ids": [
+        "ko_k1_0454"
+      ]
+    },
+    {
+      "text": 81,
+      "entry_ids": [
+        "ko_k1_0455",
+        "ko_k1_0456"
+      ]
+    },
+    {
+      "text": 82,
+      "entry_ids": [
+        "ko_k1_0457",
+        "ko_k1_0458"
+      ]
+    },
+    {
+      "text": 83,
+      "entry_ids": [
+        "ko_k1_0459",
+        "ko_k1_0460"
+      ]
+    },
+    {
+      "text": 84,
+      "entry_ids": [
+        "ko_k1_0461",
+        "ko_k1_0462"
+      ]
+    },
+    {
+      "text": 85,
+      "entry_ids": []
+    },
+    {
+      "text": 86,
+      "entry_ids": [
+        "ko_k1_0463",
+        "ko_k1_0464"
+      ]
+    },
+    {
+      "text": 87,
+      "entry_ids": [
+        "ko_k1_0465",
+        "ko_k1_0466"
+      ]
+    },
+    {
+      "text": 88,
+      "entry_ids": [
+        "ko_k1_0470",
+        "ko_k1_0471"
+      ]
+    },
+    {
+      "text": 89,
+      "entry_ids": [
+        "ko_k1_0472",
+        "ko_k1_0473"
+      ]
+    },
+    {
+      "text": 90,
+      "entry_ids": [
+        "ko_k1_0474",
+        "ko_k1_0475"
+      ]
+    },
+    {
+      "text": 91,
+      "entry_ids": [
+        "ko_k1_0477",
+        "ko_k1_0478"
+      ]
+    },
+    {
+      "text": 92,
+      "entry_ids": [
+        "ko_k1_0479",
+        "ko_k1_0480"
+      ]
+    },
+    {
+      "text": 93,
+      "entry_ids": [
+        "ko_k1_0481",
+        "ko_k1_0482"
+      ]
+    },
+    {
+      "text": 94,
+      "entry_ids": [
+        "ko_k1_0483",
+        "ko_k1_0484"
+      ]
+    },
+    {
+      "text": 95,
+      "entry_ids": [
+        "ko_k1_0485",
+        "ko_k1_0486"
+      ]
+    },
+    {
+      "text": 96,
+      "entry_ids": [
+        "ko_k1_0487",
+        "ko_k1_0488"
+      ]
+    },
+    {
+      "text": 97,
+      "entry_ids": [
+        "ko_k1_0489",
+        "ko_k1_0490"
+      ]
+    },
+    {
+      "text": 98,
+      "entry_ids": [
+        "ko_k1_0491",
+        "ko_k1_0492"
+      ]
+    },
+    {
+      "text": 99,
+      "entry_ids": [
+        "ko_k1_0493",
+        "ko_k1_0494"
+      ]
+    },
+    {
+      "text": 100,
+      "entry_ids": [
+        "ko_k1_0495",
+        "ko_k1_0496"
+      ]
+    },
+    {
+      "text": 101,
+      "entry_ids": [
+        "ko_k1_0497",
+        "ko_k1_0498"
+      ]
+    },
+    {
+      "text": 102,
+      "entry_ids": [
+        "ko_k1_0499",
+        "ko_k1_0500"
+      ]
+    },
+    {
+      "text": 103,
+      "entry_ids": [
+        "ko_k1_0501",
+        "ko_k1_0502"
+      ]
+    },
+    {
+      "text": 104,
+      "entry_ids": [
+        "ko_k1_0503",
+        "ko_k1_0504"
+      ]
+    },
+    {
+      "text": 105,
+      "entry_ids": [
+        "ko_k1_0505",
+        "ko_k1_0507"
+      ]
+    },
+    {
+      "text": 106,
+      "entry_ids": [
+        "ko_k1_0508",
+        "ko_k1_0509"
+      ]
+    },
+    {
+      "text": 107,
+      "entry_ids": [
+        "ko_k1_0510",
+        "ko_k1_0511"
+      ]
+    },
+    {
+      "text": 108,
+      "entry_ids": [
+        "ko_k1_0512",
+        "ko_k1_0513"
+      ]
+    },
+    {
+      "text": 109,
+      "entry_ids": [
+        "ko_k1_0514",
+        "ko_k1_0515"
+      ]
+    },
+    {
+      "text": 110,
+      "entry_ids": [
+        "ko_k1_0812",
+        "ko_k1_0517"
+      ]
+    },
+    {
+      "text": 111,
+      "entry_ids": [
+        "ko_k1_0811",
+        "ko_k1_0519"
+      ]
+    },
+    {
+      "text": 112,
+      "entry_ids": [
+        "ko_k1_0520",
+        "ko_k1_0521"
+      ]
+    },
+    {
+      "text": 113,
+      "entry_ids": [
+        "ko_k1_0522",
+        "ko_k1_0523"
+      ]
+    },
+    {
+      "text": 114,
+      "entry_ids": [
+        "ko_k1_0524",
+        "ko_k1_0525"
+      ]
+    },
+    {
+      "text": 115,
+      "entry_ids": [
+        "ko_k1_0526",
+        "ko_k1_0527"
+      ]
+    },
+    {
+      "text": 116,
+      "entry_ids": [
+        "ko_k1_0528",
+        "ko_k1_0529"
+      ]
+    },
+    {
+      "text": 117,
+      "entry_ids": [
+        "ko_k1_0530",
+        "ko_k1_0531"
+      ]
+    },
+    {
+      "text": 118,
+      "entry_ids": [
+        "ko_k1_0532",
+        "ko_k1_0533"
+      ]
+    },
+    {
+      "text": 119,
+      "entry_ids": [
+        "ko_k1_0534",
+        "ko_k1_0535"
+      ]
+    },
+    {
+      "text": 120,
+      "entry_ids": [
+        "ko_k1_0536"
+      ]
+    },
+    {
+      "text": 121,
+      "entry_ids": [
+        "ko_k1_0537",
+        "ko_k1_0538"
+      ]
+    },
+    {
+      "text": 122,
+      "entry_ids": [
+        "ko_k1_0539",
+        "ko_k1_0540"
+      ]
+    },
+    {
+      "text": 123,
+      "entry_ids": [
+        "ko_k1_0541",
+        "ko_k1_0542"
+      ]
+    },
+    {
+      "text": 124,
+      "entry_ids": [
+        "ko_k1_0543",
+        "ko_k1_0544"
+      ]
+    },
+    {
+      "text": 125,
+      "entry_ids": [
+        "ko_k1_0545",
+        "ko_k1_0546"
+      ]
+    },
+    {
+      "text": 126,
+      "entry_ids": [
+        "ko_k1_0547",
+        "ko_k1_0548"
+      ]
+    },
+    {
+      "text": 127,
+      "entry_ids": [
+        "ko_k1_0809",
+        "ko_k1_0550"
+      ]
+    },
+    {
+      "text": 128,
+      "entry_ids": [
+        "ko_k1_0303",
+        "ko_k1_0364"
+      ]
+    },
+    {
+      "text": 129,
+      "entry_ids": [
+        "ko_k1_0551",
+        "ko_k1_0552"
+      ]
+    },
+    {
+      "text": 130,
+      "entry_ids": [
+        "ko_k1_0553",
+        "ko_k1_0554"
+      ]
+    },
+    {
+      "text": 131,
+      "entry_ids": [
+        "ko_k1_0555",
+        "ko_k1_0556"
+      ]
+    },
+    {
+      "text": 132,
+      "entry_ids": [
+        "ko_k1_0557",
+        "ko_k1_0558"
+      ]
+    },
+    {
+      "text": 133,
+      "entry_ids": [
+        "ko_k1_0559",
+        "ko_k1_0560"
+      ]
+    },
+    {
+      "text": 134,
+      "entry_ids": [
+        "ko_k1_0561",
+        "ko_k1_0562"
+      ]
+    },
+    {
+      "text": 135,
+      "entry_ids": [
+        "ko_k1_0563",
+        "ko_k1_0565"
+      ]
+    },
+    {
+      "text": 136,
+      "entry_ids": [
+        "ko_k1_0566",
+        "ko_k1_0567"
+      ]
+    },
+    {
+      "text": 137,
+      "entry_ids": [
+        "ko_k1_0568",
+        "ko_k1_0569"
+      ]
+    },
+    {
+      "text": 138,
+      "entry_ids": [
+        "ko_k1_0570",
+        "ko_k1_0516"
+      ]
+    },
+    {
+      "text": 139,
+      "entry_ids": [
+        "ko_k1_0572",
+        "ko_k1_0573"
+      ]
+    },
+    {
+      "text": 140,
+      "entry_ids": [
+        "ko_k1_0574",
+        "ko_k1_0575"
+      ]
+    },
+    {
+      "text": 141,
+      "entry_ids": [
+        "ko_k1_0576",
+        "ko_k1_0518"
+      ]
+    },
+    {
+      "text": 142,
+      "entry_ids": [
+        "ko_k1_0578",
+        "ko_k1_0579"
+      ]
+    },
+    {
+      "text": 143,
+      "entry_ids": [
+        "ko_k1_0580",
+        "ko_k1_0581"
+      ]
+    },
+    {
+      "text": 144,
+      "entry_ids": [
+        "ko_k1_0582",
+        "ko_k1_0583"
+      ]
+    },
+    {
+      "text": 145,
+      "entry_ids": [
+        "ko_k1_0584",
+        "ko_k1_0585"
+      ]
+    },
+    {
+      "text": 146,
+      "entry_ids": [
+        "ko_k1_0586",
+        "ko_k1_0587"
+      ]
+    },
+    {
+      "text": 147,
+      "entry_ids": [
+        "ko_k1_0588",
+        "ko_k1_0589"
+      ]
+    },
+    {
+      "text": 148,
+      "entry_ids": [
+        "ko_k1_0590",
+        "ko_k1_0591"
+      ]
+    },
+    {
+      "text": 149,
+      "entry_ids": [
+        "ko_k1_0592",
+        "ko_k1_0593"
+      ]
+    },
+    {
+      "text": 150,
+      "entry_ids": [
+        "ko_k1_0594",
+        "ko_k1_0595"
+      ]
+    },
+    {
+      "text": 151,
+      "entry_ids": [
+        "ko_k1_0596",
+        "ko_k1_0597"
+      ]
+    },
+    {
+      "text": 152,
+      "entry_ids": [
+        "ko_k1_0598",
+        "ko_k1_0599"
+      ]
+    },
+    {
+      "text": 153,
+      "entry_ids": [
+        "ko_k1_0600",
+        "ko_k1_0739"
+      ]
+    },
+    {
+      "text": 154,
+      "entry_ids": [
+        "ko_k1_0601",
+        "ko_k1_0602"
+      ]
+    },
+    {
+      "text": 155,
+      "entry_ids": [
+        "ko_k1_0549",
+        "ko_k1_0604"
+      ]
+    },
+    {
+      "text": 156,
+      "entry_ids": [
+        "ko_k1_0605",
+        "ko_k1_0606"
+      ]
+    },
+    {
+      "text": 157,
+      "entry_ids": [
+        "ko_k1_0607",
+        "ko_k1_0608"
+      ]
+    },
+    {
+      "text": 158,
+      "entry_ids": [
+        "ko_k1_0609",
+        "ko_k1_0610"
+      ]
+    },
+    {
+      "text": 159,
+      "entry_ids": [
+        "ko_k1_0611",
+        "ko_k1_0612"
+      ]
+    },
+    {
+      "text": 160,
+      "entry_ids": [
+        "ko_k1_0613"
+      ]
+    },
+    {
+      "text": 161,
+      "entry_ids": [
+        "ko_k1_0614",
+        "ko_k1_0615"
+      ]
+    },
+    {
+      "text": 162,
+      "entry_ids": [
+        "ko_k1_0616",
+        "ko_k1_0617"
+      ]
+    },
+    {
+      "text": 163,
+      "entry_ids": [
+        "ko_k1_0618",
+        "ko_k1_0619"
+      ]
+    },
+    {
+      "text": 164,
+      "entry_ids": [
+        "ko_k1_0620",
+        "ko_k1_0621"
+      ]
+    },
+    {
+      "text": 165,
+      "entry_ids": [
+        "ko_k1_0622",
+        "ko_k1_0623"
+      ]
+    },
+    {
+      "text": 166,
+      "entry_ids": [
+        "ko_k1_0624",
+        "ko_k1_0625"
+      ]
+    },
+    {
+      "text": 167,
+      "entry_ids": [
+        "ko_k1_0626",
+        "ko_k1_0627"
+      ]
+    },
+    {
+      "text": 168,
+      "entry_ids": [
+        "ko_k1_0628",
+        "ko_k1_0629"
+      ]
+    },
+    {
+      "text": 169,
+      "entry_ids": [
+        "ko_k1_0630",
+        "ko_k1_0631"
+      ]
+    },
+    {
+      "text": 170,
+      "entry_ids": []
+    },
+    {
+      "text": 171,
+      "entry_ids": [
+        "ko_k1_0632",
+        "ko_k1_0633"
+      ]
+    },
+    {
+      "text": 172,
+      "entry_ids": [
+        "ko_k1_0634",
+        "ko_k1_0635"
+      ]
+    },
+    {
+      "text": 173,
+      "entry_ids": [
+        "ko_k1_0636",
+        "ko_k1_0637"
+      ]
+    },
+    {
+      "text": 174,
+      "entry_ids": [
+        "ko_k1_0638",
+        "ko_k1_0639"
+      ]
+    },
+    {
+      "text": 175,
+      "entry_ids": [
+        "ko_k1_0640",
+        "ko_k1_0641"
+      ]
+    },
+    {
+      "text": 176,
+      "entry_ids": [
+        "ko_k1_0642",
+        "ko_k1_0643"
+      ]
+    },
+    {
+      "text": 177,
+      "entry_ids": [
+        "ko_k1_0644",
+        "ko_k1_0645"
+      ]
+    },
+    {
+      "text": 178,
+      "entry_ids": [
+        "ko_k1_0646",
+        "ko_k1_0648"
+      ]
+    },
+    {
+      "text": 179,
+      "entry_ids": [
+        "ko_k1_0649",
+        "ko_k1_0650"
+      ]
+    },
+    {
+      "text": 180,
+      "entry_ids": [
+        "ko_k1_0701",
+        "ko_k1_0802"
+      ]
+    },
+    {
+      "text": 181,
+      "entry_ids": [
+        "ko_k1_0703",
+        "ko_k1_0704"
+      ]
+    },
+    {
+      "text": 182,
+      "entry_ids": [
+        "ko_k1_0705",
+        "ko_k1_0706"
+      ]
+    },
+    {
+      "text": 183,
+      "entry_ids": [
+        "ko_k1_0707",
+        "ko_k1_0708"
+      ]
+    },
+    {
+      "text": 184,
+      "entry_ids": [
+        "ko_k1_0709",
+        "ko_k1_0805"
+      ]
+    },
+    {
+      "text": 185,
+      "entry_ids": [
+        "ko_k1_0711",
+        "ko_k1_0712"
+      ]
+    },
+    {
+      "text": 186,
+      "entry_ids": [
+        "ko_k1_0713",
+        "ko_k1_0714"
+      ]
+    },
+    {
+      "text": 187,
+      "entry_ids": [
+        "ko_k1_0715",
+        "ko_k1_0716"
+      ]
+    },
+    {
+      "text": 188,
+      "entry_ids": [
+        "ko_k1_0717",
+        "ko_k1_0718"
+      ]
+    },
+    {
+      "text": 189,
+      "entry_ids": [
+        "ko_k1_0719",
+        "ko_k1_0720"
+      ]
+    },
+    {
+      "text": 190,
+      "entry_ids": [
+        "ko_k1_0721",
+        "ko_k1_0722"
+      ]
+    },
+    {
+      "text": 191,
+      "entry_ids": [
+        "ko_k1_0723",
+        "ko_k1_0724"
+      ]
+    },
+    {
+      "text": 192,
+      "entry_ids": [
+        "ko_k1_0725",
+        "ko_k1_0506"
+      ]
+    },
+    {
+      "text": 193,
+      "entry_ids": [
+        "ko_k1_0564",
+        "ko_k1_0807"
+      ]
+    },
+    {
+      "text": 194,
+      "entry_ids": [
+        "ko_k1_0651",
+        "ko_k1_0652"
+      ]
+    },
+    {
+      "text": 195,
+      "entry_ids": [
+        "ko_k1_0653",
+        "ko_k1_0654"
+      ]
+    },
+    {
+      "text": 196,
+      "entry_ids": [
+        "ko_k1_0655",
+        "ko_k1_0656"
+      ]
+    },
+    {
+      "text": 197,
+      "entry_ids": [
+        "ko_k1_0657",
+        "ko_k1_0658"
+      ]
+    },
+    {
+      "text": 198,
+      "entry_ids": [
+        "ko_k1_0659",
+        "ko_k1_0660"
+      ]
+    },
+    {
+      "text": 199,
+      "entry_ids": [
+        "ko_k1_0661",
+        "ko_k1_0662"
+      ]
+    },
+    {
+      "text": 200,
+      "entry_ids": [
+        "ko_k1_0663"
+      ]
+    },
+    {
+      "text": 201,
+      "entry_ids": [
+        "ko_k1_0664",
+        "ko_k1_0665"
+      ]
+    },
+    {
+      "text": 202,
+      "entry_ids": [
+        "ko_k1_0666",
+        "ko_k1_0667"
+      ]
+    },
+    {
+      "text": 203,
+      "entry_ids": [
+        "ko_k1_0668",
+        "ko_k1_0669"
+      ]
+    },
+    {
+      "text": 204,
+      "entry_ids": [
+        "ko_k1_0670",
+        "ko_k1_0671"
+      ]
+    },
+    {
+      "text": 205,
+      "entry_ids": [
+        "ko_k1_0672",
+        "ko_k1_0673"
+      ]
+    },
+    {
+      "text": 206,
+      "entry_ids": [
+        "ko_k1_0674",
+        "ko_k1_0675"
+      ]
+    },
+    {
+      "text": 207,
+      "entry_ids": [
+        "ko_k1_0676",
+        "ko_k1_0677"
+      ]
+    },
+    {
+      "text": 208,
+      "entry_ids": [
+        "ko_k1_0678",
+        "ko_k1_0679"
+      ]
+    },
+    {
+      "text": 209,
+      "entry_ids": [
+        "ko_k1_0680",
+        "ko_k1_0681"
+      ]
+    },
+    {
+      "text": 210,
+      "entry_ids": [
+        "ko_k1_0682",
+        "ko_k1_0683"
+      ]
+    },
+    {
+      "text": 211,
+      "entry_ids": [
+        "ko_k1_0684",
+        "ko_k1_0685"
+      ]
+    },
+    {
+      "text": 212,
+      "entry_ids": [
+        "ko_k1_0686",
+        "ko_k1_0687"
+      ]
+    },
+    {
+      "text": 213,
+      "entry_ids": [
+        "ko_k1_0688",
+        "ko_k1_0689"
+      ]
+    },
+    {
+      "text": 214,
+      "entry_ids": [
+        "ko_k1_0690",
+        "ko_k1_0691"
+      ]
+    },
+    {
+      "text": 215,
+      "entry_ids": [
+        "ko_k1_0692",
+        "ko_k1_0693"
+      ]
+    },
+    {
+      "text": 216,
+      "entry_ids": [
+        "ko_k1_0694",
+        "ko_k1_0695"
+      ]
+    },
+    {
+      "text": 217,
+      "entry_ids": [
+        "ko_k1_0696",
+        "ko_k1_0697"
+      ]
+    },
+    {
+      "text": 218,
+      "entry_ids": [
+        "ko_k1_0698",
+        "ko_k1_0699"
+      ]
+    },
+    {
+      "text": 219,
+      "entry_ids": [
+        "ko_k1_0700",
+        "ko_k1_0726"
+      ]
+    },
+    {
+      "text": 220,
+      "entry_ids": [
+        "ko_k1_0727",
+        "ko_k1_0728"
+      ]
+    },
+    {
+      "text": 221,
+      "entry_ids": [
+        "ko_k1_0729",
+        "ko_k1_0730"
+      ]
+    },
+    {
+      "text": 222,
+      "entry_ids": [
+        "ko_k1_0731",
+        "ko_k1_0732"
+      ]
+    },
+    {
+      "text": 223,
+      "entry_ids": [
+        "ko_k1_0733",
+        "ko_k1_0734"
+      ]
+    },
+    {
+      "text": 224,
+      "entry_ids": [
+        "ko_k1_0735",
+        "ko_k1_0736"
+      ]
+    },
+    {
+      "text": 225,
+      "entry_ids": [
+        "ko_k1_0737",
+        "ko_k1_0738"
+      ]
+    },
+    {
+      "text": 226,
+      "entry_ids": [
+        "ko_k1_0740",
+        "ko_k1_0741"
+      ]
+    },
+    {
+      "text": 227,
+      "entry_ids": [
+        "ko_k1_0742",
+        "ko_k1_0743"
+      ]
+    },
+    {
+      "text": 228,
+      "entry_ids": [
+        "ko_k1_0744",
+        "ko_k1_0745"
+      ]
+    },
+    {
+      "text": 229,
+      "entry_ids": [
+        "ko_k1_0746",
+        "ko_k1_0747"
+      ]
+    },
+    {
+      "text": 230,
+      "entry_ids": [
+        "ko_k1_0748",
+        "ko_k1_0749"
+      ]
+    },
+    {
+      "text": 231,
+      "entry_ids": [
+        "ko_k1_0750",
+        "ko_k1_0751"
+      ]
+    },
+    {
+      "text": 232,
+      "entry_ids": [
+        "ko_k1_0752",
+        "ko_k1_0753"
+      ]
+    },
+    {
+      "text": 233,
+      "entry_ids": [
+        "ko_k1_0754",
+        "ko_k1_0755"
+      ]
+    },
+    {
+      "text": 234,
+      "entry_ids": [
+        "ko_k1_0756",
+        "ko_k1_0804"
+      ]
+    },
+    {
+      "text": 235,
+      "entry_ids": [
+        "ko_k1_0758",
+        "ko_k1_0759"
+      ]
+    },
+    {
+      "text": 236,
+      "entry_ids": [
+        "ko_k1_0760",
+        "ko_k1_0761"
+      ]
+    },
+    {
+      "text": 237,
+      "entry_ids": [
+        "ko_k1_0762",
+        "ko_k1_0763"
+      ]
+    },
+    {
+      "text": 238,
+      "entry_ids": [
+        "ko_k1_0764",
+        "ko_k1_0765"
+      ]
+    },
+    {
+      "text": 239,
+      "entry_ids": [
+        "ko_k1_0766",
+        "ko_k1_0767"
+      ]
+    },
+    {
+      "text": 240,
+      "entry_ids": [
+        "ko_k1_0768"
+      ]
+    },
+    {
+      "text": 241,
+      "entry_ids": [
+        "ko_k1_0769",
+        "ko_k1_0771"
+      ]
+    },
+    {
+      "text": 242,
+      "entry_ids": [
+        "ko_k1_0772",
+        "ko_k1_0801"
+      ]
+    },
+    {
+      "text": 243,
+      "entry_ids": [
+        "ko_k1_0774",
+        "ko_k1_0775"
+      ]
+    },
+    {
+      "text": 244,
+      "entry_ids": [
+        "ko_k1_0776",
+        "ko_k1_0777"
+      ]
+    },
+    {
+      "text": 245,
+      "entry_ids": [
+        "ko_k1_0779",
+        "ko_k1_0780"
+      ]
+    },
+    {
+      "text": 246,
+      "entry_ids": [
+        "ko_k1_0781",
+        "ko_k1_0782"
+      ]
+    },
+    {
+      "text": 247,
+      "entry_ids": [
+        "ko_k1_0783",
+        "ko_k1_0784"
+      ]
+    },
+    {
+      "text": 248,
+      "entry_ids": [
+        "ko_k1_0785",
+        "ko_k1_0786"
+      ]
+    },
+    {
+      "text": 249,
+      "entry_ids": [
+        "ko_k1_0787",
+        "ko_k1_0788"
+      ]
+    },
+    {
+      "text": 250,
+      "entry_ids": [
+        "ko_k1_0789",
+        "ko_k1_0790"
+      ]
+    },
+    {
+      "text": 251,
+      "entry_ids": [
+        "ko_k1_0791",
+        "ko_k1_0792"
+      ]
+    },
+    {
+      "text": 252,
+      "entry_ids": [
+        "ko_k1_0793",
+        "ko_k1_0794"
+      ]
+    },
+    {
+      "text": 253,
+      "entry_ids": [
+        "ko_k1_0795",
+        "ko_k1_0796"
+      ]
+    },
+    {
+      "text": 254,
+      "entry_ids": [
+        "ko_k1_0803",
+        "ko_k1_0798"
+      ]
+    },
+    {
+      "text": 255,
+      "entry_ids": [
+        "ko_k1_0799",
+        "ko_k1_0806"
+      ]
+    },
+    {
+      "text": 256,
+      "entry_ids": []
+    },
+    {
+      "text": 257,
+      "entry_ids": []
+    },
+    {
+      "text": 258,
+      "entry_ids": []
+    },
+    {
+      "text": 259,
+      "entry_ids": []
+    },
+    {
+      "text": 260,
+      "entry_ids": []
+    },
+    {
+      "text": 261,
+      "entry_ids": []
+    },
+    {
+      "text": 262,
+      "entry_ids": []
+    },
+    {
+      "text": 263,
+      "entry_ids": []
+    },
+    {
+      "text": 264,
+      "entry_ids": []
+    },
+    {
+      "text": 265,
+      "entry_ids": []
+    },
+    {
+      "text": 266,
+      "entry_ids": []
+    },
+    {
+      "text": 267,
+      "entry_ids": []
+    },
+    {
+      "text": 268,
+      "entry_ids": []
+    },
+    {
+      "text": 269,
+      "entry_ids": []
+    },
+    {
+      "text": 270,
+      "entry_ids": []
+    },
+    {
+      "text": 271,
+      "entry_ids": []
+    },
+    {
+      "text": 272,
+      "entry_ids": []
+    },
+    {
+      "text": 273,
+      "entry_ids": []
+    },
+    {
+      "text": 274,
+      "entry_ids": []
+    },
+    {
+      "text": 275,
+      "entry_ids": []
+    },
+    {
+      "text": 276,
+      "entry_ids": []
+    },
+    {
+      "text": 277,
+      "entry_ids": []
+    },
+    {
+      "text": 278,
+      "entry_ids": []
+    },
+    {
+      "text": 279,
+      "entry_ids": []
+    },
+    {
+      "text": 280,
+      "entry_ids": []
+    },
+    {
+      "text": 281,
+      "entry_ids": []
+    },
+    {
+      "text": 282,
+      "entry_ids": []
+    },
+    {
+      "text": 283,
+      "entry_ids": []
+    },
+    {
+      "text": 284,
+      "entry_ids": []
+    },
+    {
+      "text": 285,
+      "entry_ids": []
+    },
+    {
+      "text": 286,
+      "entry_ids": []
+    },
+    {
+      "text": 287,
+      "entry_ids": []
+    },
+    {
+      "text": 288,
+      "entry_ids": []
+    },
+    {
+      "text": 289,
+      "entry_ids": []
+    },
+    {
+      "text": 290,
+      "entry_ids": []
+    },
+    {
+      "text": 291,
+      "entry_ids": []
+    },
+    {
+      "text": 292,
+      "entry_ids": []
+    },
+    {
+      "text": 293,
+      "entry_ids": []
+    },
+    {
+      "text": 294,
+      "entry_ids": []
+    },
+    {
+      "text": 295,
+      "entry_ids": []
+    },
+    {
+      "text": 296,
+      "entry_ids": []
+    },
+    {
+      "text": 297,
+      "entry_ids": []
+    },
+    {
+      "text": 298,
+      "entry_ids": []
+    },
+    {
+      "text": 299,
+      "entry_ids": []
+    },
+    {
+      "text": 300,
+      "entry_ids": []
+    }
+  ]
+}

@@ -1,0 +1,1925 @@
+{
+  "ok": false,
+  "frozen_input_integrity": "PASS",
+  "errors": [],
+  "text_count": 20,
+  "counts": {
+    "PASS": 3,
+    "FAIL": 12,
+    "PASS_WITH_TARGET_MISS": 5
+  },
+  "language_counts": {
+    "PASS_WITH_TARGET_MISS": 14,
+    "PASS": 6
+  },
+  "hard_error_texts": 0,
+  "schedule_conflict_texts": 12,
+  "semantic_schedule_conflict_count": 23,
+  "results": [
+    {
+      "id": "K1-001",
+      "text_number": 1,
+      "status": "PASS_WITH_TARGET_MISS",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 121,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9834710743801653,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": true,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 124,
+        "sentence_count": 31,
+        "max_sentence_eojeol": 4,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 2,
+      "used_scheduled_expansion_count": 2,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [],
+      "semantic_schedule_conflicts": [],
+      "annotation_ambiguity_occurrences": 13,
+      "annotation_ambiguity_types": 4,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-040",
+      "text_number": 40,
+      "status": "PASS",
+      "language_status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "coverage": {
+        "denominator_N": 124,
+        "new_tokens_U": 1,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9919354838709677,
+        "target_99_met": true
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": true,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 124,
+        "sentence_count": 31,
+        "max_sentence_eojeol": 4,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 7,
+      "used_scheduled_expansion_count": 7,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [],
+      "semantic_schedule_conflicts": [],
+      "annotation_ambiguity_occurrences": 12,
+      "annotation_ambiguity_types": 3,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-085",
+      "text_number": 85,
+      "status": "PASS",
+      "language_status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "coverage": {
+        "denominator_N": 123,
+        "new_tokens_U": 0,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 1.0,
+        "target_99_met": true
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": true,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 124,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 8,
+      "used_scheduled_expansion_count": 8,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [],
+      "semantic_schedule_conflicts": [],
+      "annotation_ambiguity_occurrences": 10,
+      "annotation_ambiguity_types": 3,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-103",
+      "text_number": 103,
+      "status": "PASS_WITH_TARGET_MISS",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 124,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9838709677419355,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": true,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 124,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 9,
+      "used_scheduled_expansion_count": 9,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [],
+      "semantic_schedule_conflicts": [],
+      "annotation_ambiguity_occurrences": 10,
+      "annotation_ambiguity_types": 5,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-150",
+      "text_number": 150,
+      "status": "FAIL",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 122,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9836065573770492,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 122,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          5
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 10,
+      "used_scheduled_expansion_count": 9,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0569"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0569",
+          "lemma": "물고기",
+          "sense": "fish_animal",
+          "reason": "食事に加えて生きた魚の観察・絵描きを足すと、訪問と食事の目的が分散する。食材義へ変更して通さない。",
+          "proposed_text_candidates": [
+            286,
+            225,
+            229
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 11,
+      "annotation_ambiguity_types": 5,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-170",
+      "text_number": 170,
+      "status": "FAIL",
+      "language_status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "coverage": {
+        "denominator_N": 124,
+        "new_tokens_U": 0,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 1.0,
+        "target_99_met": true
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 127,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 6,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          6,
+          4,
+          4,
+          4,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 12,
+      "used_scheduled_expansion_count": 10,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0407",
+        "ko_k1_0603"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0407",
+          "lemma": "계산하다",
+          "sense": "pay_bill",
+          "reason": "家で宿泊の準備をする場面に会計を追加すると、別の買い物場面が必要になる。",
+          "proposed_text_candidates": [
+            157,
+            156,
+            155
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0603",
+          "lemma": "찍다",
+          "sense": "stamp",
+          "reason": "印を押す理由がない。사진을 찍다というCoreの別senseでは代替しない。",
+          "proposed_text_candidates": [
+            157,
+            156,
+            256
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 18,
+      "annotation_ambiguity_types": 8,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-180",
+      "text_number": 180,
+      "status": "PASS_WITH_TARGET_MISS",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 123,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.983739837398374,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": true,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 124,
+        "sentence_count": 29,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          5,
+          5
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 12,
+      "used_scheduled_expansion_count": 12,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [],
+      "semantic_schedule_conflicts": [],
+      "annotation_ambiguity_occurrences": 23,
+      "annotation_ambiguity_types": 10,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-184",
+      "text_number": 184,
+      "status": "FAIL",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%",
+        "Some sentences outside preferred 4..7 eojeol"
+      ],
+      "coverage": {
+        "denominator_N": 128,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984375,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 128,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          5,
+          5,
+          4,
+          4,
+          3,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5
+        ],
+        "preferred_sentence_outliers": [
+          6
+        ]
+      },
+      "scheduled_expansion_count": 12,
+      "used_scheduled_expansion_count": 10,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0612",
+        "ko_k1_0631"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0612",
+          "lemma": "새롭다",
+          "sense": "new",
+          "reason": "初訪問の家を描くだけでは新しさの意味が曖昧。新しい映画の説明を増やすと話の目的が分散する。",
+          "proposed_text_candidates": [
+            183,
+            173,
+            241
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0631",
+          "lemma": "급하다",
+          "sense": "urgent",
+          "reason": "急用を追加すると訪問・食事・映画から別の問題へ切り替わる。",
+          "proposed_text_candidates": [
+            183,
+            174,
+            173
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 12,
+      "annotation_ambiguity_types": 4,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-189",
+      "text_number": 189,
+      "status": "FAIL",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 123,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.983739837398374,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 125,
+        "sentence_count": 29,
+        "max_sentence_eojeol": 6,
+        "sentence_eojeol_counts": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          6,
+          5,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          5,
+          5
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 12,
+      "used_scheduled_expansion_count": 9,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0531",
+        "ko_k1_0621",
+        "ko_k1_0711"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0531",
+          "lemma": "이불",
+          "sense": "bedding",
+          "reason": "行き先相談に寝具の片付けを追加する必要がない。",
+          "proposed_text_candidates": [
+            169,
+            273,
+            274
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0621",
+          "lemma": "맵다",
+          "sense": "spicy",
+          "reason": "辛い食事の挿話は行き先相談と関係しない。",
+          "proposed_text_candidates": [
+            169,
+            168,
+            174
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0711",
+          "lemma": "테이프",
+          "sense": "adhesive_tape",
+          "reason": "地図修理の問題を作らない限り用途がない。無理な使用하다への言い換えを避ける。",
+          "proposed_text_candidates": [
+            273,
+            274,
+            220
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 11,
+      "annotation_ambiguity_types": 4,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-190",
+      "text_number": 190,
+      "status": "FAIL",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 122,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9836065573770492,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 123,
+        "sentence_count": 29,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          4,
+          4,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          5,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 12,
+      "used_scheduled_expansion_count": 10,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0584",
+        "ko_k1_0623"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0584",
+          "lemma": "버리다",
+          "sense": "discard",
+          "reason": "写真を見に入った場面に捨てる対象・問題を追加する必然性がない。",
+          "proposed_text_candidates": [
+            157,
+            156,
+            155
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0623",
+          "lemma": "쓰다",
+          "sense": "bitter",
+          "reason": "苦い飲み物の一文を追加すると、展示を見る目的から離れる。",
+          "proposed_text_candidates": [
+            169,
+            174,
+            171
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 11,
+      "annotation_ambiguity_types": 6,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": [
+        {
+          "type": "compound_grouping",
+          "surface": "운동하",
+          "lemma": "운동하다",
+          "start": 0,
+          "candidate_id": "ko_k1_0204"
+        }
+      ]
+    },
+    {
+      "id": "K1-193",
+      "text_number": 193,
+      "status": "FAIL",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 123,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.983739837398374,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 123,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 12,
+      "used_scheduled_expansion_count": 10,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0719",
+        "ko_k1_0720"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0719",
+          "lemma": "수영장",
+          "sense": "swimming_pool",
+          "reason": "料理と片付けに外出相談を追加すると別の目的になる。",
+          "proposed_text_candidates": [
+            220,
+            192,
+            191
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0720",
+          "lemma": "미술관",
+          "sense": "art_museum",
+          "reason": "料理と片付けに外出相談を追加すると別の目的になる。",
+          "proposed_text_candidates": [
+            220,
+            192,
+            191
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 19,
+      "annotation_ambiguity_types": 7,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-234",
+      "text_number": 234,
+      "status": "FAIL",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 130,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9846153846153847,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 129,
+        "sentence_count": 31,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 13,
+      "used_scheduled_expansion_count": 10,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0670",
+        "ko_k1_0731",
+        "ko_k1_0736"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0670",
+          "lemma": "목",
+          "sense": "neck_throat",
+          "reason": "悲しい別れに身体の痛みを追加する必要がない。",
+          "proposed_text_candidates": [
+            207,
+            205,
+            220
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0731",
+          "lemma": "감",
+          "sense": "persimmon",
+          "reason": "荷造りに柿を食べる理由を追加すると果物の挿話になる。",
+          "proposed_text_candidates": [
+            227,
+            243,
+            224
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0736",
+          "lemma": "나뭇잎",
+          "sense": "leaf",
+          "reason": "窓の外の葉を一文だけ足すと予定語のための情景になる。",
+          "proposed_text_candidates": [
+            286,
+            229,
+            225
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 15,
+      "annotation_ambiguity_types": 9,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": [
+        {
+          "type": "compound_grouping",
+          "surface": "이사하",
+          "lemma": "이사하다",
+          "start": 0,
+          "candidate_id": "ko_k1_0749"
+        }
+      ]
+    },
+    {
+      "id": "K1-242",
+      "text_number": 242,
+      "status": "FAIL",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 120,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9833333333333333,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 125,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 13,
+      "used_scheduled_expansion_count": 11,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0693",
+        "ko_k1_0713"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0693",
+          "lemma": "회의",
+          "sense": "meeting_work",
+          "reason": "友達を迎える子どもの食事準備に仕事の会議を加える必然性がない。",
+          "proposed_text_candidates": [
+            245,
+            236,
+            228
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0713",
+          "lemma": "벽",
+          "sense": "wall",
+          "reason": "壁の説明はこの待ち合わせの意味に関与しない。",
+          "proposed_text_candidates": [
+            274,
+            241,
+            240
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 10,
+      "annotation_ambiguity_types": 2,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-246",
+      "text_number": 246,
+      "status": "PASS_WITH_TARGET_MISS",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 125,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": true,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 131,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          5,
+          4,
+          5,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          5,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 13,
+      "used_scheduled_expansion_count": 13,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [],
+      "semantic_schedule_conflicts": [],
+      "annotation_ambiguity_occurrences": 11,
+      "annotation_ambiguity_types": 7,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-252",
+      "text_number": 252,
+      "status": "PASS_WITH_TARGET_MISS",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 128,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984375,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": true,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 131,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          5,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          4,
+          5,
+          5,
+          4,
+          4,
+          5,
+          5,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          5,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 13,
+      "used_scheduled_expansion_count": 13,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [],
+      "semantic_schedule_conflicts": [],
+      "annotation_ambiguity_occurrences": 14,
+      "annotation_ambiguity_types": 4,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": [
+        {
+          "type": "sense_disambiguation",
+          "surface": "찍",
+          "lemma": "찍다",
+          "start": 9,
+          "candidate_id": "ko_k1_0229"
+        }
+      ]
+    },
+    {
+      "id": "K1-254",
+      "text_number": 254,
+      "status": "FAIL",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 128,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984375,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 127,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          5,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          5,
+          5,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 13,
+      "used_scheduled_expansion_count": 12,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0736"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0736",
+          "lemma": "나뭇잎",
+          "sense": "leaf",
+          "reason": "旅行準備に葉の観察を足すと、予定語のための情景一文になる。",
+          "proposed_text_candidates": [
+            286,
+            245,
+            229
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 11,
+      "annotation_ambiguity_types": 7,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-255",
+      "text_number": 255,
+      "status": "FAIL",
+      "language_status": "PASS_WITH_TARGET_MISS",
+      "errors": [],
+      "warnings": [
+        "previous_vocab_coverage below target 99%"
+      ],
+      "coverage": {
+        "denominator_N": 126,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9841269841269841,
+        "target_99_met": false
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 130,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          4,
+          5,
+          4,
+          4,
+          5,
+          4,
+          5,
+          4,
+          5,
+          4,
+          5
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 13,
+      "used_scheduled_expansion_count": 11,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0737",
+        "ko_k1_0738"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0737",
+          "lemma": "돌",
+          "sense": "stone",
+          "reason": "道の紙を拾う問題に石の描写を足すと意味上の役割が薄い。",
+          "proposed_text_candidates": [
+            286,
+            287,
+            251
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0738",
+          "lemma": "풀",
+          "sense": "grass",
+          "reason": "旅行準備に草の情景を追加して予定を満たすことを避ける。",
+          "proposed_text_candidates": [
+            287,
+            251,
+            248
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 17,
+      "annotation_ambiguity_types": 6,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-276",
+      "text_number": 276,
+      "status": "FAIL",
+      "language_status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "coverage": {
+        "denominator_N": 123,
+        "new_tokens_U": 0,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 1.0,
+        "target_99_met": true
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 125,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          4,
+          4,
+          5,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 12,
+      "used_scheduled_expansion_count": 11,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0674"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0674",
+          "lemma": "이",
+          "sense": "tooth",
+          "reason": "歯磨きが自然な朝の場面だが닦다が未登録。씻다への不自然な置換や歯痛問題の追加を避ける。",
+          "proposed_text_candidates": [
+            208,
+            207,
+            265
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 12,
+      "annotation_ambiguity_types": 7,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    },
+    {
+      "id": "K1-284",
+      "text_number": 284,
+      "status": "FAIL",
+      "language_status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "coverage": {
+        "denominator_N": 127,
+        "new_tokens_U": 0,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 1.0,
+        "target_99_met": true
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": false,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 127,
+        "sentence_count": 30,
+        "max_sentence_eojeol": 5,
+        "sentence_eojeol_counts": [
+          5,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          4,
+          4,
+          4,
+          5,
+          4,
+          4,
+          5,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 12,
+      "used_scheduled_expansion_count": 10,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [
+        "ko_k1_0711",
+        "ko_k1_0743"
+      ],
+      "semantic_schedule_conflicts": [
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0711",
+          "lemma": "테이프",
+          "sense": "adhesive_tape",
+          "reason": "旅行の箱に貼るには붙이다が必要だが未登録。使うだけの曖昧な言い換えを避ける。",
+          "proposed_text_candidates": [
+            274,
+            273,
+            266
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        },
+        {
+          "type": "semantic_schedule_conflict",
+          "vocab_id": "ko_k1_0743",
+          "lemma": "던지다",
+          "sense": "throw",
+          "reason": "旅の荷造りで投げる対象がない。自然な公園の球遊びには未登録공が必要。",
+          "proposed_text_candidates": [
+            256,
+            238,
+            236
+          ],
+          "proposal_status": "candidate_only_schedule_unchanged",
+          "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+        }
+      ],
+      "annotation_ambiguity_occurrences": 14,
+      "annotation_ambiguity_types": 5,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": [
+        {
+          "type": "compound_grouping",
+          "surface": "준비해",
+          "lemma": "준비하다",
+          "start": 7,
+          "candidate_id": "ko_k1_0379"
+        }
+      ]
+    },
+    {
+      "id": "K1-299",
+      "text_number": 299,
+      "status": "PASS",
+      "language_status": "PASS",
+      "errors": [],
+      "warnings": [],
+      "coverage": {
+        "denominator_N": 135,
+        "new_tokens_U": 0,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 1.0,
+        "target_99_met": true
+      },
+      "validation": {
+        "vocab_pass": true,
+        "grammar_pass": true,
+        "length_pass": true,
+        "sentence_length_pass": true,
+        "schedule_pass": true,
+        "naturalness_review_required": true
+      },
+      "metrics": {
+        "eojeol_count": 135,
+        "sentence_count": 31,
+        "max_sentence_eojeol": 6,
+        "sentence_eojeol_counts": [
+          5,
+          5,
+          5,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          4,
+          5,
+          4,
+          6,
+          5
+        ],
+        "preferred_sentence_outliers": []
+      },
+      "scheduled_expansion_count": 12,
+      "used_scheduled_expansion_count": 12,
+      "missing_new_vocab_ids": [],
+      "missing_review_vocab_ids": [],
+      "semantic_schedule_conflicts": [],
+      "annotation_ambiguity_occurrences": 15,
+      "annotation_ambiguity_types": 5,
+      "unresolved_token_count": 0,
+      "title_annotation_review_required": []
+    }
+  ],
+  "limits": [
+    "Annotation hypotheses and Kiwi morphology are not independent sense truth.",
+    "Naturalness and translation require human review.",
+    "Earlier introductions are simulated from the frozen schedule, not delivered texts."
+  ],
+  "aggregate": {
+    "text_numbers": [
+      1,
+      40,
+      85,
+      103,
+      150,
+      170,
+      180,
+      184,
+      189,
+      190,
+      193,
+      234,
+      242,
+      246,
+      252,
+      254,
+      255,
+      276,
+      284,
+      299
+    ],
+    "counts": {
+      "PASS": 3,
+      "FAIL": 12,
+      "PASS_WITH_TARGET_MISS": 5
+    },
+    "language_counts": {
+      "PASS_WITH_TARGET_MISS": 14,
+      "PASS": 6
+    },
+    "mean_eojeol": 126.4,
+    "min_eojeol": 122,
+    "max_eojeol": 135,
+    "previous_coverage": {
+      "min": 0.9833333333333333,
+      "max": 1.0,
+      "mean": 0.9883455427508996,
+      "median": 0.9842509920634921
+    },
+    "controlled_violation_texts": 0,
+    "grammar_violation_texts": 0,
+    "semantic_schedule_conflicts": 23,
+    "conflict_texts": 12,
+    "annotation_ambiguity_occurrences": 269,
+    "annotation_ambiguity_type_lemma_text_groups": 111,
+    "unresolved_tokens": 0,
+    "scheduled_12_13_texts": 15,
+    "scheduled_12_13_complete": 4,
+    "scheduled_entry_text_pairs": 222,
+    "realized_scheduled_entry_text_pairs": 199,
+    "mass_generation_ready": false,
+    "naturalness_human_approved": false
+  },
+  "test_runs": [
+    {
+      "scope": "all existing and new tests, before final editorial refinements",
+      "test_methods": 26,
+      "status": "PASS"
+    },
+    {
+      "scope": "final pilot-specific regressions after refinements",
+      "test_methods": 10,
+      "status": "PASS"
+    }
+  ]
+}

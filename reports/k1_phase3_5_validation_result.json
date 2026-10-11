@@ -1,0 +1,383 @@
+{
+  "phase": "3.5",
+  "verdict": "C",
+  "status": "FAIL",
+  "reason": "004 semantic REVIEW STOP; new raw morphology structural ambiguity and future draft word. 005 not generated.",
+  "implementation_validation_status": "PASS",
+  "artifact_errors": [],
+  "frozen_vocabulary_counts": {
+    "core": 300,
+    "expansion": 500,
+    "total": 800,
+    "tiers": {
+      "E1": 200,
+      "E2": 200,
+      "E3": 100
+    }
+  },
+  "coverage_policy": {
+    "controlled_hard": 1.0,
+    "previous_hard": 0.98,
+    "previous_target": 0.99
+  },
+  "grammar_count": 32,
+  "registry_schema_pass": true,
+  "auto_pass_capable_grammar_count": 32,
+  "local_structural_autocheck_count": 11,
+  "context_heuristic_grammar_count": 21,
+  "context_review_possible_grammar_count": 32,
+  "registry_policy_ambiguity_count": 8,
+  "fixture_count": 70,
+  "fixture_errors": 0,
+  "bad_003_detected": true,
+  "frozen_texts_audited": 28,
+  "frozen_audit_counts": {
+    "PASS": 2759,
+    "REVIEW": 369,
+    "FAIL": 6
+  },
+  "frozen_texts_requiring_review": 28,
+  "frozen_audit_fail_candidates": [
+    {
+      "path": "pilot/ko/k1/phase2_3/texts/K1-150.json",
+      "sentence": "학생이 버스에서 내려요.",
+      "grammar_id": "ko_k1_g23",
+      "reason": "Origin + explicit destination/return/departure/vehicle-exit frame; g23 source explicitly reserved"
+    },
+    {
+      "path": "pilot/ko/k1/phase2_3/texts/K1-189.json",
+      "sentence": "버스에서 내려서 그림을 봐요.",
+      "grammar_id": "ko_k1_g23",
+      "reason": "Origin + explicit destination/return/departure/vehicle-exit frame; g23 source explicitly reserved"
+    },
+    {
+      "path": "pilot/ko/k1/phase2_3/texts/K1-193.json",
+      "sentence": "어머니는 방금 시장에서 돌아왔어요.",
+      "grammar_id": "ko_k1_g23",
+      "reason": "Origin + explicit destination/return/departure/vehicle-exit frame; g23 source explicitly reserved"
+    },
+    {
+      "path": "pilot/ko/k1/phase2_3/texts/K1-254.json",
+      "sentence": "버스는 아침에 집 앞에서 출발해요.",
+      "grammar_id": "ko_k1_g23",
+      "reason": "Origin + explicit destination/return/departure/vehicle-exit frame; g23 source explicitly reserved"
+    },
+    {
+      "path": "pilot/ko/k1/phase2_3/texts/K1-254.json",
+      "sentence": "우리는 버스에서 내려서 같이 걸어요.",
+      "grammar_id": "ko_k1_g23",
+      "reason": "Origin + explicit destination/return/departure/vehicle-exit frame; g23 source explicitly reserved"
+    },
+    {
+      "path": "pilot/ko/k1/phase3_4_corrected_smoke/texts/K1-003.json",
+      "sentence": "동생도 학교에서 집으로 와요.",
+      "grammar_id": "ko_k1_g23",
+      "reason": "Origin + explicit destination/return/departure/vehicle-exit frame; g23 source explicitly reserved"
+    }
+  ],
+  "smoke": {
+    "committed_count": 3,
+    "candidate_count": 4,
+    "attempts_per_text": {
+      "001": 1,
+      "002": 1,
+      "003": 1,
+      "004": 1
+    },
+    "results": [
+      {
+        "id": "K1-001",
+        "hard_pass": true,
+        "eojeol": 134,
+        "coverage": {
+          "denominator_N": 133,
+          "new_tokens_U": 2,
+          "controlled_vocab_coverage": 1.0,
+          "previous_vocab_coverage": 0.9849624060150376,
+          "target_99_met": false
+        },
+        "semantic": {
+          "PASS": 120,
+          "REVIEW": 0,
+          "FAIL": 0
+        },
+        "planned_new": [
+          "ko_k1_0373",
+          "ko_k1_0413"
+        ],
+        "actual_new": [
+          "ko_k1_0373",
+          "ko_k1_0413"
+        ],
+        "future": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "final_reanalysis_equal": true,
+        "actual_review": [],
+        "incidental": []
+      },
+      {
+        "id": "K1-002",
+        "hard_pass": true,
+        "eojeol": 139,
+        "coverage": {
+          "denominator_N": 132,
+          "new_tokens_U": 2,
+          "controlled_vocab_coverage": 1.0,
+          "previous_vocab_coverage": 0.9848484848484849,
+          "target_99_met": false
+        },
+        "semantic": {
+          "PASS": 129,
+          "REVIEW": 0,
+          "FAIL": 0
+        },
+        "planned_new": [
+          "ko_k1_0442",
+          "ko_k1_0443"
+        ],
+        "actual_new": [
+          "ko_k1_0442",
+          "ko_k1_0443"
+        ],
+        "future": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "final_reanalysis_equal": true,
+        "actual_review": [],
+        "incidental": []
+      },
+      {
+        "id": "K1-003",
+        "hard_pass": true,
+        "eojeol": 138,
+        "coverage": {
+          "denominator_N": 131,
+          "new_tokens_U": 2,
+          "controlled_vocab_coverage": 1.0,
+          "previous_vocab_coverage": 0.9847328244274809,
+          "target_99_met": false
+        },
+        "semantic": {
+          "PASS": 129,
+          "REVIEW": 0,
+          "FAIL": 0
+        },
+        "planned_new": [
+          "ko_k1_0444",
+          "ko_k1_0445"
+        ],
+        "actual_new": [
+          "ko_k1_0444",
+          "ko_k1_0445"
+        ],
+        "future": 0,
+        "invalid": 0,
+        "unresolved": 0,
+        "final_reanalysis_equal": true,
+        "actual_review": [],
+        "incidental": [
+          "ko_k1_0413"
+        ]
+      }
+    ],
+    "failed_004": {
+      "semantic": {
+        "PASS": 124,
+        "REVIEW": 1,
+        "FAIL": 0
+      },
+      "hard_error_codes": {
+        "future_expansion": 1,
+        "unknown_or_unresolved": 2,
+        "coverage_or_token_policy": 5,
+        "semantic_grammar_review": 1
+      },
+      "invalid_usage_ids": [
+        {
+          "vocab_id": "ko_k1_0378",
+          "lemma": "물어보다",
+          "surface": "물어봐",
+          "start": 276,
+          "reason": "future_expansion"
+        },
+        {
+          "vocab_id": null,
+          "lemma": "말",
+          "surface": "마",
+          "start": 455,
+          "reason": "unknown_or_unresolved"
+        },
+        {
+          "vocab_id": null,
+          "lemma": "시",
+          "surface": "셔",
+          "start": 456,
+          "reason": "unknown_or_unresolved"
+        }
+      ],
+      "coverage": {
+        "denominator_N": 133,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 0.9774436090225563,
+        "previous_vocab_coverage": 0.9624060150375939,
+        "target_99_met": false
+      },
+      "ledger_unchanged": true,
+      "run_control": {
+        "status": "stopped",
+        "max_attempts": 5,
+        "max_text": 5,
+        "stop": {
+          "type": "semantic_grammar_stop",
+          "text": 4,
+          "errors": [
+            {
+              "code": "semantic_grammar_review",
+              "detail": {
+                "grammar_id": "ko_k1_g09",
+                "surface": "고",
+                "start": 453,
+                "end": 454,
+                "scope": "body",
+                "morphological_grammar_id": "ko_k1_g09",
+                "sentence": "저는 물을 받고 마셔요.",
+                "clause": "저는 물을 받고 마셔요.",
+                "head_predicate": "받다",
+                "governor": {
+                  "surface": "받",
+                  "lemma": "받다",
+                  "pos": "verb",
+                  "sense": "receive",
+                  "vocab_id": "ko_k1_0193",
+                  "role": "core",
+                  "start": 452,
+                  "end": 453,
+                  "morph_indices": [
+                    263
+                  ],
+                  "grammar_id": null
+                },
+                "dependent": {
+                  "surface": "받",
+                  "lemma": "받다",
+                  "pos": "verb",
+                  "sense": "receive",
+                  "vocab_id": "ko_k1_0193",
+                  "role": "core",
+                  "start": 452,
+                  "end": 453,
+                  "morph_indices": [
+                    263
+                  ],
+                  "grammar_id": null
+                },
+                "semantic_role_candidate": "unresolved",
+                "local_context": "래에서 빵을 먹어요.\n\n친구는 저에게 말해요. \"커피를 마시고 싶어요?\" \"아니요, 저는 물을 마시고 싶어요.\" 친구는 가방을 열고 물을 줘요. 저는 물을 받고 마셔요.",
+                "allowed_function": null,
+                "detected_function": "unresolved",
+                "allowed_function_candidate": null,
+                "confidence": 0.0,
+                "evidence": {
+                  "frozen_allowed": [
+                    "parallel",
+                    "sequence"
+                  ],
+                  "raw_parts": [
+                    {
+                      "form": "고",
+                      "tag": "EC",
+                      "start": 453,
+                      "length": 1
+                    }
+                  ],
+                  "registered_dependent": {
+                    "surface": "받",
+                    "lemma": "받다",
+                    "pos": "verb",
+                    "sense": "receive",
+                    "vocab_id": "ko_k1_0193",
+                    "role": "core",
+                    "start": 452,
+                    "end": 453,
+                    "morph_indices": [
+                      263
+                    ],
+                    "grammar_id": null
+                  },
+                  "registered_head": {
+                    "surface": "받",
+                    "lemma": "받다",
+                    "pos": "verb",
+                    "sense": "receive",
+                    "vocab_id": "ko_k1_0193",
+                    "role": "core",
+                    "start": 452,
+                    "end": 453,
+                    "morph_indices": [
+                      263
+                    ],
+                    "grammar_id": null
+                  },
+                  "local_registered_lemmas": [
+                    "물",
+                    "받다",
+                    "저"
+                  ],
+                  "source": "raw morphology + registered identities + local syntax; no author meaning labels",
+                  "reason": "No sufficient local frame evidence"
+                },
+                "decision": "REVIEW"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "zero_state_epoch": 0,
+    "replay_entire_ledger_equal": true,
+    "outstanding_debt": [
+      {
+        "vocab_id": "ko_k1_0373",
+        "window_index": 0,
+        "window": {
+          "from": 3,
+          "to": 6
+        }
+      }
+    ],
+    "expired_debt": [],
+    "selected_review_credits": 0,
+    "incidental_credits": 1,
+    "actual_introduced": 6,
+    "generated_005": false,
+    "generated_006_or_later": false
+  },
+  "tests": {
+    "all": {
+      "command": "python -B scripts/run_k1_phase3_5_tests.py",
+      "tests": 259,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 118.535,
+      "status": "PASS",
+      "log": "reports/k1_phase3_5_all_test_log.txt",
+      "exit_code": 0
+    },
+    "focused": {
+      "command": "python -B scripts/run_k1_phase3_5_tests.py --focused",
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 10.054,
+      "status": "PASS",
+      "log": "reports/k1_phase3_5_focused_test_log.txt",
+      "exit_code": 0
+    }
+  },
+  "frozen_files_checked": 687,
+  "freeze_errors": [],
+  "limitation": "All PASS decisions are bounded evidence rules, not independent Korean semantic gold. Existing text REVIEW flags are not confirmed errors. Corpus audit never grants temporal vocabulary permission or imports credits."
+}

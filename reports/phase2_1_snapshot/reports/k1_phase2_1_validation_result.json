@@ -1,0 +1,101 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "ko_k1_0603: placement only; lexical helper ['도장']",
+    "Numeric capacity does not prove semantic feasibility or actual six-text exposure.",
+    "Scene cards and annotation templates require human review before production.",
+    "If all 2500 reviews rely on scheduling, average >8. Confirmed incidental previous appearances can reduce scheduled demand."
+  ],
+  "scope": "phase2_1_window_design_not_mass_generation_approval",
+  "frozen_history_integrity": "PASS",
+  "counts": {
+    "core": 300,
+    "expansion": 500,
+    "total": 800,
+    "tiers": {
+      "E1": 200,
+      "E2": 200,
+      "E3": 100
+    },
+    "grammar": 32
+  },
+  "numeric_capacity": {
+    "complete": true,
+    "assigned_reviews": 2500,
+    "capacity": 10,
+    "min_distinct_simulated_texts": 6,
+    "review_statistics": {
+      "min": 0,
+      "max": 10,
+      "mean": 8.333,
+      "median": 10.0,
+      "p90": 10
+    },
+    "fast_zone_review_statistics": {
+      "min": 0,
+      "max": 10,
+      "mean": 8.4,
+      "median": 10,
+      "p90": 10
+    },
+    "actual_exposures_verified": false
+  },
+  "conflict_replay": {
+    "count": 23,
+    "outcomes": {
+      "carry_to_next_window": 13,
+      "same_window_other_text": 10
+    },
+    "statuses": {
+      "conditional_scene_fit": 22,
+      "placement_only_lexical_gap": 1
+    },
+    "scheduler_selected_provisional_scenes": 22,
+    "actual_prose_verified": false
+  },
+  "annotation_triage": {
+    "status": "triaged_not_human_approved",
+    "occurrence_counts": {
+      "benign_expected": 231,
+      "requires_lexical_sense_review": 11,
+      "requires_grammar_boundary_review": 27,
+      "true_unresolved": 0
+    },
+    "group_counts": {
+      "benign_expected": 31,
+      "requires_grammar_boundary_review": 14,
+      "requires_lexical_sense_review": 5
+    },
+    "total_occurrences": 269,
+    "total_groups": 50,
+    "cache_policy": "After one human template approval, reuse only matching ID, sense, morphological signature and context preconditions; invalidate on vocab/grammar/analyzer/rule version change. Never reuse a sense default as proof."
+  },
+  "coverage_policy": {
+    "controlled_hard": 1.0,
+    "previous_hard": 0.98,
+    "previous_target": 0.99,
+    "two_new_tokens_N_under_200_expected_target_misses": 14,
+    "target_miss_is_blocker": false
+  },
+  "vocab_changes_applied": false,
+  "new_texts_generated": 0,
+  "recommended_next_step": "A_then_B",
+  "mass_generation_approved": false,
+  "test_runs": [
+    {
+      "command": "python -B -m unittest discover -s tests -v",
+      "status": "PASS",
+      "tests": 40,
+      "duration_seconds": 173.07,
+      "scope": "Initial full suite: 26 unchanged existing tests and 14 initial new tests. New modules subsequently amended and checked by the final focused run."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_k1_review_scheduler.py -v",
+      "status": "PASS",
+      "tests": 15,
+      "duration_seconds": 10.172,
+      "scope": "Final new/changed modules, including schema, freeze, capacity, replay, actual ledger CLI and annotation triage."
+    }
+  ]
+}

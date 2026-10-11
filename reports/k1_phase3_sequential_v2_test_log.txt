@@ -1,0 +1,14 @@
+test_empty_actual_history_and_bounds (test_k1_phase3_sequential_v2.NewRunSafetyTests.test_empty_actual_history_and_bounds) ... ok
+test_fingerprint_detects_identical_not_unrelated (test_k1_phase3_sequential_v2.NewRunSafetyTests.test_fingerprint_detects_identical_not_unrelated) ... ok
+test_future_never_incidental_or_credited (test_k1_phase3_sequential_v2.NewRunSafetyTests.test_future_never_incidental_or_credited) ... ok
+test_next_snapshot_requires_previous_actual_commit (test_k1_phase3_sequential_v2.NewRunSafetyTests.test_next_snapshot_requires_previous_actual_commit) ... ok
+test_progress_allows_up_to_five_then_stops (test_k1_phase3_sequential_v2.NewRunSafetyTests.test_progress_allows_up_to_five_then_stops) ... ok
+test_real_raw_replay_pass_and_atomic_credit_once (test_k1_phase3_sequential_v2.NewRunSafetyTests.test_real_raw_replay_pass_and_atomic_credit_once) ... ok
+test_schema_boundary_50_51 (test_k1_phase3_sequential_v2.NewRunSafetyTests.test_schema_boundary_50_51) ... ok
+test_stagnant_twice_preserves_entire_state (test_k1_phase3_sequential_v2.NewRunSafetyTests.test_stagnant_twice_preserves_entire_state) ... ok
+test_stop_does_not_call_generator_again (test_k1_phase3_sequential_v2.NewRunSafetyTests.test_stop_does_not_call_generator_again) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 9.137s
+
+OK

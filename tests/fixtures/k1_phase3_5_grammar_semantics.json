@@ -1,0 +1,562 @@
+[
+  {
+    "id": "ko_k1_g01_frozen_positive",
+    "text": "여기는 우리 집이에요.",
+    "grammar_id": "ko_k1_g01",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g02_frozen_positive",
+    "text": "저는 매일 학교에 가요.",
+    "grammar_id": "ko_k1_g02",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g03_frozen_positive",
+    "text": "저는 어제 책을 읽었어요.",
+    "grammar_id": "ko_k1_g03",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g04_frozen_positive",
+    "text": "저는 내일 학교에 갈 거예요.",
+    "grammar_id": "ko_k1_g04",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g05_frozen_positive",
+    "text": "저는 지금 책을 읽고 있어요.",
+    "grammar_id": "ko_k1_g05",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g06_frozen_positive",
+    "text": "저는 지금 물을 마시고 싶어요.",
+    "grammar_id": "ko_k1_g06",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g07_frozen_positive",
+    "text": "저는 오늘 학교에 안 가요.",
+    "grammar_id": "ko_k1_g07",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g08_frozen_positive",
+    "text": "저는 오늘 학교에 못 가요.",
+    "grammar_id": "ko_k1_g08",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g09_frozen_positive",
+    "text": "저는 밥을 먹고 학교에 가요.",
+    "grammar_id": "ko_k1_g09",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g10_frozen_positive",
+    "text": "방은 작지만 아주 좋아요.",
+    "grammar_id": "ko_k1_g10",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g11_frozen_positive",
+    "text": "오늘은 비가 와서 집에 있어요.",
+    "grammar_id": "ko_k1_g11",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g12_frozen_positive",
+    "text": "오늘은 비가 오니까 우산을 가져가세요.",
+    "grammar_id": "ko_k1_g12",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g13_frozen_positive",
+    "text": "시간이 있으면 같이 책을 읽어요.",
+    "grammar_id": "ko_k1_g13",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g14_frozen_positive",
+    "text": "여기에서 우리 친구를 기다리세요.",
+    "grammar_id": "ko_k1_g14",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g15_frozen_positive",
+    "text": "우리 같이 공원에 갈까요?",
+    "grammar_id": "ko_k1_g15",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g16_frozen_positive",
+    "text": "저는 한국어를 읽을 수 있어요.",
+    "grammar_id": "ko_k1_g16",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g17_frozen_positive",
+    "text": "저는 오늘 숙제를 해야 해요.",
+    "grammar_id": "ko_k1_g17",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g18_frozen_positive",
+    "text": "이 책을 읽어 봐요.",
+    "grammar_id": "ko_k1_g18",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g19_frozen_positive",
+    "text": "저는 매일 학교에 가요.",
+    "grammar_id": "ko_k1_g19",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g20_frozen_positive",
+    "text": "친구가 지금 집에 있어요.",
+    "grammar_id": "ko_k1_g20",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g21_frozen_positive",
+    "text": "저는 매일 책을 읽어요.",
+    "grammar_id": "ko_k1_g21",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g22_frozen_positive",
+    "text": "저는 아침에 학교에 가요.",
+    "grammar_id": "ko_k1_g22",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g23_frozen_positive",
+    "text": "저는 집에서 책을 읽어요.",
+    "grammar_id": "ko_k1_g23",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g24_frozen_positive",
+    "text": "저도 오늘 학교에 가요.",
+    "grammar_id": "ko_k1_g24",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g25_frozen_positive",
+    "text": "저는 친구하고 밥을 먹어요.",
+    "grammar_id": "ko_k1_g25",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g26_frozen_positive",
+    "text": "저는 작은 가방을 샀어요.",
+    "grammar_id": "ko_k1_g26",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g27_frozen_positive",
+    "text": "저는 친구가 읽는 책을 봐요.",
+    "grammar_id": "ko_k1_g27",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g28_frozen_positive",
+    "text": "저는 친구한테 책을 줘요.",
+    "grammar_id": "ko_k1_g28",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g29_frozen_positive",
+    "text": "이것은 친구의 책이에요.",
+    "grammar_id": "ko_k1_g29",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g30_frozen_positive",
+    "text": "저는 버스로 학교에 가요.",
+    "grammar_id": "ko_k1_g30",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g31_frozen_positive",
+    "text": "저는 아침부터 저녁까지 일해요.",
+    "grammar_id": "ko_k1_g31",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ko_k1_g32_frozen_positive",
+    "text": "저는 오늘 물만 마셔요.",
+    "grammar_id": "ko_k1_g32",
+    "expected": "PASS",
+    "provenance": "frozen grammar.json example",
+    "target_semantic_only": true
+  },
+  {
+    "id": "g30_transport",
+    "text": "버스로 학교에 가요.",
+    "grammar_id": "ko_k1_g30",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "g30_tool",
+    "text": "연필로 이름을 써요.",
+    "grammar_id": "ko_k1_g30",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "g30_direction",
+    "text": "집으로 가요.",
+    "grammar_id": "ko_k1_g30",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "g30_role",
+    "text": "사진을 선물로 줘요.",
+    "grammar_id": "ko_k1_g30",
+    "expected": "FAIL",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "bad_003",
+    "text": "사진을 선물로 주고 싶어요.",
+    "grammar_id": "ko_k1_g30",
+    "expected": "FAIL",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "g30_status",
+    "text": "학생으로 일해요.",
+    "grammar_id": "ko_k1_g30",
+    "expected": "FAIL",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "g30_unknown",
+    "text": "이것으로 괜찮아요.",
+    "grammar_id": "ko_k1_g30",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "g30_material",
+    "text": "나무로 의자를 만들어요.",
+    "grammar_id": "ko_k1_g30",
+    "expected": "FAIL",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "corrected_003",
+    "text": "저는 어머니에게 사진을 주고 싶어요.",
+    "grammar_id": "ko_k1_g28",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "progressive_habit",
+    "text": "자주 공부하고 있어요.",
+    "grammar_id": "ko_k1_g05",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "progressive_now",
+    "text": "저는 지금 책을 읽고 있어요.",
+    "grammar_id": "ko_k1_g05",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "progressive_result",
+    "text": "저는 지금 옷을 입고 있어요.",
+    "grammar_id": "ko_k1_g05",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "condition",
+    "text": "시간이 있으면 책을 읽어요.",
+    "grammar_id": "ko_k1_g13",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "reason",
+    "text": "비가 와서 집에 있어요.",
+    "grammar_id": "ko_k1_g11",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "reason_instruction",
+    "text": "비가 와서 우산을 가져가세요.",
+    "grammar_id": "ko_k1_g11",
+    "expected": "FAIL",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "source",
+    "text": "학교에서 집으로 와요.",
+    "grammar_id": "ko_k1_g23",
+    "expected": "FAIL",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "location",
+    "text": "집에서 책을 읽어요.",
+    "grammar_id": "ko_k1_g23",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "destination",
+    "text": "학교에 가요.",
+    "grammar_id": "ko_k1_g22",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "existence",
+    "text": "집에 있어요.",
+    "grammar_id": "ko_k1_g22",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "ownership",
+    "text": "친구의 책이에요.",
+    "grammar_id": "ko_k1_g29",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "abstract_genitive",
+    "text": "영화의 이야기예요.",
+    "grammar_id": "ko_k1_g29",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "recipient",
+    "text": "친구에게 책을 줘요.",
+    "grammar_id": "ko_k1_g28",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "human_source",
+    "text": "친구에게 책을 받아요.",
+    "grammar_id": "ko_k1_g28",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "addition",
+    "text": "저도 학교에 가요.",
+    "grammar_id": "ko_k1_g24",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "scalar_addition",
+    "text": "아이도 이것을 알아요.",
+    "grammar_id": "ko_k1_g24",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "range",
+    "text": "아침부터 저녁까지 일해요.",
+    "grammar_id": "ko_k1_g31",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "scalar_until",
+    "text": "아이까지 이것을 알아요.",
+    "grammar_id": "ko_k1_g31",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "limit",
+    "text": "물만 마셔요.",
+    "grammar_id": "ko_k1_g32",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "elapsed_time_not_simple_limit",
+    "text": "하루만에 집에 와요.",
+    "grammar_id": "ko_k1_g32",
+    "expected": "PRECEDING_REJECT",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": false
+  },
+  {
+    "id": "nominalization_not_simple_limit",
+    "text": "책을 읽기만 해요.",
+    "grammar_id": "ko_k1_g32",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "path_not_established_object",
+    "text": "길을 걸어요.",
+    "grammar_id": "ko_k1_g21",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "quantity_per_time",
+    "text": "하루에 책을 두 권 읽어요.",
+    "grammar_id": "ko_k1_g22",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "companionship",
+    "text": "친구하고 가요.",
+    "grammar_id": "ko_k1_g25",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "noun_coordinate",
+    "text": "밥하고 국을 먹어요.",
+    "grammar_id": "ko_k1_g25",
+    "expected": "PASS",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "prediction",
+    "text": "내일 비가 올 거예요.",
+    "grammar_id": "ko_k1_g04",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "possibility",
+    "text": "내일 비가 올 수 있어요.",
+    "grammar_id": "ko_k1_g16",
+    "expected": "FAIL",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "third_person_wish",
+    "text": "친구는 책을 읽고 싶어요.",
+    "grammar_id": "ko_k1_g06",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  },
+  {
+    "id": "become_complement",
+    "text": "저는 선생님이 돼요.",
+    "grammar_id": "ko_k1_g20",
+    "expected": "REVIEW",
+    "provenance": "local adversarial meaning contrast",
+    "target_semantic_only": true
+  }
+]

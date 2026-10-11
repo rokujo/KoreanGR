@@ -1,0 +1,337 @@
+{
+  "positive": [
+    {
+      "id": "K1-001",
+      "text_number": 1,
+      "errors": []
+    },
+    {
+      "id": "K1-002",
+      "text_number": 2,
+      "errors": []
+    },
+    {
+      "id": "K1-003",
+      "text_number": 3,
+      "errors": []
+    },
+    {
+      "id": "K1-004",
+      "text_number": 4,
+      "errors": []
+    },
+    {
+      "id": "K1-005",
+      "text_number": 5,
+      "errors": []
+    },
+    {
+      "id": "K1-006",
+      "text_number": 6,
+      "errors": []
+    },
+    {
+      "id": "K1-007",
+      "text_number": 7,
+      "errors": []
+    },
+    {
+      "id": "K1-008",
+      "text_number": 8,
+      "errors": []
+    },
+    {
+      "id": "K1-009",
+      "text_number": 9,
+      "errors": []
+    },
+    {
+      "id": "K1-010",
+      "text_number": 10,
+      "errors": []
+    },
+    {
+      "id": "K1-011",
+      "text_number": 11,
+      "errors": []
+    },
+    {
+      "id": "K1-012",
+      "text_number": 12,
+      "errors": []
+    },
+    {
+      "id": "K1-013",
+      "text_number": 13,
+      "errors": []
+    },
+    {
+      "id": "K1-014",
+      "text_number": 14,
+      "errors": []
+    },
+    {
+      "id": "K1-015",
+      "text_number": 15,
+      "errors": []
+    },
+    {
+      "id": "K1-016",
+      "text_number": 16,
+      "errors": []
+    },
+    {
+      "id": "K1-017",
+      "text_number": 17,
+      "errors": []
+    },
+    {
+      "id": "K1-018",
+      "text_number": 18,
+      "errors": []
+    },
+    {
+      "id": "K1-019",
+      "text_number": 19,
+      "errors": []
+    },
+    {
+      "id": "K1-020",
+      "text_number": 20,
+      "errors": []
+    },
+    {
+      "id": "K1-021",
+      "text_number": 21,
+      "errors": []
+    },
+    {
+      "id": "K1-022",
+      "text_number": 22,
+      "errors": []
+    },
+    {
+      "id": "K1-023",
+      "text_number": 23,
+      "errors": []
+    },
+    {
+      "id": "K1-024",
+      "text_number": 24,
+      "errors": []
+    },
+    {
+      "id": "K1-025",
+      "text_number": 25,
+      "errors": []
+    },
+    {
+      "id": "K1-026",
+      "text_number": 26,
+      "errors": []
+    },
+    {
+      "id": "K1-027",
+      "text_number": 27,
+      "errors": []
+    },
+    {
+      "id": "K1-028",
+      "text_number": 28,
+      "errors": []
+    },
+    {
+      "id": "K1-029",
+      "text_number": 29,
+      "errors": []
+    },
+    {
+      "id": "K1-030",
+      "text_number": 30,
+      "errors": []
+    },
+    {
+      "id": "K1-031",
+      "text_number": 31,
+      "errors": []
+    },
+    {
+      "id": "K1-032",
+      "text_number": 32,
+      "errors": []
+    },
+    {
+      "id": "K1-033",
+      "text_number": 33,
+      "errors": []
+    },
+    {
+      "id": "K1-034",
+      "text_number": 34,
+      "errors": []
+    },
+    {
+      "id": "K1-035",
+      "text_number": 35,
+      "errors": []
+    },
+    {
+      "id": "K1-036",
+      "text_number": 36,
+      "errors": []
+    },
+    {
+      "id": "K1-037",
+      "text_number": 37,
+      "errors": []
+    },
+    {
+      "id": "K1-038",
+      "text_number": 38,
+      "errors": []
+    },
+    {
+      "id": "K1-039",
+      "text_number": 39,
+      "errors": []
+    },
+    {
+      "id": "K1-040",
+      "text_number": 40,
+      "errors": []
+    },
+    {
+      "id": "K1-041",
+      "text_number": 41,
+      "errors": []
+    },
+    {
+      "id": "K1-042",
+      "text_number": 42,
+      "errors": []
+    },
+    {
+      "id": "K1-043",
+      "text_number": 43,
+      "errors": []
+    },
+    {
+      "id": "K1-044",
+      "text_number": 44,
+      "errors": []
+    },
+    {
+      "id": "K1-045",
+      "text_number": 45,
+      "errors": []
+    },
+    {
+      "id": "K1-046",
+      "text_number": 46,
+      "errors": []
+    },
+    {
+      "id": "K1-047",
+      "text_number": 47,
+      "errors": []
+    },
+    {
+      "id": "K1-048",
+      "text_number": 48,
+      "errors": []
+    },
+    {
+      "id": "K1-049",
+      "text_number": 49,
+      "errors": []
+    },
+    {
+      "id": "K1-050",
+      "text_number": 50,
+      "errors": []
+    }
+  ],
+  "negative": [
+    {
+      "id": "K1-000",
+      "rejected": true
+    },
+    {
+      "id": "K1-051",
+      "rejected": true
+    },
+    {
+      "id": "K1-099",
+      "rejected": true
+    },
+    {
+      "id": "K1-300",
+      "rejected": true
+    },
+    {
+      "id": "K1-01",
+      "rejected": true
+    },
+    {
+      "id": "K1-1",
+      "rejected": true
+    },
+    {
+      "id": "KO-K1-001",
+      "rejected": true
+    },
+    {
+      "id": "K2-001",
+      "rejected": true
+    }
+  ],
+  "all_pass": true,
+  "scene_catalog": [
+    "food",
+    "kitchen",
+    "school",
+    "shopping",
+    "transport",
+    "travel",
+    "home",
+    "health",
+    "body",
+    "outdoor",
+    "nature",
+    "work",
+    "communication",
+    "friendship",
+    "family",
+    "object_problem",
+    "lost_and_found"
+  ],
+  "genres": [
+    "daily_life",
+    "school",
+    "family",
+    "friends",
+    "friendship",
+    "food",
+    "shopping",
+    "transport",
+    "weather",
+    "home",
+    "small_problem",
+    "short_dialogue",
+    "simple_outing",
+    "objects",
+    "simple_hobby",
+    "health",
+    "outdoor",
+    "travel",
+    "work"
+  ],
+  "scene_catalog_changed": false,
+  "genre_provenance": "Phase 3 user genre list plus approved Phase 2.3/3 pilot labels; no quotas or new scene categories",
+  "old_genre_schema_unrestricted": true,
+  "new_genre_schema_finite": true,
+  "generic_id_and_range_separated": true,
+  "candidate_contract_max": 50,
+  "smoke_control_max": 3,
+  "credit": false
+}

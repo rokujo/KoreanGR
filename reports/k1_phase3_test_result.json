@@ -1,0 +1,20 @@
+{
+  "command": "python -B scripts/run_k1_phase3_tests.py",
+  "tests_run": 95,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 315.568,
+  "ok": true,
+  "initial_phase3_only_run": {
+    "tests": 11,
+    "errors": 9,
+    "reason": "Initialization still running; profile not yet created. No body generated.",
+    "after_initialization": {
+      "tests": 11,
+      "errors": 0,
+      "failures": 0
+    }
+  },
+  "log": "reports/k1_phase3_test_log.txt"
+}

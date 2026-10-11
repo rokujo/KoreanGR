@@ -1,0 +1,199 @@
+{
+  "phase": "3.4",
+  "status": "PASS",
+  "decision": "A",
+  "errors": [],
+  "core_count": 300,
+  "expansion_count": 500,
+  "total_count": 800,
+  "grammar_count": 32,
+  "tiers": {
+    "E1": 200,
+    "E2": 200,
+    "E3": 100
+  },
+  "committed_count": 3,
+  "ledger_epoch": 3,
+  "control": {
+    "status": "completed",
+    "max_attempts": 5,
+    "max_text": 3,
+    "stop": null
+  },
+  "attempts": 3,
+  "rejected": 0,
+  "attempt_counts": {
+    "1": 1,
+    "2": 1,
+    "3": 1
+  },
+  "committed_reanalyses": [
+    {
+      "text": 1,
+      "attempt": 1,
+      "hard_pass": true,
+      "mismatches": [],
+      "eojeol": 137,
+      "coverage": {
+        "denominator_N": 133,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9849624060150376,
+        "target_99_met": false
+      },
+      "planned_ids": [
+        "ko_k1_0373",
+        "ko_k1_0413"
+      ],
+      "actual_ids": [
+        "ko_k1_0373",
+        "ko_k1_0413"
+      ],
+      "uri_recoveries": 0,
+      "quote_recoveries": 0
+    },
+    {
+      "text": 2,
+      "attempt": 1,
+      "hard_pass": true,
+      "mismatches": [],
+      "eojeol": 135,
+      "coverage": {
+        "denominator_N": 130,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9846153846153847,
+        "target_99_met": false
+      },
+      "planned_ids": [
+        "ko_k1_0442",
+        "ko_k1_0443"
+      ],
+      "actual_ids": [
+        "ko_k1_0442",
+        "ko_k1_0443"
+      ],
+      "uri_recoveries": 1,
+      "quote_recoveries": 1
+    },
+    {
+      "text": 3,
+      "attempt": 1,
+      "hard_pass": true,
+      "mismatches": [],
+      "eojeol": 151,
+      "coverage": {
+        "denominator_N": 149,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9865771812080537,
+        "target_99_met": false
+      },
+      "planned_ids": [
+        "ko_k1_0444",
+        "ko_k1_0445"
+      ],
+      "actual_ids": [
+        "ko_k1_0444",
+        "ko_k1_0445"
+      ],
+      "uri_recoveries": 0,
+      "quote_recoveries": 0
+    }
+  ],
+  "committed_hard_errors": 0,
+  "future_violations": 0,
+  "invalid_usage": 0,
+  "unresolved": 0,
+  "grammar_violations": 0,
+  "planned_vs_actual_match": true,
+  "actual_introduced_count": 6,
+  "actual_distinct_vocab_text_exposures": 7,
+  "incidental_exposures": 1,
+  "selected_review_exposures": 0,
+  "outstanding_debt": [
+    {
+      "vocab_id": "ko_k1_0373",
+      "window_index": 0,
+      "window": {
+        "from": 3,
+        "to": 6
+      }
+    },
+    {
+      "vocab_id": "ko_k1_0413",
+      "window_index": 0,
+      "window": {
+        "from": 3,
+        "to": 6
+      }
+    }
+  ],
+  "expired_debt": [],
+  "uri_recoveries": 1,
+  "active_resolver_reviews": 0,
+  "initial_actual_state_zero": true,
+  "old_credit_imported": false,
+  "failed_candidates_credited": false,
+  "validation_state_unchanged": true,
+  "raw_morphology_preserved": true,
+  "active_smoke_run": "phase3_4_corrected_smoke",
+  "first_smoke_post_semantic_failure": {
+    "original_automated_status": "PASS",
+    "post_semantic_status": "FAIL",
+    "text": 3,
+    "sentence_index": 2,
+    "surface": "저는 사진을 선물로 주고 싶어요.",
+    "grammar_id": "ko_k1_g30",
+    "reason": "Registered grammar 30 permits transport/tool/direction only; role/as-a-gift use is outside the frozen meanings. Author semantic review missed it before automated commit.",
+    "original_ledger": "state/phase3_4_smoke_exposure_ledger.json",
+    "original_ledger_sha": "3433c48aa83b8988c47050a0aa433c5a569e40ecc87849f7e59e971808d7eb1b",
+    "mechanically_committed_invalid_text_preserved": true,
+    "correction_applied_to_original": false,
+    "new_analyzer_identity_defect": false,
+    "clean_zero_state_retest_required": true
+  },
+  "first_smoke_credit_imported": false,
+  "forward_schema_positive_count": 50,
+  "forward_schema_negative_count": 8,
+  "schema_errors": [],
+  "uri_scope_audit_pass": true,
+  "tests": {
+    "all": {
+      "command": "python -B scripts/run_k1_phase3_4_tests.py",
+      "tests": 240,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 103.073,
+      "status": "PASS",
+      "log": "reports/k1_phase3_4_all_test_log.txt",
+      "exit_code": 0
+    },
+    "focused": {
+      "command": "python -B scripts/run_k1_phase3_4_tests.py --focused",
+      "tests": 33,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 10.868,
+      "status": "PASS",
+      "log": "reports/k1_phase3_4_focused_test_log.txt",
+      "exit_code": 0
+    }
+  },
+  "frozen_file_count": 625,
+  "frozen_input_violations": [],
+  "lint_warnings_by_category": {
+    "nat_restricted_sense": 6
+  },
+  "translation_flags": 0,
+  "semantic_flags": 0,
+  "semantics_are_not_independent_human_gold": true,
+  "generation_beyond_003": false,
+  "provenance": {
+    "001": "Frozen raw-source regression, newly evaluated in zero-state run",
+    "002": "Frozen failed raw-source regression, newly evaluated after actual 001 commit",
+    "003": "Fresh photo-present scene, author draft 2 repaired before final zero-state smoke commit"
+  }
+}

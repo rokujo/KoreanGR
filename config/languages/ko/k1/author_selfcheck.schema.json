@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Author self-check: existing Phase 3.9 contract",
+  "type": "object",
+  "required": [
+    "allowed_contract_read",
+    "content_membership_checked",
+    "title_checked",
+    "planned_new_checked",
+    "known_gaps_checked",
+    "references_checked"
+  ],
+  "properties": {
+    "allowed_contract_read": {
+      "type": "boolean",
+      "const": true
+    },
+    "content_membership_checked": {
+      "type": "boolean",
+      "const": true
+    },
+    "title_checked": {
+      "type": "boolean",
+      "const": true
+    },
+    "planned_new_checked": {
+      "type": "boolean",
+      "const": true
+    },
+    "known_gaps_checked": {
+      "type": "boolean",
+      "const": true
+    },
+    "references_checked": {
+      "type": "boolean",
+      "const": true
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

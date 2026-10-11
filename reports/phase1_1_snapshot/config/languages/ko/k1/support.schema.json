@@ -1,0 +1,619 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "K1 supporting data schemas",
+  "$defs": {
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "language",
+        "level",
+        "version",
+        "status",
+        "target_texts",
+        "vocab_budget",
+        "length",
+        "sentence_length",
+        "new_vocab",
+        "hard_min_known_vocab_ratio",
+        "target_known_vocab_ratio",
+        "repetition",
+        "style",
+        "grammar_count",
+        "core_decision",
+        "expansion_decision",
+        "counting",
+        "introduction",
+        "feasibility",
+        "grammar_policy",
+        "review_required"
+      ],
+      "properties": {
+        "language": {
+          "const": "ko"
+        },
+        "level": {
+          "const": "K1"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_texts": {
+          "const": 300
+        },
+        "vocab_budget": {
+          "const": {
+            "core": 300,
+            "expansion": 500,
+            "total": 800
+          }
+        },
+        "length": {
+          "const": {
+            "min_eojeol": 120,
+            "max_eojeol": 180
+          }
+        },
+        "sentence_length": {
+          "const": {
+            "preferred_min_eojeol": 4,
+            "preferred_max_eojeol": 7,
+            "hard_max_eojeol": 10
+          }
+        },
+        "new_vocab": {
+          "const": {
+            "min": 0,
+            "max": 2,
+            "unit": "lemma",
+            "max_entries_per_text": 2,
+            "first_text_new_lemma_token_soft_max": 3,
+            "token_policy": "初出教材の新出語token合計は原則3以下。各語3回ではない。逸脱は人間レビューを要する。"
+          }
+        },
+        "hard_min_known_vocab_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "const": 0.98
+        },
+        "target_known_vocab_ratio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "const": 0.99
+        },
+        "repetition": {
+          "const": {
+            "near_repetition_allowed": true,
+            "near_repetition_encouraged": true,
+            "paraphrase_required": false,
+            "new_lemma_mass_repetition_in_first_text": false,
+            "prefer_new_lemma_repetition_in_later_texts": true,
+            "near_repetition_scope": "既知語の近距離反復を推奨。初出の新出語は全語合計token3以下の方針を優先。"
+          }
+        },
+        "style": {
+          "const": {
+            "default_register": "해요체",
+            "prefer_processing_ease": true,
+            "prefer_naturalness_over_variety": true
+          }
+        },
+        "grammar_count": {
+          "const": 32
+        },
+        "core_decision": {
+          "const": {
+            "status": "accepted",
+            "replacement": "한국→아니다",
+            "proper_names_outside_budget": true
+          }
+        },
+        "expansion_decision": {
+          "const": {
+            "active_entries": 500,
+            "replacement_proposals_applied": false,
+            "notes": "現行500は許可語彙。7組の入替は人間判断待ち。Tier変更8語は適用。"
+          }
+        },
+        "counting": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "vocab_unit",
+            "proper_names_in_budget",
+            "grammar_bound_forms_in_budget",
+            "eojeol",
+            "known_ratio_denominator",
+            "known_ratio_numerator",
+            "new_vocab_definition",
+            "new_lemma_token_count",
+            "number_forms"
+          ],
+          "properties": {
+            "vocab_unit": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "proper_names_in_budget": {
+              "type": "boolean"
+            },
+            "grammar_bound_forms_in_budget": {
+              "type": "boolean"
+            },
+            "eojeol": {
+              "type": "string",
+              "minLength": 1
+            },
+            "known_ratio_denominator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "known_ratio_numerator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "new_vocab_definition": {
+              "type": "string",
+              "minLength": 1
+            },
+            "new_lemma_token_count": {
+              "type": "string",
+              "minLength": 1
+            },
+            "number_forms": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "introduction": {
+          "const": {
+            "first_text": 1,
+            "last_text": 275,
+            "consolidation_from": 276,
+            "tier_counts": {
+              "E1": 200,
+              "E2": 200,
+              "E3": 100
+            },
+            "ranges": {
+              "E1": [
+                1,
+                170
+              ],
+              "E2": [
+                61,
+                260
+              ],
+              "E3": [
+                151,
+                275
+              ]
+            },
+            "target_exposures": 6,
+            "distinct_texts_required": true
+          }
+        },
+        "feasibility": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "introduction_slots",
+            "required_new_entries",
+            "slack_slots",
+            "warning",
+            "known_ratio_resolution",
+            "generation_gate"
+          ],
+          "properties": {
+            "introduction_slots": {
+              "type": "integer"
+            },
+            "required_new_entries": {
+              "type": "integer"
+            },
+            "slack_slots": {
+              "type": "integer"
+            },
+            "warning": {
+              "type": "string",
+              "minLength": 1
+            },
+            "known_ratio_resolution": {
+              "type": "string",
+              "minLength": 1
+            },
+            "generation_gate": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "grammar_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "max_connector_clauses_preferred",
+            "allow_unlisted_productive_derivation",
+            "inflection_not_new_vocab",
+            "excluded_grammar",
+            "notes"
+          ],
+          "properties": {
+            "max_connector_clauses_preferred": {
+              "type": "integer"
+            },
+            "allow_unlisted_productive_derivation": {
+              "type": "boolean"
+            },
+            "inflection_not_new_vocab": {
+              "type": "boolean"
+            },
+            "excluded_grammar": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "review_required": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "exceptions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "counted_in_vocab_budget",
+        "policy",
+        "entries"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "counted_in_vocab_budget": {
+          "const": false
+        },
+        "policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "match",
+            "allow_inflection",
+            "license_constituents",
+            "max_occurrences_per_text",
+            "context",
+            "unknown_ratio_policy",
+            "notes"
+          ],
+          "properties": {
+            "match": {
+              "const": "exact_surface_sequence"
+            },
+            "allow_inflection": {
+              "const": false
+            },
+            "license_constituents": {
+              "const": false
+            },
+            "max_occurrences_per_text": {
+              "const": 2
+            },
+            "context": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unknown_ratio_policy": {
+              "type": "string",
+              "minLength": 1
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "form",
+              "meaning_ja",
+              "kind",
+              "requires_vocab",
+              "notes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^ko_k1_x[0-9]{2}$"
+              },
+              "form": {
+                "type": "string",
+                "minLength": 1
+              },
+              "meaning_ja": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "enum": [
+                  "frozen_exception",
+                  "regular_vocab_form"
+                ]
+              },
+              "requires_vocab": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "proper_names": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "counted_in_vocab_budget",
+        "entries"
+      ],
+      "properties": {
+        "counted_in_vocab_budget": {
+          "const": false
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "lemma",
+              "kind",
+              "gloss_ja",
+              "source",
+              "notes"
+            ],
+            "properties": {
+              "lemma": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "gloss_ja": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source": {
+                "type": "string",
+                "minLength": 1
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "replacement_proposals": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "phase",
+        "status",
+        "applied",
+        "counted_in_vocab_budget",
+        "entries",
+        "notes"
+      ],
+      "properties": {
+        "phase": {
+          "const": "1.1"
+        },
+        "status": {
+          "const": "pending_human_review"
+        },
+        "applied": {
+          "const": false
+        },
+        "counted_in_vocab_budget": {
+          "const": false
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "source_id",
+              "source_lemma",
+              "source_pos",
+              "source_sense",
+              "action",
+              "removal_reason",
+              "candidate",
+              "replacement_reason",
+              "status"
+            ],
+            "properties": {
+              "source_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_lemma": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_pos": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_sense": {
+                "type": "string",
+                "minLength": 1
+              },
+              "action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "removal_reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "candidate": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "lemma",
+                  "pos",
+                  "sense",
+                  "gloss_ja",
+                  "category",
+                  "tier",
+                  "notes"
+                ],
+                "properties": {
+                  "lemma": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "pos": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sense": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "gloss_ja": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "category": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "tier": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "notes": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "replacement_reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "minItems": 7,
+          "maxItems": 7
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "introduction_schedule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "language",
+        "level",
+        "status",
+        "notes",
+        "rows"
+      ],
+      "properties": {
+        "language": {
+          "const": "ko"
+        },
+        "level": {
+          "const": "K1"
+        },
+        "status": {
+          "const": "feasibility_witness_not_final_curriculum"
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 300,
+          "maxItems": 300,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "text",
+              "entry_ids"
+            ],
+            "properties": {
+              "text": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 300
+              },
+              "entry_ids": {
+                "type": "array",
+                "maxItems": 2,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "pattern": "^ko_k1_[0-9]{4}$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

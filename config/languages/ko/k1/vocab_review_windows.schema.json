@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "language",
+    "level",
+    "phase",
+    "status",
+    "source",
+    "policy",
+    "scene_catalog",
+    "entries"
+  ],
+  "properties": {
+    "language": {
+      "const": "ko"
+    },
+    "level": {
+      "const": "K1"
+    },
+    "phase": {
+      "const": "2.1A"
+    },
+    "status": {
+      "const": "window_policy_active_not_observed"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "config/languages/ko/k1/introduction_schedule.json",
+        "config/languages/ko/k1/expansion_vocab.json",
+        "config/languages/ko/k1/id_migration.json",
+        "config/languages/ko/k1/profile.json",
+        "reports/phase2_1_snapshot/manifest.json"
+      ],
+      "properties": {
+        "config/languages/ko/k1/introduction_schedule.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "config/languages/ko/k1/expansion_vocab.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "config/languages/ko/k1/id_migration.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "config/languages/ko/k1/profile.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "reports/phase2_1_snapshot/manifest.json": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "historical_exact_reviews_binding",
+        "target_distinct_actual_texts",
+        "review_goal_min",
+        "review_goal_max",
+        "extra_reviews_allowed_if_coherent",
+        "window_miss_is_immediate_failure",
+        "final_deadline",
+        "minimum_gap_preferred",
+        "selection_counts_as_exposure",
+        "controlled_vocab_coverage_hard_min",
+        "previous_vocab_coverage_hard_min",
+        "previous_vocab_coverage_target",
+        "new_lemma_max",
+        "new_token_soft_max",
+        "coverage_target_miss_is_blocker"
+      ],
+      "properties": {
+        "historical_exact_reviews_binding": {
+          "const": false
+        },
+        "target_distinct_actual_texts": {
+          "const": 6
+        },
+        "review_goal_min": {
+          "const": 5
+        },
+        "review_goal_max": {
+          "const": 8
+        },
+        "extra_reviews_allowed_if_coherent": {
+          "const": true
+        },
+        "window_miss_is_immediate_failure": {
+          "const": false
+        },
+        "final_deadline": {
+          "const": 300
+        },
+        "minimum_gap_preferred": {
+          "const": 3
+        },
+        "selection_counts_as_exposure": {
+          "const": false
+        },
+        "controlled_vocab_coverage_hard_min": {
+          "const": 1.0
+        },
+        "previous_vocab_coverage_hard_min": {
+          "const": 0.98
+        },
+        "previous_vocab_coverage_target": {
+          "const": 0.99
+        },
+        "new_lemma_max": {
+          "const": 2
+        },
+        "new_token_soft_max": {
+          "const": 3
+        },
+        "coverage_target_miss_is_blocker": {
+          "const": false
+        }
+      }
+    },
+    "scene_catalog": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z]+(?:_[a-z]+)*$"
+      }
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 500,
+      "maxItems": 500,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "vocab_id",
+          "first_introduction_text",
+          "review_windows",
+          "scene_affinity",
+          "semantic_domain",
+          "affinity_status"
+        ],
+        "properties": {
+          "vocab_id": {
+            "type": "string",
+            "pattern": "^ko_k1_[0-9]{4}$"
+          },
+          "first_introduction_text": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 255
+          },
+          "review_windows": {
+            "type": "array",
+            "minItems": 5,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "from",
+                "to"
+              ],
+              "properties": {
+                "from": {
+                  "type": "integer",
+                  "minimum": 2,
+                  "maximum": 300
+                },
+                "to": {
+                  "type": "integer",
+                  "minimum": 2,
+                  "maximum": 300
+                }
+              }
+            }
+          },
+          "scene_affinity": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z]+(?:_[a-z]+)*$"
+            }
+          },
+          "semantic_domain": {
+            "type": "string",
+            "pattern": "^[a-z]+(?:_[a-z]+)*$"
+          },
+          "affinity_status": {
+            "const": "heuristic_requires_realization_review"
+          }
+        }
+      }
+    }
+  }
+}

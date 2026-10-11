@@ -1,0 +1,34 @@
+{
+  "phase": "1.2",
+  "freeze_for": "2_pilot",
+  "files": {
+    "config/languages/ko/k1/core_vocab.json": "eb647810e98ee4b51b76261ab6200e11cc7e5e443c486016624a3716e846fc31",
+    "config/languages/ko/k1/core_vocab.source.json": "8fbb5fc09a97ef31edab1074ad20cbaf1ea0039e64ba3c7bb90427ef2669dcf9",
+    "config/languages/ko/k1/expansion_replacement_proposals.json": "82d4b7933a816ff945ed1dd84b67cd28b1df0f35e5e012c8ff9ecbddbd551654",
+    "config/languages/ko/k1/expansion_vocab.json": "ef447c43d64153fc03b1cd32194978b5bb86abd134bc9b3bef4682090c799983",
+    "config/languages/ko/k1/grammar.json": "30b04cbcd6c6e5b9ab44f27a4c4a798e054e3c5fb6999f5c73cacc4e36a898d3",
+    "config/languages/ko/k1/grammar.schema.json": "cc8f08cdb7c4e5f7b69bc1e400f80c3533125ae9084d600ca11536f663b891fe",
+    "config/languages/ko/k1/id_migration.json": "e97a1c0a2c498d019e756433cd0b5873bf558721005e23771881e41f4bbeafd4",
+    "config/languages/ko/k1/introduction_schedule.json": "f79e5e87b4f12faf57d95641f0ca84a410fc458b352f107b8376b5340f5a0d37",
+    "config/languages/ko/k1/k2_candidates.json": "790162b12542024f9145431eecf6917caffe1fb81931a77eca2687765bddc977",
+    "config/languages/ko/k1/lexical_exceptions.json": "65f6f2cd32402a885be4c698a49efaad21351492ca92f7f83c4a6effe1c76201",
+    "config/languages/ko/k1/profile.json": "ea9f591f8f040ab4046380bf109f96bb349f433682d6211038c820248909c055",
+    "config/languages/ko/k1/proper_names.json": "e4cf3869986d142c07f50026810c7b8b5dcd726e12d0445e6deeee5dcf967e47",
+    "config/languages/ko/k1/support.schema.json": "f8926ee46de6013cf78f10f1b97f4a9076ec4087a56325737528aaa12d7500e9",
+    "config/languages/ko/k1/vocab.schema.json": "ae77f98ddbac28728d08f934a744c7f1da978144fd3f3e2069a8b3eed0bce5fb",
+    "config/languages/ko/k1/vocab_exposure_schedule.json": "745dc2c7425ef9f0c599b95163a589383a6e7e7fd07c80d4ccde2cd00e81d1ff",
+    "config/languages/ko/k1/vocab_exposure_schedule.schema.json": "96fa8a1d67b3584ab4fef64b9868f860cc83df82ed1a07b6c25c99f348545b02"
+  },
+  "implementation_files": {
+    "scripts/audit_phase1_1_changes.py": "449e81f6568e159e7fadca64707d00dd886543bb010bca3b2f209d9d9d7edef4",
+    "scripts/audit_phase1_2_changes.py": "e4c425ada2e94c09c1e1b4c93640d16ae85129e12d73f0dc9997bb609eb8923f",
+    "scripts/build_k1_data.py": "8e7639b52169d85813e2ff75183b790d4b44838ec43a1a108cf48a11cd3338e8",
+    "scripts/k1_schedule.py": "93a6a0c8d717e059bcecd475163a2c297857c0b955f9215e5f95897d601c6bbd",
+    "scripts/lexical_coverage.py": "dab1adf31d360c9db8511df067bc9180d2292de39a37def076995130c7428fa2",
+    "scripts/validate_k1_vocab.py": "d968d2244d46fbb516155719d7ba2e2cb0c4a0fc06e1b2f915722b1633919ab0"
+  },
+  "test_files": {
+    "tests/test_lexical_coverage.py": "70ca9e644ab63d6296adb065f934c73e79b681af3c07a711f9cdca7effe17961",
+    "tests/test_validate_k1_vocab.py": "dc05bf2a190afbaac7f9fdffc9a0c2601c87e051c120701e9afc714150e7484a"
+  }
+}

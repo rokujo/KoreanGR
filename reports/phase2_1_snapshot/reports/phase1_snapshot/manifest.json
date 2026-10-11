@@ -1,0 +1,22 @@
+{
+  "phase": "1",
+  "files": {
+    "config/languages/ko/k1/core_vocab.json": "6e6535085bd8d4983be3fdbf3d090d8678e8b7902d8e5a0eca5ac8cfe9bc65a4",
+    "config/languages/ko/k1/core_vocab.source.json": "8fbb5fc09a97ef31edab1074ad20cbaf1ea0039e64ba3c7bb90427ef2669dcf9",
+    "config/languages/ko/k1/expansion_vocab.json": "17396d68f3b473982445ba4a2ea62d9688cdb5b748291fc827a2404b207c4a86",
+    "config/languages/ko/k1/grammar.json": "c698e29cf7f831d23cf2ec0b21a2d0b10c3f0a4577187d4b64fca9a3b73a8f7a",
+    "config/languages/ko/k1/grammar.schema.json": "bfd0b8e3b42c823d28be0b9d3f6c723c92fa658fb7a5351b4d05917a1f15d399",
+    "config/languages/ko/k1/lexical_exceptions.json": "21a537ca2f782e4b682fbe2ed96063a823e0681ebfb7389d9d134100e0649265",
+    "config/languages/ko/k1/profile.json": "ce01dc15147757718b9da31f843c25609e8dc48d7ef60f9997c06cd6f384c9cd",
+    "config/languages/ko/k1/proper_names.json": "cea5f8611ad24167e3c402c335ad11062f1955cb7e6805dd0ede1aac6fcab2dd",
+    "config/languages/ko/k1/support.schema.json": "7f140c37daa35a2c70c768d5a544bf5fc1784d96e4ff31f6d482721499b0aa65",
+    "config/languages/ko/k1/vocab.schema.json": "b615767f3376d1b90c0d854e00488419068db850cdf351f23f526396daefd26d",
+    "scripts/build_k1_data.py": "0df8cce9f2d510512f54fd457d3de55238b823654c326d5e12ffec062ce42026",
+    "scripts/validate_k1_vocab.py": "18c980c0022278752d25685148033887c806015448fcad7b4756b9319a9e42a3",
+    "tests/test_validate_k1_vocab.py": "23e07fe81291d4f0683264c7e25e810cfa331deca371a1d5c8849da664eeb27c",
+    "README.md": "da9352e7df670ea4634964433c84bc703a75ae0080f28c9d7ca8e10d553773cf",
+    "requirements-dev.txt": "3351b776ebac83e9f9ed3fd9a0319a9bb6b85deca542ef9a36b7302c74ce3014",
+    "reports/k1_vocab_design_report.md": "190dfb57edd145a9417b144d3836af8fd048f69f4a7350f4a71a8254c2a0db6b",
+    "reports/k1_vocab_validation_result.json": "ea52a90812fd1a4e5b5bb5d40342d8157bd5c9ab31c987fb747fe25f95140635"
+  }
+}

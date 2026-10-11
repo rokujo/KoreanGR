@@ -1,0 +1,41 @@
+{
+  "phase": "3.1",
+  "decision": "A",
+  "smoke_texts": [
+    1
+  ],
+  "committed_count": 1,
+  "files": {
+    "config/languages/ko/k1/phase3_1/allowed_snapshot.schema.json": "cd02e7f5373a1a68f50cd091019c4ee2d3ffa76027f560faf3412ee9bc380dea",
+    "config/languages/ko/k1/phase3_1/morphology_hints.json": "e3ca2fb9287e8c357f57fc9007fe7ac38289b8f53118699cd217e6151aba8895",
+    "docs/ko_k1_candidate_gate.md": "2d9ffec51319c990f97de3ec13a74b6488038f182cba8434fa46ade140deab7d",
+    "pilot/ko/k1/phase3_1/allowed_vocab_snapshots/K1-001-epoch-0.json": "25cdb10ef3db63c123b93c9eac38f2dd54baacddb718d66a8a52337cb85367f0",
+    "pilot/ko/k1/phase3_1/candidate.schema.json": "944fff5002fd03ca272e540ffdda522bbf5514386a1f8cfb3a358eb33ac96c96",
+    "pilot/ko/k1/phase3_1/candidates/K1-001-attempt-01.json": "14a4a5f8feee7353b70d3e70d782404b99050a4aa0d493f678935b59673e82fb",
+    "pilot/ko/k1/phase3_1/candidates/K1-001-attempt-02.json": "a3974d57a6deb51fdf33d973b9cbd3f5991a693cde07db483cd6dd6efb25a602",
+    "pilot/ko/k1/phase3_1/candidates/K1-001-attempt-03.json": "80cbe7325491ba3e0611d38d25e5c2952860f9e200f382c8f7a489ff9346f2f7",
+    "pilot/ko/k1/phase3_1/failed_attempts/K1-001-attempt-01.json": "14a4a5f8feee7353b70d3e70d782404b99050a4aa0d493f678935b59673e82fb",
+    "pilot/ko/k1/phase3_1/failed_attempts/K1-001-attempt-02.json": "a3974d57a6deb51fdf33d973b9cbd3f5991a693cde07db483cd6dd6efb25a602",
+    "pilot/ko/k1/phase3_1/initial_state.json": "51fbdbc98dfcf10d361c68b167659e766e29251d8aaa51b751c0a94106c1b2e5",
+    "pilot/ko/k1/phase3_1/README.md": "d67914f128b592b1ba0017499cec5ede3bb06fb61013b5450ec61fd3256af0df",
+    "pilot/ko/k1/phase3_1/run_control.json": "a694524998f66095a1a12e5314a5247417b71652c0593d621adfdf20f76c06e1",
+    "pilot/ko/k1/phase3_1/source.schema.json": "023652e5fd1e7950af7b93608d872b67129329bbd8b3a53cfe2d05397e435bb7",
+    "pilot/ko/k1/phase3_1/texts/K1-001.json": "7cfd2870e6b99fc5eaaadf04c161325574f0e9c75796ad05dab04d51f718f03d",
+    "reports/k1_phase3_1_candidate_gate_report.md": "23ce88464762c3ee7dc22900484e009def5dd1ba456c6ec4e660cbecd86672f4",
+    "reports/k1_phase3_1_focused_test_result.json": "706e5924fc11dabdc585212a3d01312b4b88ae05a2a9b4a8e1f49600a6d1137a",
+    "reports/k1_phase3_1_input_freeze.json": "6291c5f203ca1b3c19428964374ea048998b3bae5a3f608e0d5b0f365f484a12",
+    "reports/k1_phase3_1_morphology_audit.json": "fb3be4575a577972c9c22c7d6660aae358cb63c9a0b37a86a2d1a26d76eddd31",
+    "reports/k1_phase3_1_test_log.txt": "ea5dfa86e9ccfba5dfc2a9fee9fa1892051909b4e7db1e099f07234b19a0a76f",
+    "reports/k1_phase3_1_test_result.json": "1c3c485a3efe73e42ab687f457ddd12c6be308a5b4fc758e0c181fe5e579d45c",
+    "reports/k1_phase3_1_validation_result.json": "f6d84cdb4c06f1cd9a1eeca1576a8ac9e155203f6c47f10d1f64ead8667ecefd",
+    "scripts/k1_candidate_gate.py": "5cd2af9b7299f58738b0264d3954b7b07402dfd04bc8d053242ff68202825de4",
+    "scripts/k1_phase3_1.py": "544dcf2cefcf18f0790204b581bcd4769730973190f4ae9671abe05ab7c8ce07",
+    "scripts/k1_phase3_1_resolver.py": "05a6f0c021563dafae88c960d328192616b10be104ed5136120d37757eab2a56",
+    "scripts/report_k1_phase3_1.py": "6e14f93a6bf07a0b168df6c9d23a1ce428e400c730429df5200bfc7d31dc17ab",
+    "scripts/run_k1_phase3_1_tests.py": "d07e1f6647da8ebb8127f2a01e2320460248406b1de2735dccee8581533db7ff",
+    "scripts/validate_k1_phase3_1.py": "42e049d24b03010a67b04b0aa30ab6d92d469862579c0ac0e4bfa79dbcee4474",
+    "state/phase3_1_smoke_exposure_ledger.json": "5a16155f7abdc69524398e882711c634d91899e45f5917f625fda51e47b9d370",
+    "tests/fixtures/k1_phase3_1_regression_cases.json": "07bfc2c0e4c466b791c98d081f6c96d07993bfcbde823263a6b8f733939e2d47",
+    "tests/test_k1_candidate_gate.py": "2dbcea69cdd2afca4b01ee5412b4ec83159cb4956b1f51e4ac23d96c7d08994f"
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "Exposure schedule is a plan; actual text occurrences, naturalness and learner retention are unverified.",
+    "Coverage evaluator requires correctly resolved lemma/POS/sense and grammar spans; no Korean parser or text generation in this phase."
+  ],
+  "summary": {
+    "core": 300,
+    "expansion": 500,
+    "total": 800,
+    "source_core": 300,
+    "tiers": {
+      "E1": 200,
+      "E2": 200,
+      "E3": 100
+    },
+    "grammar": 32,
+    "expansion_categories": {
+      "people_social": 40,
+      "places_objects": 90,
+      "food_nature": 50,
+      "verbs": 100,
+      "adjectives": 65,
+      "adverbs_connectors": 50,
+      "time_counters_units": 35,
+      "abstract_body_emotion": 40,
+      "school_work_transport_info": 30
+    },
+    "expansion_pos": {
+      "noun": 258,
+      "pronoun": 3,
+      "verb": 102,
+      "adjective": 63,
+      "interjection": 2,
+      "determiner": 7,
+      "adverb": 37,
+      "counter": 20,
+      "numeral": 4,
+      "conjunction": 4
+    },
+    "confidence": {
+      "high": 495,
+      "medium": 5
+    },
+    "id_migration": {
+      "retired": 7,
+      "new": 7,
+      "next_sequence": 808,
+      "rank_independent": true
+    },
+    "replacements": {
+      "adopted": 7,
+      "pending": 0
+    },
+    "coverage_policy": {
+      "controlled_hard_min": 1.0,
+      "previous_hard_min": 0.98,
+      "previous_target": 0.99,
+      "new_token_soft_max": 3
+    },
+    "introduction_capacity": {
+      "assigned": 500,
+      "slots": 550,
+      "slack": 50,
+      "period_counts": {
+        "0": 22,
+        "1": 6,
+        "2": 247
+      },
+      "last_introduction": 255,
+      "consolidation_new_entries": 0
+    },
+    "exposure_plan": {
+      "entries": 500,
+      "planned_entry_text_pairs": 3000,
+      "min_distinct_texts": 6,
+      "load_statistics": {
+        "all_texts": {
+          "min": 2,
+          "max": 13,
+          "mean": 10,
+          "median": 11.0,
+          "p90": 13
+        },
+        "tiers": {
+          "E1": {
+            "min": 0,
+            "max": 9,
+            "mean": 4,
+            "median": 3.0,
+            "p90": 8
+          },
+          "E2": {
+            "min": 0,
+            "max": 10,
+            "mean": 4,
+            "median": 5.0,
+            "p90": 8
+          },
+          "E3": {
+            "min": 0,
+            "max": 11,
+            "mean": 2,
+            "median": 0.0,
+            "p90": 6
+          }
+        },
+        "fast_zone": {
+          "min": 12,
+          "max": 12,
+          "mean": 12,
+          "median": 12,
+          "p90": 12
+        },
+        "fast_zone_tiers": {
+          "E1": {
+            "min": 1,
+            "max": 3,
+            "mean": 1.92,
+            "median": 2,
+            "p90": 3
+          },
+          "E2": {
+            "min": 5,
+            "max": 6,
+            "mean": 5.52,
+            "median": 6,
+            "p90": 6
+          },
+          "E3": {
+            "min": 4,
+            "max": 5,
+            "mean": 4.56,
+            "median": 5,
+            "p90": 5
+          }
+        },
+        "recently_introduced": {
+          "min": 0,
+          "max": 8,
+          "mean": 5.303,
+          "median": 6.0,
+          "p90": 7
+        },
+        "fast_zone_recently_introduced": {
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "fast_zone_recently_introduced_E3": {
+          "min": 0,
+          "max": 0,
+          "mean": 0,
+          "median": 0,
+          "p90": 0
+        },
+        "periods": {
+          "001-025": {
+            "new_entries": 50,
+            "load": {
+              "min": 2,
+              "max": 6,
+              "mean": 4.68,
+              "median": 5,
+              "p90": 6
+            }
+          },
+          "026-050": {
+            "new_entries": 49,
+            "load": {
+              "min": 6,
+              "max": 8,
+              "mean": 6.68,
+              "median": 7,
+              "p90": 7
+            }
+          },
+          "051-075": {
+            "new_entries": 50,
+            "load": {
+              "min": 7,
+              "max": 8,
+              "mean": 7.76,
+              "median": 8,
+              "p90": 8
+            }
+          },
+          "076-100": {
+            "new_entries": 47,
+            "load": {
+              "min": 7,
+              "max": 9,
+              "mean": 8,
+              "median": 8,
+              "p90": 8
+            }
+          },
+          "101-125": {
+            "new_entries": 49,
+            "load": {
+              "min": 9,
+              "max": 10,
+              "mean": 9.2,
+              "median": 9,
+              "p90": 10
+            }
+          },
+          "126-150": {
+            "new_entries": 50,
+            "load": {
+              "min": 9,
+              "max": 10,
+              "mean": 9.36,
+              "median": 9,
+              "p90": 10
+            }
+          },
+          "151-175": {
+            "new_entries": 47,
+            "load": {
+              "min": 12,
+              "max": 12,
+              "mean": 12,
+              "median": 12,
+              "p90": 12
+            }
+          },
+          "176-200": {
+            "new_entries": 49,
+            "load": {
+              "min": 12,
+              "max": 12,
+              "mean": 12,
+              "median": 12,
+              "p90": 12
+            }
+          },
+          "201-225": {
+            "new_entries": 50,
+            "load": {
+              "min": 12,
+              "max": 13,
+              "mean": 12.68,
+              "median": 13,
+              "p90": 13
+            }
+          },
+          "226-250": {
+            "new_entries": 49,
+            "load": {
+              "min": 13,
+              "max": 13,
+              "mean": 13,
+              "median": 13,
+              "p90": 13
+            }
+          },
+          "251-275": {
+            "new_entries": 10,
+            "load": {
+              "min": 12,
+              "max": 13,
+              "mean": 12.64,
+              "median": 13,
+              "p90": 13
+            }
+          },
+          "276-300": {
+            "new_entries": 0,
+            "load": {
+              "min": 12,
+              "max": 12,
+              "mean": 12,
+              "median": 12,
+              "p90": 12
+            }
+          }
+        }
+      },
+      "concentration_warning_count": 0,
+      "status": "planned_not_observed"
+    },
+    "distinct_lemmas": 785,
+    "core_expansion_same_lemma": {
+      "개": [
+        {
+          "pos": "noun",
+          "sense": "dog",
+          "tier": "core"
+        },
+        {
+          "pos": "counter",
+          "sense": "item_unit",
+          "tier": "E1"
+        }
+      ],
+      "눈": [
+        {
+          "pos": "noun",
+          "sense": "snow",
+          "tier": "core"
+        },
+        {
+          "pos": "noun",
+          "sense": "eye",
+          "tier": "E1"
+        }
+      ],
+      "쓰다": [
+        {
+          "pos": "verb",
+          "sense": "write",
+          "tier": "core"
+        },
+        {
+          "pos": "adjective",
+          "sense": "bitter",
+          "tier": "E2"
+        }
+      ],
+      "이": [
+        {
+          "pos": "numeral",
+          "sense": "two_sino",
+          "tier": "core"
+        },
+        {
+          "pos": "determiner",
+          "sense": "this",
+          "tier": "E1"
+        },
+        {
+          "pos": "noun",
+          "sense": "tooth",
+          "tier": "E2"
+        }
+      ],
+      "저": [
+        {
+          "pos": "pronoun",
+          "sense": "i_humble",
+          "tier": "core"
+        },
+        {
+          "pos": "determiner",
+          "sense": "that_over_there",
+          "tier": "E1"
+        }
+      ],
+      "찍다": [
+        {
+          "pos": "verb",
+          "sense": "take_photo",
+          "tier": "core"
+        },
+        {
+          "pos": "verb",
+          "sense": "stamp",
+          "tier": "E2"
+        }
+      ],
+      "팔": [
+        {
+          "pos": "numeral",
+          "sense": "eight_sino",
+          "tier": "core"
+        },
+        {
+          "pos": "noun",
+          "sense": "arm",
+          "tier": "E2"
+        }
+      ]
+    }
+  },
+  "history_integrity": {
+    "phase1_snapshot": {
+      "status": "PASS",
+      "files": 17
+    },
+    "phase1_1_snapshot": {
+      "status": "PASS",
+      "files": 22
+    }
+  },
+  "tests": {
+    "status": "PASS",
+    "exit_code": 0,
+    "test_methods": 16,
+    "output": "test_grammar_exclusion_and_empty_denominator (test_lexical_coverage.CoverageTests.test_grammar_exclusion_and_empty_denominator) ... ok\ntest_integer_boundaries (test_lexical_coverage.CoverageTests.test_integer_boundaries) ... ok\ntest_invalid_text_number (test_lexical_coverage.CoverageTests.test_invalid_text_number) ... ok\ntest_previous_introduction (test_lexical_coverage.CoverageTests.test_previous_introduction) ... ok\ntest_registered_names_and_exact_frozen_forms (test_lexical_coverage.CoverageTests.test_registered_names_and_exact_frozen_forms) ... ok\ntest_repetition_is_tokens_not_unique_lemmas (test_lexical_coverage.CoverageTests.test_repetition_is_tokens_not_unique_lemmas) ... ok\ntest_unknown_future_and_retired (test_lexical_coverage.CoverageTests.test_unknown_future_and_retired) ... ok\ntest_consolidation_zone_is_empty (test_validate_k1_vocab.ValidationTests.test_consolidation_zone_is_empty) ... ok\ntest_current_data (test_validate_k1_vocab.ValidationTests.test_current_data) ... ok\ntest_duplicate_json_key_and_nan (test_validate_k1_vocab.ValidationTests.test_duplicate_json_key_and_nan) ... ok\ntest_globally_impossible_windows (test_validate_k1_vocab.ValidationTests.test_globally_impossible_windows) ... ok\ntest_invalid_fixtures (test_validate_k1_vocab.ValidationTests.test_invalid_fixtures) ... ok\ntest_load_concentration_detected (test_validate_k1_vocab.ValidationTests.test_load_concentration_detected) ... ok\ntest_preserved_identities_and_promotions (test_validate_k1_vocab.ValidationTests.test_preserved_identities_and_promotions) ... ok\ntest_schedule_deterministic (test_validate_k1_vocab.ValidationTests.test_schedule_deterministic) ... ok\ntest_scheduler_with_reserved_slots (test_validate_k1_vocab.ValidationTests.test_scheduler_with_reserved_slots) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 53.804s\n\nOK\n"
+  }
+}

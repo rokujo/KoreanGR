@@ -1,0 +1,1467 @@
+{
+  "engineering_start_utc": "2026-10-10T21:34:37Z",
+  "production_start_utc": "2026-10-10T21:38:12.854142+00:00",
+  "production_start_counter": 55384.3911522,
+  "texts": [
+    {
+      "text_number": 1,
+      "start_counter": 55384.3911643,
+      "start_utc": "2026-10-10T21:38:12.894666+00:00",
+      "phase": "committed",
+      "phase_start_counter": 55435.0333805,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-001-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "future_expansion",
+              "detail": {
+                "vocab_id": "ko_k1_0770",
+                "lemma": "어떻다",
+                "surface": "어떻",
+                "start": 156,
+                "reason": "future_expansion"
+              }
+            },
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "게",
+                "surface": "게",
+                "start": 158,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "future_expansion",
+              "detail": {
+                "vocab_id": "ko_k1_0425",
+                "lemma": "가깝다",
+                "surface": "가까워",
+                "start": 202,
+                "reason": "future_expansion"
+              }
+            },
+            {
+              "code": "future_expansion",
+              "detail": {
+                "vocab_id": "ko_k1_0382",
+                "lemma": "가지다",
+                "surface": "가지",
+                "start": 233,
+                "reason": "future_expansion"
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 76: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 77: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 96: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 110: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 21.804949999997916,
+          "validation_seconds": 1.5310807999994722,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.4190714999931515,
+            "semantic_diagnostics": 0.007158200001867954
+          },
+          "future_usage_count": 3
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-001-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 17.114440299999842,
+          "validation_seconds": 1.6040313999983482,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.488989599980414,
+            "semantic_diagnostics": 0.009741299996676389
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 8.585587999994459,
+        "author_draft": 21.804949999997916,
+        "morphology_vocab_analysis": 2.9080610999735654,
+        "mechanical_validation": 0.227051100024255,
+        "retry_repair": 17.114440299999842,
+        "naturalness_review": 9.574839000000793,
+        "final_reanalysis": 1.561638999999559,
+        "commit": 0.2342075999986264,
+        "controller_overhead": 0.8301650000066729
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 1,
+        "title_ko": "공원의 꽃",
+        "genre": "simple_outing",
+        "scene": [
+          "outdoor",
+          "nature",
+          "family"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "see spring flowers with mother",
+          "setting": "park on a spring morning",
+          "participants": [
+            "narrator",
+            "mother"
+          ],
+          "problem_type": "uncertain weather",
+          "resolution_type": "short outing near home",
+          "main_actions": [
+            "check sky",
+            "go to park",
+            "take flower photograph",
+            "return home"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-001-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "春の花を見る一つの外出。雨を心配する問いと母の応答、家が公園前という帰宅可能性がつながる。母の希望を第三者の고 싶어요で語らず、話者の希望に修正済み。傘の所有者と水の所在は明示。꽃을 말하다を除去し、보고 웃다等も無理に追加していない。新出は봄이 됐어요と応答괜찮아요各1。日本語訳は同じ主語と時系列を保持。自己評価は独立goldではない。"
+          }
+        }
+      ],
+      "end_counter": 55447.2321054,
+      "total_seconds": 62.84094109999569,
+      "coverage": {
+        "denominator_N": 140,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9857142857142858,
+        "target_99_met": false
+      },
+      "eojeol_count": 142,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "春の花を見る一つの外出。雨を心配する問いと母の応答、家が公園前という帰宅可能性がつながる。母の希望を第三者の고 싶어요で語らず、話者の希望に修正済み。傘の所有者と水の所在は明示。꽃을 말하다を除去し、보고 웃다等も無理に追加していない。新出は봄이 됐어요と応答괜찮아요各1。日本語訳は同じ主語と時系列を保持。自己評価は独立goldではない。"
+      }
+    },
+    {
+      "text_number": 2,
+      "start_counter": 55448.8635099,
+      "start_utc": "2026-10-10T21:39:17.381327+00:00",
+      "phase": "committed",
+      "phase_start_counter": 55505.1167544,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-002-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "이야기하다",
+                "surface": "이야기해",
+                "start": 445,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "compound_boundary",
+                "surface": "이야기해요.",
+                "lemma": "이야기하다",
+                "start": 445,
+                "status": "REVIEW",
+                "requires_candidate_review": true
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 216: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 1.9609716999984812,
+          "validation_seconds": 1.4893917000008514,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.315885599986359,
+            "semantic_diagnostics": 0.008161300000210758
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-002-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 13.05271439999342,
+          "validation_seconds": 1.490802000000258,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.3504721999779576,
+            "semantic_diagnostics": 0.00767029999406077
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 38.25758779999887,
+        "author_draft": 1.9609716999984812,
+        "morphology_vocab_analysis": 2.6663577999643167,
+        "mechanical_validation": 0.31383590003679274,
+        "retry_repair": 13.05271439999342,
+        "naturalness_review": 10.581717799999751,
+        "final_reanalysis": 1.4963971999968635,
+        "commit": 0.3269312999982503,
+        "controller_overhead": 0.751900300012494
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 2,
+        "title_ko": "카페에서 만나요",
+        "genre": "short_dialogue",
+        "scene": [
+          "food",
+          "communication",
+          "friendship"
+        ],
+        "review_candidates": [
+          "괜찮다"
+        ],
+        "scene_fingerprint": {
+          "goal": "choose a drink and bread with friend",
+          "setting": "cafe near station",
+          "participants": [
+            "narrator",
+            "friend"
+          ],
+          "problem_type": "different drink preferences",
+          "resolution_type": "each chooses own drink",
+          "main_actions": [
+            "meet at cafe",
+            "ask about coffee",
+            "choose tea",
+            "eat bread",
+            "leave for station"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-002-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "駅近くのカフェで、飲み物とパンを選ぶ一場面。借りた本は友人が持ち、最後まで友人のかばんへ戻すので所有対象が変化しない。저는 친구를 보고 웃어요は見る相手を明示。友人の希望を고 싶어요で叙述する文を除き、文字通りの飲食物の好みとした。아니요/네は会話の応答各1token。이야기하다ではなく既存名詞＋하다に修正済み。訳は好みを喜びに変えず、茶とコーヒーの選択を忠実に保つ。"
+          }
+        }
+      ],
+      "end_counter": 55518.2719241,
+      "total_seconds": 69.40841419999924,
+      "coverage": {
+        "denominator_N": 133,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9849624060150376,
+        "target_99_met": false
+      },
+      "eojeol_count": 138,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "駅近くのカフェで、飲み物とパンを選ぶ一場面。借りた本は友人が持ち、最後まで友人のかばんへ戻すので所有対象が変化しない。저는 친구를 보고 웃어요は見る相手を明示。友人の希望を고 싶어요で叙述する文を除き、文字通りの飲食物の好みとした。아니요/네は会話の応答各1token。이야기하다ではなく既存名詞＋하다に修正済み。訳は好みを喜びに変えず、茶とコーヒーの選択を忠実に保つ。"
+      }
+    },
+    {
+      "text_number": 3,
+      "start_counter": 55520.0866431,
+      "start_utc": "2026-10-10T21:40:28.626929+00:00",
+      "phase": "committed",
+      "phase_start_counter": 55577.7639869,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-003-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "future_expansion",
+              "detail": {
+                "vocab_id": "ko_k1_0389",
+                "lemma": "보이다",
+                "surface": "보여",
+                "start": 157,
+                "reason": "future_expansion"
+              }
+            },
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "어",
+                "surface": "여",
+                "start": 158,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "주",
+                "surface": "주",
+                "start": 160,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "겠",
+                "surface": "겠",
+                "start": 283,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 73: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 74: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 75: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 129: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 1.4733312000025762,
+          "validation_seconds": 1.8443339000004926,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.647041599971999,
+            "semantic_diagnostics": 0.009663700002420228
+          },
+          "future_usage_count": 1
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-003-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 17.574576799997885,
+          "validation_seconds": 1.7886843000014778,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.604864599998109,
+            "semantic_diagnostics": 0.00843709999753628
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 34.994175399995584,
+        "author_draft": 1.4733312000025762,
+        "morphology_vocab_analysis": 3.251906199970108,
+        "mechanical_validation": 0.3811120000318624,
+        "retry_repair": 17.574576799997885,
+        "naturalness_review": 10.264128599999822,
+        "final_reanalysis": 1.5802152999967802,
+        "commit": 0.4794335000042338,
+        "controller_overhead": 0.8432997999989311
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 3,
+        "title_ko": "생일 선물",
+        "genre": "objects",
+        "scene": [
+          "home",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [
+          "되다",
+          "괜찮다"
+        ],
+        "scene_fingerprint": {
+          "goal": "choose a family photograph for father's birthday",
+          "setting": "home desk",
+          "participants": [
+            "narrator",
+            "mother",
+            "father"
+          ],
+          "problem_type": "small photograph as a gift",
+          "resolution_type": "choose photograph with whole family",
+          "main_actions": [
+            "compare photographs",
+            "ask mother",
+            "write name on back",
+            "give photograph"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-003-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "父への家族写真の贈り物という一つの目的。이 사진で選んだ写真を母が그 사진と受けており指示対象が明確。写真は話者から母、話者、父へ実際に渡され、받다を持つの代用にしない。机上への넣다という不自然な動作は状態文へ変更した。쓰다は写真裏へ名前を書くwrite義。되다は誕生日到来、괜찮다は小さい贈り物への安心の応答として意味がある。日本語訳に独自の喜ぶ・成功する等を追加していない。"
+          }
+        }
+      ],
+      "end_counter": 55590.9288219,
+      "total_seconds": 70.84217879999778,
+      "coverage": {
+        "denominator_N": 135,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9851851851851852,
+        "target_99_met": false
+      },
+      "eojeol_count": 137,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "父への家族写真の贈り物という一つの目的。이 사진で選んだ写真を母が그 사진と受けており指示対象が明確。写真は話者から母、話者、父へ実際に渡され、받다を持つの代用にしない。机上への넣다という不自然な動作は状態文へ変更した。쓰다は写真裏へ名前を書くwrite義。되다は誕生日到来、괜찮다は小さい贈り物への安心の応答として意味がある。日本語訳に独自の喜ぶ・成功する等を追加していない。"
+      }
+    },
+    {
+      "text_number": 4,
+      "start_counter": 55592.6449448,
+      "start_utc": "2026-10-10T21:41:41.199034+00:00",
+      "phase": "committed",
+      "phase_start_counter": 55644.5274969,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-004-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 10.964577200000349,
+          "validation_seconds": 1.8322925999964355,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.587271900018095,
+            "semantic_diagnostics": 0.008683599990035873
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 39.08478290000494,
+        "author_draft": 10.964577200000349,
+        "morphology_vocab_analysis": 1.587271900018095,
+        "mechanical_validation": 0.24502069997834042,
+        "naturalness_review": 10.058072899999388,
+        "final_reanalysis": 1.5377388999986579,
+        "commit": 1.1395969000077457,
+        "controller_overhead": 0.7955091999974684
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 4,
+        "title_ko": "도서관에 가는 버스",
+        "genre": "transport",
+        "scene": [
+          "transport",
+          "school",
+          "friendship",
+          "communication"
+        ],
+        "review_candidates": [
+          "네",
+          "아니요",
+          "이",
+          "그"
+        ],
+        "scene_fingerprint": {
+          "goal": "reach library to choose reading material",
+          "setting": "station bus stop and library",
+          "participants": [
+            "narrator",
+            "friend"
+          ],
+          "problem_type": "uncertain bus route",
+          "resolution_type": "friend identifies library bus",
+          "main_actions": [
+            "identify bus",
+            "confirm route",
+            "ride bus",
+            "choose school book"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-004-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "図書館で読む本を選ぶためのバス移動。別の旅行や食事を挿入していない。저 버스は駅前の目に見えるバス、무슨 책はこれから読む対象への自然な問い。네/아니요は同じ路線確認への応答。車窓の公園は通常の見える情景でreview消化用の事件ではない。友人が道を知る根拠を示し、말하다の目的語を本の貸し借りに広げない。日本語訳の時間・主語は原文に一致。"
+          }
+        }
+      ],
+      "end_counter": 55658.0575154,
+      "total_seconds": 65.41257060000498,
+      "coverage": {
+        "denominator_N": 129,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9844961240310077,
+        "target_99_met": false
+      },
+      "eojeol_count": 135,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "図書館で読む本を選ぶためのバス移動。別の旅行や食事を挿入していない。저 버스は駅前の目に見えるバス、무슨 책はこれから読む対象への自然な問い。네/아니요は同じ路線確認への応答。車窓の公園は通常の見える情景でreview消化用の事件ではない。友人が道を知る根拠を示し、말하다の目的語を本の貸し借りに広げない。日本語訳の時間・主語は原文に一致。"
+      }
+    },
+    {
+      "text_number": 5,
+      "start_counter": 55659.7581927,
+      "start_utc": "2026-10-10T21:42:48.332624+00:00",
+      "phase": "committed",
+      "phase_start_counter": 55766.9098368,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-005-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "몇",
+                "surface": "몇",
+                "start": 132,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "지금",
+                "surface": "지금",
+                "start": 159,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "identity_boundary",
+                "surface": "몇",
+                "lemma": "몇",
+                "start": 132,
+                "raw_pos": "NR",
+                "registered_candidates": [
+                  {
+                    "id": "ko_k1_0448",
+                    "pos": "determiner",
+                    "sense": "how_many"
+                  }
+                ],
+                "alias_reason": null,
+                "status": "REVIEW",
+                "requires_candidate_review": true
+              }
+            },
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "identity_boundary",
+                "surface": "지금",
+                "lemma": "지금",
+                "start": 159,
+                "raw_pos": "NNG",
+                "registered_candidates": [
+                  {
+                    "id": "ko_k1_0071",
+                    "pos": "adverb",
+                    "sense": "now"
+                  }
+                ],
+                "alias_reason": null,
+                "status": "REVIEW",
+                "requires_candidate_review": true
+              }
+            },
+            {
+              "code": "planned_new_not_present",
+              "detail": [
+                "ko_k1_0448"
+              ]
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 58: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 71: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 21.583982300006028,
+          "validation_seconds": 1.5359392000027583,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.2970065999543294,
+            "semantic_diagnostics": 0.00839280000218423
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-005-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 43.30698009999469,
+          "validation_seconds": 1.3849644000001717,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1769037999911234,
+            "semantic_diagnostics": 0.0075963999988744035
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 39.33824330000061,
+        "author_draft": 21.583982300006028,
+        "morphology_vocab_analysis": 2.473910399945453,
+        "mechanical_validation": 0.4469932000574772,
+        "retry_repair": 43.30698009999469,
+        "naturalness_review": 10.177576200003386,
+        "final_reanalysis": 1.2488994000013918,
+        "commit": 0.750416499999119,
+        "controller_overhead": 0.6521763999917312
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 5,
+        "title_ko": "저녁을 만들어요",
+        "genre": "food",
+        "scene": [
+          "food",
+          "kitchen",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [
+          "이",
+          "그",
+          "네",
+          "괜찮다"
+        ],
+        "scene_fingerprint": {
+          "goal": "help mother make evening meal",
+          "setting": "home kitchen",
+          "participants": [
+            "narrator",
+            "mother",
+            "father"
+          ],
+          "problem_type": "meal not ready yet",
+          "resolution_type": "help wash vegetables and wait for dinner time",
+          "main_actions": [
+            "ask meal time",
+            "wash vegetables",
+            "cook with mother",
+            "eat together"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-005-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "友人も来る夕食の準備という一つの目的。몇 사람は料理の人数確認、더は実際に肉を追加して食べたい希望でありfillerではない。母・父・話者・友人の四人で数量が整合。野菜の이/그は母と話者の間で同じ対象を指す。父の고 싶어요叙述を質問に置換済み。料理材料の고기로は自然な基本用法なのでsemantic role warningだけでrejectしない。訳はご飯・調理・学校の会話の順序を保つ。"
+          }
+        }
+      ],
+      "end_counter": 55779.7373705,
+      "total_seconds": 119.97917779999989,
+      "coverage": {
+        "denominator_N": 138,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9855072463768116,
+        "target_99_met": false
+      },
+      "eojeol_count": 144,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "友人も来る夕食の準備という一つの目的。몇 사람は料理の人数確認、더は実際に肉を追加して食べたい希望でありfillerではない。母・父・話者・友人の四人で数量が整合。野菜の이/그は母と話者の間で同じ対象を指す。父の고 싶어요叙述を質問に置換済み。料理材料の고기로は自然な基本用法なのでsemantic role warningだけでrejectしない。訳はご飯・調理・学校の会話の順序を保つ。"
+      }
+    },
+    {
+      "text_number": 6,
+      "start_counter": 55781.1597021,
+      "start_utc": "2026-10-10T21:44:49.731116+00:00",
+      "phase": "committed",
+      "phase_start_counter": 55838.723639,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-006-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 17.12683780000225,
+          "validation_seconds": 1.4251111000048695,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.1826215000110096,
+            "semantic_diagnostics": 0.006345799993141554
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 39.01115280000522,
+        "author_draft": 17.12683780000225,
+        "morphology_vocab_analysis": 1.1826215000110096,
+        "mechanical_validation": 0.24248959999385988,
+        "naturalness_review": 13.434609799995087,
+        "final_reanalysis": 1.239035700004024,
+        "commit": 0.744337899996026,
+        "controller_overhead": 0.6463231999950949
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 6,
+        "title_ko": "사과를 사요",
+        "genre": "shopping",
+        "scene": [
+          "shopping",
+          "food",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [
+          "저",
+          "무슨",
+          "괜찮다",
+          "네"
+        ],
+        "scene_fingerprint": {
+          "goal": "buy fruit for younger sibling",
+          "setting": "market fruit shop",
+          "participants": [
+            "narrator",
+            "younger sibling",
+            "shop customer"
+          ],
+          "problem_type": "no fruit at home and limited money",
+          "resolution_type": "buy two inexpensive apples",
+          "main_actions": [
+            "choose fruit",
+            "check money",
+            "identify shop",
+            "buy apples",
+            "share at home"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-006-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "弟が宿題の後に食べるりんごを買う一つの用事。市場で同じ果物を買う友人との会話は自然な情報共有で、저/무슨のためだけの別事件ではない。개は二個のりんごの助数詞でCoreの犬義と区別。아직は未完の宿題という待機理由。兄姉から弟へりんごが渡る対象も明確。訳は安い値段を勝手に残金の断定へ変えず、ノートを閉じる動作を宿題終了へ意訳していない。"
+          }
+        }
+      ],
+      "end_counter": 55854.7871104,
+      "total_seconds": 73.62740830000257,
+      "coverage": {
+        "denominator_N": 130,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9846153846153847,
+        "target_99_met": false
+      },
+      "eojeol_count": 137,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "弟が宿題の後に食べるりんごを買う一つの用事。市場で同じ果物を買う友人との会話は自然な情報共有で、저/무슨のためだけの別事件ではない。개は二個のりんごの助数詞でCoreの犬義と区別。아직は未完の宿題という待機理由。兄姉から弟へりんごが渡る対象も明確。訳は安い値段を勝手に残金の断定へ変えず、ノートを閉じる動作を宿題終了へ意訳していない。"
+      }
+    },
+    {
+      "text_number": 7,
+      "start_counter": 55856.2968565,
+      "start_utc": "2026-10-10T21:46:04.890955+00:00",
+      "phase": "stopped",
+      "phase_start_counter": 55915.3683966,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-007-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "unknown_or_unresolved",
+              "detail": {
+                "vocab_id": null,
+                "lemma": "우리",
+                "surface": "우리",
+                "start": 260,
+                "reason": "unknown_or_unresolved"
+              }
+            },
+            {
+              "code": "scope_identity_mismatch",
+              "detail": {
+                "type": "SCOPE_IDENTITY_MISMATCH",
+                "start": 260,
+                "end": 262,
+                "surface": "우리",
+                "views": [
+                  {
+                    "scope": "sentence",
+                    "original_offset": 259,
+                    "before_recovery_ids": [
+                      "ko_k1_0004"
+                    ],
+                    "resolved_ids": [
+                      "ko_k1_0004"
+                    ],
+                    "ne_recovery_decisions": []
+                  },
+                  {
+                    "scope": "paragraph",
+                    "original_offset": 186,
+                    "before_recovery_ids": [],
+                    "resolved_ids": [],
+                    "ne_recovery_decisions": []
+                  },
+                  {
+                    "scope": "full_text",
+                    "original_offset": 0,
+                    "before_recovery_ids": [],
+                    "resolved_ids": [],
+                    "ne_recovery_decisions": []
+                  }
+                ],
+                "decision": "UNRESOLVED",
+                "structural_defect": true,
+                "author_intent_not_authority": true
+              }
+            },
+            {
+              "code": "structural_analyzer_defect",
+              "detail": {
+                "usage": {
+                  "vocab_id": null,
+                  "lemma": "우리",
+                  "surface": "우리",
+                  "start": 260,
+                  "reason": "unknown_or_unresolved"
+                },
+                "sentence": "\"우리는 한국어를 같이 배울 거예요.\"",
+                "isolated_pass": true
+              }
+            },
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "identity_boundary",
+                "surface": "우리",
+                "lemma": "우리",
+                "start": 260,
+                "raw_pos": "NNG",
+                "registered_candidates": [
+                  {
+                    "id": "ko_k1_0004",
+                    "pos": "pronoun",
+                    "sense": "we"
+                  }
+                ],
+                "alias_reason": null,
+                "status": "REVIEW",
+                "requires_candidate_review": true
+              }
+            },
+            {
+              "code": "unresolved_context_ambiguity",
+              "detail": {
+                "type": "uri_pronoun_context",
+                "surface": "우리",
+                "raw_pos": "NNG",
+                "raw_parts": [
+                  {
+                    "form": "우리",
+                    "tag": "NNG",
+                    "start": 260,
+                    "length": 2
+                  }
+                ],
+                "raw_indices": [
+                  152
+                ],
+                "start": 260,
+                "end": 262,
+                "scope": "full_candidate",
+                "preceding_tokens": [
+                  {
+                    "form": "어요",
+                    "tag": "EF",
+                    "start": 254,
+                    "length": 2
+                  },
+                  {
+                    "form": ".",
+                    "tag": "SF",
+                    "start": 256,
+                    "length": 1
+                  },
+                  {
+                    "form": "\"",
+                    "tag": "SSC",
+                    "start": 257,
+                    "length": 1
+                  },
+                  {
+                    "form": "\"",
+                    "tag": "SSO",
+                    "start": 259,
+                    "length": 1
+                  }
+                ],
+                "following_tokens": [
+                  {
+                    "form": "는",
+                    "tag": "JX",
+                    "start": 262,
+                    "length": 1
+                  },
+                  {
+                    "form": "한국어",
+                    "tag": "NNP",
+                    "start": 264,
+                    "length": 3
+                  },
+                  {
+                    "form": "를",
+                    "tag": "JKO",
+                    "start": 267,
+                    "length": 1
+                  },
+                  {
+                    "form": "같이",
+                    "tag": "MAG",
+                    "start": 269,
+                    "length": 2
+                  }
+                ],
+                "following_noun": null,
+                "registered_id": "ko_k1_0004",
+                "registered_pos": "pronoun",
+                "registered_sense": "we",
+                "context_evidence": {
+                  "exact_original_surface": true,
+                  "unique_registered_identity": true,
+                  "single_exact_raw_span": true,
+                  "raw_np_or_nng": true,
+                  "left_word_boundary": true,
+                  "no_particle_on_uri": false,
+                  "whitespace_before_head": false,
+                  "limited_registered_nominal_head": false,
+                  "following_head_exact": false,
+                  "speaker_group_raw_anchor": true,
+                  "no_spatial_noun_contrast": true,
+                  "balanced_or_independent": true,
+                  "annotation_group_exclusive": true,
+                  "raw_span_accounted_once": true
+                },
+                "speaker_anchors": [
+                  {
+                    "form": "저",
+                    "raw_pos": "NP",
+                    "start": 0,
+                    "particle": "는"
+                  },
+                  {
+                    "form": "저",
+                    "raw_pos": "NP",
+                    "start": 30,
+                    "particle": "는"
+                  },
+                  {
+                    "form": "저",
+                    "raw_pos": "NP",
+                    "start": 93,
+                    "particle": "는"
+                  },
+                  {
+                    "form": "저",
+                    "raw_pos": "NP",
+                    "start": 137,
+                    "particle": "는"
+                  },
+                  {
+                    "form": "저",
+                    "raw_pos": "NP",
+                    "start": 201,
+                    "particle": "는"
+                  }
+                ],
+                "quotation_context": {
+                  "inside_balanced": true,
+                  "open_offset": 259,
+                  "close_offset": 279,
+                  "opening": "\"",
+                  "closing": "\"",
+                  "inside_unmatched": false
+                },
+                "decision": "REVIEW",
+                "original_annotation": [
+                  {
+                    "surface": "우리",
+                    "lemma": "우리",
+                    "pos": null,
+                    "sense": null,
+                    "vocab_id": null,
+                    "role": "unresolved",
+                    "start": 260,
+                    "end": 262,
+                    "morph_indices": [
+                      152
+                    ],
+                    "grammar_id": null
+                  }
+                ],
+                "permission_granted": false,
+                "status": "REVIEW",
+                "requires_candidate_review": true
+              }
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "Token 123: uncontrolled vocabulary or future introduction"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "controlled_vocab_coverage below hard 100%"
+            },
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 1.5251915999979246,
+          "validation_seconds": 1.8347968999951263,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.4203467999977875,
+            "semantic_diagnostics": 0.008995900003355928
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 55.71067260000564,
+        "author_draft": 1.5251915999979246,
+        "morphology_vocab_analysis": 1.4203467999977875,
+        "mechanical_validation": 0.41445009999733884
+      },
+      "committed": false,
+      "plan": {
+        "text_number": 7,
+        "title_ko": "작은 교실",
+        "genre": "school",
+        "scene": [
+          "school",
+          "communication",
+          "friendship"
+        ],
+        "review_candidates": [
+          "괜찮다",
+          "더",
+          "이",
+          "그",
+          "네"
+        ],
+        "scene_fingerprint": {
+          "goal": "take a first Korean class",
+          "setting": "small classroom",
+          "participants": [
+            "young narrator",
+            "teacher",
+            "two students"
+          ],
+          "problem_type": "not knowing Korean well",
+          "resolution_type": "teacher helps and students practice together",
+          "main_actions": [
+            "introduce age",
+            "write name",
+            "read book",
+            "listen to teacher",
+            "choose to learn more"
+          ]
+        }
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_6b\\candidates\\K1-007-attempt-01.json",
+      "end_counter": 55915.3746542,
+      "total_seconds": 59.07779770000343
+    }
+  ],
+  "completed": false,
+  "methodology": "Live local LLM author, sequential snapshot/file callback; elapsed author stage includes model reasoning and file transport. Not external API throughput.",
+  "stop": {
+    "type": "structural_analyzer_defect",
+    "text": 7,
+    "errors": [
+      {
+        "code": "unknown_or_unresolved",
+        "detail": {
+          "vocab_id": null,
+          "lemma": "우리",
+          "surface": "우리",
+          "start": 260,
+          "reason": "unknown_or_unresolved"
+        }
+      },
+      {
+        "code": "scope_identity_mismatch",
+        "detail": {
+          "type": "SCOPE_IDENTITY_MISMATCH",
+          "start": 260,
+          "end": 262,
+          "surface": "우리",
+          "views": [
+            {
+              "scope": "sentence",
+              "original_offset": 259,
+              "before_recovery_ids": [
+                "ko_k1_0004"
+              ],
+              "resolved_ids": [
+                "ko_k1_0004"
+              ],
+              "ne_recovery_decisions": []
+            },
+            {
+              "scope": "paragraph",
+              "original_offset": 186,
+              "before_recovery_ids": [],
+              "resolved_ids": [],
+              "ne_recovery_decisions": []
+            },
+            {
+              "scope": "full_text",
+              "original_offset": 0,
+              "before_recovery_ids": [],
+              "resolved_ids": [],
+              "ne_recovery_decisions": []
+            }
+          ],
+          "decision": "UNRESOLVED",
+          "structural_defect": true,
+          "author_intent_not_authority": true
+        }
+      },
+      {
+        "code": "structural_analyzer_defect",
+        "detail": {
+          "usage": {
+            "vocab_id": null,
+            "lemma": "우리",
+            "surface": "우리",
+            "start": 260,
+            "reason": "unknown_or_unresolved"
+          },
+          "sentence": "\"우리는 한국어를 같이 배울 거예요.\"",
+          "isolated_pass": true
+        }
+      },
+      {
+        "code": "unresolved_context_ambiguity",
+        "detail": {
+          "type": "identity_boundary",
+          "surface": "우리",
+          "lemma": "우리",
+          "start": 260,
+          "raw_pos": "NNG",
+          "registered_candidates": [
+            {
+              "id": "ko_k1_0004",
+              "pos": "pronoun",
+              "sense": "we"
+            }
+          ],
+          "alias_reason": null,
+          "status": "REVIEW",
+          "requires_candidate_review": true
+        }
+      },
+      {
+        "code": "unresolved_context_ambiguity",
+        "detail": {
+          "type": "uri_pronoun_context",
+          "surface": "우리",
+          "raw_pos": "NNG",
+          "raw_parts": [
+            {
+              "form": "우리",
+              "tag": "NNG",
+              "start": 260,
+              "length": 2
+            }
+          ],
+          "raw_indices": [
+            152
+          ],
+          "start": 260,
+          "end": 262,
+          "scope": "full_candidate",
+          "preceding_tokens": [
+            {
+              "form": "어요",
+              "tag": "EF",
+              "start": 254,
+              "length": 2
+            },
+            {
+              "form": ".",
+              "tag": "SF",
+              "start": 256,
+              "length": 1
+            },
+            {
+              "form": "\"",
+              "tag": "SSC",
+              "start": 257,
+              "length": 1
+            },
+            {
+              "form": "\"",
+              "tag": "SSO",
+              "start": 259,
+              "length": 1
+            }
+          ],
+          "following_tokens": [
+            {
+              "form": "는",
+              "tag": "JX",
+              "start": 262,
+              "length": 1
+            },
+            {
+              "form": "한국어",
+              "tag": "NNP",
+              "start": 264,
+              "length": 3
+            },
+            {
+              "form": "를",
+              "tag": "JKO",
+              "start": 267,
+              "length": 1
+            },
+            {
+              "form": "같이",
+              "tag": "MAG",
+              "start": 269,
+              "length": 2
+            }
+          ],
+          "following_noun": null,
+          "registered_id": "ko_k1_0004",
+          "registered_pos": "pronoun",
+          "registered_sense": "we",
+          "context_evidence": {
+            "exact_original_surface": true,
+            "unique_registered_identity": true,
+            "single_exact_raw_span": true,
+            "raw_np_or_nng": true,
+            "left_word_boundary": true,
+            "no_particle_on_uri": false,
+            "whitespace_before_head": false,
+            "limited_registered_nominal_head": false,
+            "following_head_exact": false,
+            "speaker_group_raw_anchor": true,
+            "no_spatial_noun_contrast": true,
+            "balanced_or_independent": true,
+            "annotation_group_exclusive": true,
+            "raw_span_accounted_once": true
+          },
+          "speaker_anchors": [
+            {
+              "form": "저",
+              "raw_pos": "NP",
+              "start": 0,
+              "particle": "는"
+            },
+            {
+              "form": "저",
+              "raw_pos": "NP",
+              "start": 30,
+              "particle": "는"
+            },
+            {
+              "form": "저",
+              "raw_pos": "NP",
+              "start": 93,
+              "particle": "는"
+            },
+            {
+              "form": "저",
+              "raw_pos": "NP",
+              "start": 137,
+              "particle": "는"
+            },
+            {
+              "form": "저",
+              "raw_pos": "NP",
+              "start": 201,
+              "particle": "는"
+            }
+          ],
+          "quotation_context": {
+            "inside_balanced": true,
+            "open_offset": 259,
+            "close_offset": 279,
+            "opening": "\"",
+            "closing": "\"",
+            "inside_unmatched": false
+          },
+          "decision": "REVIEW",
+          "original_annotation": [
+            {
+              "surface": "우리",
+              "lemma": "우리",
+              "pos": null,
+              "sense": null,
+              "vocab_id": null,
+              "role": "unresolved",
+              "start": 260,
+              "end": 262,
+              "morph_indices": [
+                152
+              ],
+              "grammar_id": null
+            }
+          ],
+          "permission_granted": false,
+          "status": "REVIEW",
+          "requires_candidate_review": true
+        }
+      },
+      {
+        "code": "coverage_or_token_policy",
+        "detail": "Token 123: uncontrolled vocabulary or future introduction"
+      },
+      {
+        "code": "coverage_or_token_policy",
+        "detail": "controlled_vocab_coverage below hard 100%"
+      },
+      {
+        "code": "coverage_or_token_policy",
+        "detail": "previous_vocab_coverage below hard 98%"
+      }
+    ]
+  },
+  "production_end_counter": 55915.3746542,
+  "production_end_utc": "2026-10-10T21:47:03.837703+00:00",
+  "production_wall_seconds": 530.9835020000028,
+  "stage_totals_seconds": {
+    "scene_planning": 254.98220280000533,
+    "author_draft": 76.43984180000552,
+    "morphology_vocab_analysis": 15.490475699880335,
+    "mechanical_validation": 2.2709526001199265,
+    "retry_repair": 91.04871159998584,
+    "naturalness_review": 64.09094429999823,
+    "final_reanalysis": 8.663925499997276,
+    "commit": 3.674923700004001,
+    "controller_overhead": 4.5193739000023925
+  },
+  "per_text_statistics": {
+    "n": 6,
+    "min": 62.84094109999569,
+    "max": 119.97917779999989,
+    "mean": 77.0184484666667,
+    "median": 70.12529649999851,
+    "p90": 119.97917779999989
+  },
+  "timing_limitations": {
+    "production_total": "Monotonic measured wall time; unchanged actual total, no stored-text replay used as generation timing",
+    "stage_boundary": "For texts 002 through 007, the plan command and prose file authoring were submitted in the same LLM tool-call payload. Planning timing therefore includes much of prose composition before the command ran; author_draft timing mostly covers file transport. For 001, plan and prose were separate calls. No stage durations are retrospectively reassigned or invented.",
+    "interpretation": "Use combined scene_planning + author_draft + retry_repair as the generator cost. Individual planning/draft stage ranking is an instrumentation limitation, not evidence that planning itself is slower than writing. Six committed initial texts and a STOP are insufficient to demonstrate 50-text production throughput or give an official 300-text forecast."
+  }
+}

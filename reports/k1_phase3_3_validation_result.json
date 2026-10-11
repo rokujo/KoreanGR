@@ -1,0 +1,172 @@
+{
+  "phase": "3.3",
+  "status": "PASS",
+  "decision": "A",
+  "errors": [],
+  "core_count": 300,
+  "expansion_count": 500,
+  "total_count": 800,
+  "grammar_count": 32,
+  "tiers": {
+    "E1": 200,
+    "E2": 200,
+    "E3": 100
+  },
+  "committed_count": 2,
+  "ledger_epoch": 2,
+  "control": {
+    "status": "completed",
+    "max_attempts": 5,
+    "max_text": 2,
+    "stop": null
+  },
+  "attempts": 3,
+  "rejected": 1,
+  "attempt_counts": {
+    "1": 1,
+    "2": 2
+  },
+  "committed_reanalyses": [
+    {
+      "text": 1,
+      "attempt": 1,
+      "hard_pass": true,
+      "mismatches": [],
+      "eojeol": 140,
+      "N": 136,
+      "U": 2,
+      "coverage": {
+        "denominator_N": 136,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9852941176470589,
+        "target_99_met": false
+      },
+      "planned_ids": [
+        "ko_k1_0373",
+        "ko_k1_0413"
+      ],
+      "actual_ids": [
+        "ko_k1_0373",
+        "ko_k1_0413"
+      ],
+      "invalid": 0,
+      "unresolved": 0,
+      "grammar_violations": 0,
+      "quote_recoveries": 0
+    },
+    {
+      "text": 2,
+      "attempt": 2,
+      "hard_pass": true,
+      "mismatches": [],
+      "eojeol": 133,
+      "N": 131,
+      "U": 2,
+      "coverage": {
+        "denominator_N": 131,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9847328244274809,
+        "target_99_met": false
+      },
+      "planned_ids": [
+        "ko_k1_0442",
+        "ko_k1_0443"
+      ],
+      "actual_ids": [
+        "ko_k1_0442",
+        "ko_k1_0443"
+      ],
+      "invalid": 0,
+      "unresolved": 0,
+      "grammar_violations": 0,
+      "quote_recoveries": 2
+    }
+  ],
+  "committed_hard_errors": 0,
+  "future_violations": 0,
+  "invalid_usage": 0,
+  "unresolved": 0,
+  "grammar_violations": 0,
+  "planned_vs_actual_match": true,
+  "actual_introduced_count": 4,
+  "actual_distinct_vocab_text_exposures": 5,
+  "incidental_exposures": 1,
+  "selected_review_exposures": 0,
+  "outstanding_debt": 0,
+  "expired_debt": 0,
+  "failed_candidates_credited": false,
+  "state_unchanged_by_validation": true,
+  "raw_morphology_preserved": true,
+  "quote_parity": [
+    {
+      "content": "아니요.",
+      "expected_id": "ko_k1_0443",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    },
+    {
+      "content": "아니요, 책이 너무 비싸요.",
+      "expected_id": "ko_k1_0443",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    },
+    {
+      "content": "한국어 책이 있어요?",
+      "expected_id": "ko_k1_0169",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    },
+    {
+      "content": "네.",
+      "expected_id": "ko_k1_0442",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    },
+    {
+      "content": "네, 여기 있어요.",
+      "expected_id": "ko_k1_0442",
+      "identity_parity": true,
+      "both_present": true,
+      "unresolved": 0
+    }
+  ],
+  "diagnostic_cases": 25,
+  "recovered_annotations_in_attempts": 4,
+  "schema_errors": [],
+  "tests": {
+    "all": {
+      "command": "python -B scripts/run_k1_phase3_3_tests.py",
+      "tests": 198,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 187.061,
+      "status": "PASS",
+      "log": "reports/k1_phase3_3_all_test_log.txt",
+      "exit_code": 0
+    },
+    "focused": {
+      "command": "python -B scripts/run_k1_phase3_3_tests.py --focused",
+      "tests": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 17.373,
+      "status": "PASS",
+      "log": "reports/k1_phase3_3_focused_test_log.txt",
+      "exit_code": 0
+    }
+  },
+  "frozen_file_count": 546,
+  "frozen_input_violations": [],
+  "lint_warnings": 3,
+  "translation_flags": 0,
+  "semantics_are_not_independent_human_gold": true,
+  "generation_beyond_002": false
+}

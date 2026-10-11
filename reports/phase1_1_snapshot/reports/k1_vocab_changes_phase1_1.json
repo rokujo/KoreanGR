@@ -1,0 +1,5163 @@
+{
+  "from_phase": "1",
+  "to_phase": "1.1",
+  "snapshot_integrity": "PASS",
+  "coverage": "All original 17 files plus current config JSON, scripts, tests, and Phase 1.1 report/result. Generated diff artifacts exclude themselves.",
+  "summary": {
+    "changed": 12,
+    "unchanged": 5,
+    "added": 5
+  },
+  "files": [
+    {
+      "file": "README.md",
+      "change": "changed",
+      "before_sha256": "da9352e7df670ea4634964433c84bc703a75ae0080f28c9d7ca8e10d553773cf",
+      "after_sha256": "0266f2d9f07aecb25ab6c193ef04c1f706ff9a8898dde48a0eef2c1e657dc5a3"
+    },
+    {
+      "file": "config/languages/ko/k1/core_vocab.json",
+      "change": "changed",
+      "before_sha256": "6e6535085bd8d4983be3fdbf3d090d8678e8b7902d8e5a0eca5ac8cfe9bc65a4",
+      "after_sha256": "eb647810e98ee4b51b76261ab6200e11cc7e5e443c486016624a3716e846fc31",
+      "json_changes": [
+        {
+          "path": "/40/notes",
+          "change": "changed",
+          "before": "原案한국を固有名詞台帳へ移動した置換候補。N이/가 아니에요のみ。",
+          "after": "Phase 1.1で正式採用。原案한국を固有名詞台帳へ移動。N이/가 아니에요のみ。"
+        }
+      ]
+    },
+    {
+      "file": "config/languages/ko/k1/core_vocab.source.json",
+      "change": "unchanged",
+      "before_sha256": "8fbb5fc09a97ef31edab1074ad20cbaf1ea0039e64ba3c7bb90427ef2669dcf9",
+      "after_sha256": "8fbb5fc09a97ef31edab1074ad20cbaf1ea0039e64ba3c7bb90427ef2669dcf9"
+    },
+    {
+      "file": "config/languages/ko/k1/expansion_replacement_proposals.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "9a76d7c6a7b9f06408a6e643e583658d7900a62707c1f86b815e8b85b273f63b",
+      "json_changes": [
+        {
+          "path": "",
+          "change": "added",
+          "after": {
+            "phase": "1.1",
+            "status": "pending_human_review",
+            "applied": false,
+            "counted_in_vocab_budget": false,
+            "entries": [
+              {
+                "source_id": "ko_k1_0773",
+                "source_lemma": "함께",
+                "source_pos": "adverb",
+                "source_sense": "together",
+                "action": "propose_defer_to_K2",
+                "removal_reason": "Core 같이とほぼ同義。",
+                "candidate": {
+                  "lemma": "가만히",
+                  "pos": "adverb",
+                  "sense": "without_moving",
+                  "gloss_ja": "動かずに",
+                  "category": "adverbs_connectors",
+                  "tier": "E3",
+                  "notes": "副詞義のみ。-아/어 있다等の未許可構文を足さずに使える用例を確認する。"
+                },
+                "replacement_reason": "静止した状態で待つ・座る等の具体動作を補い、静かな音量の조용히とは区別できる。",
+                "status": "pending_human_review"
+              },
+              {
+                "source_id": "ko_k1_0702",
+                "source_lemma": "조부모",
+                "source_pos": "noun",
+                "source_sense": "grandparents",
+                "action": "propose_defer_to_K2",
+                "removal_reason": "E1 할머니/할아버지で表現できる。",
+                "candidate": {
+                  "lemma": "아저씨",
+                  "pos": "noun",
+                  "sense": "adult_man_address",
+                  "gloss_ja": "おじさん（成人男性の呼称）",
+                  "category": "people_social",
+                  "tier": "E3",
+                  "notes": "実際の呼びかけは人物関係と丁寧さを母語話者が確認する。"
+                },
+                "replacement_reason": "近所・店・交通の人物描写に再利用しやすい具体的呼称。",
+                "status": "pending_human_review"
+              },
+              {
+                "source_id": "ko_k1_0797",
+                "source_lemma": "기차역",
+                "source_pos": "noun",
+                "source_sense": "train_station",
+                "action": "propose_defer_to_K2",
+                "removal_reason": "Core 역との差が小さい。",
+                "candidate": {
+                  "lemma": "시간표",
+                  "pos": "noun",
+                  "sense": "timetable",
+                  "gloss_ja": "時間割・時刻表",
+                  "category": "school_work_transport_info",
+                  "tier": "E3",
+                  "notes": "時間の一覧という共通中心義。ジャンル別の用例と意味の範囲を確認する。"
+                },
+                "replacement_reason": "学校・交通・仕事の予定で使う具体物を補い、既存語の言い換えにならない。",
+                "status": "pending_human_review"
+              },
+              {
+                "source_id": "ko_k1_0757",
+                "source_lemma": "찍히다",
+                "source_pos": "verb",
+                "source_sense": "be_photographed",
+                "action": "propose_defer_to_K2",
+                "removal_reason": "受動の負荷に対して場面が限定される。",
+                "candidate": {
+                  "lemma": "충전하다",
+                  "pos": "verb",
+                  "sense": "charge_battery",
+                  "gloss_ja": "充電する",
+                  "category": "verbs",
+                  "tier": "E3",
+                  "notes": "電気機器の充電のみ。補助構文や専門的な電気説明へ拡張しない。"
+                },
+                "replacement_reason": "携帯電話・コンピューターを使う家・学校・仕事・旅行で、単純な能動文を作れる。",
+                "status": "pending_human_review"
+              },
+              {
+                "source_id": "ko_k1_0710",
+                "source_lemma": "관계",
+                "source_pos": "noun",
+                "source_sense": "relationship",
+                "action": "propose_defer_to_K2",
+                "removal_reason": "抽象的で、具体的な人物関係は既存語で表現できる。",
+                "candidate": {
+                  "lemma": "동갑",
+                  "pos": "noun",
+                  "sense": "same_age",
+                  "gloss_ja": "同い年",
+                  "category": "people_social",
+                  "tier": "E3",
+                  "notes": "同じ年齢の人物という中心義に限定し、比較보다は使用しない。"
+                },
+                "replacement_reason": "年齢・家族・学校・新しい友達をつなぐ具体的属性。이다/하고で表現できる。",
+                "status": "pending_human_review"
+              },
+              {
+                "source_id": "ko_k1_0800",
+                "source_lemma": "정보",
+                "source_pos": "noun",
+                "source_sense": "information",
+                "action": "propose_defer_to_K2",
+                "removal_reason": "住所・時刻等の具体語で代替できる。",
+                "candidate": {
+                  "lemma": "충전기",
+                  "pos": "noun",
+                  "sense": "charger",
+                  "gloss_ja": "充電器",
+                  "category": "school_work_transport_info",
+                  "tier": "E3",
+                  "notes": "携帯電話等の充電器。충전하다と同根だが物と動作で役割が異なる。"
+                },
+                "replacement_reason": "持ち物・貸し借り・忘れ物・旅行に使える具体的な機器。",
+                "status": "pending_human_review"
+              },
+              {
+                "source_id": "ko_k1_0647",
+                "source_lemma": "가장",
+                "source_pos": "adverb",
+                "source_sense": "most",
+                "action": "propose_defer_to_K2",
+                "removal_reason": "제일をK1の最上級として優先し、重複を減らす。",
+                "candidate": {
+                  "lemma": "방금",
+                  "pos": "adverb",
+                  "sense": "just_now",
+                  "gloss_ja": "たった今",
+                  "category": "adverbs_connectors",
+                  "tier": "E3",
+                  "notes": "副詞の直前過去義のみ。副詞/名詞の多品詞用法を一括許可しない。"
+                },
+                "replacement_reason": "直前の出来事を過去形で示せる。곧の近い未来、지금の現在とは時間義が異なる。",
+                "status": "pending_human_review"
+              }
+            ],
+            "notes": "7組は一対一の提案。現在の500語は削除・追加せず、採用後は旧IDを新語に再利用しない。候補Tierは一対一で件数を維持する配置案。"
+          }
+        }
+      ]
+    },
+    {
+      "file": "config/languages/ko/k1/expansion_vocab.json",
+      "change": "changed",
+      "before_sha256": "17396d68f3b473982445ba4a2ea62d9688cdb5b748291fc827a2404b207c4a86",
+      "after_sha256": "1d7c1f70bf85f12c2bea7508de3be0b6e604adbbe078670f176d2620a13e1bef",
+      "json_changes": [
+        {
+          "path": "/2/introduced_from",
+          "change": "changed",
+          "before": 1,
+          "after": 61
+        },
+        {
+          "path": "/2/introduced_to",
+          "change": "changed",
+          "before": 100,
+          "after": 220
+        },
+        {
+          "path": "/2/notes",
+          "change": "changed",
+          "before": null,
+          "after": "Phase 1.1: E1→E2。Core 아버지/어머니/가족とE1 엄마/아빠で初期の家族描写を確保。"
+        },
+        {
+          "path": "/2/tier",
+          "change": "changed",
+          "before": "E1",
+          "after": "E2"
+        },
+        {
+          "path": "/63/introduced_from",
+          "change": "changed",
+          "before": 11,
+          "after": 61
+        },
+        {
+          "path": "/63/introduced_to",
+          "change": "changed",
+          "before": 120,
+          "after": 220
+        },
+        {
+          "path": "/63/notes",
+          "change": "changed",
+          "before": null,
+          "after": "Phase 1.1: E1→E2。特定果物はCore 과일/사과等より導入優先度が低い。"
+        },
+        {
+          "path": "/63/tier",
+          "change": "changed",
+          "before": "E1",
+          "after": "E2"
+        },
+        {
+          "path": "/200/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/201/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/202/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/203/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/204/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/205/introduced_from",
+          "change": "changed",
+          "before": 61,
+          "after": 151
+        },
+        {
+          "path": "/205/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 275
+        },
+        {
+          "path": "/205/notes",
+          "change": "changed",
+          "before": null,
+          "after": "Phase 1.1: E2→E3。親族の細分化は基本の家族語より後段へ。"
+        },
+        {
+          "path": "/205/tier",
+          "change": "changed",
+          "before": "E2",
+          "after": "E3"
+        },
+        {
+          "path": "/206/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/207/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/208/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/209/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/210/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/211/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/212/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/213/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/214/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/215/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/216/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/217/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/218/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/219/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/220/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/221/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/222/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/223/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/224/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/225/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/226/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/227/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/228/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/229/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/230/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/231/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/232/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/233/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/234/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/235/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/236/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/237/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/238/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/239/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/240/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/241/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/242/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/243/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/244/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/245/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/246/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/247/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/248/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/249/introduced_to",
+          "change": "changed",
+          "before": 190,
+          "after": 200
+        },
+        {
+          "path": "/250/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/251/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/252/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/253/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/254/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/255/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/256/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/257/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/258/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/259/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/260/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/261/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/262/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/263/introduced_from",
+          "change": "changed",
+          "before": 71,
+          "after": 151
+        },
+        {
+          "path": "/263/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 275
+        },
+        {
+          "path": "/263/notes",
+          "change": "changed",
+          "before": null,
+          "after": "Phase 1.1: E2→E3。特定食材は日常の基本食材より後段へ。"
+        },
+        {
+          "path": "/263/tier",
+          "change": "changed",
+          "before": "E2",
+          "after": "E3"
+        },
+        {
+          "path": "/264/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/265/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/266/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/267/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/268/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/269/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/270/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/271/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/272/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/273/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/274/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/275/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/276/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/277/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/278/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/279/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/280/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/281/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/282/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/283/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/284/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/285/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/286/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/287/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/288/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/289/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/290/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/291/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/292/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/293/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/294/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/295/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/296/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/297/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/298/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/299/introduced_to",
+          "change": "changed",
+          "before": 210,
+          "after": 220
+        },
+        {
+          "path": "/300/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/301/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/302/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/303/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/304/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/305/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/306/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/307/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/308/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/309/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/310/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/311/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/312/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/313/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/314/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/315/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/316/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/317/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/318/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/319/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/320/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/321/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/322/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/323/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/324/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/325/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/326/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/327/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/328/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/329/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/330/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/331/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/332/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/333/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/334/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/335/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/336/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/337/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/338/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/339/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/340/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/341/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/342/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/343/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/344/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/345/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/346/confidence",
+          "change": "changed",
+          "before": "high",
+          "after": "medium"
+        },
+        {
+          "path": "/346/introduced_from",
+          "change": "changed",
+          "before": 81,
+          "after": 151
+        },
+        {
+          "path": "/346/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 275
+        },
+        {
+          "path": "/346/notes",
+          "change": "changed",
+          "before": null,
+          "after": "Phase 1.1: E2→E3。K1では제일を優先。K2送り・入替の判断待ちとして後段へ。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補방금は未採用、現行500に保持。"
+        },
+        {
+          "path": "/346/tier",
+          "change": "changed",
+          "before": "E2",
+          "after": "E3"
+        },
+        {
+          "path": "/347/confidence",
+          "change": "changed",
+          "before": "medium",
+          "after": "high"
+        },
+        {
+          "path": "/347/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/347/notes",
+          "change": "changed",
+          "before": "가장とほぼ同義。会話用、同一教材で言い換えない。",
+          "after": "가장よりK1で優先。会話での最上級「一番」のみ。比較보다/와・과を追加許可しない。"
+        },
+        {
+          "path": "/348/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/349/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 240
+        },
+        {
+          "path": "/350/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/351/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/352/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/353/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/354/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/355/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/356/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/357/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/358/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/359/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/360/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/361/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/362/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/363/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/364/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/365/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/366/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/367/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/368/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/369/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/370/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/371/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/372/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/373/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/374/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/375/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/376/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/377/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/378/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/379/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/380/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/381/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/382/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/383/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/384/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/385/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/386/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/387/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/388/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/389/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/390/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/391/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/392/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/393/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/394/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/395/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/396/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/397/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/398/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/399/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/400/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/401/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/401/notes",
+          "change": "changed",
+          "before": "할머니/할아버지で代替できる。家族全体をまとめる場面に限定。",
+          "after": "할머니/할아버지で代替できる。家族全体をまとめる場面に限定。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補아저씨は未採用、現行500に保持。"
+        },
+        {
+          "path": "/402/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/403/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/404/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/405/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/406/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/407/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/408/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/409/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/409/notes",
+          "change": "changed",
+          "before": "抽象語。親しい・家族等の具体文脈に限定。",
+          "after": "抽象語。親しい・家族等の具体文脈に限定。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補동갑は未採用、現行500に保持。"
+        },
+        {
+          "path": "/410/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/411/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/412/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/413/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/414/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/415/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/416/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/417/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/418/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/419/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/420/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/421/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/422/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/423/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/424/introduced_to",
+          "change": "changed",
+          "before": 220,
+          "after": 245
+        },
+        {
+          "path": "/425/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/426/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/427/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/428/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/429/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/430/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/431/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/432/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/433/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/434/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/435/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/436/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/437/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/438/introduced_from",
+          "change": "changed",
+          "before": 161,
+          "after": 61
+        },
+        {
+          "path": "/438/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 220
+        },
+        {
+          "path": "/438/notes",
+          "change": "changed",
+          "before": null,
+          "after": "Phase 1.1: E3→E2。記憶保持は学習・約束・忘れ物で再利用でき、E3から前倒し。"
+        },
+        {
+          "path": "/438/tier",
+          "change": "changed",
+          "before": "E3",
+          "after": "E2"
+        },
+        {
+          "path": "/439/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/440/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/441/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/442/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/443/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/444/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/445/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/446/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/447/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/448/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/449/introduced_to",
+          "change": "changed",
+          "before": 230,
+          "after": 255
+        },
+        {
+          "path": "/450/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/451/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/452/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/453/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/454/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/455/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/456/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/456/notes",
+          "change": "changed",
+          "before": "受動の理解負荷。写真という具体場面の辞書語に限定。",
+          "after": "受動の理解負荷。写真という具体場面の辞書語に限定。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補충전하다は未採用、現行500に保持。"
+        },
+        {
+          "path": "/457/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/458/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/459/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/460/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/461/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/462/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/463/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/464/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/465/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/466/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/467/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/468/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/469/introduced_from",
+          "change": "changed",
+          "before": 171,
+          "after": 1
+        },
+        {
+          "path": "/469/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 100
+        },
+        {
+          "path": "/469/notes",
+          "change": "changed",
+          "before": "不規則・縮約・連体形の例示。網羅的な活用表ではない。",
+          "after": "不規則・縮約・連体形の例示。網羅的な活用表ではない。 / Phase 1.1: E3→E1。어때요で状態を簡単に質問できる。E3から前倒し。"
+        },
+        {
+          "path": "/469/tier",
+          "change": "changed",
+          "before": "E3",
+          "after": "E1"
+        },
+        {
+          "path": "/470/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/471/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/472/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/472/notes",
+          "change": "changed",
+          "before": "Core 같이とほぼ同義。理解語として保持、生成は같이優先。",
+          "after": "Core 같이とほぼ同義。理解語として保持、生成は같이優先。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補가만히は未採用、現行500に保持。"
+        },
+        {
+          "path": "/473/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/474/introduced_to",
+          "change": "changed",
+          "before": 240,
+          "after": 265
+        },
+        {
+          "path": "/475/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/476/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/477/introduced_from",
+          "change": "changed",
+          "before": 181,
+          "after": 1
+        },
+        {
+          "path": "/477/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 100
+        },
+        {
+          "path": "/477/notes",
+          "change": "changed",
+          "before": "副詞用法のみ。잠깐은等の名詞用法は未登録。",
+          "after": "副詞用法のみ。잠깐은等の名詞用法は未登録。 / Phase 1.1: E3→E1。待つ・短時間の行動で高い再利用性。E3から前倒し。"
+        },
+        {
+          "path": "/477/tier",
+          "change": "changed",
+          "before": "E3",
+          "after": "E1"
+        },
+        {
+          "path": "/478/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/479/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/480/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/481/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/482/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/483/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/484/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/485/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/486/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/487/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/488/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/489/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/490/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/491/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/492/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/493/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/494/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/495/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/496/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/496/notes",
+          "change": "changed",
+          "before": "Core 역との差が小さいが、鉄道と地下鉄を区別する具体場面用。",
+          "after": "Core 역との差が小さいが、鉄道と地下鉄を区別する具体場面用。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補시간표は未採用、現行500に保持。"
+        },
+        {
+          "path": "/497/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/498/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/499/introduced_to",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/499/notes",
+          "change": "changed",
+          "before": "抽象語。住所・時刻等の具体情報に限定。",
+          "after": "抽象語。住所・時刻等の具体情報に限定。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補충전기は未採用、現行500に保持。"
+        }
+      ]
+    },
+    {
+      "file": "config/languages/ko/k1/grammar.json",
+      "change": "changed",
+      "before_sha256": "c698e29cf7f831d23cf2ec0b21a2d0b10c3f0a4577187d4b64fca9a3b73a8f7a",
+      "after_sha256": "30b04cbcd6c6e5b9ab44f27a4c4a798e054e3c5fb6999f5c73cacc4e36a898d3",
+      "json_changes": [
+        {
+          "path": "/29",
+          "change": "added",
+          "after": {
+            "id": "ko_k1_g30",
+            "form": "-(으)로",
+            "meaning_ja": "〜で（手段）・〜へ（方向）",
+            "category": "particle",
+            "example": "저는 버스로 학교에 가요.",
+            "notes": "名詞に接続。母音・ㄹ받침の後は로、それ以外の받침は으로。交通手段・道具・移動方向に限定。資格・材料・原因・結果義、(으)로써/로서は未許可。"
+          }
+        },
+        {
+          "path": "/30",
+          "change": "added",
+          "after": {
+            "id": "ko_k1_g31",
+            "form": "부터 / 까지",
+            "meaning_ja": "〜から・〜まで（起点・終点）",
+            "category": "particle",
+            "example": "저는 아침부터 저녁까지 일해요.",
+            "notes": "時間・場所の区間の開始と終わりに限定。この一対を1文法項目と数える。場所起点は집에서부터等の에서との組合せを優先。強調の「〜さえ」までへ拡張しない。"
+          }
+        },
+        {
+          "path": "/31",
+          "change": "added",
+          "after": {
+            "id": "ko_k1_g32",
+            "form": "만",
+            "meaning_ja": "〜だけ（限定）",
+            "category": "particle",
+            "example": "저는 오늘 물만 마셔요.",
+            "notes": "名詞等の単純な限定のみ。숫자 만「万」と区別。-기만、만에、-(으)ㄹ 만하다等の別構文は未許可。"
+          }
+        }
+      ]
+    },
+    {
+      "file": "config/languages/ko/k1/grammar.schema.json",
+      "change": "changed",
+      "before_sha256": "bfd0b8e3b42c823d28be0b9d3f6c723c92fa658fb7a5351b4d05917a1f15d399",
+      "after_sha256": "cc8f08cdb7c4e5f7b69bc1e400f80c3533125ae9084d600ca11536f663b891fe",
+      "json_changes": [
+        {
+          "path": "/maxItems",
+          "change": "changed",
+          "before": 29,
+          "after": 32
+        },
+        {
+          "path": "/minItems",
+          "change": "changed",
+          "before": 29,
+          "after": 32
+        }
+      ]
+    },
+    {
+      "file": "config/languages/ko/k1/introduction_schedule.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "046269bdfe52134cf4d4818f5dc8af4b90b5e45f2dd488f2d134540406616fda",
+      "json_changes": [
+        {
+          "path": "",
+          "change": "added",
+          "after": {
+            "language": "ko",
+            "level": "K1",
+            "status": "feasibility_witness_not_final_curriculum",
+            "notes": "0語回10本、1語回30本、2語回235本を導入期間中に分散した配置可能性の証拠。本文・既知率・再遭遇台帳ではない。",
+            "rows": [
+              {
+                "text": 1,
+                "entry_ids": [
+                  "ko_k1_0373",
+                  "ko_k1_0413"
+                ]
+              },
+              {
+                "text": 2,
+                "entry_ids": [
+                  "ko_k1_0442",
+                  "ko_k1_0443"
+                ]
+              },
+              {
+                "text": 3,
+                "entry_ids": [
+                  "ko_k1_0444",
+                  "ko_k1_0445"
+                ]
+              },
+              {
+                "text": 4,
+                "entry_ids": [
+                  "ko_k1_0446",
+                  "ko_k1_0447"
+                ]
+              },
+              {
+                "text": 5,
+                "entry_ids": [
+                  "ko_k1_0448",
+                  "ko_k1_0449"
+                ]
+              },
+              {
+                "text": 6,
+                "entry_ids": [
+                  "ko_k1_0451",
+                  "ko_k1_0467"
+                ]
+              },
+              {
+                "text": 7,
+                "entry_ids": [
+                  "ko_k1_0468"
+                ]
+              },
+              {
+                "text": 8,
+                "entry_ids": [
+                  "ko_k1_0469",
+                  "ko_k1_0476"
+                ]
+              },
+              {
+                "text": 9,
+                "entry_ids": [
+                  "ko_k1_0301",
+                  "ko_k1_0302"
+                ]
+              },
+              {
+                "text": 10,
+                "entry_ids": [
+                  "ko_k1_0304",
+                  "ko_k1_0305"
+                ]
+              },
+              {
+                "text": 11,
+                "entry_ids": [
+                  "ko_k1_0306",
+                  "ko_k1_0307"
+                ]
+              },
+              {
+                "text": 12,
+                "entry_ids": [
+                  "ko_k1_0308",
+                  "ko_k1_0309"
+                ]
+              },
+              {
+                "text": 13,
+                "entry_ids": [
+                  "ko_k1_0310",
+                  "ko_k1_0311"
+                ]
+              },
+              {
+                "text": 14,
+                "entry_ids": [
+                  "ko_k1_0312"
+                ]
+              },
+              {
+                "text": 15,
+                "entry_ids": [
+                  "ko_k1_0313",
+                  "ko_k1_0314"
+                ]
+              },
+              {
+                "text": 16,
+                "entry_ids": [
+                  "ko_k1_0315",
+                  "ko_k1_0316"
+                ]
+              },
+              {
+                "text": 17,
+                "entry_ids": [
+                  "ko_k1_0317",
+                  "ko_k1_0318"
+                ]
+              },
+              {
+                "text": 18,
+                "entry_ids": [
+                  "ko_k1_0319",
+                  "ko_k1_0320"
+                ]
+              },
+              {
+                "text": 19,
+                "entry_ids": [
+                  "ko_k1_0321",
+                  "ko_k1_0322"
+                ]
+              },
+              {
+                "text": 20,
+                "entry_ids": [
+                  "ko_k1_0323",
+                  "ko_k1_0324"
+                ]
+              },
+              {
+                "text": 21,
+                "entry_ids": [
+                  "ko_k1_0325"
+                ]
+              },
+              {
+                "text": 22,
+                "entry_ids": [
+                  "ko_k1_0326",
+                  "ko_k1_0327"
+                ]
+              },
+              {
+                "text": 23,
+                "entry_ids": [
+                  "ko_k1_0328",
+                  "ko_k1_0329"
+                ]
+              },
+              {
+                "text": 24,
+                "entry_ids": [
+                  "ko_k1_0330",
+                  "ko_k1_0331"
+                ]
+              },
+              {
+                "text": 25,
+                "entry_ids": []
+              },
+              {
+                "text": 26,
+                "entry_ids": [
+                  "ko_k1_0332",
+                  "ko_k1_0333"
+                ]
+              },
+              {
+                "text": 27,
+                "entry_ids": [
+                  "ko_k1_0334",
+                  "ko_k1_0335"
+                ]
+              },
+              {
+                "text": 28,
+                "entry_ids": [
+                  "ko_k1_0336"
+                ]
+              },
+              {
+                "text": 29,
+                "entry_ids": [
+                  "ko_k1_0337",
+                  "ko_k1_0338"
+                ]
+              },
+              {
+                "text": 30,
+                "entry_ids": [
+                  "ko_k1_0339",
+                  "ko_k1_0340"
+                ]
+              },
+              {
+                "text": 31,
+                "entry_ids": [
+                  "ko_k1_0341",
+                  "ko_k1_0342"
+                ]
+              },
+              {
+                "text": 32,
+                "entry_ids": [
+                  "ko_k1_0343",
+                  "ko_k1_0344"
+                ]
+              },
+              {
+                "text": 33,
+                "entry_ids": [
+                  "ko_k1_0345",
+                  "ko_k1_0346"
+                ]
+              },
+              {
+                "text": 34,
+                "entry_ids": [
+                  "ko_k1_0347",
+                  "ko_k1_0348"
+                ]
+              },
+              {
+                "text": 35,
+                "entry_ids": [
+                  "ko_k1_0349"
+                ]
+              },
+              {
+                "text": 36,
+                "entry_ids": [
+                  "ko_k1_0350",
+                  "ko_k1_0770"
+                ]
+              },
+              {
+                "text": 37,
+                "entry_ids": [
+                  "ko_k1_0778",
+                  "ko_k1_0351"
+                ]
+              },
+              {
+                "text": 38,
+                "entry_ids": [
+                  "ko_k1_0352",
+                  "ko_k1_0353"
+                ]
+              },
+              {
+                "text": 39,
+                "entry_ids": [
+                  "ko_k1_0354",
+                  "ko_k1_0355"
+                ]
+              },
+              {
+                "text": 40,
+                "entry_ids": [
+                  "ko_k1_0356",
+                  "ko_k1_0357"
+                ]
+              },
+              {
+                "text": 41,
+                "entry_ids": [
+                  "ko_k1_0358",
+                  "ko_k1_0359"
+                ]
+              },
+              {
+                "text": 42,
+                "entry_ids": [
+                  "ko_k1_0360"
+                ]
+              },
+              {
+                "text": 43,
+                "entry_ids": [
+                  "ko_k1_0361",
+                  "ko_k1_0362"
+                ]
+              },
+              {
+                "text": 44,
+                "entry_ids": [
+                  "ko_k1_0363",
+                  "ko_k1_0365"
+                ]
+              },
+              {
+                "text": 45,
+                "entry_ids": [
+                  "ko_k1_0366",
+                  "ko_k1_0367"
+                ]
+              },
+              {
+                "text": 46,
+                "entry_ids": [
+                  "ko_k1_0368",
+                  "ko_k1_0369"
+                ]
+              },
+              {
+                "text": 47,
+                "entry_ids": [
+                  "ko_k1_0370",
+                  "ko_k1_0371"
+                ]
+              },
+              {
+                "text": 48,
+                "entry_ids": [
+                  "ko_k1_0372",
+                  "ko_k1_0374"
+                ]
+              },
+              {
+                "text": 49,
+                "entry_ids": [
+                  "ko_k1_0375"
+                ]
+              },
+              {
+                "text": 50,
+                "entry_ids": []
+              },
+              {
+                "text": 51,
+                "entry_ids": [
+                  "ko_k1_0376",
+                  "ko_k1_0377"
+                ]
+              },
+              {
+                "text": 52,
+                "entry_ids": [
+                  "ko_k1_0378",
+                  "ko_k1_0379"
+                ]
+              },
+              {
+                "text": 53,
+                "entry_ids": [
+                  "ko_k1_0380",
+                  "ko_k1_0381"
+                ]
+              },
+              {
+                "text": 54,
+                "entry_ids": [
+                  "ko_k1_0382",
+                  "ko_k1_0383"
+                ]
+              },
+              {
+                "text": 55,
+                "entry_ids": [
+                  "ko_k1_0384",
+                  "ko_k1_0385"
+                ]
+              },
+              {
+                "text": 56,
+                "entry_ids": [
+                  "ko_k1_0386"
+                ]
+              },
+              {
+                "text": 57,
+                "entry_ids": [
+                  "ko_k1_0387",
+                  "ko_k1_0388"
+                ]
+              },
+              {
+                "text": 58,
+                "entry_ids": [
+                  "ko_k1_0389",
+                  "ko_k1_0390"
+                ]
+              },
+              {
+                "text": 59,
+                "entry_ids": [
+                  "ko_k1_0391",
+                  "ko_k1_0392"
+                ]
+              },
+              {
+                "text": 60,
+                "entry_ids": [
+                  "ko_k1_0393",
+                  "ko_k1_0394"
+                ]
+              },
+              {
+                "text": 61,
+                "entry_ids": [
+                  "ko_k1_0395",
+                  "ko_k1_0396"
+                ]
+              },
+              {
+                "text": 62,
+                "entry_ids": [
+                  "ko_k1_0397",
+                  "ko_k1_0398"
+                ]
+              },
+              {
+                "text": 63,
+                "entry_ids": [
+                  "ko_k1_0399"
+                ]
+              },
+              {
+                "text": 64,
+                "entry_ids": [
+                  "ko_k1_0400",
+                  "ko_k1_0401"
+                ]
+              },
+              {
+                "text": 65,
+                "entry_ids": [
+                  "ko_k1_0402",
+                  "ko_k1_0403"
+                ]
+              },
+              {
+                "text": 66,
+                "entry_ids": [
+                  "ko_k1_0404",
+                  "ko_k1_0405"
+                ]
+              },
+              {
+                "text": 67,
+                "entry_ids": [
+                  "ko_k1_0406",
+                  "ko_k1_0407"
+                ]
+              },
+              {
+                "text": 68,
+                "entry_ids": [
+                  "ko_k1_0408",
+                  "ko_k1_0409"
+                ]
+              },
+              {
+                "text": 69,
+                "entry_ids": [
+                  "ko_k1_0410",
+                  "ko_k1_0411"
+                ]
+              },
+              {
+                "text": 70,
+                "entry_ids": [
+                  "ko_k1_0412"
+                ]
+              },
+              {
+                "text": 71,
+                "entry_ids": [
+                  "ko_k1_0414",
+                  "ko_k1_0415"
+                ]
+              },
+              {
+                "text": 72,
+                "entry_ids": [
+                  "ko_k1_0416",
+                  "ko_k1_0417"
+                ]
+              },
+              {
+                "text": 73,
+                "entry_ids": [
+                  "ko_k1_0418",
+                  "ko_k1_0419"
+                ]
+              },
+              {
+                "text": 74,
+                "entry_ids": [
+                  "ko_k1_0420",
+                  "ko_k1_0421"
+                ]
+              },
+              {
+                "text": 75,
+                "entry_ids": []
+              },
+              {
+                "text": 76,
+                "entry_ids": [
+                  "ko_k1_0422",
+                  "ko_k1_0423"
+                ]
+              },
+              {
+                "text": 77,
+                "entry_ids": [
+                  "ko_k1_0424"
+                ]
+              },
+              {
+                "text": 78,
+                "entry_ids": [
+                  "ko_k1_0425",
+                  "ko_k1_0426"
+                ]
+              },
+              {
+                "text": 79,
+                "entry_ids": [
+                  "ko_k1_0427",
+                  "ko_k1_0428"
+                ]
+              },
+              {
+                "text": 80,
+                "entry_ids": [
+                  "ko_k1_0429",
+                  "ko_k1_0430"
+                ]
+              },
+              {
+                "text": 81,
+                "entry_ids": [
+                  "ko_k1_0431",
+                  "ko_k1_0432"
+                ]
+              },
+              {
+                "text": 82,
+                "entry_ids": [
+                  "ko_k1_0433",
+                  "ko_k1_0434"
+                ]
+              },
+              {
+                "text": 83,
+                "entry_ids": [
+                  "ko_k1_0435",
+                  "ko_k1_0436"
+                ]
+              },
+              {
+                "text": 84,
+                "entry_ids": [
+                  "ko_k1_0437"
+                ]
+              },
+              {
+                "text": 85,
+                "entry_ids": [
+                  "ko_k1_0438",
+                  "ko_k1_0439"
+                ]
+              },
+              {
+                "text": 86,
+                "entry_ids": [
+                  "ko_k1_0440",
+                  "ko_k1_0441"
+                ]
+              },
+              {
+                "text": 87,
+                "entry_ids": [
+                  "ko_k1_0450",
+                  "ko_k1_0452"
+                ]
+              },
+              {
+                "text": 88,
+                "entry_ids": [
+                  "ko_k1_0453",
+                  "ko_k1_0454"
+                ]
+              },
+              {
+                "text": 89,
+                "entry_ids": [
+                  "ko_k1_0455",
+                  "ko_k1_0456"
+                ]
+              },
+              {
+                "text": 90,
+                "entry_ids": [
+                  "ko_k1_0457",
+                  "ko_k1_0458"
+                ]
+              },
+              {
+                "text": 91,
+                "entry_ids": [
+                  "ko_k1_0459"
+                ]
+              },
+              {
+                "text": 92,
+                "entry_ids": [
+                  "ko_k1_0460",
+                  "ko_k1_0461"
+                ]
+              },
+              {
+                "text": 93,
+                "entry_ids": [
+                  "ko_k1_0462",
+                  "ko_k1_0463"
+                ]
+              },
+              {
+                "text": 94,
+                "entry_ids": [
+                  "ko_k1_0464",
+                  "ko_k1_0465"
+                ]
+              },
+              {
+                "text": 95,
+                "entry_ids": [
+                  "ko_k1_0466",
+                  "ko_k1_0470"
+                ]
+              },
+              {
+                "text": 96,
+                "entry_ids": [
+                  "ko_k1_0471",
+                  "ko_k1_0472"
+                ]
+              },
+              {
+                "text": 97,
+                "entry_ids": [
+                  "ko_k1_0473",
+                  "ko_k1_0474"
+                ]
+              },
+              {
+                "text": 98,
+                "entry_ids": [
+                  "ko_k1_0475"
+                ]
+              },
+              {
+                "text": 99,
+                "entry_ids": [
+                  "ko_k1_0477",
+                  "ko_k1_0478"
+                ]
+              },
+              {
+                "text": 100,
+                "entry_ids": []
+              },
+              {
+                "text": 101,
+                "entry_ids": [
+                  "ko_k1_0479",
+                  "ko_k1_0480"
+                ]
+              },
+              {
+                "text": 102,
+                "entry_ids": [
+                  "ko_k1_0481",
+                  "ko_k1_0482"
+                ]
+              },
+              {
+                "text": 103,
+                "entry_ids": [
+                  "ko_k1_0483",
+                  "ko_k1_0484"
+                ]
+              },
+              {
+                "text": 104,
+                "entry_ids": [
+                  "ko_k1_0485",
+                  "ko_k1_0486"
+                ]
+              },
+              {
+                "text": 105,
+                "entry_ids": [
+                  "ko_k1_0487"
+                ]
+              },
+              {
+                "text": 106,
+                "entry_ids": [
+                  "ko_k1_0488",
+                  "ko_k1_0489"
+                ]
+              },
+              {
+                "text": 107,
+                "entry_ids": [
+                  "ko_k1_0490",
+                  "ko_k1_0491"
+                ]
+              },
+              {
+                "text": 108,
+                "entry_ids": [
+                  "ko_k1_0492",
+                  "ko_k1_0493"
+                ]
+              },
+              {
+                "text": 109,
+                "entry_ids": [
+                  "ko_k1_0494",
+                  "ko_k1_0495"
+                ]
+              },
+              {
+                "text": 110,
+                "entry_ids": [
+                  "ko_k1_0496",
+                  "ko_k1_0497"
+                ]
+              },
+              {
+                "text": 111,
+                "entry_ids": [
+                  "ko_k1_0498",
+                  "ko_k1_0499"
+                ]
+              },
+              {
+                "text": 112,
+                "entry_ids": [
+                  "ko_k1_0500"
+                ]
+              },
+              {
+                "text": 113,
+                "entry_ids": [
+                  "ko_k1_0501",
+                  "ko_k1_0502"
+                ]
+              },
+              {
+                "text": 114,
+                "entry_ids": [
+                  "ko_k1_0503",
+                  "ko_k1_0504"
+                ]
+              },
+              {
+                "text": 115,
+                "entry_ids": [
+                  "ko_k1_0505",
+                  "ko_k1_0507"
+                ]
+              },
+              {
+                "text": 116,
+                "entry_ids": [
+                  "ko_k1_0508",
+                  "ko_k1_0509"
+                ]
+              },
+              {
+                "text": 117,
+                "entry_ids": [
+                  "ko_k1_0510",
+                  "ko_k1_0511"
+                ]
+              },
+              {
+                "text": 118,
+                "entry_ids": [
+                  "ko_k1_0512",
+                  "ko_k1_0513"
+                ]
+              },
+              {
+                "text": 119,
+                "entry_ids": [
+                  "ko_k1_0514"
+                ]
+              },
+              {
+                "text": 120,
+                "entry_ids": [
+                  "ko_k1_0515",
+                  "ko_k1_0516"
+                ]
+              },
+              {
+                "text": 121,
+                "entry_ids": [
+                  "ko_k1_0517",
+                  "ko_k1_0518"
+                ]
+              },
+              {
+                "text": 122,
+                "entry_ids": [
+                  "ko_k1_0519",
+                  "ko_k1_0520"
+                ]
+              },
+              {
+                "text": 123,
+                "entry_ids": [
+                  "ko_k1_0521",
+                  "ko_k1_0522"
+                ]
+              },
+              {
+                "text": 124,
+                "entry_ids": [
+                  "ko_k1_0523",
+                  "ko_k1_0524"
+                ]
+              },
+              {
+                "text": 125,
+                "entry_ids": []
+              },
+              {
+                "text": 126,
+                "entry_ids": [
+                  "ko_k1_0525"
+                ]
+              },
+              {
+                "text": 127,
+                "entry_ids": [
+                  "ko_k1_0526",
+                  "ko_k1_0527"
+                ]
+              },
+              {
+                "text": 128,
+                "entry_ids": [
+                  "ko_k1_0528",
+                  "ko_k1_0529"
+                ]
+              },
+              {
+                "text": 129,
+                "entry_ids": [
+                  "ko_k1_0530",
+                  "ko_k1_0531"
+                ]
+              },
+              {
+                "text": 130,
+                "entry_ids": [
+                  "ko_k1_0532",
+                  "ko_k1_0533"
+                ]
+              },
+              {
+                "text": 131,
+                "entry_ids": [
+                  "ko_k1_0534",
+                  "ko_k1_0535"
+                ]
+              },
+              {
+                "text": 132,
+                "entry_ids": [
+                  "ko_k1_0536",
+                  "ko_k1_0537"
+                ]
+              },
+              {
+                "text": 133,
+                "entry_ids": [
+                  "ko_k1_0538"
+                ]
+              },
+              {
+                "text": 134,
+                "entry_ids": [
+                  "ko_k1_0539",
+                  "ko_k1_0540"
+                ]
+              },
+              {
+                "text": 135,
+                "entry_ids": [
+                  "ko_k1_0541",
+                  "ko_k1_0542"
+                ]
+              },
+              {
+                "text": 136,
+                "entry_ids": [
+                  "ko_k1_0543",
+                  "ko_k1_0544"
+                ]
+              },
+              {
+                "text": 137,
+                "entry_ids": [
+                  "ko_k1_0545",
+                  "ko_k1_0546"
+                ]
+              },
+              {
+                "text": 138,
+                "entry_ids": [
+                  "ko_k1_0547",
+                  "ko_k1_0548"
+                ]
+              },
+              {
+                "text": 139,
+                "entry_ids": [
+                  "ko_k1_0549",
+                  "ko_k1_0550"
+                ]
+              },
+              {
+                "text": 140,
+                "entry_ids": [
+                  "ko_k1_0303"
+                ]
+              },
+              {
+                "text": 141,
+                "entry_ids": [
+                  "ko_k1_0364",
+                  "ko_k1_0551"
+                ]
+              },
+              {
+                "text": 142,
+                "entry_ids": [
+                  "ko_k1_0552",
+                  "ko_k1_0553"
+                ]
+              },
+              {
+                "text": 143,
+                "entry_ids": [
+                  "ko_k1_0554",
+                  "ko_k1_0555"
+                ]
+              },
+              {
+                "text": 144,
+                "entry_ids": [
+                  "ko_k1_0556",
+                  "ko_k1_0557"
+                ]
+              },
+              {
+                "text": 145,
+                "entry_ids": [
+                  "ko_k1_0558",
+                  "ko_k1_0559"
+                ]
+              },
+              {
+                "text": 146,
+                "entry_ids": [
+                  "ko_k1_0560",
+                  "ko_k1_0561"
+                ]
+              },
+              {
+                "text": 147,
+                "entry_ids": [
+                  "ko_k1_0562"
+                ]
+              },
+              {
+                "text": 148,
+                "entry_ids": [
+                  "ko_k1_0563",
+                  "ko_k1_0565"
+                ]
+              },
+              {
+                "text": 149,
+                "entry_ids": [
+                  "ko_k1_0566",
+                  "ko_k1_0567"
+                ]
+              },
+              {
+                "text": 150,
+                "entry_ids": []
+              },
+              {
+                "text": 151,
+                "entry_ids": [
+                  "ko_k1_0568",
+                  "ko_k1_0569"
+                ]
+              },
+              {
+                "text": 152,
+                "entry_ids": [
+                  "ko_k1_0570",
+                  "ko_k1_0571"
+                ]
+              },
+              {
+                "text": 153,
+                "entry_ids": [
+                  "ko_k1_0572",
+                  "ko_k1_0573"
+                ]
+              },
+              {
+                "text": 154,
+                "entry_ids": [
+                  "ko_k1_0574"
+                ]
+              },
+              {
+                "text": 155,
+                "entry_ids": [
+                  "ko_k1_0575",
+                  "ko_k1_0576"
+                ]
+              },
+              {
+                "text": 156,
+                "entry_ids": [
+                  "ko_k1_0577",
+                  "ko_k1_0578"
+                ]
+              },
+              {
+                "text": 157,
+                "entry_ids": [
+                  "ko_k1_0579",
+                  "ko_k1_0580"
+                ]
+              },
+              {
+                "text": 158,
+                "entry_ids": [
+                  "ko_k1_0581",
+                  "ko_k1_0582"
+                ]
+              },
+              {
+                "text": 159,
+                "entry_ids": [
+                  "ko_k1_0583",
+                  "ko_k1_0584"
+                ]
+              },
+              {
+                "text": 160,
+                "entry_ids": [
+                  "ko_k1_0585",
+                  "ko_k1_0586"
+                ]
+              },
+              {
+                "text": 161,
+                "entry_ids": [
+                  "ko_k1_0587"
+                ]
+              },
+              {
+                "text": 162,
+                "entry_ids": [
+                  "ko_k1_0588",
+                  "ko_k1_0589"
+                ]
+              },
+              {
+                "text": 163,
+                "entry_ids": [
+                  "ko_k1_0590",
+                  "ko_k1_0591"
+                ]
+              },
+              {
+                "text": 164,
+                "entry_ids": [
+                  "ko_k1_0592",
+                  "ko_k1_0593"
+                ]
+              },
+              {
+                "text": 165,
+                "entry_ids": [
+                  "ko_k1_0594",
+                  "ko_k1_0595"
+                ]
+              },
+              {
+                "text": 166,
+                "entry_ids": [
+                  "ko_k1_0596",
+                  "ko_k1_0597"
+                ]
+              },
+              {
+                "text": 167,
+                "entry_ids": [
+                  "ko_k1_0598",
+                  "ko_k1_0599"
+                ]
+              },
+              {
+                "text": 168,
+                "entry_ids": [
+                  "ko_k1_0600"
+                ]
+              },
+              {
+                "text": 169,
+                "entry_ids": [
+                  "ko_k1_0739",
+                  "ko_k1_0601"
+                ]
+              },
+              {
+                "text": 170,
+                "entry_ids": [
+                  "ko_k1_0602",
+                  "ko_k1_0603"
+                ]
+              },
+              {
+                "text": 171,
+                "entry_ids": [
+                  "ko_k1_0604",
+                  "ko_k1_0605"
+                ]
+              },
+              {
+                "text": 172,
+                "entry_ids": [
+                  "ko_k1_0606",
+                  "ko_k1_0607"
+                ]
+              },
+              {
+                "text": 173,
+                "entry_ids": [
+                  "ko_k1_0608",
+                  "ko_k1_0609"
+                ]
+              },
+              {
+                "text": 174,
+                "entry_ids": [
+                  "ko_k1_0610",
+                  "ko_k1_0611"
+                ]
+              },
+              {
+                "text": 175,
+                "entry_ids": []
+              },
+              {
+                "text": 176,
+                "entry_ids": [
+                  "ko_k1_0612",
+                  "ko_k1_0613"
+                ]
+              },
+              {
+                "text": 177,
+                "entry_ids": [
+                  "ko_k1_0614",
+                  "ko_k1_0615"
+                ]
+              },
+              {
+                "text": 178,
+                "entry_ids": [
+                  "ko_k1_0616",
+                  "ko_k1_0617"
+                ]
+              },
+              {
+                "text": 179,
+                "entry_ids": [
+                  "ko_k1_0618",
+                  "ko_k1_0619"
+                ]
+              },
+              {
+                "text": 180,
+                "entry_ids": [
+                  "ko_k1_0620",
+                  "ko_k1_0621"
+                ]
+              },
+              {
+                "text": 181,
+                "entry_ids": [
+                  "ko_k1_0622",
+                  "ko_k1_0623"
+                ]
+              },
+              {
+                "text": 182,
+                "entry_ids": [
+                  "ko_k1_0624"
+                ]
+              },
+              {
+                "text": 183,
+                "entry_ids": [
+                  "ko_k1_0625",
+                  "ko_k1_0626"
+                ]
+              },
+              {
+                "text": 184,
+                "entry_ids": [
+                  "ko_k1_0627",
+                  "ko_k1_0628"
+                ]
+              },
+              {
+                "text": 185,
+                "entry_ids": [
+                  "ko_k1_0629",
+                  "ko_k1_0630"
+                ]
+              },
+              {
+                "text": 186,
+                "entry_ids": [
+                  "ko_k1_0631",
+                  "ko_k1_0632"
+                ]
+              },
+              {
+                "text": 187,
+                "entry_ids": [
+                  "ko_k1_0633",
+                  "ko_k1_0634"
+                ]
+              },
+              {
+                "text": 188,
+                "entry_ids": [
+                  "ko_k1_0635",
+                  "ko_k1_0636"
+                ]
+              },
+              {
+                "text": 189,
+                "entry_ids": [
+                  "ko_k1_0637"
+                ]
+              },
+              {
+                "text": 190,
+                "entry_ids": [
+                  "ko_k1_0638",
+                  "ko_k1_0639"
+                ]
+              },
+              {
+                "text": 191,
+                "entry_ids": [
+                  "ko_k1_0640",
+                  "ko_k1_0641"
+                ]
+              },
+              {
+                "text": 192,
+                "entry_ids": [
+                  "ko_k1_0642",
+                  "ko_k1_0643"
+                ]
+              },
+              {
+                "text": 193,
+                "entry_ids": [
+                  "ko_k1_0644",
+                  "ko_k1_0645"
+                ]
+              },
+              {
+                "text": 194,
+                "entry_ids": [
+                  "ko_k1_0646",
+                  "ko_k1_0648"
+                ]
+              },
+              {
+                "text": 195,
+                "entry_ids": [
+                  "ko_k1_0649",
+                  "ko_k1_0650"
+                ]
+              },
+              {
+                "text": 196,
+                "entry_ids": [
+                  "ko_k1_0701"
+                ]
+              },
+              {
+                "text": 197,
+                "entry_ids": [
+                  "ko_k1_0702",
+                  "ko_k1_0703"
+                ]
+              },
+              {
+                "text": 198,
+                "entry_ids": [
+                  "ko_k1_0704",
+                  "ko_k1_0705"
+                ]
+              },
+              {
+                "text": 199,
+                "entry_ids": [
+                  "ko_k1_0706",
+                  "ko_k1_0707"
+                ]
+              },
+              {
+                "text": 200,
+                "entry_ids": []
+              },
+              {
+                "text": 201,
+                "entry_ids": [
+                  "ko_k1_0708",
+                  "ko_k1_0709"
+                ]
+              },
+              {
+                "text": 202,
+                "entry_ids": [
+                  "ko_k1_0710",
+                  "ko_k1_0711"
+                ]
+              },
+              {
+                "text": 203,
+                "entry_ids": [
+                  "ko_k1_0712"
+                ]
+              },
+              {
+                "text": 204,
+                "entry_ids": [
+                  "ko_k1_0713",
+                  "ko_k1_0714"
+                ]
+              },
+              {
+                "text": 205,
+                "entry_ids": [
+                  "ko_k1_0715",
+                  "ko_k1_0716"
+                ]
+              },
+              {
+                "text": 206,
+                "entry_ids": [
+                  "ko_k1_0717",
+                  "ko_k1_0718"
+                ]
+              },
+              {
+                "text": 207,
+                "entry_ids": [
+                  "ko_k1_0719",
+                  "ko_k1_0720"
+                ]
+              },
+              {
+                "text": 208,
+                "entry_ids": [
+                  "ko_k1_0721",
+                  "ko_k1_0722"
+                ]
+              },
+              {
+                "text": 209,
+                "entry_ids": [
+                  "ko_k1_0723",
+                  "ko_k1_0724"
+                ]
+              },
+              {
+                "text": 210,
+                "entry_ids": [
+                  "ko_k1_0725"
+                ]
+              },
+              {
+                "text": 211,
+                "entry_ids": [
+                  "ko_k1_0726",
+                  "ko_k1_0727"
+                ]
+              },
+              {
+                "text": 212,
+                "entry_ids": [
+                  "ko_k1_0728",
+                  "ko_k1_0729"
+                ]
+              },
+              {
+                "text": 213,
+                "entry_ids": [
+                  "ko_k1_0730",
+                  "ko_k1_0731"
+                ]
+              },
+              {
+                "text": 214,
+                "entry_ids": [
+                  "ko_k1_0732",
+                  "ko_k1_0733"
+                ]
+              },
+              {
+                "text": 215,
+                "entry_ids": [
+                  "ko_k1_0734",
+                  "ko_k1_0735"
+                ]
+              },
+              {
+                "text": 216,
+                "entry_ids": [
+                  "ko_k1_0736",
+                  "ko_k1_0737"
+                ]
+              },
+              {
+                "text": 217,
+                "entry_ids": [
+                  "ko_k1_0738"
+                ]
+              },
+              {
+                "text": 218,
+                "entry_ids": [
+                  "ko_k1_0740",
+                  "ko_k1_0741"
+                ]
+              },
+              {
+                "text": 219,
+                "entry_ids": [
+                  "ko_k1_0742",
+                  "ko_k1_0743"
+                ]
+              },
+              {
+                "text": 220,
+                "entry_ids": [
+                  "ko_k1_0744",
+                  "ko_k1_0745"
+                ]
+              },
+              {
+                "text": 221,
+                "entry_ids": [
+                  "ko_k1_0746",
+                  "ko_k1_0747"
+                ]
+              },
+              {
+                "text": 222,
+                "entry_ids": [
+                  "ko_k1_0748",
+                  "ko_k1_0749"
+                ]
+              },
+              {
+                "text": 223,
+                "entry_ids": [
+                  "ko_k1_0750",
+                  "ko_k1_0651"
+                ]
+              },
+              {
+                "text": 224,
+                "entry_ids": [
+                  "ko_k1_0652",
+                  "ko_k1_0653"
+                ]
+              },
+              {
+                "text": 225,
+                "entry_ids": []
+              },
+              {
+                "text": 226,
+                "entry_ids": [
+                  "ko_k1_0654",
+                  "ko_k1_0655"
+                ]
+              },
+              {
+                "text": 227,
+                "entry_ids": [
+                  "ko_k1_0656",
+                  "ko_k1_0657"
+                ]
+              },
+              {
+                "text": 228,
+                "entry_ids": [
+                  "ko_k1_0658",
+                  "ko_k1_0659"
+                ]
+              },
+              {
+                "text": 229,
+                "entry_ids": [
+                  "ko_k1_0660",
+                  "ko_k1_0661"
+                ]
+              },
+              {
+                "text": 230,
+                "entry_ids": [
+                  "ko_k1_0662",
+                  "ko_k1_0663"
+                ]
+              },
+              {
+                "text": 231,
+                "entry_ids": [
+                  "ko_k1_0664",
+                  "ko_k1_0665"
+                ]
+              },
+              {
+                "text": 232,
+                "entry_ids": [
+                  "ko_k1_0666",
+                  "ko_k1_0667"
+                ]
+              },
+              {
+                "text": 233,
+                "entry_ids": [
+                  "ko_k1_0668",
+                  "ko_k1_0669"
+                ]
+              },
+              {
+                "text": 234,
+                "entry_ids": [
+                  "ko_k1_0670",
+                  "ko_k1_0671"
+                ]
+              },
+              {
+                "text": 235,
+                "entry_ids": [
+                  "ko_k1_0672",
+                  "ko_k1_0673"
+                ]
+              },
+              {
+                "text": 236,
+                "entry_ids": [
+                  "ko_k1_0674",
+                  "ko_k1_0675"
+                ]
+              },
+              {
+                "text": 237,
+                "entry_ids": [
+                  "ko_k1_0676",
+                  "ko_k1_0677"
+                ]
+              },
+              {
+                "text": 238,
+                "entry_ids": [
+                  "ko_k1_0678",
+                  "ko_k1_0679"
+                ]
+              },
+              {
+                "text": 239,
+                "entry_ids": [
+                  "ko_k1_0680",
+                  "ko_k1_0681"
+                ]
+              },
+              {
+                "text": 240,
+                "entry_ids": [
+                  "ko_k1_0682",
+                  "ko_k1_0683"
+                ]
+              },
+              {
+                "text": 241,
+                "entry_ids": [
+                  "ko_k1_0684",
+                  "ko_k1_0685"
+                ]
+              },
+              {
+                "text": 242,
+                "entry_ids": [
+                  "ko_k1_0686",
+                  "ko_k1_0687"
+                ]
+              },
+              {
+                "text": 243,
+                "entry_ids": [
+                  "ko_k1_0688",
+                  "ko_k1_0689"
+                ]
+              },
+              {
+                "text": 244,
+                "entry_ids": [
+                  "ko_k1_0690",
+                  "ko_k1_0691"
+                ]
+              },
+              {
+                "text": 245,
+                "entry_ids": [
+                  "ko_k1_0692",
+                  "ko_k1_0693"
+                ]
+              },
+              {
+                "text": 246,
+                "entry_ids": [
+                  "ko_k1_0694",
+                  "ko_k1_0695"
+                ]
+              },
+              {
+                "text": 247,
+                "entry_ids": [
+                  "ko_k1_0696",
+                  "ko_k1_0697"
+                ]
+              },
+              {
+                "text": 248,
+                "entry_ids": [
+                  "ko_k1_0698",
+                  "ko_k1_0699"
+                ]
+              },
+              {
+                "text": 249,
+                "entry_ids": [
+                  "ko_k1_0700",
+                  "ko_k1_0751"
+                ]
+              },
+              {
+                "text": 250,
+                "entry_ids": []
+              },
+              {
+                "text": 251,
+                "entry_ids": [
+                  "ko_k1_0752",
+                  "ko_k1_0753"
+                ]
+              },
+              {
+                "text": 252,
+                "entry_ids": [
+                  "ko_k1_0754",
+                  "ko_k1_0755"
+                ]
+              },
+              {
+                "text": 253,
+                "entry_ids": [
+                  "ko_k1_0756",
+                  "ko_k1_0757"
+                ]
+              },
+              {
+                "text": 254,
+                "entry_ids": [
+                  "ko_k1_0758",
+                  "ko_k1_0759"
+                ]
+              },
+              {
+                "text": 255,
+                "entry_ids": [
+                  "ko_k1_0760",
+                  "ko_k1_0761"
+                ]
+              },
+              {
+                "text": 256,
+                "entry_ids": [
+                  "ko_k1_0762",
+                  "ko_k1_0763"
+                ]
+              },
+              {
+                "text": 257,
+                "entry_ids": [
+                  "ko_k1_0764",
+                  "ko_k1_0765"
+                ]
+              },
+              {
+                "text": 258,
+                "entry_ids": [
+                  "ko_k1_0766",
+                  "ko_k1_0767"
+                ]
+              },
+              {
+                "text": 259,
+                "entry_ids": [
+                  "ko_k1_0768",
+                  "ko_k1_0769"
+                ]
+              },
+              {
+                "text": 260,
+                "entry_ids": [
+                  "ko_k1_0771",
+                  "ko_k1_0772"
+                ]
+              },
+              {
+                "text": 261,
+                "entry_ids": [
+                  "ko_k1_0773",
+                  "ko_k1_0774"
+                ]
+              },
+              {
+                "text": 262,
+                "entry_ids": [
+                  "ko_k1_0775",
+                  "ko_k1_0506"
+                ]
+              },
+              {
+                "text": 263,
+                "entry_ids": [
+                  "ko_k1_0564",
+                  "ko_k1_0647"
+                ]
+              },
+              {
+                "text": 264,
+                "entry_ids": [
+                  "ko_k1_0776",
+                  "ko_k1_0777"
+                ]
+              },
+              {
+                "text": 265,
+                "entry_ids": [
+                  "ko_k1_0779",
+                  "ko_k1_0780"
+                ]
+              },
+              {
+                "text": 266,
+                "entry_ids": [
+                  "ko_k1_0781",
+                  "ko_k1_0782"
+                ]
+              },
+              {
+                "text": 267,
+                "entry_ids": [
+                  "ko_k1_0783",
+                  "ko_k1_0784"
+                ]
+              },
+              {
+                "text": 268,
+                "entry_ids": [
+                  "ko_k1_0785",
+                  "ko_k1_0786"
+                ]
+              },
+              {
+                "text": 269,
+                "entry_ids": [
+                  "ko_k1_0787",
+                  "ko_k1_0788"
+                ]
+              },
+              {
+                "text": 270,
+                "entry_ids": [
+                  "ko_k1_0789",
+                  "ko_k1_0790"
+                ]
+              },
+              {
+                "text": 271,
+                "entry_ids": [
+                  "ko_k1_0791",
+                  "ko_k1_0792"
+                ]
+              },
+              {
+                "text": 272,
+                "entry_ids": [
+                  "ko_k1_0793",
+                  "ko_k1_0794"
+                ]
+              },
+              {
+                "text": 273,
+                "entry_ids": [
+                  "ko_k1_0795",
+                  "ko_k1_0796"
+                ]
+              },
+              {
+                "text": 274,
+                "entry_ids": [
+                  "ko_k1_0797",
+                  "ko_k1_0798"
+                ]
+              },
+              {
+                "text": 275,
+                "entry_ids": [
+                  "ko_k1_0799",
+                  "ko_k1_0800"
+                ]
+              },
+              {
+                "text": 276,
+                "entry_ids": []
+              },
+              {
+                "text": 277,
+                "entry_ids": []
+              },
+              {
+                "text": 278,
+                "entry_ids": []
+              },
+              {
+                "text": 279,
+                "entry_ids": []
+              },
+              {
+                "text": 280,
+                "entry_ids": []
+              },
+              {
+                "text": 281,
+                "entry_ids": []
+              },
+              {
+                "text": 282,
+                "entry_ids": []
+              },
+              {
+                "text": 283,
+                "entry_ids": []
+              },
+              {
+                "text": 284,
+                "entry_ids": []
+              },
+              {
+                "text": 285,
+                "entry_ids": []
+              },
+              {
+                "text": 286,
+                "entry_ids": []
+              },
+              {
+                "text": 287,
+                "entry_ids": []
+              },
+              {
+                "text": 288,
+                "entry_ids": []
+              },
+              {
+                "text": 289,
+                "entry_ids": []
+              },
+              {
+                "text": 290,
+                "entry_ids": []
+              },
+              {
+                "text": 291,
+                "entry_ids": []
+              },
+              {
+                "text": 292,
+                "entry_ids": []
+              },
+              {
+                "text": 293,
+                "entry_ids": []
+              },
+              {
+                "text": 294,
+                "entry_ids": []
+              },
+              {
+                "text": 295,
+                "entry_ids": []
+              },
+              {
+                "text": 296,
+                "entry_ids": []
+              },
+              {
+                "text": 297,
+                "entry_ids": []
+              },
+              {
+                "text": 298,
+                "entry_ids": []
+              },
+              {
+                "text": 299,
+                "entry_ids": []
+              },
+              {
+                "text": 300,
+                "entry_ids": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "file": "config/languages/ko/k1/lexical_exceptions.json",
+      "change": "unchanged",
+      "before_sha256": "21a537ca2f782e4b682fbe2ed96063a823e0681ebfb7389d9d134100e0649265",
+      "after_sha256": "21a537ca2f782e4b682fbe2ed96063a823e0681ebfb7389d9d134100e0649265"
+    },
+    {
+      "file": "config/languages/ko/k1/profile.json",
+      "change": "changed",
+      "before_sha256": "ce01dc15147757718b9da31f843c25609e8dc48d7ef60f9997c06cd6f384c9cd",
+      "after_sha256": "bd25fe9fc5f2b1300928a970cc7cb61b0d779c4ce855f324bc104cfd816a7920",
+      "json_changes": [
+        {
+          "path": "/core_decision",
+          "change": "added",
+          "after": {
+            "status": "accepted",
+            "replacement": "한국→아니다",
+            "proper_names_outside_budget": true
+          }
+        },
+        {
+          "path": "/counting/new_lemma_token_count",
+          "change": "added",
+          "after": "初出のlemma+POS+senseに対応する本文内tokenを合算。活用形も同一語として計数し、既出senseや文法専用語は新出tokenへ含めない。"
+        },
+        {
+          "path": "/counting/new_vocab_definition",
+          "change": "changed",
+          "before": "教材単位で初めて導入する異なるExpansionエントリの数。事前提示した語も初出教材の導入語数に含める。",
+          "after": "新出lemmaは最大2。別senseの初出も導入として数え、DBエントリの初出も保守的に最大2に制限する。500エントリすべてを配置する。事前提示も初出教材の導入数に含める。"
+        },
+        {
+          "path": "/expansion_decision",
+          "change": "added",
+          "after": {
+            "active_entries": 500,
+            "replacement_proposals_applied": false,
+            "notes": "現行500は許可語彙。7組の入替は人間判断待ち。Tier変更8語は適用。"
+          }
+        },
+        {
+          "path": "/feasibility/generation_gate",
+          "change": "changed",
+          "before": "人間レビューで導入容量と既知語率の測定・読前既知化方針を確定するまで大量本文生成へ進まない。",
+          "after": "Phase 1.1は語彙設計と検証まで。入替候補・測定運用・再遭遇計画の人間判断後に別Phaseで本文試作。"
+        },
+        {
+          "path": "/feasibility/introduction_slots",
+          "change": "changed",
+          "before": 500,
+          "after": 550
+        },
+        {
+          "path": "/feasibility/known_ratio_resolution",
+          "change": "changed",
+          "before": "未確定。事前提示を推奨するが、実際に読前既知になったことの確認が必要。本文だけで2未知語を導入すると延べ内容語200以上が99%条件の必要条件。",
+          "after": "hard 98%、target 99%。未知token3なら内容語150token以上がhard達成の必要条件、targetには300以上が必要。原則3以下は比率の保証ではない。"
+        },
+        {
+          "path": "/feasibility/slack_slots",
+          "change": "changed",
+          "before": 0,
+          "after": 50
+        },
+        {
+          "path": "/feasibility/warning",
+          "change": "changed",
+          "before": "全500語を本文初出させる場合、K1-001〜250は例外なく2語導入が必要。0〜1語回の余裕なし。",
+          "after": "275本×2枠=550枠。500語導入後に50枠の余裕。0語・1語導入回を分散した配置例も検証する。"
+        },
+        {
+          "path": "/grammar_count",
+          "change": "changed",
+          "before": 29,
+          "after": 32
+        },
+        {
+          "path": "/grammar_policy/excluded_grammar",
+          "change": "added",
+          "after": [
+            "比較 보다",
+            "와/과",
+            "-지 않다",
+            "名詞化 -기"
+          ]
+        },
+        {
+          "path": "/hard_min_known_vocab_ratio",
+          "change": "added",
+          "after": 0.98
+        },
+        {
+          "path": "/introduction/consolidation_from",
+          "change": "changed",
+          "before": 251,
+          "after": 276
+        },
+        {
+          "path": "/introduction/last_text",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/introduction/ranges/E2/1",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/introduction/ranges/E3/1",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/known_vocab_ratio",
+          "change": "removed",
+          "before": 0.99
+        },
+        {
+          "path": "/new_vocab/first_text_new_lemma_token_soft_max",
+          "change": "added",
+          "after": 3
+        },
+        {
+          "path": "/new_vocab/max_entries_per_text",
+          "change": "added",
+          "after": 2
+        },
+        {
+          "path": "/new_vocab/token_policy",
+          "change": "added",
+          "after": "初出教材の新出語token合計は原則3以下。各語3回ではない。逸脱は人間レビューを要する。"
+        },
+        {
+          "path": "/new_vocab/unit",
+          "change": "added",
+          "after": "lemma"
+        },
+        {
+          "path": "/repetition/near_repetition_scope",
+          "change": "added",
+          "after": "既知語の近距離反復を推奨。初出の新出語は全語合計token3以下の方針を優先。"
+        },
+        {
+          "path": "/repetition/new_lemma_mass_repetition_in_first_text",
+          "change": "added",
+          "after": false
+        },
+        {
+          "path": "/repetition/prefer_new_lemma_repetition_in_later_texts",
+          "change": "added",
+          "after": true
+        },
+        {
+          "path": "/review_required/0",
+          "change": "changed",
+          "before": "Core 한국→아니다置換案",
+          "after": "Expansion7組の入替候補"
+        },
+        {
+          "path": "/review_required/2",
+          "change": "changed",
+          "before": "500語導入容量と99%既知率の両立",
+          "after": "98%下限・99%目標の測定運用と新出token3上限の例外判断"
+        },
+        {
+          "path": "/status",
+          "change": "changed",
+          "before": "draft_for_human_review",
+          "after": "phase1_1_review_applied"
+        },
+        {
+          "path": "/target_known_vocab_ratio",
+          "change": "added",
+          "after": 0.99
+        },
+        {
+          "path": "/version",
+          "change": "changed",
+          "before": "0.1.0",
+          "after": "0.1.1"
+        }
+      ]
+    },
+    {
+      "file": "config/languages/ko/k1/proper_names.json",
+      "change": "changed",
+      "before_sha256": "cea5f8611ad24167e3c402c335ad11062f1955cb7e6805dd0ede1aac6fcab2dd",
+      "after_sha256": "e4cf3869986d142c07f50026810c7b8b5dcd726e12d0445e6deeee5dcf967e47",
+      "json_changes": [
+        {
+          "path": "/entries/0/notes",
+          "change": "changed",
+          "before": "固有名詞。事前提示して理解可能にし、無制限の固有名詞追加は避ける。",
+          "after": "Phase 1.1で予算外への移動を正式採用。事前提示して理解可能にし、無制限の固有名詞追加は避ける。"
+        }
+      ]
+    },
+    {
+      "file": "config/languages/ko/k1/support.schema.json",
+      "change": "changed",
+      "before_sha256": "7f140c37daa35a2c70c768d5a544bf5fc1784d96e4ff31f6d482721499b0aa65",
+      "after_sha256": "696e75b9ee0795912314fb5727a58725b8eadda06074ed21db3c075e01b85316",
+      "json_changes": [
+        {
+          "path": "/$defs/introduction_schedule",
+          "change": "added",
+          "after": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "language",
+              "level",
+              "status",
+              "notes",
+              "rows"
+            ],
+            "properties": {
+              "language": {
+                "const": "ko"
+              },
+              "level": {
+                "const": "K1"
+              },
+              "status": {
+                "const": "feasibility_witness_not_final_curriculum"
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              },
+              "rows": {
+                "type": "array",
+                "minItems": 300,
+                "maxItems": 300,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "text",
+                    "entry_ids"
+                  ],
+                  "properties": {
+                    "text": {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 300
+                    },
+                    "entry_ids": {
+                      "type": "array",
+                      "maxItems": 2,
+                      "uniqueItems": true,
+                      "items": {
+                        "type": "string",
+                        "pattern": "^ko_k1_[0-9]{4}$"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "path": "/$defs/profile/properties/core_decision",
+          "change": "added",
+          "after": {
+            "const": {
+              "status": "accepted",
+              "replacement": "한국→아니다",
+              "proper_names_outside_budget": true
+            }
+          }
+        },
+        {
+          "path": "/$defs/profile/properties/counting/properties/new_lemma_token_count",
+          "change": "added",
+          "after": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        {
+          "path": "/$defs/profile/properties/counting/required/7",
+          "change": "changed",
+          "before": "number_forms",
+          "after": "new_lemma_token_count"
+        },
+        {
+          "path": "/$defs/profile/properties/counting/required/8",
+          "change": "added",
+          "after": "number_forms"
+        },
+        {
+          "path": "/$defs/profile/properties/expansion_decision",
+          "change": "added",
+          "after": {
+            "const": {
+              "active_entries": 500,
+              "replacement_proposals_applied": false,
+              "notes": "現行500は許可語彙。7組の入替は人間判断待ち。Tier変更8語は適用。"
+            }
+          }
+        },
+        {
+          "path": "/$defs/profile/properties/grammar_count/const",
+          "change": "changed",
+          "before": 29,
+          "after": 32
+        },
+        {
+          "path": "/$defs/profile/properties/grammar_policy/properties/excluded_grammar",
+          "change": "added",
+          "after": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "path": "/$defs/profile/properties/grammar_policy/required/3",
+          "change": "changed",
+          "before": "notes",
+          "after": "excluded_grammar"
+        },
+        {
+          "path": "/$defs/profile/properties/grammar_policy/required/4",
+          "change": "added",
+          "after": "notes"
+        },
+        {
+          "path": "/$defs/profile/properties/hard_min_known_vocab_ratio",
+          "change": "added",
+          "after": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "const": 0.98
+          }
+        },
+        {
+          "path": "/$defs/profile/properties/introduction/const/consolidation_from",
+          "change": "changed",
+          "before": 251,
+          "after": 276
+        },
+        {
+          "path": "/$defs/profile/properties/introduction/const/last_text",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/$defs/profile/properties/introduction/const/ranges/E2/1",
+          "change": "changed",
+          "before": 250,
+          "after": 260
+        },
+        {
+          "path": "/$defs/profile/properties/introduction/const/ranges/E3/1",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/$defs/profile/properties/known_vocab_ratio",
+          "change": "removed",
+          "before": {
+            "const": 0.99
+          }
+        },
+        {
+          "path": "/$defs/profile/properties/new_vocab/const/first_text_new_lemma_token_soft_max",
+          "change": "added",
+          "after": 3
+        },
+        {
+          "path": "/$defs/profile/properties/new_vocab/const/max_entries_per_text",
+          "change": "added",
+          "after": 2
+        },
+        {
+          "path": "/$defs/profile/properties/new_vocab/const/token_policy",
+          "change": "added",
+          "after": "初出教材の新出語token合計は原則3以下。各語3回ではない。逸脱は人間レビューを要する。"
+        },
+        {
+          "path": "/$defs/profile/properties/new_vocab/const/unit",
+          "change": "added",
+          "after": "lemma"
+        },
+        {
+          "path": "/$defs/profile/properties/repetition/const/near_repetition_scope",
+          "change": "added",
+          "after": "既知語の近距離反復を推奨。初出の新出語は全語合計token3以下の方針を優先。"
+        },
+        {
+          "path": "/$defs/profile/properties/repetition/const/new_lemma_mass_repetition_in_first_text",
+          "change": "added",
+          "after": false
+        },
+        {
+          "path": "/$defs/profile/properties/repetition/const/prefer_new_lemma_repetition_in_later_texts",
+          "change": "added",
+          "after": true
+        },
+        {
+          "path": "/$defs/profile/properties/target_known_vocab_ratio",
+          "change": "added",
+          "after": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "const": 0.99
+          }
+        },
+        {
+          "path": "/$defs/profile/required/9",
+          "change": "changed",
+          "before": "known_vocab_ratio",
+          "after": "hard_min_known_vocab_ratio"
+        },
+        {
+          "path": "/$defs/profile/required/10",
+          "change": "changed",
+          "before": "repetition",
+          "after": "target_known_vocab_ratio"
+        },
+        {
+          "path": "/$defs/profile/required/11",
+          "change": "changed",
+          "before": "style",
+          "after": "repetition"
+        },
+        {
+          "path": "/$defs/profile/required/12",
+          "change": "changed",
+          "before": "grammar_count",
+          "after": "style"
+        },
+        {
+          "path": "/$defs/profile/required/13",
+          "change": "changed",
+          "before": "counting",
+          "after": "grammar_count"
+        },
+        {
+          "path": "/$defs/profile/required/14",
+          "change": "changed",
+          "before": "introduction",
+          "after": "core_decision"
+        },
+        {
+          "path": "/$defs/profile/required/15",
+          "change": "changed",
+          "before": "feasibility",
+          "after": "expansion_decision"
+        },
+        {
+          "path": "/$defs/profile/required/16",
+          "change": "changed",
+          "before": "grammar_policy",
+          "after": "counting"
+        },
+        {
+          "path": "/$defs/profile/required/17",
+          "change": "changed",
+          "before": "review_required",
+          "after": "introduction"
+        },
+        {
+          "path": "/$defs/profile/required/18",
+          "change": "added",
+          "after": "feasibility"
+        },
+        {
+          "path": "/$defs/profile/required/19",
+          "change": "added",
+          "after": "grammar_policy"
+        },
+        {
+          "path": "/$defs/profile/required/20",
+          "change": "added",
+          "after": "review_required"
+        },
+        {
+          "path": "/$defs/replacement_proposals",
+          "change": "added",
+          "after": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "phase",
+              "status",
+              "applied",
+              "counted_in_vocab_budget",
+              "entries",
+              "notes"
+            ],
+            "properties": {
+              "phase": {
+                "const": "1.1"
+              },
+              "status": {
+                "const": "pending_human_review"
+              },
+              "applied": {
+                "const": false
+              },
+              "counted_in_vocab_budget": {
+                "const": false
+              },
+              "entries": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "source_id",
+                    "source_lemma",
+                    "source_pos",
+                    "source_sense",
+                    "action",
+                    "removal_reason",
+                    "candidate",
+                    "replacement_reason",
+                    "status"
+                  ],
+                  "properties": {
+                    "source_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_lemma": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_pos": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_sense": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "action": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "removal_reason": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "candidate": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": [
+                        "lemma",
+                        "pos",
+                        "sense",
+                        "gloss_ja",
+                        "category",
+                        "tier",
+                        "notes"
+                      ],
+                      "properties": {
+                        "lemma": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "pos": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "sense": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "gloss_ja": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "tier": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "notes": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "replacement_reason": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "minItems": 7,
+                "maxItems": 7
+              },
+              "notes": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "config/languages/ko/k1/vocab.schema.json",
+      "change": "changed",
+      "before_sha256": "b615767f3376d1b90c0d854e00488419068db850cdf351f23f526396daefd26d",
+      "after_sha256": "ae77f98ddbac28728d08f934a744c7f1da978144fd3f3e2069a8b3eed0bce5fb",
+      "json_changes": [
+        {
+          "path": "/items/allOf/0/else/properties/introduced_from/maximum",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/items/allOf/0/else/properties/introduced_to/maximum",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/items/properties/introduced_from/maximum",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        },
+        {
+          "path": "/items/properties/introduced_to/maximum",
+          "change": "changed",
+          "before": 250,
+          "after": 275
+        }
+      ]
+    },
+    {
+      "file": "reports/k1_vocab_design_report.md",
+      "change": "unchanged",
+      "before_sha256": "190dfb57edd145a9417b144d3836af8fd048f69f4a7350f4a71a8254c2a0db6b",
+      "after_sha256": "190dfb57edd145a9417b144d3836af8fd048f69f4a7350f4a71a8254c2a0db6b"
+    },
+    {
+      "file": "reports/k1_vocab_design_report_phase1_1.md",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "e16276b75f7bd4dc261dcc7f01b856053aa9d64f39609486af6d82b88d6c088a"
+    },
+    {
+      "file": "reports/k1_vocab_validation_result.json",
+      "change": "unchanged",
+      "before_sha256": "ea52a90812fd1a4e5b5bb5d40342d8157bd5c9ab31c987fb747fe25f95140635",
+      "after_sha256": "ea52a90812fd1a4e5b5bb5d40342d8157bd5c9ab31c987fb747fe25f95140635"
+    },
+    {
+      "file": "reports/k1_vocab_validation_result_phase1_1.json",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "1a5edcfdace917d46a42863f7e1e23c78766611b8b9e3a00d8f7131e4d2ed9aa",
+      "json_changes": [
+        {
+          "path": "",
+          "change": "added",
+          "after": {
+            "ok": true,
+            "errors": [],
+            "warnings": [
+              "Replacement proposals are pending; the active 500 contains seven provisional K2 deferral candidates.",
+              "At most three new-lemma tokens does not guarantee hard 98% or target 99%; actual lexical denominator and knowledge must be measured.",
+              "Counts/schema pass does not certify dictionary senses, naturalness, learner familiarity, or six real exposure texts."
+            ],
+            "summary": {
+              "core": 300,
+              "expansion": 500,
+              "total": 800,
+              "source_core": 300,
+              "tiers": {
+                "E1": 200,
+                "E2": 200,
+                "E3": 100
+              },
+              "expansion_pos": {
+                "adjective": 63,
+                "adverb": 37,
+                "conjunction": 4,
+                "counter": 20,
+                "determiner": 7,
+                "interjection": 2,
+                "noun": 258,
+                "numeral": 4,
+                "pronoun": 3,
+                "verb": 102
+              },
+              "expansion_categories": {
+                "people_social": 40,
+                "places_objects": 90,
+                "food_nature": 50,
+                "verbs": 100,
+                "adjectives": 65,
+                "adverbs_connectors": 50,
+                "time_counters_units": 35,
+                "abstract_body_emotion": 40,
+                "school_work_transport_info": 30
+              },
+              "grammar": 32,
+              "confidence": {
+                "high": 489,
+                "medium": 11
+              },
+              "introduction_capacity": {
+                "assigned": 500,
+                "texts_used": 265,
+                "period_texts": 275,
+                "slots": 550,
+                "slack": 50,
+                "witness_period_counts": {
+                  "0": 10,
+                  "1": 30,
+                  "2": 235
+                },
+                "witness_assigned": 500,
+                "witness_last_introduction": 275,
+                "consolidation_texts": 25,
+                "consolidation_new_entries": 0
+              },
+              "known_ratio_policy": {
+                "hard_min": 0.98,
+                "target": 0.99,
+                "first_text_new_lemma_token_soft_max": 3
+              },
+              "replacement_proposals": {
+                "pending": 7,
+                "applied": false,
+                "projection": {
+                  "core": 300,
+                  "expansion": 500,
+                  "total": 800,
+                  "tiers": {
+                    "E1": 200,
+                    "E2": 200,
+                    "E3": 100
+                  },
+                  "categories": {
+                    "people_social": 40,
+                    "places_objects": 90,
+                    "food_nature": 50,
+                    "verbs": 100,
+                    "adjectives": 65,
+                    "adverbs_connectors": 50,
+                    "time_counters_units": 35,
+                    "abstract_body_emotion": 40,
+                    "school_work_transport_info": 30
+                  },
+                  "collisions": 0,
+                  "notes": "Dry-run counts and lexical identity checks only; not adopted DB or certified language quality."
+                }
+              },
+              "core_expansion_same_lemma": {
+                "개": [
+                  {
+                    "pos": "noun",
+                    "sense": "dog",
+                    "tier": "core"
+                  },
+                  {
+                    "pos": "counter",
+                    "sense": "item_unit",
+                    "tier": "E1"
+                  }
+                ],
+                "눈": [
+                  {
+                    "pos": "noun",
+                    "sense": "snow",
+                    "tier": "core"
+                  },
+                  {
+                    "pos": "noun",
+                    "sense": "eye",
+                    "tier": "E1"
+                  }
+                ],
+                "쓰다": [
+                  {
+                    "pos": "verb",
+                    "sense": "write",
+                    "tier": "core"
+                  },
+                  {
+                    "pos": "adjective",
+                    "sense": "bitter",
+                    "tier": "E2"
+                  }
+                ],
+                "이": [
+                  {
+                    "pos": "numeral",
+                    "sense": "two_sino",
+                    "tier": "core"
+                  },
+                  {
+                    "pos": "determiner",
+                    "sense": "this",
+                    "tier": "E1"
+                  },
+                  {
+                    "pos": "noun",
+                    "sense": "tooth",
+                    "tier": "E2"
+                  }
+                ],
+                "저": [
+                  {
+                    "pos": "pronoun",
+                    "sense": "i_humble",
+                    "tier": "core"
+                  },
+                  {
+                    "pos": "determiner",
+                    "sense": "that_over_there",
+                    "tier": "E1"
+                  }
+                ],
+                "찍다": [
+                  {
+                    "pos": "verb",
+                    "sense": "take_photo",
+                    "tier": "core"
+                  },
+                  {
+                    "pos": "verb",
+                    "sense": "stamp",
+                    "tier": "E2"
+                  }
+                ],
+                "팔": [
+                  {
+                    "pos": "numeral",
+                    "sense": "eight_sino",
+                    "tier": "core"
+                  },
+                  {
+                    "pos": "noun",
+                    "sense": "arm",
+                    "tier": "E2"
+                  }
+                ]
+              },
+              "distinct_lemmas": 785
+            }
+          }
+        }
+      ]
+    },
+    {
+      "file": "requirements-dev.txt",
+      "change": "unchanged",
+      "before_sha256": "3351b776ebac83e9f9ed3fd9a0319a9bb6b85deca542ef9a36b7302c74ce3014",
+      "after_sha256": "3351b776ebac83e9f9ed3fd9a0319a9bb6b85deca542ef9a36b7302c74ce3014"
+    },
+    {
+      "file": "scripts/audit_phase1_1_changes.py",
+      "change": "added",
+      "before_sha256": null,
+      "after_sha256": "9109b80756306dea875a5471b231ff451d897d6c3948041363b62bf67f428238"
+    },
+    {
+      "file": "scripts/build_k1_data.py",
+      "change": "changed",
+      "before_sha256": "0df8cce9f2d510512f54fd457d3de55238b823654c326d5e12ffec062ce42026",
+      "after_sha256": "f52c86697b793ec5f53e9d9271824b7adb2b9f3a1eb3f36fb321e25829a3c2a4"
+    },
+    {
+      "file": "scripts/validate_k1_vocab.py",
+      "change": "changed",
+      "before_sha256": "18c980c0022278752d25685148033887c806015448fcad7b4756b9319a9e42a3",
+      "after_sha256": "8564ab99b2b867f517fdb4f241ab45b48050594b6b2091b2dda27d5017cbe4d1"
+    },
+    {
+      "file": "tests/test_validate_k1_vocab.py",
+      "change": "changed",
+      "before_sha256": "23e07fe81291d4f0683264c7e25e810cfa331deca371a1d5c8849da664eeb27c",
+      "after_sha256": "ce7f470da85a78d9fc46f7cfc20c79415d95e1966c5acc6af9f3f6f708be0e81"
+    }
+  ]
+}

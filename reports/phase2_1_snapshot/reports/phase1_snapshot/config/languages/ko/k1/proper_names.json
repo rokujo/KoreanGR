@@ -1,0 +1,12 @@
+{
+  "counted_in_vocab_budget": false,
+  "entries": [
+    {
+      "lemma": "한국",
+      "kind": "country",
+      "gloss_ja": "韓国",
+      "source": "Core原案の41番",
+      "notes": "固有名詞。事前提示して理解可能にし、無制限の固有名詞追加は避ける。"
+    }
+  ]
+}

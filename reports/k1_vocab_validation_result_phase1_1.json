@@ -1,0 +1,188 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [
+    "Replacement proposals are pending; the active 500 contains seven provisional K2 deferral candidates.",
+    "At most three new-lemma tokens does not guarantee hard 98% or target 99%; actual lexical denominator and knowledge must be measured.",
+    "Counts/schema pass does not certify dictionary senses, naturalness, learner familiarity, or six real exposure texts."
+  ],
+  "summary": {
+    "core": 300,
+    "expansion": 500,
+    "total": 800,
+    "source_core": 300,
+    "tiers": {
+      "E1": 200,
+      "E2": 200,
+      "E3": 100
+    },
+    "expansion_pos": {
+      "adjective": 63,
+      "adverb": 37,
+      "conjunction": 4,
+      "counter": 20,
+      "determiner": 7,
+      "interjection": 2,
+      "noun": 258,
+      "numeral": 4,
+      "pronoun": 3,
+      "verb": 102
+    },
+    "expansion_categories": {
+      "people_social": 40,
+      "places_objects": 90,
+      "food_nature": 50,
+      "verbs": 100,
+      "adjectives": 65,
+      "adverbs_connectors": 50,
+      "time_counters_units": 35,
+      "abstract_body_emotion": 40,
+      "school_work_transport_info": 30
+    },
+    "grammar": 32,
+    "confidence": {
+      "high": 489,
+      "medium": 11
+    },
+    "introduction_capacity": {
+      "assigned": 500,
+      "texts_used": 265,
+      "period_texts": 275,
+      "slots": 550,
+      "slack": 50,
+      "witness_period_counts": {
+        "0": 10,
+        "1": 30,
+        "2": 235
+      },
+      "witness_assigned": 500,
+      "witness_last_introduction": 275,
+      "consolidation_texts": 25,
+      "consolidation_new_entries": 0
+    },
+    "known_ratio_policy": {
+      "hard_min": 0.98,
+      "target": 0.99,
+      "first_text_new_lemma_token_soft_max": 3
+    },
+    "replacement_proposals": {
+      "pending": 7,
+      "applied": false,
+      "projection": {
+        "core": 300,
+        "expansion": 500,
+        "total": 800,
+        "tiers": {
+          "E1": 200,
+          "E2": 200,
+          "E3": 100
+        },
+        "categories": {
+          "people_social": 40,
+          "places_objects": 90,
+          "food_nature": 50,
+          "verbs": 100,
+          "adjectives": 65,
+          "adverbs_connectors": 50,
+          "time_counters_units": 35,
+          "abstract_body_emotion": 40,
+          "school_work_transport_info": 30
+        },
+        "collisions": 0,
+        "notes": "Dry-run counts and lexical identity checks only; not adopted DB or certified language quality."
+      }
+    },
+    "core_expansion_same_lemma": {
+      "개": [
+        {
+          "pos": "noun",
+          "sense": "dog",
+          "tier": "core"
+        },
+        {
+          "pos": "counter",
+          "sense": "item_unit",
+          "tier": "E1"
+        }
+      ],
+      "눈": [
+        {
+          "pos": "noun",
+          "sense": "snow",
+          "tier": "core"
+        },
+        {
+          "pos": "noun",
+          "sense": "eye",
+          "tier": "E1"
+        }
+      ],
+      "쓰다": [
+        {
+          "pos": "verb",
+          "sense": "write",
+          "tier": "core"
+        },
+        {
+          "pos": "adjective",
+          "sense": "bitter",
+          "tier": "E2"
+        }
+      ],
+      "이": [
+        {
+          "pos": "numeral",
+          "sense": "two_sino",
+          "tier": "core"
+        },
+        {
+          "pos": "determiner",
+          "sense": "this",
+          "tier": "E1"
+        },
+        {
+          "pos": "noun",
+          "sense": "tooth",
+          "tier": "E2"
+        }
+      ],
+      "저": [
+        {
+          "pos": "pronoun",
+          "sense": "i_humble",
+          "tier": "core"
+        },
+        {
+          "pos": "determiner",
+          "sense": "that_over_there",
+          "tier": "E1"
+        }
+      ],
+      "찍다": [
+        {
+          "pos": "verb",
+          "sense": "take_photo",
+          "tier": "core"
+        },
+        {
+          "pos": "verb",
+          "sense": "stamp",
+          "tier": "E2"
+        }
+      ],
+      "팔": [
+        {
+          "pos": "numeral",
+          "sense": "eight_sino",
+          "tier": "core"
+        },
+        {
+          "pos": "noun",
+          "sense": "arm",
+          "tier": "E2"
+        }
+      ]
+    },
+    "distinct_lemmas": 785
+  }
+}

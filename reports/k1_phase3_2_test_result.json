@@ -1,0 +1,24 @@
+{
+  "command": "python -B scripts/run_k1_phase3_2_tests.py",
+  "tests": 169,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 491.314,
+  "status": "PASS",
+  "log": "reports/k1_phase3_2_all_test_log.txt",
+  "exit_code": 0,
+  "final_focused_suite": {
+    "command": "python -B scripts/run_k1_phase3_2_tests.py --focused",
+    "tests": 22,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 40.412,
+    "status": "PASS",
+    "log": "reports/k1_phase3_2_focused_test_log.txt",
+    "exit_code": 0
+  },
+  "unique_test_methods_covered": 170,
+  "full_suite_started_before_last_identity_bug_injection_test": true
+}

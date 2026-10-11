@@ -1,0 +1,372 @@
+{
+  "report_only": true,
+  "engine_or_config_changed": false,
+  "registered_entry": {
+    "id": "ko_k1_0419",
+    "language": "ko",
+    "lemma": "졸리다",
+    "pos": "adjective",
+    "sense": "sleepy",
+    "gloss_ja": "眠い",
+    "level": "K1",
+    "tier": "E1",
+    "rank": 419,
+    "tags": [
+      "daily_life",
+      "description"
+    ],
+    "allow_inflection": true,
+    "introduced_from": 21,
+    "introduced_to": 140,
+    "target_exposures": 6,
+    "forms": [],
+    "notes": null,
+    "category": "adjectives",
+    "confidence": "high"
+  },
+  "probes": [
+    {
+      "original_text": "저는 졸려요.",
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "졸리",
+          "tag": "VV",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 4,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 6,
+          "length": 1
+        }
+      ]
+    },
+    {
+      "original_text": "졸린 친구가 집에 가요.",
+      "raw_morphology": [
+        {
+          "form": "졸리",
+          "tag": "VV",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "ᆫ",
+          "tag": "ETM",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "친구",
+          "tag": "NNG",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "가",
+          "tag": "JKS",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "집",
+          "tag": "NNG",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "에",
+          "tag": "JKB",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "가",
+          "tag": "VV",
+          "start": 10,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 10,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 12,
+          "length": 1
+        }
+      ]
+    },
+    {
+      "original_text": "저는 졸리고 피곤해요.",
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "졸리",
+          "tag": "VV",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "고",
+          "tag": "EC",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "피곤",
+          "tag": "NNG",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": "하",
+          "tag": "XSA",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 9,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 11,
+          "length": 1
+        }
+      ]
+    },
+    {
+      "original_text": "졸려서 집에 가요.",
+      "raw_morphology": [
+        {
+          "form": "졸리",
+          "tag": "VV",
+          "start": 0,
+          "length": 2
+        },
+        {
+          "form": "어서",
+          "tag": "EC",
+          "start": 1,
+          "length": 2
+        },
+        {
+          "form": "집",
+          "tag": "NNG",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "에",
+          "tag": "JKB",
+          "start": 5,
+          "length": 1
+        },
+        {
+          "form": "가",
+          "tag": "VV",
+          "start": 7,
+          "length": 1
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 7,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 9,
+          "length": 1
+        }
+      ]
+    },
+    {
+      "original_text": "저는 졸리니까 집에 갈 거예요.",
+      "raw_morphology": [
+        {
+          "form": "저",
+          "tag": "NP",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "는",
+          "tag": "JX",
+          "start": 1,
+          "length": 1
+        },
+        {
+          "form": "졸리",
+          "tag": "VV",
+          "start": 3,
+          "length": 2
+        },
+        {
+          "form": "니까",
+          "tag": "EC",
+          "start": 5,
+          "length": 2
+        },
+        {
+          "form": "집",
+          "tag": "NNG",
+          "start": 8,
+          "length": 1
+        },
+        {
+          "form": "에",
+          "tag": "JKB",
+          "start": 9,
+          "length": 1
+        },
+        {
+          "form": "가",
+          "tag": "VV",
+          "start": 11,
+          "length": 1
+        },
+        {
+          "form": "ᆯ",
+          "tag": "ETM",
+          "start": 11,
+          "length": 1
+        },
+        {
+          "form": "거",
+          "tag": "NNB",
+          "start": 13,
+          "length": 1
+        },
+        {
+          "form": "이",
+          "tag": "VCP",
+          "start": 14,
+          "length": 0
+        },
+        {
+          "form": "예요",
+          "tag": "EF",
+          "start": 14,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 16,
+          "length": 1
+        }
+      ]
+    },
+    {
+      "original_text": "\"졸려요.\"",
+      "raw_morphology": [
+        {
+          "form": "\"",
+          "tag": "SSO",
+          "start": 0,
+          "length": 1
+        },
+        {
+          "form": "졸리",
+          "tag": "VV",
+          "start": 1,
+          "length": 2
+        },
+        {
+          "form": "어요",
+          "tag": "EF",
+          "start": 2,
+          "length": 2
+        },
+        {
+          "form": ".",
+          "tag": "SF",
+          "start": 4,
+          "length": 1
+        },
+        {
+          "form": "\"",
+          "tag": "SSC",
+          "start": 5,
+          "length": 1
+        }
+      ]
+    }
+  ],
+  "actual_state": {
+    "epoch": 66,
+    "last_committed_text": 66,
+    "planned_067_actual": [
+      {
+        "vocab_id": "ko_k1_0419",
+        "lemma": "졸리다",
+        "first_planned_text": 67,
+        "actual_first_text": null,
+        "actual_texts": [],
+        "actual_exposure_count": 0,
+        "incidental_exposure_count": 0,
+        "selected_review_exposure_count": 0,
+        "last_exposure_text": null,
+        "paid_review_windows": {},
+        "active_window": [],
+        "outstanding_debt": [],
+        "deadline_status": "not_introduced"
+      },
+      {
+        "vocab_id": "ko_k1_0420",
+        "lemma": "슬프다",
+        "first_planned_text": 67,
+        "actual_first_text": null,
+        "actual_texts": [],
+        "actual_exposure_count": 0,
+        "incidental_exposure_count": 0,
+        "selected_review_exposure_count": 0,
+        "last_exposure_text": null,
+        "paid_review_windows": {},
+        "active_window": [],
+        "outstanding_debt": [],
+        "deadline_status": "not_introduced"
+      }
+    ]
+  },
+  "ledger_sha_at_stop": "91186cb396ef62b63939b6e82ba6e59528dbda6625a3d7ac524c709ba8a0156e"
+}

@@ -1,0 +1,243 @@
+{
+  "type": "sentence_local_sense_false_acceptance",
+  "text": 5,
+  "sentence": "집에서 가족하고 저녁을 먹을 거예요.",
+  "translation": "家で家族と夕食を食べる予定です。",
+  "frozen_entry": {
+    "id": "ko_k1_0074",
+    "language": "ko",
+    "lemma": "저녁",
+    "pos": "noun",
+    "sense": "evening",
+    "gloss_ja": "夕方・晩",
+    "level": "K1",
+    "tier": "core",
+    "rank": 74,
+    "tags": [
+      "daily_life",
+      "time"
+    ],
+    "allow_inflection": false,
+    "introduced_from": null,
+    "introduced_to": null,
+    "target_exposures": null,
+    "forms": [],
+    "notes": "夕方・晩の時間義のみ。夕食義は밥/음식で表現し未許可。",
+    "category": "time",
+    "confidence": "high"
+  },
+  "canonical_annotations": [
+    {
+      "surface": "집",
+      "lemma": "집",
+      "pos": "noun",
+      "sense": "home",
+      "vocab_id": "ko_k1_0042",
+      "role": "core",
+      "start": 0,
+      "end": 1,
+      "morph_indices": [
+        0
+      ],
+      "grammar_id": null,
+      "sentence_index": 1
+    },
+    {
+      "surface": "에서",
+      "lemma": null,
+      "pos": null,
+      "sense": null,
+      "vocab_id": null,
+      "role": "grammar_function",
+      "start": 1,
+      "end": 3,
+      "morph_indices": [
+        1
+      ],
+      "grammar_id": "ko_k1_g23",
+      "sentence_index": 1
+    },
+    {
+      "surface": "가족",
+      "lemma": "가족",
+      "pos": "noun",
+      "sense": "family",
+      "vocab_id": "ko_k1_0023",
+      "role": "core",
+      "start": 4,
+      "end": 6,
+      "morph_indices": [
+        2
+      ],
+      "grammar_id": null,
+      "sentence_index": 1
+    },
+    {
+      "surface": "하고",
+      "lemma": null,
+      "pos": null,
+      "sense": null,
+      "vocab_id": null,
+      "role": "grammar_function",
+      "start": 6,
+      "end": 8,
+      "morph_indices": [
+        3
+      ],
+      "grammar_id": "ko_k1_g25",
+      "sentence_index": 1
+    },
+    {
+      "surface": "저녁",
+      "lemma": "저녁",
+      "pos": "noun",
+      "sense": "evening",
+      "vocab_id": "ko_k1_0074",
+      "role": "core",
+      "start": 9,
+      "end": 11,
+      "morph_indices": [
+        4
+      ],
+      "grammar_id": null,
+      "sentence_index": 1
+    },
+    {
+      "surface": "을",
+      "lemma": null,
+      "pos": null,
+      "sense": null,
+      "vocab_id": null,
+      "role": "grammar_function",
+      "start": 11,
+      "end": 12,
+      "morph_indices": [
+        5
+      ],
+      "grammar_id": "ko_k1_g21",
+      "sentence_index": 1
+    },
+    {
+      "surface": "먹",
+      "lemma": "먹다",
+      "pos": "verb",
+      "sense": "eat",
+      "vocab_id": "ko_k1_0172",
+      "role": "core",
+      "start": 13,
+      "end": 14,
+      "morph_indices": [
+        6
+      ],
+      "grammar_id": null,
+      "sentence_index": 1
+    },
+    {
+      "surface": "을",
+      "lemma": null,
+      "pos": null,
+      "sense": null,
+      "vocab_id": null,
+      "role": "grammar_function",
+      "start": 14,
+      "end": 15,
+      "morph_indices": [
+        7
+      ],
+      "grammar_id": "ko_k1_g04",
+      "sentence_index": 1
+    },
+    {
+      "surface": "거",
+      "lemma": null,
+      "pos": null,
+      "sense": null,
+      "vocab_id": null,
+      "role": "grammar_function",
+      "start": 16,
+      "end": 17,
+      "morph_indices": [
+        8
+      ],
+      "grammar_id": "ko_k1_g04",
+      "sentence_index": 1
+    },
+    {
+      "surface": "예",
+      "lemma": null,
+      "pos": null,
+      "sense": null,
+      "vocab_id": null,
+      "role": "grammar_function",
+      "start": 17,
+      "end": 18,
+      "morph_indices": [
+        9
+      ],
+      "grammar_id": "ko_k1_g01",
+      "sentence_index": 1
+    },
+    {
+      "surface": "예요",
+      "lemma": null,
+      "pos": null,
+      "sense": null,
+      "vocab_id": null,
+      "role": "grammar_function",
+      "start": 17,
+      "end": 19,
+      "morph_indices": [
+        10
+      ],
+      "grammar_id": "ko_k1_g01",
+      "sentence_index": 1
+    }
+  ],
+  "mechanical_permission_issues": [],
+  "confirmed_unapproved_function": "dinner_meal",
+  "allowed_function": "evening_time_only",
+  "report_only": true,
+  "previous_record_not_rewritten": true,
+  "author_review_missed": true,
+  "report_only_recalculation": {
+    "ok": false,
+    "N": 142,
+    "U": 2,
+    "controlled_tokens": 141,
+    "previous_tokens": 139,
+    "new_lemma_count": 2,
+    "new_entry_count": 2,
+    "controlled_vocab_coverage": 0.9929577464788732,
+    "previous_vocab_coverage": 0.9788732394366197,
+    "dynamic_hard_new_token_limit": 2,
+    "target_new_token_limit": 1,
+    "errors": [
+      "Token 234: uncontrolled vocabulary or future introduction",
+      "controlled_vocab_coverage below hard 100%",
+      "previous_vocab_coverage below hard 98%"
+    ],
+    "warnings": []
+  },
+  "affected_original_annotations": [
+    {
+      "surface": "저녁",
+      "lemma": "저녁",
+      "pos": "noun",
+      "sense": "dinner_meal_unapproved",
+      "vocab_id": null,
+      "role": "unresolved",
+      "start": 478,
+      "end": 480,
+      "morph_indices": [
+        274
+      ],
+      "grammar_id": null,
+      "sentence_index": 29
+    }
+  ],
+  "proposed_omission_or_replacement": "집에서 가족하고 밥을 먹을 거예요.",
+  "proposed_translation": "At home I will eat a meal with family.",
+  "not_applied": true,
+  "meaning_preserving_replacement": "저녁에 집에서 가족하고 밥을 먹을 거예요.",
+  "replacement_status": "REPORT_ONLY_NOT_APPLIED"
+}

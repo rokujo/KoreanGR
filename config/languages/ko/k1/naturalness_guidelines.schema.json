@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "version",
+    "rules",
+    "semantic_frames",
+    "pipeline"
+  ],
+  "properties": {
+    "rules": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "category",
+          "severity",
+          "bad_examples",
+          "preferred_strategy",
+          "autolint_possible",
+          "notes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^nat_[a-z_]+$"
+          },
+          "severity": {
+            "const": "warning"
+          },
+          "bad_examples": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "preferred_strategy": {
+            "type": "string",
+            "minLength": 1
+          },
+          "autolint_possible": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

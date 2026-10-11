@@ -1,0 +1,1596 @@
+{
+  "engineering_start_utc": "2026-10-11T07:17:57.949769+00:00",
+  "production_start_utc": "2026-10-11T07:26:51.710197+00:00",
+  "production_start_counter": 90703.2471823,
+  "texts": [
+    {
+      "text_number": 1,
+      "start_counter": 90703.2471883,
+      "start_utc": "2026-10-11T07:26:51.842515+00:00",
+      "phase": "committed",
+      "phase_start_counter": 90801.2903445,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-001-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 16.894963200000348,
+          "validation_seconds": 2.7324858000065433,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 2.5165594999707537,
+            "semantic_diagnostics": 0.012070900003891438
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 47.03464779999922,
+        "lexical_preflight": 2.703650600000401,
+        "author_draft": 28.676215299987234,
+        "preflight_repair": 16.894963200000348,
+        "morphology_vocab_analysis": 2.5165594999707537,
+        "mechanical_validation": 0.2159263000357896,
+        "naturalness_review": 19.038218700006837,
+        "final_reanalysis": 2.7368091999960598,
+        "commit": 0.5711183000094024,
+        "controller_overhead": 1.205321899993578
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 1,
+        "title_ko": "한국어 책",
+        "genre": "friends",
+        "scene": [
+          "home",
+          "friendship",
+          "school"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "practice_before_first_language_class",
+          "setting": "friend_home_table",
+          "participants": "adult_new_student_and_friend",
+          "problem_type": "unfamiliar_book_words",
+          "resolution_type": "friend_guides_short_reading_practice",
+          "main_actions": [
+            "read",
+            "listen_to_example",
+            "repeat_reading",
+            "check_class_time"
+          ]
+        }
+      },
+      "preflight_seconds": 2.703650600000401,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 14,
+            "vocab_id": null,
+            "lemma": "세요",
+            "surface": "세요",
+            "start": 13,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 20,
+            "vocab_id": null,
+            "lemma": "지금",
+            "surface": "지금",
+            "start": 0,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-001-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "A new adult language student practices at a friend's home before the first lesson. The narrator owns the book throughout; friend models reading. 쓰다 refers only to writing names/time. 괜찮아요 is reassurance; 되다 is becoming a student. Japanese was checked against finalized Korean; no unregistered opening-book action or hidden subject change."
+          }
+        }
+      ],
+      "end_counter": 90824.8406191,
+      "total_seconds": 121.59343079999962,
+      "coverage": {
+        "denominator_N": 126,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9841269841269841,
+        "target_99_met": false
+      },
+      "eojeol_count": 133,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "A new adult language student practices at a friend's home before the first lesson. The narrator owns the book throughout; friend models reading. 쓰다 refers only to writing names/time. 괜찮아요 is reassurance; 되다 is becoming a student. Japanese was checked against finalized Korean; no unregistered opening-book action or hidden subject change."
+      },
+      "effective_review_credit": 2,
+      "actual_previous_review_credit": 0,
+      "health_after": {
+        "capped_exposure_progress": 2,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2998,
+        "remaining_texts_to_300": 299,
+        "required_future_credit_rate": 10.02675585284281,
+        "planning_color": "GREEN",
+        "outstanding_windows": 0,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 2,
+      "start_counter": 90828.2396584,
+      "start_utc": "2026-10-11T07:28:57.006468+00:00",
+      "phase": "committed",
+      "phase_start_counter": 90921.8858232,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-002-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 56.022689200006425,
+          "validation_seconds": 3.256187499995576,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 2.8117549999878975,
+            "semantic_diagnostics": 0.010956600002828054
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 31.397379200003343,
+        "lexical_preflight": 2.96856399999524,
+        "author_draft": 56.022689200006425,
+        "morphology_vocab_analysis": 2.8117549999878975,
+        "mechanical_validation": 0.44443250000767875,
+        "naturalness_review": 12.492446499993093,
+        "final_reanalysis": 2.47680419999233,
+        "commit": 0.9639719000115292,
+        "controller_overhead": 1.0493477000127314
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 2,
+        "title_ko": "토요일 약속",
+        "genre": "short_dialogue",
+        "scene": [
+          "communication",
+          "friendship",
+          "home"
+        ],
+        "review_candidates": [],
+        "scene_fingerprint": {
+          "goal": "agree_evening_movie_visit",
+          "setting": "phone_call_before_weekend",
+          "participants": "two_friends",
+          "problem_type": "morning_work_conflicts_with_visit",
+          "resolution_type": "choose_evening_and_simple_meal",
+          "main_actions": [
+            "telephone",
+            "answer_availability",
+            "agree_time",
+            "prepare_movie_and_food"
+          ]
+        }
+      },
+      "preflight_seconds": 2.96856399999524,
+      "lexical_preflight": {
+        "findings": [],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-002-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Two friends arrange an evening visit after work, with dinner and a movie at the narrator's home. Yes/no answer different availability questions; each new interjection appears once. 괜찮아요 accepts the proposed time and 좋아요 explicitly accepts the meal plan. Home and computer ownership are clear; faithful Japanese has no repaired meaning."
+          }
+        }
+      ],
+      "end_counter": 90938.8670486,
+      "total_seconds": 110.62739020001027,
+      "coverage": {
+        "denominator_N": 115,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9826086956521739,
+        "target_99_met": false
+      },
+      "eojeol_count": 124,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Two friends arrange an evening visit after work, with dinner and a movie at the narrator's home. Yes/no answer different availability questions; each new interjection appears once. 괜찮아요 accepts the proposed time and 좋아요 explicitly accepts the meal plan. Home and computer ownership are clear; faithful Japanese has no repaired meaning."
+      },
+      "effective_review_credit": 3,
+      "actual_previous_review_credit": 1,
+      "health_after": {
+        "capped_exposure_progress": 5,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2995,
+        "remaining_texts_to_300": 298,
+        "required_future_credit_rate": 10.050335570469798,
+        "planning_color": "GREEN",
+        "outstanding_windows": 0,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 3,
+      "start_counter": 90942.3672686,
+      "start_utc": "2026-10-11T07:30:51.328313+00:00",
+      "phase": "committed",
+      "phase_start_counter": 91065.3726258,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-003-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 14.12421500000346,
+          "validation_seconds": 4.205887999996776,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 3.499299700037227,
+            "semantic_diagnostics": 0.016954500009887852
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 31.840559599993867,
+        "lexical_preflight": 2.1563701999984914,
+        "author_draft": 70.67693499999586,
+        "preflight_repair": 14.12421500000346,
+        "morphology_vocab_analysis": 3.499299700037227,
+        "mechanical_validation": 0.7065882999595487,
+        "naturalness_review": 18.95231710000371,
+        "final_reanalysis": 2.425542700002552,
+        "commit": 1.6354510999954073,
+        "controller_overhead": 0.9860052000003634
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 3,
+        "title_ko": "어머니의 선물",
+        "genre": "family",
+        "scene": [
+          "home",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [
+          "괜찮다"
+        ],
+        "planner_vetoes": [
+          {
+            "lemma": "되다",
+            "reason": "Becoming a student/teacher would add an unrelated event to this photo-gift scene; consider another scene before deadline 6."
+          }
+        ],
+        "scene_fingerprint": {
+          "goal": "choose_clear_family_photo_for_mother",
+          "setting": "siblings_home_table",
+          "participants": "narrator_and_older_sister",
+          "problem_type": "two_photos_one_has_small_faces",
+          "resolution_type": "choose_larger_family_picture_and_write_message",
+          "main_actions": [
+            "compare_photos",
+            "describe_people",
+            "write_names",
+            "put_gift_in_bag"
+          ]
+        }
+      },
+      "preflight_seconds": 2.1563701999984914,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 20,
+            "vocab_id": null,
+            "lemma": "크다",
+            "surface": "큰",
+            "start": 4,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 20,
+            "vocab_id": null,
+            "lemma": "ᆫ",
+            "surface": "큰",
+            "start": 4,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-003-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "The sisters compare a small parents-only picture with a larger family picture for their mother's birthday. 이 refers to the small photo just handed over; 그 refers to the large photo just discussed. Preference for family photographs explains the gift. Only the short gift message is written; no name-list filler. 괜찮아요 approves that specific choice; 되다 was vetoed rather than forcing another event. Japanese faithfully tracks the two photos and ownership."
+          }
+        }
+      ],
+      "end_counter": 91089.3705525,
+      "total_seconds": 147.0032838999905,
+      "coverage": {
+        "denominator_N": 131,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9847328244274809,
+        "target_99_met": false
+      },
+      "eojeol_count": 135,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "The sisters compare a small parents-only picture with a larger family picture for their mother's birthday. 이 refers to the small photo just handed over; 그 refers to the large photo just discussed. Preference for family photographs explains the gift. Only the short gift message is written; no name-list filler. 괜찮아요 approves that specific choice; 되다 was vetoed rather than forcing another event. Japanese faithfully tracks the two photos and ownership."
+      },
+      "effective_review_credit": 4,
+      "actual_previous_review_credit": 2,
+      "health_after": {
+        "capped_exposure_progress": 9,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2991,
+        "remaining_texts_to_300": 297,
+        "required_future_credit_rate": 10.070707070707071,
+        "planning_color": "GREEN",
+        "outstanding_windows": 1,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 4,
+      "start_counter": 91092.6347745,
+      "start_utc": "2026-10-11T07:33:21.776157+00:00",
+      "phase": "committed",
+      "phase_start_counter": 91228.0542555,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-004-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 19.255664799988153,
+          "validation_seconds": 2.101406700006919,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.6135058000218123,
+            "semantic_diagnostics": 0.007831299997633323
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 45.33688300001086,
+        "lexical_preflight": 1.3093126000021584,
+        "author_draft": 67.41534039999533,
+        "preflight_repair": 19.255664799988153,
+        "morphology_vocab_analysis": 1.6135058000218123,
+        "mechanical_validation": 0.48790089998510666,
+        "naturalness_review": 43.214524600000004,
+        "final_reanalysis": 1.6536198999965563,
+        "commit": 1.2999042000010377,
+        "controller_overhead": 0.6877538999979151
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 4,
+        "title_ko": "공원 이야기",
+        "genre": "simple_outing",
+        "scene": [
+          "outdoor",
+          "friendship",
+          "communication",
+          "school"
+        ],
+        "review_candidates": [
+          "되다",
+          "네",
+          "아니요"
+        ],
+        "scene_fingerprint": {
+          "goal": "talk_about_work_while_resting_near_school",
+          "setting": "park_bench_with_school_across_street",
+          "participants": "two_adult_friends",
+          "problem_type": "friend_does_not_know_narrators_job_wish",
+          "resolution_type": "narrator_explains_desire_to_teach",
+          "main_actions": [
+            "go_to_park",
+            "rest",
+            "discuss_work",
+            "point_to_school",
+            "describe_teaching"
+          ]
+        },
+        "title_repair_reason": "Remove unresolved attributive title; independent Core noun phrase"
+      },
+      "preflight_seconds": 1.3093126000021584,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 26,
+            "vocab_id": null,
+            "lemma": "요",
+            "surface": "요",
+            "start": 3,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "scope": "title",
+            "vocab_id": null,
+            "lemma": "은",
+            "surface": "은",
+            "start": 4,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-004-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Friends resting by a school discuss the narrator's wish to teach Korean. 되다 is integral to the work wish, not an unrelated event, and pays the early open window. Distant-school 저 and job-question 무슨 have clear contexts. Third-person desire is not asserted: the narrator states their own wish. Yes/no answers distinct questions. The final Japanese matches the park conversation and future teaching plans."
+          }
+        }
+      ],
+      "end_counter": 91274.9091846,
+      "total_seconds": 182.27441009999893,
+      "coverage": {
+        "denominator_N": 128,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984375,
+        "target_99_met": false
+      },
+      "eojeol_count": 137,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Friends resting by a school discuss the narrator's wish to teach Korean. 되다 is integral to the work wish, not an unrelated event, and pays the early open window. Distant-school 저 and job-question 무슨 have clear contexts. Third-person desire is not asserted: the narrator states their own wish. Yes/no answers distinct questions. The final Japanese matches the park conversation and future teaching plans."
+      },
+      "effective_review_credit": 5,
+      "actual_previous_review_credit": 3,
+      "health_after": {
+        "capped_exposure_progress": 14,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2986,
+        "remaining_texts_to_300": 296,
+        "required_future_credit_rate": 10.087837837837839,
+        "planning_color": "GREEN",
+        "outstanding_windows": 0,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 5,
+      "start_counter": 91277.3130656,
+      "start_utc": "2026-10-11T07:36:26.361404+00:00",
+      "phase": "committed",
+      "phase_start_counter": 91393.9915241,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-005-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 65.5694583000004,
+          "validation_seconds": 2.6790583999973023,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.8995096000144258,
+            "semantic_diagnostics": 0.007659899987629615
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 46.981711400003405,
+        "lexical_preflight": 1.4473870000074385,
+        "author_draft": 65.5694583000004,
+        "morphology_vocab_analysis": 1.8995096000144258,
+        "mechanical_validation": 0.7795487999828765,
+        "naturalness_review": 19.173019900001236,
+        "final_reanalysis": 1.8463950000004843,
+        "commit": 1.8161811000027228,
+        "controller_overhead": 0.7607043999887537
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 5,
+        "title_ko": "버스를 기다려요",
+        "genre": "transport",
+        "scene": [
+          "transport",
+          "communication",
+          "family"
+        ],
+        "review_candidates": [
+          "이",
+          "그"
+        ],
+        "scene_fingerprint": {
+          "goal": "take_correct_bus_to_market",
+          "setting": "station_front_bus_waiting_area",
+          "participants": "father_and_child_narrator",
+          "problem_type": "first_bus_has_different_destination",
+          "resolution_type": "wait_for_market_bus_and_board",
+          "main_actions": [
+            "check_bus_time",
+            "distinguish_destinations",
+            "wait",
+            "board",
+            "arrive"
+          ]
+        }
+      },
+      "preflight_seconds": 1.4473870000074385,
+      "lexical_preflight": {
+        "findings": [],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-005-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "The father and narrator wait for a market-bound bus; the first bus goes to school. 이/그 consistently refer to that first bus and 여기 to the station-front waiting area. Few asks arrival time and more expresses the necessary continued wait. The bag contains the narrator's market money, with no ownership switch. Natural 에서 source and 로 transport diagnostics do not cause repair. Japanese preserves destinations and chronology."
+          }
+        }
+      ],
+      "end_counter": 91417.5869811,
+      "total_seconds": 140.27391550000175,
+      "coverage": {
+        "denominator_N": 128,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984375,
+        "target_99_met": false
+      },
+      "eojeol_count": 129,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "The father and narrator wait for a market-bound bus; the first bus goes to school. 이/그 consistently refer to that first bus and 여기 to the station-front waiting area. Few asks arrival time and more expresses the necessary continued wait. The bag contains the narrator's market money, with no ownership switch. Natural 에서 source and 로 transport diagnostics do not cause repair. Japanese preserves destinations and chronology."
+      },
+      "effective_review_credit": 6,
+      "actual_previous_review_credit": 4,
+      "health_after": {
+        "capped_exposure_progress": 20,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2980,
+        "remaining_texts_to_300": 295,
+        "required_future_credit_rate": 10.101694915254237,
+        "planning_color": "GREEN",
+        "outstanding_windows": 0,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 6,
+      "start_counter": 91420.3617285,
+      "start_utc": "2026-10-11T07:38:49.660261+00:00",
+      "phase": "committed",
+      "phase_start_counter": 91602.6056071,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-006-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 111.87849069999356,
+          "validation_seconds": 2.8110048999951687,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.940353200014215,
+            "semantic_diagnostics": 0.0090347999939695
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 65.93872190000548,
+        "lexical_preflight": 1.6141236999974353,
+        "author_draft": 111.87849069999356,
+        "morphology_vocab_analysis": 1.940353200014215,
+        "mechanical_validation": 0.8706516999809537,
+        "naturalness_review": 20.324096199998166,
+        "final_reanalysis": 2.122024099997361,
+        "commit": 2.2085112999920966,
+        "controller_overhead": 0.8736010000284296
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 6,
+        "title_ko": "사과를 먹어요",
+        "genre": "food",
+        "scene": [
+          "home",
+          "food",
+          "communication",
+          "family"
+        ],
+        "review_candidates": [
+          "무슨",
+          "저"
+        ],
+        "scene_fingerprint": {
+          "goal": "share_fruit_during_homework_break",
+          "setting": "home_room_with_two_desks",
+          "participants": "narrator_and_younger_sibling",
+          "problem_type": "sibling_needs_break_before_finishing_homework",
+          "resolution_type": "wash_apples_share_then_return_to_work",
+          "main_actions": [
+            "ask_about_food",
+            "find_apples",
+            "wash",
+            "eat",
+            "resume_homework"
+          ]
+        }
+      },
+      "preflight_seconds": 1.6141236999974353,
+      "lexical_preflight": {
+        "findings": [],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-006-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Siblings take one homework break, wash three apples, share fruit and resume work. Still applies to unfinished homework; progressives describe now. Distant desk is explicitly established before 저. 무슨 asks a food preference, not an unrelated topic. Younger sibling's preference is quoted in first person; later only actual eating is stated. Japanese tracks the narrator's actions and restricted current vocabulary without adding an unavailable cutting/opening action."
+          }
+        }
+      ],
+      "end_counter": 91628.1323023,
+      "total_seconds": 207.7705738000077,
+      "coverage": {
+        "denominator_N": 125,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984,
+        "target_99_met": false
+      },
+      "eojeol_count": 137,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Siblings take one homework break, wash three apples, share fruit and resume work. Still applies to unfinished homework; progressives describe now. Distant desk is explicitly established before 저. 무슨 asks a food preference, not an unrelated topic. Younger sibling's preference is quoted in first person; later only actual eating is stated. Japanese tracks the narrator's actions and restricted current vocabulary without adding an unavailable cutting/opening action."
+      },
+      "effective_review_credit": 7,
+      "actual_previous_review_credit": 5,
+      "health_after": {
+        "capped_exposure_progress": 27,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2973,
+        "remaining_texts_to_300": 294,
+        "required_future_credit_rate": 10.112244897959183,
+        "planning_color": "GREEN",
+        "outstanding_windows": 0,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 7,
+      "start_counter": 91631.3740071,
+      "start_utc": "2026-10-11T07:42:21.512480+00:00",
+      "phase": "committed",
+      "phase_start_counter": 91830.1543401,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-007-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 17.96563900000183,
+          "validation_seconds": 4.564724199997727,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 2.9440997000638163,
+            "semantic_diagnostics": 0.010966500005451962
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 74.40064579999307,
+        "lexical_preflight": 1.7059033999976236,
+        "author_draft": 100.14220670000941,
+        "preflight_repair": 17.96563900000183,
+        "morphology_vocab_analysis": 2.9440997000638163,
+        "mechanical_validation": 1.6206244999339106,
+        "naturalness_review": 16.938450500005274,
+        "final_reanalysis": 2.472977400000673,
+        "commit": 3.353588400001172,
+        "controller_overhead": 1.0267993999877945
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 7,
+        "title_ko": "작은 교실",
+        "genre": "school",
+        "scene": [
+          "school",
+          "communication",
+          "friendship",
+          "home"
+        ],
+        "review_candidates": [
+          "괜찮다",
+          "더"
+        ],
+        "planner_vetoes": [
+          {
+            "lemma": "되다",
+            "reason": "Already-enrolled children do not need an unrelated becoming event; middle window remains open through 25."
+          }
+        ],
+        "scene_fingerprint": {
+          "goal": "solve_reading_question_in_small_class",
+          "setting": "small_school_classroom",
+          "participants": "narrator_younger_sibling_classmate_teacher",
+          "problem_type": "sibling_does_not_understand_question",
+          "resolution_type": "teacher_reassures_and_reads_with_group",
+          "main_actions": [
+            "count_class_members",
+            "read_question",
+            "ask_about_picture",
+            "say_answer",
+            "continue_practice"
+          ]
+        },
+        "natural_expression_gaps": [
+          {
+            "intended_meaning": "open a paper book before the group lesson",
+            "missing_natural_word": "펴다",
+            "current_workaround": "omit opening and directly read the book",
+            "whether_omission_solved_it": true,
+            "resolution": "omit",
+            "recurrence_count_in_this_run": 1,
+            "historical_reference": "Known Phase 3.8 gap; no vocabulary or sense expansion."
+          }
+        ]
+      },
+      "preflight_seconds": 1.7059033999976236,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 15,
+            "vocab_id": null,
+            "lemma": "아이",
+            "surface": "아이",
+            "start": 5,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-007-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "A small reading group has exactly the three stated pupils, with a younger sibling aged eight. The book photograph contains the same child throughout the question/answer. Teacher reassurance and continued reading naturally integrate 괜찮다/더; no unrelated becoming event is added. 쓰다 only writes answers. The unavailable book-opening action was omitted and tracked as a gap. Japanese matches the finalized photograph description and class activity."
+          }
+        }
+      ],
+      "end_counter": 91853.9449419,
+      "total_seconds": 222.57093479999457,
+      "coverage": {
+        "denominator_N": 128,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.984375,
+        "target_99_met": false
+      },
+      "eojeol_count": 131,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "A small reading group has exactly the three stated pupils, with a younger sibling aged eight. The book photograph contains the same child throughout the question/answer. Teacher reassurance and continued reading naturally integrate 괜찮다/더; no unrelated becoming event is added. 쓰다 only writes answers. The unavailable book-opening action was omitted and tracked as a gap. Japanese matches the finalized photograph description and class activity."
+      },
+      "effective_review_credit": 8,
+      "actual_previous_review_credit": 6,
+      "health_after": {
+        "capped_exposure_progress": 35,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2965,
+        "remaining_texts_to_300": 293,
+        "required_future_credit_rate": 10.119453924914676,
+        "planning_color": "GREEN",
+        "outstanding_windows": 1,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 8,
+      "start_counter": 91857.7600434,
+      "start_utc": "2026-10-11T07:46:07.672517+00:00",
+      "phase": "committed",
+      "phase_start_counter": 92149.4168824,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-008-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 125.50424990001193,
+          "validation_seconds": 3.912813000002643,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 2.422693100044853,
+            "semantic_diagnostics": 0.011933100002352148
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-008-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 9.428397199997562,
+          "validation_seconds": 3.23170430000755,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.9892042999126716,
+            "semantic_diagnostics": 0.009797300008358434
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 99.87500229998841,
+        "lexical_preflight": 2.6564252999960445,
+        "author_draft": 125.50424990001193,
+        "morphology_vocab_analysis": 4.411897399957525,
+        "mechanical_validation": 2.7326199000526685,
+        "naturalness_review": 57.069450600014534,
+        "retry_repair": 9.428397199997562,
+        "final_reanalysis": 2.116327800002182,
+        "commit": 3.9647164000052726,
+        "controller_overhead": 1.6619358999741962
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 8,
+        "title_ko": "어머니의 책",
+        "genre": "objects",
+        "scene": [
+          "home",
+          "communication",
+          "family"
+        ],
+        "review_candidates": [
+          "아직"
+        ],
+        "planner_vetoes": [
+          {
+            "lemma": "개",
+            "reason": "Books naturally use the current new 권; counting unrelated objects would be filler. Reconsider a concrete object scene before deadline 11."
+          }
+        ],
+        "scene_fingerprint": {
+          "goal": "borrow_suitable_books_from_mother",
+          "setting": "home_evening_reading_space",
+          "participants": "mother_and_child_narrator",
+          "problem_type": "mother_current_book_is_too_difficult_for_child",
+          "resolution_type": "mother_lends_two_other_books_with_clear_ownership",
+          "main_actions": [
+            "request_book",
+            "discuss_difficulty",
+            "lend_books",
+            "read_with_parent",
+            "keep_borrowed_books_in_bag"
+          ]
+        }
+      },
+      "preflight_seconds": 2.6564252999960445,
+      "lexical_preflight": {
+        "findings": [],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-008-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "REPAIR",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "The closing mother's-book reference could include her current large book rather than the two loaned books. Explicitly identify the second loaned book and close with the two books in the bag. Preserve mother as owner; do not silently turn the loan into a gift."
+          }
+        },
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Repair explicitly identifies the second borrowed book as a friends story and closes with the books in the bag. The large difficult book remains with the mother; both smaller loaned books remain her property. 엄마 is a single direct address and 권 counts the two actual loaned books once. References precede 그. Japanese was rechecked after repair and preserves loan/ownership, without implying a gift or reading the mother's ongoing large book."
+          }
+        }
+      ],
+      "end_counter": 92167.1810661,
+      "total_seconds": 309.4210227000003,
+      "coverage": {
+        "denominator_N": 143,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.986013986013986,
+        "target_99_met": false
+      },
+      "eojeol_count": 149,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Repair explicitly identifies the second borrowed book as a friends story and closes with the books in the bag. The large difficult book remains with the mother; both smaller loaned books remain her property. 엄마 is a single direct address and 권 counts the two actual loaned books once. References precede 그. Japanese was rechecked after repair and preserves loan/ownership, without implying a gift or reading the mother's ongoing large book."
+      },
+      "effective_review_credit": 7,
+      "actual_previous_review_credit": 5,
+      "health_after": {
+        "capped_exposure_progress": 42,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2958,
+        "remaining_texts_to_300": 292,
+        "required_future_credit_rate": 10.13013698630137,
+        "planning_color": "GREEN",
+        "outstanding_windows": 3,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 9,
+      "start_counter": 92171.1248982,
+      "start_utc": "2026-10-11T07:51:21.250443+00:00",
+      "phase": "committed",
+      "phase_start_counter": 92367.4711193,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-009-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 83.21630069999082,
+          "validation_seconds": 4.477019199999631,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 2.6612596000341,
+            "semantic_diagnostics": 0.018723300003330223
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 106.56535060000897,
+        "lexical_preflight": 2.0865692000079434,
+        "author_draft": 83.21630069999082,
+        "morphology_vocab_analysis": 2.6612596000341,
+        "mechanical_validation": 1.8157595999655314,
+        "naturalness_review": 146.05573370000639,
+        "final_reanalysis": 5.583856500001275,
+        "commit": 6.044860599999083,
+        "controller_overhead": 1.9129697999887867
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 9,
+        "title_ko": "비가 오는 날",
+        "genre": "weather",
+        "scene": [
+          "home",
+          "family",
+          "transport",
+          "communication"
+        ],
+        "review_candidates": [
+          "개",
+          "명"
+        ],
+        "planner_vetoes": [
+          {
+            "lemma": "살",
+            "reason": "Age is not needed to solve this rainy travel problem; medical/family scene remains possible before deadline 12."
+          }
+        ],
+        "scene_fingerprint": {
+          "goal": "visit_grandmother_without_walking_in_rain",
+          "setting": "family_home_taxi_and_grandmothers_door",
+          "participants": "child_narrator_mother_father_grandmother",
+          "problem_type": "three_travelers_have_two_umbrellas_and_heavy_rain",
+          "resolution_type": "choose_taxi_for_family_visit",
+          "main_actions": [
+            "check_rain",
+            "count_travelers_and_umbrellas",
+            "choose_taxi",
+            "arrive",
+            "remove_shoes",
+            "warm_drink"
+          ]
+        }
+      },
+      "preflight_seconds": 2.0865692000079434,
+      "lexical_preflight": {
+        "findings": [],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-009-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "The three travelers are explicitly father, mother and child, with two umbrellas. Heavy rain motivates the taxi; the father phones before it arrives. Grandmother is named again as the door-opening actor to avoid a reference switch, with measured N=178/U=3 preserving the hard minimum. Dad is one vocative. Mother/엄마 refer to the same established person. No forbidden driving, unfolding or wearing-sense substitution is used; tea is a drink, not a car. Japanese chronology and references match Korean."
+          }
+        }
+      ],
+      "end_counter": 92527.0675585,
+      "total_seconds": 355.9426603000029,
+      "coverage": {
+        "denominator_N": 178,
+        "new_tokens_U": 3,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9831460674157303,
+        "target_99_met": false
+      },
+      "eojeol_count": 179,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "The three travelers are explicitly father, mother and child, with two umbrellas. Heavy rain motivates the taxi; the father phones before it arrives. Grandmother is named again as the door-opening actor to avoid a reference switch, with measured N=178/U=3 preserving the hard minimum. Dad is one vocative. Mother/엄마 refer to the same established person. No forbidden driving, unfolding or wearing-sense substitution is used; tea is a drink, not a car. Japanese chronology and references match Korean."
+      },
+      "effective_review_credit": 6,
+      "actual_previous_review_credit": 4,
+      "health_after": {
+        "capped_exposure_progress": 48,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2952,
+        "remaining_texts_to_300": 291,
+        "required_future_credit_rate": 10.144329896907216,
+        "planning_color": "GREEN",
+        "outstanding_windows": 4,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 10,
+      "start_counter": 92597.2077659,
+      "start_utc": "2026-10-11T07:58:28.466836+00:00",
+      "phase": "committed",
+      "phase_start_counter": 92805.1046162,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-010-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 97.14811829999962,
+          "validation_seconds": 3.530192000005627,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 1.9452278999960981,
+            "semantic_diagnostics": 0.017165899989777245
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 105.63745889998972,
+        "lexical_preflight": 1.5802194999996573,
+        "author_draft": 97.14811829999962,
+        "morphology_vocab_analysis": 1.9452278999960981,
+        "mechanical_validation": 1.584964100009529,
+        "naturalness_review": 157.3812986999983,
+        "final_reanalysis": 2.095114299998386,
+        "commit": 3.846102299998165,
+        "controller_overhead": 0.8106897000106983
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 10,
+        "title_ko": "작은 가게",
+        "genre": "work",
+        "scene": [
+          "home",
+          "work",
+          "shopping",
+          "family",
+          "communication",
+          "object_problem"
+        ],
+        "review_candidates": [
+          "되다",
+          "이"
+        ],
+        "planner_vetoes": [
+          {
+            "lemma": "살",
+            "reason": "Age adds no useful information to this shop-opening scene; consider doctor scene before 12."
+          },
+          {
+            "lemma": "권",
+            "reason": "This shop sells bread and fruit, not books; avoid adding unrelated stock."
+          },
+          {
+            "lemma": "엄마",
+            "reason": "Adding another visitor only for the review word would make the scene crowded."
+          }
+        ],
+        "scene_fingerprint": {
+          "goal": "serve_family_customers_at_new_small_shop",
+          "setting": "small_room_converted_to_home_front_shop",
+          "participants": "adult_narrator_spouse_and_grandparent_couple",
+          "problem_type": "first_work_day_requires_explaining_hours_and_stock",
+          "resolution_type": "serve_grandparents_then_resume_work",
+          "main_actions": [
+            "open_shop",
+            "describe_hours",
+            "offer_bread_and_fruit",
+            "sell_apples",
+            "resume_work"
+          ]
+        }
+      },
+      "preflight_seconds": 1.5802194999996573,
+      "lexical_preflight": {
+        "findings": [],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-010-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Adult narrator and spouse work in a small room converted into a shop, so 되다 has a concrete natural change-of-place use. Grandparents are established together before repeated 두 사람; workers remain narrator/spouse. Grandmother's bag ownership is explicitly preserved through the sale. Third-person desire was not asserted; the return visit is a future plan. Bread and apples belong to one shop scene; no books/age/mother cameo is added for debt. Japanese matches final Korean including the converted room and shop hours."
+          }
+        }
+      ],
+      "end_counter": 92969.2369596,
+      "total_seconds": 372.0291937000002,
+      "coverage": {
+        "denominator_N": 132,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9848484848484849,
+        "target_99_met": false
+      },
+      "eojeol_count": 136,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Adult narrator and spouse work in a small room converted into a shop, so 되다 has a concrete natural change-of-place use. Grandparents are established together before repeated 두 사람; workers remain narrator/spouse. Grandmother's bag ownership is explicitly preserved through the sale. Third-person desire was not asserted; the return visit is a future plan. Bread and apples belong to one shop scene; no books/age/mother cameo is added for debt. Japanese matches final Korean including the converted room and shop hours."
+      },
+      "effective_review_credit": 7,
+      "actual_previous_review_credit": 5,
+      "health_after": {
+        "capped_exposure_progress": 55,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2945,
+        "remaining_texts_to_300": 290,
+        "required_future_credit_rate": 10.155172413793103,
+        "planning_color": "GREEN",
+        "outstanding_windows": 6,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 11,
+      "start_counter": 92987.2911213,
+      "start_utc": "2026-10-11T08:04:57.478189+00:00",
+      "phase": "committed",
+      "phase_start_counter": 93320.0984923,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-011-attempt-01.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 73.44714109999768,
+          "validation_seconds": 4.763016700002481,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 2.5689427999895997,
+            "semantic_diagnostics": 0.00938740000128746
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 85.90315040000132,
+        "lexical_preflight": 2.4176775999949314,
+        "author_draft": 166.27533380001842,
+        "preflight_repair": 73.44714109999768,
+        "morphology_vocab_analysis": 2.5689427999895997,
+        "mechanical_validation": 2.1940739000128815,
+        "naturalness_review": 148.3216681999911,
+        "final_reanalysis": 1.6708360000047833,
+        "commit": 3.8027694999909727,
+        "controller_overhead": 0.6993867999990471
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 11,
+        "title_ko": "집에서 쉬어요",
+        "genre": "home",
+        "scene": [
+          "home",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [
+          "살",
+          "권",
+          "엄마",
+          "아빠",
+          "더"
+        ],
+        "scene_fingerprint": {
+          "goal": "help_one_year_old_daughter_rest",
+          "setting": "home_bedroom_afternoon",
+          "participants": "father_narrator_wife_and_daughter",
+          "problem_type": "young_child_is_tired_and_needs_rest",
+          "resolution_type": "parents_stay_near_child_and_father_reads_then_child_sleeps",
+          "main_actions": [
+            "identify_family_roles",
+            "read_one_book",
+            "listen",
+            "sleep",
+            "rest_without_television"
+          ]
+        },
+        "natural_expression_gaps": [
+          {
+            "intended_meaning": "dress the baby before resting",
+            "missing_natural_word": "입히다",
+            "current_workaround": "omit the dressing step and begin with the family already at home",
+            "whether_omission_solved_it": true,
+            "resolution": "omit",
+            "recurrence_count_in_this_run": 1,
+            "historical_reference": "Known Phase 3.8 gap; never use 입다 as causative dress."
+          }
+        ]
+      },
+      "preflight_seconds": 2.4176775999949314,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 24,
+            "vocab_id": null,
+            "lemma": "오늘",
+            "surface": "오늘",
+            "start": 6,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-011-attempt-01.json",
+      "author_review_history": [
+        {
+          "attempt": 1,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Father/narrator, wife and daughter are established before baby-talk 엄마/아빠, which denote daughter's mother and narrator/father. Daughter is the same one-year-old baby throughout; mother rests beside her. Father reads one book while she listens and then sleeps. Age/book count/more rest are integral, not a quota-driven side scene. Television avoidance follows sleeping-child context. Dressing was omitted rather than substituting 입다 or holding/receiving. Japanese was checked after today's-adverb repair and preserves roles and chronology."
+          }
+        }
+      ],
+      "end_counter": 93474.5921014,
+      "total_seconds": 487.30098010000074,
+      "coverage": {
+        "denominator_N": 123,
+        "new_tokens_U": 2,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.983739837398374,
+        "target_99_met": false
+      },
+      "eojeol_count": 134,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Father/narrator, wife and daughter are established before baby-talk 엄마/아빠, which denote daughter's mother and narrator/father. Daughter is the same one-year-old baby throughout; mother rests beside her. Father reads one book while she listens and then sleeps. Age/book count/more rest are integral, not a quota-driven side scene. Television avoidance follows sleeping-child context. Dressing was omitted rather than substituting 입다 or holding/receiving. Japanese was checked after today's-adverb repair and preserves roles and chronology."
+      },
+      "effective_review_credit": 8,
+      "actual_previous_review_credit": 6,
+      "health_after": {
+        "capped_exposure_progress": 63,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2937,
+        "remaining_texts_to_300": 289,
+        "required_future_credit_rate": 10.162629757785467,
+        "planning_color": "GREEN",
+        "outstanding_windows": 5,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 12,
+      "start_counter": 93547.4665591,
+      "start_utc": "2026-10-11T08:14:17.617784+00:00",
+      "phase": "committed",
+      "phase_start_counter": 94217.4568473,
+      "attempts": [
+        {
+          "attempt": 1,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-012-attempt-01.json",
+          "hard_pass": false,
+          "hard_errors": [
+            {
+              "code": "coverage_or_token_policy",
+              "detail": "previous_vocab_coverage below hard 98%"
+            }
+          ],
+          "author_seconds": 12.133165699997335,
+          "validation_seconds": 5.5007299999997485,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 2.8226070999517106,
+            "semantic_diagnostics": 0.011680100011290051
+          },
+          "future_usage_count": 0
+        },
+        {
+          "attempt": 2,
+          "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-012-attempt-02.json",
+          "hard_pass": true,
+          "hard_errors": [],
+          "author_seconds": 200.11260599999514,
+          "validation_seconds": 5.8243198999989545,
+          "stage_cpu_seconds": {
+            "morphology_vocab_analysis": 3.279628899981617,
+            "semantic_diagnostics": 0.015501600006246008
+          },
+          "future_usage_count": 0
+        }
+      ],
+      "stages": {
+        "scene_planning": 150.66348060000746,
+        "lexical_preflight": 2.68890090000059,
+        "author_draft": 293.06405520001135,
+        "preflight_repair": 12.133165699997335,
+        "morphology_vocab_analysis": 6.1022359999333275,
+        "mechanical_validation": 5.2228139000653755,
+        "retry_repair": 200.11260599999514,
+        "naturalness_review": 6.021284800008289,
+        "final_reanalysis": 4.14192299998831,
+        "commit": 7.288439600015408,
+        "controller_overhead": 1.5185609999898588
+      },
+      "committed": true,
+      "plan": {
+        "text_number": 12,
+        "title_ko": "병원에 가요",
+        "genre": "health",
+        "scene": [
+          "health",
+          "home",
+          "family",
+          "communication"
+        ],
+        "review_candidates": [
+          "할아버지",
+          "할머니",
+          "아직",
+          "명"
+        ],
+        "planner_vetoes": [
+          {
+            "lemma": "남편",
+            "reason": "Adding the narrator's spouse is unrelated to accompanying grandparents; consider another scene before 15."
+          }
+        ],
+        "scene_fingerprint": {
+          "goal": "accompany_unwell_grandfather_to_neighborhood_hospital",
+          "setting": "grandparents_home_and_nearby_hospital",
+          "participants": "grandchild_grandmother_grandfather_neighbor_physician",
+          "problem_type": "grandfather_feels_unwell_and_tired",
+          "resolution_type": "family_visits_known_physician_and_returns_home_to_rest",
+          "main_actions": [
+            "notice_illness",
+            "accompany",
+            "wait",
+            "describe_condition",
+            "hear_advice",
+            "return_home"
+          ]
+        }
+      },
+      "preflight_seconds": 2.68890090000059,
+      "lexical_preflight": {
+        "findings": [
+          {
+            "sentence": 28,
+            "vocab_id": null,
+            "lemma": "세요",
+            "surface": "세요",
+            "start": 10,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 37,
+            "vocab_id": null,
+            "lemma": "오늘",
+            "surface": "오늘",
+            "start": 3,
+            "reason": "unknown_or_unresolved"
+          },
+          {
+            "sentence": 37,
+            "vocab_id": null,
+            "lemma": "사람하다",
+            "surface": "사람하",
+            "start": 8,
+            "reason": "unknown_or_unresolved"
+          }
+        ],
+        "future_count": 0,
+        "ledger_unchanged": true
+      },
+      "candidate": "pilot\\ko\\k1\\phase3_9\\candidates\\K1-012-attempt-02.json",
+      "author_review_history": [
+        {
+          "attempt": 2,
+          "evidence": {
+            "naturalness": "PASS",
+            "translation_fidelity": "PASS",
+            "review_word_integration": "PASS",
+            "reason": "Family accompaniment to one nearby clinic is the single scene. Neighbor is the physician and grandfather is the patient throughout; no teacher identity substitution. Three introductory tokens are retained, with the caregiver drinking water on return as a coherent action rather than filler. No diagnosis or guaranteed recovery is asserted. Japanese reflects the question about the plan to rest. Model review is screening, not independent human approval."
+          }
+        }
+      ],
+      "end_counter": 94236.4240258,
+      "total_seconds": 688.9574667000124,
+      "coverage": {
+        "denominator_N": 151,
+        "new_tokens_U": 3,
+        "controlled_vocab_coverage": 1.0,
+        "previous_vocab_coverage": 0.9801324503311258,
+        "target_99_met": false
+      },
+      "eojeol_count": 157,
+      "review_evidence": {
+        "naturalness": "PASS",
+        "translation_fidelity": "PASS",
+        "review_word_integration": "PASS",
+        "reason": "Family accompaniment to one nearby clinic is the single scene. Neighbor is the physician and grandfather is the patient throughout; no teacher identity substitution. Three introductory tokens are retained, with the caregiver drinking water on return as a coherent action rather than filler. No diagnosis or guaranteed recovery is asserted. Japanese reflects the question about the plan to rest. Model review is screening, not independent human approval."
+      },
+      "effective_review_credit": 9,
+      "actual_previous_review_credit": 7,
+      "health_after": {
+        "capped_exposure_progress": 72,
+        "required_total": 3000,
+        "remaining_required_capped_credits": 2928,
+        "remaining_texts_to_300": 288,
+        "required_future_credit_rate": 10.166666666666666,
+        "planning_color": "GREEN",
+        "outstanding_windows": 5,
+        "expired_windows": 0
+      }
+    },
+    {
+      "text_number": 13,
+      "start_counter": 94244.882974,
+      "start_utc": "2026-10-11T08:25:56.600071+00:00",
+      "phase": "stopped",
+      "phase_start_counter": 94285.650911,
+      "attempts": [],
+      "stages": {
+        "scene_planning": 40.76793310001085,
+        "author_draft": 45.60433960000228
+      },
+      "committed": false,
+      "plan": {
+        "text_number": 13,
+        "title_ko": "가족하고 식당에 가요",
+        "genre": "food",
+        "scene": [
+          "food",
+          "family",
+          "shopping"
+        ],
+        "review_candidates": [
+          "ko_k1_0306",
+          "ko_k1_0307",
+          "ko_k1_0308",
+          "ko_k1_0467",
+          "ko_k1_0468",
+          "ko_k1_0469"
+        ],
+        "scene_fingerprint": {
+          "goal": "get_a_table_for_a_couple_and_baby",
+          "setting": "small_restaurant",
+          "participants": "husband_wife_baby_restaurant_employee",
+          "problem_type": "clarify_adult_and_baby_party_size",
+          "resolution_type": "table_and_family_meal",
+          "main_actions": [
+            "arrive",
+            "explain_party_size",
+            "sit",
+            "order_food",
+            "eat",
+            "return_home"
+          ]
+        },
+        "notes": "Adult party size naturally introduces 어른; employee serves the same meal. Husband/wife/baby debt belongs to this single family scene. No unrelated event or forced chair transfer."
+      },
+      "end_counter": 94331.2552506,
+      "total_seconds": 86.37227660001372
+    }
+  ],
+  "completed": false,
+  "methodology": "Live local LLM author, sequential snapshot/file callback; elapsed author stage includes model reasoning and file transport. Not external API throughput.",
+  "production_end_counter": 94331.2552506,
+  "production_end_utc": "2026-10-11T08:27:19.718306+00:00",
+  "stop": {
+    "type": "structural_exception",
+    "reason": "Author self-check missing"
+  },
+  "production_wall_seconds": 3628.0080683000124,
+  "stage_totals_seconds": {
+    "scene_planning": 932.342924600016,
+    "lexical_preflight": 25.335103999997955,
+    "author_draft": 1311.1937331000227,
+    "preflight_repair": 153.8207887999888,
+    "morphology_vocab_analysis": 34.9146462000208,
+    "mechanical_validation": 18.67590439999185,
+    "naturalness_review": 664.9825095000269,
+    "final_reanalysis": 31.342230099980952,
+    "commit": 36.79561470002227,
+    "controller_overhead": 13.193076699972153,
+    "retry_repair": 209.5410031999927
+  },
+  "per_text_statistics": {
+    "n": 12,
+    "mean": 278.813771883335,
+    "median": 215.17075430000114,
+    "p90": 487.30098010000074,
+    "min": 110.62739020001027,
+    "max": 688.9574667000124
+  }
+}

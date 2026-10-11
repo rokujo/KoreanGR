@@ -1,0 +1,473 @@
+[
+  {
+    "scope": "simple_drinking_control",
+    "text": "저는 물을 마셔요.",
+    "raw_parts": [
+      {
+        "form": "마시",
+        "tag": "VV",
+        "start": 6,
+        "length": 2
+      },
+      {
+        "form": "어요",
+        "tag": "EF",
+        "start": 7,
+        "length": 2
+      }
+    ],
+    "registered_identities": [
+      {
+        "surface": "마셔",
+        "lemma": "마시다",
+        "pos": "verb",
+        "sense": "drink",
+        "vocab_id": "ko_k1_0173",
+        "role": "core",
+        "start": 6,
+        "end": 8,
+        "morph_indices": [
+          4
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔요",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 7,
+        "end": 9,
+        "morph_indices": [
+          5
+        ],
+        "grammar_id": "ko_k1_g02"
+      }
+    ],
+    "original_character_span": [
+      6,
+      9
+    ],
+    "permission_granted": false
+  },
+  {
+    "scope": "split_action_control",
+    "text": "저는 물을 받아요. 저는 물을 마셔요.",
+    "raw_parts": [
+      {
+        "form": "마시",
+        "tag": "VV",
+        "start": 17,
+        "length": 2
+      },
+      {
+        "form": "어요",
+        "tag": "EF",
+        "start": 18,
+        "length": 2
+      }
+    ],
+    "registered_identities": [
+      {
+        "surface": "마셔",
+        "lemma": "마시다",
+        "pos": "verb",
+        "sense": "drink",
+        "vocab_id": "ko_k1_0173",
+        "role": "core",
+        "start": 17,
+        "end": 19,
+        "morph_indices": [
+          11
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔요",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 18,
+        "end": 20,
+        "morph_indices": [
+          12
+        ],
+        "grammar_id": "ko_k1_g02"
+      }
+    ],
+    "original_character_span": [
+      17,
+      20
+    ],
+    "permission_granted": false
+  },
+  {
+    "scope": "sentence",
+    "text": "저는 물을 받고 마셔요.",
+    "raw_parts": [
+      {
+        "form": "말",
+        "tag": "VX",
+        "start": 9,
+        "length": 1
+      },
+      {
+        "form": "시",
+        "tag": "EP",
+        "start": 10,
+        "length": 1
+      },
+      {
+        "form": "어요",
+        "tag": "EF",
+        "start": 10,
+        "length": 2
+      }
+    ],
+    "registered_identities": [
+      {
+        "surface": "마",
+        "lemma": "말",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 9,
+        "end": 10,
+        "morph_indices": [
+          6
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔",
+        "lemma": "시",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 10,
+        "end": 11,
+        "morph_indices": [
+          7
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔요",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 10,
+        "end": 12,
+        "morph_indices": [
+          8
+        ],
+        "grammar_id": "ko_k1_g02"
+      }
+    ],
+    "original_character_span": [
+      9,
+      12
+    ],
+    "permission_granted": false
+  },
+  {
+    "scope": "quoted",
+    "text": "\"저는 물을 받고 마셔요.\"",
+    "raw_parts": [
+      {
+        "form": "말",
+        "tag": "VX",
+        "start": 10,
+        "length": 1
+      },
+      {
+        "form": "시",
+        "tag": "EP",
+        "start": 11,
+        "length": 1
+      },
+      {
+        "form": "어요",
+        "tag": "EF",
+        "start": 11,
+        "length": 2
+      }
+    ],
+    "registered_identities": [
+      {
+        "surface": "마",
+        "lemma": "말",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 10,
+        "end": 11,
+        "morph_indices": [
+          7
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔",
+        "lemma": "시",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 11,
+        "end": 12,
+        "morph_indices": [
+          8
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔요",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 11,
+        "end": 13,
+        "morph_indices": [
+          9
+        ],
+        "grammar_id": "ko_k1_g02"
+      }
+    ],
+    "original_character_span": [
+      10,
+      13
+    ],
+    "permission_granted": false
+  },
+  {
+    "scope": "narration_and_quote",
+    "text": "저는 말해요. \"저는 물을 받고 마셔요.\"",
+    "raw_parts": [
+      {
+        "form": "말",
+        "tag": "VX",
+        "start": 18,
+        "length": 1
+      },
+      {
+        "form": "시",
+        "tag": "EP",
+        "start": 19,
+        "length": 1
+      },
+      {
+        "form": "어요",
+        "tag": "EF",
+        "start": 19,
+        "length": 2
+      }
+    ],
+    "registered_identities": [
+      {
+        "surface": "마",
+        "lemma": "말",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 18,
+        "end": 19,
+        "morph_indices": [
+          13
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔",
+        "lemma": "시",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 19,
+        "end": 20,
+        "morph_indices": [
+          14
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔요",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 19,
+        "end": 21,
+        "morph_indices": [
+          15
+        ],
+        "grammar_id": "ko_k1_g02"
+      }
+    ],
+    "original_character_span": [
+      18,
+      21
+    ],
+    "permission_granted": false
+  },
+  {
+    "scope": "paragraph",
+    "text": "친구는 저에게 말해요. \"커피를 마시고 싶어요?\" \"아니요, 저는 물을 마시고 싶어요.\" 친구는 가방을 열고 물을 줘요. 저는 물을 받고 마셔요. 저는 가방에 책을 넣었어요.",
+    "raw_parts": [
+      {
+        "form": "말",
+        "tag": "VX",
+        "start": 77,
+        "length": 1
+      },
+      {
+        "form": "시",
+        "tag": "EP",
+        "start": 78,
+        "length": 1
+      },
+      {
+        "form": "어요",
+        "tag": "EF",
+        "start": 78,
+        "length": 2
+      }
+    ],
+    "registered_identities": [
+      {
+        "surface": "마",
+        "lemma": "말",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 77,
+        "end": 78,
+        "morph_indices": [
+          48
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔",
+        "lemma": "시",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 78,
+        "end": 79,
+        "morph_indices": [
+          49
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔요",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 78,
+        "end": 80,
+        "morph_indices": [
+          50
+        ],
+        "grammar_id": "ko_k1_g02"
+      }
+    ],
+    "original_character_span": [
+      77,
+      80
+    ],
+    "permission_granted": false
+  },
+  {
+    "scope": "full_candidate",
+    "text": "오늘은 친구하고 공원에 가요. 저는 아침에 빵을 사요. 그리고 빵을 가방에 넣어요. 친구는 물하고 커피를 가방에 넣어요. 친구는 집 앞에 있어요. 저는 친구를 보고 말해요.\n\n\"저 공원은 집 앞에 있어요.\" 친구는 공원을 보고 웃어요. 저는 친구하고 공원으로 가요. 공원에는 나무가 많이 있어요. 저는 나무 아래에 앉아요. 친구도 나무 아래에 앉아요.\n\n점심 시간이 돼요. 친구는 저에게 말해요. \"무슨 음식을 먹고 싶어요?\" 저는 친구에게 말해요. \"저는 빵을 먹고 싶어요.\" 친구는 저에게 물어봐요.\n\n\"빵이 있어요?\" \"네, 가방에 빵이 있어요.\" 저는 가방을 열고 빵을 봐요. 그리고 친구에게 빵을 줘요. 친구는 빵을 먹고 웃어요. 저도 나무 아래에서 빵을 먹어요.\n\n친구는 저에게 말해요. \"커피를 마시고 싶어요?\" \"아니요, 저는 물을 마시고 싶어요.\" 친구는 가방을 열고 물을 줘요. 저는 물을 받고 마셔요. 저는 가방에 책을 넣었어요.\n\n저는 친구하고 책을 읽고 싶어요. 저는 나무 아래에서 책을 읽어요. 친구도 책을 보고 이야기를 들어요. 저는 친구하고 집으로 돌아가요.",
+    "raw_parts": [
+      {
+        "form": "말",
+        "tag": "VX",
+        "start": 455,
+        "length": 1
+      },
+      {
+        "form": "시",
+        "tag": "EP",
+        "start": 456,
+        "length": 1
+      },
+      {
+        "form": "어요",
+        "tag": "EF",
+        "start": 456,
+        "length": 2
+      }
+    ],
+    "registered_identities": [
+      {
+        "surface": "마",
+        "lemma": "말",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 455,
+        "end": 456,
+        "morph_indices": [
+          265
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔",
+        "lemma": "시",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 456,
+        "end": 457,
+        "morph_indices": [
+          266
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "셔요",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 456,
+        "end": 458,
+        "morph_indices": [
+          267
+        ],
+        "grammar_id": "ko_k1_g02"
+      }
+    ],
+    "original_character_span": [
+      455,
+      458
+    ],
+    "permission_granted": false
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "full_suite": {
+    "command": "python -B -m unittest discover -s tests -v",
+    "tests": 147,
+    "exit_code": 0,
+    "seconds": 334.898,
+    "status": "PASS",
+    "scope_note": "Full suite started before the final run_one stop-preservation test was added."
+  },
+  "final_focused_suite": {
+    "command": "python -B -m unittest discover -s tests -p test_k1_phase3_retry.py -v",
+    "tests": 14,
+    "exit_code": 0,
+    "seconds": 20.779,
+    "status": "PASS",
+    "scope_note": "Covers the final retry module revision, including the added run_one test."
+  },
+  "known_unfixed_analyzer_defect": "IC 네 is aliased to pronoun 너. Test PASS does not mean this defect is repaired or the 50-text run passed."
+}

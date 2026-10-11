@@ -1,0 +1,199 @@
+{
+  "run": {
+    "phase": "3",
+    "last_committed_text": 0,
+    "status": "stopped",
+    "stop": {
+      "text": 1,
+      "reasons": [
+        "Body length outside 120..180",
+        "Future Expansion ko_k1_0386",
+        "Token 198: uncontrolled vocabulary or future introduction",
+        "Token 91: uncontrolled vocabulary or future introduction",
+        "Unconfirmed previous Expansion ko_k1_0386",
+        "Unresolved 걸 / 걸다",
+        "controlled_vocab_coverage below hard 100%",
+        "previous_vocab_coverage below hard 98%"
+      ]
+    },
+    "attempted_texts": [
+      1
+    ],
+    "checkpoint_texts": [],
+    "genre_history": [],
+    "scene_history": [],
+    "natural_expression_gaps": []
+  },
+  "summary": {
+    "generated_texts": 0,
+    "hard_errors": 0,
+    "controlled_violations": 0,
+    "previous_below_98": 0,
+    "grammar_violations": 0,
+    "unresolved_content_words": 0,
+    "introduction_conflicts": 0,
+    "semantic_schedule_conflicts": 0,
+    "new_vocabulary_introduced": 0,
+    "planned_introductions": 0,
+    "actual_selected_review_exposures": 0,
+    "incidental_exposures": 0,
+    "actual_exposure_distribution": {
+      "0": 500
+    },
+    "introduced_exposure_distribution": {},
+    "total_outstanding_debt": 0,
+    "debt_approaching_deadline": 0,
+    "expired_debt": 0,
+    "defer_events": 0,
+    "naturalness_warning_categories": {},
+    "semantic_review_flags": 0,
+    "natural_expression_gaps": [],
+    "genre_distribution": {},
+    "scene_similarity_max": 0,
+    "scene_extreme_similarity_pairs": [],
+    "mean_eojeol": null,
+    "min_eojeol": 0,
+    "max_eojeol": 0,
+    "sentence_length_distribution": {},
+    "preferred_sentence_compliance": null,
+    "hard_max_violations": 0,
+    "previous_coverage_min": null,
+    "previous_coverage_mean": null,
+    "target_99_misses": 0,
+    "attempted_hard_errors": [
+      {
+        "text": 1,
+        "errors": [
+          "Body length outside 120..180",
+          "Future Expansion ko_k1_0386",
+          "Token 198: uncontrolled vocabulary or future introduction",
+          "Token 91: uncontrolled vocabulary or future introduction",
+          "Unconfirmed previous Expansion ko_k1_0386",
+          "Unresolved 걸 / 걸다",
+          "controlled_vocab_coverage below hard 100%",
+          "previous_vocab_coverage below hard 98%"
+        ]
+      }
+    ],
+    "attempted_count": 1,
+    "attempt_controlled_violations": 1,
+    "attempt_previous_below_98": 1,
+    "attempt_unresolved_content_words": 1,
+    "attempt_naturalness_warning_categories": {},
+    "confirmed_issue_categories": {},
+    "translation_fidelity_flags": 0,
+    "freeze_errors": [],
+    "annotation_triage": {
+      "status": "triaged_not_human_approved",
+      "occurrence_counts": {
+        "benign_expected": 0,
+        "requires_lexical_sense_review": 0,
+        "requires_grammar_boundary_review": 0,
+        "true_unresolved": 0
+      },
+      "group_counts": {},
+      "total_occurrences": 0,
+      "total_groups": 0,
+      "groups": [],
+      "policy": "Review repeated templates once with matching context preconditions; sense contexts still require contextual review, not blanket approval."
+    }
+  },
+  "experiment_pass": false,
+  "recommendation": "C",
+  "generated_body_attempts": 1,
+  "accepted_texts": 0,
+  "not_generated_text_numbers": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "attempt_grammar_outside_32": 0,
+  "attempt_unresolved_content": 1,
+  "run_integrity_pass": true,
+  "attempt_annotation_triage": {
+    "occurrence_counts": {
+      "benign_expected": 11,
+      "requires_lexical_sense_review": 0,
+      "requires_grammar_boundary_review": 3,
+      "true_unresolved": 0
+    },
+    "raw_unresolved_token_count": 1
+  },
+  "tests": {
+    "full_suite": {
+      "command": "python -B scripts/run_k1_phase3_tests.py",
+      "tests_run": 95,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 315.568,
+      "ok": true,
+      "initial_phase3_only_run": {
+        "tests": 11,
+        "errors": 9,
+        "reason": "Initialization still running; profile not yet created. No body generated.",
+        "after_initialization": {
+          "tests": 11,
+          "errors": 0,
+          "failures": 0
+        }
+      },
+      "log": "reports/k1_phase3_test_log.txt"
+    },
+    "final_focused": {
+      "command": "python -B -m unittest discover -s tests -p test_k1_phase3.py -v",
+      "tests_run": 16,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 1.323,
+      "ok": true,
+      "scope": "Final Phase 3 actual-history and stop guard changes; earlier full suite began before five additional guards were added"
+    }
+  }
+}

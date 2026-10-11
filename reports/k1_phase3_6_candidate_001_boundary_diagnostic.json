@@ -1,0 +1,316 @@
+[
+  {
+    "scope": "plain",
+    "text": "밥하고 고기가 있어요.",
+    "raw": [
+      {
+        "form": "밥",
+        "tag": "NNG",
+        "start": 0,
+        "length": 1
+      },
+      {
+        "form": "하",
+        "tag": "XSV",
+        "start": 1,
+        "length": 1
+      },
+      {
+        "form": "고",
+        "tag": "EC",
+        "start": 2,
+        "length": 1
+      },
+      {
+        "form": "고기",
+        "tag": "NNG",
+        "start": 4,
+        "length": 2
+      },
+      {
+        "form": "가",
+        "tag": "JKS",
+        "start": 6,
+        "length": 1
+      },
+      {
+        "form": "있",
+        "tag": "VA",
+        "start": 8,
+        "length": 1
+      },
+      {
+        "form": "어요",
+        "tag": "EF",
+        "start": 9,
+        "length": 2
+      },
+      {
+        "form": ".",
+        "tag": "SF",
+        "start": 11,
+        "length": 1
+      }
+    ],
+    "annotations": [
+      {
+        "surface": "밥하",
+        "lemma": "밥하다",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 0,
+        "end": 2,
+        "morph_indices": [
+          0,
+          1
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "고",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 2,
+        "end": 3,
+        "morph_indices": [
+          2
+        ],
+        "grammar_id": "ko_k1_g09"
+      },
+      {
+        "surface": "고기",
+        "lemma": "고기",
+        "pos": "noun",
+        "sense": "meat",
+        "vocab_id": "ko_k1_0124",
+        "role": "core",
+        "start": 4,
+        "end": 6,
+        "morph_indices": [
+          3
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "가",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 6,
+        "end": 7,
+        "morph_indices": [
+          4
+        ],
+        "grammar_id": "ko_k1_g20"
+      },
+      {
+        "surface": "있",
+        "lemma": "있다",
+        "pos": "adjective",
+        "sense": "exist",
+        "vocab_id": "ko_k1_0180",
+        "role": "core",
+        "start": 8,
+        "end": 9,
+        "morph_indices": [
+          5
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "어요",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 9,
+        "end": 11,
+        "morph_indices": [
+          6
+        ],
+        "grammar_id": "ko_k1_g02"
+      }
+    ],
+    "resolver_decisions": [
+      {
+        "type": "compound_boundary",
+        "surface": "밥하고",
+        "lemma": "밥하다",
+        "start": 0,
+        "status": "REVIEW",
+        "requires_candidate_review": true
+      }
+    ]
+  },
+  {
+    "scope": "quoted",
+    "text": "\"밥하고 고기가 있어요.\"",
+    "raw": [
+      {
+        "form": "\"",
+        "tag": "SSO",
+        "start": 0,
+        "length": 1
+      },
+      {
+        "form": "밥",
+        "tag": "NNG",
+        "start": 1,
+        "length": 1
+      },
+      {
+        "form": "하",
+        "tag": "XSV",
+        "start": 2,
+        "length": 1
+      },
+      {
+        "form": "고",
+        "tag": "EC",
+        "start": 3,
+        "length": 1
+      },
+      {
+        "form": "고기",
+        "tag": "NNG",
+        "start": 5,
+        "length": 2
+      },
+      {
+        "form": "가",
+        "tag": "JKS",
+        "start": 7,
+        "length": 1
+      },
+      {
+        "form": "있",
+        "tag": "VA",
+        "start": 9,
+        "length": 1
+      },
+      {
+        "form": "어요",
+        "tag": "EF",
+        "start": 10,
+        "length": 2
+      },
+      {
+        "form": ".",
+        "tag": "SF",
+        "start": 12,
+        "length": 1
+      },
+      {
+        "form": "\"",
+        "tag": "SSC",
+        "start": 13,
+        "length": 1
+      }
+    ],
+    "annotations": [
+      {
+        "surface": "밥하",
+        "lemma": "밥하다",
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "unresolved",
+        "start": 1,
+        "end": 3,
+        "morph_indices": [
+          1,
+          2
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "고",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 3,
+        "end": 4,
+        "morph_indices": [
+          3
+        ],
+        "grammar_id": "ko_k1_g09"
+      },
+      {
+        "surface": "고기",
+        "lemma": "고기",
+        "pos": "noun",
+        "sense": "meat",
+        "vocab_id": "ko_k1_0124",
+        "role": "core",
+        "start": 5,
+        "end": 7,
+        "morph_indices": [
+          4
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "가",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 7,
+        "end": 8,
+        "morph_indices": [
+          5
+        ],
+        "grammar_id": "ko_k1_g20"
+      },
+      {
+        "surface": "있",
+        "lemma": "있다",
+        "pos": "adjective",
+        "sense": "exist",
+        "vocab_id": "ko_k1_0180",
+        "role": "core",
+        "start": 9,
+        "end": 10,
+        "morph_indices": [
+          6
+        ],
+        "grammar_id": null
+      },
+      {
+        "surface": "어요",
+        "lemma": null,
+        "pos": null,
+        "sense": null,
+        "vocab_id": null,
+        "role": "grammar_function",
+        "start": 10,
+        "end": 12,
+        "morph_indices": [
+          7
+        ],
+        "grammar_id": "ko_k1_g02"
+      }
+    ],
+    "resolver_decisions": [
+      {
+        "type": "compound_boundary",
+        "surface": "\"밥하고",
+        "lemma": "밥하다",
+        "start": 0,
+        "status": "REVIEW",
+        "requires_candidate_review": true
+      }
+    ]
+  }
+]

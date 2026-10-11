@@ -1,0 +1,6695 @@
+--- phase1/README.md
++++ phase1_1/README.md
+@@ -1,28 +1,39 @@
+-# Korean K1 vocabulary design — Phase 1
++# Korean K1 vocabulary design — Phase 1.1
+ 
+-韓国語K1の語彙・文法データの初版です。教材本文は生成していません。
+-採用判断前の案であり、構造検証の成功は言語品質・学習者の既知率の保証ではありません。
++韓国語K1の語彙・文法データへPhase 1.1の人間レビューを反映しました。
++Coreの한국予算外移動と아니다採用は確定です。Expansionの入替7組は提案段階で、現行500語を保持しています。
++構造検証の成功は言語品質・学習者の既知率の保証ではありません。教材本文は生成していません。
+ 
+ ```powershell
+ python -m pip install -r requirements-dev.txt
+ python scripts/validate_k1_vocab.py
+ python scripts/validate_k1_vocab.py --json
+ python -m unittest discover -s tests -v
++python scripts/audit_phase1_1_changes.py
+ ```
+ 
+ - データ: `config/languages/ko/k1/`
+-- 設計・変更差分・境界語・要確認点: `reports/k1_vocab_design_report.md`
+-- 機械検証結果: `reports/k1_vocab_validation_result.json`
++- 現行設計・全差分・入替案・要確認点: `reports/k1_vocab_design_report_phase1_1.md`
++- 現行機械検証結果: `reports/k1_vocab_validation_result_phase1_1.json`
++- JSONフィールド差分・ファイルハッシュ: `reports/k1_vocab_changes_phase1_1.json`
++- 全変更ファイルのテキスト差分: `reports/k1_vocab_changes_phase1_1.patch`
++- Phase 1の17ファイルとSHA-256台帳: `reports/phase1_snapshot/`。旧validator・旧テストも保存し、旧仕様で実行可能。
++- 旧設計レポートと検証結果は元の`reports/k1_vocab_design_report.md` / `reports/k1_vocab_validation_result.json`にも保持。
+ - `core_vocab.source.json`: ユーザー原案の語・順序・カテゴリを保存した300エントリ。共通POSと中心義はこのPhaseで付与。
+-- `core_vocab.json`: 한국を固有名詞台帳へ移し、아니다に置き換えた最小修正候補300語。
++- `core_vocab.json`: 한국を固有名詞台帳へ移し、아니다を正式採用した300語。
+ - `expansion_vocab.json`: 500語。`category`は配分用、`tags`は教材利用用。両者は別の役割。
+ - `forms`は活用・異形の例示です。網羅的な形態素解析器や語形許可リストではありません。
++- `expansion_replacement_proposals.json`: 現行予算外の7組の入替提案。未採用。語彙DBへ結合しない。
++- `introduction_schedule.json`: 全300本分の初出配置可能性の証拠。本文・再遭遇計画・確定カリキュラムではありません。
+ 
+ 再現用の手選定シードは `scripts/build_k1_data.py` にあります。
+ `python scripts/build_k1_data.py` はJSONとSchemaを再生成して上書きします。
+ 人間レビュー後の修正はシードにも反映してから再生成してください。
+-`rank`は安定した配列順であり、コーパス頻度順位ではありません。
++既存のID・rank・lemma+POS+senseはすべて維持しました。
++Tierを変更してもID・rankを振り直しません。優先度はtierを使用します。rankは頻度順位や現行Tier順位ではありません。
+ 
+-500語を250本までに2語ずつ導入すると余裕は0枠です。
+-新出語を本文だけで習得させる場合は99%既知率にも制約があります。
+-レポートのFを確認し、導入・測定方針を確定してから次Phaseへ進みます。
++001〜275は500語に対して550枠、余裕50枠です。
++配置例は期間内に新出0語10本・1語30本・2語235本を分散し、276〜300は新出0です。
++既知率はhard 98%、target 99%。初出教材の新出語token総数は原則3以下（各語3回ではありません）。
++新出語の大量反復は初出回で行わず、後続の最低5つの別教材で再遭遇させます。
++比率とtoken方針は今回データ設計までを検証しており、実際の本文や学習者の知識を測定したものではありません。
+--- phase1/config/languages/ko/k1/core_vocab.json
++++ phase1_1/config/languages/ko/k1/core_vocab.json
+@@ -928,7 +928,7 @@
+     "forms": [
+       "아니에요"
+     ],
+-    "notes": "原案한국を固有名詞台帳へ移動した置換候補。N이/가 아니에요のみ。",
++    "notes": "Phase 1.1で正式採用。原案한국を固有名詞台帳へ移動。N이/가 아니에요のみ。",
+     "category": "adjectives",
+     "confidence": "high"
+   },
+--- /dev/null
++++ phase1_1/config/languages/ko/k1/expansion_replacement_proposals.json
+@@ -0,0 +1,142 @@
++{
++  "phase": "1.1",
++  "status": "pending_human_review",
++  "applied": false,
++  "counted_in_vocab_budget": false,
++  "entries": [
++    {
++      "source_id": "ko_k1_0773",
++      "source_lemma": "함께",
++      "source_pos": "adverb",
++      "source_sense": "together",
++      "action": "propose_defer_to_K2",
++      "removal_reason": "Core 같이とほぼ同義。",
++      "candidate": {
++        "lemma": "가만히",
++        "pos": "adverb",
++        "sense": "without_moving",
++        "gloss_ja": "動かずに",
++        "category": "adverbs_connectors",
++        "tier": "E3",
++        "notes": "副詞義のみ。-아/어 있다等の未許可構文を足さずに使える用例を確認する。"
++      },
++      "replacement_reason": "静止した状態で待つ・座る等の具体動作を補い、静かな音量の조용히とは区別できる。",
++      "status": "pending_human_review"
++    },
++    {
++      "source_id": "ko_k1_0702",
++      "source_lemma": "조부모",
++      "source_pos": "noun",
++      "source_sense": "grandparents",
++      "action": "propose_defer_to_K2",
++      "removal_reason": "E1 할머니/할아버지で表現できる。",
++      "candidate": {
++        "lemma": "아저씨",
++        "pos": "noun",
++        "sense": "adult_man_address",
++        "gloss_ja": "おじさん（成人男性の呼称）",
++        "category": "people_social",
++        "tier": "E3",
++        "notes": "実際の呼びかけは人物関係と丁寧さを母語話者が確認する。"
++      },
++      "replacement_reason": "近所・店・交通の人物描写に再利用しやすい具体的呼称。",
++      "status": "pending_human_review"
++    },
++    {
++      "source_id": "ko_k1_0797",
++      "source_lemma": "기차역",
++      "source_pos": "noun",
++      "source_sense": "train_station",
++      "action": "propose_defer_to_K2",
++      "removal_reason": "Core 역との差が小さい。",
++      "candidate": {
++        "lemma": "시간표",
++        "pos": "noun",
++        "sense": "timetable",
++        "gloss_ja": "時間割・時刻表",
++        "category": "school_work_transport_info",
++        "tier": "E3",
++        "notes": "時間の一覧という共通中心義。ジャンル別の用例と意味の範囲を確認する。"
++      },
++      "replacement_reason": "学校・交通・仕事の予定で使う具体物を補い、既存語の言い換えにならない。",
++      "status": "pending_human_review"
++    },
++    {
++      "source_id": "ko_k1_0757",
++      "source_lemma": "찍히다",
++      "source_pos": "verb",
++      "source_sense": "be_photographed",
++      "action": "propose_defer_to_K2",
++      "removal_reason": "受動の負荷に対して場面が限定される。",
++      "candidate": {
++        "lemma": "충전하다",
++        "pos": "verb",
++        "sense": "charge_battery",
++        "gloss_ja": "充電する",
++        "category": "verbs",
++        "tier": "E3",
++        "notes": "電気機器の充電のみ。補助構文や専門的な電気説明へ拡張しない。"
++      },
++      "replacement_reason": "携帯電話・コンピューターを使う家・学校・仕事・旅行で、単純な能動文を作れる。",
++      "status": "pending_human_review"
++    },
++    {
++      "source_id": "ko_k1_0710",
++      "source_lemma": "관계",
++      "source_pos": "noun",
++      "source_sense": "relationship",
++      "action": "propose_defer_to_K2",
++      "removal_reason": "抽象的で、具体的な人物関係は既存語で表現できる。",
++      "candidate": {
++        "lemma": "동갑",
++        "pos": "noun",
++        "sense": "same_age",
++        "gloss_ja": "同い年",
++        "category": "people_social",
++        "tier": "E3",
++        "notes": "同じ年齢の人物という中心義に限定し、比較보다は使用しない。"
++      },
++      "replacement_reason": "年齢・家族・学校・新しい友達をつなぐ具体的属性。이다/하고で表現できる。",
++      "status": "pending_human_review"
++    },
++    {
++      "source_id": "ko_k1_0800",
++      "source_lemma": "정보",
++      "source_pos": "noun",
++      "source_sense": "information",
++      "action": "propose_defer_to_K2",
++      "removal_reason": "住所・時刻等の具体語で代替できる。",
++      "candidate": {
++        "lemma": "충전기",
++        "pos": "noun",
++        "sense": "charger",
++        "gloss_ja": "充電器",
++        "category": "school_work_transport_info",
++        "tier": "E3",
++        "notes": "携帯電話等の充電器。충전하다と同根だが物と動作で役割が異なる。"
++      },
++      "replacement_reason": "持ち物・貸し借り・忘れ物・旅行に使える具体的な機器。",
++      "status": "pending_human_review"
++    },
++    {
++      "source_id": "ko_k1_0647",
++      "source_lemma": "가장",
++      "source_pos": "adverb",
++      "source_sense": "most",
++      "action": "propose_defer_to_K2",
++      "removal_reason": "제일をK1の最上級として優先し、重複を減らす。",
++      "candidate": {
++        "lemma": "방금",
++        "pos": "adverb",
++        "sense": "just_now",
++        "gloss_ja": "たった今",
++        "category": "adverbs_connectors",
++        "tier": "E3",
++        "notes": "副詞の直前過去義のみ。副詞/名詞の多品詞用法を一括許可しない。"
++      },
++      "replacement_reason": "直前の出来事を過去形で示せる。곧の近い未来、지금の現在とは時間義が異なる。",
++      "status": "pending_human_review"
++    }
++  ],
++  "notes": "7組は一対一の提案。現在の500語は削除・追加せず、採用後は旧IDを新語に再利用しない。候補Tierは一対一で件数を維持する配置案。"
++}
+--- phase1/config/languages/ko/k1/expansion_vocab.json
++++ phase1_1/config/languages/ko/k1/expansion_vocab.json
+@@ -53,18 +53,18 @@
+     "sense": "parents",
+     "gloss_ja": "両親",
+     "level": "K1",
+-    "tier": "E1",
++    "tier": "E2",
+     "rank": 303,
+     "tags": [
+       "daily_life",
+       "family"
+     ],
+     "allow_inflection": false,
+-    "introduced_from": 1,
+-    "introduced_to": 100,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": null,
++    "introduced_from": 61,
++    "introduced_to": 220,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "Phase 1.1: E1→E2。Core 아버지/어머니/가족とE1 엄마/아빠で初期の家族描写を確保。",
+     "category": "people_social",
+     "confidence": "high"
+   },
+@@ -1469,18 +1469,18 @@
+     "sense": "strawberry",
+     "gloss_ja": "イチゴ",
+     "level": "K1",
+-    "tier": "E1",
++    "tier": "E2",
+     "rank": 364,
+     "tags": [
+       "daily_life",
+       "food"
+     ],
+     "allow_inflection": false,
+-    "introduced_from": 11,
+-    "introduced_to": 120,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": null,
++    "introduced_from": 61,
++    "introduced_to": 220,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "Phase 1.1: E1→E2。特定果物はCore 과일/사과等より導入優先度が低い。",
+     "category": "food_nature",
+     "confidence": "high"
+   },
+@@ -4700,7 +4700,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4723,7 +4723,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4746,7 +4746,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4769,7 +4769,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4792,7 +4792,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4807,18 +4807,18 @@
+     "sense": "cousin",
+     "gloss_ja": "いとこ",
+     "level": "K1",
+-    "tier": "E2",
++    "tier": "E3",
+     "rank": 506,
+     "tags": [
+       "daily_life",
+       "family"
+     ],
+     "allow_inflection": false,
+-    "introduced_from": 61,
+-    "introduced_to": 190,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": null,
++    "introduced_from": 151,
++    "introduced_to": 275,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "Phase 1.1: E2→E3。親族の細分化は基本の家族語より後段へ。",
+     "category": "people_social",
+     "confidence": "high"
+   },
+@@ -4838,7 +4838,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4860,7 +4860,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4883,7 +4883,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4905,7 +4905,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4928,7 +4928,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "運転手のみ。新聞記事・騎士の意味は未許可。",
+@@ -4951,7 +4951,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4974,7 +4974,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -4996,7 +4996,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5018,7 +5018,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5041,7 +5041,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5065,7 +5065,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5088,7 +5088,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5111,7 +5111,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5134,7 +5134,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5158,7 +5158,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5181,7 +5181,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5205,7 +5205,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5228,7 +5228,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5251,7 +5251,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5274,7 +5274,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5297,7 +5297,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5320,7 +5320,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5343,7 +5343,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5366,7 +5366,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5389,7 +5389,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5412,7 +5412,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5435,7 +5435,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5458,7 +5458,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5481,7 +5481,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5504,7 +5504,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5527,7 +5527,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5550,7 +5550,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5573,7 +5573,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5596,7 +5596,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5619,7 +5619,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5643,7 +5643,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5667,7 +5667,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5691,7 +5691,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5715,7 +5715,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5738,7 +5738,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5761,7 +5761,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5785,7 +5785,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5809,7 +5809,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5833,7 +5833,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 61,
+-    "introduced_to": 190,
++    "introduced_to": 200,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "Expansion 풀/grassとは同形異義。",
+@@ -5856,7 +5856,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5879,7 +5879,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5902,7 +5902,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5925,7 +5925,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5948,7 +5948,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5971,7 +5971,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -5994,7 +5994,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6017,7 +6017,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6040,7 +6040,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6063,7 +6063,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6086,7 +6086,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6109,7 +6109,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6132,7 +6132,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6147,18 +6147,18 @@
+     "sense": "chili_pepper",
+     "gloss_ja": "トウガラシ",
+     "level": "K1",
+-    "tier": "E2",
++    "tier": "E3",
+     "rank": 564,
+     "tags": [
+       "daily_life",
+       "food"
+     ],
+     "allow_inflection": false,
+-    "introduced_from": 71,
+-    "introduced_to": 210,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": null,
++    "introduced_from": 151,
++    "introduced_to": 275,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "Phase 1.1: E2→E3。特定食材は日常の基本食材より後段へ。",
+     "category": "food_nature",
+     "confidence": "high"
+   },
+@@ -6178,7 +6178,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6201,7 +6201,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6224,7 +6224,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6247,7 +6247,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6270,7 +6270,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6293,7 +6293,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6317,7 +6317,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6341,7 +6341,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "単独の終止形より데리고 가다/오다を使用。",
+@@ -6365,7 +6365,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6389,7 +6389,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6413,7 +6413,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6437,7 +6437,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6461,7 +6461,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6485,7 +6485,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6509,7 +6509,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6533,7 +6533,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6557,7 +6557,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6581,7 +6581,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6605,7 +6605,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6629,7 +6629,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6653,7 +6653,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6677,7 +6677,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6702,7 +6702,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6727,7 +6727,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6752,7 +6752,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [
+       "구워요",
+@@ -6780,7 +6780,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6805,7 +6805,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6829,7 +6829,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6853,7 +6853,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6877,7 +6877,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6901,7 +6901,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6926,7 +6926,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6952,7 +6952,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -6976,7 +6976,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7001,7 +7001,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7026,7 +7026,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 71,
+-    "introduced_to": 210,
++    "introduced_to": 220,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7050,7 +7050,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7074,7 +7074,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7098,7 +7098,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "Core 찍다/take_photoとは別義。印・スタンプを押す意味のみ。",
+@@ -7122,7 +7122,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7146,7 +7146,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7170,7 +7170,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7194,7 +7194,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7218,7 +7218,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7241,7 +7241,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7264,7 +7264,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7287,7 +7287,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [
+       "오래돼요",
+@@ -7313,7 +7313,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7337,7 +7337,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7360,7 +7360,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7383,7 +7383,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7406,7 +7406,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [
+       "빨개요",
+@@ -7432,7 +7432,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7455,7 +7455,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7479,7 +7479,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7503,7 +7503,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7527,7 +7527,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7551,7 +7551,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [
+       "셔요",
+@@ -7578,7 +7578,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [
+       "써요",
+@@ -7604,7 +7604,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7627,7 +7627,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7650,7 +7650,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7673,7 +7673,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7696,7 +7696,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7719,7 +7719,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [
+       "하얘요",
+@@ -7745,7 +7745,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7768,7 +7768,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7791,7 +7791,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [
+       "파래요",
+@@ -7818,7 +7818,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7840,7 +7840,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7862,7 +7862,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7884,7 +7884,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7906,7 +7906,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "副詞用法のみ。혼자가等の名詞用法は未登録。",
+@@ -7928,7 +7928,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "副詞用法のみ。서로의等の名詞用法は未登録。",
+@@ -7950,7 +7950,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7972,7 +7972,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -7994,7 +7994,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "意図せず繰り返す・反復する場面。単なる頻度はCore 자주を優先。",
+@@ -8016,7 +8016,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8038,7 +8038,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8060,7 +8060,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "副詞の辞書見出し語。조용하다と異なるPOS。",
+@@ -8082,7 +8082,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8104,7 +8104,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8119,19 +8119,19 @@
+     "sense": "most",
+     "gloss_ja": "最も",
+     "level": "K1",
+-    "tier": "E2",
++    "tier": "E3",
+     "rank": 647,
+     "tags": [
+       "daily_life"
+     ],
+     "allow_inflection": false,
+-    "introduced_from": 81,
+-    "introduced_to": 230,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": null,
++    "introduced_from": 151,
++    "introduced_to": 275,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "Phase 1.1: E2→E3。K1では제일を優先。K2送り・入替の判断待ちとして後段へ。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補방금は未採用、現行500に保持。",
+     "category": "adverbs_connectors",
+-    "confidence": "high"
++    "confidence": "medium"
+   },
+   {
+     "id": "ko_k1_0648",
+@@ -8148,12 +8148,12 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": "가장とほぼ同義。会話用、同一教材で言い換えない。",
++    "introduced_to": 240,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "가장よりK1で優先。会話での最上級「一番」のみ。比較보다/와・과を追加許可しない。",
+     "category": "adverbs_connectors",
+-    "confidence": "medium"
++    "confidence": "high"
+   },
+   {
+     "id": "ko_k1_0649",
+@@ -8170,7 +8170,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8192,7 +8192,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 81,
+-    "introduced_to": 230,
++    "introduced_to": 240,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8214,7 +8214,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8236,7 +8236,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8258,7 +8258,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8281,7 +8281,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8304,7 +8304,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8329,7 +8329,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8354,7 +8354,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8378,7 +8378,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [
+       "스무"
+@@ -8404,7 +8404,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8428,7 +8428,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8452,7 +8452,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8476,7 +8476,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "袋の数を数える依存名詞。物体としての봉지/bag_packetと別POS。",
+@@ -8500,7 +8500,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8524,7 +8524,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8548,7 +8548,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8572,7 +8572,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8596,7 +8596,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8619,7 +8619,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8642,7 +8642,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8665,7 +8665,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8688,7 +8688,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8711,7 +8711,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "Core 팔/eight_sinoとは同形異義。",
+@@ -8734,7 +8734,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8757,7 +8757,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "Core 이/two_sino・Expansion 이/thisとは同形異義。",
+@@ -8780,7 +8780,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8803,7 +8803,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8827,7 +8827,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8850,7 +8850,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8872,7 +8872,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8894,7 +8894,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8916,7 +8916,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8938,7 +8938,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8961,7 +8961,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -8985,7 +8985,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9008,7 +9008,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9031,7 +9031,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9054,7 +9054,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9077,7 +9077,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9100,7 +9100,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9123,7 +9123,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9146,7 +9146,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9169,7 +9169,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9192,7 +9192,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9215,7 +9215,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9238,7 +9238,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9261,7 +9261,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9284,7 +9284,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9307,7 +9307,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9330,7 +9330,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9353,7 +9353,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 91,
+-    "introduced_to": 250,
++    "introduced_to": 260,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9376,7 +9376,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9399,10 +9399,10 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": "할머니/할아버지で代替できる。家族全体をまとめる場面に限定。",
++    "introduced_to": 245,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "할머니/할아버지で代替できる。家族全体をまとめる場面に限定。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補아저씨は未採用、現行500に保持。",
+     "category": "people_social",
+     "confidence": "medium"
+   },
+@@ -9422,7 +9422,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9445,7 +9445,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9468,7 +9468,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9491,7 +9491,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9514,7 +9514,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9536,7 +9536,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9558,7 +9558,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9581,10 +9581,10 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": "抽象語。親しい・家族等の具体文脈に限定。",
++    "introduced_to": 245,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "抽象語。親しい・家族等の具体文脈に限定。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補동갑は未採用、現行500に保持。",
+     "category": "people_social",
+     "confidence": "medium"
+   },
+@@ -9604,7 +9604,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9628,7 +9628,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9651,7 +9651,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9674,7 +9674,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9697,7 +9697,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9720,7 +9720,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9743,7 +9743,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9767,7 +9767,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9790,7 +9790,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9814,7 +9814,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "芸術鑑賞の具体場面に限り再遭遇計画を要確認。",
+@@ -9838,7 +9838,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "旅行・学校行事で6教材の再使用を確認。",
+@@ -9861,7 +9861,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9886,7 +9886,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9909,7 +9909,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9932,7 +9932,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 151,
+-    "introduced_to": 220,
++    "introduced_to": 245,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9955,7 +9955,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -9978,7 +9978,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10001,7 +10001,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10024,7 +10024,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10047,7 +10047,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10070,7 +10070,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10093,7 +10093,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10116,7 +10116,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10139,7 +10139,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10162,7 +10162,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10185,7 +10185,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10208,7 +10208,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10231,7 +10231,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10246,7 +10246,7 @@
+     "sense": "remember",
+     "gloss_ja": "覚えている",
+     "level": "K1",
+-    "tier": "E3",
++    "tier": "E2",
+     "rank": 739,
+     "tags": [
+       "daily_life",
+@@ -10254,11 +10254,11 @@
+       "story_event"
+     ],
+     "allow_inflection": true,
+-    "introduced_from": 161,
+-    "introduced_to": 230,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": null,
++    "introduced_from": 61,
++    "introduced_to": 220,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "Phase 1.1: E3→E2。記憶保持は学習・約束・忘れ物で再利用でき、E3から前倒し。",
+     "category": "verbs",
+     "confidence": "high"
+   },
+@@ -10279,7 +10279,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "辞書見出し語として扱う。一般的な使役接辞の許可ではない。",
+@@ -10303,7 +10303,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10327,7 +10327,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10351,7 +10351,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10375,7 +10375,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [
+       "주워요",
+@@ -10402,7 +10402,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10426,7 +10426,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10450,7 +10450,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10474,7 +10474,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10498,7 +10498,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10522,7 +10522,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 161,
+-    "introduced_to": 230,
++    "introduced_to": 255,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10546,7 +10546,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10570,7 +10570,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10594,7 +10594,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10619,7 +10619,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10644,7 +10644,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10669,7 +10669,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10693,10 +10693,10 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": "受動の理解負荷。写真という具体場面の辞書語に限定。",
++    "introduced_to": 265,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "受動の理解負荷。写真という具体場面の辞書語に限定。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補충전하다は未採用、現行500に保持。",
+     "category": "verbs",
+     "confidence": "medium"
+   },
+@@ -10717,7 +10717,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10741,7 +10741,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10765,7 +10765,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10790,7 +10790,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "状態カテゴリに置くが韓国語のPOSは動詞。連体形화나는。",
+@@ -10814,7 +10814,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10838,7 +10838,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10863,7 +10863,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "状態カテゴリに置くが韓国語のPOSは動詞。連体形신나는。",
+@@ -10886,7 +10886,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [
+       "까매요",
+@@ -10913,7 +10913,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10937,7 +10937,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10960,7 +10960,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -10983,7 +10983,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [
+       "노래요",
+@@ -11001,20 +11001,20 @@
+     "sense": "how_state",
+     "gloss_ja": "どうだ",
+     "level": "K1",
+-    "tier": "E3",
++    "tier": "E1",
+     "rank": 770,
+     "tags": [
+       "daily_life",
+       "description"
+     ],
+     "allow_inflection": true,
+-    "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_from": 1,
++    "introduced_to": 100,
+     "target_exposures": 6,
+     "forms": [
+       "어때요"
+     ],
+-    "notes": "不規則・縮約・連体形の例示。網羅的な活用表ではない。",
++    "notes": "不規則・縮約・連体形の例示。網羅的な活用表ではない。 / Phase 1.1: E3→E1。어때요で状態を簡単に質問できる。E3から前倒し。",
+     "category": "adjectives",
+     "confidence": "high"
+   },
+@@ -11034,7 +11034,7 @@
+     ],
+     "allow_inflection": true,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11056,7 +11056,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11078,10 +11078,10 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 171,
+-    "introduced_to": 240,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": "Core 같이とほぼ同義。理解語として保持、生成は같이優先。",
++    "introduced_to": 265,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "Core 같이とほぼ同義。理解語として保持、生成は같이優先。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補가만히は未採用、現行500に保持。",
+     "category": "adverbs_connectors",
+     "confidence": "medium"
+   },
+@@ -11100,7 +11100,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "새 책の連体詞。鳥の새/birdとは同形異義。",
+@@ -11123,7 +11123,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 171,
+-    "introduced_to": 240,
++    "introduced_to": 265,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "아무 N도 없다等の否定文のみ。아무나/아무거나へ自由に拡張しない。",
+@@ -11145,7 +11145,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11167,7 +11167,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11182,18 +11182,18 @@
+     "sense": "briefly",
+     "gloss_ja": "少しの間",
+     "level": "K1",
+-    "tier": "E3",
++    "tier": "E1",
+     "rank": 778,
+     "tags": [
+       "daily_life",
+       "time"
+     ],
+     "allow_inflection": false,
+-    "introduced_from": 181,
+-    "introduced_to": 250,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": "副詞用法のみ。잠깐은等の名詞用法は未登録。",
++    "introduced_from": 1,
++    "introduced_to": 100,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "副詞用法のみ。잠깐은等の名詞用法は未登録。 / Phase 1.1: E3→E1。待つ・短時間の行動で高い再利用性。E3から前倒し。",
+     "category": "adverbs_connectors",
+     "confidence": "high"
+   },
+@@ -11213,7 +11213,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11236,7 +11236,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11259,7 +11259,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "談話理解の負荷。短い因果連鎖に限定。",
+@@ -11282,7 +11282,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11305,7 +11305,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11328,7 +11328,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11351,7 +11351,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11374,7 +11374,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "睡眠中の夢のみ。将来の夢・希望の抽象義は未許可。",
+@@ -11397,7 +11397,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11420,7 +11420,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11443,7 +11443,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11466,7 +11466,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11488,7 +11488,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11510,7 +11510,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11533,7 +11533,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": "抽象語。趣味・好きな活動に限定。",
+@@ -11555,7 +11555,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11577,7 +11577,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11600,7 +11600,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11623,10 +11623,10 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": "Core 역との差が小さいが、鉄道と地下鉄を区別する具体場面用。",
++    "introduced_to": 275,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "Core 역との差が小さいが、鉄道と地下鉄を区別する具体場面用。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補시간표は未採用、現行500に保持。",
+     "category": "school_work_transport_info",
+     "confidence": "medium"
+   },
+@@ -11646,7 +11646,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11669,7 +11669,7 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
++    "introduced_to": 275,
+     "target_exposures": 6,
+     "forms": [],
+     "notes": null,
+@@ -11692,10 +11692,10 @@
+     ],
+     "allow_inflection": false,
+     "introduced_from": 181,
+-    "introduced_to": 250,
+-    "target_exposures": 6,
+-    "forms": [],
+-    "notes": "抽象語。住所・時刻等の具体情報に限定。",
++    "introduced_to": 275,
++    "target_exposures": 6,
++    "forms": [],
++    "notes": "抽象語。住所・時刻等の具体情報に限定。 / Phase 1.1再査定: K2送り・入替を推奨。代替候補충전기は未採用、現行500に保持。",
+     "category": "school_work_transport_info",
+     "confidence": "medium"
+   }
+--- phase1/config/languages/ko/k1/grammar.json
++++ phase1_1/config/languages/ko/k1/grammar.json
+@@ -230,5 +230,29 @@
+     "category": "particle",
+     "example": "이것은 친구의 책이에요.",
+     "notes": "所有・所属のみ。나의→내、저의→제を同一語に正規化。이/그/저の指示連体詞と混同しない。"
++  },
++  {
++    "id": "ko_k1_g30",
++    "form": "-(으)로",
++    "meaning_ja": "〜で（手段）・〜へ（方向）",
++    "category": "particle",
++    "example": "저는 버스로 학교에 가요.",
++    "notes": "名詞に接続。母音・ㄹ받침の後は로、それ以外の받침は으로。交通手段・道具・移動方向に限定。資格・材料・原因・結果義、(으)로써/로서は未許可。"
++  },
++  {
++    "id": "ko_k1_g31",
++    "form": "부터 / 까지",
++    "meaning_ja": "〜から・〜まで（起点・終点）",
++    "category": "particle",
++    "example": "저는 아침부터 저녁까지 일해요.",
++    "notes": "時間・場所の区間の開始と終わりに限定。この一対を1文法項目と数える。場所起点は집에서부터等の에서との組合せを優先。強調の「〜さえ」までへ拡張しない。"
++  },
++  {
++    "id": "ko_k1_g32",
++    "form": "만",
++    "meaning_ja": "〜だけ（限定）",
++    "category": "particle",
++    "example": "저는 오늘 물만 마셔요.",
++    "notes": "名詞等の単純な限定のみ。숫자 만「万」と区別。-기만、만에、-(으)ㄹ 만하다等の別構文は未許可。"
+   }
+ ]
+--- phase1/config/languages/ko/k1/grammar.schema.json
++++ phase1_1/config/languages/ko/k1/grammar.schema.json
+@@ -2,8 +2,8 @@
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "title": "Korean K1 grammar array",
+   "type": "array",
+-  "minItems": 29,
+-  "maxItems": 29,
++  "minItems": 32,
++  "maxItems": 32,
+   "items": {
+     "type": "object",
+     "additionalProperties": false,
+--- /dev/null
++++ phase1_1/config/languages/ko/k1/introduction_schedule.json
+@@ -0,0 +1,1973 @@
++{
++  "language": "ko",
++  "level": "K1",
++  "status": "feasibility_witness_not_final_curriculum",
++  "notes": "0語回10本、1語回30本、2語回235本を導入期間中に分散した配置可能性の証拠。本文・既知率・再遭遇台帳ではない。",
++  "rows": [
++    {
++      "text": 1,
++      "entry_ids": [
++        "ko_k1_0373",
++        "ko_k1_0413"
++      ]
++    },
++    {
++      "text": 2,
++      "entry_ids": [
++        "ko_k1_0442",
++        "ko_k1_0443"
++      ]
++    },
++    {
++      "text": 3,
++      "entry_ids": [
++        "ko_k1_0444",
++        "ko_k1_0445"
++      ]
++    },
++    {
++      "text": 4,
++      "entry_ids": [
++        "ko_k1_0446",
++        "ko_k1_0447"
++      ]
++    },
++    {
++      "text": 5,
++      "entry_ids": [
++        "ko_k1_0448",
++        "ko_k1_0449"
++      ]
++    },
++    {
++      "text": 6,
++      "entry_ids": [
++        "ko_k1_0451",
++        "ko_k1_0467"
++      ]
++    },
++    {
++      "text": 7,
++      "entry_ids": [
++        "ko_k1_0468"
++      ]
++    },
++    {
++      "text": 8,
++      "entry_ids": [
++        "ko_k1_0469",
++        "ko_k1_0476"
++      ]
++    },
++    {
++      "text": 9,
++      "entry_ids": [
++        "ko_k1_0301",
++        "ko_k1_0302"
++      ]
++    },
++    {
++      "text": 10,
++      "entry_ids": [
++        "ko_k1_0304",
++        "ko_k1_0305"
++      ]
++    },
++    {
++      "text": 11,
++      "entry_ids": [
++        "ko_k1_0306",
++        "ko_k1_0307"
++      ]
++    },
++    {
++      "text": 12,
++      "entry_ids": [
++        "ko_k1_0308",
++        "ko_k1_0309"
++      ]
++    },
++    {
++      "text": 13,
++      "entry_ids": [
++        "ko_k1_0310",
++        "ko_k1_0311"
++      ]
++    },
++    {
++      "text": 14,
++      "entry_ids": [
++        "ko_k1_0312"
++      ]
++    },
++    {
++      "text": 15,
++      "entry_ids": [
++        "ko_k1_0313",
++        "ko_k1_0314"
++      ]
++    },
++    {
++      "text": 16,
++      "entry_ids": [
++        "ko_k1_0315",
++        "ko_k1_0316"
++      ]
++    },
++    {
++      "text": 17,
++      "entry_ids": [
++        "ko_k1_0317",
++        "ko_k1_0318"
++      ]
++    },
++    {
++      "text": 18,
++      "entry_ids": [
++        "ko_k1_0319",
++        "ko_k1_0320"
++      ]
++    },
++    {
++      "text": 19,
++      "entry_ids": [
++        "ko_k1_0321",
++        "ko_k1_0322"
++      ]
++    },
++    {
++      "text": 20,
++      "entry_ids": [
++        "ko_k1_0323",
++        "ko_k1_0324"
++      ]
++    },
++    {
++      "text": 21,
++      "entry_ids": [
++        "ko_k1_0325"
++      ]
++    },
++    {
++      "text": 22,
++      "entry_ids": [
++        "ko_k1_0326",
++        "ko_k1_0327"
++      ]
++    },
++    {
++      "text": 23,
++      "entry_ids": [
++        "ko_k1_0328",
++        "ko_k1_0329"
++      ]
++    },
++    {
++      "text": 24,
++      "entry_ids": [
++        "ko_k1_0330",
++        "ko_k1_0331"
++      ]
++    },
++    {
++      "text": 25,
++      "entry_ids": []
++    },
++    {
++      "text": 26,
++      "entry_ids": [
++        "ko_k1_0332",
++        "ko_k1_0333"
++      ]
++    },
++    {
++      "text": 27,
++      "entry_ids": [
++        "ko_k1_0334",
++        "ko_k1_0335"
++      ]
++    },
++    {
++      "text": 28,
++      "entry_ids": [
++        "ko_k1_0336"
++      ]
++    },
++    {
++      "text": 29,
++      "entry_ids": [
++        "ko_k1_0337",
++        "ko_k1_0338"
++      ]
++    },
++    {
++      "text": 30,
++      "entry_ids": [
++        "ko_k1_0339",
++        "ko_k1_0340"
++      ]
++    },
++    {
++      "text": 31,
++      "entry_ids": [
++        "ko_k1_0341",
++        "ko_k1_0342"
++      ]
++    },
++    {
++      "text": 32,
++      "entry_ids": [
++        "ko_k1_0343",
++        "ko_k1_0344"
++      ]
++    },
++    {
++      "text": 33,
++      "entry_ids": [
++        "ko_k1_0345",
++        "ko_k1_0346"
++      ]
++    },
++    {
++      "text": 34,
++      "entry_ids": [
++        "ko_k1_0347",
++        "ko_k1_0348"
++      ]
++    },
++    {
++      "text": 35,
++      "entry_ids": [
++        "ko_k1_0349"
++      ]
++    },
++    {
++      "text": 36,
++      "entry_ids": [
++        "ko_k1_0350",
++        "ko_k1_0770"
++      ]
++    },
++    {
++      "text": 37,
++      "entry_ids": [
++        "ko_k1_0778",
++        "ko_k1_0351"
++      ]
++    },
++    {
++      "text": 38,
++      "entry_ids": [
++        "ko_k1_0352",
++        "ko_k1_0353"
++      ]
++    },
++    {
++      "text": 39,
++      "entry_ids": [
++        "ko_k1_0354",
++        "ko_k1_0355"
++      ]
++    },
++    {
++      "text": 40,
++      "entry_ids": [
++        "ko_k1_0356",
++        "ko_k1_0357"
++      ]
++    },
++    {
++      "text": 41,
++      "entry_ids": [
++        "ko_k1_0358",
++        "ko_k1_0359"
++      ]
++    },
++    {
++      "text": 42,
++      "entry_ids": [
++        "ko_k1_0360"
++      ]
++    },
++    {
++      "text": 43,
++      "entry_ids": [
++        "ko_k1_0361",
++        "ko_k1_0362"
++      ]
++    },
++    {
++      "text": 44,
++      "entry_ids": [
++        "ko_k1_0363",
++        "ko_k1_0365"
++      ]
++    },
++    {
++      "text": 45,
++      "entry_ids": [
++        "ko_k1_0366",
++        "ko_k1_0367"
++      ]
++    },
++    {
++      "text": 46,
++      "entry_ids": [
++        "ko_k1_0368",
++        "ko_k1_0369"
++      ]
++    },
++    {
++      "text": 47,
++      "entry_ids": [
++        "ko_k1_0370",
++        "ko_k1_0371"
++      ]
++    },
++    {
++      "text": 48,
++      "entry_ids": [
++        "ko_k1_0372",
++        "ko_k1_0374"
++      ]
++    },
++    {
++      "text": 49,
++      "entry_ids": [
++        "ko_k1_0375"
++      ]
++    },
++    {
++      "text": 50,
++      "entry_ids": []
++    },
++    {
++      "text": 51,
++      "entry_ids": [
++        "ko_k1_0376",
++        "ko_k1_0377"
++      ]
++    },
++    {
++      "text": 52,
++      "entry_ids": [
++        "ko_k1_0378",
++        "ko_k1_0379"
++      ]
++    },
++    {
++      "text": 53,
++      "entry_ids": [
++        "ko_k1_0380",
++        "ko_k1_0381"
++      ]
++    },
++    {
++      "text": 54,
++      "entry_ids": [
++        "ko_k1_0382",
++        "ko_k1_0383"
++      ]
++    },
++    {
++      "text": 55,
++      "entry_ids": [
++        "ko_k1_0384",
++        "ko_k1_0385"
++      ]
++    },
++    {
++      "text": 56,
++      "entry_ids": [
++        "ko_k1_0386"
++      ]
++    },
++    {
++      "text": 57,
++      "entry_ids": [
++        "ko_k1_0387",
++        "ko_k1_0388"
++      ]
++    },
++    {
++      "text": 58,
++      "entry_ids": [
++        "ko_k1_0389",
++        "ko_k1_0390"
++      ]
++    },
++    {
++      "text": 59,
++      "entry_ids": [
++        "ko_k1_0391",
++        "ko_k1_0392"
++      ]
++    },
++    {
++      "text": 60,
++      "entry_ids": [
++        "ko_k1_0393",
++        "ko_k1_0394"
++      ]
++    },
++    {
++      "text": 61,
++      "entry_ids": [
++        "ko_k1_0395",
++        "ko_k1_0396"
++      ]
++    },
++    {
++      "text": 62,
++      "entry_ids": [
++        "ko_k1_0397",
++        "ko_k1_0398"
++      ]
++    },
++    {
++      "text": 63,
++      "entry_ids": [
++        "ko_k1_0399"
++      ]
++    },
++    {
++      "text": 64,
++      "entry_ids": [
++        "ko_k1_0400",
++        "ko_k1_0401"
++      ]
++    },
++    {
++      "text": 65,
++      "entry_ids": [
++        "ko_k1_0402",
++        "ko_k1_0403"
++      ]
++    },
++    {
++      "text": 66,
++      "entry_ids": [
++        "ko_k1_0404",
++        "ko_k1_0405"
++      ]
++    },
++    {
++      "text": 67,
++      "entry_ids": [
++        "ko_k1_0406",
++        "ko_k1_0407"
++      ]
++    },
++    {
++      "text": 68,
++      "entry_ids": [
++        "ko_k1_0408",
++        "ko_k1_0409"
++      ]
++    },
++    {
++      "text": 69,
++      "entry_ids": [
++        "ko_k1_0410",
++        "ko_k1_0411"
++      ]
++    },
++    {
++      "text": 70,
++      "entry_ids": [
++        "ko_k1_0412"
++      ]
++    },
++    {
++      "text": 71,
++      "entry_ids": [
++        "ko_k1_0414",
++        "ko_k1_0415"
++      ]
++    },
++    {
++      "text": 72,
++      "entry_ids": [
++        "ko_k1_0416",
++        "ko_k1_0417"
++      ]
++    },
++    {
++      "text": 73,
++      "entry_ids": [
++        "ko_k1_0418",
++        "ko_k1_0419"
++      ]
++    },
++    {
++      "text": 74,
++      "entry_ids": [
++        "ko_k1_0420",
++        "ko_k1_0421"
++      ]
++    },
++    {
++      "text": 75,
++      "entry_ids": []
++    },
++    {
++      "text": 76,
++      "entry_ids": [
++        "ko_k1_0422",
++        "ko_k1_0423"
++      ]
++    },
++    {
++      "text": 77,
++      "entry_ids": [
++        "ko_k1_0424"
++      ]
++    },
++    {
++      "text": 78,
++      "entry_ids": [
++        "ko_k1_0425",
++        "ko_k1_0426"
++      ]
++    },
++    {
++      "text": 79,
++      "entry_ids": [
++        "ko_k1_0427",
++        "ko_k1_0428"
++      ]
++    },
++    {
++      "text": 80,
++      "entry_ids": [
++        "ko_k1_0429",
++        "ko_k1_0430"
++      ]
++    },
++    {
++      "text": 81,
++      "entry_ids": [
++        "ko_k1_0431",
++        "ko_k1_0432"
++      ]
++    },
++    {
++      "text": 82,
++      "entry_ids": [
++        "ko_k1_0433",
++        "ko_k1_0434"
++      ]
++    },
++    {
++      "text": 83,
++      "entry_ids": [
++        "ko_k1_0435",
++        "ko_k1_0436"
++      ]
++    },
++    {
++      "text": 84,
++      "entry_ids": [
++        "ko_k1_0437"
++      ]
++    },
++    {
++      "text": 85,
++      "entry_ids": [
++        "ko_k1_0438",
++        "ko_k1_0439"
++      ]
++    },
++    {
++      "text": 86,
++      "entry_ids": [
++        "ko_k1_0440",
++        "ko_k1_0441"
++      ]
++    },
++    {
++      "text": 87,
++      "entry_ids": [
++        "ko_k1_0450",
++        "ko_k1_0452"
++      ]
++    },
++    {
++      "text": 88,
++      "entry_ids": [
++        "ko_k1_0453",
++        "ko_k1_0454"
++      ]
++    },
++    {
++      "text": 89,
++      "entry_ids": [
++        "ko_k1_0455",
++        "ko_k1_0456"
++      ]
++    },
++    {
++      "text": 90,
++      "entry_ids": [
++        "ko_k1_0457",
++        "ko_k1_0458"
++      ]
++    },
++    {
++      "text": 91,
++      "entry_ids": [
++        "ko_k1_0459"
++      ]
++    },
++    {
++      "text": 92,
++      "entry_ids": [
++        "ko_k1_0460",
++        "ko_k1_0461"
++      ]
++    },
++    {
++      "text": 93,
++      "entry_ids": [
++        "ko_k1_0462",
++        "ko_k1_0463"
++      ]
++    },
++    {
++      "text": 94,
++      "entry_ids": [
++        "ko_k1_0464",
++        "ko_k1_0465"
++      ]
++    },
++    {
++      "text": 95,
++      "entry_ids": [
++        "ko_k1_0466",
++        "ko_k1_0470"
++      ]
++    },
++    {
++      "text": 96,
++      "entry_ids": [
++        "ko_k1_0471",
++        "ko_k1_0472"
++      ]
++    },
++    {
++      "text": 97,
++      "entry_ids": [
++        "ko_k1_0473",
++        "ko_k1_0474"
++      ]
++    },
++    {
++      "text": 98,
++      "entry_ids": [
++        "ko_k1_0475"
++      ]
++    },
++    {
++      "text": 99,
++      "entry_ids": [
++        "ko_k1_0477",
++        "ko_k1_0478"
++      ]
++    },
++    {
++      "text": 100,
++      "entry_ids": []
++    },
++    {
++      "text": 101,
++      "entry_ids": [
++        "ko_k1_0479",
++        "ko_k1_0480"
++      ]
++    },
++    {
++      "text": 102,
++      "entry_ids": [
++        "ko_k1_0481",
++        "ko_k1_0482"
++      ]
++    },
++    {
++      "text": 103,
++      "entry_ids": [
++        "ko_k1_0483",
++        "ko_k1_0484"
++      ]
++    },
++    {
++      "text": 104,
++      "entry_ids": [
++        "ko_k1_0485",
++        "ko_k1_0486"
++      ]
++    },
++    {
++      "text": 105,
++      "entry_ids": [
++        "ko_k1_0487"
++      ]
++    },
++    {
++      "text": 106,
++      "entry_ids": [
++        "ko_k1_0488",
++        "ko_k1_0489"
++      ]
++    },
++    {
++      "text": 107,
++      "entry_ids": [
++        "ko_k1_0490",
++        "ko_k1_0491"
++      ]
++    },
++    {
++      "text": 108,
++      "entry_ids": [
++        "ko_k1_0492",
++        "ko_k1_0493"
++      ]
++    },
++    {
++      "text": 109,
++      "entry_ids": [
++        "ko_k1_0494",
++        "ko_k1_0495"
++      ]
++    },
++    {
++      "text": 110,
++      "entry_ids": [
++        "ko_k1_0496",
++        "ko_k1_0497"
++      ]
++    },
++    {
++      "text": 111,
++      "entry_ids": [
++        "ko_k1_0498",
++        "ko_k1_0499"
++      ]
++    },
++    {
++      "text": 112,
++      "entry_ids": [
++        "ko_k1_0500"
++      ]
++    },
++    {
++      "text": 113,
++      "entry_ids": [
++        "ko_k1_0501",
++        "ko_k1_0502"
++      ]
++    },
++    {
++      "text": 114,
++      "entry_ids": [
++        "ko_k1_0503",
++        "ko_k1_0504"
++      ]
++    },
++    {
++      "text": 115,
++      "entry_ids": [
++        "ko_k1_0505",
++        "ko_k1_0507"
++      ]
++    },
++    {
++      "text": 116,
++      "entry_ids": [
++        "ko_k1_0508",
++        "ko_k1_0509"
++      ]
++    },
++    {
++      "text": 117,
++      "entry_ids": [
++        "ko_k1_0510",
++        "ko_k1_0511"
++      ]
++    },
++    {
++      "text": 118,
++      "entry_ids": [
++        "ko_k1_0512",
++        "ko_k1_0513"
++      ]
++    },
++    {
++      "text": 119,
++      "entry_ids": [
++        "ko_k1_0514"
++      ]
++    },
++    {
++      "text": 120,
++      "entry_ids": [
++        "ko_k1_0515",
++        "ko_k1_0516"
++      ]
++    },
++    {
++      "text": 121,
++      "entry_ids": [
++        "ko_k1_0517",
++        "ko_k1_0518"
++      ]
++    },
++    {
++      "text": 122,
++      "entry_ids": [
++        "ko_k1_0519",
++        "ko_k1_0520"
++      ]
++    },
++    {
++      "text": 123,
++      "entry_ids": [
++        "ko_k1_0521",
++        "ko_k1_0522"
++      ]
++    },
++    {
++      "text": 124,
++      "entry_ids": [
++        "ko_k1_0523",
++        "ko_k1_0524"
++      ]
++    },
++    {
++      "text": 125,
++      "entry_ids": []
++    },
++    {
++      "text": 126,
++      "entry_ids": [
++        "ko_k1_0525"
++      ]
++    },
++    {
++      "text": 127,
++      "entry_ids": [
++        "ko_k1_0526",
++        "ko_k1_0527"
++      ]
++    },
++    {
++      "text": 128,
++      "entry_ids": [
++        "ko_k1_0528",
++        "ko_k1_0529"
++      ]
++    },
++    {
++      "text": 129,
++      "entry_ids": [
++        "ko_k1_0530",
++        "ko_k1_0531"
++      ]
++    },
++    {
++      "text": 130,
++      "entry_ids": [
++        "ko_k1_0532",
++        "ko_k1_0533"
++      ]
++    },
++    {
++      "text": 131,
++      "entry_ids": [
++        "ko_k1_0534",
++        "ko_k1_0535"
++      ]
++    },
++    {
++      "text": 132,
++      "entry_ids": [
++        "ko_k1_0536",
++        "ko_k1_0537"
++      ]
++    },
++    {
++      "text": 133,
++      "entry_ids": [
++        "ko_k1_0538"
++      ]
++    },
++    {
++      "text": 134,
++      "entry_ids": [
++        "ko_k1_0539",
++        "ko_k1_0540"
++      ]
++    },
++    {
++      "text": 135,
++      "entry_ids": [
++        "ko_k1_0541",
++        "ko_k1_0542"
++      ]
++    },
++    {
++      "text": 136,
++      "entry_ids": [
++        "ko_k1_0543",
++        "ko_k1_0544"
++      ]
++    },
++    {
++      "text": 137,
++      "entry_ids": [
++        "ko_k1_0545",
++        "ko_k1_0546"
++      ]
++    },
++    {
++      "text": 138,
++      "entry_ids": [
++        "ko_k1_0547",
++        "ko_k1_0548"
++      ]
++    },
++    {
++      "text": 139,
++      "entry_ids": [
++        "ko_k1_0549",
++        "ko_k1_0550"
++      ]
++    },
++    {
++      "text": 140,
++      "entry_ids": [
++        "ko_k1_0303"
++      ]
++    },
++    {
++      "text": 141,
++      "entry_ids": [
++        "ko_k1_0364",
++        "ko_k1_0551"
++      ]
++    },
++    {
++      "text": 142,
++      "entry_ids": [
++        "ko_k1_0552",
++        "ko_k1_0553"
++      ]
++    },
++    {
++      "text": 143,
++      "entry_ids": [
++        "ko_k1_0554",
++        "ko_k1_0555"
++      ]
++    },
++    {
++      "text": 144,
++      "entry_ids": [
++        "ko_k1_0556",
++        "ko_k1_0557"
++      ]
++    },
++    {
++      "text": 145,
++      "entry_ids": [
++        "ko_k1_0558",
++        "ko_k1_0559"
++      ]
++    },
++    {
++      "text": 146,
++      "entry_ids": [
++        "ko_k1_0560",
++        "ko_k1_0561"
++      ]
++    },
++    {
++      "text": 147,
++      "entry_ids": [
++        "ko_k1_0562"
++      ]
++    },
++    {
++      "text": 148,
++      "entry_ids": [
++        "ko_k1_0563",
++        "ko_k1_0565"
++      ]
++    },
++    {
++      "text": 149,
++      "entry_ids": [
++        "ko_k1_0566",
++        "ko_k1_0567"
++      ]
++    },
++    {
++      "text": 150,
++      "entry_ids": []
++    },
++    {
++      "text": 151,
++      "entry_ids": [
++        "ko_k1_0568",
++        "ko_k1_0569"
++      ]
++    },
++    {
++      "text": 152,
++      "entry_ids": [
++        "ko_k1_0570",
++        "ko_k1_0571"
++      ]
++    },
++    {
++      "text": 153,
++      "entry_ids": [
++        "ko_k1_0572",
++        "ko_k1_0573"
++      ]
++    },
++    {
++      "text": 154,
++      "entry_ids": [
++        "ko_k1_0574"
++      ]
++    },
++    {
++      "text": 155,
++      "entry_ids": [
++        "ko_k1_0575",
++        "ko_k1_0576"
++      ]
++    },
++    {
++      "text": 156,
++      "entry_ids": [
++        "ko_k1_0577",
++        "ko_k1_0578"
++      ]
++    },
++    {
++      "text": 157,
++      "entry_ids": [
++        "ko_k1_0579",
++        "ko_k1_0580"
++      ]
++    },
++    {
++      "text": 158,
++      "entry_ids": [
++        "ko_k1_0581",
++        "ko_k1_0582"
++      ]
++    },
++    {
++      "text": 159,
++      "entry_ids": [
++        "ko_k1_0583",
++        "ko_k1_0584"
++      ]
++    },
++    {
++      "text": 160,
++      "entry_ids": [
++        "ko_k1_0585",
++        "ko_k1_0586"
++      ]
++    },
++    {
++      "text": 161,
++      "entry_ids": [
++        "ko_k1_0587"
++      ]
++    },
++    {
++      "text": 162,
++      "entry_ids": [
++        "ko_k1_0588",
++        "ko_k1_0589"
++      ]
++    },
++    {
++      "text": 163,
++      "entry_ids": [
++        "ko_k1_0590",
++        "ko_k1_0591"
++      ]
++    },
++    {
++      "text": 164,
++      "entry_ids": [
++        "ko_k1_0592",
++        "ko_k1_0593"
++      ]
++    },
++    {
++      "text": 165,
++      "entry_ids": [
++        "ko_k1_0594",
++        "ko_k1_0595"
++      ]
++    },
++    {
++      "text": 166,
++      "entry_ids": [
++        "ko_k1_0596",
++        "ko_k1_0597"
++      ]
++    },
++    {
++      "text": 167,
++      "entry_ids": [
++        "ko_k1_0598",
++        "ko_k1_0599"
++      ]
++    },
++    {
++      "text": 168,
++      "entry_ids": [
++        "ko_k1_0600"
++      ]
++    },
++    {
++      "text": 169,
++      "entry_ids": [
++        "ko_k1_0739",
++        "ko_k1_0601"
++      ]
++    },
++    {
++      "text": 170,
++      "entry_ids": [
++        "ko_k1_0602",
++        "ko_k1_0603"
++      ]
++    },
++    {
++      "text": 171,
++      "entry_ids": [
++        "ko_k1_0604",
++        "ko_k1_0605"
++      ]
++    },
++    {
++      "text": 172,
++      "entry_ids": [
++        "ko_k1_0606",
++        "ko_k1_0607"
++      ]
++    },
++    {
++      "text": 173,
++      "entry_ids": [
++        "ko_k1_0608",
++        "ko_k1_0609"
++      ]
++    },
++    {
++      "text": 174,
++      "entry_ids": [
++        "ko_k1_0610",
++        "ko_k1_0611"
++      ]
++    },
++    {
++      "text": 175,
++      "entry_ids": []
++    },
++    {
++      "text": 176,
++      "entry_ids": [
++        "ko_k1_0612",
++        "ko_k1_0613"
++      ]
++    },
++    {
++      "text": 177,
++      "entry_ids": [
++        "ko_k1_0614",
++        "ko_k1_0615"
++      ]
++    },
++    {
++      "text": 178,
++      "entry_ids": [
++        "ko_k1_0616",
++        "ko_k1_0617"
++      ]
++    },
++    {
++      "text": 179,
++      "entry_ids": [
++        "ko_k1_0618",
++        "ko_k1_0619"
++      ]
++    },
++    {
++      "text": 180,
++      "entry_ids": [
++        "ko_k1_0620",
++        "ko_k1_0621"
++      ]
++    },
++    {
++      "text": 181,
++      "entry_ids": [
++        "ko_k1_0622",
++        "ko_k1_0623"
++      ]
++    },
++    {
++      "text": 182,
++      "entry_ids": [
++        "ko_k1_0624"
++      ]
++    },
++    {
++      "text": 183,
++      "entry_ids": [
++        "ko_k1_0625",
++        "ko_k1_0626"
++      ]
++    },
++    {
++      "text": 184,
++      "entry_ids": [
++        "ko_k1_0627",
++        "ko_k1_0628"
++      ]
++    },
++    {
++      "text": 185,
++      "entry_ids": [
++        "ko_k1_0629",
++        "ko_k1_0630"
++      ]
++    },
++    {
++      "text": 186,
++      "entry_ids": [
++        "ko_k1_0631",
++        "ko_k1_0632"
++      ]
++    },
++    {
++      "text": 187,
++      "entry_ids": [
++        "ko_k1_0633",
++        "ko_k1_0634"
++      ]
++    },
++    {
++      "text": 188,
++      "entry_ids": [
++        "ko_k1_0635",
++        "ko_k1_0636"
++      ]
++    },
++    {
++      "text": 189,
++      "entry_ids": [
++        "ko_k1_0637"
++      ]
++    },
++    {
++      "text": 190,
++      "entry_ids": [
++        "ko_k1_0638",
++        "ko_k1_0639"
++      ]
++    },
++    {
++      "text": 191,
++      "entry_ids": [
++        "ko_k1_0640",
++        "ko_k1_0641"
++      ]
++    },
++    {
++      "text": 192,
++      "entry_ids": [
++        "ko_k1_0642",
++        "ko_k1_0643"
++      ]
++    },
++    {
++      "text": 193,
++      "entry_ids": [
++        "ko_k1_0644",
++        "ko_k1_0645"
++      ]
++    },
++    {
++      "text": 194,
++      "entry_ids": [
++        "ko_k1_0646",
++        "ko_k1_0648"
++      ]
++    },
++    {
++      "text": 195,
++      "entry_ids": [
++        "ko_k1_0649",
++        "ko_k1_0650"
++      ]
++    },
++    {
++      "text": 196,
++      "entry_ids": [
++        "ko_k1_0701"
++      ]
++    },
++    {
++      "text": 197,
++      "entry_ids": [
++        "ko_k1_0702",
++        "ko_k1_0703"
++      ]
++    },
++    {
++      "text": 198,
++      "entry_ids": [
++        "ko_k1_0704",
++        "ko_k1_0705"
++      ]
++    },
++    {
++      "text": 199,
++      "entry_ids": [
++        "ko_k1_0706",
++        "ko_k1_0707"
++      ]
++    },
++    {
++      "text": 200,
++      "entry_ids": []
++    },
++    {
++      "text": 201,
++      "entry_ids": [
++        "ko_k1_0708",
++        "ko_k1_0709"
++      ]
++    },
++    {
++      "text": 202,
++      "entry_ids": [
++        "ko_k1_0710",
++        "ko_k1_0711"
++      ]
++    },
++    {
++      "text": 203,
++      "entry_ids": [
++        "ko_k1_0712"
++      ]
++    },
++    {
++      "text": 204,
++      "entry_ids": [
++        "ko_k1_0713",
++        "ko_k1_0714"
++      ]
++    },
++    {
++      "text": 205,
++      "entry_ids": [
++        "ko_k1_0715",
++        "ko_k1_0716"
++      ]
++    },
++    {
++      "text": 206,
++      "entry_ids": [
++        "ko_k1_0717",
++        "ko_k1_0718"
++      ]
++    },
++    {
++      "text": 207,
++      "entry_ids": [
++        "ko_k1_0719",
++        "ko_k1_0720"
++      ]
++    },
++    {
++      "text": 208,
++      "entry_ids": [
++        "ko_k1_0721",
++        "ko_k1_0722"
++      ]
++    },
++    {
++      "text": 209,
++      "entry_ids": [
++        "ko_k1_0723",
++        "ko_k1_0724"
++      ]
++    },
++    {
++      "text": 210,
++      "entry_ids": [
++        "ko_k1_0725"
++      ]
++    },
++    {
++      "text": 211,
++      "entry_ids": [
++        "ko_k1_0726",
++        "ko_k1_0727"
++      ]
++    },
++    {
++      "text": 212,
++      "entry_ids": [
++        "ko_k1_0728",
++        "ko_k1_0729"
++      ]
++    },
++    {
++      "text": 213,
++      "entry_ids": [
++        "ko_k1_0730",
++        "ko_k1_0731"
++      ]
++    },
++    {
++      "text": 214,
++      "entry_ids": [
++        "ko_k1_0732",
++        "ko_k1_0733"
++      ]
++    },
++    {
++      "text": 215,
++      "entry_ids": [
++        "ko_k1_0734",
++        "ko_k1_0735"
++      ]
++    },
++    {
++      "text": 216,
++      "entry_ids": [
++        "ko_k1_0736",
++        "ko_k1_0737"
++      ]
++    },
++    {
++      "text": 217,
++      "entry_ids": [
++        "ko_k1_0738"
++      ]
++    },
++    {
++      "text": 218,
++      "entry_ids": [
++        "ko_k1_0740",
++        "ko_k1_0741"
++      ]
++    },
++    {
++      "text": 219,
++      "entry_ids": [
++        "ko_k1_0742",
++        "ko_k1_0743"
++      ]
++    },
++    {
++      "text": 220,
++      "entry_ids": [
++        "ko_k1_0744",
++        "ko_k1_0745"
++      ]
++    },
++    {
++      "text": 221,
++      "entry_ids": [
++        "ko_k1_0746",
++        "ko_k1_0747"
++      ]
++    },
++    {
++      "text": 222,
++      "entry_ids": [
++        "ko_k1_0748",
++        "ko_k1_0749"
++      ]
++    },
++    {
++      "text": 223,
++      "entry_ids": [
++        "ko_k1_0750",
++        "ko_k1_0651"
++      ]
++    },
++    {
++      "text": 224,
++      "entry_ids": [
++        "ko_k1_0652",
++        "ko_k1_0653"
++      ]
++    },
++    {
++      "text": 225,
++      "entry_ids": []
++    },
++    {
++      "text": 226,
++      "entry_ids": [
++        "ko_k1_0654",
++        "ko_k1_0655"
++      ]
++    },
++    {
++      "text": 227,
++      "entry_ids": [
++        "ko_k1_0656",
++        "ko_k1_0657"
++      ]
++    },
++    {
++      "text": 228,
++      "entry_ids": [
++        "ko_k1_0658",
++        "ko_k1_0659"
++      ]
++    },
++    {
++      "text": 229,
++      "entry_ids": [
++        "ko_k1_0660",
++        "ko_k1_0661"
++      ]
++    },
++    {
++      "text": 230,
++      "entry_ids": [
++        "ko_k1_0662",
++        "ko_k1_0663"
++      ]
++    },
++    {
++      "text": 231,
++      "entry_ids": [
++        "ko_k1_0664",
++        "ko_k1_0665"
++      ]
++    },
++    {
++      "text": 232,
++      "entry_ids": [
++        "ko_k1_0666",
++        "ko_k1_0667"
++      ]
++    },
++    {
++      "text": 233,
++      "entry_ids": [
++        "ko_k1_0668",
++        "ko_k1_0669"
++      ]
++    },
++    {
++      "text": 234,
++      "entry_ids": [
++        "ko_k1_0670",
++        "ko_k1_0671"
++      ]
++    },
++    {
++      "text": 235,
++      "entry_ids": [
++        "ko_k1_0672",
++        "ko_k1_0673"
++      ]
++    },
++    {
++      "text": 236,
++      "entry_ids": [
++        "ko_k1_0674",
++        "ko_k1_0675"
++      ]
++    },
++    {
++      "text": 237,
++      "entry_ids": [
++        "ko_k1_0676",
++        "ko_k1_0677"
++      ]
++    },
++    {
++      "text": 238,
++      "entry_ids": [
++        "ko_k1_0678",
++        "ko_k1_0679"
++      ]
++    },
++    {
++      "text": 239,
++      "entry_ids": [
++        "ko_k1_0680",
++        "ko_k1_0681"
++      ]
++    },
++    {
++      "text": 240,
++      "entry_ids": [
++        "ko_k1_0682",
++        "ko_k1_0683"
++      ]
++    },
++    {
++      "text": 241,
++      "entry_ids": [
++        "ko_k1_0684",
++        "ko_k1_0685"
++      ]
++    },
++    {
++      "text": 242,
++      "entry_ids": [
++        "ko_k1_0686",
++        "ko_k1_0687"
++      ]
++    },
++    {
++      "text": 243,
++      "entry_ids": [
++        "ko_k1_0688",
++        "ko_k1_0689"
++      ]
++    },
++    {
++      "text": 244,
++      "entry_ids": [
++        "ko_k1_0690",
++        "ko_k1_0691"
++      ]
++    },
++    {
++      "text": 245,
++      "entry_ids": [
++        "ko_k1_0692",
++        "ko_k1_0693"
++      ]
++    },
++    {
++      "text": 246,
++      "entry_ids": [
++        "ko_k1_0694",
++        "ko_k1_0695"
++      ]
++    },
++    {
++      "text": 247,
++      "entry_ids": [
++        "ko_k1_0696",
++        "ko_k1_0697"
++      ]
++    },
++    {
++      "text": 248,
++      "entry_ids": [
++        "ko_k1_0698",
++        "ko_k1_0699"
++      ]
++    },
++    {
++      "text": 249,
++      "entry_ids": [
++        "ko_k1_0700",
++        "ko_k1_0751"
++      ]
++    },
++    {
++      "text": 250,
++      "entry_ids": []
++    },
++    {
++      "text": 251,
++      "entry_ids": [
++        "ko_k1_0752",
++        "ko_k1_0753"
++      ]
++    },
++    {
++      "text": 252,
++      "entry_ids": [
++        "ko_k1_0754",
++        "ko_k1_0755"
++      ]
++    },
++    {
++      "text": 253,
++      "entry_ids": [
++        "ko_k1_0756",
++        "ko_k1_0757"
++      ]
++    },
++    {
++      "text": 254,
++      "entry_ids": [
++        "ko_k1_0758",
++        "ko_k1_0759"
++      ]
++    },
++    {
++      "text": 255,
++      "entry_ids": [
++        "ko_k1_0760",
++        "ko_k1_0761"
++      ]
++    },
++    {
++      "text": 256,
++      "entry_ids": [
++        "ko_k1_0762",
++        "ko_k1_0763"
++      ]
++    },
++    {
++      "text": 257,
++      "entry_ids": [
++        "ko_k1_0764",
++        "ko_k1_0765"
++      ]
++    },
++    {
++      "text": 258,
++      "entry_ids": [
++        "ko_k1_0766",
++        "ko_k1_0767"
++      ]
++    },
++    {
++      "text": 259,
++      "entry_ids": [
++        "ko_k1_0768",
++        "ko_k1_0769"
++      ]
++    },
++    {
++      "text": 260,
++      "entry_ids": [
++        "ko_k1_0771",
++        "ko_k1_0772"
++      ]
++    },
++    {
++      "text": 261,
++      "entry_ids": [
++        "ko_k1_0773",
++        "ko_k1_0774"
++      ]
++    },
++    {
++      "text": 262,
++      "entry_ids": [
++        "ko_k1_0775",
++        "ko_k1_0506"
++      ]
++    },
++    {
++      "text": 263,
++      "entry_ids": [
++        "ko_k1_0564",
++        "ko_k1_0647"
++      ]
++    },
++    {
++      "text": 264,
++      "entry_ids": [
++        "ko_k1_0776",
++        "ko_k1_0777"
++      ]
++    },
++    {
++      "text": 265,
++      "entry_ids": [
++        "ko_k1_0779",
++        "ko_k1_0780"
++      ]
++    },
++    {
++      "text": 266,
++      "entry_ids": [
++        "ko_k1_0781",
++        "ko_k1_0782"
++      ]
++    },
++    {
++      "text": 267,
++      "entry_ids": [
++        "ko_k1_0783",
++        "ko_k1_0784"
++      ]
++    },
++    {
++      "text": 268,
++      "entry_ids": [
++        "ko_k1_0785",
++        "ko_k1_0786"
++      ]
++    },
++    {
++      "text": 269,
++      "entry_ids": [
++        "ko_k1_0787",
++        "ko_k1_0788"
++      ]
++    },
++    {
++      "text": 270,
++      "entry_ids": [
++        "ko_k1_0789",
++        "ko_k1_0790"
++      ]
++    },
++    {
++      "text": 271,
++      "entry_ids": [
++        "ko_k1_0791",
++        "ko_k1_0792"
++      ]
++    },
++    {
++      "text": 272,
++      "entry_ids": [
++        "ko_k1_0793",
++        "ko_k1_0794"
++      ]
++    },
++    {
++      "text": 273,
++      "entry_ids": [
++        "ko_k1_0795",
++        "ko_k1_0796"
++      ]
++    },
++    {
++      "text": 274,
++      "entry_ids": [
++        "ko_k1_0797",
++        "ko_k1_0798"
++      ]
++    },
++    {
++      "text": 275,
++      "entry_ids": [
++        "ko_k1_0799",
++        "ko_k1_0800"
++      ]
++    },
++    {
++      "text": 276,
++      "entry_ids": []
++    },
++    {
++      "text": 277,
++      "entry_ids": []
++    },
++    {
++      "text": 278,
++      "entry_ids": []
++    },
++    {
++      "text": 279,
++      "entry_ids": []
++    },
++    {
++      "text": 280,
++      "entry_ids": []
++    },
++    {
++      "text": 281,
++      "entry_ids": []
++    },
++    {
++      "text": 282,
++      "entry_ids": []
++    },
++    {
++      "text": 283,
++      "entry_ids": []
++    },
++    {
++      "text": 284,
++      "entry_ids": []
++    },
++    {
++      "text": 285,
++      "entry_ids": []
++    },
++    {
++      "text": 286,
++      "entry_ids": []
++    },
++    {
++      "text": 287,
++      "entry_ids": []
++    },
++    {
++      "text": 288,
++      "entry_ids": []
++    },
++    {
++      "text": 289,
++      "entry_ids": []
++    },
++    {
++      "text": 290,
++      "entry_ids": []
++    },
++    {
++      "text": 291,
++      "entry_ids": []
++    },
++    {
++      "text": 292,
++      "entry_ids": []
++    },
++    {
++      "text": 293,
++      "entry_ids": []
++    },
++    {
++      "text": 294,
++      "entry_ids": []
++    },
++    {
++      "text": 295,
++      "entry_ids": []
++    },
++    {
++      "text": 296,
++      "entry_ids": []
++    },
++    {
++      "text": 297,
++      "entry_ids": []
++    },
++    {
++      "text": 298,
++      "entry_ids": []
++    },
++    {
++      "text": 299,
++      "entry_ids": []
++    },
++    {
++      "text": 300,
++      "entry_ids": []
++    }
++  ]
++}
+--- phase1/config/languages/ko/k1/profile.json
++++ phase1_1/config/languages/ko/k1/profile.json
+@@ -1,8 +1,8 @@
+ {
+   "language": "ko",
+   "level": "K1",
+-  "version": "0.1.0",
+-  "status": "draft_for_human_review",
++  "version": "0.1.1",
++  "status": "phase1_1_review_applied",
+   "target_texts": 300,
+   "vocab_budget": {
+     "core": 300,
+@@ -20,20 +20,38 @@
+   },
+   "new_vocab": {
+     "min": 0,
+-    "max": 2
++    "max": 2,
++    "unit": "lemma",
++    "max_entries_per_text": 2,
++    "first_text_new_lemma_token_soft_max": 3,
++    "token_policy": "初出教材の新出語token合計は原則3以下。各語3回ではない。逸脱は人間レビューを要する。"
+   },
+-  "known_vocab_ratio": 0.99,
++  "hard_min_known_vocab_ratio": 0.98,
++  "target_known_vocab_ratio": 0.99,
+   "repetition": {
+     "near_repetition_allowed": true,
+     "near_repetition_encouraged": true,
+-    "paraphrase_required": false
++    "paraphrase_required": false,
++    "new_lemma_mass_repetition_in_first_text": false,
++    "prefer_new_lemma_repetition_in_later_texts": true,
++    "near_repetition_scope": "既知語の近距離反復を推奨。初出の新出語は全語合計token3以下の方針を優先。"
+   },
+   "style": {
+     "default_register": "해요체",
+     "prefer_processing_ease": true,
+     "prefer_naturalness_over_variety": true
+   },
+-  "grammar_count": 29,
++  "grammar_count": 32,
++  "core_decision": {
++    "status": "accepted",
++    "replacement": "한국→아니다",
++    "proper_names_outside_budget": true
++  },
++  "expansion_decision": {
++    "active_entries": 500,
++    "replacement_proposals_applied": false,
++    "notes": "現行500は許可語彙。7組の入替は人間判断待ち。Tier変更8語は適用。"
++  },
+   "counting": {
+     "vocab_unit": [
+       "lemma",
+@@ -45,13 +63,14 @@
+     "eojeol": "空白区切りの非空トークン数。句読点だけのトークンを数えない。",
+     "known_ratio_denominator": "本文中の内容語lemma+POS+senseの延べ出現数。助詞・語尾・許可構文内の文法専用語を除く。固有名詞・定型表現は1意味単位として分母へ含める。",
+     "known_ratio_numerator": "学習者が読む前に既知である意味単位の延べ出現数。未知語の繰返しも未知のまま計数。",
+-    "new_vocab_definition": "教材単位で初めて導入する異なるExpansionエントリの数。事前提示した語も初出教材の導入語数に含める。",
++    "new_vocab_definition": "新出lemmaは最大2。別senseの初出も導入として数え、DBエントリの初出も保守的に最大2に制限する。500エントリすべてを配置する。事前提示も初出教材の導入数に含める。",
++    "new_lemma_token_count": "初出のlemma+POS+senseに対応する本文内tokenを合算。活用形も同一語として計数し、既出senseや文法専用語は新出tokenへ含めない。",
+     "number_forms": "한/두/세/네/스무を固有数詞へ正規化。漢数詞の組合せは登録された数詞に分解。ゼロ・日付単位일・未登録の十位固有数詞は未許可。"
+   },
+   "introduction": {
+     "first_text": 1,
+-    "last_text": 250,
+-    "consolidation_from": 251,
++    "last_text": 275,
++    "consolidation_from": 276,
+     "tier_counts": {
+       "E1": 200,
+       "E2": 200,
+@@ -64,34 +83,40 @@
+       ],
+       "E2": [
+         61,
+-        250
++        260
+       ],
+       "E3": [
+         151,
+-        250
++        275
+       ]
+     },
+     "target_exposures": 6,
+     "distinct_texts_required": true
+   },
+   "feasibility": {
+-    "introduction_slots": 500,
++    "introduction_slots": 550,
+     "required_new_entries": 500,
+-    "slack_slots": 0,
+-    "warning": "全500語を本文初出させる場合、K1-001〜250は例外なく2語導入が必要。0〜1語回の余裕なし。",
+-    "known_ratio_resolution": "未確定。事前提示を推奨するが、実際に読前既知になったことの確認が必要。本文だけで2未知語を導入すると延べ内容語200以上が99%条件の必要条件。",
+-    "generation_gate": "人間レビューで導入容量と既知語率の測定・読前既知化方針を確定するまで大量本文生成へ進まない。"
++    "slack_slots": 50,
++    "warning": "275本×2枠=550枠。500語導入後に50枠の余裕。0語・1語導入回を分散した配置例も検証する。",
++    "known_ratio_resolution": "hard 98%、target 99%。未知token3なら内容語150token以上がhard達成の必要条件、targetには300以上が必要。原則3以下は比率の保証ではない。",
++    "generation_gate": "Phase 1.1は語彙設計と検証まで。入替候補・測定運用・再遭遇計画の人間判断後に別Phaseで本文試作。"
+   },
+   "grammar_policy": {
+     "max_connector_clauses_preferred": 2,
+     "allow_unlisted_productive_derivation": false,
+     "inflection_not_new_vocab": true,
++    "excluded_grammar": [
++      "比較 보다",
++      "와/과",
++      "-지 않다",
++      "名詞化 -기"
++    ],
+     "notes": "活用の許可は新たな語義・構文の許可ではない。辞書語の使役・受動・移動複合動詞は個別lemmaとしてのみ許可。"
+   },
+   "review_required": [
+-    "Core 한국→아니다置換案",
++    "Expansion7組の入替候補",
+     "意味境界とPOSの韓国語母語話者確認",
+-    "500語導入容量と99%既知率の両立",
++    "98%下限・99%目標の測定運用と新出token3上限の例外判断",
+     "E3再遭遇6教材の設計",
+     "例外5固定句の事前提示"
+   ]
+--- phase1/config/languages/ko/k1/proper_names.json
++++ phase1_1/config/languages/ko/k1/proper_names.json
+@@ -6,7 +6,7 @@
+       "kind": "country",
+       "gloss_ja": "韓国",
+       "source": "Core原案の41番",
+-      "notes": "固有名詞。事前提示して理解可能にし、無制限の固有名詞追加は避ける。"
++      "notes": "Phase 1.1で予算外への移動を正式採用。事前提示して理解可能にし、無制限の固有名詞追加は避ける。"
+     }
+   ]
+ }
+--- phase1/config/languages/ko/k1/support.schema.json
++++ phase1_1/config/languages/ko/k1/support.schema.json
+@@ -15,10 +15,13 @@
+         "length",
+         "sentence_length",
+         "new_vocab",
+-        "known_vocab_ratio",
++        "hard_min_known_vocab_ratio",
++        "target_known_vocab_ratio",
+         "repetition",
+         "style",
+         "grammar_count",
++        "core_decision",
++        "expansion_decision",
+         "counting",
+         "introduction",
+         "feasibility",
+@@ -66,17 +69,33 @@
+         "new_vocab": {
+           "const": {
+             "min": 0,
+-            "max": 2
+-          }
+-        },
+-        "known_vocab_ratio": {
++            "max": 2,
++            "unit": "lemma",
++            "max_entries_per_text": 2,
++            "first_text_new_lemma_token_soft_max": 3,
++            "token_policy": "初出教材の新出語token合計は原則3以下。各語3回ではない。逸脱は人間レビューを要する。"
++          }
++        },
++        "hard_min_known_vocab_ratio": {
++          "type": "number",
++          "minimum": 0,
++          "maximum": 1,
++          "const": 0.98
++        },
++        "target_known_vocab_ratio": {
++          "type": "number",
++          "minimum": 0,
++          "maximum": 1,
+           "const": 0.99
+         },
+         "repetition": {
+           "const": {
+             "near_repetition_allowed": true,
+             "near_repetition_encouraged": true,
+-            "paraphrase_required": false
++            "paraphrase_required": false,
++            "new_lemma_mass_repetition_in_first_text": false,
++            "prefer_new_lemma_repetition_in_later_texts": true,
++            "near_repetition_scope": "既知語の近距離反復を推奨。初出の新出語は全語合計token3以下の方針を優先。"
+           }
+         },
+         "style": {
+@@ -87,7 +106,21 @@
+           }
+         },
+         "grammar_count": {
+-          "const": 29
++          "const": 32
++        },
++        "core_decision": {
++          "const": {
++            "status": "accepted",
++            "replacement": "한국→아니다",
++            "proper_names_outside_budget": true
++          }
++        },
++        "expansion_decision": {
++          "const": {
++            "active_entries": 500,
++            "replacement_proposals_applied": false,
++            "notes": "現行500は許可語彙。7組の入替は人間判断待ち。Tier変更8語は適用。"
++          }
+         },
+         "counting": {
+           "type": "object",
+@@ -100,6 +133,7 @@
+             "known_ratio_denominator",
+             "known_ratio_numerator",
+             "new_vocab_definition",
++            "new_lemma_token_count",
+             "number_forms"
+           ],
+           "properties": {
+@@ -132,6 +166,10 @@
+               "type": "string",
+               "minLength": 1
+             },
++            "new_lemma_token_count": {
++              "type": "string",
++              "minLength": 1
++            },
+             "number_forms": {
+               "type": "string",
+               "minLength": 1
+@@ -141,8 +179,8 @@
+         "introduction": {
+           "const": {
+             "first_text": 1,
+-            "last_text": 250,
+-            "consolidation_from": 251,
++            "last_text": 275,
++            "consolidation_from": 276,
+             "tier_counts": {
+               "E1": 200,
+               "E2": 200,
+@@ -155,11 +193,11 @@
+               ],
+               "E2": [
+                 61,
+-                250
++                260
+               ],
+               "E3": [
+                 151,
+-                250
++                275
+               ]
+             },
+             "target_exposures": 6,
+@@ -208,6 +246,7 @@
+             "max_connector_clauses_preferred",
+             "allow_unlisted_productive_derivation",
+             "inflection_not_new_vocab",
++            "excluded_grammar",
+             "notes"
+           ],
+           "properties": {
+@@ -219,6 +258,13 @@
+             },
+             "inflection_not_new_vocab": {
+               "type": "boolean"
++            },
++            "excluded_grammar": {
++              "type": "array",
++              "items": {
++                "type": "string",
++                "minLength": 1
++              }
+             },
+             "notes": {
+               "type": "string",
+@@ -386,6 +432,188 @@
+           }
+         }
+       }
++    },
++    "replacement_proposals": {
++      "type": "object",
++      "additionalProperties": false,
++      "required": [
++        "phase",
++        "status",
++        "applied",
++        "counted_in_vocab_budget",
++        "entries",
++        "notes"
++      ],
++      "properties": {
++        "phase": {
++          "const": "1.1"
++        },
++        "status": {
++          "const": "pending_human_review"
++        },
++        "applied": {
++          "const": false
++        },
++        "counted_in_vocab_budget": {
++          "const": false
++        },
++        "entries": {
++          "type": "array",
++          "items": {
++            "type": "object",
++            "additionalProperties": false,
++            "required": [
++              "source_id",
++              "source_lemma",
++              "source_pos",
++              "source_sense",
++              "action",
++              "removal_reason",
++              "candidate",
++              "replacement_reason",
++              "status"
++            ],
++            "properties": {
++              "source_id": {
++                "type": "string",
++                "minLength": 1
++              },
++              "source_lemma": {
++                "type": "string",
++                "minLength": 1
++              },
++              "source_pos": {
++                "type": "string",
++                "minLength": 1
++              },
++              "source_sense": {
++                "type": "string",
++                "minLength": 1
++              },
++              "action": {
++                "type": "string",
++                "minLength": 1
++              },
++              "removal_reason": {
++                "type": "string",
++                "minLength": 1
++              },
++              "candidate": {
++                "type": "object",
++                "additionalProperties": false,
++                "required": [
++                  "lemma",
++                  "pos",
++                  "sense",
++                  "gloss_ja",
++                  "category",
++                  "tier",
++                  "notes"
++                ],
++                "properties": {
++                  "lemma": {
++                    "type": "string",
++                    "minLength": 1
++                  },
++                  "pos": {
++                    "type": "string",
++                    "minLength": 1
++                  },
++                  "sense": {
++                    "type": "string",
++                    "minLength": 1
++                  },
++                  "gloss_ja": {
++                    "type": "string",
++                    "minLength": 1
++                  },
++                  "category": {
++                    "type": "string",
++                    "minLength": 1
++                  },
++                  "tier": {
++                    "type": "string",
++                    "minLength": 1
++                  },
++                  "notes": {
++                    "type": "string",
++                    "minLength": 1
++                  }
++                }
++              },
++              "replacement_reason": {
++                "type": "string",
++                "minLength": 1
++              },
++              "status": {
++                "type": "string",
++                "minLength": 1
++              }
++            }
++          },
++          "minItems": 7,
++          "maxItems": 7
++        },
++        "notes": {
++          "type": "string",
++          "minLength": 1
++        }
++      }
++    },
++    "introduction_schedule": {
++      "type": "object",
++      "additionalProperties": false,
++      "required": [
++        "language",
++        "level",
++        "status",
++        "notes",
++        "rows"
++      ],
++      "properties": {
++        "language": {
++          "const": "ko"
++        },
++        "level": {
++          "const": "K1"
++        },
++        "status": {
++          "const": "feasibility_witness_not_final_curriculum"
++        },
++        "notes": {
++          "type": "string",
++          "minLength": 1
++        },
++        "rows": {
++          "type": "array",
++          "minItems": 300,
++          "maxItems": 300,
++          "items": {
++            "type": "object",
++            "additionalProperties": false,
++            "required": [
++              "text",
++              "entry_ids"
++            ],
++            "properties": {
++              "text": {
++                "type": "integer",
++                "minimum": 1,
++                "maximum": 300
++              },
++              "entry_ids": {
++                "type": "array",
++                "maxItems": 2,
++                "uniqueItems": true,
++                "items": {
++                  "type": "string",
++                  "pattern": "^ko_k1_[0-9]{4}$"
++                }
++              }
++            }
++          }
++        }
++      }
+     }
+   }
+ }
+--- phase1/config/languages/ko/k1/vocab.schema.json
++++ phase1_1/config/languages/ko/k1/vocab.schema.json
+@@ -91,7 +91,7 @@
+           "null"
+         ],
+         "minimum": 1,
+-        "maximum": 250
++        "maximum": 275
+       },
+       "introduced_to": {
+         "type": [
+@@ -99,7 +99,7 @@
+           "null"
+         ],
+         "minimum": 1,
+-        "maximum": 250
++        "maximum": 275
+       },
+       "target_exposures": {
+         "type": [
+@@ -163,12 +163,12 @@
+             "introduced_from": {
+               "type": "integer",
+               "minimum": 1,
+-              "maximum": 250
++              "maximum": 275
+             },
+             "introduced_to": {
+               "type": "integer",
+               "minimum": 1,
+-              "maximum": 250
++              "maximum": 275
+             },
+             "target_exposures": {
+               "type": "integer",
+--- /dev/null
++++ phase1_1/reports/k1_vocab_design_report_phase1_1.md
+@@ -0,0 +1,263 @@
++# 韓国語 Graded Reader K1 語彙設計 Phase 1.1
++
++作成日: 2026-10-09。状態: 人間レビュー結果反映済み、Expansion入替は提案段階。
++
++**現行データ: Core300、Expansion500、Total800。E1/E2/E3＝200/200/100。文法32項目。**
++Coreの한국予算外移動と아니다採用は確定した。Expansionの500エントリと既存IDを保持し、Tier・初出範囲・優先語の評価を更新した。
++入替候補7組は別JSONで提案し、未承認の語を現行500語へ穴埋め追加していない。
++教材本文、K2語彙DB、UI、TTSは作成していない。文法JSONへ短い文例を3つだけ追加した。
++
++## 1. Phase 1からの全差分
++
++### 保存した履歴
++
++- `reports/phase1_snapshot/`にPhase 1の17ファイルをそのまま保存した。旧語彙・旧Schema・旧validator・旧テスト・旧シードを含む。
++- `manifest.json`は各ファイルのSHA-256を記録。監査スクリプトで全17ファイルの一致を確認する。
++- 元の`reports/k1_vocab_design_report.md`と`reports/k1_vocab_validation_result.json`は書き換えていない。Phase 1の履歴として読む。
++- 現行の`core_vocab.source.json`、`lexical_exceptions.json`、`requirements-dev.txt`もPhase 1と同一内容を維持した。
++
++### 設計差分一覧
++
++| 項目 | Phase 1 | Phase 1.1 |
++|---|---|---|
++| Core 한국→아니다 | 置換候補 | 正式採用。語彙のidentityは変えずnotes・profileで確定を記録 |
++| 語彙数 | 300＋500＝800 | 維持 |
++| Expansionの削除・追加 | なし | なし。7組の提案を現行DBと分離 |
++| Tier | E1/E2/E3＝200/200/100 | 同件数。8語を再配置 |
++| ID・rank・lemma+POS+sense | 初版の800件 | 全800件で維持。Tier変更でIDを振り直さない |
++| 導入可能期間 | 001〜250 | 001〜275 |
++| 新出0の高速多読ゾーン | 251〜300 | 276〜300 |
++| 導入容量・余裕 | 500枠・0枠 | 550枠・50枠 |
++| E1の許可範囲 | 001〜170 | 維持。昇格2語は001〜100 |
++| E2の許可範囲 | 061〜250 | 061〜260 |
++| E3の許可範囲 | 151〜250 | 151〜275 |
++| 既知率 | known_vocab_ratio＝0.99 | 旧キーを削除しhard_min_known_vocab_ratio＝0.98、target_known_vocab_ratio＝0.99 |
++| 新出語上限 | 最大2エントリ | 最大2lemma。保守的にDBエントリ初出も最大2 |
++| 初出教材の新出token | 上限未定義 | 新出語全体の合計tokenを原則3以下 |
++| 新出語の反復 | 全般的に近距離反復を推奨 | 既知語の反復推奨は維持。初出語の大量反復は後続教材へ |
++| 文法 | 29項目 | 32項目。g30/g31/g32を追加 |
++| 제일 | medium、E2 | high、E2。가장より優先 |
++| 가장 | high、E2 | medium、E3。入替・K2送り提案は未適用 |
++| その他medium | 11語 | 11語。제일を外し가장を加え、7候補の判断待ちをnotesに明記 |
++| target_exposures | 全Expansionで6 | 維持。初出＋最低5つの別教材 |
++| validator・テスト | 旧仕様 | 旧検証を維持して新仕様の検証を追加。旧版は履歴にも保存 |
++
++E2のTierが変わらない語はintroduced_toを10本延長、E3のTierが変わらない語は25本延長した。
++Tier変更語は新しい段階に合わせて範囲を指定した（3の表）。他の語義・日本語義・POS・tags・formsは変更していない。
++Coreは아니다のnotesだけ、固有名詞台帳は한국のnotesだけを確定表現へ更新した。
++profileはversionを0.1.0→0.1.1、statusを反映済みへ変更し、Core確定・Expansion未入替・新出tokenの定義・未許可文法・残るレビュー事項を記録した。
++文法の既存g01〜g29は内容もIDも変更せず保持した。
++
++JSON Schemaの上限275・文法32・既知率2キー・追加ポリシーを更新した。
++入替提案と300本分の導入配置例にもSchema・意味的整合性検証を追加した。
++手選定シードはPhase 1のID順を再現した後にPhase 1.1を適用するため、再生成してもIDは同じである。
++
++**全フィールドの変更前後とファイルハッシュ:** `reports/k1_vocab_changes_phase1_1.json`。
++**コード・テスト・READMEを含む全テキスト差分:** `reports/k1_vocab_changes_phase1_1.patch`。
++変更件数は監査スクリプトの出力・上記JSONを参照する。生成差分ファイル自身は循環ハッシュを避けて監査対象から除外する。
++
++## 2. Core確定内容
++
++Core原案の列挙数は300、한국を除いた予算対象は299だった。
++한국は`proper_names.json`へ予算外登録し、ko_k1_0041の아니다 / adjective / not_beを正式採用する。
++Coreは300件のままで、その他299語のidentityを変更していない。
++原案の한국を含む`core_vocab.source.json`は履歴用であり、教材の許可語彙へ結合しない。
++国名も読前に理解できるようにし、800語予算から除くことを未知負荷の免除とみなさない。
++
++今後の語の入替では、確定済みのIDを別lemmaへ再利用しない。rankは初版からの安定した配列順として維持し、生成優先度はtierを使う。
++
++## 3. Expansion再レビューとTier変更
++
++### 適用したTier変更8語
++
++| lemma | 旧Tier | 新Tier | 初出候補範囲 | 理由 |
++|---|---|---|---|---|
++| 기억하다 | E3 | E2 | 061〜220 | 記憶・約束・忘れ物・学習で再利用しやすい |
++| 잠깐 | E3 | E1 | 001〜100 | 待つ・短時間の動作を簡単に示せる |
++| 어떻다 | E3 | E1 | 001〜100 | 어때요で状態を質問できる |
++| 부모 | E1 | E2 | 061〜220 | 初期の家族描写はCore父母・家族とE1엄마/아빠で確保 |
++| 딸기 | E1 | E2 | 061〜220 | 特定果物より基本の問いかけ・時間語を優先 |
++| 가장 | E2 | E3 | 151〜275 | 最上級は제일を優先。K2送り・入替は判断待ち |
++| 사촌 | E2 | E3 | 151〜275 | 家族の細分化を後段へ |
++| 고추 | E2 | E3 | 151〜275 | 特定食材を後段へ |
++
++E3→E1を2語、E1→E2を2語、E3→E2を1語、E2→E3を3語で相殺し、200/200/100を維持した。
++母語話者レビューでこれらの順位を再調整する余地はあるが、現行の配置は上記で検証済み。
++
++### 削除候補 → 代替候補 → 理由
++
++7語とも現在はK1許可語彙500の中に保持する。推奨判断は「K2送り・一対一入替」であり、実際の削除・採用は行っていない。
++`expansion_replacement_proposals.json`は語彙DBとは別の提案台帳で、`applied=false`、予算対象外。
++
++| 削除・K2送り候補（現E3） | 問題 | 代替候補（未採用） | 中心義・理由 |
++|---|---|---|---|
++| 함께 | Core 같이とほぼ同義 | 가만히 / adverb / without_moving | 動かずに。待つ・座る等の具体動作を補う。音量の조용히とは区別 |
++| 조부모 | 할머니/할아버지で足りる | 아저씨 / noun / adult_man_address | 成人男性への「おじさん」。近所・店・交通の具体人物を補う |
++| 기차역 | Core 역との差が小さい | 시간표 / noun / timetable | 時間割・時刻表。学校・交通・仕事の具体的な一覧表 |
++| 찍히다 | 受動の負荷・写真場面への偏り | 충전하다 / verb / charge_battery | 充電する。携帯電話・コンピューターの家・学校・仕事・旅行場面 |
++| 관계 | 抽象的な人物関係 | 동갑 / noun / same_age | 同い年。年齢・友達・家族を具体的に記述できる |
++| 정보 | 抽象的で具体語で置換しやすい | 충전기 / noun / charger | 充電器。持ち物・貸し借り・忘れ物・旅行に再利用できる |
++| 가장 | 제일と最上級の重複 | 방금 / adverb / just_now | たった今。近い未来の곧、現在の지금と異なる直前過去を補う |
++
++全候補は既存Core/Expansionとlemmaが重ならず、現在の7語と同じカテゴリ・Tierに仮置きした。
++したがって一対一の入替だけなら、Core300・Expansion500・Total800、Tier200/200/100、カテゴリ配分を維持できる。
++validatorはこの**仮適用時の件数と意味キー衝突**も検証する。仮適用はDBへの書込みではなく、候補の言語品質や6教材での使用を保証しない。
++候補の早期Tier昇格は、採用後に他語との再配分として判断する。現在の提案では件数維持を優先してE3に置いた。
++
++注意点: 아저씨は人物関係により呼びかけの自然さが変わる。동갑の導入価値は基本年齢語との比較が必要。
++시간표は時刻の一覧という共通義に限定する。가만히は自由な結果状態構文を追加せず使えることを確認する。
++충전하다と충전기は同根だが「動作」と「具体物」で別の機能がある。両方を採用する価値は再遭遇計画で確認する。
++これらを無条件にhighと確定せず、初級・具体・反復可能な用例を人間が確認してから採否を決める。
++
++### 他のmedium語と類語
++
++- 제일はK1に残す。口語の「一番」に限定し、比較보다や와/과は許可しない。
++- 미술관/박물관は暫定保持。展示の専門語を要求しない旅行・学校行事で6教材の自然な再使用を確認する。
++- 결국は短い因果連鎖の結末、관심は趣味・好みの具体場面に限定して暫定保持。
++- 最終medium11語は上記4語＋入替候補7語。high489、low0。
++- 뭐/무엇、아이/어린이等のPhase 1の類語評価は継続。今回、その他の語を削除・追加していない。
++
++### 件数
++
++品詞・カテゴリの総数はPhase 1と同一。Tierごとのカテゴリ内訳だけが変わる。
++
++| カテゴリ | E1 | E2 | E3 | 計 |
++|---|---:|---:|---:|---:|
++| 人・社会関係 | 14 | 15 | 11 | 40 |
++| 場所・生活用品 | 35 | 35 | 20 | 90 |
++| 食べ物・自然 | 21 | 20 | 9 | 50 |
++| 動詞 | 40 | 39 | 21 | 100 |
++| 形容詞・状態語 | 30 | 25 | 10 | 65 |
++| 副詞・接続語 | 19 | 21 | 10 | 50 |
++| 時間・助数詞・単位 | 17 | 14 | 4 | 35 |
++| 抽象語・身体・感情 | 15 | 15 | 10 | 40 |
++| 学校・仕事・交通・情報 | 9 | 16 | 5 | 30 |
++| **合計** | **200** | **200** | **100** | **500** |
++
++## 4. 文法29→32の差分
++
++g01〜g29は完全保持。以下の3エントリを末尾へ追加した。
++
++| ID | form | 許可義 | 注意 |
++|---|---|---|---|
++| ko_k1_g30 | -(으)로 | 手段・道具・移動方向 | 母音・ㄹ後は로、それ以外の받침後は으로。資格・原因・結果・材料や로써/로서は除外 |
++| ko_k1_g31 | 부터 / 까지 | 時間・場所の起点・終点 | 一対を1項目として計数。場所起点では에서부터等も許可。強調「〜さえ」は除外 |
++| ko_k1_g32 | 만 | 単純な限定「〜だけ」 | 数詞万の만と区別。-기만/만에/-(으)ㄹ 만하다は追加許可しない |
++
++助詞・文法を語彙の800件へ加算しない。
++**比較 보다、와/과、-지 않다、名詞化 -기は未追加**。Coreの見る보다と既存の試行-아/어 보다は引き続き許可するが、比較用法を意味しない。
++固定句5種＋通常活用괜찮아요の例外台帳は変更していない。
++
++## 5. 新出語スケジュールの余裕枠
++
++275本×最大2＝550枠。500エントリを導入し、余裕は50枠（容量の約9.1%）。
++276〜300の25本はこの550枠に含めず、新出0の高速多読ゾーンとした。
++
++抽象的な最大容量だけでなく、各語のintroduced_from/toを守る配置例を`introduction_schedule.json`へ保存した。
++全300本の行、各語の初出ID、未割当回の空配列を持ち、全500語が1回ずつ導入される。
++
++| 導入期間001〜275の回 | 本数 | 使用枠 | 未使用枠 |
++|---|---:|---:|---:|
++| 新出0 | 10 | 0 | 20 |
++| 新出1 | 30 | 30 | 30 |
++| 新出2 | 235 | 470 | 0 |
++| **計** | **275** | **500** | **50** |
++
++0語の回は025、050、075、100、125、150、175、200、225、250。
++1語の回は7の倍数から0語回を除いた最初の30回で、007〜217に分散した。
++2語を導入する235回にも、既知語の反復と後続語の再遭遇を配置できる。
++この配置例の最終初出は275。276〜300の新出数は全行0。
++265回に新出を割り当て、全教材へ毎回2語を課す設計を避けた。
++
++50枠はこの配置例では復習回・1語回へ割り当て済みの余裕で、**さらに50語を追加できる未使用予算**ではない。
++枠を入れ替えるときは個別の導入区間・Tier・末尾の再遭遇を再検証する。
++本JSONは配置可能性の証拠であり、ジャンル・本文・学習者の既知率・実際の再遭遇を確定したカリキュラムではない。
++
++target_exposuresは初出を含む6教材のまま。275で初出なら276〜300に25本あり、最低5つの別教材への再遭遇を時間的には置ける。
++ただし、最終部がE3の復習だけで過密にならないことは、別途「語×再遭遇教材」の台帳で確認する。
++
++## 6. 98%下限・99%目標と初出token
++
++profileの旧known_vocab_ratioを削除し、次の2キーへ置換した。
++
++```json
++{
++  "hard_min_known_vocab_ratio": 0.98,
++  "target_known_vocab_ratio": 0.99
++}
++```
++
++98%は合否下限、99%は目標。98%以上99%未満は目標未達だが下限適合として扱う。
++初出教材の新出語は最大2lemma。DBエントリも最大2にすることで、同表記の新しいsenseをまとめて導入する抜け道を防ぐ。
++別senseの初出も導入負荷として計数し、500エントリの配置対象から外さない。
++
++**初出新出語のtoken合計は原則3以下。** 2語を各3回＝6tokenにする方針ではない。
++例えば2語なら出現1＋1または2＋1を基本にし、活用形も同一lemmaのtokenとして数える。
++初出の中心義に該当するtokenを合算し、同表記の既出senseは別に扱う。大量反復は後続教材で行う。
++既知語の近距離反復・反復推奨・言い換え不要というK1方針は維持した。
++
++内容語・意味単位の延べtoken数をN、未知出現をUとすると既知率は(N−U)/N。
++
++| 未知token U | hard98%に必要なN | target99%に必要なN |
++|---|---:|---:|
++| 1 | 50以上 | 100以上 |
++| 2 | 100以上 | 200以上 |
++| 3 | 150以上 | 300以上 |
++
++3以下という上限だけで98%達成を保証しない。N＝100で未知3なら97%、N＝150で未知3なら98%。
++実際のNと、既知率に影響する未習得Core・未提示の固有名詞・定型句も測る必要がある。
++原則3以下よりhard98%を優先し、短い本文では新出tokenを減らすか、理解を確認した読前提示を組み合わせる。
++提示しただけで既知とみなさず、読前に理解可能であることを確かめる。提示語もその回の導入語数へ含める。
++Uを読む途中で勝手に既知へ変更し、反復回数を比率計算から消すことはしない。
++
++今回のvalidatorは**これらのprofile/Schemaと配置データ**を検証する。本文を生成していないため、実際の本文の比率・token数を測定した結果ではない。
++3token上限は「原則」のためsoft_maxとして記録し、例外の承認基準は人間判断待ちとした。
++
++## 7. validator・テスト結果
++
++```powershell
++python -B scripts/build_k1_data.py
++python -B scripts/validate_k1_vocab.py
++python -B -m unittest discover -s tests -v
++python -B scripts/audit_phase1_1_changes.py
++```
++
++現行検証結果は`reports/k1_vocab_validation_result_phase1_1.json`。
++Core300、Expansion500、Total800、Tier200/200/100、文法32、導入容量550・余裕50、全500語配置、276〜300新出0を確認する。
++新旧Coreとの重複、ID・rank・意味キー、POS・tags・必須フィールド・Schema等のPhase 1検証を継続した。
++既知率2キーの型・範囲・値、新出token方針、文法数、300本の配置例、候補7組の仮適用時の件数・衝突も検証する。
++
++validatorは**PASS、errors0、warnings3**。
++警告は「入替候補が未採用」「token原則3だけで比率は保証できない」「構造検証は自然さ・実際の知識・6教材再遭遇を保証しない」の3点。
++旧Core置換案の警告と余裕0の警告は解消した。
++
++現行テストは7メソッドすべてPASS。元の破損検出を残し、98%/99%キーの不正型・範囲・欠落、276/300への新出混入、文法32の欠落、配置重複、Tier維持、ID保持、仮入替等を追加した。合計44件の不正入力・配置不能ケースを確認した。
++Phase 1履歴の旧validatorは旧仕様でPASS、旧テスト4メソッドもすべてPASS。
++現行12JSONの再生成前後のSHA-256一致も確認した。Expansion302レコードのメタデータを更新し、語のidentityは500件すべて保持した。
++監査のファイル比較は既存12件変更・5件維持・5件追加。これとは別に全差分JSON/patchと履歴17件＋manifestを保存した。
++構造検証を言語品質の全件認定として扱わない。
++
++## 8. まだ人間判断が必要な項目
++
++1. **7組の入替の採否。** 現行500語を保持するか、各候補を正式採用するか。採用時の辞書義・用例・6教材での再使用を確認する。
++2. **仮候補のTier。** 入替だけなら全候補E3で件数を保つ。もっと早く導入する語は別のTier再配分が必要。
++3. **初出tokenの例外基準。** 原則3を超える例外をどの条件で認めるか。hard98%は原則として維持し、99%未達の扱いも定める。
++4. **既知語集合の運用。** 内容語の分母、読前確認、同表記のsense判定、固有名詞と固定句の学習状態を記録する方法。
++5. **最終25本の再遭遇密度。** 高速多読ゾーンでも、未知に近い後半E3語が集中して速度を妨げないかを台帳で確認する。
++6. **Tier変更の言語・教材上の妥当性。** E1昇格2語と対になる後送り語、E2 기억하다の使用価値を確認する。
++7. **確定語彙を入替する際のID移行。** 新しい語へ旧IDを流用しない。正式入替を行う次の改訂では、現行のID＝rank制約と新ID採番の移行をレビューする。
++
++本Phaseの範囲は語彙・文法・制約・検証の更新まで。これらの判断を理由に今回のデータ作成を止めておらず、本文生成やK2設計には進んでいない。
++
++## 9. 更新・追加ファイル
++
++- 更新: `core_vocab.json`、`expansion_vocab.json`、`proper_names.json`、`grammar.json`、`profile.json`、Schema3件、`scripts/build_k1_data.py`、`scripts/validate_k1_vocab.py`、`tests/test_validate_k1_vocab.py`、`README.md`。
++- 追加: `config/languages/ko/k1/expansion_replacement_proposals.json`、`introduction_schedule.json`、`scripts/audit_phase1_1_changes.py`、本レポート、現行検証結果JSON、全差分JSON/patch、Phase 1履歴17件とmanifest。
++- 維持: `core_vocab.source.json`、`lexical_exceptions.json`、`requirements-dev.txt`、旧レポート・旧検証結果。その他の教材本文は作成していない。
++
++## 10. 一次資料の確認範囲
++
++新文法の(으)로の異形と基本義は[国立国語院『世宗韓国語2』教師用指針](https://www.korean.go.kr/common/download.do%3Bfront%3DEA438B193B31848A5832781C40BC4C80?c_file_name=b29c6837-dee9-4f2a-918e-3f8edbb3c46a_0.pdf&file_path=reportData&o_file_name=%EC%84%B8%EC%A2%85%ED%95%9C%EA%B5%AD%EC%96%B4+2+%EA%B5%90%EC%9B%90%EC%9A%A9+%EC%A7%80%EC%B9%A8%EC%84%9C.pdf)の公開検索結果を確認した。
++本DBではその複数の用法から手段・道具・方向に許可域を狭めた。辞典全義の許可ではない。
++候補時間表の語義は[韓国語基礎辞典の시간표](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=65811)、同年齢の意味は[国立国語院の동갑についての回答](https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=319989)、방금の名詞／副詞区別は[基礎辞典の検索結果](https://krdict.korean.go.kr/eng/dicMarinerSearch/search?mainSearchWord=%EB%B0%A9&nation=eng)を参照した。
++候補7語の全語義・頻度・K1自然さを認定したわけではない。glossとsenseは本プロジェクトの狭い許可義の提案であり、正式採用前の人間レビューを要する。
+--- /dev/null
++++ phase1_1/reports/k1_vocab_validation_result_phase1_1.json
+@@ -0,0 +1,188 @@
++{
++  "ok": true,
++  "errors": [],
++  "warnings": [
++    "Replacement proposals are pending; the active 500 contains seven provisional K2 deferral candidates.",
++    "At most three new-lemma tokens does not guarantee hard 98% or target 99%; actual lexical denominator and knowledge must be measured.",
++    "Counts/schema pass does not certify dictionary senses, naturalness, learner familiarity, or six real exposure texts."
++  ],
++  "summary": {
++    "core": 300,
++    "expansion": 500,
++    "total": 800,
++    "source_core": 300,
++    "tiers": {
++      "E1": 200,
++      "E2": 200,
++      "E3": 100
++    },
++    "expansion_pos": {
++      "adjective": 63,
++      "adverb": 37,
++      "conjunction": 4,
++      "counter": 20,
++      "determiner": 7,
++      "interjection": 2,
++      "noun": 258,
++      "numeral": 4,
++      "pronoun": 3,
++      "verb": 102
++    },
++    "expansion_categories": {
++      "people_social": 40,
++      "places_objects": 90,
++      "food_nature": 50,
++      "verbs": 100,
++      "adjectives": 65,
++      "adverbs_connectors": 50,
++      "time_counters_units": 35,
++      "abstract_body_emotion": 40,
++      "school_work_transport_info": 30
++    },
++    "grammar": 32,
++    "confidence": {
++      "high": 489,
++      "medium": 11
++    },
++    "introduction_capacity": {
++      "assigned": 500,
++      "texts_used": 265,
++      "period_texts": 275,
++      "slots": 550,
++      "slack": 50,
++      "witness_period_counts": {
++        "0": 10,
++        "1": 30,
++        "2": 235
++      },
++      "witness_assigned": 500,
++      "witness_last_introduction": 275,
++      "consolidation_texts": 25,
++      "consolidation_new_entries": 0
++    },
++    "known_ratio_policy": {
++      "hard_min": 0.98,
++      "target": 0.99,
++      "first_text_new_lemma_token_soft_max": 3
++    },
++    "replacement_proposals": {
++      "pending": 7,
++      "applied": false,
++      "projection": {
++        "core": 300,
++        "expansion": 500,
++        "total": 800,
++        "tiers": {
++          "E1": 200,
++          "E2": 200,
++          "E3": 100
++        },
++        "categories": {
++          "people_social": 40,
++          "places_objects": 90,
++          "food_nature": 50,
++          "verbs": 100,
++          "adjectives": 65,
++          "adverbs_connectors": 50,
++          "time_counters_units": 35,
++          "abstract_body_emotion": 40,
++          "school_work_transport_info": 30
++        },
++        "collisions": 0,
++        "notes": "Dry-run counts and lexical identity checks only; not adopted DB or certified language quality."
++      }
++    },
++    "core_expansion_same_lemma": {
++      "개": [
++        {
++          "pos": "noun",
++          "sense": "dog",
++          "tier": "core"
++        },
++        {
++          "pos": "counter",
++          "sense": "item_unit",
++          "tier": "E1"
++        }
++      ],
++      "눈": [
++        {
++          "pos": "noun",
++          "sense": "snow",
++          "tier": "core"
++        },
++        {
++          "pos": "noun",
++          "sense": "eye",
++          "tier": "E1"
++        }
++      ],
++      "쓰다": [
++        {
++          "pos": "verb",
++          "sense": "write",
++          "tier": "core"
++        },
++        {
++          "pos": "adjective",
++          "sense": "bitter",
++          "tier": "E2"
++        }
++      ],
++      "이": [
++        {
++          "pos": "numeral",
++          "sense": "two_sino",
++          "tier": "core"
++        },
++        {
++          "pos": "determiner",
++          "sense": "this",
++          "tier": "E1"
++        },
++        {
++          "pos": "noun",
++          "sense": "tooth",
++          "tier": "E2"
++        }
++      ],
++      "저": [
++        {
++          "pos": "pronoun",
++          "sense": "i_humble",
++          "tier": "core"
++        },
++        {
++          "pos": "determiner",
++          "sense": "that_over_there",
++          "tier": "E1"
++        }
++      ],
++      "찍다": [
++        {
++          "pos": "verb",
++          "sense": "take_photo",
++          "tier": "core"
++        },
++        {
++          "pos": "verb",
++          "sense": "stamp",
++          "tier": "E2"
++        }
++      ],
++      "팔": [
++        {
++          "pos": "numeral",
++          "sense": "eight_sino",
++          "tier": "core"
++        },
++        {
++          "pos": "noun",
++          "sense": "arm",
++          "tier": "E2"
++        }
++      ]
++    },
++    "distinct_lemmas": 785
++  }
++}
+--- /dev/null
++++ phase1_1/scripts/audit_phase1_1_changes.py
+@@ -0,0 +1,86 @@
++"""Check the preserved Phase 1 history and write complete Phase 1.1 diffs/results.
++
++JSON paths use RFC 6901 pointers. Patch includes every tracked file modification/addition.
++The generated change JSON/patch exclude themselves to avoid circular content hashes.
++"""
++from collections import Counter
++import difflib
++import hashlib
++import json
++from pathlib import Path
++import sys
++
++from validate_k1_vocab import validate
++
++ROOT=Path(__file__).resolve().parents[1]
++SNAPSHOT=ROOT/'reports/phase1_snapshot'
++
++def sha(path):
++    return hashlib.sha256(path.read_bytes()).hexdigest()
++
++def pointer(part):
++    return str(part).replace('~','~0').replace('/','~1')
++
++def json_diff(before,after,path=''):
++    result=[]
++    if isinstance(before,dict) and isinstance(after,dict):
++        for key in sorted(before.keys() | after.keys()):
++            child=path+'/'+pointer(key)
++            if key not in before:result.append(dict(path=child,change='added',after=after[key]))
++            elif key not in after:result.append(dict(path=child,change='removed',before=before[key]))
++            else:result.extend(json_diff(before[key],after[key],child))
++    elif isinstance(before,list) and isinstance(after,list):
++        for index in range(max(len(before),len(after))):
++            child=path+'/'+str(index)
++            if index>=len(before):result.append(dict(path=child,change='added',after=after[index]))
++            elif index>=len(after):result.append(dict(path=child,change='removed',before=before[index]))
++            else:result.extend(json_diff(before[index],after[index],child))
++    elif type(before) is not type(after) or before!=after:
++        result.append(dict(path=path,change='changed',before=before,after=after))
++    return result
++
++def main():
++    manifest=json.loads((SNAPSHOT/'manifest.json').read_text(encoding='utf-8'))['files']
++    for relative,expected in manifest.items():
++        if sha(SNAPSHOT/relative)!=expected:
++            raise RuntimeError(f'Phase 1 history was changed: {relative}')
++    result=validate(ROOT/'config/languages/ko/k1')
++    if not result['ok']:
++        print(json.dumps(result,ensure_ascii=False,indent=2))
++        return 1
++    (ROOT/'reports/k1_vocab_validation_result_phase1_1.json').write_text(
++        json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
++    paths=set(manifest)
++    for folder,extension in [('config','.json'),('scripts','.py'),('tests','.py')]:
++        paths.update(p.relative_to(ROOT).as_posix() for p in (ROOT/folder).rglob('*')
++                     if p.is_file() and p.suffix==extension and '__pycache__' not in p.parts)
++    paths.update(['reports/k1_vocab_design_report_phase1_1.md','reports/k1_vocab_validation_result_phase1_1.json'])
++    files=[];patch=[]
++    for relative in sorted(paths):
++        old=SNAPSHOT/relative;new=ROOT/relative
++        old_exists=old.exists();new_exists=new.exists()
++        if not new_exists:raise RuntimeError(f'Expected Phase 1.1 file missing: {relative}')
++        old_text=old.read_text(encoding='utf-8') if old_exists else ''
++        new_text=new.read_text(encoding='utf-8')
++        change='unchanged' if old_exists and old.read_bytes()==new.read_bytes() else 'changed' if old_exists else 'added'
++        record=dict(file=relative,change=change,
++                    before_sha256=sha(old) if old_exists else None,after_sha256=sha(new))
++        if new.suffix=='.json' and change!='unchanged':
++            record['json_changes']=json_diff(json.loads(old_text),json.loads(new_text)) if old_exists else [dict(path='',change='added',after=json.loads(new_text))]
++        files.append(record)
++        if change!='unchanged':
++            patch.extend(difflib.unified_diff(old_text.splitlines(keepends=True),new_text.splitlines(keepends=True),
++                         fromfile='phase1/'+relative if old_exists else '/dev/null',tofile='phase1_1/'+relative))
++    report=dict(from_phase='1',to_phase='1.1',snapshot_integrity='PASS',
++                coverage='All original 17 files plus current config JSON, scripts, tests, and Phase 1.1 report/result. Generated diff artifacts exclude themselves.',
++                summary=dict(Counter(f['change'] for f in files)),files=files)
++    (ROOT/'reports/k1_vocab_changes_phase1_1.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
++    (ROOT/'reports/k1_vocab_changes_phase1_1.patch').write_text(''.join(patch),encoding='utf-8')
++    print('Snapshot integrity: PASS (17 files)')
++    print('Validator: PASS; errors=0; warnings='+str(len(result['warnings'])))
++    print('File changes: '+json.dumps(report['summary']))
++    return 0
++
++if __name__=='__main__':
++    sys.stdout.reconfigure(encoding='utf-8')
++    raise SystemExit(main())
+--- phase1/scripts/build_k1_data.py
++++ phase1_1/scripts/build_k1_data.py
+@@ -1,4 +1,4 @@
+-"""Rebuild the reviewed Phase 1 draft from hand-curated, sense-restricted seeds.
++"""Rebuild Phase 1.1 from hand-curated, sense-restricted seeds.
+ 
+ No learner texts are generated. Rank is a stable identifier order, not corpus frequency.
+ """
+@@ -916,12 +916,91 @@
+             start,end=151+(index//25)*10,220+(index//25)*10
+         e.update(introduced_from=start,introduced_to=end)
+     annotate(core,expansions)
++    apply_phase1_1(core,expansions)
+     save('core_vocab.json',core)
+     save('expansion_vocab.json',expansions)
+     save('proper_names.json', {'counted_in_vocab_budget':False,'entries':[
+         {'lemma':'한국','kind':'country','gloss_ja':'韓国','source':'Core原案の41番',
+-         'notes':'固有名詞。事前提示して理解可能にし、無制限の固有名詞追加は避ける。'}]})
++         'notes':'Phase 1.1で予算外への移動を正式採用。事前提示して理解可能にし、無制限の固有名詞追加は避ける。'}]})
+     return source,core,expansions
++
++TIER_CHANGES = {
++    '기억하다':('E2','記憶保持は学習・約束・忘れ物で再利用でき、E3から前倒し。'),
++    '잠깐':('E1','待つ・短時間の行動で高い再利用性。E3から前倒し。'),
++    '어떻다':('E1','어때요で状態を簡単に質問できる。E3から前倒し。'),
++    '부모':('E2','Core 아버지/어머니/가족とE1 엄마/아빠で初期の家族描写を確保。'),
++    '딸기':('E2','特定果物はCore 과일/사과等より導入優先度が低い。'),
++    '가장':('E3','K1では제일を優先。K2送り・入替の判断待ちとして後段へ。'),
++    '사촌':('E3','親族の細分化は基本の家族語より後段へ。'),
++    '고추':('E3','特定食材は日常の基本食材より後段へ。'),
++}
++
++# Review proposals are separate from the active 500; no automatic gap filling.
++REPLACEMENT_PROPOSALS = [
++    ('함께','together','가만히','adverb','without_moving','動かずに',
++     'adverbs_connectors','Core 같이とほぼ同義。',
++     '静止した状態で待つ・座る等の具体動作を補い、静かな音量の조용히とは区別できる。',
++     '副詞義のみ。-아/어 있다等の未許可構文を足さずに使える用例を確認する。'),
++    ('조부모','grandparents','아저씨','noun','adult_man_address','おじさん（成人男性の呼称）',
++     'people_social','E1 할머니/할아버지で表現できる。',
++     '近所・店・交通の人物描写に再利用しやすい具体的呼称。',
++     '実際の呼びかけは人物関係と丁寧さを母語話者が確認する。'),
++    ('기차역','train_station','시간표','noun','timetable','時間割・時刻表',
++     'school_work_transport_info','Core 역との差が小さい。',
++     '学校・交通・仕事の予定で使う具体物を補い、既存語の言い換えにならない。',
++     '時間の一覧という共通中心義。ジャンル別の用例と意味の範囲を確認する。'),
++    ('찍히다','be_photographed','충전하다','verb','charge_battery','充電する',
++     'verbs','受動の負荷に対して場面が限定される。',
++     '携帯電話・コンピューターを使う家・学校・仕事・旅行で、単純な能動文を作れる。',
++     '電気機器の充電のみ。補助構文や専門的な電気説明へ拡張しない。'),
++    ('관계','relationship','동갑','noun','same_age','同い年',
++     'people_social','抽象的で、具体的な人物関係は既存語で表現できる。',
++     '年齢・家族・学校・新しい友達をつなぐ具体的属性。이다/하고で表現できる。',
++     '同じ年齢の人物という中心義に限定し、比較보다は使用しない。'),
++    ('정보','information','충전기','noun','charger','充電器',
++     'school_work_transport_info','住所・時刻等の具体語で代替できる。',
++     '持ち物・貸し借り・忘れ物・旅行に使える具体的な機器。',
++     '携帯電話等の充電器。충전하다と同根だが物と動作で役割が異なる。'),
++    ('가장','most','방금','adverb','just_now','たった今',
++     'adverbs_connectors','제일をK1の最上級として優先し、重複を減らす。',
++     '直前の出来事を過去形で示せる。곧の近い未来、지금の現在とは時間義が異なる。',
++     '副詞の直前過去義のみ。副詞/名詞の多品詞用法を一括許可しない。'),
++]
++
++def apply_phase1_1(core,expansions):
++    next(e for e in core if e['lemma']=='아니다')['notes']='Phase 1.1で正式採用。原案한국を固有名詞台帳へ移動。N이/가 아니에요のみ。'
++    for e in expansions:
++        previous=e['tier']
++        if e['lemma'] in TIER_CHANGES:
++            tier,reason=TIER_CHANGES[e['lemma']]
++            e['tier']=tier
++            e['notes']=' / '.join(filter(None,[e['notes'],f'Phase 1.1: {previous}→{tier}。{reason}']))
++            if tier=='E1':e.update(introduced_from=1,introduced_to=100)
++            elif tier=='E2':e.update(introduced_from=61,introduced_to=220)
++            else:e.update(introduced_from=151,introduced_to=275)
++        elif e['tier']=='E2':e['introduced_to']=min(260,e['introduced_to']+10)
++        elif e['tier']=='E3':e['introduced_to']+=25
++    by_key={(e['lemma'],e['sense']):e for e in core+expansions}
++    proposals=[]
++    for old,sense,new,pos,new_sense,gloss,category,removal,reason,notes in REPLACEMENT_PROPOSALS:
++        source=by_key[old,sense]
++        source['confidence']='medium'
++        source['notes']=' / '.join(filter(None,[source['notes'],f'Phase 1.1再査定: K2送り・入替を推奨。代替候補{new}は未採用、現行500に保持。']))
++        assert not any(e['lemma']==new for e in core+expansions),new
++        assert source['category']==category,(old,category)
++        proposals.append(dict(source_id=source['id'],source_lemma=old,source_pos=source['pos'],source_sense=sense,
++                              action='propose_defer_to_K2',removal_reason=removal,
++                              candidate=dict(lemma=new,pos=pos,sense=new_sense,gloss_ja=gloss,
++                                             category=category,tier=source['tier'],notes=notes),
++                              replacement_reason=reason,status='pending_human_review'))
++    most=by_key['제일','most_colloquial']
++    most['confidence']='high'
++    most['notes']='가장よりK1で優先。会話での最上級「一番」のみ。比較보다/와・과を追加許可しない。'
++    assert Counter(e['tier'] for e in expansions)=={'E1':200,'E2':200,'E3':100}
++    save('expansion_replacement_proposals.json',{
++        'phase':'1.1','status':'pending_human_review','applied':False,
++        'counted_in_vocab_budget':False,'entries':proposals,
++        'notes':'7組は一対一の提案。現在の500語は削除・追加せず、採用後は旧IDを新語に再利用しない。候補Tierは一対一で件数を維持する配置案。'})
+ 
+ def annotate(core,expansions):
+     all_entries=core+expansions
+@@ -1107,6 +1186,9 @@
+ -는|〜する（動詞現在連体）|adnominal|저는 친구가 읽는 책을 봐요.|現在連体形のみ。動詞の-(으)ㄴ/-(으)ㄹはこの項目では未許可。
+ 에게/한테|人に（受け手・相手）|particle|저는 친구한테 책을 줘요.|해요체では한테優先。에게서/한테서は未許可。
+ 의|〜の（所有）|particle|이것은 친구의 책이에요.|所有・所属のみ。나의→내、저의→제を同一語に正規化。이/그/저の指示連体詞と混同しない。
++-(으)로|〜で（手段）・〜へ（方向）|particle|저는 버스로 학교에 가요.|名詞に接続。母音・ㄹ받침の後は로、それ以外の받침は으로。交通手段・道具・移動方向に限定。資格・材料・原因・結果義、(으)로써/로서は未許可。
++부터 / 까지|〜から・〜まで（起点・終点）|particle|저는 아침부터 저녁까지 일해요.|時間・場所の区間の開始と終わりに限定。この一対を1文法項目と数える。場所起点は집에서부터等の에서との組合せを優先。強調の「〜さえ」までへ拡張しない。
++만|〜だけ（限定）|particle|저는 오늘 물만 마셔요.|名詞等の単純な限定のみ。숫자 만「万」と区別。-기만、만에、-(으)ㄹ 만하다等の別構文は未許可。
+ '''
+ 
+ def build_support():
+@@ -1139,41 +1221,50 @@
+                  notes='E1 괜찮다とg02の通常活用。語彙例外による未導入語の迂回を認めない。')
+         ]})
+     save('profile.json',{
+-        'language':'ko','level':'K1','version':'0.1.0','status':'draft_for_human_review',
++        'language':'ko','level':'K1','version':'0.1.1','status':'phase1_1_review_applied',
+         'target_texts':300,'vocab_budget':{'core':300,'expansion':500,'total':800},
+         'length':{'min_eojeol':120,'max_eojeol':180},
+         'sentence_length':{'preferred_min_eojeol':4,'preferred_max_eojeol':7,'hard_max_eojeol':10},
+-        'new_vocab':{'min':0,'max':2},'known_vocab_ratio':0.99,
+-        'repetition':{'near_repetition_allowed':True,'near_repetition_encouraged':True,'paraphrase_required':False},
++        'new_vocab':{'min':0,'max':2,'unit':'lemma','max_entries_per_text':2,
++                     'first_text_new_lemma_token_soft_max':3,
++                     'token_policy':'初出教材の新出語token合計は原則3以下。各語3回ではない。逸脱は人間レビューを要する。'},
++        'hard_min_known_vocab_ratio':0.98,'target_known_vocab_ratio':0.99,
++        'repetition':{'near_repetition_allowed':True,'near_repetition_encouraged':True,'paraphrase_required':False,
++                      'new_lemma_mass_repetition_in_first_text':False,'prefer_new_lemma_repetition_in_later_texts':True,
++                      'near_repetition_scope':'既知語の近距離反復を推奨。初出の新出語は全語合計token3以下の方針を優先。'},
+         'style':{'default_register':'해요체','prefer_processing_ease':True,'prefer_naturalness_over_variety':True},
+-        'grammar_count':29,
++        'grammar_count':32,
++        'core_decision':{'status':'accepted','replacement':'한국→아니다','proper_names_outside_budget':True},
++        'expansion_decision':{'active_entries':500,'replacement_proposals_applied':False,'notes':'現行500は許可語彙。7組の入替は人間判断待ち。Tier変更8語は適用。'},
+         'counting':{
+             'vocab_unit':['lemma','pos','sense'],
+             'proper_names_in_budget':False,'grammar_bound_forms_in_budget':False,
+             'eojeol':'空白区切りの非空トークン数。句読点だけのトークンを数えない。',
+             'known_ratio_denominator':'本文中の内容語lemma+POS+senseの延べ出現数。助詞・語尾・許可構文内の文法専用語を除く。固有名詞・定型表現は1意味単位として分母へ含める。',
+             'known_ratio_numerator':'学習者が読む前に既知である意味単位の延べ出現数。未知語の繰返しも未知のまま計数。',
+-            'new_vocab_definition':'教材単位で初めて導入する異なるExpansionエントリの数。事前提示した語も初出教材の導入語数に含める。',
++            'new_vocab_definition':'新出lemmaは最大2。別senseの初出も導入として数え、DBエントリの初出も保守的に最大2に制限する。500エントリすべてを配置する。事前提示も初出教材の導入数に含める。',
++            'new_lemma_token_count':'初出のlemma+POS+senseに対応する本文内tokenを合算。活用形も同一語として計数し、既出senseや文法専用語は新出tokenへ含めない。',
+             'number_forms':'한/두/세/네/스무を固有数詞へ正規化。漢数詞の組合せは登録された数詞に分解。ゼロ・日付単位일・未登録の十位固有数詞は未許可。'},
+-        'introduction':{'first_text':1,'last_text':250,'consolidation_from':251,
++        'introduction':{'first_text':1,'last_text':275,'consolidation_from':276,
+                         'tier_counts':{'E1':200,'E2':200,'E3':100},
+-                        'ranges':{'E1':[1,170],'E2':[61,250],'E3':[151,250]},
++                        'ranges':{'E1':[1,170],'E2':[61,260],'E3':[151,275]},
+                         'target_exposures':6,'distinct_texts_required':True},
+         'feasibility':{
+-            'introduction_slots':500,'required_new_entries':500,'slack_slots':0,
+-            'warning':'全500語を本文初出させる場合、K1-001〜250は例外なく2語導入が必要。0〜1語回の余裕なし。',
+-            'known_ratio_resolution':'未確定。事前提示を推奨するが、実際に読前既知になったことの確認が必要。本文だけで2未知語を導入すると延べ内容語200以上が99%条件の必要条件。',
+-            'generation_gate':'人間レビューで導入容量と既知語率の測定・読前既知化方針を確定するまで大量本文生成へ進まない。'},
++            'introduction_slots':550,'required_new_entries':500,'slack_slots':50,
++            'warning':'275本×2枠=550枠。500語導入後に50枠の余裕。0語・1語導入回を分散した配置例も検証する。',
++            'known_ratio_resolution':'hard 98%、target 99%。未知token3なら内容語150token以上がhard達成の必要条件、targetには300以上が必要。原則3以下は比率の保証ではない。',
++            'generation_gate':'Phase 1.1は語彙設計と検証まで。入替候補・測定運用・再遭遇計画の人間判断後に別Phaseで本文試作。'},
+         'grammar_policy':{
+             'max_connector_clauses_preferred':2,'allow_unlisted_productive_derivation':False,
+             'inflection_not_new_vocab':True,
++            'excluded_grammar':['比較 보다','와/과','-지 않다','名詞化 -기'],
+             'notes':'活用の許可は新たな語義・構文の許可ではない。辞書語の使役・受動・移動複合動詞は個別lemmaとしてのみ許可。'},
+-        'review_required':['Core 한국→아니다置換案','意味境界とPOSの韓国語母語話者確認',
+-                           '500語導入容量と99%既知率の両立','E3再遭遇6教材の設計','例外5固定句の事前提示']
++        'review_required':['Expansion7組の入替候補','意味境界とPOSの韓国語母語話者確認',
++                           '98%下限・99%目標の測定運用と新出token3上限の例外判断','E3再遭遇6教材の設計','例外5固定句の事前提示']
+     })
+     pos=['noun','verb','adjective','adverb','pronoun','determiner','numeral','counter','conjunction','interjection']
+     nonempty={'type':'string','minLength':1}
+-    integer_or_null={'type':['integer','null'],'minimum':1,'maximum':250}
++    integer_or_null={'type':['integer','null'],'minimum':1,'maximum':275}
+     vocab_item={
+         'type':'object','additionalProperties':False,
+         'required':['id','language','lemma','pos','sense','gloss_ja','level','tier','rank','tags',
+@@ -1192,8 +1283,8 @@
+         'allOf':[{
+             'if':{'properties':{'tier':{'const':'core'}}},
+             'then':{'properties':{k:{'type':'null'} for k in ('introduced_from','introduced_to','target_exposures')}},
+-            'else':{'properties':{'introduced_from':{'type':'integer','minimum':1,'maximum':250},
+-                                  'introduced_to':{'type':'integer','minimum':1,'maximum':250},
++            'else':{'properties':{'introduced_from':{'type':'integer','minimum':1,'maximum':275},
++                                  'introduced_to':{'type':'integer','minimum':1,'maximum':275},
+                                   'target_exposures':{'type':'integer','minimum':6,'maximum':300}}}
+         }]
+     }
+@@ -1202,7 +1293,7 @@
+     grammar_properties={k:nonempty for k in ('id','form','meaning_ja','category','example','notes')}
+     grammar_properties['id']={'type':'string','pattern':'^ko_k1_g[0-9]{2}$'}
+     grammar_properties['category']={'enum':['copula','ending','tense','aspect','modality','negation','connector','request','proposal','auxiliary','particle','adnominal']}
+-    save('grammar.schema.json',dict(schema_base,title='Korean K1 grammar array',type='array',minItems=29,maxItems=29,
++    save('grammar.schema.json',dict(schema_base,title='Korean K1 grammar array',type='array',minItems=32,maxItems=32,
+         items={'type':'object','additionalProperties':False,'required':list(grammar_properties),'properties':grammar_properties}))
+     def shape(value):
+         if isinstance(value,dict):
+@@ -1219,8 +1310,10 @@
+     profileshape=shape(read('profile.json'))
+     # The Phase 1 constraints are not configurable through a silently edited profile.
+     for field in ('language','level','target_texts','vocab_budget','length','sentence_length',
+-                  'new_vocab','known_vocab_ratio','repetition','style','grammar_count','introduction'):
++                  'new_vocab','repetition','style','grammar_count','introduction','core_decision','expansion_decision'):
+         profileshape['properties'][field]={'const':read('profile.json')[field]}
++    for field,value in [('hard_min_known_vocab_ratio',0.98),('target_known_vocab_ratio',0.99)]:
++        profileshape['properties'][field]={'type':'number','minimum':0,'maximum':1,'const':value}
+     exception_shape=shape(read('lexical_exceptions.json'))
+     exception_shape['properties']['counted_in_vocab_budget']={'const':False}
+     for field in ('match','allow_inflection','license_constituents','max_occurrences_per_text'):
+@@ -1230,11 +1323,40 @@
+     exception_item['properties']['id']={'type':'string','pattern':'^ko_k1_x[0-9]{2}$'}
+     proper_shape=shape(read('proper_names.json'))
+     proper_shape['properties']['counted_in_vocab_budget']={'const':False}
++    proposal_shape=shape(read('expansion_replacement_proposals.json'))
++    for field in ('phase','status','applied','counted_in_vocab_budget'):
++        proposal_shape['properties'][field]={'const':read('expansion_replacement_proposals.json')[field]}
++    proposal_shape['properties']['entries'].update(minItems=7,maxItems=7)
++    schedule_shape={'type':'object','additionalProperties':False,
++        'required':['language','level','status','notes','rows'],
++        'properties':{'language':{'const':'ko'},'level':{'const':'K1'},
++            'status':{'const':'feasibility_witness_not_final_curriculum'},'notes':nonempty,
++            'rows':{'type':'array','minItems':300,'maxItems':300,'items':{
++                'type':'object','additionalProperties':False,'required':['text','entry_ids'],
++                'properties':{'text':{'type':'integer','minimum':1,'maximum':300},
++                    'entry_ids':{'type':'array','maxItems':2,'uniqueItems':True,
++                                 'items':{'type':'string','pattern':'^ko_k1_[0-9]{4}$'}}}}}}}
+     save('support.schema.json',dict(schema_base,title='K1 supporting data schemas',
+-        **{'$defs':{'profile':profileshape,'exceptions':exception_shape,'proper_names':proper_shape}}))
++        **{'$defs':{'profile':profileshape,'exceptions':exception_shape,'proper_names':proper_shape,
++                   'replacement_proposals':proposal_shape,'introduction_schedule':schedule_shape}}))
++
++def build_introduction_schedule(expansion):
++    from validate_k1_vocab import introduction_assignment
++    # Ten spaced review-only texts and thirty single-introduction texts use 50 slack slots.
++    zero=set(range(25,251,25))
++    single=set([t for t in range(7,276,7) if t not in zero][:30])
++    capacities={t:0 if t in zero else 1 if t in single else 2 for t in range(1,276)}
++    witness,failure=introduction_assignment(expansion,texts=275,capacity=2,capacities=capacities,include_empty=True)
++    assert failure is None,failure
++    witness += [{'text':t,'entry_ids':[]} for t in range(276,301)]
++    save('introduction_schedule.json',{
++        'language':'ko','level':'K1','status':'feasibility_witness_not_final_curriculum',
++        'notes':'0語回10本、1語回30本、2語回235本を導入期間中に分散した配置可能性の証拠。本文・既知率・再遭遇台帳ではない。',
++        'rows':witness})
+ 
+ if __name__=='__main__':
+     source,core,expansion=build_vocab()
+     build_support()
++    build_introduction_schedule(expansion)
+     print(json.dumps({'source':len(source),'core':len(core),'expansion':len(expansion),
+                       'total':len(core)+len(expansion)},ensure_ascii=False))
+--- phase1/scripts/validate_k1_vocab.py
++++ phase1_1/scripts/validate_k1_vocab.py
+@@ -1,4 +1,4 @@
+-"""Validate Phase 1 data. Exit 0: structural checks pass; 1: invalid; 2: dependency missing.
++"""Validate Phase 1.1 data. Exit 0: structural checks pass; 1: invalid; 2: dependency missing.
+ 
+ Run from any directory: python /path/to/scripts/validate_k1_vocab.py [--json]
+ This validates data and introduction capacity, not learner text quality or real learning.
+@@ -44,7 +44,7 @@
+ def key(entry):
+     return (entry['lemma'],entry['pos'],entry['sense'])
+ 
+-def introduction_assignment(entries, texts=250, capacity=2):
++def introduction_assignment(entries, texts=275, capacity=2, capacities=None, include_empty=False):
+     """Earliest-deadline scheduling of unit jobs with release times and deadlines.
+ 
+     For integer interval windows and identical slots this gives a feasibility witness.
+@@ -60,11 +60,14 @@
+         if heap and heap[0][0]<text:
+             return None,f'{heap[0][2]} misses deadline {heap[0][0]}'
+         assigned=[]
+-        for _ in range(capacity):
++        slots=capacities.get(text,capacity) if capacities is not None else capacity
++        if not isinstance(slots,int) or isinstance(slots,bool) or not 0<=slots<=capacity:
++            return None,f'Invalid capacity at text {text}: {slots}'
++        for _ in range(slots):
+             if heap:
+                 deadline,rank,entry_id=heapq.heappop(heap)
+                 assigned.append(entry_id)
+-        if assigned:schedule.append({'text':text,'entry_ids':assigned})
++        if assigned or include_empty:schedule.append({'text':text,'entry_ids':assigned})
+     if heap or index!=len(pending):
+         return None,'Not enough slots inside introduction windows'
+     return schedule,None
+@@ -75,6 +78,7 @@
+     files={}
+     names=['core_vocab.json','expansion_vocab.json','core_vocab.source.json','grammar.json',
+            'lexical_exceptions.json','profile.json','proper_names.json',
++           'expansion_replacement_proposals.json','introduction_schedule.json',
+            'vocab.schema.json','grammar.schema.json','support.schema.json']
+     for name in names:
+         try:files[name]=load_json(data_dir/name)
+@@ -94,7 +98,10 @@
+     support=files['support.schema.json']
+     try:
+         Draft202012Validator.check_schema(support)
+-        for name,definition in [('profile.json','profile'),('lexical_exceptions.json','exceptions'),('proper_names.json','proper_names')]:
++        for name,definition in [('profile.json','profile'),('lexical_exceptions.json','exceptions'),
++                                ('proper_names.json','proper_names'),
++                                ('expansion_replacement_proposals.json','replacement_proposals'),
++                                ('introduction_schedule.json','introduction_schedule')]:
+             schema={**support,'$ref':f'#/$defs/{definition}'}
+             for problem in Draft202012Validator(schema).iter_errors(files[name]):
+                 location='/'.join(str(p) for p in problem.absolute_path) or '<root>'
+@@ -144,8 +151,16 @@
+                 error(f"{e['id']}: increased exposures require notes")
+     proper_lemmas={e['lemma'] for e in files['proper_names.json']['entries']}
+     if proper_lemmas & {e['lemma'] for e in all_entries}:error('Counted vocabulary contains a registered proper name')
++    if not profile['hard_min_known_vocab_ratio']<=profile['target_known_vocab_ratio']:
++        error('hard_min_known_vocab_ratio must not exceed target_known_vocab_ratio')
++    expected_slots=profile['introduction']['last_text']*profile['new_vocab']['max_entries_per_text']
++    if profile['feasibility']['introduction_slots']!=expected_slots:error('Introduction slot metadata mismatch')
++    if profile['feasibility']['required_new_entries']!=len(exp):error('Required new entry metadata mismatch')
++    if profile['feasibility']['slack_slots']!=expected_slots-len(exp):error('Slack slot metadata mismatch')
+     grammar=files['grammar.json']
+-    if [e['id'] for e in grammar]!=[f'ko_k1_g{i:02}' for i in range(1,30)]:error('Grammar IDs must be ordered g01..g29')
++    if len(grammar)!=32 or len(grammar)!=profile['grammar_count']:error('Grammar count must be 32 and match profile')
++    if [e['id'] for e in grammar]!=[f'ko_k1_g{i:02}' for i in range(1,33)]:error('Grammar IDs must be ordered g01..g32')
++    if [e['form'] for e in grammar[29:]]!=['-(으)로','부터 / 까지','만']:error('Added grammar must be means/direction, start/end, limitation')
+     exceptions=files['lexical_exceptions.json']['entries']
+     if duplicate_values(e['id'] for e in exceptions):error('Duplicate exception ID')
+     if duplicate_values(e['form'] for e in exceptions):error('Duplicate exception form')
+@@ -155,14 +170,74 @@
+         if e['kind']=='regular_vocab_form' and not e['requires_vocab']:error(f"{e['id']}: regular form requires a vocabulary link")
+         for lemma in e['requires_vocab']:
+             if lemma not in {e['lemma'] for e in all_entries}:error(f"{e['id']}: unknown vocabulary dependency {lemma}")
++    witness=None
++    if not errors:
++        witness,failure=introduction_assignment(exp,profile['introduction']['last_text'],profile['new_vocab']['max_entries_per_text'])
++        if failure:error(f'Introduction windows infeasible: {failure}')
++    proposals=files['expansion_replacement_proposals.json']['entries']
++    proposed_sources=[e['source_id'] for e in proposals]
++    if duplicate_values(proposed_sources):error('Duplicate replacement proposal source')
++    candidates=[(e['candidate']['lemma'],e['candidate']['pos'],e['candidate']['sense']) for e in proposals]
++    if duplicate_values(candidates):error('Duplicate replacement candidate')
++    if set(candidates) & set(map(key,all_entries)):error('Replacement candidate already in active vocabulary')
++    active_by_id={e['id']:e for e in exp}
++    valid_pos={'noun','verb','adjective','adverb','pronoun','determiner','numeral','counter','conjunction','interjection'}
++    for proposal in proposals:
++        active=active_by_id.get(proposal['source_id'])
++        if not active:
++            error(f"Unknown proposal source: {proposal['source_id']}");continue
++        if key(active)!=(proposal['source_lemma'],proposal['source_pos'],proposal['source_sense']):error('Replacement proposal source identity mismatch')
++        candidate=proposal['candidate']
++        if candidate['pos'] not in valid_pos:error('Invalid replacement candidate POS')
++        if candidate['tier']!=active['tier']:error('One-for-one replacement candidate must preserve tier counts')
++        if candidate['category']!=active['category']:error('One-for-one replacement candidate must preserve category counts')
++        if proposal['status']!='pending_human_review':error('Replacement proposal must remain pending human review')
++    # Dry-run counts and lexical identities, never write projected terms into the DB.
++    replacements={p['source_id']:p['candidate'] for p in proposals}
++    projected=[{**e,**replacements[e['id']]} if e['id'] in replacements else e for e in exp]
++    if len(projected)!=500 or len(core)+len(projected)!=800:error('Replacement projection changes vocabulary counts')
++    if Counter(e['tier'] for e in projected)!=Counter({'E1':200,'E2':200,'E3':100}):error('Replacement projection changes tier counts')
++    if Counter(e['category'] for e in projected)!=Counter(CATEGORY_COUNTS):error('Replacement projection changes category counts')
++    if duplicate_values(key(e) for e in core+projected):error('Replacement projection causes lemma+POS+sense collision')
++    if proper_lemmas & {e['lemma'] for e in projected}:error('Replacement projection includes a proper name')
++    rows=files['introduction_schedule.json']['rows']
++    if [row['text'] for row in rows]!=list(range(1,301)):error('Schedule texts must be ordered 1..300')
++    scheduled_ids=[entry_id for row in rows for entry_id in row['entry_ids']]
++    if duplicate_values(scheduled_ids):error('Duplicate scheduled introduction')
++    if set(scheduled_ids)!=set(active_by_id):error('Schedule must introduce every Expansion entry exactly once')
++    for row in rows:
++        text=row['text']
++        if text>=profile['introduction']['consolidation_from'] and row['entry_ids']:
++            error(f'New vocabulary in consolidation zone at text {text}')
++        lemmas=[]
++        for entry_id in row['entry_ids']:
++            e=active_by_id.get(entry_id)
++            if e is None:continue
++            lemmas.append(e['lemma'])
++            if not e['introduced_from']<=text<=e['introduced_to']:error(f'{entry_id}: scheduled introduction outside window')
++        if len(set(lemmas))>profile['new_vocab']['max']:error(f'Too many new lemmas at text {text}')
++    intro_rows=[row for row in rows if row['text']<=profile['introduction']['last_text']]
++    counts=Counter(len(row['entry_ids']) for row in intro_rows)
++    if not counts[0] or not counts[1]:error('Schedule witness must include zero- and one-introduction texts inside 1..275')
+     if errors:return {'ok':False,'errors':errors,'warnings':warnings,'summary':summary}
+-    witness,failure=introduction_assignment(exp,profile['introduction']['last_text'],profile['new_vocab']['max'])
+-    if failure:error(f'Introduction windows infeasible: {failure}')
+-    else:
++    if witness is not None:
+         summary['introduction_capacity']={
+             'assigned':sum(len(t['entry_ids']) for t in witness),
+-            'texts_used':len(witness),'slots':500,'slack':0,
+-            'per_text_counts':dict(Counter(str(len(t['entry_ids'])) for t in witness))}
++            'texts_used':sum(bool(row['entry_ids']) for row in intro_rows),'period_texts':275,
++            'slots':expected_slots,'slack':expected_slots-len(exp),
++            'witness_period_counts':dict(sorted((str(k),v) for k,v in counts.items())),
++            'witness_assigned':len(scheduled_ids),
++            'witness_last_introduction':max(row['text'] for row in intro_rows if row['entry_ids']),
++            'consolidation_texts':25,'consolidation_new_entries':sum(len(row['entry_ids']) for row in rows if row['text']>=276)}
++        summary['known_ratio_policy']={'hard_min':profile['hard_min_known_vocab_ratio'],
++                                       'target':profile['target_known_vocab_ratio'],
++                                       'first_text_new_lemma_token_soft_max':profile['new_vocab']['first_text_new_lemma_token_soft_max']}
++        summary['replacement_proposals']={'pending':len(proposals),'applied':False,
++            'projection':{'core':len(core),'expansion':len(projected),'total':len(core)+len(projected),
++                          'tiers':dict(Counter(e['tier'] for e in projected)),
++                          'categories':dict(Counter(e['category'] for e in projected)),
++                          'collisions':0,
++                          'notes':'Dry-run counts and lexical identity checks only; not adopted DB or certified language quality.'}}
+     homographs=defaultdict(list)
+     for e in all_entries:homographs[e['lemma']].append(e)
+     summary['core_expansion_same_lemma']={
+@@ -171,10 +246,9 @@
+         if any(e['tier']=='core' for e in group) and any(e['tier']!='core' for e in group)}
+     summary['distinct_lemmas']=len(homographs)
+     warnings.extend([
+-        '500 introductions / (250 texts * 2) = no spare slots. Texts 1..250 all require two new entries.',
+-        '99% known ratio needs a reviewed pre-reading knowledge policy; two unknown occurrences need >=200 lexical occurrences.',
++        'Replacement proposals are pending; the active 500 contains seven provisional K2 deferral candidates.',
++        'At most three new-lemma tokens does not guarantee hard 98% or target 99%; actual lexical denominator and knowledge must be measured.',
+         'Counts/schema pass does not certify dictionary senses, naturalness, learner familiarity, or six real exposure texts.',
+-        'Core replaces proper name 한국 with 아니다; inspect source and report before adopting the draft.',
+     ])
+     return {'ok':not errors,'errors':errors,'warnings':warnings,'summary':summary}
+ 
+--- phase1/tests/test_validate_k1_vocab.py
++++ phase1_1/tests/test_validate_k1_vocab.py
+@@ -31,7 +31,14 @@
+         self.assertTrue(result['ok'],result['errors'])
+         self.assertEqual(result['summary']['total'],800)
+         self.assertEqual(result['summary']['introduction_capacity']['assigned'],500)
+-        self.assertEqual(result['summary']['introduction_capacity']['slack'],0)
++        self.assertEqual(result['summary']['introduction_capacity']['slack'],50)
++        self.assertEqual(result['summary']['introduction_capacity']['slots'],550)
++        self.assertEqual(result['summary']['introduction_capacity']['witness_period_counts'],{'0':10,'1':30,'2':235})
++        self.assertEqual(result['summary']['introduction_capacity']['consolidation_new_entries'],0)
++        self.assertEqual(result['summary']['grammar'],32)
++        self.assertEqual(result['summary']['replacement_proposals']['projection']['total'],800)
++        self.assertEqual(result['summary']['replacement_proposals']['projection']['tiers'],{'E1':200,'E2':200,'E3':100})
++        self.assertFalse(result['summary']['replacement_proposals']['applied'])
+         self.assertTrue(result['warnings'])
+ 
+     def test_invalid_fixtures(self):
+@@ -46,7 +53,7 @@
+             ('invalid POS',lambda d:d['expansion_vocab.json'][0].update(pos='particle'),'not one of'),
+             ('rank bool',lambda d:d['expansion_vocab.json'][0].update(rank=True),'not of type'),
+             ('reverse interval',lambda d:d['expansion_vocab.json'][0].update(introduced_from=99,introduced_to=98),'start exceeds end'),
+-            ('late interval',lambda d:d['expansion_vocab.json'][0].update(introduced_to=251),'greater than'),
++            ('late interval',lambda d:d['expansion_vocab.json'][0].update(introduced_to=276),'greater than'),
+             ('null exposure',lambda d:d['expansion_vocab.json'][0].update(target_exposures=None),'not of type'),
+             ('short exposure',lambda d:d['expansion_vocab.json'][0].update(target_exposures=5),'less than'),
+             ('tag syntax',lambda d:d['expansion_vocab.json'][0].update(tags=['Daily Life']),'does not match'),
+@@ -57,6 +64,23 @@
+             ('proper name counted',lambda d:d['core_vocab.json'][40].update(lemma='한국'),'proper name'),
+             ('profile max drift',lambda d:d['profile.json']['new_vocab'].update(max=3),'was expected'),
+             ('exception backdoor',lambda d:d['lexical_exceptions.json']['policy'].update(license_constituents=True),'was expected'),
++            ('missing hard ratio',lambda d:d['profile.json'].pop('hard_min_known_vocab_ratio'),'required property'),
++            ('missing target ratio',lambda d:d['profile.json'].pop('target_known_vocab_ratio'),'required property'),
++            ('hard ratio type',lambda d:d['profile.json'].update(hard_min_known_vocab_ratio='0.98'),'not of type'),
++            ('target ratio type',lambda d:d['profile.json'].update(target_known_vocab_ratio=True),'not of type'),
++            ('hard ratio outside range',lambda d:d['profile.json'].update(hard_min_known_vocab_ratio=1.01),'greater than'),
++            ('target ratio outside range',lambda d:d['profile.json'].update(target_known_vocab_ratio=-0.01),'less than'),
++            ('hard above target',lambda d:d['profile.json'].update(hard_min_known_vocab_ratio=0.995),'was expected'),
++            ('token cap drift',lambda d:d['profile.json']['new_vocab'].update(first_text_new_lemma_token_soft_max=6),'was expected'),
++            ('grammar metadata drift',lambda d:d['profile.json'].update(grammar_count=29),'was expected'),
++            ('grammar32 missing',lambda d:d['grammar.json'].pop(31),'too short'),
++            ('added grammar replaced',lambda d:d['grammar.json'][29].update(form='와/과'),'Added grammar'),
++            ('replacement applied without review',lambda d:d['expansion_replacement_proposals.json'].update(applied=True),'was expected'),
++            ('duplicate schedule intro',lambda d:d['introduction_schedule.json']['rows'][1]['entry_ids'].__setitem__(0,d['introduction_schedule.json']['rows'][0]['entry_ids'][0]),'Duplicate scheduled'),
++            ('wrong schedule text',lambda d:d['introduction_schedule.json']['rows'][0].update(text=2),'ordered 1..300'),
++            ('missing schedule intro',lambda d:d['introduction_schedule.json']['rows'][0]['entry_ids'].pop(),'every Expansion'),
++            ('too many schedule entries',lambda d:d['introduction_schedule.json']['rows'][0]['entry_ids'].append(d['expansion_vocab.json'][-1]['id']),'too long'),
++            ('slack metadata wrong',lambda d:d['profile.json']['feasibility'].update(slack_slots=0),'Slack slot'),
+         ]
+         for name,mutate,expected in cases:
+             with self.subTest(name=name):
+@@ -83,5 +107,53 @@
+                 self.assertFalse(result['ok'])
+                 self.assertTrue(any('Duplicate JSON' in e or 'Non-JSON' in e for e in result['errors']))
+ 
++    def test_consolidation_zone_is_empty(self):
++        for target in (276,300):
++            with self.subTest(text=target):
++                def change(data):
++                    entry=data['introduction_schedule.json']['rows'][0]['entry_ids'].pop()
++                    data['introduction_schedule.json']['rows'][target-1]['entry_ids'].append(entry)
++                result=self.fixture(change)
++                self.assertFalse(result['ok'])
++                self.assertIn('consolidation zone','\n'.join(result['errors']))
++
++    def test_preserved_identities_and_promotions(self):
++        old=ROOT/'reports/phase1_snapshot/config/languages/ko/k1'
++        before=json.loads((old/'expansion_vocab.json').read_text(encoding='utf-8'))
++        after=self.base['expansion_vocab.json']
++        self.assertEqual([(e['id'],e['rank'],validator.key(e)) for e in before],
++                         [(e['id'],e['rank'],validator.key(e)) for e in after])
++        by_lemma={e['lemma']:e for e in after}
++        self.assertEqual(by_lemma['기억하다']['tier'],'E2')
++        self.assertEqual(by_lemma['잠깐']['tier'],'E1')
++        self.assertEqual(by_lemma['어떻다']['tier'],'E1')
++        self.assertEqual(by_lemma['제일']['tier'],'E2')
++        self.assertEqual(by_lemma['제일']['confidence'],'high')
++        self.assertEqual(by_lemma['가장']['tier'],'E3')
++        self.assertEqual(self.base['grammar.json'][:29],json.loads((old/'grammar.json').read_text(encoding='utf-8')))
++        self.assertEqual((DATA/'core_vocab.source.json').read_bytes(),(old/'core_vocab.source.json').read_bytes())
++        self.assertEqual(self.base['profile.json']['core_decision']['status'],'accepted')
++        proposed=self.base['expansion_replacement_proposals.json']
++        self.assertFalse(proposed['applied'])
++        self.assertEqual(len(proposed['entries']),7)
++        for p in proposed['entries']:
++            self.assertIn(p['source_lemma'],by_lemma)
++            self.assertNotIn(p['candidate']['lemma'],by_lemma)
++
++    def test_scheduler_with_reserved_slots(self):
++        result=self.base['introduction_schedule.json']['rows']
++        capacities={row['text']:len(row['entry_ids']) for row in result if row['text']<=275}
++        witness,failure=validator.introduction_assignment(self.base['expansion_vocab.json'],275,2,capacities,True)
++        self.assertIsNone(failure)
++        self.assertEqual(witness,result[:275])
++        self.assertEqual(len(witness),275)
++        self.assertEqual(sum(len(r['entry_ids']) for r in witness),500)
++        # 249 double-introduction texts cannot fit 500 entries, even with wide windows.
++        entries=[{**e,'introduced_from':1,'introduced_to':275} for e in self.base['expansion_vocab.json']]
++        blocked={t:0 for t in range(250,276)}
++        witness,failure=validator.introduction_assignment(entries,275,2,blocked)
++        self.assertIsNone(witness)
++        self.assertIsNotNone(failure)
++
+ if __name__=='__main__':
+     unittest.main()

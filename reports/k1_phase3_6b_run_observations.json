@@ -1,0 +1,24 @@
+{
+  "phase": "3.6b",
+  "stop_text": 7,
+  "confirmed_committed_language_issues": [],
+  "author_confirmed_candidate_issues": [
+    {"text": 1, "attempt": 1, "category": "verb_argument_frame", "surface": "어머니에게 꽃을 말해요", "resolution": "어머니에게 말해요 followed by direct speech; repaired in attempt 2"},
+    {"text": 1, "attempt": 1, "category": "third_person_desire", "surface": "어머니도 꽃을 보고 싶어요", "resolution": "Changed to narrator's own desire in attempt 2"},
+    {"text": 2, "attempt": 1, "category": "third_person_desire", "surface": "친구는 커피를 마시고 싶어요 / 친구도 빵을 먹고 싶어요", "resolution": "Changed to literal food preferences in attempt 2"},
+    {"text": 3, "attempt": 1, "category": "unnatural_substitution", "surface": "사진을 책상 위에 넣어요", "resolution": "Changed to a location/state sentence in attempt 2; did not use 넣다 as 놓다"}
+  ],
+  "primary_rejected_candidate_causes": [
+    {"text": 1, "attempt": 1, "cause": "future_vocabulary", "detail": "가깝다, 가지다; 어떻게 morphology also produced future 어떻다 plus unresolved suffix"},
+    {"text": 2, "attempt": 1, "cause": "unregistered_compound", "detail": "이야기하다 replaced by 이야기 noun + 하다"},
+    {"text": 3, "attempt": 1, "cause": "future_vocabulary", "detail": "보이다 / 보여 주다 and unresolved 겠; repaired with permitted simple sentences"},
+    {"text": 5, "attempt": 1, "cause": "pos_boundary", "detail": "몇 NR vs registered determiner; 지금 NNG vs registered adverb. Same-scope ambiguity repaired by natural wording, no alias added"},
+    {"text": 7, "attempt": 1, "cause": "structural_scope_identity_mismatch", "detail": "우리 NP in sentence, NNG in paragraph/full. Resolver correctly refuses particle-bearing NNG 우리 outside its modifier evidence; run STOP"}
+  ],
+  "timing_limitations": {
+    "production_total": "Monotonic measured wall time; unchanged actual total, no stored-text replay used as generation timing",
+    "stage_boundary": "For texts 002 through 007, the plan command and prose file authoring were submitted in the same LLM tool-call payload. Planning timing therefore includes much of prose composition before the command ran; author_draft timing mostly covers file transport. For 001, plan and prose were separate calls. No stage durations are retrospectively reassigned or invented.",
+    "interpretation": "Use combined scene_planning + author_draft + retry_repair as the generator cost. Individual planning/draft stage ranking is an instrumentation limitation, not evidence that planning itself is slower than writing. Six committed initial texts and a STOP are insufficient to demonstrate 50-text production throughput or give an official 300-text forecast."
+  },
+  "next_step_report_only": "Scope instability now affects particle-bearing quoted 우리는, outside frozen 우리+following-noun modifier resolver. A separate authorized narrowly scoped analyzer correction and contrast fixtures are needed before a new production run. No resolver, vocabulary or policy was changed in this run."
+}

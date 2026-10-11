@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["text_number","state_checksum","input_digest","planned_new_vocab_ids","entries","allowed_proper_names","lexical_exceptions","policy"],
+  "properties":{
+    "text_number":{"type":"integer","minimum":1,"maximum":300},
+    "state_checksum":{"type":"string","pattern":"^[a-f0-9]{64}$"},"input_digest":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "planned_new_vocab_ids":{"type":"array","maxItems":2,"uniqueItems":true},
+    "entries":{"type":"array","minItems":300,"maxItems":800,"items":{"type":"object","required":["vocab_id","lemma","pos","sense","tier","role","allowed_inflections","forms","morphology_hints"],"properties":{
+      "vocab_id":{"type":"string","pattern":"^ko_k1_[0-9]{4}$"},"lemma":{"type":"string","minLength":1},"sense":{"type":"string","minLength":1},
+      "pos":{"enum":["noun","verb","adjective","adverb","pronoun","determiner","numeral","counter","conjunction","interjection"]},
+      "tier":{"enum":["core","E1","E2","E3"]},"role":{"enum":["core","previous_expansion","current_new_expansion"]},"allowed_inflections":{"type":"boolean"},"forms":{"type":"array"},"morphology_hints":{"type":"object"}
+    }}},
+    "allowed_proper_names":{"type":"array"},"lexical_exceptions":{"type":"array"},
+    "policy":{"type":"object","properties":{"only_actual_previous":{"const":true},"controlled_hard":{"const":1},"previous_hard":{"const":0.98},"new_lemma_max":{"const":2},"grammar_count":{"const":32},"hard_length":{"const":[120,180]},"hard_sentence_max":{"const":10}}}
+  }
+}

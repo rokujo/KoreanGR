@@ -1,0 +1,187 @@
+{
+  "report_only": true,
+  "stored_warning_count": 390,
+  "aligned_lexical_evidence_disagreement_count": 0,
+  "alignment_artifact_count": 390,
+  "aligned_scope_distribution": {},
+  "corrected_rows": [],
+  "artifact_examples": [
+    {
+      "text": 1,
+      "surface": "돼",
+      "scope": "full_text",
+      "start": 11,
+      "sentence_id": "ko_k1_0373",
+      "diagnostic_ids": [
+        "ko_k1_0373"
+      ],
+      "sentence_lexical_raw_tags": [
+        "VV"
+      ],
+      "diagnostic_lexical_raw_tags": [
+        "VV"
+      ],
+      "id_disagreement": false,
+      "pos_only_disagreement": false,
+      "stored_diagnostic_raw_tags": [
+        "EF",
+        "VV"
+      ]
+    },
+    {
+      "text": 1,
+      "surface": "돼",
+      "scope": "paragraph",
+      "start": 11,
+      "sentence_id": "ko_k1_0373",
+      "diagnostic_ids": [
+        "ko_k1_0373"
+      ],
+      "sentence_lexical_raw_tags": [
+        "VV"
+      ],
+      "diagnostic_lexical_raw_tags": [
+        "VV"
+      ],
+      "id_disagreement": false,
+      "pos_only_disagreement": false,
+      "stored_diagnostic_raw_tags": [
+        "EF",
+        "VV"
+      ]
+    },
+    {
+      "text": 1,
+      "surface": "좋아해",
+      "scope": "full_text",
+      "start": 45,
+      "sentence_id": "ko_k1_0205",
+      "diagnostic_ids": [
+        "ko_k1_0205"
+      ],
+      "sentence_lexical_raw_tags": [
+        "VV"
+      ],
+      "diagnostic_lexical_raw_tags": [
+        "VV"
+      ],
+      "id_disagreement": false,
+      "pos_only_disagreement": false,
+      "stored_diagnostic_raw_tags": [
+        "EF",
+        "VV"
+      ]
+    },
+    {
+      "text": 1,
+      "surface": "좋아해",
+      "scope": "paragraph",
+      "start": 45,
+      "sentence_id": "ko_k1_0205",
+      "diagnostic_ids": [
+        "ko_k1_0205"
+      ],
+      "sentence_lexical_raw_tags": [
+        "VV"
+      ],
+      "diagnostic_lexical_raw_tags": [
+        "VV"
+      ],
+      "id_disagreement": false,
+      "pos_only_disagreement": false,
+      "stored_diagnostic_raw_tags": [
+        "EF",
+        "VV"
+      ]
+    },
+    {
+      "text": 1,
+      "surface": "큰",
+      "scope": "full_text",
+      "start": 59,
+      "sentence_id": "ko_k1_0234",
+      "diagnostic_ids": [
+        "ko_k1_0234"
+      ],
+      "sentence_lexical_raw_tags": [
+        "VA"
+      ],
+      "diagnostic_lexical_raw_tags": [
+        "VA"
+      ],
+      "id_disagreement": false,
+      "pos_only_disagreement": false,
+      "stored_diagnostic_raw_tags": [
+        "ETM",
+        "VA"
+      ]
+    },
+    {
+      "text": 1,
+      "surface": "큰",
+      "scope": "paragraph",
+      "start": 59,
+      "sentence_id": "ko_k1_0234",
+      "diagnostic_ids": [
+        "ko_k1_0234"
+      ],
+      "sentence_lexical_raw_tags": [
+        "VA"
+      ],
+      "diagnostic_lexical_raw_tags": [
+        "VA"
+      ],
+      "id_disagreement": false,
+      "pos_only_disagreement": false,
+      "stored_diagnostic_raw_tags": [
+        "ETM",
+        "VA"
+      ]
+    },
+    {
+      "text": 1,
+      "surface": "줘",
+      "scope": "full_text",
+      "start": 84,
+      "sentence_id": "ko_k1_0192",
+      "diagnostic_ids": [
+        "ko_k1_0192"
+      ],
+      "sentence_lexical_raw_tags": [
+        "VV"
+      ],
+      "diagnostic_lexical_raw_tags": [
+        "VV"
+      ],
+      "id_disagreement": false,
+      "pos_only_disagreement": false,
+      "stored_diagnostic_raw_tags": [
+        "EF",
+        "VV"
+      ]
+    },
+    {
+      "text": 1,
+      "surface": "줘",
+      "scope": "paragraph",
+      "start": 84,
+      "sentence_id": "ko_k1_0192",
+      "diagnostic_ids": [
+        "ko_k1_0192"
+      ],
+      "sentence_lexical_raw_tags": [
+        "VV"
+      ],
+      "diagnostic_lexical_raw_tags": [
+        "VV"
+      ],
+      "id_disagreement": false,
+      "pos_only_disagreement": false,
+      "stored_diagnostic_raw_tags": [
+        "EF",
+        "VV"
+      ]
+    }
+  ],
+  "cause": "Stored sentence tags used lexical annotation indices, while broad tags used every overlapping raw span, accidentally including EF/ETM endings with shared Hangul positions. Supplement aligns lexical annotation indices on both sides. Existing diagnostics, code and canonical decisions are not rewritten."
+}

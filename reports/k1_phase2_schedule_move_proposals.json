@@ -1,0 +1,352 @@
+{
+  "status": "proposed_not_applied",
+  "source_schedule_frozen": true,
+  "entries": [
+    {
+      "source_text": 150,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0569",
+      "lemma": "물고기",
+      "sense": "fish_animal",
+      "reason": "食事に加えて生きた魚の観察・絵描きを足すと、訪問と食事の目的が分散する。食材義へ変更して通さない。",
+      "proposed_text_candidates": [
+        286,
+        225,
+        229
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 170,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0407",
+      "lemma": "계산하다",
+      "sense": "pay_bill",
+      "reason": "家で宿泊の準備をする場面に会計を追加すると、別の買い物場面が必要になる。",
+      "proposed_text_candidates": [
+        157,
+        156,
+        155
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 170,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0603",
+      "lemma": "찍다",
+      "sense": "stamp",
+      "reason": "印を押す理由がない。사진을 찍다というCoreの別senseでは代替しない。",
+      "proposed_text_candidates": [
+        157,
+        156,
+        256
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 184,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0612",
+      "lemma": "새롭다",
+      "sense": "new",
+      "reason": "初訪問の家を描くだけでは新しさの意味が曖昧。新しい映画の説明を増やすと話の目的が分散する。",
+      "proposed_text_candidates": [
+        183,
+        173,
+        241
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 184,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0631",
+      "lemma": "급하다",
+      "sense": "urgent",
+      "reason": "急用を追加すると訪問・食事・映画から別の問題へ切り替わる。",
+      "proposed_text_candidates": [
+        183,
+        174,
+        173
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 189,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0531",
+      "lemma": "이불",
+      "sense": "bedding",
+      "reason": "行き先相談に寝具の片付けを追加する必要がない。",
+      "proposed_text_candidates": [
+        169,
+        273,
+        274
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 189,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0621",
+      "lemma": "맵다",
+      "sense": "spicy",
+      "reason": "辛い食事の挿話は行き先相談と関係しない。",
+      "proposed_text_candidates": [
+        169,
+        168,
+        174
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 189,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0711",
+      "lemma": "테이프",
+      "sense": "adhesive_tape",
+      "reason": "地図修理の問題を作らない限り用途がない。無理な使用하다への言い換えを避ける。",
+      "proposed_text_candidates": [
+        273,
+        274,
+        220
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 190,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0584",
+      "lemma": "버리다",
+      "sense": "discard",
+      "reason": "写真を見に入った場面に捨てる対象・問題を追加する必然性がない。",
+      "proposed_text_candidates": [
+        157,
+        156,
+        155
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 190,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0623",
+      "lemma": "쓰다",
+      "sense": "bitter",
+      "reason": "苦い飲み物の一文を追加すると、展示を見る目的から離れる。",
+      "proposed_text_candidates": [
+        169,
+        174,
+        171
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 193,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0719",
+      "lemma": "수영장",
+      "sense": "swimming_pool",
+      "reason": "料理と片付けに外出相談を追加すると別の目的になる。",
+      "proposed_text_candidates": [
+        220,
+        192,
+        191
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 193,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0720",
+      "lemma": "미술관",
+      "sense": "art_museum",
+      "reason": "料理と片付けに外出相談を追加すると別の目的になる。",
+      "proposed_text_candidates": [
+        220,
+        192,
+        191
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 234,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0670",
+      "lemma": "목",
+      "sense": "neck_throat",
+      "reason": "悲しい別れに身体の痛みを追加する必要がない。",
+      "proposed_text_candidates": [
+        207,
+        205,
+        220
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 234,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0731",
+      "lemma": "감",
+      "sense": "persimmon",
+      "reason": "荷造りに柿を食べる理由を追加すると果物の挿話になる。",
+      "proposed_text_candidates": [
+        227,
+        243,
+        224
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 234,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0736",
+      "lemma": "나뭇잎",
+      "sense": "leaf",
+      "reason": "窓の外の葉を一文だけ足すと予定語のための情景になる。",
+      "proposed_text_candidates": [
+        286,
+        229,
+        225
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 242,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0693",
+      "lemma": "회의",
+      "sense": "meeting_work",
+      "reason": "友達を迎える子どもの食事準備に仕事の会議を加える必然性がない。",
+      "proposed_text_candidates": [
+        245,
+        236,
+        228
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 242,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0713",
+      "lemma": "벽",
+      "sense": "wall",
+      "reason": "壁の説明はこの待ち合わせの意味に関与しない。",
+      "proposed_text_candidates": [
+        274,
+        241,
+        240
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 254,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0736",
+      "lemma": "나뭇잎",
+      "sense": "leaf",
+      "reason": "旅行準備に葉の観察を足すと、予定語のための情景一文になる。",
+      "proposed_text_candidates": [
+        286,
+        245,
+        229
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 255,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0737",
+      "lemma": "돌",
+      "sense": "stone",
+      "reason": "道の紙を拾う問題に石の描写を足すと意味上の役割が薄い。",
+      "proposed_text_candidates": [
+        286,
+        287,
+        251
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 255,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0738",
+      "lemma": "풀",
+      "sense": "grass",
+      "reason": "旅行準備に草の情景を追加して予定を満たすことを避ける。",
+      "proposed_text_candidates": [
+        287,
+        251,
+        248
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 276,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0674",
+      "lemma": "이",
+      "sense": "tooth",
+      "reason": "歯磨きが自然な朝の場面だが닦다が未登録。씻다への不自然な置換や歯痛問題の追加を避ける。",
+      "proposed_text_candidates": [
+        208,
+        207,
+        265
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 284,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0711",
+      "lemma": "테이프",
+      "sense": "adhesive_tape",
+      "reason": "旅行の箱に貼るには붙이다が必要だが未登録。使うだけの曖昧な言い換えを避ける。",
+      "proposed_text_candidates": [
+        274,
+        273,
+        266
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    },
+    {
+      "source_text": 284,
+      "type": "semantic_schedule_conflict",
+      "vocab_id": "ko_k1_0743",
+      "lemma": "던지다",
+      "sense": "throw",
+      "reason": "旅の荷造りで投げる対象がない。自然な公園の球遊びには未登録공が必要。",
+      "proposed_text_candidates": [
+        256,
+        238,
+        236
+      ],
+      "proposal_status": "candidate_only_schedule_unchanged",
+      "proposal_notes": "タグの場面適合候補。移動後の距離・6教材・他語負荷・本文の意味を人間が再検証する。"
+    }
+  ],
+  "limitations": "Semantic alternatives only; revalidate distinct six exposures, distances and destination load before approval."
+}

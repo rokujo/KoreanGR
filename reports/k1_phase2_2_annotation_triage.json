@@ -1,0 +1,2448 @@
+{
+  "status": "triaged_not_human_approved",
+  "occurrence_counts": {
+    "benign_expected": 321,
+    "requires_lexical_sense_review": 9,
+    "requires_grammar_boundary_review": 48,
+    "true_unresolved": 0
+  },
+  "group_counts": {
+    "benign_expected": 31,
+    "requires_grammar_boundary_review": 13,
+    "requires_lexical_sense_review": 5
+  },
+  "total_occurrences": 378,
+  "total_groups": 49,
+  "groups": [
+    {
+      "category": "benign_expected",
+      "type": "sense_disambiguation",
+      "vocab_id": "ko_k1_0002",
+      "lemma": "저",
+      "pattern": "unique_pos:NP",
+      "representative_context": "오늘부터 저는 학교의 학생이 돼요. 아침에 어머니하고 같이 밥을 먹어요. 저는 오늘 학교에",
+      "occurrences": [
+        {
+          "text": 1,
+          "start": 5,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 41,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 78,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 114,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 156,
+          "surface": "제"
+        },
+        {
+          "text": 1,
+          "start": 188,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 218,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 227,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 256,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 323,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 428,
+          "surface": "저"
+        },
+        {
+          "text": 1,
+          "start": 465,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 41,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 111,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 153,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 171,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 224,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 272,
+          "surface": "제"
+        },
+        {
+          "text": 20,
+          "start": 284,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 302,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 361,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 434,
+          "surface": "저"
+        },
+        {
+          "text": 20,
+          "start": 490,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 4,
+          "surface": "제"
+        },
+        {
+          "text": 33,
+          "start": 31,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 40,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 178,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 201,
+          "surface": "제"
+        },
+        {
+          "text": 33,
+          "start": 218,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 233,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 269,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 306,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 328,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 420,
+          "surface": "저"
+        },
+        {
+          "text": 33,
+          "start": 439,
+          "surface": "저"
+        },
+        {
+          "text": 40,
+          "start": 42,
+          "surface": "저"
+        },
+        {
+          "text": 40,
+          "start": 65,
+          "surface": "제"
+        },
+        {
+          "text": 40,
+          "start": 122,
+          "surface": "저"
+        },
+        {
+          "text": 40,
+          "start": 145,
+          "surface": "저"
+        },
+        {
+          "text": 40,
+          "start": 233,
+          "surface": "저"
+        },
+        {
+          "text": 40,
+          "start": 254,
+          "surface": "제"
+        },
+        {
+          "text": 40,
+          "start": 286,
+          "surface": "저"
+        },
+        {
+          "text": 40,
+          "start": 349,
+          "surface": "저"
+        },
+        {
+          "text": 40,
+          "start": 400,
+          "surface": "저"
+        },
+        {
+          "text": 40,
+          "start": 481,
+          "surface": "저"
+        },
+        {
+          "text": 85,
+          "start": 21,
+          "surface": "저"
+        },
+        {
+          "text": 85,
+          "start": 69,
+          "surface": "저"
+        },
+        {
+          "text": 85,
+          "start": 159,
+          "surface": "저"
+        },
+        {
+          "text": 85,
+          "start": 175,
+          "surface": "저"
+        },
+        {
+          "text": 85,
+          "start": 194,
+          "surface": "저"
+        },
+        {
+          "text": 85,
+          "start": 218,
+          "surface": "제"
+        },
+        {
+          "text": 85,
+          "start": 291,
+          "surface": "저"
+        },
+        {
+          "text": 85,
+          "start": 316,
+          "surface": "제"
+        },
+        {
+          "text": 85,
+          "start": 371,
+          "surface": "저"
+        },
+        {
+          "text": 85,
+          "start": 392,
+          "surface": "제"
+        },
+        {
+          "text": 85,
+          "start": 451,
+          "surface": "저"
+        },
+        {
+          "text": 85,
+          "start": 464,
+          "surface": "저"
+        },
+        {
+          "text": 103,
+          "start": 41,
+          "surface": "저"
+        },
+        {
+          "text": 103,
+          "start": 162,
+          "surface": "저"
+        },
+        {
+          "text": 103,
+          "start": 246,
+          "surface": "저"
+        },
+        {
+          "text": 103,
+          "start": 266,
+          "surface": "저"
+        },
+        {
+          "text": 103,
+          "start": 284,
+          "surface": "제"
+        },
+        {
+          "text": 103,
+          "start": 298,
+          "surface": "저"
+        },
+        {
+          "text": 103,
+          "start": 378,
+          "surface": "저"
+        },
+        {
+          "text": 103,
+          "start": 500,
+          "surface": "저"
+        },
+        {
+          "text": 110,
+          "start": 20,
+          "surface": "저"
+        },
+        {
+          "text": 110,
+          "start": 67,
+          "surface": "저"
+        },
+        {
+          "text": 110,
+          "start": 117,
+          "surface": "제"
+        },
+        {
+          "text": 110,
+          "start": 175,
+          "surface": "저"
+        },
+        {
+          "text": 110,
+          "start": 251,
+          "surface": "저"
+        },
+        {
+          "text": 110,
+          "start": 294,
+          "surface": "제"
+        },
+        {
+          "text": 110,
+          "start": 332,
+          "surface": "저"
+        },
+        {
+          "text": 110,
+          "start": 407,
+          "surface": "저"
+        },
+        {
+          "text": 110,
+          "start": 431,
+          "surface": "제"
+        },
+        {
+          "text": 110,
+          "start": 437,
+          "surface": "저"
+        },
+        {
+          "text": 110,
+          "start": 485,
+          "surface": "저"
+        },
+        {
+          "text": 111,
+          "start": 53,
+          "surface": "저"
+        },
+        {
+          "text": 111,
+          "start": 113,
+          "surface": "저"
+        },
+        {
+          "text": 111,
+          "start": 127,
+          "surface": "저"
+        },
+        {
+          "text": 111,
+          "start": 178,
+          "surface": "저"
+        },
+        {
+          "text": 111,
+          "start": 234,
+          "surface": "저"
+        },
+        {
+          "text": 111,
+          "start": 274,
+          "surface": "저"
+        },
+        {
+          "text": 111,
+          "start": 305,
+          "surface": "저"
+        },
+        {
+          "text": 111,
+          "start": 343,
+          "surface": "제"
+        },
+        {
+          "text": 111,
+          "start": 394,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 18,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 76,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 99,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 136,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 191,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 229,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 267,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 306,
+          "surface": "제"
+        },
+        {
+          "text": 127,
+          "start": 345,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 359,
+          "surface": "저"
+        },
+        {
+          "text": 127,
+          "start": 421,
+          "surface": "저"
+        },
+        {
+          "text": 150,
+          "start": 21,
+          "surface": "저"
+        },
+        {
+          "text": 150,
+          "start": 69,
+          "surface": "저"
+        },
+        {
+          "text": 150,
+          "start": 120,
+          "surface": "제"
+        },
+        {
+          "text": 150,
+          "start": 138,
+          "surface": "저"
+        },
+        {
+          "text": 150,
+          "start": 215,
+          "surface": "저"
+        },
+        {
+          "text": 150,
+          "start": 311,
+          "surface": "저"
+        },
+        {
+          "text": 150,
+          "start": 348,
+          "surface": "저"
+        },
+        {
+          "text": 150,
+          "start": 405,
+          "surface": "저"
+        },
+        {
+          "text": 150,
+          "start": 484,
+          "surface": "저"
+        },
+        {
+          "text": 170,
+          "start": 44,
+          "surface": "저"
+        },
+        {
+          "text": 170,
+          "start": 81,
+          "surface": "저"
+        },
+        {
+          "text": 170,
+          "start": 101,
+          "surface": "제"
+        },
+        {
+          "text": 170,
+          "start": 122,
+          "surface": "저"
+        },
+        {
+          "text": 170,
+          "start": 181,
+          "surface": "제"
+        },
+        {
+          "text": 170,
+          "start": 198,
+          "surface": "제"
+        },
+        {
+          "text": 170,
+          "start": 225,
+          "surface": "저"
+        },
+        {
+          "text": 170,
+          "start": 235,
+          "surface": "저"
+        },
+        {
+          "text": 170,
+          "start": 275,
+          "surface": "제"
+        },
+        {
+          "text": 170,
+          "start": 324,
+          "surface": "저"
+        },
+        {
+          "text": 170,
+          "start": 399,
+          "surface": "저"
+        },
+        {
+          "text": 170,
+          "start": 464,
+          "surface": "저"
+        },
+        {
+          "text": 180,
+          "start": 20,
+          "surface": "저"
+        },
+        {
+          "text": 180,
+          "start": 56,
+          "surface": "저"
+        },
+        {
+          "text": 180,
+          "start": 134,
+          "surface": "저"
+        },
+        {
+          "text": 180,
+          "start": 158,
+          "surface": "제"
+        },
+        {
+          "text": 180,
+          "start": 187,
+          "surface": "저"
+        },
+        {
+          "text": 180,
+          "start": 224,
+          "surface": "제"
+        },
+        {
+          "text": 180,
+          "start": 271,
+          "surface": "제"
+        },
+        {
+          "text": 180,
+          "start": 301,
+          "surface": "저"
+        },
+        {
+          "text": 180,
+          "start": 341,
+          "surface": "저"
+        },
+        {
+          "text": 180,
+          "start": 401,
+          "surface": "제"
+        },
+        {
+          "text": 180,
+          "start": 416,
+          "surface": "저"
+        },
+        {
+          "text": 180,
+          "start": 441,
+          "surface": "저"
+        },
+        {
+          "text": 184,
+          "start": 20,
+          "surface": "저"
+        },
+        {
+          "text": 184,
+          "start": 96,
+          "surface": "저"
+        },
+        {
+          "text": 184,
+          "start": 126,
+          "surface": "저"
+        },
+        {
+          "text": 184,
+          "start": 158,
+          "surface": "저"
+        },
+        {
+          "text": 184,
+          "start": 218,
+          "surface": "저"
+        },
+        {
+          "text": 184,
+          "start": 275,
+          "surface": "저"
+        },
+        {
+          "text": 184,
+          "start": 415,
+          "surface": "저"
+        },
+        {
+          "text": 184,
+          "start": 512,
+          "surface": "저"
+        },
+        {
+          "text": 189,
+          "start": 20,
+          "surface": "저"
+        },
+        {
+          "text": 189,
+          "start": 101,
+          "surface": "저"
+        },
+        {
+          "text": 189,
+          "start": 156,
+          "surface": "저"
+        },
+        {
+          "text": 189,
+          "start": 213,
+          "surface": "저"
+        },
+        {
+          "text": 189,
+          "start": 316,
+          "surface": "제"
+        },
+        {
+          "text": 189,
+          "start": 430,
+          "surface": "저"
+        },
+        {
+          "text": 189,
+          "start": 454,
+          "surface": "제"
+        },
+        {
+          "text": 189,
+          "start": 467,
+          "surface": "저"
+        },
+        {
+          "text": 189,
+          "start": 494,
+          "surface": "제"
+        },
+        {
+          "text": 190,
+          "start": 41,
+          "surface": "저"
+        },
+        {
+          "text": 190,
+          "start": 123,
+          "surface": "저"
+        },
+        {
+          "text": 190,
+          "start": 241,
+          "surface": "저"
+        },
+        {
+          "text": 190,
+          "start": 323,
+          "surface": "저"
+        },
+        {
+          "text": 190,
+          "start": 388,
+          "surface": "저"
+        },
+        {
+          "text": 190,
+          "start": 406,
+          "surface": "저"
+        },
+        {
+          "text": 193,
+          "start": 53,
+          "surface": "제"
+        },
+        {
+          "text": 193,
+          "start": 104,
+          "surface": "저"
+        },
+        {
+          "text": 193,
+          "start": 142,
+          "surface": "저"
+        },
+        {
+          "text": 193,
+          "start": 218,
+          "surface": "저"
+        },
+        {
+          "text": 193,
+          "start": 258,
+          "surface": "저"
+        },
+        {
+          "text": 193,
+          "start": 317,
+          "surface": "저"
+        },
+        {
+          "text": 193,
+          "start": 397,
+          "surface": "저"
+        },
+        {
+          "text": 193,
+          "start": 475,
+          "surface": "저"
+        },
+        {
+          "text": 234,
+          "start": 42,
+          "surface": "저"
+        },
+        {
+          "text": 234,
+          "start": 200,
+          "surface": "저"
+        },
+        {
+          "text": 234,
+          "start": 255,
+          "surface": "저"
+        },
+        {
+          "text": 234,
+          "start": 295,
+          "surface": "저"
+        },
+        {
+          "text": 234,
+          "start": 414,
+          "surface": "저"
+        },
+        {
+          "text": 242,
+          "start": 20,
+          "surface": "저"
+        },
+        {
+          "text": 242,
+          "start": 63,
+          "surface": "저"
+        },
+        {
+          "text": 242,
+          "start": 166,
+          "surface": "저"
+        },
+        {
+          "text": 242,
+          "start": 267,
+          "surface": "저"
+        },
+        {
+          "text": 242,
+          "start": 335,
+          "surface": "저"
+        },
+        {
+          "text": 242,
+          "start": 376,
+          "surface": "제"
+        },
+        {
+          "text": 242,
+          "start": 447,
+          "surface": "저"
+        },
+        {
+          "text": 246,
+          "start": 36,
+          "surface": "저"
+        },
+        {
+          "text": 246,
+          "start": 256,
+          "surface": "저"
+        },
+        {
+          "text": 246,
+          "start": 339,
+          "surface": "저"
+        },
+        {
+          "text": 252,
+          "start": 18,
+          "surface": "저"
+        },
+        {
+          "text": 252,
+          "start": 73,
+          "surface": "저"
+        },
+        {
+          "text": 252,
+          "start": 153,
+          "surface": "저"
+        },
+        {
+          "text": 252,
+          "start": 226,
+          "surface": "저"
+        },
+        {
+          "text": 252,
+          "start": 249,
+          "surface": "저"
+        },
+        {
+          "text": 252,
+          "start": 265,
+          "surface": "저"
+        },
+        {
+          "text": 252,
+          "start": 421,
+          "surface": "저"
+        },
+        {
+          "text": 254,
+          "start": 38,
+          "surface": "저"
+        },
+        {
+          "text": 254,
+          "start": 118,
+          "surface": "저"
+        },
+        {
+          "text": 254,
+          "start": 145,
+          "surface": "제"
+        },
+        {
+          "text": 254,
+          "start": 236,
+          "surface": "저"
+        },
+        {
+          "text": 254,
+          "start": 311,
+          "surface": "저"
+        },
+        {
+          "text": 254,
+          "start": 426,
+          "surface": "저"
+        },
+        {
+          "text": 254,
+          "start": 505,
+          "surface": "저"
+        },
+        {
+          "text": 255,
+          "start": 20,
+          "surface": "저"
+        },
+        {
+          "text": 255,
+          "start": 82,
+          "surface": "저"
+        },
+        {
+          "text": 255,
+          "start": 183,
+          "surface": "저"
+        },
+        {
+          "text": 255,
+          "start": 227,
+          "surface": "제"
+        },
+        {
+          "text": 255,
+          "start": 263,
+          "surface": "저"
+        },
+        {
+          "text": 255,
+          "start": 309,
+          "surface": "저"
+        },
+        {
+          "text": 255,
+          "start": 320,
+          "surface": "저"
+        },
+        {
+          "text": 255,
+          "start": 398,
+          "surface": "저"
+        },
+        {
+          "text": 255,
+          "start": 440,
+          "surface": "저"
+        },
+        {
+          "text": 255,
+          "start": 501,
+          "surface": "저"
+        },
+        {
+          "text": 276,
+          "start": 20,
+          "surface": "저"
+        },
+        {
+          "text": 276,
+          "start": 49,
+          "surface": "저"
+        },
+        {
+          "text": 276,
+          "start": 58,
+          "surface": "저"
+        },
+        {
+          "text": 276,
+          "start": 136,
+          "surface": "저"
+        },
+        {
+          "text": 276,
+          "start": 249,
+          "surface": "저"
+        },
+        {
+          "text": 276,
+          "start": 303,
+          "surface": "저"
+        },
+        {
+          "text": 276,
+          "start": 419,
+          "surface": "저"
+        },
+        {
+          "text": 276,
+          "start": 504,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 20,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 58,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 112,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 155,
+          "surface": "제"
+        },
+        {
+          "text": 284,
+          "start": 180,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 188,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 225,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 286,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 407,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 432,
+          "surface": "제"
+        },
+        {
+          "text": 284,
+          "start": 470,
+          "surface": "저"
+        },
+        {
+          "text": 284,
+          "start": 496,
+          "surface": "제"
+        },
+        {
+          "text": 299,
+          "start": 40,
+          "surface": "저"
+        },
+        {
+          "text": 299,
+          "start": 66,
+          "surface": "제"
+        },
+        {
+          "text": 299,
+          "start": 98,
+          "surface": "저"
+        },
+        {
+          "text": 299,
+          "start": 113,
+          "surface": "저"
+        },
+        {
+          "text": 299,
+          "start": 153,
+          "surface": "저"
+        },
+        {
+          "text": 299,
+          "start": 184,
+          "surface": "저"
+        },
+        {
+          "text": 299,
+          "start": 206,
+          "surface": "제"
+        },
+        {
+          "text": 299,
+          "start": 307,
+          "surface": "저"
+        },
+        {
+          "text": 299,
+          "start": 349,
+          "surface": "제"
+        },
+        {
+          "text": 299,
+          "start": 362,
+          "surface": "저"
+        },
+        {
+          "text": 299,
+          "start": 418,
+          "surface": "저"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0037",
+      "lemma": "선생님",
+      "pattern": "registered_compound:NNG+XSN",
+      "representative_context": " 걸어요. 학교 앞에는 사람이 많이 있어요. 선생님은 문 앞에서 우리를 만나요. 우리는 선생님하고 같이 교실에 들어가요.\n\n교",
+      "occurrences": [
+        {
+          "text": 1,
+          "start": 362,
+          "surface": "선생님"
+        },
+        {
+          "text": 1,
+          "start": 386,
+          "surface": "선생님"
+        },
+        {
+          "text": 1,
+          "start": 446,
+          "surface": "선생님"
+        },
+        {
+          "text": 85,
+          "start": 270,
+          "surface": "선생님"
+        },
+        {
+          "text": 85,
+          "start": 294,
+          "surface": "선생님"
+        },
+        {
+          "text": 110,
+          "start": 354,
+          "surface": "선생님"
+        },
+        {
+          "text": 110,
+          "start": 369,
+          "surface": "선생님"
+        },
+        {
+          "text": 110,
+          "start": 512,
+          "surface": "선생님"
+        },
+        {
+          "text": 170,
+          "start": 23,
+          "surface": "선생님"
+        },
+        {
+          "text": 170,
+          "start": 381,
+          "surface": "선생님"
+        },
+        {
+          "text": 170,
+          "start": 402,
+          "surface": "선생님"
+        },
+        {
+          "text": 170,
+          "start": 422,
+          "surface": "선생님"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "grammar_content_boundary",
+      "vocab_id": null,
+      "lemma": null,
+      "pattern": "ko_k1_g07",
+      "representative_context": "아빠도 책을 닫고 같이 와요. 우리는 식당에 안 가고 집에서 먹어요. 저는 오늘 엄마의 이야기를 잘 들어요.",
+      "occurrences": [
+        {
+          "text": 20,
+          "start": 476,
+          "surface": "안"
+        },
+        {
+          "text": 180,
+          "start": 180,
+          "surface": "안"
+        },
+        {
+          "text": 190,
+          "start": 495,
+          "surface": "안"
+        },
+        {
+          "text": 276,
+          "start": 242,
+          "surface": "안"
+        },
+        {
+          "text": 284,
+          "start": 105,
+          "surface": "안"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0176",
+      "lemma": "말하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "저를 기다려요. 저는 계단에서 친구의 이름을 말해요. 친구는 위를 보고 많이 웃어요. 친구의 가방에는 작은 상자가 있어요. 우",
+      "occurrences": [
+        {
+          "text": 33,
+          "start": 56,
+          "surface": "말해"
+        },
+        {
+          "text": 85,
+          "start": 286,
+          "surface": "말해"
+        },
+        {
+          "text": 150,
+          "start": 230,
+          "surface": "말해"
+        },
+        {
+          "text": 180,
+          "start": 203,
+          "surface": "말해"
+        },
+        {
+          "text": 242,
+          "start": 285,
+          "surface": "말해"
+        },
+        {
+          "text": 246,
+          "start": 295,
+          "surface": "말해"
+        },
+        {
+          "text": 276,
+          "start": 435,
+          "surface": "말해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "sense_disambiguation",
+      "vocab_id": "ko_k1_0444",
+      "lemma": "이",
+      "pattern": "unique_pos:MM",
+      "representative_context": "있어요.\n\n저는 친구를 보고 많이 웃어요. “이 작은 선물은 정말 어때요?” 저는 이것을 보고 많이 웃어요. 친구도 저를 보고",
+      "occurrences": [
+        {
+          "text": 33,
+          "start": 288,
+          "surface": "이"
+        },
+        {
+          "text": 127,
+          "start": 481,
+          "surface": "이"
+        },
+        {
+          "text": 180,
+          "start": 496,
+          "surface": "이"
+        },
+        {
+          "text": 184,
+          "start": 63,
+          "surface": "이"
+        },
+        {
+          "text": 184,
+          "start": 200,
+          "surface": "이"
+        },
+        {
+          "text": 299,
+          "start": 477,
+          "surface": "이"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0253",
+      "lemma": "따뜻하다",
+      "pattern": "compound_pattern:XR+XSA",
+      "representative_context": "저 있어요. 먼저 옷을 벗고 천천히 씻어요. 따뜻한 물이 있어서 정말 좋아요. 저는 씻고 방으로 다시 가요. 셔츠는 제 가방 ",
+      "occurrences": [
+        {
+          "text": 40,
+          "start": 214,
+          "surface": "따뜻한"
+        },
+        {
+          "text": 276,
+          "start": 101,
+          "surface": "따뜻한"
+        },
+        {
+          "text": 276,
+          "start": 493,
+          "surface": "따뜻한"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0259",
+      "lemma": "깨끗하다",
+      "pattern": "compound_pattern:XR+XSA",
+      "representative_context": "\n저는 수건으로 책상을 다시 닦아요. 책상은 깨끗하고 밥은 아주 맛있어요. 우리는 같이 앉아서 저녁을 먹어요. 아빠는 오늘 공",
+      "occurrences": [
+        {
+          "text": 40,
+          "start": 424,
+          "surface": "깨끗하"
+        },
+        {
+          "text": 190,
+          "start": 306,
+          "surface": "깨끗하"
+        },
+        {
+          "text": 193,
+          "start": 165,
+          "surface": "깨끗하"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0379",
+      "lemma": "준비하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "오늘 아침에는 수업을 미리 준비해요. 저는 책을 가방 안에 넣어요. 공책하고 연필도 같이 먼저 넣어요. 친구",
+      "occurrences": [
+        {
+          "text": 85,
+          "start": 15,
+          "surface": "준비해"
+        },
+        {
+          "text": 103,
+          "start": 35,
+          "surface": "준비해"
+        },
+        {
+          "text": 110,
+          "start": 34,
+          "surface": "준비해"
+        },
+        {
+          "text": 127,
+          "start": 31,
+          "surface": "준비해"
+        },
+        {
+          "text": 150,
+          "start": 35,
+          "surface": "준비해"
+        },
+        {
+          "text": 184,
+          "start": 110,
+          "surface": "준비해"
+        },
+        {
+          "text": 189,
+          "start": 404,
+          "surface": "준비하"
+        },
+        {
+          "text": 193,
+          "start": 17,
+          "surface": "준비해"
+        },
+        {
+          "text": 234,
+          "start": 57,
+          "surface": "준비해"
+        },
+        {
+          "text": 242,
+          "start": 35,
+          "surface": "준비해"
+        },
+        {
+          "text": 246,
+          "start": 169,
+          "surface": "준비해"
+        },
+        {
+          "text": 254,
+          "start": 173,
+          "surface": "준비해"
+        },
+        {
+          "text": 284,
+          "start": 33,
+          "surface": "준비해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0401",
+      "lemma": "빌려주다",
+      "pattern": "compound_pattern:VV+EC+VX",
+      "representative_context": "야기를 잘 들어요. 저는 친구에게 책을 오늘 빌려줘요. 친구는 제 책을 아주 좋아해요. 우리는 책을 책상 위에 놓아요. 그리고",
+      "occurrences": [
+        {
+          "text": 85,
+          "start": 208,
+          "surface": "빌려줘"
+        },
+        {
+          "text": 170,
+          "start": 229,
+          "surface": "빌려줘"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0403",
+      "lemma": "이해하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "을 먼저 말해요. 저는 선생님의 이야기를 잘 이해해요. 친구도 제 옆에서 이야기를 들어요. 우리는 같은 책을 보고 공부해요. ",
+      "occurrences": [
+        {
+          "text": 85,
+          "start": 306,
+          "surface": "이해해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0202",
+      "lemma": "공부하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "서 이야기를 들어요. 우리는 같은 책을 보고 공부해요. 친구는 문제를 먼저 천천히 읽어요. 저는 공책에 답을 조금 써요. 친구",
+      "occurrences": [
+        {
+          "text": 85,
+          "start": 345,
+          "surface": "공부해"
+        },
+        {
+          "text": 85,
+          "start": 492,
+          "surface": "공부할"
+        },
+        {
+          "text": 103,
+          "start": 349,
+          "surface": "공부했"
+        },
+        {
+          "text": 111,
+          "start": 264,
+          "surface": "공부하"
+        },
+        {
+          "text": 170,
+          "start": 17,
+          "surface": "공부해"
+        },
+        {
+          "text": 184,
+          "start": 186,
+          "surface": "공부하"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "sense_disambiguation",
+      "vocab_id": "ko_k1_0178",
+      "lemma": "쓰다",
+      "pattern": "unique_pos:VV",
+      "representative_context": "먼저 천천히 읽어요. 저는 공책에 답을 조금 써요. 친구도 제 공책을 같이 봐요.\n\n문제는 쉽고 답은 아주 짧아요. 수업이 끝",
+      "occurrences": [
+        {
+          "text": 85,
+          "start": 384,
+          "surface": "써"
+        },
+        {
+          "text": 127,
+          "start": 244,
+          "surface": "써"
+        },
+        {
+          "text": 127,
+          "start": 281,
+          "surface": "써"
+        },
+        {
+          "text": 193,
+          "start": 250,
+          "surface": "쓰"
+        },
+        {
+          "text": 255,
+          "start": 34,
+          "surface": "써"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "grammar_content_boundary",
+      "vocab_id": null,
+      "lemma": null,
+      "pattern": "ko_k1_g04",
+      "representative_context": "방 안에 넣어요. 내일도 우리는 같이 공부할 거예요. 친구는 내일 책을 꼭 가져와요.",
+      "occurrences": [
+        {
+          "text": 85,
+          "start": 496,
+          "surface": "거"
+        },
+        {
+          "text": 111,
+          "start": 229,
+          "surface": "거"
+        },
+        {
+          "text": 127,
+          "start": 471,
+          "surface": "거"
+        },
+        {
+          "text": 127,
+          "start": 510,
+          "surface": "거"
+        },
+        {
+          "text": 170,
+          "start": 501,
+          "surface": "거"
+        },
+        {
+          "text": 170,
+          "start": 521,
+          "surface": "거"
+        },
+        {
+          "text": 180,
+          "start": 504,
+          "surface": "거"
+        },
+        {
+          "text": 184,
+          "start": 91,
+          "surface": "거"
+        },
+        {
+          "text": 189,
+          "start": 368,
+          "surface": "거"
+        },
+        {
+          "text": 234,
+          "start": 37,
+          "surface": "거"
+        },
+        {
+          "text": 234,
+          "start": 372,
+          "surface": "거"
+        },
+        {
+          "text": 234,
+          "start": 528,
+          "surface": "거"
+        },
+        {
+          "text": 246,
+          "start": 149,
+          "surface": "거"
+        },
+        {
+          "text": 254,
+          "start": 14,
+          "surface": "거"
+        },
+        {
+          "text": 255,
+          "start": 534,
+          "surface": "거"
+        },
+        {
+          "text": 276,
+          "start": 457,
+          "surface": "거"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0405",
+      "lemma": "걱정하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "교실에 같이 가요. 친구는 가방을 보고 조금 걱정해요. 저는 오늘 학교 친구를 도와줘요. 그래서 친구의 가방을 먼저 들어요. ",
+      "occurrences": [
+        {
+          "text": 110,
+          "start": 245,
+          "surface": "걱정해"
+        },
+        {
+          "text": 180,
+          "start": 190,
+          "surface": "걱정해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0225",
+      "lemma": "도와주다",
+      "pattern": "compound_pattern:VV-I+EC+VX",
+      "representative_context": "보고 조금 걱정해요. 저는 오늘 학교 친구를 도와줘요. 그래서 친구의 가방을 먼저 들어요. 친구는 제 가방을 같이 받아요. 우",
+      "occurrences": [
+        {
+          "text": 110,
+          "start": 264,
+          "surface": "도와줘"
+        },
+        {
+          "text": 193,
+          "start": 59,
+          "surface": "도와줘"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_lexical_sense_review",
+      "type": "restricted_sense_context_review",
+      "vocab_id": "ko_k1_0812",
+      "lemma": "들다",
+      "pattern": "restricted_sense_context_review:hold_lift_by_hand",
+      "representative_context": "친구를 도와줘요. 그래서 친구의 가방을 먼저 들어요. 친구는 제 가방을 같이 받아요. 우리는 가방을 바꾸고 천천히 가요. 친구",
+      "occurrences": [
+        {
+          "text": 110,
+          "start": 285,
+          "surface": "들"
+        },
+        {
+          "text": 234,
+          "start": 448,
+          "surface": "들"
+        },
+        {
+          "text": 254,
+          "start": 250,
+          "surface": "들"
+        },
+        {
+          "text": 284,
+          "start": 259,
+          "surface": "들"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0200",
+      "lemma": "시작하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "요. 저는 친구하고 같은 책을 봐요. 수업이 시작해서 선생님의 이야기를 들어요.",
+      "occurrences": [
+        {
+          "text": 110,
+          "start": 507,
+          "surface": "시작해"
+        },
+        {
+          "text": 284,
+          "start": 525,
+          "surface": "시작해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0431",
+      "lemma": "조용하다",
+      "pattern": "compound_pattern:XR+XSA",
+      "representative_context": "도 학교의 도서관을 아주 좋아해요. 도서관은 조용해서 저는 자주 읽어요. 우리는 책을 보고 학교의 이야기를 해요. 친구는 제 ",
+      "occurrences": [
+        {
+          "text": 111,
+          "start": 300,
+          "surface": "조용해"
+        },
+        {
+          "text": 190,
+          "start": 317,
+          "surface": "조용해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_lexical_sense_review",
+      "type": "sense_disambiguation",
+      "vocab_id": "ko_k1_0550",
+      "lemma": "풀",
+      "pattern": "same_pos_or_context_needed:NNG",
+      "representative_context": "친구에게 선물을 주고 싶어요. 동생은 저에게 풀을 조금 줘요. 저는 이것으로 사진을 종이에 붙여요. 이것은 친구에게 주는 작은",
+      "occurrences": [
+        {
+          "text": 127,
+          "start": 349,
+          "surface": "풀"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "sense_disambiguation",
+      "vocab_id": "ko_k1_0342",
+      "lemma": "봉지",
+      "pattern": "unique_pos:NNG",
+      "representative_context": "사진을 보고 많이 웃어요. 저는 종이를 작은 봉지에 넣어요. 그리고 가방 안에 먼저 넣어요. 내일은 학교에 일찍 갈 거예요. ",
+      "occurrences": [
+        {
+          "text": 127,
+          "start": 431,
+          "surface": "봉지"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0409",
+      "lemma": "인사하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "고 버스에 같이 타요. 기사는 우리에게 먼저 인사해요. 저는 친구에게 가방을 다시 줘요. 우리는 창문 옆의 의자에 앉아요. 버",
+      "occurrences": [
+        {
+          "text": 150,
+          "start": 342,
+          "surface": "인사해"
+        },
+        {
+          "text": 184,
+          "start": 148,
+          "surface": "인사해"
+        },
+        {
+          "text": 190,
+          "start": 131,
+          "surface": "인사하"
+        },
+        {
+          "text": 252,
+          "start": 30,
+          "surface": "인사해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0599",
+      "lemma": "설명하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": " 앞에 와요. 저는 선생님에게 집의 이야기를 설명해요. 선생님은 우리 종이를 아주 좋아해요. 친구는 지우개를 가방에 다시 넣어",
+      "occurrences": [
+        {
+          "text": 170,
+          "start": 416,
+          "surface": "설명해"
+        },
+        {
+          "text": 189,
+          "start": 483,
+          "surface": "설명해"
+        },
+        {
+          "text": 190,
+          "start": 400,
+          "surface": "설명해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0701",
+      "lemma": "누군가",
+      "pattern": "compound_pattern:NP+EC",
+      "representative_context": "해요. 친구도 가방을 같이 찾아요. 제 뒤에 누군가 기다리고 있어요. 가게에서 일하는 아저씨가 거기 있어요. 그 사람은 제 가",
+      "occurrences": [
+        {
+          "text": 180,
+          "start": 229,
+          "surface": "누군가"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0203",
+      "lemma": "일하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": " 제 뒤에 누군가 기다리고 있어요. 가게에서 일하는 아저씨가 거기 있어요. 그 사람은 제 가방을 찾아요. 가방은 작은 책상 아",
+      "occurrences": [
+        {
+          "text": 180,
+          "start": 248,
+          "surface": "일하"
+        },
+        {
+          "text": 246,
+          "start": 110,
+          "surface": "일해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0439",
+      "lemma": "친절하다",
+      "pattern": "registered_compound:NNG+XSA",
+      "representative_context": " 직원에게 가서 가방을 받아요. 직원은 아주 친절해서 정말 좋아요. 저는 가방 안을 다시 봐요. 열쇠하고 지갑도 같이 안에 있",
+      "occurrences": [
+        {
+          "text": 180,
+          "start": 328,
+          "surface": "친절해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0601",
+      "lemma": "초대하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "오늘은 친구를 우리 집에 초대해요. 저는 집에서 영화를 보고 싶어요. 혼자 보면 이야기가 조금 어려워요. ",
+      "occurrences": [
+        {
+          "text": 184,
+          "start": 14,
+          "surface": "초대해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0739",
+      "lemma": "기억하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "람을 제일 좋아해요. 저는 그 사람의 이름을 기억해요. 친구도 그 이름을 잘 알아요. 우리는 의자에 앉아서 영화를 봐요. 처음",
+      "occurrences": [
+        {
+          "text": 184,
+          "start": 288,
+          "surface": "기억해"
+        },
+        {
+          "text": 252,
+          "start": 434,
+          "surface": "기억해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0618",
+      "lemma": "간단하다",
+      "pattern": "compound_pattern:XR+XSA",
+      "representative_context": "람이 교실로 같이 들어가요. 영화의 이야기는 간단해서 아주 좋아요. 친구는 특히 학교의 이야기를 좋아해요. 저는 친구의 학교를",
+      "occurrences": [
+        {
+          "text": 184,
+          "start": 380,
+          "surface": "간단해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0204",
+      "lemma": "운동하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "같이 보고 싶어요. 다음 주말에는 아버지하고 운동할 거예요. 어머니도 그 약속을 아주 좋아해요. 우리는 가방을 조금 준비하고 ",
+      "occurrences": [
+        {
+          "text": 189,
+          "start": 364,
+          "surface": "운동할"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0613",
+      "lemma": "건강하다",
+      "pattern": "registered_compound:NNG+XSA",
+      "representative_context": ". 아버지는 매일 아침에 운동을 해요. 저도 건강해서 밖에 자주 나가요. 우리는 학교 앞에서 먼저 산책해요. 학교 안의 운동장",
+      "occurrences": [
+        {
+          "text": 190,
+          "start": 44,
+          "surface": "건강해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0608",
+      "lemma": "산책하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "밖에 자주 나가요. 우리는 학교 앞에서 먼저 산책해요. 학교 안의 운동장에는 친구가 있어요. 친구는 아침부터 거기에서 뛰고 있",
+      "occurrences": [
+        {
+          "text": 190,
+          "start": 74,
+          "surface": "산책해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "attributive_pos_boundary",
+      "vocab_id": "ko_k1_0262",
+      "lemma": "다르다",
+      "pattern": "다르다",
+      "representative_context": "어요. 하지만 그 집은 지금 없어요. 우리는 다른 집의 사진을 더 봐요. 밖에는 비가 이제 안 와요. 우리는 우산을 닫고 집으",
+      "occurrences": [
+        {
+          "text": 190,
+          "start": 469,
+          "surface": "다른"
+        },
+        {
+          "text": 234,
+          "start": 25,
+          "surface": "다른"
+        },
+        {
+          "text": 254,
+          "start": 26,
+          "surface": "다른"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0219",
+      "lemma": "요리하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "같이 준비해요. 보통은 어머니가 집에서 혼자 요리해요. 하지만 오늘은 제가 같이 도와줘요. 어머니는 방금 시장에서 돌아왔어요.",
+      "occurrences": [
+        {
+          "text": 193,
+          "start": 39,
+          "surface": "요리해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0749",
+      "lemma": "이사하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "이번 방학에는 우리 가족이 이사해요. 내일은 다른 집으로 같이 갈 거예요. 저는 동생하고 가방을 먼저 준비해",
+      "occurrences": [
+        {
+          "text": 234,
+          "start": 15,
+          "surface": "이사해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_lexical_sense_review",
+      "type": "sense_disambiguation",
+      "vocab_id": "ko_k1_0479",
+      "lemma": "눈",
+      "pattern": "same_pos_or_context_needed:NNG",
+      "representative_context": ". 그래서 동생은 오늘 조금 슬퍼요. 동생의 눈에는 눈물이 조금 있어요. 저는 동생의 손을 먼저 잡아요. 그리고 동생 옆에 같",
+      "occurrences": [
+        {
+          "text": 234,
+          "start": 184,
+          "surface": "눈"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0220",
+      "lemma": "전화하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "고 동생 옆에 같이 앉아요. 우리는 친구에게 전화하고 싶어요. 저는 책상에서 휴대폰을 먼저 찾아요. 어머니는 휴대폰을 조금 충",
+      "occurrences": [
+        {
+          "text": 234,
+          "start": 245,
+          "surface": "전화하"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0804",
+      "lemma": "충전하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "대폰을 먼저 찾아요. 어머니는 휴대폰을 조금 충전해요. 저는 친구의 번호를 천천히 읽어요. 친구는 집에서 우리의 전화를 받아요",
+      "occurrences": [
+        {
+          "text": 234,
+          "start": 289,
+          "surface": "충전해"
+        },
+        {
+          "text": 254,
+          "start": 305,
+          "surface": "충전해"
+        },
+        {
+          "text": 255,
+          "start": 71,
+          "surface": "충전할"
+        },
+        {
+          "text": 255,
+          "start": 392,
+          "surface": "충전해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0756",
+      "lemma": "약속하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "공원에서 만날 거예요. 동생도 친구하고 같이 약속해요. 이제 동생은 전화를 받고 웃어요. 저는 가방 안에 사진을 넣어요. 동생",
+      "occurrences": [
+        {
+          "text": 234,
+          "start": 389,
+          "surface": "약속해"
+        },
+        {
+          "text": 246,
+          "start": 126,
+          "surface": "약속했"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0755",
+      "lemma": "사과하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "저는 동생 옆에 같이 앉아요. 동생에게 먼저 사과하고 빵을 봐요. 동생은 제 이야기를 듣고 웃어요. 문 앞에서 친구의 소리가 ",
+      "occurrences": [
+        {
+          "text": 242,
+          "start": 360,
+          "surface": "사과하"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0760",
+      "lemma": "확인하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "을 천천히 말해요. 우리는 시계를 보고 다시 확인해요. 동생은 조금 심심해서 밖을 봐요. 저는 동생 옆에 같이 앉아요. 동생은",
+      "occurrences": [
+        {
+          "text": 246,
+          "start": 314,
+          "surface": "확인해"
+        },
+        {
+          "text": 254,
+          "start": 134,
+          "surface": "확인해"
+        },
+        {
+          "text": 255,
+          "start": 454,
+          "surface": "확인해"
+        },
+        {
+          "text": 276,
+          "start": 297,
+          "surface": "확인해"
+        },
+        {
+          "text": 284,
+          "start": 361,
+          "surface": "확인해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0762",
+      "lemma": "심심하다",
+      "pattern": "compound_pattern:XR+XSA",
+      "representative_context": "는 시계를 보고 다시 확인해요. 동생은 조금 심심해서 밖을 봐요. 저는 동생 옆에 같이 앉아요. 동생은 의자에서 지금 조금 졸",
+      "occurrences": [
+        {
+          "text": 246,
+          "start": 327,
+          "surface": "심심해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0231",
+      "lemma": "출발하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": " 보고 많이 웃어요. 결국 우리 가족은 같이 출발해요. 동생도 아버지 옆에서 아주 좋아해요.",
+      "occurrences": [
+        {
+          "text": 246,
+          "start": 510,
+          "surface": "출발해"
+        },
+        {
+          "text": 254,
+          "start": 112,
+          "surface": "출발해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0378",
+      "lemma": "물어보다",
+      "pattern": "compound_pattern:VV-I+EC+VX",
+      "representative_context": "우리를 불러요. 저는 시간을 어머니에게 먼저 물어봐요. 어머니는 시계의 시간을 천천히 말해요. 우리는 시계를 보고 다시 확인해",
+      "occurrences": [
+        {
+          "text": 246,
+          "start": 272,
+          "surface": "물어봐"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_grammar_boundary_review",
+      "type": "grammar_content_boundary",
+      "vocab_id": null,
+      "lemma": null,
+      "pattern": "ko_k1_g16",
+      "representative_context": "류장으로 가요. 정류장은 가까워서 걸어서 갈 수 있어요. 버스가 와서 번호를 먼저 봐요. 우리는 버스를 같이 천천히 타요. 저",
+      "occurrences": [
+        {
+          "text": 254,
+          "start": 382,
+          "surface": "수"
+        },
+        {
+          "text": 254,
+          "start": 384,
+          "surface": "있"
+        },
+        {
+          "text": 255,
+          "start": 75,
+          "surface": "수"
+        },
+        {
+          "text": 255,
+          "start": 77,
+          "surface": "없"
+        },
+        {
+          "text": 255,
+          "start": 433,
+          "surface": "수"
+        },
+        {
+          "text": 255,
+          "start": 435,
+          "surface": "있"
+        },
+        {
+          "text": 284,
+          "start": 279,
+          "surface": "수"
+        },
+        {
+          "text": 284,
+          "start": 281,
+          "surface": "있"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0222",
+      "lemma": "필요하다",
+      "pattern": "registered_compound:NNG+XSA",
+      "representative_context": "를 천천히 들어요. 직원의 도움이 지금 정말 필요해요. 저는 새 충전기를 하나 사요. 가격을 보고 지갑에서 돈을 꺼내요. 직원",
+      "occurrences": [
+        {
+          "text": 255,
+          "start": 257,
+          "surface": "필요해"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "sense_disambiguation",
+      "vocab_id": "ko_k1_0774",
+      "lemma": "새",
+      "pattern": "unique_pos:MM",
+      "representative_context": ". 직원의 도움이 지금 정말 필요해요. 저는 새 충전기를 하나 사요. 가격을 보고 지갑에서 돈을 꺼내요. 직원은 영수증을 저에",
+      "occurrences": [
+        {
+          "text": 255,
+          "start": 266,
+          "surface": "새"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "benign_expected",
+      "type": "compound_grouping",
+      "vocab_id": "ko_k1_0221",
+      "lemma": "사용하다",
+      "pattern": "registered_compound:NNG+XSV",
+      "representative_context": "대폰을 가방 안에 넣어요. 내일은 이것을 잘 사용할 거예요.",
+      "occurrences": [
+        {
+          "text": 255,
+          "start": 530,
+          "surface": "사용할"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_lexical_sense_review",
+      "type": "Kiwi_POS_sense_disagreement",
+      "vocab_id": "ko_k1_0674",
+      "lemma": "이",
+      "pattern": "Kiwi_POS_sense_disagreement:tooth",
+      "representative_context": "은 집 앞에서 저를 기다려요. 저는 욕실에서 이를 먼저 닦아요. 칫솔하고 치약은 거울 옆에 있어요. 그리고 따뜻한 물로 얼굴을",
+      "occurrences": [
+        {
+          "text": 276,
+          "start": 66,
+          "surface": "이"
+        }
+      ],
+      "review_status": "not_human_approved"
+    },
+    {
+      "category": "requires_lexical_sense_review",
+      "type": "sense_disambiguation",
+      "vocab_id": "ko_k1_0738",
+      "lemma": "풀",
+      "pattern": "same_pos_or_context_needed:NNG",
+      "representative_context": "는 나무 뒤에서 공을 찾아요. 나무 아래에는 풀이 조금 있어요. 풀 옆에는 작은 돌도 있어요. 친구는 돌 뒤를 먼저 봐요. 거",
+      "occurrences": [
+        {
+          "text": 299,
+          "start": 245,
+          "surface": "풀"
+        },
+        {
+          "text": 299,
+          "start": 256,
+          "surface": "풀"
+        }
+      ],
+      "review_status": "not_human_approved"
+    }
+  ],
+  "policy": "Review repeated templates once with matching context preconditions; sense contexts still require contextual review, not blanket approval."
+}

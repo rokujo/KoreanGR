@@ -1,0 +1,204 @@
+{
+  "language": "ko",
+  "level": "K1",
+  "version": "0.3.0",
+  "status": "phase3_actual_sequential_001_050",
+  "target_texts": 300,
+  "vocab_budget": {
+    "core": 300,
+    "expansion": 500,
+    "total": 800
+  },
+  "length": {
+    "min_eojeol": 120,
+    "max_eojeol": 180
+  },
+  "sentence_length": {
+    "preferred_min_eojeol": 3,
+    "preferred_max_eojeol": 7,
+    "hard_max_eojeol": 10
+  },
+  "new_vocab": {
+    "min": 0,
+    "max": 2,
+    "unit": "lemma",
+    "max_entries_per_text": 2,
+    "first_text_new_lemma_token_soft_max": 3,
+    "token_policy": "初出教材の新出語token合計は原則3以下。各語3回ではない。逸脱は人間レビューを要する。"
+  },
+  "controlled_vocab_coverage_hard_min": 1.0,
+  "previous_vocab_coverage_hard_min": 0.98,
+  "previous_vocab_coverage_target": 0.99,
+  "repetition": {
+    "near_repetition_allowed": true,
+    "near_repetition_encouraged": true,
+    "paraphrase_required": false,
+    "new_lemma_mass_repetition_in_first_text": false,
+    "prefer_new_lemma_repetition_in_later_texts": true,
+    "near_repetition_scope": "既知語の近距離反復を推奨。初出の新出語は全語合計token3以下の方針を優先。"
+  },
+  "style": {
+    "default_register": "해요체",
+    "prefer_processing_ease": true,
+    "prefer_naturalness_over_variety": true
+  },
+  "grammar_count": 32,
+  "core_decision": {
+    "status": "accepted",
+    "replacement": "한국→아니다",
+    "proper_names_outside_budget": true
+  },
+  "expansion_decision": {
+    "active_entries": 500,
+    "replacement_proposals_applied": true,
+    "status": "accepted",
+    "notes": "Phase 1.2の7交換とPhase 2.1Aの5交換を正式採用。Tier件数維持。"
+  },
+  "counting": {
+    "vocab_unit": [
+      "lemma",
+      "pos",
+      "sense"
+    ],
+    "proper_names_in_budget": false,
+    "grammar_bound_forms_in_budget": false,
+    "eojeol": "空白区切りの非空トークン数。句読点だけのトークンを数えない。",
+    "coverage_denominator_N": "本文の解決済み内容語・意味単位tokenの延べ数。各活用は同一エントリの1出現。許可固有名詞は1出現1token、固定例外は1一致スパン1token。未許可内容語も分母に含む。助詞・語尾・句読点・許可構文の文法専用要素は除外。",
+    "new_tokens_U": "当該教材で初出するExpansionエントリの全出現token数。controlled100%合格時はN-Uがprevious token数となる。未許可語・未来語はcontrolled違反として先に不合格。",
+    "compound_lemmas": "공부하다等の登録済み辞書語は1token。공부를 하다の独立語공부と하다は2token。수/거/補助用言等は許可構文の文法専用用法に限って除外。",
+    "new_vocab_definition": "新出lemmaは最大2。別senseの初出も導入として数え、DBエントリの初出も保守的に最大2に制限する。500エントリすべてを配置する。事前提示も初出教材の導入数に含める。",
+    "new_lemma_token_count": "初出のlemma+POS+senseに対応する本文内tokenを合算。活用形も同一語として計数し、既出senseや文法専用語は新出tokenへ含めない。",
+    "number_forms": "한/두/세/네/스무を固有数詞へ正規化。漢数詞の組合せは登録された数詞に分解。ゼロ・日付単位일・未登録の十位固有数詞は未許可。"
+  },
+  "coverage_policy": {
+    "controlled_allowed_classes": [
+      "core",
+      "previous_expansion",
+      "current_expansion",
+      "proper_name",
+      "frozen_exception"
+    ],
+    "baseline_introduction_text": 0,
+    "baseline_classes": [
+      "core",
+      "registered_proper_names",
+      "frozen_exceptions"
+    ],
+    "controlled_formula": "controlled_tokens / N = 1",
+    "previous_formula": "previous_tokens / N; controlled=1のとき(N-U)/N",
+    "dynamic_hard_new_token_limit": "floor(N / 50)。hard98%をsoft3より優先。target99%にはfloor(N / 100)を目標。",
+    "empty_denominator": "N=0は不合格。",
+    "regular_exception_form": "괜찮아요は괜찮다のvocab tokenとして扱う。固定例外の基準導入で迂回しない。",
+    "not_learner_knowledge": "導入済みという計画上の属性。習得・記憶・読解速度の証明ではない。"
+  },
+  "introduction": {
+    "first_text": 1,
+    "last_text": 255,
+    "consolidation_from": 256,
+    "tier_counts": {
+      "E1": 200,
+      "E2": 200,
+      "E3": 100
+    },
+    "ranges": {
+      "E1": [
+        1,
+        170
+      ],
+      "E2": [
+        61,
+        255
+      ],
+      "E3": [
+        151,
+        255
+      ]
+    },
+    "target_exposures": 6,
+    "distinct_texts_required": true
+  },
+  "feasibility": {
+    "introduction_slots": 510,
+    "required_new_entries": 500,
+    "slack_slots": 10,
+    "warning": "255本×2枠=510枠。500語の初出後10枠の余裕。新出0/1教材も維持。",
+    "coverage_resolution": "controlled100%がhard、previous98%がhard、previous99%がtarget。初出tokenは実際のNに応じfloor(N/50)以内に動的制限。",
+    "generation_gate": "Phase 2.1Aは短い検証例のみ。PASS後に同じ20教材番号でPhase 2.2比較へ進める。大量生成は未承認。"
+  },
+  "exposure_policy": {
+    "recent_window_texts": 20,
+    "planned_exposures_per_entry": 6,
+    "all_text_load_warn_above": 16,
+    "fast_zone_load_warn_above": 12,
+    "fast_zone_E3_warn_above": 6,
+    "fast_zone_recent_E3_warn_above": 0,
+    "near_max_gap": 5,
+    "medium_gap_min": 6,
+    "medium_gap_max": 30,
+    "long_gap_rule": "min(60, floor(0.75 * (300-first)))以上の距離を最低1回。",
+    "notes": "負荷閾値は計画の運用目安。習得の保証ではない。初出も最近導入数へ含む。"
+  },
+  "grammar_policy": {
+    "max_connector_clauses_preferred": 2,
+    "allow_unlisted_productive_derivation": false,
+    "inflection_not_new_vocab": true,
+    "excluded_grammar": [
+      "比較 보다",
+      "와/과",
+      "-지 않다",
+      "名詞化 -기"
+    ],
+    "notes": "活用の許可は新たな語義・構文の許可ではない。辞書語の使役・受動・移動複合動詞は個別lemmaとしてのみ許可。"
+  },
+  "review_required": [
+    "母語話者による意味・社会語用・32文法の自然さ確認",
+    "新出token soft3の例外運用",
+    "生成後の実出現と形態素・sense解決の確認",
+    "基準導入0のCore・固有名詞・固定句の提示方法"
+  ],
+  "category_policy": {
+    "hard_exact": false,
+    "baseline_targets": {
+      "people_social": 40,
+      "places_objects": 90,
+      "food_nature": 50,
+      "verbs": 100,
+      "adjectives": 65,
+      "adverbs_connectors": 50,
+      "time_counters_units": 35,
+      "abstract_body_emotion": 40,
+      "school_work_transport_info": 30
+    },
+    "warning_absolute_difference": 15,
+    "warning_relative_difference": 0.25
+  },
+  "review_source": {
+    "mode": "flexible_windows",
+    "file": "vocab_review_windows.json",
+    "historical_exact_reviews_binding": false
+  },
+  "lexical_sense_policy": {
+    "identity_unit": [
+      "lemma",
+      "pos",
+      "sense"
+    ],
+    "lemma_only_approval": false,
+    "context_review_required_ids": [
+      "ko_k1_0812"
+    ],
+    "restricted_entries": {
+      "ko_k1_0812": {
+        "allowed_sense": "hold_lift_by_hand",
+        "allowed_gloss_ja": "手に持つ・持ち上げる",
+        "not_allowed_senses": [
+          "cost",
+          "like",
+          "grow_old",
+          "enter",
+          "other_dictionary_senses"
+        ]
+      }
+    }
+  }
+}

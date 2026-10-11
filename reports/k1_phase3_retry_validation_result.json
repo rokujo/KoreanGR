@@ -1,0 +1,184 @@
+{
+  "run": "phase3_retry",
+  "generated_count": 1,
+  "control": {
+    "status": "stopped",
+    "max_attempts": 5,
+    "max_text": 50,
+    "stop": {
+      "type": "analyzer_structural_failure",
+      "text": 2,
+      "reason": "Raw Kiwi IC yes-form is unconditionally aliased to Core informal-you; scheduled ko_k1_0442 is lost. Regeneration cannot safely fix semantic identity.",
+      "failed_candidate": "K1-002-attempt-01",
+      "ledger_credit": false
+    }
+  },
+  "total_candidate_attempts": 3,
+  "rejected_candidates": 2,
+  "first_attempt_pass_count": 0,
+  "first_attempt_pass_rate": 0.0,
+  "mean_attempts_per_committed_text": 2,
+  "retry_reason_distribution": {
+    "unknown_or_unresolved": 1,
+    "coverage_or_token_policy": 3,
+    "planned_new_not_present": 1
+  },
+  "future_contaminated_candidates": 0,
+  "future_candidate_contamination_rate": 0.0,
+  "resolver_review_count": 0,
+  "hard_errors": 0,
+  "controlled_violations": 0,
+  "previous_below_98": 0,
+  "unresolved_content_words": 0,
+  "grammar_violations": 0,
+  "introduced_count": 2,
+  "selected_review_exposures": 0,
+  "incidental_exposures": 0,
+  "exposure_distribution": {
+    "0": 498,
+    "1": 2
+  },
+  "outstanding_debt": 0,
+  "expired_debt": 0,
+  "near_deadline_debt": 0,
+  "naturalness_warning_categories": {
+    "nat_verb_argument_frame": 1
+  },
+  "semantic_review_flags": 0,
+  "translation_flags": 0,
+  "natural_expression_gaps": [],
+  "genre_distribution": {
+    "family": 1
+  },
+  "eojeol_mean": 129,
+  "eojeol_min": 129,
+  "eojeol_max": 129,
+  "frozen_input_violations": [],
+  "integrity_errors": [],
+  "integrity_pass": true,
+  "committed_reanalysis": [
+    {
+      "text": 1,
+      "hard_pass": true,
+      "mismatches": []
+    }
+  ],
+  "analyzer_diagnostics": [
+    {
+      "text": "네.",
+      "raw": [
+        {
+          "form": "네",
+          "tag": "IC",
+          "start": 0,
+          "length": 1
+        }
+      ],
+      "assigned": [
+        {
+          "surface": "네",
+          "lemma": "너",
+          "pos": "pronoun",
+          "sense": "you_informal",
+          "vocab_id": "ko_k1_0003",
+          "role": "core",
+          "start": 0,
+          "end": 1,
+          "morph_indices": [
+            0
+          ],
+          "grammar_id": null
+        }
+      ],
+      "recognized_yes": false
+    },
+    {
+      "text": "네, 책이 있어요.",
+      "raw": [
+        {
+          "form": "네",
+          "tag": "IC",
+          "start": 0,
+          "length": 1
+        }
+      ],
+      "assigned": [
+        {
+          "surface": "네",
+          "lemma": "너",
+          "pos": "pronoun",
+          "sense": "you_informal",
+          "vocab_id": "ko_k1_0003",
+          "role": "core",
+          "start": 0,
+          "end": 1,
+          "morph_indices": [
+            0
+          ],
+          "grammar_id": null
+        }
+      ],
+      "recognized_yes": false
+    },
+    {
+      "text": "“네, 가방 안에 있어요.”",
+      "raw": [
+        {
+          "form": "네",
+          "tag": "IC",
+          "start": 1,
+          "length": 1
+        }
+      ],
+      "assigned": [
+        {
+          "surface": "네",
+          "lemma": "너",
+          "pos": "pronoun",
+          "sense": "you_informal",
+          "vocab_id": "ko_k1_0003",
+          "role": "core",
+          "start": 1,
+          "end": 2,
+          "morph_indices": [
+            1
+          ],
+          "grammar_id": null
+        }
+      ],
+      "recognized_yes": false
+    }
+  ],
+  "decision": "C",
+  "decision_reason": "Analyzer structural alias failure at K1-002; sequential run stopped.",
+  "ledger_epoch": 1,
+  "max_attempts": 5,
+  "failed_candidate_credited": false,
+  "candidate_attempt_counts": {
+    "1": 2,
+    "2": 1
+  },
+  "mean_attempts_per_started_text": 1.5,
+  "frozen_file_count": 432,
+  "candidate_schema_errors": [],
+  "known_unfixed_structural_analyzer_failures": 1,
+  "tests": {
+    "full_suite": {
+      "command": "python -B -m unittest discover -s tests -v",
+      "tests": 147,
+      "exit_code": 0,
+      "seconds": 334.898,
+      "status": "PASS",
+      "scope_note": "Full suite started before the final run_one stop-preservation test was added."
+    },
+    "final_focused_suite": {
+      "command": "python -B -m unittest discover -s tests -p test_k1_phase3_retry.py -v",
+      "tests": 14,
+      "exit_code": 0,
+      "seconds": 20.779,
+      "status": "PASS",
+      "scope_note": "Covers the final retry module revision, including the added run_one test."
+    },
+    "known_unfixed_analyzer_defect": "IC 네 is aliased to pronoun 너. Test PASS does not mean this defect is repaired or the 50-text run passed."
+  }
+}

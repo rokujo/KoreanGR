@@ -1,0 +1,15 @@
+{
+  "original_automated_status": "PASS",
+  "post_semantic_status": "FAIL",
+  "text": 3,
+  "sentence_index": 2,
+  "surface": "저는 사진을 선물로 주고 싶어요.",
+  "grammar_id": "ko_k1_g30",
+  "reason": "Registered grammar 30 permits transport/tool/direction only; role/as-a-gift use is outside the frozen meanings. Author semantic review missed it before automated commit.",
+  "original_ledger": "state/phase3_4_smoke_exposure_ledger.json",
+  "original_ledger_sha": "3433c48aa83b8988c47050a0aa433c5a569e40ecc87849f7e59e971808d7eb1b",
+  "mechanically_committed_invalid_text_preserved": true,
+  "correction_applied_to_original": false,
+  "new_analyzer_identity_defect": false,
+  "clean_zero_state_retest_required": true
+}

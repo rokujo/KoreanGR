@@ -1,0 +1,13 @@
+{
+  "command": "python -B scripts/run_k1_phase3_5_tests.py",
+  "tests": 259,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 123.768,
+  "status": "FAIL",
+  "log": "reports/k1_phase3_5_boundary_fixture_initial_failure_log.txt",
+  "exit_code": 1,
+  "original_log_path": "reports/k1_phase3_5_all_test_log.txt",
+  "reason": "Initial negative fixture expected a g32 REVIEW. Raw NNB/man was not mapped to g32 and was already rejected as unresolved upstream. Oracle stage was corrected; hard requirements and grammar permissions were unchanged."
+}
