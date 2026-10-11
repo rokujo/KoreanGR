@@ -19,7 +19,7 @@
 
 ## 再現できる範囲
 
-確定語彙のvalidator等、configとコードで完結する処理を実行できる。`tests/`を置いていても、全331件の回帰テストやfreeze監査・過去本文の再解析・ledger replayには、Git管理外のpilot/state履歴が必要である。軽量cloneで全suiteが通ると主張しない。テストを無条件skipに変えたり、失敗を成功へ書き換えたりしていない。
+configの閲覧・Schemaによるデータ検査や、履歴pilotを読まない独立テストを実行できる。ただし既存の`validate_k1_vocab.py`は過去pilotのfreeze照合まで含むため、除外された履歴がないとFAILする。`tests/`を置いていても、全331件の回帰テストやfreeze監査・過去本文の再解析・ledger replayには、Git管理外のpilot/state履歴が必要である。軽量cloneで全suiteや完全なvalidatorが通ると主張しない。テストを無条件skipに変えたり、失敗を成功へ書き換えたりしていない。
 
 完全な再現が必要な場合は、元workspaceの同じ版の`pilot/`と`state/`を別のバックアップから復元する。snapshot/freezeのSHA-256照合を保つため、ファイルのbyte列と相対パスを維持する。今後の小さな独立regression fixtureへの切り出しは別作業として検討する。
 
@@ -29,7 +29,7 @@
 git clone https://github.com/rokujo/KoreanGR.git
 cd KoreanGR
 python -m pip install -r requirements-phase2.txt
-python -B -X utf8 scripts/validate_k1_vocab.py --json
+python -B -X utf8 -m unittest discover -s tests -p test_lexical_coverage.py -v
 ```
 
 `.gitattributes`の`* -text`により、Windows/LinuxのcloneでもGitが改行を自動変換しない。これは既存freezeのhash保護のためであり、既存DB・文法・run成果物を変更していない。

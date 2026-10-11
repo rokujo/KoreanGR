@@ -16,11 +16,11 @@
 
 コード・確定DB・docs・reports・テストコードを保存しています。大きな生成/解析履歴の`pilot/`と実ledgerの`state/`はGit管理外です。元workspaceの履歴は削除していません。
 
-**全回帰テスト・過去run再生・freeze監査には、別途pilot/state履歴が必要です。** 軽量cloneだけで全331件が通るとは保証しません。保存範囲と復元方法は [GitHub保存方針](docs/github_repository.md)にあります。
+**既存の語彙validatorも過去pilotのfreeze照合を含むため、履歴なしではFAILします。全回帰テスト・過去run再生にも、別途pilot/state履歴が必要です。** 軽量cloneだけで全331件や完全なvalidatorが通るとは保証しません。保存範囲と復元方法は [GitHub保存方針](docs/github_repository.md)にあります。
 
 ```powershell
 python -m pip install -r requirements-phase2.txt
-python -B -X utf8 scripts/validate_k1_vocab.py --json
+python -B -X utf8 -m unittest discover -s tests -p test_lexical_coverage.py -v
 ```
 
 `config/`にDB・Schema・予定表、`scripts/`にvalidator/generator/scheduler、`tests/`にテスト、`docs/`に設計、`reports/`に各Phaseの検証結果を置いています。
